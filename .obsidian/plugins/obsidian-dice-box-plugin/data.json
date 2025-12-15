@@ -1,0 +1,9 @@
+{
+  "theme": "diceOfRolling-fate",
+  "scale": 4,
+  "gravity": 7.5,
+  "throwPower": 1.7,
+  "enableSounds": true,
+  "enableShadows": true,
+  "autoHideDelay": 0
+}

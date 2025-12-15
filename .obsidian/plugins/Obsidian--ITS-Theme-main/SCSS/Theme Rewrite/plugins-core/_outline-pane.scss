@@ -1,0 +1,39 @@
+body {
+    --outline-symbol: "H";
+    --outline-symbol-padding-right: 5px;
+
+    --outline-arrow-visibility: hidden;
+    --outline-arrow-display: none;
+    --outline-arrow-margin: -15.5px;
+}
+
+//Outline Icon
+body .outline {
+    // & .tree-item-self { padding-left: 20px; }
+    & .tree-item-children { transition: all 0.3s ease-in-out; }
+    --nav-item-children-margin-left: 12px;
+
+
+    //Arrow
+    & .collapse-icon svg { visibility: var(--outline-arrow-visibility); }
+
+    & .tree-item:not(.is-collapsed) > .mod-collapsible .tree-item-icon.collapse-icon 
+    { margin-left: var(--outline-arrow-margin); }
+
+    //Symbol
+    & .tree-item-self::before {
+        content: var(--outline-symbol);
+        font-family: var(--font-default);
+        font-weight: 900;
+        color: var(--headers);
+        padding-right: var(--outline-symbol-padding-right);
+    }
+    & .tree-item-self:hover::before { color: var(--text-dl); }
+    
+    //Collapsed Fixes
+    & .tree-item.is-collapsed {
+        & .collapse-icon svg { visibility: visible; }
+        
+        & .tree-item-self::before { display: none; }
+    } 
+} 

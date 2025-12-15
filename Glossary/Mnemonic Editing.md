@@ -1,0 +1,1 @@
+A complex and risky process used to repair a **damaged ego**. Mnemonic editing involves modifying the underlying code of the ego, often to reduce **Fragmentation** penalties or alleviate psychoses. The process must be performed on a dormant ego hosted in a system with **hostware**.

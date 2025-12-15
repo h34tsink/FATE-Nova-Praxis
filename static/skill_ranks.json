@@ -1,0 +1,41 @@
+[
+  {
+    "id": "specialist",
+    "name": "Specialist",
+    "short_description": "Focuses on high ranks in a few skills.",
+    "long_description": "One Rank 5, Two Rank 4, Two Rank 3, Three Rank 2, Six Rank 1. [1]",
+    "distribution": {
+      "rank_5": 1,
+      "rank_4": 2,
+      "rank_3": 2,
+      "rank_2": 3,
+      "rank_1": 6
+    },
+    "source_pages": ["159"]
+  },
+  {
+    "id": "expert",
+    "name": "Expert",
+    "short_description": "A balanced approach with good ranks across multiple skills.",
+    "long_description": "Three Rank 4, Three Rank 3, Four Rank 2, Six Rank 1. [1]",
+    "distribution": {
+      "rank_4": 3,
+      "rank_3": 3,
+      "rank_2": 4,
+      "rank_1": 6
+    },
+    "source_pages": ["159"]
+  },
+  {
+    "id": "generalist",
+    "name": "Generalist",
+    "short_description": "Spreads ranks broadly, favoring mid-range competence.",
+    "long_description": "Seven Rank 3, Eight Rank 2, Three Rank 1. [1]",
+    "distribution": {
+      "rank_3": 7,
+      "rank_2": 8,
+      "rank_1": 3
+    },
+    "source_pages": ["159"]
+  }
+]

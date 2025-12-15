@@ -1,0 +1,1 @@
+A medical injection used to rapidly heal wounds and stabilize patients. **Medi-stimulants** are effective for treating both **biosleeves** and **cybersleeves**, although more severe injuries may require additional augmentation or intervention.

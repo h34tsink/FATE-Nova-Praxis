@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"type":"text","text":">># Kallius\n>>Greedy (Increase Assets)\n>>Mild Mannered (-2 Intimidation)\n>>Curious\n>>Overconfident","id":"d5ad2cba1417cb3a","x":-1300,"y":-1160,"width":500,"height":258,"color":"#1a1e24"},
+		{"type":"text","text":">># Grace Pryzbylski\n>>Loyal (Kallius)\n>>Phobia (Being seen) (-2 All traits)\n>>Thin Skinned (-4 When Taunted)\n>>Quirk (Always Music) (Annoying)","id":"ad7170eda05f3e45","x":-1300,"y":-960,"width":500,"height":258,"color":"#1a1e24"},
+		{"type":"text","text":">># Aeddarius Crucial\n>>Arrogant\n>>Habit (Smoking Tobacco - Suffer Fatigue)\n>>Ruthless\n>>--","id":"63ba3820de607014","x":-1300,"y":-760,"width":500,"height":258,"color":"#1a1e24"},
+		{"type":"text","text":">># Dustin Halloway (Grift)\n>>Curious\n>>Habit (Spicy Foods - Suffer Fatigue)\n>>Thin Skinned (-2 When Taunted)\n>>--","id":"72a5700cd1e7cbf3","x":-1300,"y":-502,"width":500,"height":280,"color":"#1a1e24"},
+		{"type":"text","text":">># Lorem Ipsum (DOC)\n>>Code of honor\n>>Phobia (Fire) (-2 All Trait rolls)\n>>Supremacist (Purists)\n>>Quirk (Hard Atheist)","id":"2e84e2ba89ea3192","x":-1300,"y":-300,"width":500,"height":280,"color":"#1a1e24"},
+		{"type":"text","text":">># Azaria Dawson\n>>Overconfident\n>>Stubborn\n>>Driven\n>>--","id":"a09eebd7e0d8233e","x":-1300,"y":-80,"width":500,"height":280,"color":"#1a1e24"}
+	],
+	"edges":[]
+}

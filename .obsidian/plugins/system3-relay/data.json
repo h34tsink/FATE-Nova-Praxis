@@ -1,0 +1,59 @@
+{
+  "release": {
+    "channel": "stable"
+  },
+  "sharedFolders": [
+    {
+      "path": "Miscellaneous",
+      "guid": "08e6a203-083c-43c8-8416-9a0512f13a8f",
+      "sync": {
+        "images": true,
+        "audio": true,
+        "videos": true,
+        "pdfs": true,
+        "otherTypes": false
+      }
+    },
+    {
+      "path": "Miscellaneous/Game Design",
+      "guid": "14126781-96e2-44ab-a7cc-28757e5e47e7",
+      "relay": "ecff5192-513b-40eb-88bf-43a96321f13d",
+      "sync": {
+        "images": true,
+        "audio": true,
+        "videos": true,
+        "pdfs": true,
+        "otherTypes": false
+      }
+    }
+  ],
+  "endpoints": {},
+  "enableDocumentStatus": false,
+  "enableNewLinkFormat": false,
+  "enableDeltaLogging": false,
+  "enableDocumentHistory": false,
+  "enableEditorTweens": false,
+  "enableSyncModal": false,
+  "enableNetworkLogging": false,
+  "enableCanvasSync": false,
+  "enableVerifyUploads": false,
+  "enableAutomaticDiffResolution": false,
+  "enableDiscordLogin": false,
+  "enableSelfManageHosts": true,
+  "enableToasts": false,
+  "enablePresenceAvatars": true,
+  "enableLiveEmbeds": true,
+  "enablePreviewViewHooks": true,
+  "enableMetadataViewHooks": true,
+  "enableKanbanView": true,
+  "debugging": false,
+  "login": {
+    "provider": "google"
+  },
+  "enableSyncMenu": true,
+  "enableAttachmentSync": true,
+  "enableDocumentServer": true,
+  "enableMicrosoftLogin": true,
+  "enableGitHubLogin": true,
+  "enableOIDCLogin": true
+}

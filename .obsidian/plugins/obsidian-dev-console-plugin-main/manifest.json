@@ -1,0 +1,10 @@
+{
+	"id": "devtools-console-activator",
+	"name": "Devtools console enabler",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "Activating the developer console in any situation, even if, for some reason, the standard keyboard shortcut doesn’t work.",
+	"author": "Alexey Sedoykin",
+	"authorUrl": "https://www.linkedin.com/in/sedoykin",
+	"isDesktopOnly": true
+}

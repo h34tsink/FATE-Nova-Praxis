@@ -1,0 +1,1 @@
+Specialized software and hardware used to host an ego that is dormant or undergoing procedures such as **mnemonic editing**. Hostware is a critical component for handling digital consciousness safely.

@@ -1,0 +1,992 @@
+[
+  {
+    "id": "academic",
+    "name": "Academic",
+    "short_description": "Bonus on Education Declarations related to math, science, or history.",
+    "long_description": "You come from an academic background, having spent a great deal of time studying math, science, and history. You gain a +2 bonus on Education tests to make Declarations related to math, science, or history. [28]",
+    "type": "General Stunt",
+    "frequency": "Passive",
+    "rules": {
+      "bonus_value": 2,
+      "skill_affected": "Education",
+      "action_type": "Declaration",
+      "scope": ["math", "science", "history"]
+    },
+    "source_pages": ["168"]
+  },
+  {
+    "id": "acrobatic_exploit",
+    "name": "Acrobatic Exploit",
+    "short_description": "Move or push/pull opponent as Instant Action after Spin on attack.",
+    "long_description": "You tumble, roll, spin, and twist during combat, leaving your foe to chase after you. Any time you generate Spin on an attack test, instead of creating an Effect Aspect, you may move into an adjacent zone or attempt to push or pull (pg. 143) your opponent as an Instant Action. If you choose to move, this is in addition to your normal ability to move as a Free Action on your turn. [28]",
+    "type": "Combat Stunt",
+    "frequency": "Per Spin on Attack Test",
+    "rules": {
+      "trigger": "Generate Spin on an attack test",
+      "effect_alternative": "Create Effect Aspect",
+      "actions": [
+        "Move into adjacent zone (Instant Action)",
+        "Push or pull opponent (Instant Action)"
+      ]
+    },
+    "source_pages": ["168"]
+  },
+  {
+    "id": "agenda_celebrity",
+    "name": "Agenda Celebrity",
+    "short_description": "Bonus when requesting Favors that support a specific agenda.",
+    "long_description": "You are well known to those who share a specific agenda. You might be a hero for the Purist cause, a well-known and outspoken transhumanist, a respected and revered Astralist, or a highly regarded member of your House. Whatever your agenda, you gain a +2 bonus when calling in Favors (pg. 147) that support your agenda. This bonus does not stack with other Stunts that add bonuses to Favor tests. [29]",
+    "type": "Social Stunt",
+    "frequency": "Passive",
+    "rules": {
+      "bonus_value": 2,
+      "action_affected": "Calling in Favors",
+      "condition": "Favors support your agenda (chosen at selection)",
+      "stacking": "Does not stack with other Favor bonus stunts"
+    },
+    "selection_detail": "Choose a specific agenda (e.g., Transhumanists, Purists).",
+    "source_pages": ["168"]
+  },
+  {
+    "id": "all_seeing_eye",
+    "name": "All-Seeing Eye",
+    "short_description": "Once per scene, +3 bonus on Perception tests or Assessments.",
+    "long_description": "Perhaps you are a master of investigation techniques, or maybe you just have an uncanny eye for detail. Once per scene, when called on to make a Perception test, you may gain a +3 bonus. This includes attempts to perform Assessments. [30]",
+    "type": "Investigation Stunt",
+    "frequency": "Once per scene",
+    "rules": {
+      "bonus_value": 3,
+      "skill_affected": "Perception",
+      "action_type": ["Test", "Assessment"]
+    },
+    "source_pages": ["168"]
+  },
+  {
+    "id": "artist",
+    "name": "Artist",
+    "short_description": "Gain an Aspect relating to artistic talent and bonus on Favors from admirers.",
+    "long_description": "You are exceptionally talented in a specific artistic field, be it painting, sculpting, singing, dancing, or otherwise. You gain a new Aspect that relates to the mastery of your artistic talent. In addition, you gain a +1 bonus on rolls to request Favors (pg. 147) from people who enjoy your work. This bonus does not stack with other Stunts that add bonuses to Favor tests. [9, 30]",
+    "type": "Social Stunt",
+    "frequency": "Passive",
+    "rules": {
+      "new_aspect": "Relates to artistic talent (chosen at selection)",
+      "favor_bonus": 1,
+      "favor_condition": "From people who enjoy your work",
+      "stacking": "Does not stack with other Favor bonus stunts"
+    },
+    "selection_detail": "Choose a specific artistic field (e.g., painting, sculpting, singing).",
+    "source_pages": ["168", "194", "195"]
+  },
+  {
+    "id": "assassin_shot",
+    "name": "Assassin Shot",
+    "short_description": "Once per scene, +3 bonus on ranged attack against ambushed target.",
+    "long_description": "You are trained to compensate for gravity, distance, wind, and other factors that might otherwise spoil a well-placed shot. You know where, and how, to aim to deal the most damage to your opponent with a ranged weapon. Once per scene, when attacking an ambushed target (pg. 135) with a ranged weapon, you may add a +3 bonus to your attack test. You may elect to use this Stunt more than once per scene, but each use after the first costs a Fate Point. [9]",
+    "type": "Combat Stunt",
+    "frequency": "Once per scene (additional uses cost 1 FP)",
+    "rules": {
+      "bonus_value": 3,
+      "attack_type": "Ranged weapon",
+      "target_condition": "Ambushed target",
+      "action_type": "Attack test"
+    },
+    "source_pages": ["168", "195"]
+  },
+  {
+    "id": "assassin_strike",
+    "name": "Assassin Strike",
+    "short_description": "Once per scene, +3 bonus on melee attack against ambushed target.",
+    "long_description": "You know how to strike, using a melee weapon, to deal the most damage to your opponent. You know how to get around armor, anticipate your target’s movements, and strike at weak spots like vital organs and pressure points. Once per scene, when attacking an ambushed target (pg. 135) with a melee weapon, you may add a +3 bonus on your attack test. You may elect to use this Stunt more than once per scene, but each use after the first costs a Fate Point. [10]",
+    "type": "Combat Stunt",
+    "frequency": "Once per scene (additional uses cost 1 FP)",
+    "rules": {
+      "bonus_value": 3,
+      "attack_type": "Melee weapon",
+      "target_condition": "Ambushed target",
+      "action_type": "Attack test"
+    },
+    "source_pages": ["168", "196"]
+  },
+  {
+    "id": "at_home_behind_the_stick",
+    "name": "At Home Behind the Stick",
+    "short_description": "Make a vehicle's Aspect Persistent for you (1 FP).",
+    "long_description": "You know how to get the most out of your vehicle, pushing it to its limits. You may spend a Fate Point to make a single Aspect owned by the vehicle you are driving or piloting Persistent, for you only, for the duration of the scene. You may make any of its other Aspects Persistent for you in this way, but each costs you another Fate Point. [10, 11]",
+    "type": "Vehicle Stunt",
+    "frequency": "Per FP spent",
+    "rules": {
+      "cost": "1 Fate Point per Aspect",
+      "effect": "Make vehicle Aspect Persistent (for self)",
+      "duration": "Scene",
+      "applies_to": "Vehicle you are driving/piloting"
+    },
+    "source_pages": ["169", "196", "197"]
+  },
+  {
+    "id": "augment_adept",
+    "name": "Augment Adept",
+    "short_description": "Once per scene, free invoke of an Augmentation Aspect.",
+    "long_description": "You are especially adept at managing your sleeve’s onboard systems, knowing just how to push it for maximum results. Once per scene you may invoke any Aspect gained from an Augmentation for free, without spending a Fate Point. [11]",
+    "type": "Augmentation Stunt",
+    "frequency": "Once per scene",
+    "rules": {
+      "cost": "Free (normally 1 FP)",
+      "action_type": "Invoke Aspect",
+      "aspect_type": "Augmentation Aspect"
+    },
+    "source_pages": ["169", "197"]
+  },
+  {
+    "id": "banner_of_hope",
+    "name": "Banner of Hope",
+    "short_description": "Once per scene, an ally clears all stress on a chosen track.",
+    "long_description": "Your words and deeds inspire your allies to fight on, urging them to overcome their physical and mental injuries and get back in the fight. Once per scene, as a Free Action, you may select one ally who can hear you speak. That ally may immediately clear all stress (but not Consequences) he has suffered on a Stress Track of your choosing. [12]",
+    "type": "Support Stunt",
+    "frequency": "Once per scene",
+    "rules": {
+      "action_cost": "Free Action",
+      "target": "One ally who can hear you",
+      "effect": "Clear all stress (not Consequences) on chosen Stress Track (Physical, Mental, or System)"
+    },
+    "source_pages": ["169", "198"]
+  },
+  {
+    "id": "battlefield_command",
+    "name": "Battlefield Command",
+    "short_description": "Allies can move to adjacent zone or take cover as Instant Action (1 FP for additional uses).",
+    "long_description": "At your command, your allies shift to a more advantageous position. Once per scene, as Simple or Supplemental Action, you may allow any or all allies who can hear your commands to move into a zone adjacent to them, or take cover (pg. 152). Your allies perform this movement as an Instant Action on your turn. This does not count against the number of Instant Actions they can take during a round. You may elect to use this Stunt more than once per scene, but each use after the first costs a Fate Point. [31]",
+    "type": "Support Stunt",
+    "frequency": "Once per scene (additional uses cost 1 FP)",
+    "rules": {
+      "action_cost": "Simple or Supplemental Action",
+      "target": "Any/all allies who can hear you",
+      "effect": "Move to adjacent zone OR take cover (Instant Action)",
+      "cost_additional_use": "1 Fate Point"
+    },
+    "source_pages": ["169", "199"]
+  },
+  {
+    "id": "blazing_burst",
+    "name": "Blazing Burst",
+    "short_description": "+2 bonus on full-auto/beam weapon attack with a PDW in each hand.",
+    "long_description": "Extensive training has improved the accuracy of your shots, allowing you to aim a PDW accurately when firing with one in each hand. You gain a +2 bonus on the attack test when you perform a full-auto or beam weapon attack with a PDW in each hand. [31]",
+    "type": "Combat Stunt",
+    "frequency": "Passive",
+    "rules": {
+      "bonus_value": 2,
+      "action_type": "Attack test",
+      "conditions": "Full-auto or beam weapon attack, PDW in each hand"
+    },
+    "source_pages": ["169", "199"]
+  },
+  {
+    "id": "carpe_diem",
+    "name": "Carpe Diem",
+    "short_description": "Free Stunt for Pure characters: Once per scene, declare an Aspect, free invoke/compel for self.",
+    "long_description": "Once per scene, as a Free Action, you can Declare that an Aspect of your choosing exists on the current scene or a zone of your choice. The Aspect must make sense within the context of the scene, and may be vetoed by the GM. You, and only you, may invoke or compel this Aspect for free the first time. [13]",
+    "type": "Narrative Stunt",
+    "prerequisite": "Pure Character [5]",
+    "frequency": "Once per scene",
+    "rules": {
+      "action_cost": "Free Action",
+      "effect": "Declare an Aspect on scene or zone",
+      "invocation_cost_self": "Free first time for you only"
+    },
+    "source_pages": ["157", "169", "200"]
+  },
+  {
+    "id": "combat_reload",
+    "name": "Combat Reload",
+    "short_description": "Once per scene, reload railgun/coil gun as Free Action.",
+    "long_description": "You are intimately familiar with your firearms, and reloading them is second nature to you. Once per scene you can reload a railgun or coil gun as a Free Action. This does not help you cool an overheated PAc firearm. You may elect to use this Stunt more than once per scene, but each use after the first costs a Fate Point. [13]",
+    "type": "Combat Stunt",
+    "frequency": "Once per scene (additional uses cost 1 FP)",
+    "rules": {
+      "action_cost": "Free Action",
+      "effect": "Reload railgun or coil gun",
+      "limitation": "Does not cool PAc firearms",
+      "cost_additional_use": "1 Fate Point"
+    },
+    "source_pages": ["169", "200"]
+  },
+  {
+    "id": "concentrated_fire",
+    "name": "Concentrated Fire",
+    "short_description": "Once per scene, an ally attacks same target as you (Instant Action).",
+    "long_description": "You synchronize your attack with an ally, firing together at the same target. Once per scene, when you attack a foe with a ranged weapon, you may direct any ally in the zone you occupy (or an adjacent zone) to fire on your target at the same time you do. Make your attack test as normal. As an Instant Action, your chosen ally may also make an attack test on your turn against the same target. You may elect to use this Stunt more than once per scene, but each use after the first costs a Fate Point. [14]",
+    "type": "Combat Stunt",
+    "frequency": "Once per scene (additional uses cost 1 FP)",
+    "rules": {
+      "trigger": "Attack foe with ranged weapon",
+      "effect": "Ally in same/adjacent zone makes Instant Action attack on same target",
+      "cost_additional_use": "1 Fate Point"
+    },
+    "source_pages": ["170", "201"]
+  },
+  {
+    "id": "constant_vigilance",
+    "name": "Constant Vigilance",
+    "short_description": "+3 to initiative tests; spend 1 FP to defend normally when ambushed.",
+    "long_description": "You are always on the lookout for trouble. You get a +3 bonus on any initiative test. In addition, if you are ambushed, you may spend a Fate Point to defend yourself normally. [15]",
+    "type": "General Stunt",
+    "frequency": "Passive & Conditional",
+    "rules": {
+      "initiative_bonus": 3,
+      "ambush_defense": {
+        "cost": "1 Fate Point",
+        "effect": "Defend normally when ambushed (vs. no Skill defense)"
+      }
+    },
+    "source_pages": ["170", "202"]
+  },
+  {
+    "id": "counter_attack",
+    "name": "Counter Attack",
+    "short_description": "Perform melee attack as Instant Action after Spin on defense against melee/close ranged attack.",
+    "long_description": "When you generate Spin on a test to defend yourself against a melee attack, or close (same zone) ranged attack, you may forego the option of creating an Effect Aspect to instead perform a melee attack against your attacker as an Instant Action. This is a single melee attack, either unarmed or with a weapon in hand. [15]",
+    "type": "Combat Stunt",
+    "frequency": "Per Spin on Defense Test",
+    "rules": {
+      "trigger": "Generate Spin on defense test against melee or close ranged attack",
+      "effect_alternative": "Create Effect Aspect",
+      "action": "Perform melee attack against attacker (Instant Action)"
+    },
+    "source_pages": ["170", "202"]
+  },
+  {
+    "id": "cover_of_darkness",
+    "name": "Cover of Darkness",
+    "short_description": "Zone Aspects relating to dim light/darkness are Persistent for you.",
+    "long_description": "You are at home in the shadows, and know how to use tricks of light to keep yourself hidden. Zone Aspects that relate to dim light or darkness are always considered Persistent for you. [16]",
+    "type": "Utility Stunt",
+    "frequency": "Passive",
+    "rules": {
+      "effect": "Dim light/darkness Zone Aspects are Persistent for you",
+      "aspect_type": "Zone Aspect",
+      "persistent_benefit": "Free invoke/compel for bonus/reroll [32]"
+    },
+    "source_pages": ["170", "203"]
+  },
+  {
+    "id": "crippling_blow",
+    "name": "Crippling Blow",
+    "short_description": "Once per scene, +3 WR on a single melee/unarmed attack.",
+    "long_description": "You know how to attack, using your body weight and leverage to land devastating blows against your opponents. Once per scene, you may increase the Weapon Rating of a melee weapon (or unarmed strike) by +3 on a single melee attack. This bonus may be declared after the attack test is made. You may elect to use this Stunt more than once per scene, but each use after the first costs a Fate Point. [16]",
+    "type": "Combat Stunt",
+    "frequency": "Once per scene (additional uses cost 1 FP)",
+    "rules": {
+      "bonus_value": 3,
+      "effect_on": "Weapon Rating",
+      "attack_type": "Single melee/unarmed attack",
+      "timing": "Can be declared after attack test",
+      "cost_additional_use": "1 Fate Point"
+    },
+    "source_pages": ["170", "203"]
+  },
+  {
+    "id": "dead_inside",
+    "name": "Dead Inside",
+    "short_description": "Constant Determination rating of 2.",
+    "long_description": "Your mind has grown numb to the horrors you have endured. Despite terrible emotional trauma, you are able to hold it together, keep cool, and press on. You have a constant Determination (pg. 129) rating of 2, regardless of the circumstances. This does not help you resist the potentially damaging effects of fragmentation that comes with resleeving or transforming into a SIM. [33]",
+    "type": "Mental Stunt",
+    "frequency": "Passive",
+    "rules": {
+      "determination_value": 2,
+      "limitation": "Does not help resist fragmentation from resleeving/SIM transformation"
+    },
+    "source_pages": ["170", "204"]
+  },
+  {
+    "id": "digital_spider",
+    "name": "Digital Spider",
+    "short_description": "+2 bonus on Research Assessments for Extranet info.",
+    "long_description": "You’ve been to every corner of the Extranet, and know where to look for obscure information. You gain a +2 bonus on all Research rolls to perform Assessments related to a person, place, or thing that can be found on the Extranet. [17]",
+    "type": "Information Stunt",
+    "frequency": "Passive",
+    "prerequisite": "SIM State (recommended, as per Starting State benefit) [5]",
+    "rules": {
+      "bonus_value": 2,
+      "skill_affected": "Research",
+      "action_type": "Assessments",
+      "conditions": "Related to Extranet information"
+    },
+    "source_pages": ["157", "171", "205"]
+  },
+  {
+    "id": "digitally_evolved",
+    "name": "Digitally Evolved",
+    "short_description": "Enhances virtual body in virtuality (+2 Physical Skills, +1 attack skills).",
+    "long_description": "You have managed to modify your ego’s code in such a way that, when loaded into a virtual environment, your virtual body is greatly enhanced. You gain a +2 bonus on Athletics, Endurance, and Perception Skill tests while in a virtuality. You also gain a +1 bonus on attack tests made using the Firearms or Melee Skills. [17]",
+    "type": "Savant/SIM Stunt",
+    "prerequisite": "Savant Stunt OR SIM State (as per Starting State benefit) [5, 34]",
+    "frequency": "Passive (when in virtuality)",
+    "rules": {
+      "condition": "While in a virtuality",
+      "physical_skill_bonus": {
+        "value": 2,
+        "skills": ["Athletics", "Endurance", "Perception"]
+      },
+      "attack_skill_bonus": {
+        "value": 1,
+        "skills": ["Firearms", "Melee"]
+      }
+    },
+    "source_pages": ["157", "171", "205"]
+  },
+  {
+    "id": "dodge",
+    "name": "Dodge",
+    "short_description": "Once per scene, reduce physical stress by Athletics +2.",
+    "long_description": "Bobbing and weaving, ducking and dodging, you nimbly dance out of the way of incoming attacks. Once per scene, you may reduce the amount of stress you suffer from any single physical attack by an amount equal to your Athletics +2. [18]",
+    "type": "Defense Stunt",
+    "frequency": "Once per scene",
+    "rules": {
+      "reduction_formula": "Athletics Skill Rank + 2",
+      "attack_type": "Single physical attack"
+    },
+    "source_pages": ["171", "206"]
+  },
+  {
+    "id": "drone_jock",
+    "name": "Drone-Jock",
+    "short_description": "Reduces drone cost, boosts drone skills, adds AP.",
+    "long_description": "You are especially adept at customizing and operating drones. When you purchase this Stunt, you get several benefits: The Cost of any drone you attempt to purchase is reduced by -1. Whenever you purchase a drone, two of its Skills (your choice) are increased by +1. Once chosen, the Skills the bonuses are applied to cannot be changed. Drones that you purchase gain one additional Augmentation Point. [18, 19]",
+    "type": "Drone Stunt",
+    "frequency": "Passive (on drone purchase)",
+    "prerequisite": "SIM State (recommended, as per Starting State benefit) [5]",
+    "rules": {
+      "drone_cost_reduction": 1,
+      "drone_skill_bonus": {
+        "amount": "+1",
+        "quantity": 2,
+        "chosen_at_purchase": true
+      },
+      "drone_augmentation_points": "+1"
+    },
+    "source_pages": ["157", "171", "206", "207"]
+  },
+  {
+    "id": "dual_assault",
+    "name": "Dual Assault",
+    "short_description": "Once per scene, two melee attacks (Simple Action).",
+    "long_description": "You are a whirling dervish, your barrage of strikes laying waste to your opponents. Once per scene, when wielding a melee weapon in each hand (or when unarmed), you may perform a Dual Assault as a Simple Action. When performing a Dual Assault, make a separate attack with each of your weapons. You may attack a single target twice, or attack two different targets in the zone you occupy. You may elect to use this Stunt more than once per scene, but no more than once per turn, and each use after the first costs a Fate Point. [19, 20]",
+    "type": "Combat Stunt",
+    "frequency": "Once per scene (additional uses cost 1 FP, max once per turn)",
+    "rules": {
+      "action_cost": "Simple Action",
+      "weapons_required": "Melee weapon in each hand OR unarmed",
+      "attacks_made": "Two separate attacks",
+      "targets": "Single target (twice) or two different targets in zone",
+      "cost_additional_use": "1 Fate Point"
+    },
+    "source_pages": ["171", "207", "208"]
+  },
+  {
+    "id": "ego_stabilization_software",
+    "name": "Ego Stabilization Software",
+    "short_description": "SIM State/Synthetic Biology Aspects not Persistent; +1 Cohesion defense vs. resleeving trauma.",
+    "long_description": "You have a top-of-the-line software suite that constantly edits your ego in small ways to help ensure maximum mental cohesion. The SIM State(P) and Synthetic Biology(P) Aspects are not Persistent for you, and you gain a +1 bonus on Cohesion tests to defend against the mental trauma that comes with resleeving. [20]",
+    "type": "Mental/Augmentation Stunt",
+    "frequency": "Passive",
+    "rules": {
+      "aspect_modification": "SIM State(P) and Synthetic Biology(P) are not Persistent for you",
+      "bonus_value": 1,
+      "skill_affected": "Cohesion",
+      "action_type": "Defense test",
+      "conditions": "Against mental trauma from resleeving"
+    },
+    "source_pages": ["172", "208"]
+  },
+  {
+    "id": "fame",
+    "name": "Fame",
+    "short_description": "Become famous for something, with associated benefits.",
+    "long_description": "You are famous for something. This Stunt allows you to gain renown in a specific network, usually from fans of your work. You gain a new Aspect (chosen at selection) that represents your fame. You gain a +1 bonus on rolls to request Favors (pg. 147) from people who enjoy your work. This bonus does not stack with other Stunts that add bonuses to Favor tests. [20, 21]",
+    "type": "Social Stunt",
+    "frequency": "Passive",
+    "rules": {
+      "new_aspect": "Represents your fame (chosen at selection)",
+      "favor_bonus": 1,
+      "favor_condition": "From fans of your work",
+      "stacking": "Does not stack with other Favor bonus stunts"
+    },
+    "selection_detail": "Choose the area of your fame (e.g., popular template writer, sensie star).",
+    "source_pages": ["172", "208", "209"]
+  },
+  {
+    "id": "five_minute_friends",
+    "name": "Five Minute Friends",
+    "short_description": "Gain a Lasting Aspect for a new friend (Diplomacy test).",
+    "long_description": "You know how to manipulate people into becoming your friend, making the improbable and probable opportunities outright certain. Determine the person you want become friends with and make a Diplomacy test (Diff: 3). If you succeed, you gain a new Lasting Aspect that relates to this person. You may have a number of Five Minute Friend Aspects equal to your Diplomacy. If you’ve already reached your limit, and want another “Five Minute Friend” Aspect, you’ll need to discard one that you already have. [21]",
+    "type": "Social Stunt",
+    "frequency": "As needed (Diplomacy test)",
+    "rules": {
+      "skill_test": "Diplomacy (Diff: 3)",
+      "effect": "Gain a Lasting Aspect related to a new friend",
+      "limit": "Number of Aspects equal to Diplomacy skill"
+    },
+    "source_pages": ["172", "209"]
+  },
+  {
+    "id": "forced_advance",
+    "name": "Forced Advance",
+    "short_description": "Force opponent into adjacent zone after Spin on melee attack.",
+    "long_description": "Your melee attacks crash down upon your foes with tremendous force. As part of any melee attack in which you generate Spin, you may elect to forego creating an Effect Aspect and instead engage your opponent in an Athletics (+ Size) contest as a Free Action. If you succeed, you may force your opponent into an adjacent zone. You may choose to go with him, or stay in your current zone. [22]",
+    "type": "Combat Stunt",
+    "frequency": "Per Spin on Melee Attack",
+    "rules": {
+      "trigger": "Generate Spin on melee attack",
+      "effect_alternative": "Create Effect Aspect",
+      "action": "Athletics (+ Size) contest (Free Action) to force opponent into adjacent zone"
+    },
+    "source_pages": ["172", "210"]
+  },
+  {
+    "id": "free_runner",
+    "name": "Free Runner",
+    "short_description": "+3 on Athletics tests to Hustle/Run; +2 on Athletics defense tests when Hustling/Running.",
+    "long_description": "You are especially good at navigating your environment on the run, using your momentum to leap, roll, vault, bounce, or slide under obstacles while maintaining your speed. You gain a +3 bonus on Athletics tests to Hustle or Run. In addition, you gain a +2 bonus on Athletics-based defense tests during any round in which you Hustled or Ran. [22, 23]",
+    "type": "Mobility Stunt",
+    "frequency": "Passive",
+    "rules": {
+      "bonus_movement": {
+        "value": 3,
+        "skill": "Athletics",
+        "action_type": ["Hustle", "Run"]
+      },
+      "bonus_defense": {
+        "value": 2,
+        "skill": "Athletics",
+        "action_type": "Defense tests",
+        "condition": "During round Hustled or Ran"
+      }
+    },
+    "source_pages": ["172", "210", "211"]
+  },
+  {
+    "id": "geek_speak",
+    "name": "Geek Speak",
+    "short_description": "Use Education instead of Diplomacy/Guile for scientific facts.",
+    "long_description": "You are really good at seeding a conversation with just enough techno-babble to baffle, confuse, and deceive others. You may test your Education instead of Diplomacy or Guile whenever you need to convince someone of a scientific fact, whether it is true or not. [23]",
+    "type": "Social Stunt",
+    "frequency": "Conditional",
+    "rules": {
+      "skill_substitution": {
+        "original_skills": ["Diplomacy", "Guile"],
+        "new_skill": "Education",
+        "condition": "Convincing someone of a scientific fact"
+      }
+    },
+    "source_pages": ["172", "211"]
+  },
+  {
+    "id": "genius_at_work",
+    "name": "Genius at Work",
+    "short_description": "Once per scene, use chosen skill (Education or Insight) in place of any other skill.",
+    "long_description": "You have a talent for analyzing a situation and figuring out how to get the most benefit for the least amount of effort. This could mean working out the best way to build a simple tool, or just knowing exactly where to hit (or what to say to) an opponent to make it hurt the most. When you select this Stunt, select either Education or Insight. Once per scene, you may use that chosen Skill in place of any other Skill on a single test. You may elect to use this Stunt more than once per scene, but each use after the first costs a Fate Point. [23, 35]",
+    "type": "Utility Stunt",
+    "frequency": "Once per scene (additional uses cost 1 FP)",
+    "rules": {
+      "skill_substitution": {
+        "original_skill": "Any",
+        "new_skill": "Chosen skill (Education or Insight)",
+        "condition": "Single test"
+      },
+      "cost_additional_use": "1 Fate Point"
+    },
+    "selection_detail": "Choose either Education or Insight.",
+    "source_pages": ["172", "211", "212"]
+  },
+  {
+    "id": "grappler",
+    "name": "Grappler",
+    "short_description": "+2 bonus on grappling-related Blocks, Maneuvers, or push/pull/throw actions.",
+    "long_description": "You’ve mastered a style of martial arts that specializes in ground combat. You gain a +2 bonus when attempting a grappling-related Block (pg. 136) or Maneuver (pg. 117); or when attempting to push, pull, or throw (pg. 143) an opponent. [35]",
+    "type": "Combat Stunt",
+    "frequency": "Passive",
+    "rules": {
+      "bonus_value": 2,
+      "action_type": ["Block", "Maneuver", "Push/Pull/Throw"],
+      "conditions": "Grappling-related"
+    },
+    "source_pages": ["172", "212"]
+  },
+  {
+    "id": "great_captain",
+    "name": "Great Captain",
+    "short_description": "Ship gains +1 bonus on all Capabilities when you captain it.",
+    "long_description": "You really know how to manage a ship and its crew, pushing both to their limits and beyond. When serving as the captain of a ship, the ship gains a +1 bonus on all of its Capabilities (pg. 238). [35]",
+    "type": "Vehicle Stunt",
+    "frequency": "Passive (when captaining a ship)",
+    "rules": {
+      "condition": "Serving as ship captain",
+      "effect": "Ship gains +1 bonus on all Capabilities"
+    },
+    "source_pages": ["173", "212"]
+  },
+  {
+    "id": "ground_and_pound",
+    "name": "Ground and Pound",
+    "short_description": "Immediate melee attack (Instant Action) after Spin on grappling-related action.",
+    "long_description": "Whenever you generate Spin while attempting a grappling-related Block (pg. 136) or Maneuver (pg. 117); or when attempting to push, pull, or throw (pg. 143) an opponent; you may forego creating an Effect Aspect to immediately make a melee attack as an Instant Action against your foe. [24, 35]",
+    "type": "Combat Stunt",
+    "frequency": "Per Spin on Grappling Action",
+    "rules": {
+      "trigger": "Generate Spin on grappling-related Block/Maneuver/Push/Pull/Throw",
+      "effect_alternative": "Create Effect Aspect",
+      "action": "Immediate melee attack (Instant Action) against foe"
+    },
+    "source_pages": ["173", "212", "213"]
+  },
+  {
+    "id": "gun_slinger",
+    "name": "Gun Slinger",
+    "short_description": "+2 WR for pistols; dual-wield pistols can use best WR for full-auto/beam, reload both as one.",
+    "long_description": "The WR of any pistol you wield is increased by +2. When wielding a pistol in each hand, you may perform full-auto or beam attacks using the best WR of the two. If such an attack results in the need to reload or cool your weapon, both weapons are considered out of ammo or overheated. You may reload or cool both weapons as if they were one. [36]",
+    "type": "Combat Stunt",
+    "frequency": "Passive",
+    "rules": {
+      "pistol_wr_bonus": 2,
+      "dual_wield_pistols": {
+        "full_auto_beam_attack": "Uses best WR of two pistols",
+        "reload_cool_both_as_one": true
+      }
+    },
+    "source_pages": ["172"]
+  },
+  {
+    "id": "infusion",
+    "name": "Infusion",
+    "short_description": "Infuse equipment into ego; callable in virtuality. Max Cost = SINC+5 (per take +3 Cost).",
+    "long_description": "You have managed to modify your ego’s code, adding additional code that mimics one or more pieces of equipment. This code becomes a part of your ego, and cannot be separated. When you load into a virtuality, you gain the ability to call this equipment into being at will. Your ego’s infused equipment functions just as it would if it were real, and obeys the physical laws of the virtual environment. You may infuse any number of items so long as their combined Cost does not exceed your SINC Skill rank +5. You may select this Stunt multiple times. Each time that you do, you may infuse additional items, adding +3 to the total Cost of the items you can infuse. Also, each time you take this Stunt, you may liquidate the items you have previously infused and infuse a whole new set. [24, 25]",
+    "type": "Savant/SIM Stunt",
+    "prerequisite": "Savant Stunt OR SIM State (as per Starting State benefit) [5, 34]",
+    "frequency": "Passive (when in virtuality)",
+    "rules": {
+      "max_infused_cost": "SINC Skill Rank + 5",
+      "multiple_takes_effect": "+3 to max infused cost per additional take",
+      "condition": "Load into a virtuality",
+      "reinfuse_option": "Can liquidate and infuse new set when taking Stunt again"
+    },
+    "source_pages": ["157", "173", "213", "214"]
+  },
+  {
+    "id": "inspire_greatness",
+    "name": "Inspire Greatness",
+    "short_description": "Once per scene, grant ally +3 bonus on a Skill test.",
+    "long_description": "You know how to talk to people to get the best out of them, encouraging them to push beyond their normal limits and achieve greatness. Once per scene, you may grant an ally who can hear you speak a +3 bonus on a single Skill test, including attack and defense tests. [25]",
+    "type": "Support Stunt",
+    "frequency": "Once per scene",
+    "rules": {
+      "bonus_value": 3,
+      "target": "Ally who can hear you",
+      "action_type": "Single Skill test (including attack/defense)"
+    },
+    "source_pages": ["173", "214"]
+  },
+  {
+    "id": "licensed",
+    "name": "Licensed",
+    "short_description": "Acquire restricted equipment using Rep-Rating (normally Assets).",
+    "long_description": "You have somehow obtained a license to acquire restricted equipment, and may do so using your Rep-Rating. (Normally a character must use Assets to acquire restricted items.) Note that excessive purchasing of restricted items can still result in investigation by authorities. A PC who gets caught would likely lose his license. If this happens, the GM should allow the PC to replace this Stunt with another at his next Milestone. [26]",
+    "type": "Utility Stunt",
+    "frequency": "Passive",
+    "rules": {
+      "effect": "Can acquire restricted items using Rep-Rating",
+      "normal_cost_method": "Assets skill",
+      "risk": "Excessive purchasing can lead to investigation/license loss"
+    },
+    "source_pages": ["173", "215"]
+  },
+  {
+    "id": "marksman",
+    "name": "Marksman",
+    "short_description": "+2 on Take Aim tests; once per scene, reduce target's AR by 3 for a ranged attack.",
+    "long_description": "You are adept at predicting a target’s movement; you know how to lead them, and excel at finding the weak points in an armored target. You gain a +2 bonus on any tests to Take Aim (pg. 151). In addition, once per scene, you may reduce your target’s Armor Rating by 3 points for the purposes of a single ranged attack. You may not use a Full Auto or Beam Weapon attack when making this attack. [27]",
+    "type": "Combat Stunt",
+    "frequency": "Passive & Once per scene",
+    "rules": {
+      "take_aim_bonus": 2,
+      "ar_reduction": {
+        "value": 3,
+        "frequency": "Once per scene",
+        "attack_type": "Single ranged attack (not full auto/beam weapon)"
+      }
+    },
+    "source_pages": ["173", "216"]
+  },
+  {
+    "id": "master_tactician",
+    "name": "Master Tactician",
+    "short_description": "Once per scene, make Strategy test (Diff: 2). Success: Scene/Zone Aspect Persistent. Spin: Maneuver as Free Action, Aspect Persistent.",
+    "long_description": "You have a remarkable awareness of your surroundings, and always know how to make the best of it. Once per scene, you may make a Strategy test (Diff: 2) as a Free Action. If you succeed, one Scene or Zone Aspect becomes Persistent for you for the duration of the scene. If you generate Spin, you instead gain the option to attempt a Maneuver as a Free Action. If this Maneuver results in an Aspect, it is Persistent for you for the duration of the scene. [37, 38]",
+    "type": "Utility Stunt",
+    "frequency": "Once per scene",
+    "rules": {
+      "action_cost": "Free Action",
+      "skill_test": "Strategy (Diff: 2)",
+      "success_effect": "Make one Scene or Zone Aspect Persistent for you (duration: scene)",
+      "spin_effect": "Attempt Maneuver as Free Action; resulting Aspect is Persistent for you (duration: scene)"
+    },
+    "source_pages": ["174", "218", "219"]
+  },
+  {
+    "id": "non_citizen",
+    "name": "Non-Citizen",
+    "short_description": "Free Stunt for Apostates: No Rep-Rating; +2 bonus on Assets/Favor tests for apostate goods/services.",
+    "long_description": "You are a ghost. Little record of your life exists. You do not show up on most Coalition records and live mostly as an apostate. You gain the Non-Citizen Aspect. You also do not have a Rep-Rating; skip that phase of character creation. If you need to make use of a Rep-Rating, you’ll need to purchase a false CID (pg. 209). You also gain a +2 bonus on any Assets tests for Favor requests (pg. 147) made to acquire goods, information, or services from fellow apostates. [38, 39]",
+    "type": "Allegiance Stunt",
+    "prerequisite": "Allegiance: Apostate [2]",
+    "frequency": "Passive",
+    "rules": {
+      "new_aspect": "Non-Citizen",
+      "no_rep_rating": true,
+      "bonus_value": 2,
+      "skill_affected": ["Assets", "Networking (Apostate)"],
+      "action_type": "Favor requests to acquire goods/info/services from apostates"
+    },
+    "source_pages": ["160", "174", "219", "220"]
+  },
+  {
+    "id": "precision_strike",
+    "name": "Precision Strike",
+    "short_description": "Once per scene, reduce target's AR by 4 for a melee attack.",
+    "long_description": "You are adept at spotting your foe’s weak spots and exploiting them. Once per scene, you may reduce your target’s Armor Rating by 4 points for the purposes of a single melee attack. You may elect to use this Stunt more than once per scene, but you must first succeed on a Strategy test (Diff: 2) and pay a Fate Point. [40]",
+    "type": "Combat Stunt",
+    "frequency": "Once per scene (additional uses cost 1 FP + Strategy test)",
+    "rules": {
+      "ar_reduction": {
+        "value": 4,
+        "frequency": "Once per scene",
+        "attack_type": "Single melee attack"
+      },
+      "cost_additional_use": "1 Fate Point + Strategy test (Diff: 2)"
+    },
+    "source_pages": ["175", "221"]
+  },
+  {
+    "id": "rapid_strike",
+    "name": "Rapid Strike",
+    "short_description": "Once per turn, additional unarmed attack after Spin on unarmed melee attack.",
+    "long_description": "You’ve mastered a form of martial arts that specializes in launching a rapid series of strikes against a single foe. Once each turn, if you generate Spin while performing an unarmed melee attack, you may forego creating an Effect Aspect to immediately perform an additional unarmed attack against the same opponent. [40]",
+    "type": "Combat Stunt",
+    "frequency": "Once per turn (per Spin on unarmed melee attack)",
+    "rules": {
+      "trigger": "Generate Spin on unarmed melee attack",
+      "effect_alternative": "Create Effect Aspect",
+      "action": "Perform additional unarmed attack against same opponent (Instant Action)"
+    },
+    "source_pages": ["175", "221"]
+  },
+  {
+    "id": "razor_tongue",
+    "name": "Razor Tongue",
+    "short_description": "Spend 1 FP for +3 bonus/+3 Edge on next Guile test to anger opponent.",
+    "long_description": "You have a cunning wit and know just what to say to get under someone’s skin. You may spend a Fate Point to add a +3 bonus (or +3 Edge) on your next Guile test made to anger your opponent, possibly forcing him to attack you. [41]",
+    "type": "Mental Combat Stunt",
+    "frequency": "As needed (costs 1 FP)",
+    "rules": {
+      "cost": "1 Fate Point",
+      "bonus_value": 3,
+      "edge_value": 3,
+      "skill_affected": "Guile",
+      "conditions": "Next test to anger opponent"
+    },
+    "source_pages": ["175", "222"]
+  },
+  {
+    "id": "refreshed",
+    "name": "Refreshed",
+    "short_description": "Refresh Rating increased by +1.",
+    "long_description": "Your Refresh Rating is increased by +1. You may take this Stunt a total of three times. [41]",
+    "type": "Resource Stunt",
+    "frequency": "Passive",
+    "rules": {
+      "refresh_rating_modifier": "+1"
+    },
+    "max_takes": 3,
+    "source_pages": ["175", "222"]
+  },
+  {
+    "id": "reputable",
+    "name": "Reputable",
+    "short_description": "Starting Rep-Rating increased by +2.",
+    "long_description": "You’ve left those who’ve met you with good impressions, or you’ve contributed something meaningful to the lives of the people of the galaxy. Your Rep-Rating is increased by +2. [41]",
+    "type": "Social Stunt",
+    "frequency": "Passive (at character creation)",
+    "rules": {
+      "starting_rep_rating_modifier": "+2"
+    },
+    "source_pages": ["175", "222"]
+  },
+  {
+    "id": "right_place_right_time",
+    "name": "Right Place, Right Time",
+    "short_description": "Spend 1 FP to appear in any scene not previously present.",
+    "long_description": "You always seem to show up when it matters most, or at least when it’s most convenient for you. You may spend a Fate Point to appear in any scene in which you were not previously present. Note that the GM may deny the use of this Stunt if you were clearly detained or have no reasonable way of getting there. [42]",
+    "type": "Narrative Stunt",
+    "frequency": "As needed (costs 1 FP)",
+    "rules": {
+      "cost": "1 Fate Point",
+      "effect": "Appear in any scene not previously present",
+      "gm_veto": "GM may deny if detained or no reasonable way to get there"
+    },
+    "source_pages": ["175", "223"]
+  },
+  {
+    "id": "savant",
+    "name": "Savant",
+    "short_description": "Hack mindset, gain SINC skill (Rank 1), can take Savant Programs, gain Disadvantage Aspect.",
+    "long_description": "You have managed to hack your mindset, stripping it of the Coalition-mandated restrictions placed on it by the Humanity Preservation Act. You gain a rating of 1 in the SINC Skill. During character creation you may improve your SINC Skill by selecting the Skilled Stunt. After character creation you may improve this Skill like any other, either by swapping its rank with another Skill at a Milestone, or selecting the Skilled Stunt. You also gain a Savant Program of your choice, and may now purchase additional Savant Programs with the Stunts you get during character creation or from Major Milestones. In addition, you also gain a new 'Disadvantage' Aspect that represents the negative side effects of hacking the mindset (e.g., Glitchy Short-Term Memory, Occasional Uncontrollable Muscle Spasms). This damage to the ego may be repairable in time. Upon achieving any Milestone, you may elect to reduce a Skill of your choice by -1 in exchange for removing this Aspect. The Skill selected may not be reduced to a rating below 0. [42, 43]",
+    "type": "Special Stunt",
+    "prerequisite": "SIM State OR Apotheosis Augmentation [34]",
+    "frequency": "Character Creation",
+    "rules": {
+      "sinc_skill_rank": 1,
+      "savant_program_access": true,
+      "new_aspect": {
+        "type": "Disadvantage Aspect",
+        "description": "Represents negative side effects of hacking mindset (e.g., 'Glitchy Short-Term Memory').",
+        "removal_condition": "At any Milestone, reduce another Skill by 1 rank (min 0) to remove this Aspect."
+      }
+    },
+    "source_pages": ["175", "223", "224"]
+  },
+  {
+    "id": "shake_it_off",
+    "name": "Shake It Off",
+    "short_description": "Once per scene, clear Physical Stress Track after Spin on physical defense test.",
+    "long_description": "You know how to take advantage of your opponent's mistakes, using them as opportunities to catch your breath and clear your head. Once per scene, when you generate Spin on a defense test in a physical conflict, you may forego creating an Effect Aspect for the option to clear your Physical Stress Track (but not Consequences). You may elect to use this Stunt more than once per scene, but each use after the first requires an Endurance test (Diff: 2) and costs a Fate Point. [44]",
+    "type": "Combat Stunt",
+    "frequency": "Once per scene (additional uses cost 1 FP + Endurance test)",
+    "rules": {
+      "trigger": "Generate Spin on physical defense test",
+      "effect_alternative": "Create Effect Aspect",
+      "action": "Clear Physical Stress Track (not Consequences)",
+      "cost_additional_use": "1 Fate Point + Endurance test (Diff: 2)"
+    },
+    "source_pages": ["175", "225"]
+  },
+  {
+    "id": "signature_item",
+    "name": "Signature Item",
+    "short_description": "Gain an item and a 'Connection' Aspect, free invoke once per scene.",
+    "long_description": "You gain an item or piece of gear, and an additional 'Connection' Aspect related to the item. You may invoke this Aspect once per scene for free. Your Signature Item could be a ship, a space station, expensive armor, or even a much-loved sleeve. The Cost of this item generally doesn’t matter, but you must get your GM’s permission to take an item with a Cost rated higher than your Assets or Rep-Rating, x2. If the item is lost or taken, the character should be given some opportunity to recover the item, take a new item as a Signature Item, or trade this Stunt for another upon reaching his next Milestone. [45, 46]",
+    "type": "Gear Stunt",
+    "frequency": "Passive (free invoke once per scene)",
+    "rules": {
+      "item_acquisition": "Gain a specific item (chosen at selection)",
+      "new_aspect": {
+        "type": "Connection Aspect",
+        "description": "Related to the item",
+        "invocation_cost_self": "Free once per scene"
+      },
+      "item_cost_limit_guidance": "GM permission required if Cost > MAX(Assets, Rep-Rating) x2",
+      "loss_contingency": "Opportunity to recover, get new item, or trade Stunt at next Milestone"
+    },
+    "source_pages": ["175", "226", "227"]
+  },
+  {
+    "id": "sim_state",
+    "name": "SIM State",
+    "short_description": "Free Stunt for SIM characters: Permanent SIM State(P) Aspect, functions as mindset, views physical world via mesh.",
+    "long_description": "You exist purely as software on a machine. Your home is a virtuality, and you can make it whatever you wish. Though you do not have a body, you have programs that allow you to view and hear the physical world through mesh sensors. You can generally view non-restricted areas local to the computer system you are running on with little effort. The server you are installed on acts as your mindset and provides you with all the benefits of the Apotheosis Augmentation (pg. 218). The software that comprises your identity also consists of your Agent, your SINC (if you are a Savant), and any other software normally housed in the mindset. You gain the Persistent Aspect SIM State(P). This Aspect represents the fact that you do not have a body. Rather, you view the world through ARIS strips, or via another’s senses if they uplink their feed to your mindset or if you inhabit their SIM-cell module (pg. 228). The SIM State(P) Aspect also represents the tendency for a bodiless ego to fragment over time, and can be compelled during most Cohesion tests. [47, 48]",
+    "type": "State Stunt",
+    "prerequisite": "SIM Character [5]",
+    "frequency": "Passive",
+    "rules": {
+      "new_aspect": "SIM State(P) (Persistent)",
+      "mindset_functionality": "Server acts as mindset, provides Apotheosis Aug benefits",
+      "physical_world_interaction": "View/hear via mesh sensors, ARIS strips, or host's senses",
+      "compel_condition": "Can be compelled during Cohesion tests (fragmentation)"
+    },
+    "source_pages": ["157", "176", "228", "229"]
+  },
+  {
+    "id": "skilled",
+    "name": "Skilled",
+    "short_description": "Increase one non-Physical Skill rank by +1 (Physical for Pure).",
+    "long_description": "You’ve spent a lot of time honing a particular Skill, becoming better and better with time. You increase the rank of one of your non-Physical Skills by +1. If you are Pure, you may apply this to a Physical Skill, but must replace this Stunt if you ever resleeve or become a SIM. You may purchase this Stunt multiple times, but no Skill may be increased to a rating greater than 5. Any time you pass a Major Milestone, you may change the Skill associated with this Stunt, removing the +1 rank increase and applying it to a different Skill. [48]",
+    "type": "Skill Stunt",
+    "frequency": "Character Creation / Milestone (can change skill)",
+    "rules": {
+      "skill_rank_increase": 1,
+      "skill_type_default": "non-Physical Skill",
+      "skill_type_pure_exception": "Physical Skill (if Pure, lost on resleeve/SIM)",
+      "max_skill_rank": 5
+    },
+    "max_takes": "Multiple (no explicit limit beyond skill max)",
+    "source_pages": ["162", "176", "229"]
+  },
+  {
+    "id": "slayer",
+    "name": "Slayer",
+    "short_description": "If hit with Huge(P) weapon, but no Consequence, spend 1 FP to add +3 stress.",
+    "long_description": "You specialize in using big weapons for maximum devastation. Each time you hit a target with a weapon bearing the Huge(P) Aspect, but fail to force your foe to suffer a Consequence, you may pay a Fate Point to automatically add +3 to the amount of stress inflicted. You may only do this once per attack. [49]",
+    "type": "Combat Stunt",
+    "frequency": "Once per attack (costs 1 FP)",
+    "rules": {
+      "trigger": "Hit target with Huge(P) weapon, but no Consequence",
+      "cost": "1 Fate Point",
+      "effect": "Automatically add +3 stress inflicted",
+      "limit_per_attack": 1
+    },
+    "source_pages": ["176", "231"]
+  },
+  {
+    "id": "slippery_combatant",
+    "name": "Slippery Combatant",
+    "short_description": "Move to adjacent zone or take cover as Instant Action after Spin on defense test.",
+    "long_description": "You are quick-footed and hard to pin down. If you generate Spin on a defense test against an attack, you may forego creating an Effect Aspect to instead move to an adjacent zone or take cover as an Instant Action. This is in addition to your normal ability to move as a Free Action on your turn. [50]",
+    "type": "Mobility Stunt",
+    "frequency": "Per Spin on Defense Test",
+    "rules": {
+      "trigger": "Generate Spin on defense test against attack",
+      "effect_alternative": "Create Effect Aspect",
+      "action": "Move to adjacent zone OR take cover (Instant Action)"
+    },
+    "source_pages": ["176", "232"]
+  },
+  {
+    "id": "sniper",
+    "name": "Sniper",
+    "short_description": "+3 Range for rifles; once per scene, force more severe Consequence.",
+    "long_description": "You are highly proficient with rifles, and have trained extensively to eliminate targets with a single shot. When making attacks with a rifle or scoped assault rifle, the Range of your weapon is increased by +3. In addition, once per scene when an enemy is forced to suffer a Consequence from your shot, you can force them to take a more severe type of Consequence. If they cannot, they may not take any Consequence at all to reduce stress. [51, 52]",
+    "type": "Combat Stunt",
+    "frequency": "Passive & Once per scene",
+    "rules": {
+      "range_bonus": {
+        "value": 3,
+        "weapons": ["Rifle", "Scoped Assault Rifle"]
+      },
+      "force_consequence_severity": {
+        "frequency": "Once per scene",
+        "condition": "Enemy forced to suffer Consequence from your shot",
+        "effect": "Force more severe Consequence (or no Consequence if maxed)"
+      }
+    },
+    "source_pages": ["177", "233", "234"]
+  },
+  {
+    "id": "specialized_program",
+    "name": "Specialized Program",
+    "short_description": "+2 bonus on attempts to execute a selected Savant Program.",
+    "long_description": "You’ve spent a great deal of time mastering a specific Savant Program, honing your SINC to a razor’s edge. Select one Savant Program you know. You gain a +2 bonus on attempts to execute that Savant Program. [52]",
+    "type": "Savant Stunt",
+    "prerequisite": "Savant Stunt [34]",
+    "frequency": "Passive",
+    "rules": {
+      "bonus_value": 2,
+      "action_type": "Execute Savant Program"
+    },
+    "selection_detail": "Choose one Savant Program you know.",
+    "source_pages": ["177", "234"]
+  },
+  {
+    "id": "specialty_aspect",
+    "name": "Specialty Aspect",
+    "short_description": "Gain a new Aspect linked to a Skill, free invoke once per scene on relevant test.",
+    "long_description": "You gain a new Aspect that describes this specialty, and this Aspect is linked to a Skill. You may invoke this Aspect (or it may be compelled) like any other Aspect. In addition, once per scene you may invoke this Aspect for free on any relevant test using its associated Skill. You may take this Stunt up to a total of three times, each time adding Specialty Aspects to the same Skill or different Skills. [53]",
+    "type": "Aspect Stunt",
+    "frequency": "Passive (free invoke once per scene)",
+    "rules": {
+      "new_aspect": "Specialty Aspect linked to a Skill (chosen at selection)",
+      "free_invoke": {
+        "frequency": "Once per scene",
+        "condition": "Relevant test using associated Skill"
+      }
+    },
+    "max_takes": 3,
+    "selection_detail": "Choose the Aspect and the associated Skill.",
+    "source_pages": ["177", "235"]
+  },
+  {
+    "id": "strategist",
+    "name": "Strategist",
+    "short_description": "Spend 1 FP for +2 bonus on physical attack tests against one foe (duration: scene). Can apply to additional foes.",
+    "long_description": "You are adept at seeing and exploiting an enemy’s weaknesses in a physical conflict. These might be tendencies to move a certain way, a propensity to telegraph attacks, or a literal chink in his armor. Spend a Fate Point to gain a +2 bonus on physical attack tests against one opponent for the duration of the scene. Each time you use this Stunt during this scene, you may apply this bonus to one additional foe. You may not apply the bonus to the same foe twice. [54, 55]",
+    "type": "Combat Stunt",
+    "frequency": "Per FP spent (can expand to more foes)",
+    "rules": {
+      "cost": "1 Fate Point",
+      "bonus_value": 2,
+      "action_type": "Physical attack tests",
+      "target": "One opponent (can expand to additional foes for same FP)",
+      "duration": "Scene",
+      "limit": "Cannot apply bonus to same foe twice"
+    },
+    "source_pages": ["177", "236", "237"]
+  },
+  {
+    "id": "system_slip",
+    "name": "System Slip",
+    "short_description": "+3 Stealth bonus to avoid detection on computer; +2 execution difficulty for Savant Programs targeting you.",
+    "long_description": "As a SIM, you know how to hide in a network. By changing file names, rewriting your position on storage devices, and creating digital red herrings, you are able to thwart attempts to find you and target you in a system. Detecting a specific SIM on a host system is generally a Research vs. Stealth contest. If you have this Stunt, you gain a +2 on these Stealth tests. In addition, you also increase the execution difficulty of any Savant Program directed at you by +2. [55]",
+    "type": "Savant/SIM Stunt",
+    "prerequisite": "SIM State (recommended, as per Starting State benefit) [5]",
+    "frequency": "Passive",
+    "rules": {
+      "bonus_value_stealth": 2,
+      "skill_affected_stealth": "Stealth",
+      "condition_stealth": "Avoid detection on a computer system (Research vs. Stealth contest)",
+      "execution_difficulty_modifier": {
+        "value": 2,
+        "type": "increase",
+        "target": "Any Savant Program directed at you"
+      }
+    },
+    "source_pages": ["157", "177", "237"]
+  },
+  {
+    "id": "tactical_dive",
+    "name": "Tactical Dive",
+    "short_description": "Move to adjacent zone + ranged attack (Simple Action), can take cover for free.",
+    "long_description": "Diving through the air, you fire at your opponents before landing in a controlled roll and regaining your feet. Once per scene, you can both move into an adjacent zone and perform a ranged attack with a single Simple Action. If you can take cover in the zone you end in, you may take cover as a Free Action. This is in addition to the Free Action you normally get, which you can spend moving a second time if you wish. [56]",
+    "type": "Combat Stunt",
+    "frequency": "Once per scene",
+    "rules": {
+      "action_cost": "Simple Action",
+      "effects": ["Move to adjacent zone", "Perform ranged attack"],
+      "additional_free_action": "Take cover (if available in end zone)"
+    },
+    "source_pages": ["178", "238"]
+  },
+  {
+    "id": "tenacious",
+    "name": "Tenacious",
+    "short_description": "Amount of mental stress absorbed by Consequences increased by +1.",
+    "long_description": "You have exceptional mental stability, and are able to shrug off trauma and horrors that would leave others weeping on the floor. The amount of mental stress each Consequence allows you to ignore is increased by +1. [57]",
+    "type": "Mental Stunt",
+    "frequency": "Passive",
+    "rules": {
+      "mental_consequence_absorption_modifier": "+1"
+    },
+    "source_pages": ["178", "239"]
+  },
+  {
+    "id": "transhumanist",
+    "name": "Transhumanist",
+    "short_description": "Sleeves purchase have +2 APs; +1 max Augmentations.",
+    "long_description": "You know which brands of Augmentations work best with each other, and are adept at customizing a sleeve for maximum efficiency. Sleeves you purchase have two additional Augmentation Points, and the maximum number of Augmentations your sleeve can support is increased by +1. [57]",
+    "type": "Augmentation Stunt",
+    "frequency": "Passive (on sleeve purchase)",
+    "rules": {
+      "augmentation_points_bonus": "+2",
+      "max_augmentations_limit_modifier": "+1"
+    },
+    "source_pages": ["178", "239"]
+  },
+  {
+    "id": "vicious_comeback",
+    "name": "Vicious Comeback",
+    "short_description": "Once per scene, mental attack as Instant Action on defense in mental conflict.",
+    "long_description": "You always have a witty retort or vicious criticism chambered and ready to go. Once per scene, on a test to defend yourself in an argument or debate (mental conflict), you may perform a mental attack against your opponent as an Instant Action. [58]",
+    "type": "Mental Combat Stunt",
+    "frequency": "Once per scene",
+    "rules": {
+      "trigger": "Defend in mental conflict",
+      "action": "Perform mental attack against opponent (Instant Action)"
+    },
+    "source_pages": ["178", "240"]
+  }
+]

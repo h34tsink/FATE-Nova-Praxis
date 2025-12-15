@@ -1,0 +1,42 @@
+body {
+    //Blockquotes
+    --blockquote-border-thickness: 7px;
+    --blockquote-border-color: var(--bg);
+    --blockquote-style: normal;
+    --blockquote-padding: var(--size-4-3) var(--size-4-6); //Personal
+    --blockquote-padding-lp: 7px 20px;
+
+    --blockquote-background-color: var(--embed-bg);
+}
+
+.markdown-rendered blockquote { 
+    background: var(--blockquote-background-color); 
+    display: flow-root;
+}
+.is-live-preview .HyperMD-quote.HyperMD-quote.HyperMD-quote { 
+    &::before { display: none; }
+    border-left: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
+
+    padding: var(--blockquote-padding-lp);
+    // z-index: -1; 
+    
+    & + .HyperMD-quote { padding-top: 0; }
+}
+
+//Fix Blockquote Padding
+.markdown-rendered blockquote,
+.markdown-rendered div div > blockquote
+{ padding: var(--blockquote-padding); }
+
+//Nested
+.markdown-rendered blockquote blockquote 
+{ padding: 0 0 0 var(--size-4-3); }
+
+.markdown-rendered blockquote blockquote,
+.cm-blockquote-border.cm-transparent::before
+{    
+    --blockquote-border-thickness: 2px;
+    --blockquote-border-color: var(--accent);
+}
+
+

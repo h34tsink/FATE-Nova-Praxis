@@ -1,0 +1,1 @@
+A character attribute check used to represent an ego's willpower or resilience. **Spirit rolls** are used in situations involving psychological stress, **Fragmentation**, or resisting mental trauma.

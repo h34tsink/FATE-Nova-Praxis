@@ -1,0 +1,1 @@
+A device that utilizes **nanomachines** to construct finished products at the atomic level. Compilers take raw materials and use them to create complex items as needed, making manufacturing highly efficient.

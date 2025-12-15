@@ -1,0 +1,20 @@
+{
+  "chatgpt-md:call-chatgpt-api": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "C"
+    }
+  ],
+  "app:show-debug-info": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "I"
+    }
+  ]
+}

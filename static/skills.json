@@ -1,0 +1,309 @@
+[
+  {
+    "id": "assets",
+    "name": "Assets",
+    "short_description": "Measures wealth and valuables, used for black market purchases.",
+    "long_description": "The general measure of your wealth, be it a stash of gold, valuable art, ownership of land, a habitat, a vehicle, and so on. Assets determines how many restricted items you can begin play with, and is used to buy black market goods. [1]",
+    "type": "Standard Skill",
+    "notes": {
+      "default_rank": 0,
+      "max_rank_creation": 5,
+      "buys_restricted_items": true,
+      "determines_free_gear_cost": true
+    },
+    "source_pages": ["159"]
+  },
+  {
+    "id": "cohesion",
+    "name": "Cohesion",
+    "short_description": "Mental stability and sense of self; recovers from psychological trauma.",
+    "long_description": "Your mental stability and sense of self. It’s the ability to deal with psychological trauma, retain your humanity, and recover from resurrection. Adds to your Mental Stress Track. [1]",
+    "type": "Standard Skill",
+    "notes": {
+      "default_rank": 0,
+      "max_rank_creation": 5,
+      "stress_track_bonus": "Mental"
+    },
+    "source_pages": ["159"]
+  },
+  {
+    "id": "demolitions",
+    "name": "Demolitions",
+    "short_description": "Ability to use explosives and demolish structures.",
+    "long_description": "The ability to use explosives, such as grenades or satchel charges, both in combat and to demolish structures. [1]",
+    "type": "Standard Skill",
+    "notes": {
+      "default_rank": 0,
+      "max_rank_creation": 5
+    },
+    "source_pages": ["159"]
+  },
+  {
+    "id": "diplomacy",
+    "name": "Diplomacy",
+    "short_description": "Ability to make good impressions and convince others.",
+    "long_description": "The ability to talk with people in a friendly fashion, make a good impression, and perhaps convince others to see your side of things in a dispute or debate. [1]",
+    "type": "Standard Skill",
+    "notes": {
+      "default_rank": 0,
+      "max_rank_creation": 5,
+      "influences_rep_bump": true
+    },
+    "source_pages": ["159"]
+  },
+  {
+    "id": "education",
+    "name": "Education",
+    "short_description": "Measures academic knowledge across various fields.",
+    "long_description": "Education measures “book learning.” It covers history, science, geography, literature, sociology, government, physics, math, and other academic fields of study. [1]",
+    "type": "Standard Skill",
+    "notes": {
+      "default_rank": 0,
+      "max_rank_creation": 5
+    },
+    "source_pages": ["159"]
+  },
+  {
+    "id": "engineering_hardware",
+    "name": "Engineering (Hardware)",
+    "short_description": "Understanding of machinery for operation, building, and repair.",
+    "long_description": "The understanding of how machinery works, for the purposes of operating it, building it, repairing it, and taking it apart. [1]",
+    "type": "Standard Skill",
+    "notes": {
+      "default_rank": 0,
+      "max_rank_creation": 5,
+      "stress_track_bonus": "System (Savant only)"
+    },
+    "source_pages": ["159"]
+  },
+  {
+    "id": "engineering_software",
+    "name": "Engineering (Software)",
+    "short_description": "Understanding and manipulation of human-written software.",
+    "long_description": "Your understanding of how human-written computer software works, both in how to write code and manipulate existing software. Programs can be written to aid characters in the form of Maneuvers (pg. 117), but cannot bypass another system’s security. This Skill is also used to operate CISTs (pg. 208). [1]",
+    "type": "Standard Skill",
+    "notes": {
+      "default_rank": 0,
+      "max_rank_creation": 5,
+      "stress_track_bonus": "System (Savant only)"
+    },
+    "source_pages": ["159"]
+  },
+  {
+    "id": "firearms",
+    "name": "Firearms",
+    "short_description": "Capacity to use projectile weapons and heavy artillery.",
+    "long_description": "Your capacity to use projectile weapons, be they railguns, coil guns, particle accelerators, or heavy artillery such as cannons or vehicular weaponry. [1]",
+    "type": "Standard Skill",
+    "notes": {
+      "default_rank": 0,
+      "max_rank_creation": 5
+    },
+    "source_pages": ["159"]
+  },
+  {
+    "id": "guile",
+    "name": "Guile",
+    "short_description": "Ability to lie, con, seduce, bluff, and haggle.",
+    "long_description": "The ability to lie, con, seduce, or bluff. Also the ability to haggle for a good deal. [1]",
+    "type": "Standard Skill",
+    "notes": {
+      "default_rank": 0,
+      "max_rank_creation": 5
+    },
+    "source_pages": ["159"]
+  },
+  {
+    "id": "insight",
+    "name": "Insight",
+    "short_description": "Mental reflexes, common sense, and intuiting emotions.",
+    "long_description": "Mental reflexes or “common sense.” It is used to make quick and accurate decisions based on unexpected or incomplete information. It is also used to intuit other’s emotions. [1]",
+    "type": "Standard Skill",
+    "notes": {
+      "default_rank": 0,
+      "max_rank_creation": 5
+    },
+    "source_pages": ["159"]
+  },
+  {
+    "id": "intimidation",
+    "name": "Intimidation",
+    "short_description": "Ability to force others through threat or torture.",
+    "long_description": "The ability to force others to do as you wish through threat of force; also used to torture others for information. [1]",
+    "type": "Standard Skill",
+    "notes": {
+      "default_rank": 0,
+      "max_rank_creation": 5
+    },
+    "source_pages": ["159"]
+  },
+  {
+    "id": "melee",
+    "name": "Melee",
+    "short_description": "Understanding how to use body or handheld weapons in close combat.",
+    "long_description": "The understanding of how to use your body as a weapon, or how to use handheld melee weapons. [1]",
+    "type": "Standard Skill",
+    "notes": {
+      "default_rank": 0,
+      "max_rank_creation": 5
+    },
+    "source_pages": ["159"]
+  },
+  {
+    "id": "mnemonics",
+    "name": "Mnemonics",
+    "short_description": "Understanding of software minds (egos and AIs), editing and resleeving.",
+    "long_description": "The understanding of software minds, both human egos and AIs. You can perform mnemonic editing on an ego, and aid in resleeving, merging, and forking. [1]",
+    "type": "Standard Skill",
+    "notes": {
+      "default_rank": 0,
+      "max_rank_creation": 5
+    },
+    "source_pages": ["159"]
+  },
+  {
+    "id": "networking_apostate",
+    "name": "Networking (Apostate)",
+    "short_description": "Quality and quantity of contacts among apostates.",
+    "long_description": "The quality and quantity of the contacts you have that are willing to provide you aid among apostates. [1]",
+    "type": "Standard Skill",
+    "notes": {
+      "default_rank": 0,
+      "max_rank_creation": 5
+    },
+    "source_pages": ["159"]
+  },
+  {
+    "id": "networking_house",
+    "name": "Networking (House)",
+    "short_description": "Number of contacts among Houses and their willingness to help.",
+    "long_description": "The number of contacts you have among the Houses and their desire or ability to help you. House Networking also determines your starting Rep. [2]",
+    "type": "Standard Skill",
+    "notes": {
+      "default_rank": 0,
+      "max_rank_creation": 5,
+      "determines_starting_rep": true
+    },
+    "source_pages": ["160"]
+  },
+  {
+    "id": "pilot",
+    "name": "Pilot",
+    "short_description": "Knowledge of driving and flying vehicles, and navigation.",
+    "long_description": "Your knowledge of driving and flying vehicles of all sorts, and your familiarity with their navigational systems. [2]",
+    "type": "Standard Skill",
+    "notes": {
+      "default_rank": 0,
+      "max_rank_creation": 5
+    },
+    "source_pages": ["160"]
+  },
+  {
+    "id": "research",
+    "name": "Research",
+    "short_description": "Ability to quickly find information on Extranet or closed meshes.",
+    "long_description": "Your ability to quickly find information on the Extranet or a closed mesh, or locate SIMs in a host system. [2]",
+    "type": "Standard Skill",
+    "notes": {
+      "default_rank": 0,
+      "max_rank_creation": 5
+    },
+    "source_pages": ["160"]
+  },
+  {
+    "id": "resolve",
+    "name": "Resolve",
+    "short_description": "Courage, willpower, and ability to resist temptation or quit.",
+    "long_description": "The measure of your courage, willpower, and ability to resist temptation. It also represents the drive to not quit in the face of overwhelming opposition. Adds to your Mental Stress Track. [3]",
+    "type": "Standard Skill",
+    "notes": {
+      "default_rank": 0,
+      "max_rank_creation": 5,
+      "stress_track_bonus": "Mental"
+    },
+    "source_pages": ["161"]
+  },
+  {
+    "id": "stealth",
+    "name": "Stealth",
+    "short_description": "Ability to hide, pilfer, pick pockets, and move unnoticed.",
+    "long_description": "Your ability to hide, filch items, pick pockets, and move about unnoticed. [3]",
+    "type": "Standard Skill",
+    "notes": {
+      "default_rank": 0,
+      "max_rank_creation": 5
+    },
+    "source_pages": ["161"]
+  },
+  {
+    "id": "strategy",
+    "name": "Strategy",
+    "short_description": "Ability to react, organize, and prepare for conflict.",
+    "long_description": "The ability to react, organize, and prepare for conflict, as well as analyze and overcome the plans of your enemy. [3]",
+    "type": "Standard Skill",
+    "notes": {
+      "default_rank": 0,
+      "max_rank_creation": 5
+    },
+    "source_pages": ["161"]
+  },
+  {
+    "id": "athletics",
+    "name": "Athletics",
+    "short_description": "How well you move your body and manipulate objects.",
+    "long_description": "How well you can move your body: running speed, balance, hand-eye coordination, and so on. Also determines how well you can use your body to move something else: lifting, dragging, pulling, and the like. Adds to your Physical Stress Track. [3]",
+    "type": "Physical Skill",
+    "notes": {
+      "default_rank": 0,
+      "max_rank_creation": 5,
+      "stress_track_bonus": "Physical",
+      "special_allocation_pure_sim": true,
+      "determined_by_sleeve": true
+    },
+    "source_pages": ["161"]
+  },
+  {
+    "id": "endurance",
+    "name": "Endurance",
+    "short_description": "Health, vigor, and resistance to pain, toxins, and diseases.",
+    "long_description": "Your health, vigor, and ability to withstand pain, toxins, sicknesses, and diseases of the body. Adds to your Physical Stress Track. [3]",
+    "type": "Physical Skill",
+    "notes": {
+      "default_rank": 0,
+      "max_rank_creation": 5,
+      "stress_track_bonus": "Physical",
+      "special_allocation_pure_sim": true,
+      "determined_by_sleeve": true
+    },
+    "source_pages": ["161"]
+  },
+  {
+    "id": "perception",
+    "name": "Perception",
+    "short_description": "Quality of senses and general awareness.",
+    "long_description": "The quality of your five senses and general awareness of your surroundings. Can be used to make Assessments (pg. 63). [4]",
+    "type": "Physical Skill",
+    "notes": {
+      "default_rank": 0,
+      "max_rank_creation": 5,
+      "special_allocation_pure_sim": true,
+      "determined_by_sleeve": true
+    },
+    "source_pages": ["162"]
+  },
+  {
+    "id": "sinc",
+    "name": "SINC (Self-Interfacing Neural Code)",
+    "short_description": "Ability to write and use code for Savant Programs.",
+    "long_description": "The ability to write and use Self-Interfacing Neural Code, the computer code that comprises Savant Programs. You may not put ranks in SINC or perform SINC tests unless you also purchase the Savant Stunt (pg. 175). The Savant Stunt grants you a SINC Skill Rank of 1. You may only improve SINC beyond a rating of 1 by purchasing the Skilled Stunt (during or after character creation), or by swapping Skills Ranks at a Milestone. [4]",
+    "type": "Special Skill",
+    "notes": {
+      "default_rank": 0,
+      "max_rank_creation": 5,
+      "stress_track_bonus": "System",
+      "prerequisite_stunt": "savant",
+      "initial_rank_from_stunt": 1
+    },
+    "source_pages": ["162"]
+  }
+]

@@ -1,0 +1,687 @@
+{
+  "monsters": [],
+  "defaultLayouts": {},
+  "layouts": [
+    {
+      "name": "SWADE - Nova Praxis",
+      "blocks": [
+        {
+          "type": "heading",
+          "id": "e9cbbbe9c9bb",
+          "properties": [
+            "name"
+          ],
+          "fallback": "-",
+          "size": 1
+        },
+        {
+          "type": "inline",
+          "id": "0b4bf91b0b9a",
+          "properties": [],
+          "nested": [
+            {
+              "type": "group",
+              "id": "087b9a7b294b",
+              "properties": [],
+              "nested": [
+                {
+                  "type": "traits",
+                  "id": "d8a9d8a8b8fb",
+                  "properties": [
+                    "details"
+                  ],
+                  "fallback": "-",
+                  "heading": "Details",
+                  "doNotAddClass": true,
+                  "headingProp": false
+                },
+                {
+                  "type": "property",
+                  "id": "cb0ba89abacb",
+                  "properties": [
+                    "name"
+                  ],
+                  "fallback": "-",
+                  "display": "Name"
+                },
+                {
+                  "type": "property",
+                  "id": "0b7b6b99cb48",
+                  "properties": [
+                    "state"
+                  ],
+                  "fallback": "-",
+                  "display": "State"
+                },
+                {
+                  "type": "property",
+                  "id": "f96b8b782a8b",
+                  "properties": [
+                    "bennies"
+                  ],
+                  "fallback": "3",
+                  "display": "Bennies"
+                },
+                {
+                  "type": "property",
+                  "id": "58f89b9b790a",
+                  "properties": [
+                    "conviction"
+                  ],
+                  "fallback": "-",
+                  "display": "Conviction"
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "id": "d918e86b297a",
+              "properties": [],
+              "nested": [
+                {
+                  "type": "traits",
+                  "id": "faa8fa1848db",
+                  "properties": [
+                    "reprating"
+                  ],
+                  "fallback": "-",
+                  "doNotAddClass": true,
+                  "heading": "Rep & Assets"
+                },
+                {
+                  "type": "group",
+                  "id": "3baba83afafa",
+                  "properties": [],
+                  "nested": [
+                    {
+                      "type": "table",
+                      "id": "fb19b948e8fb",
+                      "properties": [
+                        "rep-rating"
+                      ],
+                      "headers": [
+                        "Rating",
+                        "Die",
+                        "Bumps"
+                      ],
+                      "calculate": false,
+                      "fallback": "-"
+                    }
+                  ]
+                },
+                {
+                  "type": "group",
+                  "id": "a889c9ba58bb",
+                  "properties": [],
+                  "nested": [
+                    {
+                      "type": "table",
+                      "id": "c8d868e929aa",
+                      "properties": [
+                        "assets"
+                      ],
+                      "headers": [
+                        "Rating",
+                        "Die",
+                        "Bumps"
+                      ],
+                      "calculate": false,
+                      "fallback": "-"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "ab5afa397a9b",
+          "properties": [],
+          "nested": [
+            {
+              "type": "traits",
+              "id": "48db2b7bbaab",
+              "properties": [
+                "attr-title"
+              ],
+              "fallback": "-",
+              "doNotAddClass": true,
+              "heading": "Attributes"
+            },
+            {
+              "type": "table",
+              "id": "68e9d81b7a79",
+              "properties": [
+                "attributes"
+              ],
+              "headers": [
+                "Agility",
+                "Strength",
+                "Smarts",
+                "Spirit",
+                "Vigor"
+              ],
+              "calculate": false,
+              "fallback": "-",
+              "dice": true
+            },
+            {
+              "type": "image",
+              "id": "b8e9280988ba",
+              "properties": [
+                "line1"
+              ],
+              "fallback": "-"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "5bab295858b9",
+          "properties": [],
+          "nested": [
+            {
+              "type": "traits",
+              "id": "680babf9e948",
+              "properties": [
+                "derv-title"
+              ],
+              "fallback": "-",
+              "doNotAddClass": true,
+              "heading": "Derived"
+            },
+            {
+              "type": "table",
+              "id": "291a3b192a88",
+              "properties": [
+                "derived"
+              ],
+              "headers": [
+                "Pace",
+                "Parry",
+                "Toughness",
+                "Cohesion"
+              ],
+              "calculate": false,
+              "fallback": "-"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "abb8b908f87a",
+          "properties": [],
+          "nested": [
+            {
+              "type": "traits",
+              "id": "9858780ad96a",
+              "properties": [
+                "skills"
+              ],
+              "fallback": "-",
+              "heading": "Skills"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "e90a8a980a58",
+          "properties": [],
+          "nested": [
+            {
+              "type": "traits",
+              "id": "2bebc8cb6b9a",
+              "properties": [
+                "hindrances"
+              ],
+              "fallback": "-",
+              "heading": "Hindrances"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "d90a4b5b6b0a",
+          "properties": [],
+          "nested": [
+            {
+              "type": "traits",
+              "id": "fbc8ebaa79e8",
+              "properties": [
+                "edges_advances"
+              ],
+              "fallback": "-",
+              "heading": "Edges & Advances"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "09e9ca997a3b",
+          "properties": [],
+          "nested": [
+            {
+              "type": "traits",
+              "id": "ea2ac88b6b69",
+              "properties": [
+                "agument"
+              ],
+              "fallback": "-",
+              "heading": "Augmentations"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "899a3b4b1929",
+          "properties": [],
+          "nested": [
+            {
+              "type": "traits",
+              "id": "ea49eba9d80b",
+              "properties": [
+                "powers"
+              ],
+              "fallback": "-",
+              "heading": "Savant Programs",
+              "hasRule": false
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "d8c9b93be8fa",
+          "properties": [],
+          "nested": [
+            {
+              "type": "traits",
+              "id": "d98b6ba9f9ea",
+              "properties": [
+                "weapons"
+              ],
+              "fallback": "-",
+              "heading": "Weapons",
+              "hasRule": false
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "88f8d9d9bb8b",
+          "properties": [],
+          "nested": [
+            {
+              "type": "traits",
+              "id": "7bc8880b6b0b",
+              "properties": [
+                "armor"
+              ],
+              "fallback": "-",
+              "heading": "Armor"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "99587a28096a",
+          "properties": [],
+          "nested": [
+            {
+              "type": "traits",
+              "id": "c83acb6ab809",
+              "properties": [
+                "gear"
+              ],
+              "fallback": "-",
+              "heading": "Gear"
+            }
+          ]
+        }
+      ],
+      "id": "cb6b5b5a6b4b"
+    },
+    {
+      "name": "SWADE PCs",
+      "blocks": [
+        {
+          "type": "heading",
+          "id": "e9cbbbe9c9bb",
+          "properties": [
+            "name"
+          ],
+          "fallback": "-",
+          "size": 1
+        },
+        {
+          "type": "inline",
+          "id": "0b4bf91b0b9a",
+          "properties": [],
+          "nested": [
+            {
+              "type": "group",
+              "id": "087b9a7b294b",
+              "properties": [],
+              "nested": [
+                {
+                  "type": "text",
+                  "id": "f91878884b39",
+                  "properties": [],
+                  "text": null,
+                  "fallback": "-",
+                  "heading": "Details"
+                },
+                {
+                  "type": "property",
+                  "id": "cb0ba89abacb",
+                  "properties": [
+                    "name"
+                  ],
+                  "fallback": "-",
+                  "display": "Name"
+                },
+                {
+                  "type": "property",
+                  "id": "0b7b6b99cb48",
+                  "properties": [
+                    "race"
+                  ],
+                  "fallback": "-",
+                  "display": "Race"
+                },
+                {
+                  "type": "property",
+                  "id": "f96b8b782a8b",
+                  "properties": [
+                    "bennies"
+                  ],
+                  "fallback": "3",
+                  "display": "Bennies"
+                },
+                {
+                  "type": "property",
+                  "id": "58f89b9b790a",
+                  "properties": [
+                    "conviction"
+                  ],
+                  "fallback": "-",
+                  "display": "Conviction"
+                },
+                {
+                  "type": "property",
+                  "id": "d96a9b6b4b0a",
+                  "properties": [
+                    "height"
+                  ],
+                  "fallback": "-",
+                  "display": "Height"
+                },
+                {
+                  "type": "property",
+                  "id": "cbaa5b3aba6a",
+                  "properties": [
+                    "weight"
+                  ],
+                  "fallback": "-",
+                  "display": "Weight"
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "id": "d918e86b297a",
+              "properties": [],
+              "nested": [
+                {
+                  "type": "text",
+                  "id": "d8ba3a1a18bb",
+                  "properties": [],
+                  "text": null,
+                  "fallback": "",
+                  "heading": "Attributes"
+                },
+                {
+                  "type": "property",
+                  "id": "bb0bba98f928",
+                  "properties": [
+                    "agility"
+                  ],
+                  "fallback": "d4",
+                  "dice": false,
+                  "diceProperty": "",
+                  "display": "Agility"
+                },
+                {
+                  "type": "property",
+                  "id": "09598bd8591a",
+                  "properties": [
+                    "smarts"
+                  ],
+                  "fallback": "d4",
+                  "display": "Smarts",
+                  "dice": false,
+                  "diceProperty": "smarts"
+                },
+                {
+                  "type": "property",
+                  "id": "f97abbf9c98b",
+                  "properties": [
+                    "spirit"
+                  ],
+                  "fallback": "d4",
+                  "display": "Spirit",
+                  "dice": false,
+                  "diceProperty": "spirit"
+                },
+                {
+                  "type": "property",
+                  "id": "2bebca286bb8",
+                  "properties": [
+                    "strength"
+                  ],
+                  "fallback": "d4",
+                  "display": "Strength",
+                  "dice": false,
+                  "diceProperty": "strength"
+                },
+                {
+                  "type": "property",
+                  "id": "0a1a3a0b8b0b",
+                  "properties": [
+                    "vigor"
+                  ],
+                  "fallback": "d4",
+                  "display": "Vigor",
+                  "dice": false,
+                  "diceProperty": "vigor"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "inline",
+          "id": "89cbba2a99cb",
+          "properties": [],
+          "nested": [
+            {
+              "type": "table",
+              "id": "5a8b8b18a82a",
+              "properties": [
+                "attr"
+              ],
+              "headers": [
+                "Agility",
+                "Strength",
+                "Smarts",
+                "Spirit",
+                "Vigor"
+              ],
+              "calculate": false,
+              "fallback": "d4",
+              "dice": true
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "5bab295858b9",
+          "properties": [],
+          "nested": [
+            {
+              "type": "table",
+              "id": "291a3b192a88",
+              "properties": [
+                "derived"
+              ],
+              "headers": [
+                "Pace",
+                "Parry",
+                "Toughness"
+              ],
+              "calculate": false,
+              "fallback": "-"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "abb8b908f87a",
+          "properties": [],
+          "nested": [
+            {
+              "type": "traits",
+              "id": "9858780ad96a",
+              "properties": [
+                "skills"
+              ],
+              "fallback": "-",
+              "heading": "Skills"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "e90a8a980a58",
+          "properties": [],
+          "nested": [
+            {
+              "type": "traits",
+              "id": "2bebc8cb6b9a",
+              "properties": [
+                "hindrances"
+              ],
+              "fallback": "-",
+              "heading": "Hindrances"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "d90a4b5b6b0a",
+          "properties": [],
+          "nested": [
+            {
+              "type": "traits",
+              "id": "fbc8ebaa79e8",
+              "properties": [
+                "edges_advances"
+              ],
+              "fallback": "-",
+              "heading": "Edges & Advances"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "899a3b4b1929",
+          "properties": [],
+          "nested": [
+            {
+              "type": "traits",
+              "id": "ea49eba9d80b",
+              "properties": [
+                "powers"
+              ],
+              "fallback": "-",
+              "heading": "Powers",
+              "hasRule": false
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "d8c9b93be8fa",
+          "properties": [],
+          "nested": [
+            {
+              "type": "traits",
+              "id": "d98b6ba9f9ea",
+              "properties": [
+                "weapons"
+              ],
+              "fallback": "-",
+              "heading": "Weapons",
+              "hasRule": false
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "88f8d9d9bb8b",
+          "properties": [],
+          "nested": [
+            {
+              "type": "traits",
+              "id": "7bc8880b6b0b",
+              "properties": [
+                "armor"
+              ],
+              "fallback": "-",
+              "heading": "Armor"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "99587a28096a",
+          "properties": [],
+          "nested": [
+            {
+              "type": "traits",
+              "id": "c83acb6ab809",
+              "properties": [
+                "gear"
+              ],
+              "fallback": "-",
+              "heading": "Gear"
+            }
+          ]
+        }
+      ],
+      "id": "cb6b5b5a6b4b"
+    }
+  ],
+  "default": "cb6b5b5a6b4b",
+  "useDice": true,
+  "renderDice": true,
+  "export": true,
+  "showAdvanced": true,
+  "version": {
+    "major": 4,
+    "minor": 8,
+    "patch": 1
+  },
+  "paths": [
+    "/"
+  ],
+  "autoParse": false,
+  "disableSRD": true,
+  "tryToRenderLinks": true,
+  "debug": false,
+  "notifiedOfFantasy": false,
+  "hideConditionHelp": false,
+  "alwaysImport": false,
+  "defaultLayoutsIntegrated": true,
+  "atomicWrite": true
+}

@@ -1,0 +1,93 @@
+[
+  {
+    "id": "pure",
+    "name": "Pure",
+    "short_description": "Inhabits their original, un-Apotheosized body.",
+    "long_description": "Pure characters still inhabit the body they were born with. They have not undergone Apotheosis, though they may still have any number of Augmentations, both bioware and cyberware. [5]",
+    "benefits": {
+      "skill_ranks_physical_allocation": {
+        "amount": 8,
+        "skills": ["athletics", "endurance", "perception"],
+        "max_per_skill": 5
+      },
+      "additional_aspects": [
+        {
+          "type": "Physical Trait",
+          "description": "Describes some physical trait related to your body."
+        }
+      ],
+      "refresh_rating_modifier": "+2",
+      "free_stunts": ["carpe_diem"],
+      "skill_bonus": {
+        "amount": "+1",
+        "type": "non-physical",
+        "max_rank": 5
+      }
+    },
+    "drawbacks": [],
+    "notes": "Loses all State Benefits (including the Skill bonus) if Apotheosis Augmentation is taken later. [5]",
+    "source_pages": ["157"]
+  },
+  {
+    "id": "sim",
+    "name": "SIM",
+    "short_description": "A substrate-independent mind residing as pure software in a host computer.",
+    "long_description": "The substrate-independent mind (SIM) has undergone Apotheosis, but has elected to reside in a host computer system purely as software instead of downloading into a sleeve. [5]",
+    "benefits": {
+      "skill_ranks_physical_allocation": {
+        "amount": 7,
+        "skills": ["athletics", "endurance", "perception"],
+        "max_per_skill": 5,
+        "notes": "These skills allow interaction with virtual objects. [5]"
+      },
+      "free_stunts": ["sim_state"],
+      "choice_stunts": [
+        "digitally_evolved",
+        "digital_spider",
+        "drone_jock",
+        "infusion",
+        "skilled_sinc",
+        "system_slip"
+      ]
+    },
+    "drawbacks": [
+      {
+        "type": "Interaction Limitation",
+        "description": "Can only view the world from one mesh at a time, taking about five minutes to transition. Can shift perspective within the same mesh at a pace equivalent to a running human. [5]",
+        "source_pages": ["157"]
+      },
+      {
+        "type": "Lag Penalty",
+        "description": "May suffer penalties due to lag on Skill tests when acting through machines located a great distance from the host. Within 1000 km: no penalty. Same star system: -2 penalty. Outside star system: -4 penalty. [6]",
+        "source_pages": ["158"]
+      },
+      {
+        "type": "Physical Interaction",
+        "description": "Requires drones for physical interaction. [6]",
+        "source_pages": ["158"]
+      },
+      {
+        "type": "Visibility",
+        "description": "Must appear as a semi-transparent ARO when ghosting in the physical world due to Humanity Preservation Act. [6]"
+      }
+    ],
+    "notes": "Spends most time in a custom home virtual environment; SIMs have dominion over their home environment. [6]",
+    "source_pages": ["157", "158"]
+  },
+  {
+    "id": "sleeved",
+    "name": "Sleeved",
+    "short_description": "Has undergone Apotheosis and inhabits a sleeve.",
+    "long_description": "You have undergone Apotheosis, and inhabit a sleeve. It may be the body you were born with, transformed via Apotheosis, or one you’ve purchased. [5]",
+    "benefits": {
+      "starting_sleeve_cost_limit": {
+        "calculation": "MAX(Assets Skill Rank, Rep-Rating) + 4",
+        "type": "biosleeve_or_cybersleeve",
+        "reference": "page 213 for more on sleeves"
+      }
+    },
+    "drawbacks": [],
+    "notes": "Physical Skills are determined by the chosen sleeve. [3]",
+    "source_pages": ["157", "161"]
+  }
+]

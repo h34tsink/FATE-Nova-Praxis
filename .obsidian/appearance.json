@@ -1,0 +1,16 @@
+{
+  "accentColor": "#006eff",
+  "cssTheme": "Bossidian",
+  "enabledCssSnippets": [
+    "colored-bolds",
+    "noteWidth",
+    "align-justify"
+  ],
+  "nativeMenus": true,
+  "baseFontSizeAction": true,
+  "interfaceFontFamily": "CaskaydiaCove Nerd Font",
+  "monospaceFontFamily": "CaskaydiaCove Nerd Font Mono",
+  "baseFontSize": 14,
+  "theme": "obsidian",
+  "textFontFamily": "CaskaydiaCove Nerd Font"
+}

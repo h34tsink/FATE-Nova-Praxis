@@ -1,0 +1,1 @@
+Technology created by or derived from **Mimir**, often incorporating advanced features and self-improving algorithms. **Mimir-tech** is highly advanced compared to human-created technology and is used extensively throughout the Coalition.

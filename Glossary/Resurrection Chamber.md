@@ -1,0 +1,1 @@
+A specialized facility used to resleeve an **ego** into a new body or to merge multiple egos. **Resurrection chambers** are equipped with hostware and other necessary technology to ensure safe and stable transfers between sleeves.

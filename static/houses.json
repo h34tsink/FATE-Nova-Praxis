@@ -1,0 +1,95 @@
+[
+  {
+    "id": "cipriani",
+    "name": "House Cipriani",
+    "short_description": "Pivotal in Coalition formation, focuses on energy, vehicles, and CISTs.",
+    "long_description": "House Cipriani, formally known as The Cipriani Group, was perhaps the most pivotal House in the formation of the Coalition. They monopolize energy production, and are the largest manufacturer of compilers, personal vehicles, CIST technology, public transportation, and clothing. Their subsidiary Icarus is solely responsible for interplanetary import and export. They are largely composed of Purists. [7-9]",
+    "primary_influence": "Mercury [7]",
+    "secondary_influence": "Cygnus Alpha [7]",
+    "evolutionary_agenda": "Purist [7]",
+    "market_discounts": [
+      "Atmospheric Flying Vehicles",
+      "Energy (Broadcast Power Generators, etc.)",
+      "CISTs",
+      "Transportation"
+    ],
+    "hiring_preferences": "Often give preferential treatment to Purist apostates. Prefer not to deal with posthumans or heavily augmented individuals unless clearly right for the job. [10]",
+    "source_pages": ["88", "190", "191", "195", "196"]
+  },
+  {
+    "id": "dalianis",
+    "name": "House Dalianis",
+    "short_description": "Military-focused, leading provider of starships and drones, expansionist.",
+    "long_description": "Formed from the surviving elements of Earth’s United Nations Explorations Directive (UNED), House Dalianis leads in shipbuilding, jump gate construction, and drone manufacturing. They are expansionist and largely Purist, but value results above political concerns. [11-13]",
+    "primary_influence": "Sagitta [11]",
+    "secondary_influence": "Europa [11]",
+    "evolutionary_agenda": "Purist [11]",
+    "market_discounts": ["Starships", "Jump Drives", "Drones", "Jump Rings"],
+    "hiring_preferences": "House hierarchy is increasingly regressing to a feudal structure, and respects the ability to produce results above political concerns. A crew of posthumans could obtain backing, membership, and a higher station than the most vocal Purist. [13]",
+    "source_pages": ["90", "197", "198", "200"]
+  },
+  {
+    "id": "jinzhan",
+    "name": "House Jinzhan",
+    "short_description": "Former Chinese government megacorporation, focuses on security and Earth quarantine.",
+    "long_description": "Jinzhan Developments is a unique House, not formed from multiple corporations but as the Chinese government's pet megacorporation. They monopolized nearly all of China’s needs. They have a growing distrust of technology, especially augmentation and advanced AI, and focus heavily on maintaining the Earth quarantine. [14-16]",
+    "primary_influence": "Shouye [14]",
+    "secondary_influence": "Earth Quarantine [14]",
+    "evolutionary_agenda": "Purist [14]",
+    "market_discounts": [
+      "Construction",
+      "Security Technology & Services",
+      "Food",
+      "Explosives",
+      "Ship & Vehicle Weaponry"
+    ],
+    "hiring_preferences": "Often refuse to hire crews with apostate members. Seem to prefer experienced mercs. [17]",
+    "source_pages": ["92", "201", "202", "203", "205"]
+  },
+  {
+    "id": "kimura",
+    "name": "House Kimura",
+    "short_description": "Japanese-origin, strong in virtual environments, cybernetics, and employs many SIMs.",
+    "long_description": "Formed from Japanese megacorporations, House Kimura excels in virtual environments (VirtuVac subsidiary) and cybernetic augmentations. They are politically liberal, do not support the Humanity Preservation Act, and employ more SIMs than any other House, including a massive spy network. [17-20]",
+    "primary_influence": "Chengdan [17]",
+    "secondary_influence": "Stygia (Virtuality) [17]",
+    "evolutionary_agenda": "Transhuman [17]",
+    "market_discounts": [
+      "Computers",
+      "Cybernetic Augmentations",
+      "Cybersleeves",
+      "Virtuality Software",
+      "Agent Software"
+    ],
+    "hiring_preferences": "No specific preference noted, but heavily leverages SIMs for espionage. [20]",
+    "source_pages": ["94", "205", "206", "207", "208"]
+  },
+  {
+    "id": "silva",
+    "name": "House Silva",
+    "short_description": "Formed from Alliance remnants, leaders in biosleeves, biotech, and PAc weapons.",
+    "long_description": "Silva Corp is composed of non-military elements of the Alliance. They produce the best biosleeves, biotech augmentations, and PAc weapons on the market. They care very little for the Humanity Preservation Act and regularly break it for research and development. [21-23]",
+    "primary_influence": "Luna [21]",
+    "secondary_influence": "Phobos [21]",
+    "evolutionary_agenda": "Transhuman [21]",
+    "market_discounts": ["Biosleeves", "Biotech Augmentations", "PAc Weaponry"],
+    "hiring_preferences": "Strict hiring process for merc crews, valuing quick, efficient, and discreet mission completion. Will not work with anyone who has exposed House secrets. Has a 'reset' clause in contracts for Apotheosized mercs. [24]",
+    "source_pages": ["96", "209", "210", "211", "213"]
+  },
+  {
+    "id": "tsarya",
+    "name": "House Tsarya",
+    "short_description": "Former Russian military, specializes in heavy armor, ground vehicles, and warframes.",
+    "long_description": "House Tsarya is the successor to the Russian military-industrial complex. They are the leading manufacturer of heavy armor, ground vehicles (tanks, spider tanks, VTOLs), and warframes. While traditionally conservative on augmentation, their leadership is pushing for acceptance of the Apotheosized due to their utility as expendable soldiers. [25, 26]",
+    "primary_influence": "Olympus [25]",
+    "secondary_influence": "Charon [25]",
+    "evolutionary_agenda": "Purist (traditional, but shifting) [25]",
+    "market_discounts": [
+      "Vehicular and Personal Armor",
+      "Ground Vehicles",
+      "Warframes"
+    ],
+    "hiring_preferences": "Tend to be rather open with crew-hiring processes. While previously avoidant of transhumans, they’ll happily hire them for dangerous jobs. Prefer to hire transhumans associated with Tsarya or Silva. [26, 27]",
+    "source_pages": ["98", "214", "215", "216"]
+  }
+]

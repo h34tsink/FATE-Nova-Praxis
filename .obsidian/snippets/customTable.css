@@ -1,0 +1,41 @@
+/* Styling tables */
+
+.CodeMirror {
+    line-height: 1; /* Adjust the value as needed */
+    letter-spacing: 0.8px; /* Adjust the value as needed */
+    font-weight: 200;
+}
+
+.CodeMirror {
+    border-collapse: collapse;
+    width: 100%;
+    line-height: 0; /* Adjust the value as needed */
+}
+
+/* Adjust line height in preview mode */
+.markdown-preview-view {
+    line-height: 1.1; /* Adjust the value as needed */
+    letter-spacing: 0.8px; /* Adjust the value as needed */
+    font-weight: 200;
+}
+
+.markdown-preview-view table {
+    border-collapse: collapse;
+    width: 100%;
+    line-height: 0; /* Adjust the value as needed */
+}
+
+.markdown-preview-view th, .markdown-preview-view td {
+    border: 1px solid #ddd;
+    padding: 0px 5px 0px 8px;
+    text-align: left;
+}
+
+.markdown-preview-view tr:nth-child(even) {
+    background-color: #3f3f3f;
+}
+
+.markdown-preview-view th {
+    /* background-color: #4CAF50; */
+    color: rgb(255, 255, 255);
+}

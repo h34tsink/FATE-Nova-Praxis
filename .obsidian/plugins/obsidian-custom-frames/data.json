@@ -1,0 +1,16 @@
+{
+  "frames": [
+    {
+      "url": "https://docs.google.com/spreadsheets/d/1xsvdfmQhSJ4LBVnHmve3XRjCLfdnVMsNuDEh-valmns/edit?usp=drive_link",
+      "displayName": "New Frame",
+      "icon": "",
+      "hideOnMobile": true,
+      "addRibbonIcon": true,
+      "openInCenter": false,
+      "zoomLevel": 1,
+      "forceIframe": false,
+      "customCss": ""
+    }
+  ],
+  "padding": 5
+}

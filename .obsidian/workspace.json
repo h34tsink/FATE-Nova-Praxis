@@ -1,0 +1,350 @@
+{
+  "main": {
+    "id": "7b48e3f4b1d8ede7",
+    "type": "split",
+    "children": [
+      {
+        "id": "e347425b25aa3c3e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d00817ed761e29fa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Rules and Mechanics/Armor.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Armor"
+            }
+          },
+          {
+            "id": "0b2603fa7f741109",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Miscellaneous/Game Design/exploration_overhaul_design.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "exploration_overhaul_design"
+            }
+          },
+          {
+            "id": "a2729f6e7bccc5d7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Groups/Aliens/The Birrin/The Birrin.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "The Birrin"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5935dd5832cca6ff",
+    "type": "split",
+    "children": [
+      {
+        "id": "16ad94112beb6335",
+        "type": "tabs",
+        "dimension": 73.79576107899807,
+        "children": [
+          {
+            "id": "d8335c6a5bab4001",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "e16707f975fccd13",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          },
+          {
+            "id": "a0680864420eca0e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "e8f98fa1b1179ea2",
+            "type": "leaf",
+            "state": {
+              "type": "notebook-navigator",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "notebook-navigator"
+            }
+          }
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "716854988b73612b",
+        "type": "tabs",
+        "dimension": 26.20423892100193,
+        "children": [
+          {
+            "id": "c041ebd7ddc2a459",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 304.5086555480957
+  },
+  "right": {
+    "id": "2808606aa7204ff9",
+    "type": "split",
+    "children": [
+      {
+        "id": "8296c406bcafd327",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f9d09ebd6229c41c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Characters/NPCs/Generic NPCs/Cyber-Merc.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Cyber-Merc"
+            }
+          },
+          {
+            "id": "bb0505cabe21c229",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Sessions/Session 9/Session 8 Recap.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Session 8 Recap"
+            }
+          },
+          {
+            "id": "84ffafa81c30cd05",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "aab7469ebd8c636c",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "advanced-tables-toolbar"
+            }
+          },
+          {
+            "id": "ac36acfb0316fe43",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Characters/NPCs/Generic NPCs/Cyber-Merc.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Cyber-Merc"
+            }
+          },
+          {
+            "id": "694638a47146a36f",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "calendar"
+            }
+          },
+          {
+            "id": "d3041973fbd0bf23",
+            "type": "leaf",
+            "state": {
+              "type": "DICE_ROLLER_VIEW",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "DICE_ROLLER_VIEW"
+            }
+          },
+          {
+            "id": "ad53638a9b81e476",
+            "type": "leaf",
+            "state": {
+              "type": "dice-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "dice-view"
+            }
+          },
+          {
+            "id": "cd84db853019c6e2",
+            "type": "leaf",
+            "state": {
+              "type": "DICE_ROLLER_VIEW",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "DICE_ROLLER_VIEW"
+            }
+          },
+          {
+            "id": "5c1912d8f3f9b3ff",
+            "type": "leaf",
+            "state": {
+              "type": "DICE_ROLLER_VIEW",
+              "state": {},
+              "icon": "dices",
+              "title": "Dice Tray"
+            }
+          }
+        ],
+        "currentTab": 7
+      }
+    ],
+    "direction": "horizontal",
+    "width": 425.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "markdown-importer:Open format converter": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "workspaces:Manage workspace layouts": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-custom-frames:Open New Frame": false,
+      "obisidian-note-linker:Note Linker": false,
+      "omnisearch:Omnisearch": false,
+      "obsidian-import-json:JSON/CSV Importer": false,
+      "notebook-navigator:Notebook Navigator": false,
+      "obsidian-dice-box-plugin:Open Dice Box": false,
+      "system3-relay:Relay": false
+    }
+  },
+  "active": "c041ebd7ddc2a459",
+  "lastOpenFiles": [
+    "Groups/Aliens/The Birrin/The Birrin.md",
+    "Sessions/Session 5/Last Game Recap.md",
+    "Sessions/Session 8/Session 7 Recap.md",
+    "Sessions/Session 5/Situation - Ansari Station.md",
+    "Sessions/Session 7/1. Opening Narration.md",
+    "Sessions/Session 7/Timeline.md",
+    "Sessions/Session 9/Session 8 Recap.md",
+    "Sessions/Session 6/Summary.md",
+    "Sessions/Session 7/Summary.md",
+    "Sessions/Session 6/Part 01.md",
+    "Sessions/Session 6/Opening Scene and play.md",
+    "Sessions/Session 6/NPC Analysis and Gameplay Insights.md",
+    "Sessions/Session 7/Guide for Running the Scenario - Original.md",
+    "Sessions/Session 6/Game Scenario Overview.md",
+    "Sessions/Session 9/Session 9 Guide - The Aftermath and Pursuit.md",
+    "Sessions/Session 9/Scene and Zones.md",
+    "Sessions/Session 9/Finding Valare's Fork.md",
+    "Sessions/Session 9/Part 3 Civil Unrest - The Nowak Situation.md",
+    "Sessions/Session 7/Guide for Running the Scenario.md",
+    "Sessions/Session 9/Session 9 - Guide - The Aftermath and Pursuit.md",
+    "Sessions/Session 9/Session 9 - Finding Valare's Fork.md",
+    "Sessions/Session 9/Session 9 - Part 3 - Civil Unrest - The Nowak Situation.md",
+    "Sessions/Session 9/Session 9 - Scenes and Zones.md",
+    "Sessions/Session 8/Session 8 - Recap.md",
+    "Sessions/Session 7/Session 7 - Recap.md",
+    "Sessions/Session 7/Session 7 - Guide (Original).md",
+    "conni_audit.json",
+    "conni_audit.ps1",
+    "Untitled 1.base",
+    "Groups/Aliens/The Birrin",
+    "Untitled.base",
+    "Groups/Aliens",
+    "Miscellaneous/Game Design",
+    "exploration_overhaul_design.pdf",
+    "nova-praxis-character-creator/node_modules/magic-string/node_modules/@jridgewell/sourcemap-codec",
+    "nova-praxis-character-creator/node_modules/magic-string/node_modules/@jridgewell",
+    "Nova_Praxis_[Augmented_PDF]_[Fate]/Nova Praxis - Star Map.jpg",
+    "Vehicles/Chickenhawk.png",
+    "Pasted image 20241027191227.png",
+    "Sessions/Session 6/Untitled.canvas",
+    "Media/Locations/Nova Praxis - Star Map.jpg",
+    "Miscellaneous/Vehicles/Ships/Untitled.canvas",
+    "DALL·E 2024-10-11 23.24.48 - A futuristic space station named the Icarus Hub, designed to resemble a Rubik's Cube with multiple cubical segments arranged into a larger cube. Each .webp"
+  ]
+}

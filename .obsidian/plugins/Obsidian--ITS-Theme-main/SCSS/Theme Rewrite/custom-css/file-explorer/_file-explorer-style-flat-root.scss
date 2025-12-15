@@ -1,0 +1,62 @@
+// body {
+.file-explorer-flat {
+    // --explorer-padding: 0;
+    --explorer-root-folder-margin: 0;
+    --explorer-root-folder-padding: 0;
+    --explorer-root-folder-indentation-width: 0;
+
+    --explorer-root-folder-background: rgb(var(--accent-color), 0.3);
+    --explorer-root-background: rgb(var(--accent-color), 0.1);
+    --explorer-root-border-color: var(--accent);
+    --explorer-root-folder-color: var(--folder);
+    --explorer-root-folder-open-color: var(--folder);
+    
+    --explorer-folder-open-background: var(--td);
+
+    //Root folder
+    .nav-folder.mod-root > .nav-folder-children > .nav-folder {
+ 
+        & > .nav-folder-children {
+            margin: var(--explorer-root-folder-margin);
+            padding-left: var(--explorer-root-folder-padding);
+            border-width: var(--explorer-root-folder-indentation-width);
+            border-color: var(--explorer-root-folder-indentation-color);
+
+            border-bottom: 2px solid var(--explorer-root-border-color);
+            background-color: var(--explorer-root-background);
+        }
+        & > .nav-folder-title {
+            background-color: var(--explorer-root-collapsed-background);
+            color: var(--explorer-root-folder-color);
+        }
+        
+        &:not(.is-collapsed) > .nav-folder-title {
+            background-color: var(--explorer-root-folder-background);
+            border-bottom-color: var(--explorer-root-border-color);
+            color: var(--explorer-root-folder-open-color);
+            
+            justify-content: center;
+        }
+
+    }
+    
+    // Opened Folder 
+    .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title > .nav-folder-title-content {
+        text-align: center;
+        transition:cubic-bezier(1, 0, 0, 1);
+        text-transform: uppercase;
+        letter-spacing: .25em;
+        padding: 3px 0;
+        
+        //Icon Float
+        &::before {
+            float: left;
+            padding-left: 1px;
+            margin-right: -10px;
+        }
+    }
+    .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) {
+        background-color: var(--explorer-folder-open-background);
+        border-bottom-color: var(--explorer-root-border-color);
+    }
+}
