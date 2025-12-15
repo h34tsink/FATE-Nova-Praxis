@@ -1,10 +1,10 @@
 ---
 tags:
-	- type/session
-	- type/session-notes
+  - type/session
+  - type/session-notes
 session: 6
 aliases:
-	- Part 01
+  - "Part 01"
 ---
 
 # Session 6: Part 1 – In the Dark

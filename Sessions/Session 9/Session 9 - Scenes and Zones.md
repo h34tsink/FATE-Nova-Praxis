@@ -1,10 +1,10 @@
 ---
 tags:
-	- type/session
-	- type/session-prep
+  - type/session
+  - type/session-prep
 session: 9
 aliases:
-	- Scene and Zones
+  - "Scene and Zones"
 ---
 
 # Session 9: Scenes and Zones

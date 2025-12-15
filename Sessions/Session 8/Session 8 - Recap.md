@@ -1,13 +1,13 @@
 ---
 tags:
-	- type/session
-	- type/session-recap
+  - type/session
+  - type/session-recap
 session: 8
 aliases:
-	- Session 8 Recap
+  - "Session 8 Recap"
 ---
 
-# Session 8 Recap
+# Session 8: Recap
 
 ## Key Events
 

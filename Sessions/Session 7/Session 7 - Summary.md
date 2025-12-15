@@ -1,8 +1,10 @@
 ---
 tags:
-	- type/session
-	- type/session-summary
+  - type/session
+  - type/session-summary
 session: 7
+aliases:
+  - "Session 7: Summary"
 ---
 
 # Session 7: Ghosts in the Darkness – Summary

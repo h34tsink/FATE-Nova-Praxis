@@ -1,11 +1,11 @@
 ---
 tags:
-	- type/session
-	- type/session-recap
+  - type/session
+  - type/session-recap
 session: 5
 aliases:
-	- Last Game Recap
-	- Session 5: Last Game Recap
+  - "Last Game Recap"
+  - "Session 5: Last Game Recap"
 ---
 
 # Session 5: Last Game Recap

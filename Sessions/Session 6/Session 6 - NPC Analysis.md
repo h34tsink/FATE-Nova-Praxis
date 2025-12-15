@@ -1,10 +1,10 @@
 ---
 tags:
-	- type/session
-	- type/session-notes
+  - type/session
+  - type/session-notes
 session: 6
 aliases:
-	- NPC Analysis and Gameplay Insights
+  - "NPC Analysis and Gameplay Insights"
 ---
 
 # Session 6: NPC Analysis and Gameplay Insights

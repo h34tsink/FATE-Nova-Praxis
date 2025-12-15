@@ -1,10 +1,10 @@
 ---
 tags:
-	- type/session
-	- type/session-summary
+  - type/session
+  - type/session-summary
 session: 6
 aliases:
-	- Session 6: Summary
+  - "Session 6: Summary"
 ---
 
 # Session 6: Summary

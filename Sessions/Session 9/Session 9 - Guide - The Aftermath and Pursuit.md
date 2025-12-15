@@ -1,10 +1,10 @@
 ---
 tags:
-	- type/session
-	- type/session-guide
+  - type/session
+  - type/session-guide
 session: 9
 aliases:
-	- Session 9 Guide - The Aftermath and Pursuit
+  - "Session 9 Guide - The Aftermath and Pursuit"
 ---
 
 # Session 9 Guide: The Aftermath and Pursuit

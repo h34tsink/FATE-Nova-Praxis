@@ -1,10 +1,10 @@
 ---
 tags:
-	- type/session
-	- type/session-prep
+  - type/session
+  - type/session-prep
 session: 7
 aliases:
-	- 1. Opening Narration
+  - "1. Opening Narration"
 ---
 
 # Session 7 — Opening Narration

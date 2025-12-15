@@ -3,9 +3,11 @@ tags:
   - type/session
   - type/session-recap
 session: 2
+aliases:
+  - "Session 2: Recap"
 ---
 
-# Session 2 — Game Summary
+# Session 2: Recap
 
 **Summary:** The Europa Station threat goes from “incoming” to “already here.” The crew identifies the point of failure inside the station, confronts the Apostate operation, and pays for a hard choice that leaves Europa damaged and everyone with new enemies.
 

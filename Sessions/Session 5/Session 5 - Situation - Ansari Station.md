@@ -1,10 +1,10 @@
 ---
 tags:
-	- type/session
-	- type/session-situation
+  - type/session
+  - type/session-situation
 session: 5
 aliases:
-	- Situation - Ansari Station
+  - "Situation - Ansari Station"
 ---
 
 # Session 5: Situation – Ansari Station
