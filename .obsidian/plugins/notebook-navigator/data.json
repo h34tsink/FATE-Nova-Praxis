@@ -22,7 +22,6 @@
   "showTooltipPath": true,
   "desktopBackground": "separate",
   "mobileBackground": "primary",
-  "mobileScale": 1,
   "preventInvalidCharacters": true,
   "dateFormat": "MMM d, yyyy",
   "timeFormat": "h:mm a",

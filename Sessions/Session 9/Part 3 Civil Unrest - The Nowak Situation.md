@@ -1,5 +1,8 @@
 # Part 3: Civil Unrest – Step-by-Step GM Guide (FATE RPG)
 
+> [!warning] Deprecated
+> This note is kept for history. Use [[Session 9 - Part 3 - Civil Unrest - The Nowak Situation]] as the canonical version.
+
 ## 1. Setting the Scene
 
 - **Arrival at Icarus Hub**:

@@ -18,7 +18,11 @@ aliases:
 ## Player-Facing Session Summary (Read or Paraphrase)
 
 > **What You Know**  
-> Someone connected to Valare is alive—scared, hidden, and running. Powerful factions are looking for her, and every question you ask makes the net tighter. This isn’t just a retrieval job.
+> Valare isn’t just a name in a file anymore. A **backup fork of Valare** is alive—resleeved, scared, and on the run.
+>
+> She’s running because she **doesn’t want to merge** back into the Valare you can restore from the mnemonic core. To her, merging means reliving her death and risking that she stops being “herself.”
+>
+> Powerful factions are looking for her, and every question you ask makes the net tighter. This isn’t just a retrieval job.
 
 > **What’s at Stake**  
 > Trust, time, and identity. You can be careful, or you can be fast—but not both forever.
@@ -29,7 +33,7 @@ aliases:
 
 The PCs have recovered Valare’s mnemonic core and learned that her backup fork is alive, resleeved, and hiding somewhere beyond the Icarus Hub.
 
-Valare’s fork is terrified of merging due to the trauma of her death and is withholding critical information the PCs need.
+Valare’s fork is on the run because she refuses to merge: she’s terrified that merging will force her to relive her death, and she fears losing autonomy in the process. She is withholding critical information the PCs need.
 
 Leads point to:
 
@@ -53,6 +57,8 @@ A visible 4-segment clock.
 
 Tick the clock on failures, delays, or noisy success.
 
+For clock usage and escalation guidance, see [[Session 9 - Guide]].
+
 ---
 
 ## Scene 1: Echoes in the Noise
@@ -73,6 +79,21 @@ Can the PCs find Valare’s fork without exposing her to predators?
 - **Core Markets** — *Information Has a Price*  
 - **Shadow Relay Node** — *Old Signals, New Enemies*  
 - **Abandoned Mining Access** — *The Rock Remembers*
+
+### Zone Notes — Scene 1
+
+- **Deepshaft Tavern**
+  - **Clue:** Someone saw a woman matching Valare’s sleeve buying a cheap air canister and burner comm.
+  - **Complication:** A Talon sympathizer tests the PCs: “Are you here to save her, or own her?”
+- **Core Markets**
+  - **Clue:** A vendor sold her a privacy tarp and a mnemonic dampener patch.
+  - **Complication:** A Market runner offers info for a favor that will come due later.
+- **Shadow Relay Node**
+  - **Clue:** A burst transmission: “I won’t merge. Don’t make me.” (timestamped, partial routing).
+  - **Complication:** The node logs are already being scraped—someone else is here.
+- **Abandoned Mining Access**
+  - **Clue:** Fresh handprints, heat residue, and a dropped med injector.
+  - **Complication:** Environmental hazards or territorial scavengers force speed vs care.
 
 ---
 
@@ -130,6 +151,8 @@ Can the PCs earn consent—or will they take what they need?
 
 Each roll represents a distinct emotional or technical beat.
 
+For merge beats and outcomes, see [[Session 9 - Guide]].
+
 ---
 
 ## Scene 4: Consequences
@@ -159,12 +182,6 @@ You may gain answers, lose allies, or change Valare forever—but the galaxy not
 
 ---
 
-## GM Notes
-
-- Escalate every 2–3 exchanges  
-- Use Compels as invitations, not punishments  
-- There are no clean wins—only meaningful ones  
-
-*Identity is not disposable.*
+For GM run guidance (clock effects, zone beats, merge beats, and compels), see [[Session 9 - Guide]].
 
 <!-- conni: eof -->

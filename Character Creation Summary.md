@@ -370,17 +370,16 @@ Characters get **5 Aspects**, each of which should be a balance of both positive
 
 > [!formula]- Reputation Rating
 > ```
-> Rep = (House Networking + 2) + Diplomacy
+> Rep = (House Networking + 2)
 > ```
 > 
-> **Example 1:** House Networking 3, Diplomacy 2
-> - Rep = (3 + 2) + 2 = **7**
+> **Example 1:** House Networking 3
+> - Rep = (3 + 2) = **5**
 > 
-> **Example 2:** House Networking 4, Diplomacy 1
-> - Rep = (4 + 2) + 1 = **7**
+> **Example 2:** House Networking 5
+> - Rep = (5 + 2) = **7**
 > 
-> **Example 3:** House Networking 5, Diplomacy 0
-> - Rep = (5 + 2) + 0 = **7**
+
 
 ### What Rep Represents
 

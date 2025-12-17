@@ -9,6 +9,9 @@ aliases:
 
 # Session 9 Guide: The Aftermath and Pursuit
 
+> [!warning] Deprecated
+> This note is kept for history. Use [[Session 9 - Guide]] (runbook) and [[Session 9 - Scenes and Zones]] (scene/zone structure).
+
 ## Recap & Transition
 
 - The PCs have just navigated the chaos of the Icarus Hub, survived the uprising, and confronted the fallout of Nowak’s actions.

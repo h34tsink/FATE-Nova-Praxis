@@ -9,6 +9,9 @@ aliases:
 
 # Session 9: Finding Valare's Fork
 
+> [!warning] Deprecated
+> This note is kept for history. Use [[Session 9 - Scenes and Zones]] (scene/zone structure) and [[Session 9 - Guide]] (runbook).
+
 ## Recap & Transition
 
 - The PCs have recovered Valare’s mnemonic core and learned that her backup fork is alive, resleeved, and hiding somewhere beyond the Icarus Hub.

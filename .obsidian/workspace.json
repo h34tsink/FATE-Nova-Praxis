@@ -52,8 +52,7 @@
               "title": "The Birrin"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -301,8 +300,9 @@
       "system3-relay:Relay": false
     }
   },
-  "active": "c041ebd7ddc2a459",
+  "active": "d00817ed761e29fa",
   "lastOpenFiles": [
+    "Sessions/Session 9/Delete Scene and Zones.md",
     "Groups/Aliens/The Birrin/The Birrin.md",
     "Sessions/Session 5/Last Game Recap.md",
     "Sessions/Session 8/Session 7 Recap.md",
@@ -328,7 +328,6 @@
     "Sessions/Session 9/Session 9 - Scenes and Zones.md",
     "Sessions/Session 8/Session 8 - Recap.md",
     "Sessions/Session 7/Session 7 - Recap.md",
-    "Sessions/Session 7/Session 7 - Guide (Original).md",
     "conni_audit.json",
     "conni_audit.ps1",
     "Untitled 1.base",
