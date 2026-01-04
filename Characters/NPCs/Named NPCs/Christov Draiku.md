@@ -19,7 +19,7 @@ creator: Danial Merrifield
 
 **State:** [[SIM]]  
 **Size:** 0  
-**Allegiance:** [[Groups/The Houses|House Tsarya]]  
+**Allegiance:** [[Factions/Houses/House Tsarya|House Tsarya]]  
 **Rep:** 4
 
 ## Background

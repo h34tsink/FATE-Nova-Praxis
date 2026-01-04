@@ -47,7 +47,7 @@ Tick the clock on failures, delays, noisy success, or **digital carelessness**.
 
 1. **Rumors Spread** — People connect "Valare" to "you." Someone starts asking what you're asking. **Valare's savant programs also detect the investigation pattern.**
 2. **Location Narrowed** — A pattern emerges: a district, shift schedule, or habitat block. **Valare shifts location based on detection.**
-3. **Agents Move** — A team is en route ([[Talons of Freedom]] / [[Coalition]] / [[Shadow Market]]). They are not here to negotiate. **Valare may attempt a digital countermeasure to throw everyone off the scent.**
+3. **Agents Move** — A team is en route ([[Talons of Freedom]] / [[Factions/The Coalition/_Coalition Overview|Coalition]] / [[Shadow Market]]). They are not here to negotiate. **Valare may attempt a digital countermeasure to throw everyone off the scent.**
 4. **Intervention** — The fork is cornered (or extracted). The PCs arrive mid-crisis.
 
 **Escalation rule of thumb:** If the table energy dips, tick once and introduce a new pressure (tail, comms ping, checkpoint, rival team, **digital alert**). If the PCs are being particularly loud with data searches, she'll know sooner.

@@ -47,6 +47,16 @@
 - [x] Created navigation overview files
 - [x] Updated reorganization tracker
 
+### Phase 5: Coalition Consolidation ✅
+
+- [x] Created comprehensive `/Factions/The Coalition/_Coalition Overview.md`
+- [x] Moved `Glossary/Coalition Houses.md` → `/Factions/The Coalition/Houses Reference.md`
+- [x] Archived old `/Factions/Coalition.md` → `/Archive/Old Factions/`
+- [x] Created `/Factions/Index.md` for navigation
+- [x] Removed remaining untitled files
+- [x] Moved remaining PDF to `_Assets/PDFs/`
+- [x] Removed empty `/Locations/Planets/` directory
+
 ## Files That Need Link Updates
 
 ### High Priority (Referenced Frequently)

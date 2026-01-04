@@ -53,7 +53,7 @@ A visible 4-segment clock.
 1. Rumors Spread  
 2. Location Narrowed  
 3. Agents Move  
-4. Intervention ([[Talons of Freedom]] / [[Coalition]] / [[Shadow Market]])
+4. Intervention ([[Talons of Freedom]] / [[Factions/The Coalition/_Coalition Overview|Coalition]] / [[Shadow Market]])
 
 Tick the clock on failures, delays, or noisy success.
 

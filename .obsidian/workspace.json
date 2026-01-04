@@ -8,13 +8,27 @@
         "type": "tabs",
         "children": [
           {
-            "id": "993e1fb791ca80cb",
+            "id": "e05044dac6cabb00",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "broken links output.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "broken links output"
             }
           }
         ]
@@ -80,8 +94,7 @@
               "title": "notebook-navigator"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -101,6 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "broken links output.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +124,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for broken links output"
             }
           },
           {
@@ -119,11 +133,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "broken links output.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from broken links output"
             }
           },
           {
@@ -216,8 +231,18 @@
       "print:Print note": false
     }
   },
-  "active": "993e1fb791ca80cb",
+  "active": "e05044dac6cabb00",
   "lastOpenFiles": [
+    "Sessions/Session 5/Last Game Recap.md",
+    "apostate.md",
+    "broken links output.md",
+    "Templates/FATE Character Template.md",
+    "Campaign Overview/Timeline of Events.md",
+    "Cygnus Alpha.md",
+    "Factions/Index.md",
+    "Factions/The Coalition/Houses Reference.md",
+    "Archive/Old Factions",
+    "Factions/The Coalition/_Coalition Overview.md",
     "Glossary/Planck Twitch.md",
     "Factions/Houses/House Cipriani.md",
     "Locations/Sol System/_Overview.md",
@@ -235,15 +260,6 @@
     "Factions/Houses/House Dalianis.md",
     "Factions/Hidden Agendas/House Turin.md",
     "Factions/Coalition Houses.md",
-    "Factions/Hidden Agendas/Talons of Freedom.md",
-    "Factions/The Coalition/Houses/House Cipriani.md",
-    "Factions/The Houses.md",
-    "Factions/The Coalition/The Protectorate/1st Legion.md",
-    "Factions/Subsidiaries/Icarus Interplanetary.md",
-    "Factions/Religion/Traditional Religions.md",
-    "Factions/Religion/Neo-Religions.md",
-    "Factions/Religions/Astralists.md",
-    "Factions/Religion/Mimirians.md",
     "Locations/Colonized Universe.canvas",
     "Mechanics/FATE/Pneuma Rules/Pneuma",
     "Mechanics/FATE/Pneuma Rules/mimir_advanced_engineering_logs.jsonl",
@@ -254,7 +270,6 @@
     "Mechanics/FATE/PXL_20251025_230512616.VB-01.COVER.mp4",
     "Mechanics/FATE/PXL_20251025_230856324.VB-01.COVER.mp4",
     "Mechanics/FATE/PXL_20251025_230751473.VB-01.COVER.mp4",
-    "Mechanics/FATE/GM",
     "Vehicles/Chickenhawk Image.png",
     "Untitled.canvas",
     "Nova_Praxis_[Augmented_PDF]_[Fate]/Nova Praxis - Star Map.jpg",

@@ -16,11 +16,11 @@ creator: Built from House Cipriani Information
 
 **State:** [[Biosleeve]] *(Enhanced for social perfection)*  
 **Size:** 0  
-**Allegiance:** [[Groups/House Cipriani]]  
+**Allegiance:** [[Factions/Houses/House Cipriani|House Cipriani]]  
 **Rep:** 7 *(Influential social coordinator)*
 
 ## Background
-Valeria Cipriani embodies the elegance, style, and social sophistication that **[[Groups/House Cipriani]]** is renowned for throughout the Coalition. As the House's primary social coordinator and diplomatic liaison, she orchestrates the elaborate events, negotiations, and cultural initiatives that maintain Cipriani's prestigious reputation.
+Valeria Cipriani embodies the elegance, style, and social sophistication that **[[Factions/Houses/House Cipriani|House Cipriani]]** is renowned for throughout the Coalition. As the House's primary social coordinator and diplomatic liaison, she orchestrates the elaborate events, negotiations, and cultural initiatives that maintain Cipriani's prestigious reputation.
 
 Her enhanced **[[Biosleeve]]** represents the pinnacle of aesthetic perfection—every gesture graceful, every word precisely chosen for maximum impact. Valeria has mastered both persuasion and intimidation, able to shift seamlessly between charming diplomacy and subtle threat depending on what the situation requires.
 

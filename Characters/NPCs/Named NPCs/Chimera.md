@@ -18,7 +18,7 @@ aliases:
 
 **State:** [[Biosleeve]] (Custom Paragon Epsilon)  
 **Size:** 0  
-**Allegiance:** *Self* *(created by [[Groups/The Houses|House Kimura]] subsidiary)*  
+**Allegiance:** *Self* *(created by [[Factions/Houses/House Kimura|House Kimura]] subsidiary)*  
 **Rep:** 7 *(Underground/Hidden)*
 
 ## Background
@@ -51,7 +51,7 @@ Created by **Dr. Haruto Nakamura** of **Mindscapes** (a House Kimura subsidiary)
 - **Primary Expertise:** Engineering (Software) 5, [[SINC]] 5 *(if any PC was Savant)*
 - **Secondary Strengths:** Firearms 4, Melee 4, Guile 4, Diplomacy 4
 - **Broad Competence:** Stealth 3, Insight 3, Research 3, Strategy 3
-- **Support Skills:** Networking ([[Groups/Apostate|Apostate]]) 2, Networking (House) 2
+- **Support Skills:** Networking ([[Factions/Ideologies/Apostates|Apostate]]) 2, Networking (House) 2
 - **Mental Stability:** [[Cohesion]] 1 *(Severely Fragmented)*
 
 ## Stunts
@@ -97,10 +97,11 @@ Created by **Dr. Haruto Nakamura** of **Mindscapes** (a House Kimura subsidiary)
 ### Revenge Against Nowak
 - [[Chimera]] **blames [[Isabella Nowak|Nowak]]** for his creation and current predicament
 - Being somewhat insane, he has targeted her for revenge by fanning the flames of rebellion on the **Icarus Hub**
-- He is actively **aiding the [[Groups/Talons of Freedom]]** to destabilize her position
+- He is actively **aiding the [[Factions/Hidden Agendas/Talons of Freedom|Talons of Freedom]]** to destabilize her position
 
 ### Secret Knowledge
-- **[Secret: 3]** The [[Groups/Apostate|apostate]] uprising is backed by the **[[Groups/Talons of Freedom]]**
+
+- **[Secret: 3]** The [[Factions/Ideologies/Apostates|apostate]] uprising is backed by the **[[Factions/Hidden Agendas/Talons of Freedom|Talons of Freedom]]**
 - **[Secret: 5]** The **Talons of Freedom** were aided and encouraged to act now by Chimera
 - **[Secret: 7]** Full details of the Mindscapes experiments and Dr. Nakamura's research
 

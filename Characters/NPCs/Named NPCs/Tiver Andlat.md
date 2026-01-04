@@ -19,7 +19,7 @@ creator: Jordan Matts
 
 **State:** [[Cybersleeve]] (Jinsoku)  
 **Size:** 0  
-**Allegiance:** [[Groups/The Houses|House Kimura]]  
+**Allegiance:** [[Factions/Houses/House Kimura|House Kimura]]  
 **Rep:** 4
 
 ## Background

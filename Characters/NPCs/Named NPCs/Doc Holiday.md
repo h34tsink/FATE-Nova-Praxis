@@ -17,13 +17,13 @@ creator: SWADE Conversion
 
 **State:** [[Biosleeve]] *(Modified for surgical precision)*  
 **Size:** 0  
-**Allegiance:** [[Groups/Apostates]] *(Former [[Groups/House Silva]])*  
+**Allegiance:** [[Factions/Ideologies/Apostates|Apostates]] *(Former [[Factions/Houses/House Silva|House Silva]])*  
 **Rep:** Underground Medical Network
 
 ## Background
-"Doc" Holiday was once a promising biotechnician with **[[Groups/House Silva]]**, specializing in augmentation installation and repair. However, developing a moral objection to the House's unethical practices, they went rogue and now offers their considerable skills to those who can't afford or access Silva's services legally.
+"Doc" Holiday was once a promising biotechnician with **[[Factions/Houses/House Silva|House Silva]]**, specializing in augmentation installation and repair. However, developing a moral objection to the House's unethical practices, they went rogue and now offers their considerable skills to those who can't afford or access Silva's services legally.
 
-Operating from a hidden clinic in a disused section of **[[Locations/Vantage Station]]**—concealed near maintenance shafts and ventilation systems—Doc provides discrete medical services to **[[Groups/Apostates]]**, criminals, and anyone desperate enough to seek underground healthcare. Their clinic serves as a haven for those who can't risk official medical attention.
+Operating from a hidden clinic in a disused section of **[[Locations/Vantage Station]]**—concealed near maintenance shafts and ventilation systems—Doc provides discrete medical services to **[[Factions/Ideologies/Apostates|Apostates]]**, criminals, and anyone desperate enough to seek underground healthcare. Their clinic serves as a haven for those who can't risk official medical attention.
 
 Doc's willingness to install restricted augmentations and treat society's outcasts has made them both a valuable resource and a wanted individual. Their inside knowledge of Silva operations, combined with their underground network, makes them a dangerous liability to their former employers.
 

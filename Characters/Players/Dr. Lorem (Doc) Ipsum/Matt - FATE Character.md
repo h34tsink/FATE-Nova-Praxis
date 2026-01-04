@@ -5,7 +5,7 @@
 **Rank:** Novice  
 **State:** [[Biosleeve]] (Beta, [[Apotheosis|Apotheosized]])  
 **Origin:** Astronaut  
-**Allegiance:** [[Groups/House Silva]]  
+**Allegiance:** [[Factions/Houses/House Silva|House Silva]]  
 **Rep-Rating:** 8  
 **Refresh:** 5
 

@@ -18,7 +18,7 @@ creator: Shaun Davis
 
 **State:** [[Biosleeve]] (Epsilon)  
 **Size:** 0  
-**Allegiance:** [[Groups/The Houses|House Silva]]  
+**Allegiance:** [[Factions/Houses/House Silva|House Silva]]  
 **Rep:** 8
 
 ## Character Aspects

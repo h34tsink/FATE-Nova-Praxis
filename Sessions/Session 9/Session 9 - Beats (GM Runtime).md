@@ -53,7 +53,7 @@ aliases:
 - **Trigger:** Exposure clock is at 1+, OR PCs took obvious action (comms to known Talon sympathizers, public scene, **sloppy data searches**, etc.).
 - **What Happens:** 
   - A tail appears: someone following at distance, or a contact reports being asked about the PCs.
-  - A face from a faction ([[Talons of Freedom]], [[Coalition]], [[Shadow Market]]) appears in the same zone.
+  - A face from a faction ([[Talons of Freedom]], [[Factions/The Coalition/_Coalition Overview|Coalition]], [[Shadow Market]]) appears in the same zone.
   - A message arrives: *"You're asking the wrong people. Back off."*
   - **OR:** Valare's programs detect the investigation and she sends a warning (burst transmission, dead drop message, or unexpected contact): *"Stop looking. You don't understand what you're doing."*
 - **GM Move:** **Don't trap them**—this is pressure, not a fight scene (unless they escalate). Offer exit options:
@@ -138,7 +138,7 @@ aliases:
 ### Beat 2.4: Rival Team Encounter (or Narrow Escape)
 - **Trigger:** Exposure is 2+, OR they've been loud in Scene 1 and now they're loud in Scene 2.
 - **What Happens:**
-  - A patrol enters the mining section ([[Talons of Freedom]], [[Coalition]], [[Shadow Market]] runner, or local security)
+  - A patrol enters the mining section ([[Talons of Freedom]], [[Factions/The Coalition/_Coalition Overview|Coalition]], [[Shadow Market]] runner, or local security)
   - The PCs hear comms chatter (coordinating, closing in)
   - They find fresh bootprints / hear footsteps nearby
   - **Savant Counter-Move:** Valare's programs may have also detected the incoming rivals (she monitors the colony network). She could:

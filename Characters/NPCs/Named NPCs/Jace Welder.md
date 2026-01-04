@@ -18,7 +18,7 @@ creator: Andrew Demetriou
 
 **State:** Pure  
 **Size:** 0  
-**Allegiance:** [[Groups/Apostate|Apostate]]  
+**Allegiance:** [[Factions/Ideologies/Apostates|Apostate]]  
 **Rep:** N/A
 
 ## Background
@@ -36,7 +36,7 @@ A ship needed a crew, though, and an advert heeded the call of four strangers. B
 
 ## Skills
 **Physical Skills:** Athletics 3, Endurance 2, Perception 3  
-**Notable Skills:** Pilot 5, Resolve 4, Engineering (Hardware) 4, Networking ([[Groups/Apostate|Apostate]]) 3, Firearms 3, Education 3
+**Notable Skills:** Pilot 5, Resolve 4, Engineering (Hardware) 4, Networking ([[Factions/Ideologies/Apostates|Apostate]]) 3, Firearms 3, Education 3
 
 ## Stunts
 - **Carpe Diem**

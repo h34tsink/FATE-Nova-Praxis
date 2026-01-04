@@ -18,7 +18,7 @@ creator: Shae Hercelinskyj
 
 **State:** Pure  
 **Size:** 0  
-**Allegiance:** [[Groups/The Houses|House Cipriani]]  
+**Allegiance:** [[Factions/Houses/House Cipriani|House Cipriani]]  
 **Rep:** 4
 
 ## Background
@@ -27,7 +27,7 @@ Xavier Wilhelm is an idealistic apostate hoping to unite mankind regardless of r
 ## Character Aspects
 - **"Divided we fall."**
 - **"Humanity must stand together."**
-- **Uranian, Born and Raised Among the [[Groups/Apostate|Apostates]] of the Colony**
+- **Uranian, Born and Raised Among the [[Factions/Ideologies/Apostates|Apostates]] of the Colony**
 - **"Suffer not the traitor."**
 - **"Outdated doesn't mean useless."**
 - **Tall and Proud**

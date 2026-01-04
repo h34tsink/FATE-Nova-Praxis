@@ -5,7 +5,7 @@
 **Rank:** Novice  
 **State:** [[Pure]]  
 **Origin:** Aristocratic Nobleman  
-**Allegiance:** [[Groups/House Dalianis]] - Pure Aesthetic  
+**Allegiance:** [[Factions/Houses/House Dalianis|House Dalianis]] - Pure Aesthetic  
 **Rep-Rating:** 8  
 **Refresh:** 7
 

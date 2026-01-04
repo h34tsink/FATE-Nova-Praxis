@@ -15,11 +15,11 @@ creator: SWADE Conversion
 
 **State:** Unknown *(Likely [[Biosleeve]] for asteroid operations)*  
 **Size:** 0  
-**Allegiance:** [[Groups/Talons of Freedom]] *(Contact and supporter)*  
+**Allegiance:** [[Factions/Hidden Agendas/Talons of Freedom|Talons of Freedom]] *(Contact and supporter)*  
 **Rep:** Underground *(Known only to Talon networks)*
 
 ## Background
-Seren is a resourceful and enigmatic individual deeply entrenched in **[[Groups/Talons of Freedom]]** operations. From their hidden outpost within an asteroid cluster, they help Talons evade authorities, resupply, and relocate. Their sharp mind and ability to navigate the system's darker corners have made them invaluable to the resistance movement.
+Seren is a resourceful and enigmatic individual deeply entrenched in **[[Factions/Hidden Agendas/Talons of Freedom|Talons of Freedom]]** operations. From their hidden outpost within an asteroid cluster, they help Talons evade authorities, resupply, and relocate. Their sharp mind and ability to navigate the system's darker corners have made them invaluable to the resistance movement.
 
 Operating from a well-concealed asteroid facility equipped with cloaking systems, automated defenses, and powerful communication arrays, Seren serves as a supply depot, communications hub, and safe house for Talons and their allies. Their outpost can dock two small ships and provides everything needed for covert operations.
 

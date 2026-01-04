@@ -5,7 +5,7 @@
 **Rank:** Novice  
 **State:** [[Cybersleeve]] (Beta)  
 **Origin:** Hacker  
-**Allegiance:** [[Groups/House Kimura]]  
+**Allegiance:** [[Factions/Houses/House Kimura|House Kimura]]  
 **Rep-Rating:** 7  
 **Refresh:** 5
 

@@ -17,11 +17,11 @@ aliases:
 
 **State:** [[Biosleeve]] (Standard)  
 **Size:** 0  
-**Allegiance:** [[Groups/The Houses|House Tsarya]]  
+**Allegiance:** [[Factions/Houses/House Tsarya|House Tsarya]]  
 **Rep:** 8
 
 ## Background
-Isabella Nowak sits in the center of chaos, the eye of the storm. As **Executive Administrator of Planetary Logistics**, she is responsible for maintaining [[Groups/The Houses|House Tsarya]]'s interests on the **Icarus Hub** in orbit around [[Locations/Exo Planets/Proch|Proch]].
+Isabella Nowak sits in the center of chaos, the eye of the storm. As **Executive Administrator of Planetary Logistics**, she is responsible for maintaining [[Factions/Houses/House Tsarya|House Tsarya]]'s interests on the **Icarus Hub** in orbit around [[Locations/Exo Planets/Proch|Proch]].
 
 Nowak feels she has more than proven herself at the Icarus Hub and has been maneuvering for a promotion. But just as things seemed to be going her way, it all fell apart. First, the crew hired to prospect the outpost went missing. Now, they seem to be undermining her by turning the **[[Groups/Apostate|apostate]] workforce** in the hub's docks against her.
 
@@ -70,7 +70,8 @@ Faced with a growing mutiny, Isabella is working desperately to regain control. 
 ---
 
 ## What Does Nowak Know?
-- **Nowak** got word of an abandoned [[Groups/The Houses|House Kimura]] research station set up around a new planet (**Opportunity Four**). She knows where the station is.
+
+- **Nowak** got word of an abandoned [[Factions/Houses/House Kimura|House Kimura]] research station set up around a new planet (**Opportunity Four**). She knows where the station is.
 - **[Secret: 7]** The location of the outpost.
 - Suspecting hostile squatters or pirates, she hired an **expendable crew** (the PCs) to deal with them and secure the outpost.
 - The PC crew went dark, so she **declared them dead**. Three months later, they were resurrected.

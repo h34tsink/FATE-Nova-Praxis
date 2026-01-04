@@ -17,11 +17,11 @@ creator: SWADE Conversion
 
 **State:** [[Pure]]  
 **Size:** 0  
-**Allegiance:** [[Groups/House Dalianis]]  
+**Allegiance:** [[Factions/Houses/House Dalianis|House Dalianis]]  
 **Rep:** 7 *(Well-established within House hierarchy)*
 
 ## Background
-Cassian Rhys operates **Rhys & Sons Salvage and Repair** on **[[Locations/Vantage Station]]**, specializing in pre-singularity technology restoration. This legitimate business provides perfect cover for his thriving black market operations. As a **Rep 7** member of **[[Groups/House Dalianis]]**, he has access to restricted House technologies while maintaining the appearance of a simple salvage dealer.
+Cassian Rhys operates **Rhys & Sons Salvage and Repair** on **[[Locations/Vantage Station]]**, specializing in pre-singularity technology restoration. This legitimate business provides perfect cover for his thriving black market operations. As a **Rep 7** member of **[[Factions/Houses/House Dalianis|House Dalianis]]**, he has access to restricted House technologies while maintaining the appearance of a simple salvage dealer.
 
 His motivation is clear: accumulate wealth and leverage black market connections to advance within House Dalianis hierarchy, potentially earning a position in the **Promethic Collective** or even noble status. Cassian's expertise with older technology, combined with his House connections, makes him a valuable—and dangerous—contact for anyone needing restricted items or information.
 

@@ -19,7 +19,7 @@ creator: Lorenz Aschaber
 
 **State:** [[Cybersleeve]] (Gamma)  
 **Size:** 0  
-**Allegiance:** [[Groups/Apostate|Apostate]]  
+**Allegiance:** [[Factions/Ideologies/Apostates|Apostate]]  
 **Rep:** N/A *(Legendary)*
 
 ## Character Aspects
@@ -37,7 +37,7 @@ creator: Lorenz Aschaber
 
 ## Skills
 **Physical Skills:** Athletics 3, Endurance 4, Perception 3  
-**Notable Skills:** Firearms 5, Networking ([[Groups/Apostate|Apostate]]) 4, Resolve 4, Engineering (Hardware) 3, Assets 3, [[Cohesion]] 3
+**Notable Skills:** Firearms 5, Networking ([[Factions/Ideologies/Apostates|Apostate]]) 4, Resolve 4, Engineering (Hardware) 3, Assets 3, [[Cohesion]] 3
 
 ## Stunts
 - **Non-Citizen**

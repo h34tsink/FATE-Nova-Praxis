@@ -183,6 +183,6 @@ The most powerful portable railgun system available, firing ultra-high velocity 
 
 ## Links
 
-- [[Rules and Mechanics/Firearms]]
+- [[Mechanics/Firearms]]
 - [[Glossary]]
 

@@ -5,7 +5,7 @@
 **Rank:** Novice  
 **State:** [[Cybersleeve]] (Delta, [[Apotheosis|Apotheosized]])  
 **Origin:** Mnemonic Courier  
-**Allegiance:** [[Groups/House Kimura]]  
+**Allegiance:** [[Factions/Houses/House Kimura|House Kimura]]  
 **Rep-Rating:** 10  
 **Refresh:** 5
 

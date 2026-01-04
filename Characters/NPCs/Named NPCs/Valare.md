@@ -18,13 +18,13 @@ aliases:
 
 **State:** [[Cybersleeve]] (Standard) *→ Currently: Core/Sleeve recoverable*  
 **Size:** 0  
-**Allegiance:** [[Groups/Talons of Freedom]] *(formerly [[Groups/The Houses|House Tsarya]])*  
+**Allegiance:** [[Factions/Hidden Agendas/Talons of Freedom|Talons of Freedom]] *(formerly [[Factions/Houses/House Tsarya|House Tsarya]])*  
 **Rep:** 6 *(Underground)*
 
 ## Background
-Valare is a **[[Savant]]** who wrote a Program to cover her tracks. She was an invaluable asset to **[[Groups/The Houses|House Tsarya]]** during the Shadow War, providing cover and cleanup for their Auxiliary teams. However, the more she learned about the behind-the-scenes dealings of the Coalition government, the more disgusted she became.
+Valare is a **[[Savant]]** who wrote a Program to cover her tracks. She was an invaluable asset to **[[Factions/Houses/House Tsarya|House Tsarya]]** during the Shadow War, providing cover and cleanup for their Auxiliary teams. However, the more she learned about the behind-the-scenes dealings of the Coalition government, the more disgusted she became.
 
-Wiping out the PCs' tracks was her last mission for **House Tsarya**, after which she wanted to help the poor apostates trying to make lives for themselves working for [[Groups/The Houses|The Houses]]. She disappeared, covered her tracks, and joined up with the **[[Groups/Talons of Freedom]]** on Vantage. There, she worked to help the Talons prepare to strike at House Tsarya, covering up smuggling operations until one went wrong, resulting in her death.
+Wiping out the PCs' tracks was her last mission for **House Tsarya**, after which she wanted to help the poor apostates trying to make lives for themselves working for [[Factions/The Coalition/Houses Reference|The Houses]]. She disappeared, covered her tracks, and joined up with the **[[Factions/Hidden Agendas/Talons of Freedom|Talons of Freedom]]** on Vantage. There, she worked to help the Talons prepare to strike at House Tsarya, covering up smuggling operations until one went wrong, resulting in her death.
 
 ## Character Aspects
 - **"The Coalition's corruption disgusts me."**
@@ -41,7 +41,7 @@ Wiping out the PCs' tracks was her last mission for **House Tsarya**, after whic
 
 ## Skills
 **Physical Skills:** Athletics 2, Endurance 3, Perception 3  
-**Notable Skills:** Engineering (Software) 5, [[SINC]] 4, Stealth 4, Research 4, Networking ([[Groups/Apostate|Apostate]]) 4, Networking (House) 3, Guile 3, Insight 3, [[Cohesion]] 3
+**Notable Skills:** Engineering (Software) 5, [[SINC]] 4, Stealth 4, Research 4, Networking ([[Factions/Ideologies/Apostates|Apostate]]) 4, Networking (House) 3, Guile 3, Insight 3, [[Cohesion]] 3
 
 ## Stunts
 - **[[Savant]]** *(Access to SINC and Savant Programs)*

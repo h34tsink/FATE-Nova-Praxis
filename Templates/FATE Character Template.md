@@ -19,7 +19,7 @@ campaign: [Campaign Name]
 > [!info]- Quick Reference
 > **State:** [Pure/[[Biosleeve]]/[[Cybersleeve]]/[[SIM]]]  
 > **Size:** [0 for human-sized, 1 for massive, -1 for tiny]  
-> **Allegiance:** [[Coalition Houses|[House Name]]] or [[Coalition Houses#Apostate|Apostate]]  
+> **Allegiance:** [[Factions/The Coalition/Houses Reference|[House Name]]] or [[Factions/Ideologies/Apostates|Apostate]]  
 > **Rep Rating:** [Number 4-10+ or N/A for Apostates]  
 > **Refresh:** [Starting: 3 + state bonuses - extra stunts]
 

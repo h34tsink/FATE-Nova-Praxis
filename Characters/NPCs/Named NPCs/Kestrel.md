@@ -17,7 +17,7 @@ aliases:
 
 **State:** [[Biosleeve]] (Custom)  
 **Size:** 0  
-**Allegiance:** [[Groups/The Houses|House Kimura]] *(Red Sun operative)*  
+**Allegiance:** [[Factions/Houses/House Kimura|House Kimura]] *(Red Sun operative)*  
 **Rep:** 5
 
 ## Background
@@ -40,7 +40,7 @@ Though Kestrel does not fully understand the depth of the **Shadow War**, he is 
 
 ## Skills
 **Physical Skills:** Athletics 3, Endurance 3, Perception 4  
-**Notable Skills:** Guile 4, Diplomacy 3, Firearms 3, Melee 3, Stealth 3, Networking ([[Groups/Apostate|Apostate]]) 4, Networking (House) 3, Intimidation 2, Insight 3
+**Notable Skills:** Guile 4, Diplomacy 3, Firearms 3, Melee 3, Stealth 3, Networking ([[Factions/Ideologies/Apostates|Apostate]]) 4, Networking (House) 3, Intimidation 2, Insight 3
 
 ## Stunts
 - **Five Minute Friends** *(Gains aspects for quick social connections)*
@@ -74,7 +74,7 @@ Though Kestrel does not fully understand the depth of the **Shadow War**, he is 
 
 ## What Does Kestrel Know?
 - **He hired the PCs** because he needed an expendable party
-- The PCs were hired by a representative of **[[Groups/The Houses|House Tsarya]]** to explore an outpost
+- The PCs were hired by a representative of **[[Factions/Houses/House Tsarya|House Tsarya]]** to explore an outpost
 - The outpost **might have been dangerous**
 - **[Secret: 5]** The mesh recently blacked out on **Vantage Station**
 

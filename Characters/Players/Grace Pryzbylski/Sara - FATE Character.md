@@ -5,7 +5,7 @@
 **Rank:** Novice  
 **State:** [[SIM]] ([[Apotheosis|Apotheosized]])  
 **Origin:** SIM Recluse  
-**Allegiance:** [[Groups/House Kimura]]  
+**Allegiance:** [[Factions/Houses/House Kimura|House Kimura]]  
 **Rep-Rating:** 6  
 **Refresh:** 5
 

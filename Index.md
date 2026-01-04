@@ -85,16 +85,16 @@ Welcome to your Obsidian vault for Nova Praxis! This index links to all major se
 - [[Glossary/Sleeve]]
 - [[Glossary/Virtuality]]
 
-## Groups
+## Factions
 
-- [[Groups/Apostate]]
-- [[Groups/Promethic Collective]]
-- [[Groups/Scholae Palatinae]]
-- [[Groups/Talons of Freedom]]
-- [[Groups/The Houses]]
-- [[Groups/Religions]]
-- [[Groups/Subsidiaries]]
-- [[Groups/The Coalition]]
+- [[Factions/Ideologies/Apostates|Apostates]]
+- [[Factions/Promethic Collective]]
+- [[Factions/Hidden Agendas/Scholae Palatinae|Scholae Palatinae]]
+- [[Factions/Hidden Agendas/Talons of Freedom|Talons of Freedom]]
+- [[Factions/The Coalition/Houses Reference|Coalition Houses]]
+- [[Factions/Religion/|Religions]]
+- [[Factions/Subsidiaries/|Subsidiaries]]
+- [[Factions/The Coalition/_Coalition Overview|The Coalition]]
 
 ## Locations
 
@@ -142,7 +142,7 @@ Welcome to your Obsidian vault for Nova Praxis! This index links to all major se
 - [[Rules and Mechanics/Mass Battles]]
 - [[Rules and Mechanics/Merging]]
 - [[Rules and Mechanics/Mission Frameworks]]
-- [[Rules and Mechanics/Rules Update]]
+- [[Mechanics/Rules Update]]
 - [[Rules and Mechanics/Space Ship]]
 - [[Rules and Mechanics/Spaceship Compartments]]
 - [[Rules and Mechanics/Specialized Software Programming]]

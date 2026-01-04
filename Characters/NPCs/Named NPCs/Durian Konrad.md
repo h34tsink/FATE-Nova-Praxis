@@ -18,16 +18,16 @@ creator: Kalem Murray
 
 **State:** [[Biosleeve]] (Delta)  
 **Size:** 0  
-**Allegiance:** [[Groups/The Houses|House Silva]]  
+**Allegiance:** [[Factions/Houses/House Silva|House Silva]]  
 **Rep:** 6
 
 ## Background
-Durian Konrad is a warmonger with strong political ties and dark ambitions. Skilled in manipulation and diplomacy, he sees himself as "a necessary evil, a bringer of balance." His connections to [[Groups/Apostate|apostate]] arms dealers and his tendency to be distrusted by superiors suggest a complex web of loyalties and schemes.
+Durian Konrad is a warmonger with strong political ties and dark ambitions. Skilled in manipulation and diplomacy, he sees himself as "a necessary evil, a bringer of balance." His connections to [[Factions/Ideologies/Apostates|apostate]] arms dealers and his tendency to be distrusted by superiors suggest a complex web of loyalties and schemes.
 
 ## Character Aspects
 - **"A few simple words can easily get me what I want."**
 - **A Necessary Evil, a Bringer of Balance**
-- **Ties to [[Groups/Apostate|Apostate]] Arms Dealers**
+- **Ties to [[Factions/Ideologies/Apostates|Apostate]] Arms Dealers**
 - **Distrusted by Superiors**
 - **"You shouldn't have shown a weakness so easy to exploit!"**
 - **[[Apotheosis|Apotheosized]]**

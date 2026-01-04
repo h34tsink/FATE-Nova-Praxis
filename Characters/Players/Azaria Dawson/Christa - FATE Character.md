@@ -5,7 +5,7 @@
 **Rank:** Novice  
 **State:** [[Biosleeve]] (Beta, [[Apotheosis|Apotheosized]])  
 **Origin:** Actress/Spy  
-**Allegiance:** [[Groups/House Silva]]  
+**Allegiance:** [[Factions/Houses/House Silva|House Silva]]  
 **Rep-Rating:** 6  
 **Refresh:** 5
 

@@ -16,11 +16,11 @@ creator: Built from House Cipriani Information
 
 **State:** [[Pure]]  
 **Size:** 0  
-**Allegiance:** [[Groups/House Cipriani]]  
+**Allegiance:** [[Factions/Houses/House Cipriani|House Cipriani]]  
 **Rep:** 6 *(Rising technical specialist)*
 
 ## Background
-Lorenzo Cipriani represents the technical excellence and purist ideals that define **[[Groups/House Cipriani]]**. As a specialist in **CIST (Cyber-Intrusion and Security Terminal)** technology and power systems, he embodies the House's focus on elegant technological solutions. His work involves designing and implementing the sophisticated security networks that protect Cipriani interests across the Coalition.
+Lorenzo Cipriani represents the technical excellence and purist ideals that define **[[Factions/Houses/House Cipriani|House Cipriani]]**. As a specialist in **CIST (Cyber-Intrusion and Security Terminal)** technology and power systems, he embodies the House's focus on elegant technological solutions. His work involves designing and implementing the sophisticated security networks that protect Cipriani interests across the Coalition.
 
 Operating from Cipriani's primary research facilities, Lorenzo has made significant contributions to atmospheric flight vehicle integration and broadcast power systems. His purist philosophy drives him to create technology that enhances human potential rather than replacing it, putting him at odds with more radical augmentation advocates.
 

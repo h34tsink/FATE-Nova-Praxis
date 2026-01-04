@@ -22,35 +22,35 @@ A sample crew that demonstrates diverse character concepts, allegiances, and con
 
 ### [[Jace Welder|Jace Welder]] - Captain & Pilot
 - **State:** Pure
-- **Allegiance:** [[Groups/Apostate|Apostate]]
+- **Allegiance:** [[Factions/Ideologies/Apostates|Apostate]]
 - **Role:** Idealistic leader, skilled pilot
 - **Motivation:** Breaking records and achieving legacy
 - **Conflict:** Trusting nature vs crew's hidden agendas
 
 ### [[Durian Konrad|Durian Konrad]] - Political Operative
 - **State:** [[Biosleeve]] (Delta)
-- **Allegiance:** [[Groups/The Houses|House Silva]]
+- **Allegiance:** [[Factions/Houses/House Silva|House Silva]]
 - **Role:** Diplomat and manipulator
 - **Motivation:** Political advancement and balance of power
 - **Conflict:** Distrusted by superiors, ties to apostate arms dealers
 
 ### [[Xavier Wilhelm|Xavier Wilhelm]] - Idealist Warrior
 - **State:** Pure
-- **Allegiance:** [[Groups/The Houses|House Cipriani]]
+- **Allegiance:** [[Factions/Houses/House Cipriani|House Cipriani]]
 - **Role:** Combat specialist and moral compass
 - **Motivation:** Human unity across factional lines
 - **Conflict:** Apostate upbringing vs House loyalty
 
 ### [[Tiver Andlat|Tiver Andlat]] - Criminal Savant
 - **State:** [[Cybersleeve]] (Jinsoku)
-- **Allegiance:** [[Groups/The Houses|House Kimura]]
+- **Allegiance:** [[Factions/Houses/House Kimura|House Kimura]]
 - **Role:** Technical infiltration and criminal connections
 - **Motivation:** Personal advancement and control
 - **Conflict:** Criminal background vs legitimate operations
 
 ### [[Christov Draiku|Christov Draiku]] - SIM Chef/Programmer
 - **State:** [[SIM]]
-- **Allegiance:** [[Groups/The Houses|House Tsarya]]
+- **Allegiance:** [[Factions/Houses/House Tsarya|House Tsarya]]
 - **Role:** Ship systems and culinary specialist
 - **Motivation:** Culinary fame and digital comfort
 - **Conflict:** Digital limitations vs physical world needs

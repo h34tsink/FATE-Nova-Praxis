@@ -15,11 +15,11 @@ creator: SWADE Conversion
 
 **State:** [[Biosleeve]] (Custom)  
 **Size:** 0  
-**Allegiance:** [[Groups/House Silva]]  
+**Allegiance:** [[Factions/Houses/House Silva|House Silva]]  
 **Rep:** N/A
 
 ## Background
-Lester Lucas is a mid-level arms smuggler for **[[Groups/House Silva]]** who has found himself in the worst possible situation. Operating out of the **[[Locations/Naesock Processing Hub]]** around Neptune, he was smuggling weapons to **[[Groups/Talons of Freedom]]** contacts on Vantage when everything went sideways.
+Lester Lucas is a mid-level arms smuggler for **[[Factions/Houses/House Silva|House Silva]]** who has found himself in the worst possible situation. Operating out of the **[[Locations/Naesock Processing Hub]]** around Neptune, he was smuggling weapons to **[[Factions/Hidden Agendas/Talons of Freedom|Talons of Freedom]]** contacts on Vantage when everything went sideways.
 
 During what should have been a routine exchange, one of the Talons was revealed to be a **Centurion**. **[[Characters/NPCs/Named NPCs/Valare|Valare]]** blacked out the mesh just before a grenade detonated. While Lester survived by diving for cover, he took shrapnel and his ship—the **Chickenhawk**—was impounded by station security.
 
@@ -69,7 +69,7 @@ Now wounded and struggling to survive on Vantage, Lester finds himself at the me
 ---
 
 ## Campaign Role
-Lester serves as a potential source of information about **[[Groups/Talons of Freedom]]** operations and **[[Characters/NPCs/Named NPCs/Valare|Valare]]'s** hidden sleeve. He can be an ally seeking rescue, a reluctant informant, or a guide to reaching the impounded **Chickenhawk**. His knowledge of smuggling routes and black market contacts makes him valuable for characters needing to move contraband or people.
+Lester serves as a potential source of information about **[[Factions/Hidden Agendas/Talons of Freedom|Talons of Freedom]]** operations and **[[Characters/NPCs/Named NPCs/Valare|Valare]]'s** hidden sleeve. He can be an ally seeking rescue, a reluctant informant, or a guide to reaching the impounded **Chickenhawk**. His knowledge of smuggling routes and black market contacts makes him valuable for characters needing to move contraband or people.
 
 ## GM Notes
 **Personality:** Pragmatic and survival-focused. Lester isn't a hero—he's a working criminal trying to stay alive. He'll cooperate with anyone who can help him retrieve his ship and get off Vantage safely.
