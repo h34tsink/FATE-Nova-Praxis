@@ -1,7 +1,6 @@
 [
   "workspaces-plus",
   "obsidian-excel-to-markdown-table",
-  "chatgpt-md",
   "obsidian-auto-link-title",
   "table-editor-obsidian",
   "sheets",
@@ -28,7 +27,7 @@
   "notebook-navigator",
   "advanced-debug-mode",
   "obsidian-dice-box-plugin",
-  "obsidian-dice-roller",
   "pdf-printer",
-  "system3-relay"
+  "system3-relay",
+  "print"
 ]
