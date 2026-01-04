@@ -37,7 +37,7 @@ Valare’s fork is on the run because she refuses to merge: she’s terrified th
 
 Leads point to:
 
-- [[Siri's Asteroid Habitats]]
+- [[Cere's Asteroid Habitats]]
 - [[Talons of Freedom|Talon-friendly contacts]] ([[Seren]])
 - [[Cere|Cere's mining colony]]
 - [[Shadow Market]]

@@ -4,56 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "e347425b25aa3c3e",
+        "id": "7f5c1de9d2a5e60e",
         "type": "tabs",
-        "dimension": 50.12738853503185,
         "children": [
           {
-            "id": "6f14145f92c0515a",
+            "id": "993e1fb791ca80cb",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Campaign Overview/Cold Start Syndicate - Campaign Summary.md",
-                "mode": "preview",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Cold Start Syndicate - Campaign Summary"
-            }
-          },
-          {
-            "id": "43005f338ad18f61",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Locations/Sol System/Outer_Planets.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Outer_Planets"
-            }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "c00fbba387c68bde",
-        "type": "tabs",
-        "dimension": 49.87261146496815,
-        "children": [
-          {
-            "id": "039df51103638973",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -68,7 +29,6 @@
       {
         "id": "16ad94112beb6335",
         "type": "tabs",
-        "dimension": 73.79576107899807,
         "children": [
           {
             "id": "d8335c6a5bab4001",
@@ -122,23 +82,6 @@
           }
         ],
         "currentTab": 2
-      },
-      {
-        "id": "716854988b73612b",
-        "type": "tabs",
-        "dimension": 26.20423892100193,
-        "children": [
-          {
-            "id": "c041ebd7ddc2a459",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          }
-        ]
       }
     ],
     "direction": "horizontal",
@@ -158,7 +101,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Characters/NPCs/Generic NPCs/Cyber-Merc.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,7 +110,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Cyber-Merc"
+              "title": "Backlinks"
             }
           },
           {
@@ -177,12 +119,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sessions/Session 9/Session 8 Recap.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Session 8 Recap"
+              "title": "Outgoing links"
             }
           },
           {
@@ -246,7 +187,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -275,35 +216,37 @@
       "print:Print note": false
     }
   },
-  "active": "43005f338ad18f61",
+  "active": "993e1fb791ca80cb",
   "lastOpenFiles": [
-    "Locations/Exoplanets/_Overview.md",
+    "Glossary/Planck Twitch.md",
+    "Factions/Houses/House Cipriani.md",
     "Locations/Sol System/_Overview.md",
-    "Mechanics/FATE/Pneuma Rules/Pneuma/Pneuma Backlash Consequences.md",
-    "Mechanics/FATE/Pneuma Rules/Pneuma/Pneuma.md",
-    "Mechanics/FATE/GM/Create Advantage GM Card.md",
-    "Mechanics/FATE/GM/Scene_Module_Civil_Unrest.md",
-    "Mechanics/FATE/GM/GM Cheat Sheet.md",
-    "Mechanics/FATE/GM/Scene_Module_The_Fork_and_the_Flame.md",
-    "Mechanics/FATE/GM/Scene Flow.md",
-    "Mechanics/FATE/FATE Rules/General Rules of Play.md",
-    "Mechanics/FATE/FATE Rules/Rules - Table Tent.md",
-    "Mechanics/FATE/FATE Rules/Play Rules Quick Reference.md",
-    "Mechanics/FATE/Jump Rules/ALEPH_NAV_Addon_DarkMatter_Aleph.md",
-    "Mechanics/FATE/Jump Rules/ALEPH_NAV_FATE_Edition_v1.2.md",
-    "Mechanics/FATE/Jump Rules/ALEPH_NAV_Addon_SuperSubversal.md",
-    "Mechanics/FATE/Jump Rules/ALEPH_NAV_TTRPG.md",
+    "Index.md",
+    "Factions/Ideologies/Transhumans.md",
+    "Factions/Ideologies/Purists.md",
+    "Factions/Ideologies/Purifiers.md",
+    "Factions/Ideologies/Apostates.md",
+    "Factions/Religion/Astralists.md",
+    "Factions/Coalition.md",
+    "Factions/Promethic Collective.md",
+    "Factions/Hidden Agendas/Scholae Palatinae.md",
+    "Factions/Talons of Freedom.md",
+    "Factions/Scholae Palatinae.md",
+    "Factions/Houses/House Dalianis.md",
+    "Factions/Hidden Agendas/House Turin.md",
+    "Factions/Coalition Houses.md",
+    "Factions/Hidden Agendas/Talons of Freedom.md",
+    "Factions/The Coalition/Houses/House Cipriani.md",
+    "Factions/The Houses.md",
+    "Factions/The Coalition/The Protectorate/1st Legion.md",
+    "Factions/Subsidiaries/Icarus Interplanetary.md",
+    "Factions/Religion/Traditional Religions.md",
+    "Factions/Religion/Neo-Religions.md",
+    "Factions/Religions/Astralists.md",
+    "Factions/Religion/Mimirians.md",
+    "Locations/Colonized Universe.canvas",
     "Mechanics/FATE/Pneuma Rules/Pneuma",
-    "Mechanics/FATE/Pneuma Rules/Pneuma_Architects_Echo_Rules 1.md",
-    "Mechanics/FATE/Pneuma Rules/Pneuma_MD_Compendium 1.md",
     "Mechanics/FATE/Pneuma Rules/mimir_advanced_engineering_logs.jsonl",
-    "Mechanics/FATE/Pneuma Rules/Pneuma Compendium.md",
-    "Mechanics/FATE/Pneuma Rules/Pneuma Compendium for Storyteller 1.md",
-    "Mechanics/FATE/Pneuma Rules/gm_data_cache_encounter.md",
-    "Mechanics/FATE/Pneuma Rules/Pneuma_MD_Compendium.md",
-    "Mechanics/FATE/Pneuma Rules/Pneuma Compendium for Storyteller.md",
-    "Mechanics/FATE/Pneuma Rules/Pneuma_Architects_Echo_Rules.md",
-    "Mechanics/FATE/Pneuma Rules/The Physics of Pneuma.md",
     "Mechanics/FATE/PXL_20251025_230411261.VB-01.COVER.mp4",
     "Mechanics/FATE/PXL_20251025_230856324.VB-03.MAIN.mp4",
     "Mechanics/FATE/PXL_20251025_230742229.VB-03.MAIN.mp4",
@@ -311,7 +254,6 @@
     "Mechanics/FATE/PXL_20251025_230512616.VB-01.COVER.mp4",
     "Mechanics/FATE/PXL_20251025_230856324.VB-01.COVER.mp4",
     "Mechanics/FATE/PXL_20251025_230751473.VB-01.COVER.mp4",
-    "Mechanics/FATE/Pneuma_Architects_Echo_Rules.md",
     "Mechanics/FATE/GM",
     "Vehicles/Chickenhawk Image.png",
     "Untitled.canvas",

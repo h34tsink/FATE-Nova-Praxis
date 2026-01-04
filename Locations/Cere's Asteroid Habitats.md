@@ -1,5 +1,3 @@
-# Siri's Asteroid Habitats
-
 A cluster of small habitats loosely aligned with the Talons of Freedom. These habitats are known for providing refuge to fugitives and those seeking to avoid Coalition attention. PCs may find Valare's fork or other Talon contacts here.
 
 ## Notable Features

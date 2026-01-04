@@ -113,7 +113,7 @@ House Turin represents:
 
 - [[House Tsarya]]
 - [[Apostates]]
-- [[Talons of Freedom]]
+- [[Factions/Talons of Freedom]]
 - [[Rings of Olympus]]
 - [[Remnant Forces]]
 - [[Piracy and Insurgency]]

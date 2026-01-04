@@ -16,7 +16,7 @@ aliases:
 
 - The PCs have recovered Valare’s mnemonic core and learned that her backup fork is alive, resleeved, and hiding somewhere beyond the Icarus Hub.
 - Valare’s fork is terrified of merging due to the trauma of her death and is withholding critical information the PCs need.
-- The team has leads: [[Siri's Asteroid Habitats|Siri’s asteroid habitats]], Talon-friendly contacts ([[Characters/NPCs/Named NPCs/Seren|Seren]]), [[Cere|Cere’s mining colony]], and the [[Shadow Market]].
+- The team has leads: [[Cere's Asteroid Habitats|Siri’s asteroid habitats]], Talon-friendly contacts ([[Characters/NPCs/Named NPCs/Seren|Seren]]), [[Cere|Cere’s mining colony]], and the [[Shadow Market]].
 
 ## Key Objectives
 
