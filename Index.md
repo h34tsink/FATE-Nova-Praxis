@@ -132,6 +132,12 @@ Welcome to your Obsidian vault for Nova Praxis! This index links to all major se
 
 ## Rules and Mechanics
 
+### Core Systems
+
+- [[Mechanics/FATE/Pneuma Rules/_Pneuma Index|Pneuma System Index]] - Complete guide to space-age magic mechanics
+
+### General Rules
+
 - [[Rules and Mechanics/Character Aesthetic Options]]
 - [[Rules and Mechanics/Contract Generator]]
 - [[Rules and Mechanics/Cyber Warfare - ECM - CWS]]

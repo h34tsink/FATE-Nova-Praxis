@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "7f5c1de9d2a5e60e",
+        "id": "227f6dbfbfc88990",
         "type": "tabs",
         "children": [
           {
-            "id": "e05044dac6cabb00",
+            "id": "accdc7f38ebdb18f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "broken links output.md",
+                "file": "Factions/Aliens/The Birrin.md",
                 "mode": "preview",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "broken links output"
+              "title": "The Birrin"
             }
           }
         ]
@@ -94,7 +94,8 @@
               "title": "notebook-navigator"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -114,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "broken links output.md",
+                "file": "Factions/Aliens/The Birrin.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +125,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for broken links output"
+              "title": "Backlinks for The Birrin"
             }
           },
           {
@@ -133,12 +134,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "broken links output.md",
+                "file": "Factions/Aliens/The Birrin.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from broken links output"
+              "title": "Outgoing links from The Birrin"
             }
           },
           {
@@ -231,11 +232,20 @@
       "print:Print note": false
     }
   },
-  "active": "e05044dac6cabb00",
+  "active": "accdc7f38ebdb18f",
   "lastOpenFiles": [
+    "Mechanics/FATE/Pneuma Rules/_Pneuma Index.md",
+    "Archive/Old Rules/Pneuma Variants/Pneuma_MD_Compendium.md",
+    "Archive/Old Rules/Pneuma Variants/Pneuma Compendium for Storyteller.md",
+    "Archive/Old Rules/Pneuma Variants",
+    "Archive/Old Rules",
+    "_Assets/Source Material/gm_data_cache_encounter.md",
+    "_Assets/Source Material/mimir_advanced_engineering_logs.jsonl",
+    "Mechanics/FATE/Pneuma Rules/_Pneuma Lore and Physics.md",
+    "Mechanics/FATE/Pneuma Rules/_Pneuma Rules.md",
+    "broken links output.md",
     "Sessions/Session 5/Last Game Recap.md",
     "apostate.md",
-    "broken links output.md",
     "Templates/FATE Character Template.md",
     "Campaign Overview/Timeline of Events.md",
     "Cygnus Alpha.md",
@@ -254,12 +264,6 @@
     "Factions/Religion/Astralists.md",
     "Factions/Coalition.md",
     "Factions/Promethic Collective.md",
-    "Factions/Hidden Agendas/Scholae Palatinae.md",
-    "Factions/Talons of Freedom.md",
-    "Factions/Scholae Palatinae.md",
-    "Factions/Houses/House Dalianis.md",
-    "Factions/Hidden Agendas/House Turin.md",
-    "Factions/Coalition Houses.md",
     "Locations/Colonized Universe.canvas",
     "Mechanics/FATE/Pneuma Rules/Pneuma",
     "Mechanics/FATE/Pneuma Rules/mimir_advanced_engineering_logs.jsonl",
@@ -267,9 +271,6 @@
     "Mechanics/FATE/PXL_20251025_230856324.VB-03.MAIN.mp4",
     "Mechanics/FATE/PXL_20251025_230742229.VB-03.MAIN.mp4",
     "Mechanics/FATE/PXL_20251025_225227929.VB-01.COVER~2.mp4",
-    "Mechanics/FATE/PXL_20251025_230512616.VB-01.COVER.mp4",
-    "Mechanics/FATE/PXL_20251025_230856324.VB-01.COVER.mp4",
-    "Mechanics/FATE/PXL_20251025_230751473.VB-01.COVER.mp4",
     "Vehicles/Chickenhawk Image.png",
     "Untitled.canvas",
     "Nova_Praxis_[Augmented_PDF]_[Fate]/Nova Praxis - Star Map.jpg",

@@ -14,7 +14,7 @@
 
 ### Play a Birrin as…
 - **Offworld Envoy:** first-contact diplomat who is *not* here for vibes.
-- **Relic Warden:** trained to contain ancient hazards (Void-Cores, Echo sites, “Pneuma bleed”).
+- **Relic Warden:** trained to contain ancient hazards (Void-Cores, Echo sites, Pneuma bleed).
 - **Probe Navigator:** long-range scout lineage (their exploration programs are older than most human polities).
 - **Displaced Survivor:** post-catastrophe diaspora running dark across “quiet” routes.
 
@@ -136,11 +136,11 @@ If you run Approaches:
 ### Signature Assets
 - **Relay Platforms (“Quiet Piers”)** hidden in cold orbits
 - **Resonance Cages** (portable containment rig)
-- **Warden Teams** trained for Pneuma (later) spill response
+- **Warden Teams** trained for Pneuma spill response
 - **Probe Lineages** with mapped “silent corridors”
 
 ### Clocks (use these to pace the faction)
-- **Human Wildfire Index (0–6):** fills when humans interact with relics/Pneuma (later) unsafely
+- **Human Wildfire Index (0–6):** fills when humans interact with relics/Pneuma unsafely
 - **Concord Escalation (0–6):** fills when the Concord decides “enough” and enforces containment
 - **Mimir Breadcrumb Trail (0–8):** fills as PCs uncover bridge-signatures and Echo coordinates
 
@@ -226,7 +226,7 @@ When the PCs approach, the station responds with **structured resonance**: an in
 **Scenes**
 1) **The Quarantine Talk:** Concord offers climate rigs + translation + “please don’t touch anything.”  
    - PCs can create advantage: *Shared Protocols*, *Trust Token*, *Proof of Intent*
-2) **The Test:** Birrin run a resonance scan. Any Pneuma (later) “spark” spikes the readings.  
+2) **The Test:** Birrin run a resonance scan. Any Pneuma "spark" spikes the readings.  
    - If PCs push back, clock **Concord Patience** ticks.
 3) **Mimir Breadcrumb:** Concord reveals a pattern: the crew’s recent anomalies match an old signature called **Bridge-State Residue**.
 
@@ -278,5 +278,5 @@ Tick **Anomaly Instability** whenever a PC “pushes” a mental/spirits action 
 ## 6) Quick Add-Ons (if you want to expand)
 - **Birrin glossary:** 8–12 core posture/display “words” for roleplay.
 - **Concord ranks:** Envoy / Warden / Navigator / Archivist / Quarantine Marshal.
-- **Relic handling mini-game:** simple steps that reduce Pneuma (later) Instability clock ticks.
+- **Relic handling mini-game:** simple steps that reduce Pneuma Instability clock ticks.
 
