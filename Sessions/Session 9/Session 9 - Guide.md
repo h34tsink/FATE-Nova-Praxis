@@ -16,14 +16,16 @@ Use this as the **runbook** for the session. The scene/zone structure lives in [
 
 - The PCs recovered Valare’s mnemonic core.
 - A **backup fork of Valare** is alive, resleeved, and running.
+- **Valare is a Savant** with active savant programs—she detected when the core came back online and immediately went dark.
 - She refuses to merge because merging means **reliving her death** and risking loss of autonomy/identity.
+- She's not just hiding physically—**she's digitally aware and monitoring threats**.
 - The PCs need her cooperation (or at least her information) while multiple factions close in.
 
 ## Key Objectives
 
 ### 1) Find Valare’s fork
 
-- Use leads: Siri’s habitats, the Shadow Market, Cere’s mining colony, Talon-friendly contacts (e.g., [[Seren]]), and local fixers (e.g., [[Kal Paddock]]).
+- Use leads: [[Cere|Cere's mining colony]], [[Shadow Market]], [[Talons of Freedom|Talon-friendly contacts]] (e.g., [[Seren]]), and local fixers (e.g., [[Kal Paddock]]).
 
 ### 2) Keep the search quiet
 
@@ -36,19 +38,19 @@ Use this as the **runbook** for the session. The scene/zone structure lives in [
 
 ## Escalation Mechanic: Exposure Clock (How to Run)
 
-Tick the clock on failures, delays, or noisy success.
+Tick the clock on failures, delays, noisy success, or **digital carelessness**.
 
-- **When to tick:** failed rolls, taking too long in one zone, obvious leverage (bribes/threats), contacting known factions, leaving witnesses/camera evidence.
-- **When not to tick:** quiet success, good cover stories, or paying a cost that keeps attention contained (e.g., a favor owed to the Shadow Market).
+- **When to tick:** failed rolls, taking too long in one zone, obvious leverage (bribes/threats), contacting known factions, leaving witnesses/camera evidence, **obvious data queries about Valare**.
+- **When not to tick:** quiet success, good cover stories, or paying a cost that keeps attention contained (e.g., a favor owed to the Shadow Market), **careful digital tradecraft**.
 
 ### Clock Effects by Segment
 
-1. **Rumors Spread** — People connect “Valare” to “you.” Someone starts asking what you’re asking.
-2. **Location Narrowed** — A pattern emerges: a district, shift schedule, or habitat block.
-3. **Agents Move** — A team is en route (Talons / Coalition / Market). They are not here to negotiate.
+1. **Rumors Spread** — People connect "Valare" to "you." Someone starts asking what you're asking. **Valare's savant programs also detect the investigation pattern.**
+2. **Location Narrowed** — A pattern emerges: a district, shift schedule, or habitat block. **Valare shifts location based on detection.**
+3. **Agents Move** — A team is en route ([[Talons of Freedom]] / [[Coalition]] / [[Shadow Market]]). They are not here to negotiate. **Valare may attempt a digital countermeasure to throw everyone off the scent.**
 4. **Intervention** — The fork is cornered (or extracted). The PCs arrive mid-crisis.
 
-**Escalation rule of thumb:** If the table energy dips, tick once and introduce a new pressure (tail, comms ping, checkpoint, rival team).
+**Escalation rule of thumb:** If the table energy dips, tick once and introduce a new pressure (tail, comms ping, checkpoint, rival team, **digital alert**). If the PCs are being particularly loud with data searches, she'll know sooner.
 
 ## How to Use the “GM Inline Compels”
 
@@ -71,18 +73,26 @@ The italicized lines under each scene in [[Session 9 - Scenes and Zones]] are **
 
 **Opening beat (read/paraphrase):**
 
-The air tastes like recycled metal and old breath. Everyone is tired, and tired people talk. The moment you say Valare’s name—even as a question—you feel the room lean in.
+The air tastes like recycled metal and old breath. Everyone is tired, and tired people talk. The moment you say Valare's name—even as a question—you feel the room lean in. And somewhere in the network, a Savant's programs ping with a pattern match.
 
 #### Ask the table
 
 - What are you offering: money, protection, a story, or a threat?
 - Are you trying to find her **to help**, **to force**, or **to bargain**? (This matters in Scene 3.)
+- **Are you being obvious with your questions, or careful?** (This matters for when Valare detects them.)
 
 #### Information model
 
 Each stop should yield one of: (a) **location**, (b) **handler/contact**, or (c) **state of mind**. Give one on success; give two on success-with-cost.
 
 Use the Scene 1 zone notes in [[Session 9 - Scenes and Zones]] to seed clues and complications.
+
+#### Savant Awareness Detail
+
+- Valare is monitoring networks. If the PCs make obvious queries, data searches, or comms about "Valare," her programs will flag the pattern.
+- She doesn't know *who* they are yet, but she knows *someone is looking*.
+- This can be a complication or twist: the PCs might realize they've been detected, or Valare might try to contact them (as a threat or test).
+- If the PCs are careful and don't leave digital traces, this doesn't trigger—but if they're sloppy, she's aware.
 
 ### Scene 2: Hazards and pursuit
 

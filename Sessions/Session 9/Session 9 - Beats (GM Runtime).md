@@ -24,10 +24,12 @@ aliases:
 - **Trigger:** PCs ask their first obvious question about Valare's whereabouts.
 - **What Happens:** Someone at the location registers recognition. It's subtle—a pause, a glance, a hand on a comlink.
 - **GM Move:** Offer a **Compel**: *"You feel eyes on you"* or describe a specific tell (the bartender's jaw tightens, a vendor's smile freezes, a patron shifts away).
+- **Savant Detail:** If the question is made through data systems, comms networks, or with obvious digital tracking, **Valare's programs may also flag this** as a pattern match. Consider whether her detection should be immediate (if sloppy) or delayed (if careful).
 - **Player Options:** 
   - Lean into it (confrontation, bargaining, or charm)
   - Back off and try elsewhere (tick Exposure if too public)
   - Spend resources (bribe, debt, favor) to smooth it over
+  - Use digital tradecraft to cover their tracks (moderate difficulty, avoids Valare's detection)
 - **No Roll Needed:** This is atmosphere. Let the reaction guide if difficulty checks happen next.
 
 ---
@@ -47,16 +49,19 @@ aliases:
 ---
 
 ### Beat 1.3: Pressure from a Rival Team
-- **Trigger:** Exposure clock is at 1+, OR PCs took obvious action (comms to known Talon sympathizers, public scene, etc.).
+
+- **Trigger:** Exposure clock is at 1+, OR PCs took obvious action (comms to known Talon sympathizers, public scene, **sloppy data searches**, etc.).
 - **What Happens:** 
   - A tail appears: someone following at distance, or a contact reports being asked about the PCs.
-  - A face from a faction (Talon, Coalition, Market) appears in the same zone.
+  - A face from a faction ([[Talons of Freedom]], [[Coalition]], [[Shadow Market]]) appears in the same zone.
   - A message arrives: *"You're asking the wrong people. Back off."*
+  - **OR:** Valare's programs detect the investigation and she sends a warning (burst transmission, dead drop message, or unexpected contact): *"Stop looking. You don't understand what you're doing."*
 - **GM Move:** **Don't trap them**—this is pressure, not a fight scene (unless they escalate). Offer exit options:
   - Leave this zone and the tail fades (but they know they're compromised)
   - Confront/negotiate (risks a scene, ticks Exposure on loud failure)
   - Hide, fake out, or use local contacts (moderate difficulty, creates an aspect like *Under the Radar*)
-- **Pacing:** Use this beat to remind the table that time is finite and other forces are moving.
+  - If Valare contacted them, decide if they can respond or if her message was one-way (sets up potential Scene 3 complication)
+- **Pacing:** Use this beat to remind the table that time is finite and other forces are moving. **Valare is one of those forces.**
 
 ---
 
@@ -64,8 +69,9 @@ aliases:
 - **Trigger:** A failed roll, or PCs choose to follow a less-direct source.
 - **What Happens:** They get intel that's plausible but wrong—or worse, **true but old** (she *was* here, but she's moved on).
 - **Cost:** Time (another shift passes; tick Exposure), or worse, a wasted favor/contact.
-- **GM Move:** Let them feel the cost without killing momentum. **Tie it to the next clue**—the false lead includes a clue about where she *actually* went (e.g., they find evidence she bought passage to a new location).
-- **Fiction Move:** Use this to reinforce that Valare is *smart and careful*—she's not waiting to be found.
+- **Savant Layer:** If the false lead came from a digital source or network query, **Valare may have intentionally fed them the false information** through her savant programs (if she's aware of them). This can be revealed later as a test or a deliberate misdirect.
+- **GM Move:** Let them feel the cost without killing momentum. **Tie it to the next clue**—the false lead includes a clue about where she *actually* went (e.g., they find evidence she bought passage to a new location, or they realize the information was seeded deliberately).
+- **Fiction Move:** Use this to reinforce that Valare is *smart and careful*—she's not waiting to be found. She's actively managing who finds what information.
 
 ---
 
@@ -118,23 +124,34 @@ aliases:
 - **What Happens:** Tangible evidence she's here:
   - Fresh supplies (food, water, medical traces)
   - A message (scratched into rock, hidden in a cache)
+  - **Digital sign:** A firewall signature, ghost access logs, or network latency suggesting recent monitoring activity
   - Her equipment (sleeve signature on old logs, heat residue)
   - A comfort object or personal item
-- **Emotional Moment:** Let the table feel that she's *real* and *recent*. Not just a mission objective.
+  - A handwritten note: *"Stop. You're walking into a trap. Not mine. Theirs."* (left by Valare; she's aware of your pursuit and warning you)
+- **Savant Layer:** If Valare detected them earlier (Scene 1 digital carelessness), she's been aware of them moving through the colony. She may have **disabled certain hazards for them** (clearing their path) or **deliberately left them harder** (testing them, seeing if they're competent).
+- **Emotional Moment:** Let the table feel that she's *real*, *recent*, and **watching them**. Not just a mission objective—a thinking, reacting presence.
 - **GM Move:** If the tone has been tense/tactical, **pause and let the PCs feel the weight**. If energy is lagging, use this to reignite focus.
+- **Cost:** If they interact with her digital sign or ignore her warning carelessly, tick Exposure (she moves faster because she's now certain they're here).
 
 ---
 
 ### Beat 2.4: Rival Team Encounter (or Narrow Escape)
 - **Trigger:** Exposure is 2+, OR they've been loud in Scene 1 and now they're loud in Scene 2.
 - **What Happens:**
-  - A patrol enters the mining section (Talon, Coalition, Market runner, or local security)
+  - A patrol enters the mining section ([[Talons of Freedom]], [[Coalition]], [[Shadow Market]] runner, or local security)
   - The PCs hear comms chatter (coordinating, closing in)
   - They find fresh bootprints / hear footsteps nearby
+  - **Savant Counter-Move:** Valare's programs may have also detected the incoming rivals (she monitors the colony network). She could:
+    - Jam communications to slow them (a networked system fails just when the rivals try to call for backup)
+    - Redirect them (false trail, spoofed location data sent to their comms)
+    - Give the PCs a strategic advantage (disable a lock, clear a secondary route, send them a warning)
 - **Important:** This is still **not a mandatory fight**. Options:
   - **Hide / Avoid:** Moderate–Hard Stealth or Athletics roll. Success = they slip past. Failure = spotted, must negotiate or flee.
   - **Negotiate:** *"We're miners / salvagers / looking for someone else."* Contacts or Deceive roll. Success = misdirected. Failure + Cost = they know the PCs are here.
   - **Fight:** It's the table's call, but make them choose it, not you. If they fight, it's short and brutal (1–2 exchanges), then they must flee (safehouse now compromised).
+- **GM Move:** Play the arrival of the rival force as either:
+  - A "run toward each other" moment (PCs and Valare forced together faster than planned, but at least they meet)
+  - A "divide and conquer" problem (Valare goes one way, PCs must choose: pursue or preserve)
 - **After the Beat:** If they escape, tick Exposure once. If spotted but evade, tick once and create an aspect (*They Know We're Close*).
 
 ---
@@ -162,14 +179,20 @@ aliases:
   - She's scared and cornered, but not hysterical
   - Her first instinct is to **assess the threat** (are they here to help or capture?)
   - She has a weapon (or access to one) and will use it if forced
+  - **She has already tested them digitally** (if she detected them in Scene 1-2, her programs have been assessing their skill, their connections, their intentions)
 - **Opening Line (GM Read):**
   > "You find her in a place that isn't really a home—just a corner that hasn't killed her yet. When she realizes you've found her, her first reaction isn't anger. It's something closer to resignation, mixed with a terrible kind of hope. She's in sleeves' clothes, hair cut short, eyes that track everything. Her hands are empty, but one is very close to a mining charge on the table."
+- **Savant Layer:** Valare's opening stance depends partly on what **her programs learned about the PCs**:
+  - If they were careless digitally, she may open with suspicion (*"You found me easy. Too easy. Who sent you?"*)
+  - If they were careful and skilled, she opens with cautious respect (*"You're better at this than I expected. That changes things."*)
+  - If they made contact openly (no digital approach), she's confused but less defensive (*"How did you... without using the networks?"*)
 - **GM Move:** 
   - Ask: *"How do you approach her?"*
   - Her immediate response depends on **tone and speed**:
     - **Fast/Aggressive** → She draws the charge or backs to the room's deepest corner
     - **Slow/Peaceful** → She waits, watching. Her hand stays near the charge.
   - **Do not roll yet.** This is conversation. Let them speak first.
+  - **Offer an opportunity:** If they can explain how they found her *without* alerting her programs, she may believe they're not a threat.
 
 ---
 
@@ -181,6 +204,7 @@ aliases:
   - Identity (Is she "Valare" or a "fork"? Does it matter?)
   - Autonomy (Does she get to choose what happens to her own consciousness?)
   - Trauma (Merging means reliving her death and possible loss of self)
+  - **Technical Concern** (If she's a Savant, there's another layer): *"If I merge, will the core's Savant programs subsume mine? I've spent time building defensive protocols. If I just... collapse into her... what happens to my work?"*
 - **GM Move:** 
   - **Let the PCs respond.** Don't rush her explanation.
   - If they push *hard* (threats, coercion, logic), **play the cost forward**:
@@ -188,8 +212,8 @@ aliases:
     - But now she's **compromised by force**. Future interactions suffer. A **consequence** forms (*Coerced*, *Hollowed Out*, *Resentful*).
     - This is a **narrative cost**, not mechanical—but it matters for Scene 4 and beyond.
   - If they listen, negotiate, or honor her agency:
-    - She **respects** the choice. She may still negotiate conditions (protection, a promise, time to prepare).
-    - Possible outcome: She agrees to a **partial merge** or agrees to **share information** without merging.
+    - She **respects** the choice. She may still negotiate conditions (protection, a promise, time to prepare, or **delayed merge** where she stays independent for now).
+    - Possible outcome: She agrees to a **partial merge** or agrees to **share information** without merging, or agrees to merge only after a certain condition is met.
 
 ---
 
@@ -212,13 +236,15 @@ aliases:
   - *Agrees to merge* (with conditions or freely)
   - *Refuses to merge* (and the PCs have to accept or escalate to conflict)
   - *Proposes a compromise* (partial merge, delayed merge, information-only, etc.)
+  - **Savant-specific option:** *"I'll merge. But my programs need to stay independent. I won't let the core's Savant protocols erase mine. If you agree to that, I'll come home."* (Creates a condition the PCs must honor, or Valare becomes a liability later.)
 - **GM Move:** 
   - Honor the PCs' approach. If they were respectful, she *can* agree. If they were coercive, she may refuse out of spite or agree under duress.
   - **Create a new aspect** reflecting the outcome:
     - *Valare Merges Willingly* → She's integrated; later scenes may involve her input.
     - *Valare Refuses to Merge* → She's an asset on the run; the PCs are now protecting her instead of recovering her.
-    - *Uneasy Compromise* → She agrees conditionally; the PCs owe her something.
-  - **Announce the Exposure check**: If they were loud/coercive, an agent may be closing in. If they were quiet, they have breathing room.
+    - *Uneasy Compromise* → She agrees conditionally; the PCs owe her something (e.g., preserving her independence, protecting her interests, honoring her protocols).
+    - *Savant Compromise: Dual Consciousness* → She merges, but her Savant programs remain hers alone (creates future tension between the two Valares).
+  - **Announce the Exposure check**: If they were loud/coercive, an agent may be closing in. If they were quiet and careful, they have breathing room.
 
 ---
 
@@ -288,11 +314,17 @@ aliases:
   - A resurrection chamber or medical facility
   - A quiet moment before the merge
   - Valare's last words before integration
+- **Savant Layer:** Before the merge:
+  - Valare may request that her Savant programs be backed up separately (if she negotiated this in Beat 3.4)
+  - She may ask the PCs to *promise* her programs won't be erased or subsumed by the core's Savant protocols
+  - If the merge happens, there's a moment of uncertainty: will *both* consciousness threads survive, or will one override the other?
+  - **Mechanical choice (optional):** After merge, does integrated Valare have *dual Savant programs* (one from the fork, one from the core), creating potential conflicts or enhanced capability?
 - **GM Read (Optional):**
-  > "She lies back in the chamber. Her hand finds yours for just a moment. 'Thank you for listening,' she says. 'I know I'm hard to take. If I disappear in there—if it doesn't work the way I want—I want you to know I chose this.' Then the light comes up, and she's gone. And then she's back. And for a moment, you don't know if it's the same person."
+  > "She lies back in the chamber. Her hand finds yours for just a moment. 'Thank you for listening,' she says. 'I know I'm hard to take. If I disappear in there—if it doesn't work the way I want—I want you to know I chose this.' Then the light comes up, and she's gone. And then she's back. For a moment, you don't know if it's the same person. Then she opens her eyes, and there's a flicker of something—recognition, gratitude, and something harder underneath. 'I remember running,' she says softly. 'I remember both ways now.'"
 - **Mechanical Outcome:**
-  - Valare is now playable or an allied NPC with full campaign knowledge
-  - A **consequence** or aspect marks the merge: *Integrated*, *New Memories*, *Something Lost*
+  - Valare is now playable or an allied NPC with full campaign knowledge (both her fork's memories and the core's)
+  - A **consequence** or aspect marks the merge: *Integrated*, *New Memories*, *Something Lost*, or *Dual Consciousness*
+  - If she negotiated independence for her Savant programs: *Savant Protocols Preserved* (she retains her own network monitoring as a capability)
   - This aspect can be invoked or compelled going forward
 
 ---

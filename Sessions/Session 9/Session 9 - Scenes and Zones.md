@@ -37,10 +37,10 @@ Valare’s fork is on the run because she refuses to merge: she’s terrified th
 
 Leads point to:
 
-- Siri’s asteroid habitats
-- Talon-friendly contacts (Seren)
-- Cere’s mining colony
-- The Shadow Market
+- [[Siri's Asteroid Habitats]]
+- [[Talons of Freedom|Talon-friendly contacts]] ([[Seren]])
+- [[Cere|Cere's mining colony]]
+- [[Shadow Market]]
 
 Multiple factions are searching. Time matters.
 
@@ -53,7 +53,7 @@ A visible 4-segment clock.
 1. Rumors Spread  
 2. Location Narrowed  
 3. Agents Move  
-4. Intervention (Talon / Coalition / Market)
+4. Intervention ([[Talons of Freedom]] / [[Coalition]] / [[Shadow Market]])
 
 Tick the clock on failures, delays, or noisy success.
 
@@ -75,24 +75,24 @@ Can the PCs find Valare’s fork without exposing her to predators?
 
 ### Zones — Scene 1
 
-- **Deepshaft Tavern** — *Everyone’s Listening*  
+- **[[Cere/Deepshaft Tavern]]** — *Everyone's Listening*  
 - **Core Markets** — *Information Has a Price*  
 - **Shadow Relay Node** — *Old Signals, New Enemies*  
 - **Abandoned Mining Access** — *The Rock Remembers*
 
 ### Zone Notes — Scene 1
 
-- **Deepshaft Tavern**
-  - **Clue:** Someone saw a woman matching Valare’s sleeve buying a cheap air canister and burner comm.
-  - **Complication:** A Talon sympathizer tests the PCs: “Are you here to save her, or own her?”
+- **[[Cere/Deepshaft Tavern]]**
+  - **Clue:** Someone saw a woman matching [[Valare]]'s sleeve buying a cheap air canister and burner comm.
+  - **Complication:** A [[Talons of Freedom|Talon]] sympathizer tests the PCs: "Are you here to save her, or own her?"
 - **Core Markets**
-  - **Clue:** A vendor sold her a privacy tarp and a mnemonic dampener patch.
-  - **Complication:** A Market runner offers info for a favor that will come due later.
+  - **Clue:** A vendor sold [[Valare]] a privacy tarp and a mnemonic dampener patch.
+  - **Complication:** A [[Shadow Market]] runner offers info for a favor that will come due later.
 - **Shadow Relay Node**
-  - **Clue:** A burst transmission: “I won’t merge. Don’t make me.” (timestamped, partial routing).
-  - **Complication:** The node logs are already being scraped—someone else is here.
-- **Abandoned Mining Access**
-  - **Clue:** Fresh handprints, heat residue, and a dropped med injector.
+  - **Clue:** A burst transmission from [[Valare]]: "I won't merge. Don't make me." (timestamped, partial routing).
+  - **Complication:** The node logs are already being scraped—someone else is here (rival faction).
+- **Abandoned Mining Access** ([[Cere]])
+  - **Clue:** Fresh handprints, heat residue, and a dropped med injector (from [[Valare]]).
   - **Complication:** Environmental hazards or territorial scavengers force speed vs care.
 
 ---
