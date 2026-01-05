@@ -84,6 +84,102 @@ Kestrel's primary concern is for himself, though he truly cares for the apostate
 ## Campaign Role
 Kestrel serves as the perfect fixer and information broker - someone who can connect PCs with jobs from both official and unofficial sources. His dual loyalties create constant tension and opportunities for betrayal or redemption. He's valuable as both patron and potential enemy.
 
+## Part 3: Civil Unrest - Kestrel's Mission
+
+### House Kimura's Orders
+
+**The Red Sun Assignment:**
+
+- Kestrel is **ordered by House Kimura** to clean up this mess
+- He arrives with a **group of Red Sun enforcers** at the Icarus Hub
+- Their job is to **kill the PCs, [[Isabella Nowak|Nowak]], and anyone else involved**
+- Purpose: **Cut ties between Kimura and recent events**
+- The Red Suns try to **avoid the main conflict** between Lighthouse, Talons, and apostates
+- Instead, they **focus their efforts on finding and eliminating the PCs**
+
+### Tactical Approach
+
+**Kestrel's Strategy:**
+
+- **Avoid the larger war** - let Lighthouse and the Talons exhaust each other
+- **Hunt the PCs specifically** - they are the primary target
+- **Eliminate Nowak** to remove witness to Kimura involvement
+- **Surgical strike approach** - get in, complete objectives, get out
+- **Use knowledge of PC patterns** (as their former patron/fixer)
+
+### Nowak Encounter
+
+**Two Possible Outcomes:**
+
+**If PCs reach Nowak first:**
+
+- Kestrel arrives too late
+- May attempt to intercept PCs as they evacuate with Nowak
+- Creates tense standoff or chase scenario
+- Forces PCs to fight former patron
+
+**If Kestrel reaches Nowak first:**
+
+- He **kills Nowak** before PCs arrive
+- Eliminates House Kimura's connection to events
+- Shortly after, sends PCs a message over the Extranet
+- Message contains only the **coordinates of the outpost**
+- This serves House Kimura's interests by directing PCs away from the hub
+- Also sets up eventual confrontation at the outpost (Part 4)
+
+### Message to PCs
+
+If Kestrel kills Nowak, he sends:
+
+- **Simple Extranet transmission**
+- **No explanation**
+- Just coordinates: [Outpost location at Opportunity Four]
+- Implies: "Your answers are there, not here"
+- Tactical purpose: Get PCs to leave the hub voluntarily
+- Strategic purpose: Leads them into Part 4 confrontation
+
+## Part 4: Opportunity Four - Final Confrontation
+
+### Kestrel's Arrival at the Outpost
+
+**The Final Mission:**
+
+- Kestrel and his **Red Suns** arrive at the outpost shortly after PCs deal with [[Characters/NPCs/Chimera|Chimera]]
+- **Before boarding**, they attempt to **disable the PCs' ship**
+- Mission objectives:
+  - **Destroy all evidence** of Chimera, the PCs' mission, and recent events
+  - **Wipe all data storage devices** (most critical - no sensitive data can escape)
+  - **Kill the PCs** to eliminate witnesses
+  - **Kill station personnel** to eliminate witnesses
+  - **Kill Chimera** if still alive
+  - **Blow up the station** to destroy physical evidence
+- First step is **essential** - the last thing House Kimura wants is sensitive data floating among the debris
+
+**The Moral Dilemma:**
+
+- This puts Kestrel in direct opposition to people he may have cared about
+- His House loyalty ultimately trumps his apostate sympathies
+- Forces PCs to fight someone who helped them earlier
+- Creates tragic antagonist rather than simple villain
+
+### If PCs Defeat Kestrel
+
+**Victory Consequences:**
+
+- PCs are **in the clear** from immediate House Kimura threat
+- But they may have **loose ends to deal with**:
+  - If **Chimera was killed**: His mnemonic core can prove their innocence
+  - The core also **implicates House Kimura** in mutiny and illegal research
+  - **Kimurans will do anything** to stop it from being used against them
+  - If **Chimera escaped**: PCs must apprehend him before Kimurans do
+
+**Aftermath:**
+
+- PCs now have leverage against House Kimura (if they have the core)
+- They face choice: Use evidence or negotiate silence for safety
+- House Kimura becomes long-term enemy if evidence released
+- Complex political maneuvering possible if PCs play it smart
+
 ## GM Notes
 - **Use for job offers** that require crossing factional lines
 - **Internal conflict** between House loyalty and apostate sympathy creates dramatic tension

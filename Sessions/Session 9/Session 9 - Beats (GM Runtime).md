@@ -330,51 +330,320 @@ aliases:
 ---
 
 ### Beat 4.5: The Next Hook
-- **Trigger:** End of Scene 4 / end of session.
+
+- **Trigger:** End of Scene 4 / end of session OR transition to Part 3.
 - **What Happens:**
   - An NPC (Siren, faction representative, or campaign-relevant contact) delivers news that reframes the PCs' victory
+  - **OR: The PCs need to contact [[Isabella Nowak|Nowak]]** to follow up on the Valare situation and learn about the outpost
   - A new threat emerges that was in motion the whole time
   - A mystery deepens (what was Valare's death really about? Who benefits from keeping forks off the grid?)
-- **GM Move:** 
+- **Nowak Connection:**
+  - If PCs try to contact Nowak through Extranet: **it proves useless**
+  - Even if they get a personal message to her, **she won't acknowledge them**
+  - Their only option: **approach her in person** at the Icarus Hub
+  - This sets up the transition to Scene 5 (Part 3: Civil Unrest)
+- **GM Move:**
   - **Plant the seed** for next session without railroading
   - Tie it to **faction moves** or the **central campaign question**
   - Leave the PCs with a choice about what to investigate next
+  - **If transitioning to Part 3:** Frame the necessity of traveling to the Icarus Hub
+
+---
+
+## SCENE 5: CIVIL UNREST (Part 3 Transition)
+
+**The journey to Icarus Hub and arrival during the mutiny.**
+
+### Beat 5.1: Travel to Icarus Hub
+
+- **Trigger:** PCs decide they must reach Nowak in person.
+- **What Happens:**
+  - PCs must arrange travel to **Icarus Hub orbiting [[Proch]]**
+  - **Travel time options:**
+    - In the Chickenhawk or jump-capable ship: **~20 hours**
+    - Using public jump-ring network: **~30 hours**
+  - Use travel time for:
+    - PC downtime and recovery from Valare situation
+    - Strategic planning about approaching Nowak
+    - Rumors reaching them about tensions at the hub
+    - **Chimera's digital tracks**: If PCs investigate their own data logs during travel, they may notice anomalies (evidence of wiping/tampering)
+- **GM Move:**
+  - This is a **breathing moment** between intense scenes
+  - Use it to foreshadow the coming chaos
+  - Drop hints about worker unrest, Talon activity, or strange comms from the hub
+  - **Ask:** *"What do you do during the journey? Anyone investigating anything?"*
+
+---
+
+### Beat 5.2: First Sight of the Hub
+
+- **Trigger:** PCs approach the Icarus Hub for docking.
+- **What Happens:**
+  - Describe the **massive structure**:
+    - Cluster of large cubical structures, each edge about a kilometer long
+    - Arranged into a larger cube formation
+    - Dozens of connecting structures between cubes
+    - Every surface exposed with docking stations
+    - Mid-sized craft can pass between the cubes
+  - **Establish the scale and complexity** of what they're about to navigate
+  - Hub appears normal at first glance, but comms traffic seems heavier than usual
+- **GM Read (Optional):**
+  > "The Icarus Hub fills your viewscreen—a geometric city of interlocking cubes, each one large enough to house thousands. Docking lights flicker across hundreds of berths. It's industrial, massive, and in constant motion with ships arriving and departing. House Tsarya colors mark most of the visible vessels. Your comms pick up the usual chatter: shipping manifests, docking clearances, shift changes. But there's an edge to it you can't quite place. A tension in the voices."
+- **GM Move:**
+  - Build anticipation without revealing the explosion yet
+  - Let PCs state their docking approach and initial plans
+  - **Ask:** *"How are you approaching this? Official channels, quiet entry, or something else?"*
+
+---
+
+### Beat 5.3: The Explosion
+
+- **Trigger:** Just before docking OR as they complete docking procedures.
+- **What Happens:**
+  - **The corner of a cube explodes and breaks away**
+  - Debris scatters into space
+  - Emergency broadcasts erupt across all frequencies
+  - Panic visible on the hub's exterior—ships scrambling, alarms flashing
+  - **The mutiny has begun**
+- **GM Read:**
+  > "Your docking request is halfway processed when the hub lurches in your sensor feeds. For a split second, you think it's a collision. Then you see it: the northeast corner of Cube 3 erupts outward in a silent flash. Metal and atmosphere spray into the void. The structured chaos of the hub dissolves into panic—ships peeling away from berths, emergency klaxons lighting up every frequency, voices screaming for help or orders or just screaming. The Talon uprising has started."
+- **Immediate Complications:**
+  - Docking clearances cancelled or chaotic
+  - Ships fleeing berths, creating navigation hazards
+  - Emergency lockdowns beginning
+  - Mesh network becoming "flaky" (−2 to SINC/network rolls)
+  - Coalition/Lighthouse security mobilizing
+- **GM Move:**
+  - This is the **hard transition** into combat/chaos mode
+  - **Ask immediately:** *"What's your first move? Dock anyway? Pull back? Try to make contact?"*
+  - Create aspect: **"The Mutiny Has Begun"**
+
+---
+
+### Beat 5.4: Establishing Objectives
+
+- **Trigger:** PCs react to the explosion and chaos.
+- **What Happens:**
+  - Make clear their goal: **Reach and capture Nowak for interrogation**
+  - Explain the **Sequence mechanics** will track their progress
+  - Establish the **time pressure**: 10 minutes per round
+  - Introduce the **scene aspects** from the game book
+  - **Reveal the stakes:**
+    - [[Characters/NPCs/Chimera|Chimera]] helped instigate this
+    - Nowak has unleashed **Lighthouse with extreme prejudice**
+    - PCs are being **flagged as instigators** (Chimera's frame-up)
+    - [[Characters/NPCs/Named NPCs/Kestrel|Kestrel]] and Red Suns are also coming to kill Nowak (and the PCs)
+- **Scene Aspects (Remind Players):**
+  - **"Icarus Hub in Orbit Around Proch"**
+  - **"Lighthouse has been called in to put down the threat... with extreme prejudice."**
+  - **"The mesh has been... flaky, ever since the explosions started."**
+  - **"Chimera helped instigate this—he's a hero to the apostates and Talons."**
+  - **"Much of the station is damaged, and the environmental systems have been compromised."**
+  - **"More forces coming from Proch!"**
+- **GM Move:**
+  - Set up the **Sequence track** visibly (use index cards or whiteboard)
+  - Explain: Hard difficulty (4), 10-minute rounds, success/failure outcomes
+  - **Compel opportunity:** *"You're being blamed for this. Nowak thinks you're involved. Do you try to clear your names first, or just get to her?"*
+
+---
+
+### Beat 5.5: First Sequence Round
+
+- **Trigger:** PCs commit to reaching Nowak and take first actions.
+- **What Happens:**
+  - PCs must overcome obstacles to make progress:
+    - Navigate through panic/damaged sections
+    - Avoid or bypass Lighthouse patrols
+    - Deal with Talon/apostate forces
+    - Manage environmental hazards (depressurization, fires, collapsed sections)
+  - Each successful action fills one box on the Success Track
+  - Failures may trigger **consequences** (see Sequence mechanics)
+- **Sample Obstacles for Round 1:**
+  - Docking bay in chaos—ships blocking routes
+  - Lighthouse checkpoint demanding identification
+  - Structural damage requiring detour
+  - Panicking civilians blocking corridors
+  - Mesh network unreliable for finding Nowak's location
+- **GM Move:**
+  - Let players **declare approaches** before rolling
+  - Encourage **Create Advantage** actions (establishing helpful aspects)
+  - Track successes on the visible Sequence track
+  - **Describe the chaos vividly** between each action
+  - If they're struggling, offer **Create Advantage** opportunities
+
+---
+
+### Beat 5.6: Chimera's Digital Fingerprints
+
+- **Trigger:** PCs attempt digital/mesh actions OR investigate security systems.
+- **What Happens:**
+  - They discover (or triggers reveal) that **someone left digital evidence implicating the PCs**
+  - Security logs show "their" access codes used to aid Talons
+  - Comms records "prove" they coordinated with insurgents
+  - Nowak believes this evidence and has declared them **enemies of House Tsarya**
+  - **Chimera intentionally left these fingerprints** to frame them
+- **Savant Layer:**
+  - If PCs have Savant capabilities, they can detect the forgeries (Hard difficulty)
+  - The digital work is sophisticated but not perfect
+  - Traces lead back to systems **used heavily by Chimera and House Kimura**
+  - This is another attempt to **obstruct their investigations**
+- **GM Move:**
+  - This reveals **why Lighthouse is hunting them specifically**
+  - Creates choice: Do they try to clear their names (takes time) or just reach Nowak (faster but more dangerous)?
+  - **Compel:** *"The more you try to clear your digital trail, the more attention you draw. Do you stop and defend yourselves or push forward?"*
+
+---
+
+### Beat 5.7: Faction Encounters
+
+- **Trigger:** Every 2-3 Sequence rounds OR when dramatically appropriate.
+- **What Happens:**
+  - **Apostate & Talon Forces:** May help or hinder based on PC reputation/approach
+    - Some recognize PCs as framed/innocent
+    - Others believe Chimera's propaganda (PCs as heroes of the uprising)
+    - Can be negotiated with or avoided
+  - **Lighthouse Forces:** Brutal crackdown, hunting PCs as declared enemies
+    - Will shoot on sight unless PCs can talk fast
+    - Some may be reasonable, most are not
+  - **Kestrel & Red Suns:** Professional killers focused on eliminating PCs and Nowak
+    - Avoid main conflict, focus on assassination targets
+    - Know PC tactics from Kestrel's previous patron relationship
+    - Create moral complexity (fighting former ally)
+- **GM Move:**
+  - Not every encounter requires combat—offer negotiation/stealth options
+  - Let PC choices shape faction relationships going forward
+  - Use aspects: "Assassin on the Hunt," "Talon-Armed Workers," "No Quarter Given"
+  - **Track which factions the PCs anger or ally with**—this matters in Part 4
+
+---
+
+### Beat 5.8: Environmental Escalation
+
+- **Trigger:** Sequence progress stalls OR every 3-4 rounds.
+- **What Happens:**
+  - Station damage worsens:
+    - More explosions from Talon sabotage
+    - Environmental systems failing (temperature, oxygen, pressure)
+    - Structural collapses blocking routes
+    - Fires spreading through oxygen-rich sections
+  - Reinforcements arriving from Proch (more Lighthouse, more complexity)
+  - Kestrel getting closer to Nowak (time pressure intensifies)
+- **Sample Complications:**
+  - "Hull breach in Corridor B—vacuum exposure imminent"
+  - "Lighthouse heavy assault squad deployed to your sector"
+  - "Kestrel's team spotted near Nowak's last known location"
+  - "Power grid failure—lifts and doors offline"
+- **GM Move:**
+  - Use these to **maintain tension** without stalling progress
+  - Create dramatic choices: Fast route through danger vs. safe route taking time
+  - **Compel aspects:** "Systems Failing," "Explosive Decompression," "They're Closing In"
+
+---
+
+### Beat 5.9: Success—Reaching Nowak
+
+- **Trigger:** Success Track fills completely.
+- **What Happens:**
+  - PCs reach Nowak's location: **security post fallback position**
+  - She's cornered with **few tired and wounded Lighthouse operatives**
+  - She's in a **back room**, defensive but not yet dead
+  - **Kestrel hasn't arrived yet**
+- **Nowak's State:**
+  - Frightened, desperate, but still in control
+  - Believes PCs are instigators (Chimera's frame-up)
+  - Will claim she doesn't know about their cores initially
+  - Can be interrogated if PCs establish they're NOT enemies
+- **GM Move:**
+  - Transition to **interrogation scene** (detailed in session guide)
+  - Use information from updated Nowak NPC file
+  - Her deal: Get her off hub safely, she'll tell them outpost location and clear their names
+  - **Time pressure remains:** Kestrel is still coming
+  - Let PCs decide approach: Negotiate, threaten, protect, or abandon?
+
+---
+
+### Beat 5.10: Failure—Kestrel Reaches Nowak First
+
+- **Trigger:** Sequence fails OR time runs out.
+- **What Happens:**
+  - PCs arrive to find **Nowak already dead**
+  - Professional execution (if Kestrel) OR chaotic death (if Talons/apostates)
+  - Evidence of struggle or calm assassination depending on killer
+  - Any intel she could provide is lost
+- **Kestrel's Message:**
+  - Shortly after, **Extranet message arrives**
+  - From Kestrel
+  - Contains only: **Coordinates of the outpost at Opportunity Four**
+  - No explanation, just coordinates
+  - Implies: "Your answers are there, not here"
+  - **Tactical purpose:** Get PCs to leave voluntarily
+- **Consequences:**
+  - PCs are **branded traitors** to the Coalition
+  - Now effectively **apostates** until they prove innocence
+  - Lost opportunity for detailed Nowak intel
+  - Must piece together conspiracy from limited clues
+  - No one to clear their names
+  - More desperate Part 4 situation
+- **GM Move:**
+  - Make failure **meaningful but not campaign-ending**
+  - The coordinates still point them toward resolution
+  - Creates different tone for Part 4 (desperate fugitives vs. informed investigators)
+  - **Frame the choice:** *"You're branded enemies now. Do you run, or do you fight to clear your names first?"*
 
 ---
 
 ## BEATS AT A GLANCE (Checklist)
 
-### Scene 1
+### Scene 1: Echoes in the Noise
+
 - [ ] 1.1 – The Room Leans In
 - [ ] 1.2 – First Clue / First Cost
 - [ ] 1.3 – Pressure from Rival Team (if Exposure 1+)
 - [ ] 1.4 – False Lead or Sidetrack (if rolls fail)
 - [ ] 1.5 – Escalation Decision Point
 
-### Scene 2
+### Scene 2: The Place She Hid
+
 - [ ] 2.1 – Environmental Hazard Intro
 - [ ] 2.2 – First Hazard / First Choice
 - [ ] 2.3 – Sign of Valare
 - [ ] 2.4 – Rival Team Encounter (if Exposure 2+)
 - [ ] 2.5 – The Safehouse Entrance
 
-### Scene 3
+### Scene 3: Consent Conversation
+
 - [ ] 3.1 – First Contact
 - [ ] 3.2 – The Merge Question
 - [ ] 3.3 – What She Knows
 - [ ] 3.4 – The Fork's Choice
 - [ ] 3.5 – The Complication (optional)
 
-### Scene 4
+### Scene 4: Aftermath & Pursuit
+
 - [ ] 4.1 – The Extraction / Escape
 - [ ] 4.2 – Safe House Secured (or Lost)
 - [ ] 4.3 – Fallout Conversation
 - [ ] 4.4 – Merging Scene (if it happens)
-- [ ] 4.5 – The Next Hook
+- [ ] 4.5 – The Next Hook / Nowak Contact Attempt
+
+### Scene 5: Civil Unrest (Part 3 Transition)
+
+- [ ] 5.1 – Travel to Icarus Hub
+- [ ] 5.2 – First Sight of the Hub
+- [ ] 5.3 – The Explosion (Mutiny Begins)
+- [ ] 5.4 – Establishing Objectives (Sequence Setup)
+- [ ] 5.5 – First Sequence Round
+- [ ] 5.6 – Chimera's Digital Fingerprints
+- [ ] 5.7 – Faction Encounters (Lighthouse/Talons/Kestrel)
+- [ ] 5.8 – Environmental Escalation
+- [ ] 5.9 – Success: Reaching Nowak (or)
+- [ ] 5.10 – Failure: Kestrel Reaches Nowak First
 
 ---
 
 ## QUICK PACING NOTES
+
+**For Scenes 1-4 (Valare's Situation):**
 
 - **Ideal rhythm:** 1–2 beats per 15 minutes of table time
 - **If energy flags:** Tick Exposure and introduce a threat beat immediately
@@ -382,21 +651,77 @@ aliases:
 - **If you're behind schedule:** Compress Scene 2 hazards or jump directly to 2.5 (The Safehouse Entrance)
 - **If you're ahead:** Expand Scene 3 negotiation or add a 3.5 complication
 
+**For Scene 5 (Civil Unrest Transition):**
+
+- **Sequence pacing:** 10 minutes per round (in fiction)
+- **Real-time pacing:** 15-20 minutes per Sequence round (at table)
+- **Success track:** 7 boxes to fill; average 3-4 rounds to complete
+- **If Sequence drags:** Skip to environmental escalation (Beat 5.8) to add urgency
+- **If Sequence too fast:** Add faction encounters or environmental complications
+- **Critical timing:** Emphasize that Kestrel is racing them to Nowak
+
+**Session Length Considerations:**
+
+- **Scenes 1-4 only:** 3-4 hours (focused Valare resolution)
+- **Scenes 1-5:** 5-6 hours (full session including Part 3 transition)
+- **Scene 5 only:** 2-3 hours (if starting directly with Civil Unrest)
+- **Multiple sessions:** Can break after Scene 4, resume with Scene 5
+
 ---
 
 ## NOTES FOR RUNNING DYNAMICALLY
 
 1. **Beats are signposts, not railroad tracks.** If the PCs take an unexpected path, build a beat that fits their choice.
 2. **Compels are your best tool.** Use the inline compels from the Scene guide to introduce pressure without taking away agency.
-3. **Exposure clock is your pacing tool.** Tick it when the table needs urgency; let them cool off when they want breathing room.
-4. **Consequences matter more than hit points.** Create aspects, burn contacts, introduce enemies—these are the real costs in a FATE game.
-5. **Valare is the mirror.** How the PCs treat her reveals their priorities. Play her reactions true to their choices.
+3. **Exposure clock is your pacing tool (Scenes 1-4).** Tick it when the table needs urgency; let them cool off when they want breathing room.
+4. **Sequence track is your pacing tool (Scene 5).** Each filled box = visible progress toward Nowak. Use consequences to add drama without blocking success.
+5. **Consequences matter more than hit points.** Create aspects, burn contacts, introduce enemies—these are the real costs in a FATE game.
+6. **Valare is the mirror (Scenes 1-4).** How the PCs treat her reveals their priorities. Play her reactions true to their choices.
+7. **Chimera is the shadow (Scene 5).** He's never encountered directly, but his influence is everywhere—framing PCs, aiding Talons, manipulating data.
+8. **Faction encounters are choices, not fights.** Give PCs options to negotiate, avoid, or ally with Lighthouse/Talons/Apostates before forcing combat.
+9. **Environmental hazards escalate tension.** Use station damage to create urgency without punishing clever players.
+10. **Time pressure is real.** In Scene 5, Kestrel is actively pursuing the same goal—make it a race, not a certainty.
 
 ---
 
-## GM Reminders
+## GM REMINDERS
 
-- **Consent is the core theme.** Every compel, every pressure moment should ask: *"Who gets to choose here?"*
-- **Quiet success should feel good.** If they play smart and careful, let them have a clean win. Tick Exposure sparingly if they've earned restraint.
-- **Failure is a plot point, not a dead end.** When rolls fail, use the failure to advance complications, not to block the PCs.
+**Thematic Focus:**
+
+- **Scenes 1-4:** Consent is the core theme. Every compel, every pressure moment should ask: *"Who gets to choose here?"*
+- **Scene 5:** Chaos and conspiracy. The PCs are caught in forces larger than themselves, framed by Chimera, hunted by Kestrel, while a mutiny rages around them.
+
+**Success Should Feel Good:**
+
+- **Quiet success (Scenes 1-4):** If they play smart and careful, let them have a clean win. Tick Exposure sparingly if they've earned restraint.
+- **Earned success (Scene 5):** If they navigate the chaos cleverly, fill that Sequence track. Don't make them suffer for being competent.
+
+**Failure Advances the Plot:**
+
+- When rolls fail, use the failure to advance complications, not to block the PCs.
+- **Scene 5 failure:** If they fail to reach Nowak, they still get coordinates from Kestrel—the story continues, but the tone shifts (desperate fugitives vs. informed investigators).
+
+**Character Agency:**
+
 - **The fork is not an object.** Treat Valare as a person with agency, fears, and autonomy. The table will follow your lead on this.
+- **PCs are not pawns.** Even when framed by Chimera and hunted by Kestrel, give them meaningful choices and the ability to affect outcomes.
+
+**Key Reveals:**
+
+- **Chimera's digital fingerprints:** Can be discovered through investigation, not automatically revealed. Reward smart players.
+- **Nowak's knowledge:** She knows critical information about the outpost, Chimera's creation, and the conspiracy—but only shares under the right conditions.
+- **Kestrel's mission:** He's not just a threat; he's a former ally forced by House Kimura loyalty. Play the tragedy.
+
+**Faction Dynamics:**
+
+- Lighthouse: Professional but brutal; following Nowak's orders
+- Talons/Apostates: Ideologically driven; can be reasoned with if approached right
+- Kestrel's Red Suns: Surgical and efficient; avoid unnecessary engagement
+- Track PC relationships with each—these matter in future sessions
+
+**Scene 5 Specific:**
+
+- **The Sequence is not a combat.** It's a skill challenge with combat moments. Emphasize varied approaches.
+- **Station damage is atmospheric.** Use it to create urgency and drama, not to kill PCs arbitrarily.
+- **Chimera is watching.** He left digital traces deliberately. If PCs investigate, they can discover the frame-up.
+- **Success or failure, Part 4 awaits.** Both outcomes lead to Opportunity Four outpost—just with different resources and status.

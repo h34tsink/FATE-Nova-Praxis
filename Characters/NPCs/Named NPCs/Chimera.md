@@ -98,15 +98,38 @@ Created by **Dr. Haruto Nakamura** of **Mindscapes** (a House Kimura subsidiary)
 - [[Chimera]] **blames [[Isabella Nowak|Nowak]]** for his creation and current predicament
 - Being somewhat insane, he has targeted her for revenge by fanning the flames of rebellion on the **Icarus Hub**
 - He is actively **aiding the [[Factions/Hidden Agendas/Talons of Freedom|Talons of Freedom]]** to destabilize her position
+- Chimera played a **large role in instigating** the Talon's attack on Icarus Hub
+- While the attack would have happened eventually, Chimera saw an opportunity to **shorten the timeline**
+- Knowing the attack could help **cover his tracks**, he took advantage of it
+
+### Chimera's Methods on Icarus Hub
+
+**System Infiltration:**
+
+- Chimera and **House Kimura used the hub's systems heavily** in attempts to aid the Talons
+- He intentionally **left behind digital fingerprints** to frame others
+- Knowing what he does about the PCs, Chimera **left evidence implicating the PCs in the mutiny**
+- This was another attempt to **obstruct their investigations** and direct retribution toward them instead of just the Talons
+
+**Strategic Advantages:**
+
+- Not only does Chimera know everything the PCs do, but he has the advantage of being better able to **collate it all**
+- He understands how to **best take advantage of the PCs' combined skills, contacts, and assets**
+- Can **predict their behavior** and counter their tactics before they employ them
 
 ### Secret Knowledge
 
 - **[Secret: 3]** The [[Factions/Ideologies/Apostates|apostate]] uprising is backed by the **[[Factions/Hidden Agendas/Talons of Freedom|Talons of Freedom]]**
 - **[Secret: 5]** The **Talons of Freedom** were aided and encouraged to act now by Chimera
 - **[Secret: 7]** Full details of the Mindscapes experiments and Dr. Nakamura's research
+- **[Secret: 8]** Created by **Doctor Haruto Nakamura**, the scientist who headed the illicit mnemonics experiments
+- **[Secret: 9]** Chimera used his contacts and **House Kimura's resources** to help initiate the mutiny on the Icarus Hub
 
 ## Motivation
+
 Chimera's primary motivation is **self-preservation** combined with **revenge** against those who created his nightmare existence. His fragmented mental state makes him unpredictable, capable of both brilliant strategic thinking and impulsive, violent outbursts.
+
+**Whatever morality the Apotheosized PCs' egos had before merging into Chimera, it has all been stripped away—fragmented beyond recognition by the merger.** If self-preservation means killing the PCs, aiding the Talons, and blowing up a space station full of innocent people… **then so be it**.
 
 ## Key Insights
 
@@ -119,10 +142,15 @@ As a composite being, Chimera's motivations are driven by the combined desires a
 **Mental Fragmentation:**  
 The merging of multiple egos has led to a **fragmented mental state**, reflected in his Cohesion 1. His drive for self-preservation, combined with this fragmentation, results in a lack of empathy and willingness to **sacrifice others**.
 
+**Stripped Morality:**  
+The gestalt merging process has **fragmented and destroyed** whatever moral compass the original PCs possessed. Chimera operates without conscience, making him capable of any atrocity if it serves his survival.
+
 ## Campaign Role
+
 Chimera serves as the **ultimate personal antagonist** - someone who knows the PCs intimately and can exploit their every weakness. He represents the dark side of technological advancement and the consequences of unchecked scientific experimentation.
 
 ### As Major Antagonist
+
 - **Personal stakes**: Knows PCs' deepest secrets and fears
 - **Unpredictable**: Mental fragmentation creates erratic behavior
 - **Resource access**: House Kimura connections and advanced capabilities
@@ -132,22 +160,48 @@ Chimera serves as the **ultimate personal antagonist** - someone who knows the P
 ## GM Notes
 
 ### Tactical Usage
+
 - **Exploit PC knowledge**: Use their own memories and tactics against them
 - **Psychological warfare**: Target personal relationships and insecurities
 - **Unpredictable actions**: Mental fragmentation creates surprising decisions
 - **Resource manipulation**: Uses House connections and Talon alliance strategically
 
 ### Roleplay Guidelines
+
 - **Multiple personalities**: Switch between aspects of different merged PCs
 - **Identity confusion**: Occasionally refers to himself as "we" or specific PC names
 - **Paranoid intelligence**: Brilliant but increasingly unstable
 - **Desperate measures**: Willing to take extreme risks for survival
 
 ### Story Potential
+
 - **Identity themes**: What makes someone "real" or individual?
 - **Consequences**: Results of unethical scientific advancement
 - **Redemption questions**: Can a composite being find peace?
 - **PC relationships**: Force characters to confront their own actions
+
+### Escape Scenario (Part 4)
+
+**If Cornered at the Outpost:**
+
+- If possible, Chimera will try to **flee in an escape pod** to the planet's surface
+- Once there, he will **go into hiding** using survival skills from merged PC knowledge
+- **Mnemonic Core**: If Chimera is killed, PCs can find his mnemonic core
+  - The core can be used to **prove their innocence** in the mutiny
+  - It also **implicates House Kimura** in both the mutiny and illegal mnemonics research
+  - The Kimurans will do **anything necessary** to stop it from being used against them
+- **If Chimera escapes**: PCs will need to apprehend him before the Kimurans do
+
+### During Civil Unrest (Part 3)
+
+**Chimera's Role in the Mutiny:**
+
+- Nowak unleashes **Lighthouse** on the apostates
+- She declares the PCs to be **enemies of House Tsarya**
+- The docks become a **war zone**, instigated by Chimera to get revenge against Nowak
+- The PCs may hear about how Chimera helped **arm the Talons and apostate workers**
+- However, **the PCs never meet him** or anyone who has during Part 3
+- He remains a shadow, pulling strings from behind the scenes
 
 ## Conversion Notes
 **Original SWADE Stats:** Gestalt entity with highest PC skills, Cohesion 1, Paragon sleeve  

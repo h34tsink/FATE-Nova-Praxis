@@ -50,9 +50,28 @@ Wiping out the PCs' tracks was her last mission for **House Tsarya**, after whic
 - **Cover of Darkness** *(Stealth expertise)*
 
 ## Savant Programs
-- **Track Eraser** *(Removes digital evidence and traces)*
-- **Ghost Protocol** *(Enhanced stealth in digital systems)*
-- **Data Miner** *(Extracts hidden information)*
+
+**→ See [[Custom Savant Programs]] for full mechanics**
+
+Valare is a **cover-up specialist** with programs designed for evidence cleanup and covert investigation:
+
+- **Track Eraser** *(Custom Program)*
+  - Removes digital evidence and traces from system logs
+  - Can scrub activity spanning hours to weeks
+  - Upgrades: Phantom Replacement (creates false logs), Retroactive Cleaner (target old logs), Network Cascade (spreads across networks)
+  - **Specialty:** Post-operation cleanup; signature ability for House Tsarya work
+
+- **Ghost Protocol** *(Custom Program)*
+  - Enhanced stealth in digital systems; prevents detection by monitoring
+  - Creates digital "invisibility cloak" for active operations
+  - Upgrades: Adaptive Camouflage (auto-adjusts), False Positive Generator (floods alerts), Multitasking Ghost (covers allies)
+  - **Specialty:** Operating undetected during covert missions
+
+- **Data Miner** *(Custom Program)*
+  - Extracts hidden, deleted, or encrypted information
+  - Can recover data from secured systems and reconstruct deleted files
+  - Upgrades: Archaeological Recovery (year-old data), Pattern Recognition (auto-analysis), Parallel Processing (multiple systems)
+  - **Specialty:** Finding evidence before erasing it; understanding what happened
 
 ## Augmentations
 - **[[Apotheosis]]** *(Remote Backup)*
@@ -77,14 +96,21 @@ Valare died when a deal went sour. One of her Talon compatriots turned out to be
 
 ## What Does Valare Know?
 
-**Job for Nowak:**
-- Valare had been hired by [[Isabella Nowak|Isabella Nowak]] to scrub the PCs' tracks across the **[[Extranet]]**. She was not told the reasons behind it.
+**→ See [[Valare - What She Knows (Complete Framework)]] for comprehensive knowledge breakdown**
 
-**[Secret: 5] Assisting Mutiny:**
-- Valare had secretly been helping apostates and Talons move resources in preparation for a Talon-led mutiny on [[Locations/Exo Planets/Proch|Proch]]'s Icarus Hub.
+**Quick Summary (Tier 1 - General Knowledge):**
 
-**[Secret: 7] Mysterious Benefactor:**
-- Valare heard about a benefactor who has been providing aid to the Talons and arranging opportunities for them on the hub. She doesn't know who this benefactor is, but he has recently accelerated their plans and might initiate the strike at any moment.
+- **Job for Nowak:** Was hired by [[Isabella Nowak|Isabella Nowak]] to scrub digital evidence across the **[[Extranet]]**. Not told the full reasons, but suspects Nowak is involved in something dangerous.
+
+- **Talon Mutiny Preparation:** Through her Savant detection programs, has observed unusual Talon coordination, resource mobilization, and encrypted communications pointing to a major operation on Icarus Hub, imminent.
+
+- **Mysterious Benefactor:** Detected sophisticated funding and resource flows to Talons from an unknown external source. The patterns suggest House Kimura access codes and/or AI-level digital manipulation. Cannot confirm identity without more information or data access.
+
+- **Kestrel's Presence:** Red Sun operative and House Kimura asset on Icarus Hub, officially investigating corruption but actually coordinating containment/cleanup operations connected to the mutiny.
+
+- **Digital Frameup:** Her programs detected traces of a sophisticated data fabrication being constructed and attributed to the PCs, suggesting AI-level involvement and imminent blame assignment.
+
+**For detailed knowledge breakdown by Tier, detection methods, and what she reveals on success/failure, see the full framework document.**
 
 ## Motivation
 Valare's transformation from House asset to revolutionary was driven by moral disgust at Coalition corruption. She genuinely wants to help apostates achieve better lives and is willing to risk everything for that cause.

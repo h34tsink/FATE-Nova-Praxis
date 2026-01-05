@@ -269,6 +269,103 @@ When PCs locate Nowak, reveal: "The Talons have been watching you. **I** was wat
 - May attempt to capture or kill them (unless immediately useful)
 - Only cooperation possible if PCs prove more valuable alive than dead
 
+---
+
+## FATE Sequence: Reaching Nowak
+
+When the PCs arrive at the Icarus Hub and need to reach Nowak during the chaos, use this Sequence to track their progress through the war zone.
+
+### Sequence Mechanics (Assumes 4 PCs)
+
+**Success Track:**
+
+```
+☐ | ☐ ☐ | ☐ ☐ | ☐ ☐
+```
+
+**Goal:** Reach and capture Nowak so she can be interrogated  
+**Time Between Rounds:** 10 minutes  
+**Difficulty:** Hard (4)
+
+### Scene Aspects
+
+**Established Aspects:**
+
+- **"Icarus Hub in Orbit Around Proch"**
+- **"Lighthouse has been called in to put down the threat... with extreme prejudice."**
+- **"The mesh has been... flaky, ever since the explosions started."**
+- **"Chimera helped instigate this—he's a hero to the apostates and Talons."**
+- **"Much of the station is damaged, and the environmental systems have been compromised."**
+- **"More forces coming from Proch!"**
+
+### Sample Declarations (Players Can Create)
+
+**Tactical Advantages:**
+
+- "Hanger R-17 Is Clear for Docking"
+- "Security Logs Show Nowak in Security Checkpoint B-46"
+- "We've got control of the environmental systems."
+- "Sgt. Toric owes us a favor."
+- "Lighthouse Command Vessel Destroyed"
+
+**Faction Support:**
+
+- "Ramsey and his gang are going to watch our backs."
+- "The Talon cell recognizes us as allies."
+- "Apostate workers provide distraction."
+
+**Environmental Control:**
+
+- "All Ports on Cube 3 Are Sealed"
+- "Hanger Bay B-13 Exposed to Vacuum"
+- "We rerouted the power grid."
+- "Maintenance shafts provide hidden routes."
+
+### Sample Consequences
+
+| Severity | Consequence |
+|----------|-------------|
+| **Mild** | Mesh Intrusion Detected |
+| **Moderate** | Heavy Assault Squad Deployed |
+| **Severe** | "Kestrel has our position!" |
+| **Extreme** | Nowak's Security Team Is Dead and She's on the Run |
+
+### Running the Sequence
+
+**Each Round (10 minutes):**
+
+1. Describe the current situation and obstacles
+2. Players declare actions and roll appropriate skills
+3. Successes fill the track; failures may trigger consequences
+4. Compel aspects for complications and drama
+5. Allow creative solutions using Create Advantage actions
+
+**Time Pressure:**
+
+- Every 3-4 rounds, escalate the situation
+- Kestrel gets closer to Nowak's location
+- Reinforcements arrive from Proch
+- Station damage worsens
+- Factions shift positions
+
+**Success:**
+
+- PCs reach Nowak before Kestrel
+- She's cornered in security post with few guards
+- Can be interrogated for information
+- See detailed outcomes in session guide
+
+**Failure:**
+
+- Kestrel reaches Nowak first and kills her
+- PCs receive coordinates from Kestrel
+- Branded as traitors to the Coalition
+- Must proceed to Part 4 without her intel
+
+---
+
+## Nowak's Talon Connection (MAJOR REVEAL)
+
 ### How To Play Nowak In Sessions
 
 **Early Clues (Session 10 Early):**

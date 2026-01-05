@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sessions/What Are the Talons Up To.md",
+                "file": "Sessions/Session 9/Session 9 - Guide.md",
                 "mode": "preview",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "What Are the Talons Up To"
+              "title": "Session 9 - Guide"
             }
           }
         ]
@@ -115,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sessions/What Are the Talons Up To.md",
+                "file": "Sessions/Session 9/Session 9 - Guide.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for What Are the Talons Up To"
+              "title": "Backlinks for Session 9 - Guide"
             }
           },
           {
@@ -134,12 +134,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sessions/What Are the Talons Up To.md",
+                "file": "Sessions/Session 9/Session 9 - Guide.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from What Are the Talons Up To"
+              "title": "Outgoing links from Session 9 - Guide"
             }
           },
           {
@@ -206,7 +206,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 425.5
+    "width": 425.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -232,42 +233,42 @@
   },
   "active": "c250c3d2cc609401",
   "lastOpenFiles": [
-    "Locations/Siri's Asteroid Habitats.md",
-    "Sessions/Session 9/Session 8 - Recap.md",
-    "Sessions/Session 9/Part 3 Civil Unrest - The Nowak Situation.md",
-    "broken links output.md",
-    "Sessions/What Are the Talons Up To - COMPREHENSIVE.md",
-    "Sessions/Session 9/Session 9 - Part 3 - Civil Unrest - The Nowak Situation.md",
-    "Sessions/Session 9/Old/Part 3 Civil Unrest - The Nowak Situation.md",
-    "Sessions/What Are the Talons Up To.md",
-    "Sessions/Data Wipes - Valare vs Chimera.md",
-    "Archive/broken links output.md",
-    "Sessions/Session 9/Session 9 - Guide.md",
-    "Sessions/Session 9/Valare - Character Profile.md",
-    "Sessions/Session 9/Valare - Backstory Update.md",
-    "Sessions/Session 9/Session 9 - Scenes and Zones.md",
-    "Sessions/Session 9/Old/Session 8 - Recap.md",
+    "Untitled",
     "Sessions/Session 9/Session 8 Recap.md",
-    "Sessions/Session 9/Old/Part 3 Civil Unrest - The Nowak Situation 1.md",
+    "Sessions/Session 9/Part 3 Civil Unrest - The Nowak Situation.md",
+    "Rules and Mechanics/FATE/PXL_20251025_230742229.VB-03.MAIN.mp4",
+    "Rules and Mechanics/FATE/PXL_20251025_225227929.VB-01.COVER~2.mp4",
+    "Rules and Mechanics/FATE/PXL_20251025_230512616.VB-01.COVER.mp4",
+    "Rules and Mechanics/FATE/PXL_20251025_230856324.VB-03.MAIN.mp4",
+    "Rules and Mechanics/FATE/PXL_20251025_230411261.VB-01.COVER.mp4",
+    "Untitled 1",
+    "Rules and Mechanics/Custom Savant Programs.md",
+    "Rules and Mechanics/Savant Programs - Game Reference.md",
+    "Data/SAVANT PROGRAMS.md",
+    "Sessions/Session 9/Valare - Complete Resource Hub (Index).md",
+    "Sessions/Session 9/Part 3 Transition - All Valare Outcomes.md",
+    "Sessions/Session 9/Valare - Negotiation Quick Reference (GM Cheat Sheet).md",
+    "Sessions/Session 9/Valare - What She Knows (Complete Framework).md",
     "Sessions/Session 9/Session 9 - Beats (GM Runtime).md",
-    "Locations/Shadow Market.md",
-    "Sessions/Session 9/Old/Session 9 Guide - The Aftermath and Pursuit.md",
-    "Sessions/Session 9/Old/Delete Scene and Zones.md",
-    "Campaign Overview/Cold Start Syndicate - Campaign Summary.md",
-    "Factions/Hidden Agendas/Children of Dionysus.md",
-    "Factions/Hidden Agendas/Illumination.md",
-    "Untitled.md",
-    "Rules and Mechanics/Untitled.md",
+    "Sessions/Session 9/Session 9 - Guide.md",
+    "Sessions/Session 9/Session 9 - Scenes and Zones.md",
+    "Sessions/Session 9/Session 9 - Part 3 - Civil Unrest - The Nowak Situation.md",
+    "Factions/Houses/House Dalianis.md",
+    "Glossary/Difficulty.md",
+    "Glossary/Effort.md",
+    "Sessions/Session 9/Old/Session 8 Recap.md",
+    "Sessions/Session 9/Session 8 - Recap.md",
+    "Sessions/Session 9/Old/The Chain of Events.txt",
+    "Sessions/Data Wipes - Valare vs Chimera.md",
+    "Sessions/What Are the Talons Up To - COMPREHENSIVE.md",
+    "Sessions/Session 9/Old/Part 3 Civil Unrest - The Nowak Situation 2.md",
+    "Sessions/What Are the Talons Up To.md",
+    "Locations/Siri's Asteroid Habitats.md",
+    "broken links output.md",
+    "Sessions/Session 9/Old/Part 3 Civil Unrest - The Nowak Situation.md",
     "Index.base",
     "Untitled 1.base",
     "Untitled.base",
-    "create_glossary.py",
-    "Rules and Mechanics/FATE/PXL_20251025_230856324.VB-01.COVER.mp4",
-    "Locations/Exo Planets",
-    "Locations/Planets",
-    "Rules and Mechanics/FATE/Pneuma Rules/Pneuma",
-    "Rules and Mechanics/FATE/FATE Rules",
-    "Rules and Mechanics/FATE/Jump Rules",
     "Locations/Colonized Universe.canvas",
     "Vehicles/Chickenhawk Image.png",
     "Untitled.canvas",
