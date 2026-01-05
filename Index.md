@@ -96,6 +96,19 @@ Welcome to your Obsidian vault for Nova Praxis! This index links to all major se
 - [[Factions/Subsidiaries/|Subsidiaries]]
 - [[Factions/The Coalition/_Coalition Overview|The Coalition]]
 
+## Factions
+
+- [[Factions/Index|Faction Index]] - Complete faction guide
+
+### Alien Species
+
+- [[Factions/Aliens/Birrin/_Birrin Index|The Birrin Species]] - First alien contact; hexapodal sapients from Chriirah
+
+### Coalition & Houses
+
+- [[Factions/The Coalition/_Coalition Overview|Coalition Overview]]
+- Coalition Houses and subfactions
+
 ## Locations
 
 - [[Locations/Asola]]

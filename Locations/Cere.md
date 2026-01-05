@@ -14,7 +14,7 @@ aliases:
 **Type:** Mining Colony  
 **Environment:** Harsh, failing infrastructure, dangerous  
 **Notable NPCs:** [[Kal Paddock]] (Deepshaft Tavern)  
-**Factions:** Shadow Market presence, [[Talons of Freedom]] sympathizers  
+**Factions:** [[Shadow Market]] presence, [[Talons of Freedom]] sympathizers  
 
 ## Overview
 
@@ -45,4 +45,4 @@ Cere is where [[Valare|Valare's fork]] has been hiding. The harsh environment an
 - *Hostile Environment* — Bad air, unstable gravity, power fluctuations
 - *Patchwork Systems* — Outdated networks, unreliable comm
 - *Distrustful Locals* — Refugees and miners don't trust outsiders
-- *Shadow Market Presence* — Rivals closing in
+- *[[Shadow Market]] Presence* — Rivals closing in

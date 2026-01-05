@@ -3,7 +3,7 @@ A cluster of small habitats loosely aligned with the Talons of Freedom. These ha
 ## Notable Features
 - Hidden docking bays
 - Talon-friendly communities
-- Shadow Market connections
+- [[Shadow Market]] connections
 
 ## GM Notes
 - Use as a base for investigation scenes, social encounters, or as a safe haven for PCs.

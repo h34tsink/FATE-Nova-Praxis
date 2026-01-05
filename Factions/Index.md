@@ -89,7 +89,13 @@ Major subsidiaries and sub-organizations:
 
 Non-human factions and species:
 
-- [[Aliens/The Birrin/|The Birrin]] - Alien species encountered by humanity
+### The Birrin
+
+- [[Aliens/Birrin/_Birrin Index|Birrin Species Index]] - Complete guide to first alien contact
+- [[Aliens/Birrin/Birrin Species - Biology and Culture|Biology and Culture]] - Species lore and homeworld
+- [[Aliens/Birrin/Birrin Species Rules (FATE)|Species Rules (FATE)]] - Playing Birrin characters
+- [[Aliens/Birrin/The Chriirahn Concord|The Chriirahn Concord]] - Birrin faction and diplomatic corps
+- [[Aliens/Birrin/The Quiet Pier|The Quiet Pier]] - First contact mini-arc adventure
 
 ## Campaign Usage
 

@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "227f6dbfbfc88990",
+        "id": "f72671d6922cfe59",
         "type": "tabs",
         "children": [
           {
-            "id": "accdc7f38ebdb18f",
+            "id": "c250c3d2cc609401",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Factions/Aliens/The Birrin.md",
+                "file": "Sessions/What Are the Talons Up To.md",
                 "mode": "preview",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "The Birrin"
+              "title": "What Are the Talons Up To"
             }
           }
         ]
@@ -99,7 +99,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 304.5086555480957
+    "width": 288.5
   },
   "right": {
     "id": "2808606aa7204ff9",
@@ -115,17 +115,17 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Factions/Aliens/The Birrin.md",
+                "file": "Sessions/What Are the Talons Up To.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for The Birrin"
+              "title": "Backlinks for What Are the Talons Up To"
             }
           },
           {
@@ -134,12 +134,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Factions/Aliens/The Birrin.md",
+                "file": "Sessions/What Are the Talons Up To.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from The Birrin"
+              "title": "Outgoing links from What Are the Talons Up To"
             }
           },
           {
@@ -202,13 +202,11 @@
               "title": "dice-view"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 425.5,
-    "collapsed": true
+    "width": 425.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -232,45 +230,45 @@
       "print:Print note": false
     }
   },
-  "active": "accdc7f38ebdb18f",
+  "active": "c250c3d2cc609401",
   "lastOpenFiles": [
-    "Mechanics/FATE/Pneuma Rules/_Pneuma Index.md",
-    "Archive/Old Rules/Pneuma Variants/Pneuma_MD_Compendium.md",
-    "Archive/Old Rules/Pneuma Variants/Pneuma Compendium for Storyteller.md",
-    "Archive/Old Rules/Pneuma Variants",
-    "Archive/Old Rules",
-    "_Assets/Source Material/gm_data_cache_encounter.md",
-    "_Assets/Source Material/mimir_advanced_engineering_logs.jsonl",
-    "Mechanics/FATE/Pneuma Rules/_Pneuma Lore and Physics.md",
-    "Mechanics/FATE/Pneuma Rules/_Pneuma Rules.md",
-    "broken links output.md",
-    "Sessions/Session 5/Last Game Recap.md",
-    "apostate.md",
-    "Templates/FATE Character Template.md",
-    "Campaign Overview/Timeline of Events.md",
-    "Cygnus Alpha.md",
-    "Factions/Index.md",
-    "Factions/The Coalition/Houses Reference.md",
-    "Archive/Old Factions",
-    "Factions/The Coalition/_Coalition Overview.md",
-    "Glossary/Planck Twitch.md",
-    "Factions/Houses/House Cipriani.md",
-    "Locations/Sol System/_Overview.md",
-    "Index.md",
-    "Factions/Ideologies/Transhumans.md",
-    "Factions/Ideologies/Purists.md",
-    "Factions/Ideologies/Purifiers.md",
-    "Factions/Ideologies/Apostates.md",
-    "Factions/Religion/Astralists.md",
-    "Factions/Coalition.md",
-    "Factions/Promethic Collective.md",
+    "Sessions/Session 9/Session 9 - Part 3 - Civil Unrest - The Nowak Situation.md",
+    "Sessions/Session 9/Old/Part 3 Civil Unrest - The Nowak Situation.md",
+    "Sessions/What Are the Talons Up To.md",
+    "Sessions/Data Wipes - Valare vs Chimera.md",
+    "Archive/broken links output.md",
+    "Sessions/Session 9/Session 9 - Guide.md",
+    "Sessions/Session 9/Valare - Character Profile.md",
+    "Sessions/Session 9/Valare - Backstory Update.md",
+    "Sessions/Session 9/Session 9 - Scenes and Zones.md",
+    "Sessions/Session 9/Old/Session 8 - Recap.md",
+    "Sessions/Session 9/Session 8 Recap.md",
+    "Sessions/Session 9/Old/Part 3 Civil Unrest - The Nowak Situation 1.md",
+    "Sessions/Session 9/Session 9 - Beats (GM Runtime).md",
+    "Locations/Shadow Market.md",
+    "Locations/Siri's Asteroid Habitats.md",
+    "Sessions/Session 9/Old/Session 9 Guide - The Aftermath and Pursuit.md",
+    "Sessions/Session 9/Old/Delete Scene and Zones.md",
+    "Campaign Overview/Cold Start Syndicate - Campaign Summary.md",
+    "Factions/Hidden Agendas/Children of Dionysus.md",
+    "Factions/Hidden Agendas/Illumination.md",
+    "Untitled.md",
+    "Rules and Mechanics/Untitled.md",
+    "Index.base",
+    "Untitled 1.base",
+    "Untitled.base",
+    "Locations/Galaxy map.md",
+    "Untitled 1.md",
+    "Groups/Subsidiaries/Icarus Interplanetary.md",
+    "Groups/The Coalition/Houses/House Tsarya.md",
+    "create_glossary.py",
+    "Rules and Mechanics/FATE/PXL_20251025_230856324.VB-01.COVER.mp4",
+    "Locations/Exo Planets",
+    "Locations/Planets",
+    "Rules and Mechanics/FATE/Pneuma Rules/Pneuma",
+    "Rules and Mechanics/FATE/FATE Rules",
+    "Rules and Mechanics/FATE/Jump Rules",
     "Locations/Colonized Universe.canvas",
-    "Mechanics/FATE/Pneuma Rules/Pneuma",
-    "Mechanics/FATE/Pneuma Rules/mimir_advanced_engineering_logs.jsonl",
-    "Mechanics/FATE/PXL_20251025_230411261.VB-01.COVER.mp4",
-    "Mechanics/FATE/PXL_20251025_230856324.VB-03.MAIN.mp4",
-    "Mechanics/FATE/PXL_20251025_230742229.VB-03.MAIN.mp4",
-    "Mechanics/FATE/PXL_20251025_225227929.VB-01.COVER~2.mp4",
     "Vehicles/Chickenhawk Image.png",
     "Untitled.canvas",
     "Nova_Praxis_[Augmented_PDF]_[Fate]/Nova Praxis - Star Map.jpg",

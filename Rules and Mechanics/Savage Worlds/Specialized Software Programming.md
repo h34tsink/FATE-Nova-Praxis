@@ -1,0 +1,33 @@
+### Programming:
+- **What it Does**: Create specialized computer programs.
+- **Time Needed**: 1 minute to a few hours, based on complexity.
+- **Skill Roll**: Knowledge (Software).
+- **Additional Requirement**: Access to relevant data (maps, profiles, etc.).
+- **Bonus**: Gain a "task-specific Benny" on a successful roll; extra Bennies for raises.
+- **Examples**:
+  - Security Simulation: Bonus to predict security responses.
+  - Lie Detector: Bonus to Notice lies for a specific person.
+  - Structural Analysis: Bonus to Repair for demolition, etc.
+### Viruses:
+- **What it Does**: Create targeted computer viruses.
+- **Time Needed**: 1d4 hours.
+- **Skill Roll**: Knowledge (Software) at -2 penalty.
+- **Deployment**: Additional Knowledge (Software) roll at -2, higher for secure systems.
+- **Raises Can**:
+  - Delay virus execution.
+  - Add multiple "Eminent Domain" effects.
+  - Gain a +2 bonus on the deployment roll.
+- **Note**: Advanced AI security makes successful deployment challenging.
+### More Example Programs:
+- Financial Forensics: Detects financial fraud or embezzlement.
+- Enemy Comms Interceptor: Intercepts and decodes enemy communications.
+- Social Media Deep Dive: Comprehensive data gathering on individuals.
+- Emergency Medical Diagnostics: Analyzes patient data for optimal treatments.
+- Encryption Cracker: Breaks encryption on secured files.
+- Resource Allocation Optimizer: Efficiently distributes resources in survival scenarios.
+- Dynamic Topology Mapper: Real-time 3D mapping of terrain or structures.
+- Public Sentiment Analyzer: Analyzes social media sentiments.
+- Real-Time Translator: Instant translations of foreign languages.
+- Automated Negotiation Assistant: Suggests responses based on opponent's speech patterns.
+- Weather Prediction Algorithm: For predicting environmental conditions.
+- Stealth Path Planner: Suggests stealthy paths based on guard patterns.

@@ -1,4 +1,4 @@
-# Session 9 Guide: The Aftermath and Pursuit
+# [[Sessions/Session 9/Session 9 - Guide|Session 9 Guide]]: The Aftermath and Pursuit
 
 > [!warning] Deprecated
 > This note is kept for history. Use [[Sessions/Session 9/Session 9 - Guide]] (runbook) and [[Session 9 - Scenes and Zones]] (scene/zone structure).
@@ -7,13 +7,13 @@
 
 - The PCs have just navigated the chaos of the Icarus Hub, survived the uprising, and confronted the fallout of Nowak’s actions.
 - Valare’s core has been recovered, and the emotional VR interaction revealed the need to find and convince her fork to merge.
-- The team has new leads: Cere’s habitats, Talon contacts, the Shadow Market, and Cere’s mining colony.
+- The team has new leads: Cere’s habitats, Talon contacts, the [[Shadow Market]], and Cere’s mining colony.
 
 ## Key Objectives
 
 ### 1. Track Down Valare’s Fork
 
-- Investigate Cere’s habitats and the Shadow Market for contacts (Seren, Kal Paddock).
+- Investigate Cere’s habitats and the [[Shadow Market]] for contacts (Seren, Kal Paddock).
 - Explore Cere’s mining shafts and refugee quarters for clues.
 - Prepare for tense negotiations and possible moral dilemmas.
 

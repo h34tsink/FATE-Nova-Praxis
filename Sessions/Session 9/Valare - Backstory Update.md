@@ -8,7 +8,7 @@ aliases:
   - "Valare Backstory Update"
 ---
 
-# Valare Profile: Backstory Update
+# [[Valare - Character Profile|Valare Profile]]: Backstory Update
 
 **Updated:** Character profile refined based on actual backstory
 

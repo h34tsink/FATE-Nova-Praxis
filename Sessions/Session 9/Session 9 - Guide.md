@@ -41,7 +41,7 @@ Use this as the **runbook** for the session. The scene/zone structure lives in [
 Tick the clock on failures, delays, noisy success, or **digital carelessness**.
 
 - **When to tick:** failed rolls, taking too long in one zone, obvious leverage (bribes/threats), contacting known factions, leaving witnesses/camera evidence, **obvious data queries about Valare**.
-- **When not to tick:** quiet success, good cover stories, or paying a cost that keeps attention contained (e.g., a favor owed to the Shadow Market), **careful digital tradecraft**.
+- **When not to tick:** quiet success, good cover stories, or paying a cost that keeps attention contained (e.g., a favor owed to the [[Shadow Market]]), **careful digital tradecraft**.
 
 ### Clock Effects by Segment
 

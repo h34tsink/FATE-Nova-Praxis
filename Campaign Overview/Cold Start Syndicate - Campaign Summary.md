@@ -34,7 +34,7 @@ You woke up 100 years late in the Nova Praxis future, owing your survival to an 
 - **Session 5:** The crew contains “Death” inside station hostware after a possession/near-suicide spiral; they earn attention from Coalition special-ops via [[Scholae Palatinae]].
 - **Session 6:** A salvage job from [[Kestrel]] goes bad: illegal mnemonics research, erasure, and the creation of [[Chimera]]; the crew is declared dead and restored, now chasing the missing truth.
 - **Session 7:** Escape from Vantage Station with [[Lester Lucas]]; the crew recovers [[Valare]]’s mnemonic core—her biosleeve is dead, but the core survives.
-- **Session 8:** Valare’s core is restored; [[Isabella Nowak|Nowak]]’s role becomes clear; Valare’s fork is alive and hiding (Siri/Cere/Shadow Market leads); the crew secures the core and gains a battle cruiser.
+- **Session 8:** Valare’s core is restored; [[Isabella Nowak|Nowak]]’s role becomes clear; Valare’s fork is alive and hiding (Siri/Cere/[[Shadow Market]] leads); the crew secures the core and gains a battle cruiser.
 - **Session 9 (current arc):** The hunt for Valare’s fork becomes a consent-and-coercion crucible: factions close in, exposure rises, and the question is whether you secure the merge or protect her agency.
 
 ## Current status (where you are now)

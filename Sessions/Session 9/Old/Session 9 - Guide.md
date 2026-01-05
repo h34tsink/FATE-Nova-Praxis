@@ -8,7 +8,7 @@ aliases:
   - "Session 9: Guide"
 ---
 
-# Session 9: Guide
+# [[Sessions/Session 9/Session 9 - Guide|Session 9: Guide]]
 
 Use this as the **runbook** for the session. The scene/zone structure lives in [[Session 9 - Scenes and Zones]].
 
@@ -23,7 +23,7 @@ Use this as the **runbook** for the session. The scene/zone structure lives in [
 
 ### 1) Find Valare’s fork
 
-- Use leads: Siri’s habitats, the Shadow Market, Cere’s mining colony, Talon-friendly contacts (e.g., [[Seren]]), and local fixers (e.g., [[Kal Paddock]]).
+- Use leads: Siri’s habitats, the [[Shadow Market]], Cere’s mining colony, Talon-friendly contacts (e.g., [[Seren]]), and local fixers (e.g., [[Kal Paddock]]).
 
 ### 2) Keep the search quiet
 
@@ -39,7 +39,7 @@ Use this as the **runbook** for the session. The scene/zone structure lives in [
 Tick the clock on failures, delays, or noisy success.
 
 - **When to tick:** failed rolls, taking too long in one zone, obvious leverage (bribes/threats), contacting known factions, leaving witnesses/camera evidence.
-- **When not to tick:** quiet success, good cover stories, or paying a cost that keeps attention contained (e.g., a favor owed to the Shadow Market).
+- **When not to tick:** quiet success, good cover stories, or paying a cost that keeps attention contained (e.g., a favor owed to the [[Shadow Market]]).
 
 ### Clock Effects by Segment
 

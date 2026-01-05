@@ -22,7 +22,7 @@ creator: "GM Session Notes"
 
 ## Background
 
-Kal Paddock is a miner and information broker operating out of the **[[Cere/Deepshaft Tavern]]** in [[Cere]]'s mining colony. He's lived in the tunnels long enough to know everyone worth knowing and everyone dangerous enough to avoid. His greatest asset is his network—he has contacts among miners, tunnel runners, shadow market operatives, and local power brokers.
+Kal Paddock is a miner and information broker operating out of the **[[Cere/Deepshaft Tavern]]** in [[Cere]]'s mining colony. He's lived in the tunnels long enough to know everyone worth knowing and everyone dangerous enough to avoid. His greatest asset is his network—he has contacts among miners, tunnel runners, [[shadow market]] operatives, and local power brokers.
 
 Kal trades in information, favors, and resources. He's willing to help for the right price, but his loyalties shift like tunnel gravity. He's been known to work with [[Shadow Market]] operatives, local fixers, and desperate refugees, but his first loyalty is always to himself and keeping Cere's informal power structures balanced.
 

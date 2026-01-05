@@ -15,7 +15,7 @@
    - Investigate habitats aligned with the Talons.
    - Seek out [[Characters/NPCs/Named NPCs/Seren|Seren]] (Talon contact) and [[Characters/NPCs/Named NPCs/Kal Paddock|Kal Paddock]] ([[Locations/Cere/Deepshaft Tavern|Deepshaft Tavern]], Cere).
    - Search trade logs, question refugees, and explore mining shafts for clues.
-   - Possible Aspects: *Fork on the Run*, *Shadow Market Connections*, *Distrustful Locals*, *Hidden Refuge*.
+   - Possible Aspects: *Fork on the Run*, *[[Shadow Market]] Connections*, *Distrustful Locals*, *Hidden Refuge*.
 
 2. **Convince the Fork to Merge**
    - Prepare for tense, emotional negotiations.

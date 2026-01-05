@@ -30,7 +30,7 @@ Leads point to:
 - Siri’s asteroid habitats
 - Talon-friendly contacts (Seren)
 - Cere’s mining colony
-- The Shadow Market
+- The [[Shadow Market]]
 
 Multiple factions are searching. Time matters.
 
