@@ -25,8 +25,9 @@
 ## Subsystems
 
 ### Detailed Mechanics
-- [[Pneuma/Pneuma|Pneuma Core Mechanics]] — Focused mechanics reference
-- [[Pneuma/Pneuma Backlash Consequences|Backlash & Consequences]] — Handling Pneuma mishaps and overuse
+
+- [[_Pneuma Rules|Pneuma Core Mechanics]] — Focused mechanics reference
+- [[_Pneuma Rules|Backlash & Consequences]] — Handling Pneuma mishaps and overuse
 
 ---
 
