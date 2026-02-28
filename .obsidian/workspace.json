@@ -231,7 +231,10 @@
       "omnisearch:Omnisearch": false,
       "obsidian-import-json:JSON/CSV Importer": true,
       "notebook-navigator:Notebook Navigator": false,
-      "obsidian-dice-box-plugin:Open Dice Box": false
+      "obsidian-dice-box-plugin:Open Dice Box": false,
+      "darlal-switcher-plus:Open in Headings Mode": false,
+      "darlal-switcher-plus:Open Symbols for the active editor": false,
+      "obsidian-kanban:Create new board": false
     }
   },
   "active": "c250c3d2cc609401",

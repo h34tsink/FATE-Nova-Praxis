@@ -32,5 +32,12 @@
   "obsidian-git",
   "quickadd",
   "templater-obsidian",
-  "print"
+  "print",
+  "darlal-switcher-plus",
+  "obsidian-table-generator",
+  "dataview",
+  "obsidian-tasks-plugin",
+  "obsidian-kanban",
+  "obsidian-mind-map",
+  "note-toolbar"
 ]
