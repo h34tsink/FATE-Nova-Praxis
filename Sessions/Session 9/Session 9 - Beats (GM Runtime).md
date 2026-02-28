@@ -15,6 +15,15 @@ aliases:
 
 **How to Use:** Check off beats as they occur. If energy flags between beats, consider jumping ahead or ticking the Exposure clock to introduce pressure. Beats are not mandatory in order—adapt based on where the table naturally goes.
 
+## Canonical Part 3 Quick Reference (Machinations 1.1)
+
+- **Sequence:** Reaching Nowak
+- **Goal:** Reach and capture Nowak for interrogation
+- **Track:** `☐☐☐☐ | ☐☐☐☐ | ☐☐☐☐ | ☐☐☐☐`
+- **Round Time:** 10 minutes
+- **Difficulty:** Hard (4)
+- **Failure Pivot:** Nowak is already dead; Kestrel sends coordinates to Opportunity Four
+
 ---
 
 ## SCENE 1: ECHOES IN THE NOISE

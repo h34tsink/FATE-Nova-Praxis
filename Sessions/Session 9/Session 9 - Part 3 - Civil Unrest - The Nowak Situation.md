@@ -73,15 +73,20 @@ aliases:
 
 ### Sequence Mechanics (Assumes 4 PCs)
 
-**Success Track:**
+**Canonical Success Track (Machinations 1.1):**
 
 ```
-☐ | ☐ ☐ | ☐ ☐ | ☐ ☐
+☐☐☐☐ | ☐☐☐☐ | ☐☐☐☐ | ☐☐☐☐
 ```
 
 **Goal:** Reach and capture Nowak so she can be interrogated  
 **Time Between Rounds:** 10 minutes  
 **Difficulty:** Hard (4)
+
+**Scaling Option (if table time is short):**
+
+- Use an 8-box track (`☐☐☐☐ | ☐☐☐☐`) for a fast session close.
+- Keep the same aspect list and consequence ladder.
 
 ### Scene Aspects
 
@@ -318,6 +323,17 @@ In truth, she knows the following:
 - Navigate through war zone of Lighthouse vs Talons/Apostates
 - Potential chase scene through damaged station
 - Environmental hazards from explosion damage
+
+### Failure: PCs Arrive Too Late
+
+- The PCs still reach the security post, but Nowak is already dead (apostates, Talons, or [[Characters/NPCs/Named NPCs/Kestrel|Kestrel]] — GM choice).
+- Shortly after, the PCs receive a brief Extranet message from Kestrel containing only the outpost coordinates.
+- Use this as a hard pivot into Opportunity Four without stalling the campaign.
+
+**Failure Fallout:**
+
+- The crew gets location intel but loses direct interrogation leverage.
+- Political cleanup accelerates; frame-up pressure and traitor narrative intensify.
 - Time pressure from reinforcements arriving from Proch
 
 **Consequences of Success:**

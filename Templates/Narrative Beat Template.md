@@ -26,5 +26,6 @@ aliases:
 - 
 
 ## Links
-- [[Plot]]
-- [[Sessions]]
+
+- [[Plot/Index]]
+- [[Sessions/Index]]

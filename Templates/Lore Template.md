@@ -22,7 +22,8 @@ aliases:
 - **Conflicts to resolve:** 
 
 ## Links
-- [[Nova Praxis Vault Index]]
-- [[Glossary]]
-- [[Groups]]
-- [[Locations]]
+
+- [[Index]]
+- [[Glossary/Index]]
+- [[Factions/Index]]
+- [[Locations/Index]]

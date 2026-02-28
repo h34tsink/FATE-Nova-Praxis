@@ -1,0 +1,336 @@
+{
+  "mdFiles": 446,
+  "filesWithUnderscoresInName": 34,
+  "filesWithAllCapsBaseName": 0,
+  "filesWithBracketCharsInName": 0,
+  "yamlFrontmatterStarts": 173,
+  "filesWithInlineTags": 10,
+  "filesWithWikilinks": 284,
+  "filesWithAliasesField": 118,
+  "filesWithCodeFences": 21,
+  "topFolders": [
+    {
+      "name": "Glossary",
+      "count": 76
+    },
+    {
+      "name": "Sessions",
+      "count": 56
+    },
+    {
+      "name": "Locations",
+      "count": 54
+    },
+    {
+      "name": "Characters",
+      "count": 50
+    },
+    {
+      "name": "Factions",
+      "count": 42
+    },
+    {
+      "name": "Mechanics",
+      "count": 33
+    },
+    {
+      "name": "Rules and Mechanics",
+      "count": 26
+    },
+    {
+      "name": "Groups",
+      "count": 22
+    },
+    {
+      "name": ".obsidian",
+      "count": 22
+    },
+    {
+      "name": "Archive",
+      "count": 20
+    },
+    {
+      "name": "Miscellaneous",
+      "count": 12
+    },
+    {
+      "name": "Templates",
+      "count": 10
+    },
+    {
+      "name": "Plot",
+      "count": 7
+    },
+    {
+      "name": "Vehicles",
+      "count": 3
+    },
+    {
+      "name": "Campaign Overview",
+      "count": 3
+    },
+    {
+      "name": "Cosmology",
+      "count": 2
+    },
+    {
+      "name": "VAULT_REORGANIZATION_TRACKER.md",
+      "count": 1
+    },
+    {
+      "name": "Data",
+      "count": 1
+    },
+    {
+      "name": "Nova Praxis Vault Index.md",
+      "count": 1
+    },
+    {
+      "name": "nova-praxis-character-creator",
+      "count": 1
+    }
+  ],
+  "duplicateBasenames": 64,
+  "topDuplicateBasenames": [
+    {
+      "base": "summary",
+      "count": 5,
+      "files": [
+        "Locations\\Exo Planets\\Summary.md",
+        "Locations\\Planets\\Summary.md",
+        "Sessions\\Session 6\\Summary.md",
+        "Sessions\\Session 7\\Summary.md",
+        "Archive\\Old Locations\\Planets\\Summary.md"
+      ]
+    },
+    {
+      "base": "interlude",
+      "count": 4,
+      "files": [
+        "Characters\\Players\\Azaria Dawson\\Interlude.md",
+        "Characters\\Players\\Dr. Lorem (Doc) Ipsum\\Interlude.md",
+        "Characters\\Players\\Dustin (Grift) Halloway\\Interlude.md",
+        "Characters\\Players\\Kallius\\Interlude.md"
+      ]
+    },
+    {
+      "base": "venus",
+      "count": 3,
+      "files": [
+        "Locations\\Sol System\\Venus.md",
+        "Locations\\Planets\\Venus.md",
+        "Archive\\Old Locations\\Planets\\Venus.md"
+      ]
+    },
+    {
+      "base": "mercury",
+      "count": 3,
+      "files": [
+        "Locations\\Sol System\\Mercury.md",
+        "Locations\\Planets\\Mercury.md",
+        "Archive\\Old Locations\\Planets\\Mercury.md"
+      ]
+    },
+    {
+      "base": "melee weapons",
+      "count": 3,
+      "files": [
+        "Mechanics\\Melee Weapons.md",
+        "Glossary\\Melee Weapons.md",
+        "Rules and Mechanics\\Melee Weapons.md"
+      ]
+    },
+    {
+      "base": "mars",
+      "count": 3,
+      "files": [
+        "Locations\\Sol System\\Mars.md",
+        "Locations\\Planets\\Mars.md",
+        "Archive\\Old Locations\\Planets\\Mars.md"
+      ]
+    },
+    {
+      "base": "luna",
+      "count": 3,
+      "files": [
+        "Locations\\Sol System\\Luna.md",
+        "Locations\\Planets\\Luna.md",
+        "Archive\\Old Locations\\Planets\\Luna.md"
+      ]
+    },
+    {
+      "base": "uranus",
+      "count": 3,
+      "files": [
+        "Locations\\Sol System\\Uranus.md",
+        "Locations\\Planets\\Uranus.md",
+        "Archive\\Old Locations\\Planets\\Uranus.md"
+      ]
+    },
+    {
+      "base": "jupiter",
+      "count": 3,
+      "files": [
+        "Locations\\Sol System\\Jupiter.md",
+        "Locations\\Planets\\Jupiter.md",
+        "Archive\\Old Locations\\Planets\\Jupiter.md"
+      ]
+    },
+    {
+      "base": "pluto",
+      "count": 3,
+      "files": [
+        "Locations\\Sol System\\Pluto.md",
+        "Locations\\Planets\\Pluto.md",
+        "Archive\\Old Locations\\Planets\\Pluto.md"
+      ]
+    },
+    {
+      "base": "gm_data_cache_encounter",
+      "count": 3,
+      "files": [
+        "Mechanics\\FATE\\gm_data_cache_encounter.md",
+        "_Assets\\Source Material\\gm_data_cache_encounter.md",
+        "Rules and Mechanics\\Pneuma Rules\\gm_data_cache_encounter.md"
+      ]
+    },
+    {
+      "base": "mnemonic editing",
+      "count": 3,
+      "files": [
+        "Mechanics\\Mnemonic Editing.md",
+        "Glossary\\Mnemonic Editing.md",
+        "Rules and Mechanics\\Mnemonic Editing.md"
+      ]
+    },
+    {
+      "base": "explosives",
+      "count": 3,
+      "files": [
+        "Mechanics\\Explosives.md",
+        "Glossary\\Explosives.md",
+        "Rules and Mechanics\\Explosives.md"
+      ]
+    },
+    {
+      "base": "readme",
+      "count": 3,
+      "files": [
+        ".obsidian\\plugins\\Obsidian--ITS-Theme-main\\README.md",
+        ".obsidian\\plugins\\obsidian-dev-console-plugin-main\\README.md",
+        "nova-praxis-character-creator\\README.md"
+      ]
+    },
+    {
+      "base": "equipment",
+      "count": 3,
+      "files": [
+        "Mechanics\\Equipment.md",
+        "Glossary\\Equipment.md",
+        "Rules and Mechanics\\Equipment.md"
+      ]
+    }
+  ],
+  "topH2Headings": [
+    {
+      "heading": "Overview",
+      "count": 63
+    },
+    {
+      "heading": "Related Factions",
+      "count": 45
+    },
+    {
+      "heading": "Skills",
+      "count": 38
+    },
+    {
+      "heading": "Character Aspects",
+      "count": 36
+    },
+    {
+      "heading": "Stunts",
+      "count": 35
+    },
+    {
+      "heading": "Gear",
+      "count": 34
+    },
+    {
+      "heading": "Background",
+      "count": 31
+    },
+    {
+      "heading": "GM Notes",
+      "count": 31
+    },
+    {
+      "heading": "Campaign Role",
+      "count": 30
+    },
+    {
+      "heading": "Combat Stats",
+      "count": 30
+    },
+    {
+      "heading": "Links",
+      "count": 26
+    },
+    {
+      "heading": "Conversion Notes",
+      "count": 22
+    },
+    {
+      "heading": "Augmentations",
+      "count": 21
+    },
+    {
+      "heading": "GM Hooks",
+      "count": 19
+    },
+    {
+      "heading": "Related Terms",
+      "count": 18
+    },
+    {
+      "heading": "Cultural / Faction Associations",
+      "count": 18
+    },
+    {
+      "heading": "In-World Usage",
+      "count": 18
+    },
+    {
+      "heading": "Related Locations",
+      "count": 18
+    },
+    {
+      "heading": "Campaign Hooks",
+      "count": 17
+    },
+    {
+      "heading": "Basic Data",
+      "count": 17
+    },
+    {
+      "heading": "Sleeve Aspects",
+      "count": 12
+    },
+    {
+      "heading": "Key Events",
+      "count": 11
+    },
+    {
+      "heading": "1. Mimir — What Everyone Knows",
+      "count": 9
+    },
+    {
+      "heading": "11. Artifacts, Templates, & Replicators",
+      "count": 9
+    },
+    {
+      "heading": "15. Using the Archive: Logs at the Table",
+      "count": 9
+    }
+  ]
+}

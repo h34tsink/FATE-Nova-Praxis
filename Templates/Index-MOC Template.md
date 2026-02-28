@@ -10,11 +10,12 @@ aliases:
 - 
 
 ## Core Links
-- [[Nova Praxis Vault Index]]
-- [[Glossary]]
-- [[Rules and Mechanics]]
-- [[Sessions]]
-- [[Plot]]
+
+- [[Index]]
+- [[Glossary/Index]]
+- [[Mechanics/Index]]
+- [[Sessions/Index]]
+- [[Plot/Index]]
 
 ## Lists
 ### Characters

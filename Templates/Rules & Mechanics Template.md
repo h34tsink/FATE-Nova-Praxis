@@ -29,5 +29,6 @@ When this applies:
 - 
 
 ## Links
-- [[Rules and Mechanics/Rules Update]]
-- [[Glossary]]
+
+- [[Mechanics/Index]]
+- [[Glossary/Index]]

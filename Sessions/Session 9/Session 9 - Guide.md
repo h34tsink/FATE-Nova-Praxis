@@ -36,6 +36,17 @@ Use this as the **runbook** for the session. The scene/zone structure lives in [
 - The core question is consent vs coercion.
 - If the PCs push hard, play the cost forward (reputation, enemies, Valare’s trust, or future complications).
 
+## Canonical Part 3 Defaults (Machinations 1.1)
+
+Use these defaults when running the Icarus Hub push in Session 9:
+
+- **Sequence:** Reaching Nowak
+- **Goal:** Reach and capture Nowak for interrogation
+- **Track:** `☐☐☐☐ | ☐☐☐☐ | ☐☐☐☐ | ☐☐☐☐`
+- **Round Time:** 10 minutes
+- **Difficulty:** Hard (4)
+- **Failure Baseline:** PCs still get outpost coordinates (via Kestrel message), but lose Nowak interrogation leverage
+
 ## Escalation Mechanic: Exposure Clock (How to Run)
 
 Tick the clock on failures, delays, noisy success, or **digital carelessness**.

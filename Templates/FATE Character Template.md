@@ -231,10 +231,10 @@ campaign: [Campaign Name]
 
 ## 📎 References
 
-**Related Characters:** [[Character Name]], [[Character Name]]  
-**Related Locations:** [[Location Name]]  
-**Related Factions:** [[Faction Name]]  
-**Related Sessions:** [[Session Notes]]
+**Related Characters:** <Character Name>, <Character Name>  
+**Related Locations:** <Location Name>  
+**Related Factions:** <Faction Name>  
+**Related Sessions:** <Session Note>
 
 ---
 

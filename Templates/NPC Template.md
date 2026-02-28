@@ -31,6 +31,7 @@ aliases:
 - **Secrets:** 
 
 ## Links
-- [[Characters]]
-- [[Groups]]
-- [[Locations]]
+
+- [[Characters/Index]]
+- [[Factions/Index]]
+- [[Locations/Index]]

@@ -33,7 +33,6 @@
   "enableDeltaLogging": false,
   "enableDocumentHistory": false,
   "enableEditorTweens": false,
-  "enableSyncModal": false,
   "enableNetworkLogging": false,
   "enableCanvasSync": false,
   "enableVerifyUploads": false,
@@ -47,6 +46,7 @@
   "enableMetadataViewHooks": true,
   "enableKanbanView": true,
   "debugging": false,
+  "enableSyncModal": false,
   "login": {
     "provider": "google"
   },

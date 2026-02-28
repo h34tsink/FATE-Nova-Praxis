@@ -59,6 +59,14 @@ Tick the clock on failures, delays, or noisy success.
 
 For clock usage and escalation guidance, see [[Session 9 - Guide]].
 
+## Source Sync (Machinations 1.1)
+
+For the Icarus Hub push to Nowak, use canonical sequence defaults from [[Session 9 - Part 3 - Civil Unrest - The Nowak Situation]]:
+
+- Track: `☐☐☐☐ | ☐☐☐☐ | ☐☐☐☐ | ☐☐☐☐`
+- Difficulty: Hard (4)
+- Round Time: 10 minutes
+
 ---
 
 ## Scene 1: Echoes in the Noise

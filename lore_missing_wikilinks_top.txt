@@ -1,0 +1,59 @@
+12	Image.png
+10	Link
+3	Image Link.png
+3	Internal Image.png
+2	Glossary/Insight
+2	SWADE - Nova Praxis/Rules and Mechanics/Setting Terminology
+2	The Protectorate/
+1	../Campaign Overview/
+1	1. Possible NPCs
+1	Archive
+1	Archive/broken links output
+1	Base 10
+1	Biosleeves
+1	Biotech
+1	Briar Blackwood.jpg
+1	Campaign Overview/Pre-Singularity Events
+1	Characters/Savage Worlds/Drones/Ardent LS-7 "Lonestar" Armed Responder
+1	Characters/Savage Worlds/Drones/Harvester Drone
+1	Characters/Savage Worlds/Drones/Kraken (Refurbished)
+1	Characters/Savage Worlds/Drones/Kraken Drone
+1	Characters/Savage Worlds/NPCs/Potential NPCs
+1	Conspiracy Theories
+1	Embedded Note
+1	Embedded Note Link
+1	Embeds
+1	Factions/The Coalition/The Protectorate/
+1	Glossary/Diplomacy
+1	Glossary/Empathy
+1	Glossary/Perception
+1	Glossary/Pilot
+1	Glossary/Stealth
+1	Gondolin
+1	Healthcare systems
+1	Hidden Agendas/
+1	Ideologies/
+1	Image Adjustments-Custom - Inner Position Basic.png
+1	Image Adjustments-Custom - Pos+Types.png
+1	Image Adjustments-Extras Invert.gif
+1	Image without background card styling.png
+1	Image_Adjustments-Custom-Inner_Position_Precise.png
+1	Image_Adjustments-Custom-Sizing.png
+1	Image_Adjustments-Simple-Positions.png
+1	Image_Adjustments-Simple-Sizing.png
+1	Image_Adjustments-Simple-Types.png
+1	In The Shadows
+1	Insurgency
+1	Internal Image 2.png
+1	Internal Image 3 on New Row.png
+1	Kallius
+1	Links
+1	Locations/Asteroid Belts
+1	Sessions/Quiet Pier mini-arc
+1	Specular Spread
+1	Tetragon
+1	The Coalition/The Protectorate/
+1	The Venusian Maiden
+1	Where on Sovera.svg
+1	WikiLinks
+1	WMDs
