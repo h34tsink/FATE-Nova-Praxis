@@ -213,6 +213,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "templater-obsidian:Templater": false,
       "obsidian-git:Open Git source control": false,
       "system3-relay:Relay": true,
       "print:Print note": true,
