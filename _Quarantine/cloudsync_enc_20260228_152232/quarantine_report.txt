@@ -1,0 +1,47 @@
+Quarantine Root: X:\My Drive\Obsidian Vaults\FATE - Nova Praxis\_Quarantine\cloudsync_enc_20260228_152232
+Moved Files: 43
+
+Moved paths:
+.obsidian\.obsidian\app.json
+.obsidian\.obsidian\appearance.json
+.obsidian\.obsidian\core-plugins-migration.json
+.obsidian\.obsidian\core-plugins.json
+.obsidian\.obsidian\hotkeys.json
+.obsidian\.obsidian\workspace-mobile.json
+.obsidian\plugins\dataview\main.js
+.obsidian\plugins\dataview\manifest.json
+.obsidian\plugins\dataview\styles.css
+.obsidian\plugins\dbfolder\main.js
+.obsidian\plugins\dbfolder\manifest.json
+.obsidian\plugins\dbfolder\styles.css
+.obsidian\plugins\link-favicon\main.js
+.obsidian\plugins\link-favicon\manifest.json
+.obsidian\plugins\link-favicon\styles.css
+.obsidian\plugins\obsidian-admonition\data.json
+.obsidian\plugins\obsidian-admonition\main.js
+.obsidian\plugins\obsidian-admonition\manifest.json
+.obsidian\plugins\obsidian-admonition\styles.css
+.obsidian\plugins\obsidian-columns\main.js
+.obsidian\plugins\obsidian-columns\manifest.json
+.obsidian\plugins\obsidian-columns\styles.css
+.obsidian\plugins\obsidian-kanban\main.js
+.obsidian\plugins\obsidian-kanban\manifest.json
+.obsidian\plugins\obsidian-kanban\styles.css
+.obsidian\plugins\obsidian-leaflet-plugin\data.json
+.obsidian\plugins\obsidian-leaflet-plugin\main.js
+.obsidian\plugins\obsidian-leaflet-plugin\manifest.json
+.obsidian\plugins\obsidian-leaflet-plugin\styles.css
+.obsidian\plugins\obsidian-linter\main.js
+.obsidian\plugins\obsidian-linter\manifest.json
+.obsidian\plugins\obsidian-linter\styles.css
+.obsidian\plugins\quickadd\data.json
+.obsidian\plugins\quickadd\main.js
+.obsidian\plugins\quickadd\manifest.json
+.obsidian\plugins\quickadd\styles.css
+.obsidian\plugins\supercharged-links-obsidian\main.js
+.obsidian\plugins\supercharged-links-obsidian\manifest.json
+.obsidian\plugins\supercharged-links-obsidian\styles.css
+.obsidian\plugins\templater-obsidian\main.js
+.obsidian\plugins\templater-obsidian\manifest.json
+.obsidian\plugins\templater-obsidian\styles.css
+.obsidian\snippets\supercharged-links-gen.css
