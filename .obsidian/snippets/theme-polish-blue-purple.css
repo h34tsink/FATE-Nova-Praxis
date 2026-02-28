@@ -1,0 +1,207 @@
+/* Professional sci-fi polish: cobalt primary + indigo secondary + high legibility */
+
+@font-face {
+  font-family: "Vault Cascadia Code NF";
+  src: local("Cascadia Code NF SemiLight"),
+       local("CascadiaCode NF SemiLight"),
+       local("CaskaydiaCove Nerd Font"),
+    url("../fonts/CaskaydiaCoveNerdFont-SemiLight.ttf") format("truetype");
+  font-weight: 350;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Vault Cascadia Code NF";
+  src: local("Cascadia Code NF"),
+       local("CascadiaCode NF"),
+       local("CaskaydiaCove Nerd Font"),
+    url("../fonts/CaskaydiaCoveNerdFont-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Vault Cascadia Code NF";
+  src: local("Cascadia Code NF SemiBold"),
+       local("CascadiaCode NF SemiBold"),
+       local("CaskaydiaCove Nerd Font"),
+    url("../fonts/CaskaydiaCoveNerdFont-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Vault Cascadia Code NF Mono";
+  src: local("Cascadia Code NF Mono"),
+       local("CascadiaCode NF Mono"),
+       local("CaskaydiaCove Nerd Font Mono"),
+    url("../fonts/CaskaydiaCoveNerdFontMono-SemiLight.ttf") format("truetype");
+  font-weight: 350;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-text: "Vault Cascadia Code NF", "Cascadia Code NF", "CaskaydiaCove Nerd Font", ui-sans-serif, system-ui, sans-serif;
+  --font-interface: "Vault Cascadia Code NF", "Cascadia Code NF", "CaskaydiaCove Nerd Font", ui-sans-serif, system-ui, sans-serif;
+  --font-monospace: "Vault Cascadia Code NF Mono", "Cascadia Code NF Mono", "CaskaydiaCove Nerd Font Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  --color-accent: #4f7dff;
+  --color-accent-1: #4f7dff;
+  --color-accent-2: #7a69ff;
+
+  --link-color: #74a3ff;
+  --link-color-hover: #9dbfff;
+  --link-external-color: var(--link-color);
+  --link-external-color-hover: var(--link-color-hover);
+  --link-unresolved-color: #aeb8d2;
+
+  --text-accent: #74a3ff;
+  --text-accent-hover: #9dbfff;
+}
+
+@font-face {
+  font-family: "Vault Cascadia Code NF Mono";
+  src: local("Cascadia Code NF Mono"),
+       local("CascadiaCode NF Mono"),
+       local("CaskaydiaCove Nerd Font Mono"),
+       url("../fonts/CaskaydiaCoveNerdFontMono-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+body {
+  font-weight: 350;
+  letter-spacing: 0.0025em;
+}
+
+.markdown-rendered h1,
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-rendered h4,
+.markdown-rendered h5,
+.markdown-rendered h6 {
+  font-weight: 600;
+  letter-spacing: 0.012em;
+}
+
+.markdown-rendered h1,
+.markdown-rendered h2 {
+  border-bottom: 1px solid color-mix(in srgb, var(--color-accent-2) 45%, transparent);
+  padding-bottom: 0.2rem;
+}
+
+.markdown-rendered a.internal-link:visited,
+.markdown-rendered .internal-link:visited,
+.markdown-rendered a.external-link:visited,
+.cm-s-obsidian span.cm-hmd-internal-link.cm-link,
+.cm-s-obsidian span.cm-url {
+  color: var(--link-color) !important;
+}
+
+.markdown-rendered a.internal-link,
+.markdown-rendered a.external-link,
+.cm-s-obsidian span.cm-hmd-internal-link.cm-link,
+.cm-s-obsidian span.cm-url {
+  color: var(--link-color) !important;
+}
+
+.markdown-rendered a.internal-link:hover,
+.markdown-rendered a.external-link:hover,
+.cm-s-obsidian span.cm-hmd-internal-link.cm-link:hover {
+  color: #c7d8ff !important;
+}
+
+.markdown-rendered code,
+.cm-inline-code {
+  background: color-mix(in srgb, var(--color-accent-1) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-accent-2) 35%, transparent);
+  border-radius: 6px;
+  padding: 0.08em 0.35em;
+}
+
+.markdown-rendered pre,
+.markdown-rendered pre code {
+  border: 1px solid color-mix(in srgb, var(--color-accent-2) 30%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-accent-1) 20%, transparent) inset;
+}
+
+.markdown-rendered blockquote {
+  border-left: 3px solid var(--color-accent-2);
+  background: color-mix(in srgb, var(--color-accent-1) 10%, transparent);
+  border-radius: 0 8px 8px 0;
+}
+
+.theme-light {
+  --color-accent: #3f6fdf;
+  --color-accent-1: #3f6fdf;
+  --color-accent-2: #6559d8;
+  --link-color: #3f6fdf;
+  --link-color-hover: #4d7ce8;
+  --link-external-color: var(--link-color);
+  --link-external-color-hover: var(--link-color-hover);
+  --text-normal: #1f2638;
+}
+
+.theme-dark {
+  --color-accent: #5a88ff;
+  --color-accent-1: #5a88ff;
+  --color-accent-2: #8674ff;
+  --link-color: #5a88ff;
+  --link-color-hover: #6a95ff;
+  --link-external-color: var(--link-color);
+  --link-external-color-hover: var(--link-color-hover);
+  --text-normal: #d7def0;
+}
+
+/* Hard override: keep all links same blue, including visited */
+.theme-dark .markdown-rendered a.internal-link,
+.theme-dark .markdown-rendered a.external-link,
+.theme-dark .markdown-rendered a.internal-link:visited,
+.theme-dark .markdown-rendered a.external-link:visited,
+.theme-dark .markdown-source-view.mod-cm6 .cm-link,
+.theme-dark .markdown-source-view.mod-cm6 .cm-url,
+.theme-dark .markdown-source-view.mod-cm6 .cm-hmd-internal-link,
+.theme-dark .markdown-source-view.mod-cm6 .cm-string.cm-url,
+.theme-dark .markdown-preview-view a.internal-link,
+.theme-dark .markdown-preview-view a.external-link,
+.theme-dark .markdown-preview-view a.internal-link:visited,
+.theme-dark .markdown-preview-view a.external-link:visited {
+  color: #5a88ff !important;
+  opacity: 1 !important;
+}
+
+.theme-dark .markdown-rendered a.internal-link:hover,
+.theme-dark .markdown-rendered a.external-link:hover,
+.theme-dark .markdown-source-view.mod-cm6 .cm-link:hover,
+.theme-dark .markdown-source-view.mod-cm6 .cm-url:hover {
+  color: #6a95ff !important;
+}
+
+.theme-light .markdown-rendered a.internal-link,
+.theme-light .markdown-rendered a.external-link,
+.theme-light .markdown-rendered a.internal-link:visited,
+.theme-light .markdown-rendered a.external-link:visited,
+.theme-light .markdown-source-view.mod-cm6 .cm-link,
+.theme-light .markdown-source-view.mod-cm6 .cm-url,
+.theme-light .markdown-source-view.mod-cm6 .cm-hmd-internal-link,
+.theme-light .markdown-source-view.mod-cm6 .cm-string.cm-url,
+.theme-light .markdown-preview-view a.internal-link,
+.theme-light .markdown-preview-view a.external-link,
+.theme-light .markdown-preview-view a.internal-link:visited,
+.theme-light .markdown-preview-view a.external-link:visited {
+  color: #3f6fdf !important;
+  opacity: 1 !important;
+}
+
+.theme-light .markdown-rendered a.internal-link:hover,
+.theme-light .markdown-rendered a.external-link:hover,
+.theme-light .markdown-source-view.mod-cm6 .cm-link:hover,
+.theme-light .markdown-source-view.mod-cm6 .cm-url:hover {
+  color: #4d7ce8 !important;
+}

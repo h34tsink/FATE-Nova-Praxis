@@ -1,16 +1,17 @@
 {
-  "accentColor": "#006eff",
+  "accentColor": "#0062ff",
   "cssTheme": "Bossidian",
   "enabledCssSnippets": [
     "colored-bolds",
     "noteWidth",
-    "align-justify"
+    "align-justify",
+    "theme-polish-blue-purple"
   ],
   "nativeMenus": true,
   "baseFontSizeAction": true,
-  "interfaceFontFamily": "CaskaydiaCove Nerd Font",
-  "monospaceFontFamily": "CaskaydiaCove Nerd Font Mono",
+  "interfaceFontFamily": "Vault Cascadia Code NF",
+  "monospaceFontFamily": "Vault Cascadia Code NF Mono",
   "baseFontSize": 14,
   "theme": "obsidian",
-  "textFontFamily": "CaskaydiaCove Nerd Font"
+  "textFontFamily": "Vault Cascadia Code NF"
 }
