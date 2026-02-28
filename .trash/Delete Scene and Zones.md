@@ -27,7 +27,7 @@ Valare’s fork is terrified of merging due to the trauma of her death and is wi
 
 Leads point to:
 
-- Siri’s asteroid habitats
+- Cere’s asteroid habitats
 - Talon-friendly contacts (Seren)
 - Cere’s mining colony
 - The Shadow Market

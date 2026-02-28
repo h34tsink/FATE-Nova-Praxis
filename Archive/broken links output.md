@@ -40,7 +40,7 @@ Don't forget that creating the file from here may create the file in the wrong d
 - [[SWADE - Nova Praxis/Characters/NPCs/Chimera]] in [[Sessions/Session 7/Session 7 - Guide]], [[Sessions/Session 7/Guide for Running the Scenario]]
 - [[SWADE - Nova Praxis/Rules and Mechanics/Setting Terminology]] in [[Sessions/Session 7/Session 7 - Guide]], [[Sessions/Session 7/Guide for Running the Scenario]]
 - [[Characters/NPCs/Chimera]] in [[Sessions/Session 7/Session 7 - Guide]], [[Sessions/Session 7/Guide for Running the Scenario]]
-- [[Siri]] in [[Sessions/Session 8/Session 8 - Recap]]
+- [[Cere]] in [[Sessions/Session 8/Session 8 - Recap]]
 - [[Crimson Sons]] in [[Sessions/Session 8/Session 8 - Recap]]
 - [[Coalition]] in [[Sessions/Session 9/Session 9 - Scenes and Zones]], [[Sessions/Session 9/Session 9 - Guide]], [[Sessions/Session 9/Session 9 - Beats (GM Runtime)]]
 - [[Locations/Asola]] in [[Characters/NPCs/Named NPCs/Kestrel]], [[Sessions/Session 7/Notes/Session Guide Part 2]], [[Index]]

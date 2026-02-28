@@ -13,6 +13,8 @@ aliases:
 
 **All-in-one index for Valare-related materials.**
 
+Runtime control for the full session lives in [[Session 9 - Ops Index]] and [[Session 9 - Guide]].
+
 ---
 
 ## WHAT IS THIS?

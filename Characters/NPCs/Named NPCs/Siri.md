@@ -1,8 +1,5 @@
-Siri is a campaign-referenced NPC/entity pending full profile.
-
-## GM Notes
-- Flesh out role, allegiances, and current status before next appearance.
-
-## Related
-- [[Sessions/Index]]
-- [[Characters/Index]]
+---
+aliases: []
+---
+> [!warning] Deprecated
+> "Siri" was a naming error. The correct reference is the asteroid [[Cere]]. This stub can be safely deleted.

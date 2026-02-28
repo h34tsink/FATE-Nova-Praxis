@@ -13,6 +13,13 @@ aliases:
 
 **Purpose:** Quick-reference guide for **moment-to-moment pacing** during the session. Each beat is a discrete narrative moment where something changes—either through player action, failure, or GM intervention.
 
+**Use this file for depth, not primary command.**
+
+- Primary run control: [[Session 9 - Guide]]
+- Scene kit and compels: [[Session 9 - Scenes and Zones]]
+- Part 3 operations: [[Session 9 - Part 3 - Civil Unrest - The Nowak Situation]]
+- Live board: [[Session 9 - GM Command Board]]
+
 **How to Use:** Check off beats as they occur. If energy flags between beats, consider jumping ahead or ticking the Exposure clock to introduce pressure. Beats are not mandatory in order—adapt based on where the table naturally goes.
 
 ## Canonical Part 3 Quick Reference (Machinations 1.1)

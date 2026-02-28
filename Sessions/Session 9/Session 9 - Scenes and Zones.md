@@ -9,6 +9,11 @@ aliases:
 
 # Session 9: Scenes and Zones
 
+> **Role of this note:** scene framing, zone prompts, clues, and compel language.
+> **Runtime control:** [[Session 9 - Guide]]
+> **Beat detail:** [[Session 9 - Beats (GM Runtime)]]
+> **Live dashboard:** [[Session 9 - GM Command Board]]
+
 > **System:** Nova Praxis (FATE)  
 > **Theme:** Identity, consent, trauma, and consequence  
 > **Core Question:** *Do the PCs secure Valare’s fork at the cost of her autonomy—or protect her agency at the cost of their mission?*
@@ -66,6 +71,8 @@ For the Icarus Hub push to Nowak, use canonical sequence defaults from [[Session
 - Track: `☐☐☐☐ | ☐☐☐☐ | ☐☐☐☐ | ☐☐☐☐`
 - Difficulty: Hard (4)
 - Round Time: 10 minutes
+
+For full Part 3 sequence operations, outcomes, and Nowak handling, see [[Session 9 - Part 3 - Civil Unrest - The Nowak Situation]].
 
 ---
 
@@ -180,6 +187,15 @@ What did this choice cost—and who noticed?
 - **Observation Deck** — *Witnesses Change the Story*  
 - **Encrypted Comms** — *Someone Is Very Interested*  
 - **Quiet Moment** — *What Did We Just Do?*
+
+---
+
+## Scene Handoff Script (Quick Use)
+
+- **1 → 2:** "You have enough to move. Staying here helps your cover, moving now keeps initiative. Which risk do you take?"
+- **2 → 3:** "You found her refuge. Decide your opening tone before anyone reaches for a weapon."
+- **3 → 4:** "The choice is made. Now the galaxy responds to how you made it."
+- **4 → 5:** "Whatever happened with Valare, Icarus is already burning. We cut to transit and first sight of the hub."
 
 ---
 
