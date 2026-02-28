@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Sessions/Session 9/Session 9 - Scenes and Zones.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false,
                 "backlinks": false
               },
@@ -90,7 +90,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 433.5
+    "width": 318.5
   },
   "right": {
     "id": "2808606aa7204ff9",
@@ -202,6 +202,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
       "system3-relay:Relay": false,
       "print:Print note": false,
       "bases:Create new base": false,
