@@ -6,29 +6,6 @@
       {
         "id": "f72671d6922cfe59",
         "type": "tabs",
-        "dimension": 48.42312746386334,
-        "children": [
-          {
-            "id": "c250c3d2cc609401",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Sessions/Session 9/Session 9 - Guide.md",
-                "mode": "preview",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Session 9 - Guide"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ce73f57a2114cf5e",
-        "type": "tabs",
-        "dimension": 51.57687253613666,
         "children": [
           {
             "id": "dd42c598de4d40a9",
@@ -36,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Characters/NPCs/Named NPCs/Isabella Nowak.md",
-                "mode": "preview",
+                "file": "GM AI/Entity Cards/Isabella Nowak (R4 Important NPC).md",
+                "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Isabella Nowak"
+              "title": "Isabella Nowak (R4 Important NPC)"
             }
           }
         ]
@@ -113,8 +90,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 318.5,
-    "collapsed": true
+    "width": 318.5
   },
   "right": {
     "id": "2808606aa7204ff9",
@@ -264,11 +240,11 @@
   },
   "active": "dd42c598de4d40a9",
   "lastOpenFiles": [
-    "Characters/NPCs/Nowak.md",
-    "Characters/NPCs/Named NPCs/Isabella Nowak.md",
-    "Sessions/Session 9/Session 9 - Scenes and Zones.md",
     "GM AI/NPC Command Board.md",
+    "Characters/NPCs/Named NPCs/Isabella Nowak.md",
     "Sessions/Session 9/Session 9 - Guide.md",
+    "Characters/NPCs/Nowak.md",
+    "Sessions/Session 9/Session 9 - Scenes and Zones.md",
     "_Quarantine/cloudsync_enc_20260228_152259/quarantine_report.txt",
     "_Quarantine/cloudsync_enc_20260228_152259",
     "_Quarantine/cloudsync_enc_20260228_152232/quarantine_report.txt",

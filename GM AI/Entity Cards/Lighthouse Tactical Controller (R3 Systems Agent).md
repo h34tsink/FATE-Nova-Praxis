@@ -1,12 +1,12 @@
 ---
 aliases:
-	- npc lighthouse
-	- /npc lighthouse
-	- agent lighthouse
-	- /agent lighthouse
+  - "npc lighthouse"
+  - "/npc lighthouse"
+  - "agent lighthouse"
+  - "/agent lighthouse"
 tags:
-	- gm-ai
-	- entity-card
+  - "gm-ai"
+  - "entity-card"
 ---
 
 # Lighthouse Tactical Controller (R3 Systems Agent)

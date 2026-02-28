@@ -1,10 +1,10 @@
 ---
 aliases:
-	- npc chimera
-	- /npc chimera
+  - "npc chimera"
+  - "/npc chimera"
 tags:
-	- gm-ai
-	- entity-card
+  - "gm-ai"
+  - "entity-card"
 ---
 
 # Chimera (R5 Villain)

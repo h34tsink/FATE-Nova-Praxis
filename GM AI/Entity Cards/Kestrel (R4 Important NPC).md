@@ -1,10 +1,10 @@
 ---
 aliases:
-	- npc kestrel
-	- /npc kestrel
+  - "npc kestrel"
+  - "/npc kestrel"
 tags:
-	- gm-ai
-	- entity-card
+  - "gm-ai"
+  - "entity-card"
 ---
 
 # Kestrel (R4 Important NPC)

@@ -1,10 +1,10 @@
 ---
 aliases:
-	- npc seren
-	- /npc seren
+  - "npc seren"
+  - "/npc seren"
 tags:
-	- gm-ai
-	- entity-card
+  - "gm-ai"
+  - "entity-card"
 ---
 
 # Seren (R3 Important Contact)

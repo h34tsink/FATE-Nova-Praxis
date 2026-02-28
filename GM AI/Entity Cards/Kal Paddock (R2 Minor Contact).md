@@ -1,11 +1,11 @@
 ---
 aliases:
-	- npc kal
-	- /npc kal
-	- npc paddock
+  - "npc kal"
+  - "/npc kal"
+  - "npc paddock"
 tags:
-	- gm-ai
-	- entity-card
+  - "gm-ai"
+  - "entity-card"
 ---
 
 # Kal Paddock (R2 Minor Contact)

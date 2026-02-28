@@ -1,11 +1,11 @@
 ---
 aliases:
-	- npc valare-integrated
-	- /npc valare-integrated
-	- npc valare integrated
+  - "npc valare-integrated"
+  - "/npc valare-integrated"
+  - "npc valare integrated"
 tags:
-	- gm-ai
-	- entity-card
+  - "gm-ai"
+  - "entity-card"
 ---
 
 # Valare Integrated (R4 Personal Agent Ally)
