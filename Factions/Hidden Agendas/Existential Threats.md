@@ -1,3 +1,7 @@
+---
+redirect: true
+---
+
 # Existential Threats
 
 Reference concept note.

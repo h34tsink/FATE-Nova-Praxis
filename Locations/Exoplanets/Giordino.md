@@ -1,3 +1,7 @@
+---
+redirect: true
+---
+
 # Giordino
 
 Regional city reference note.

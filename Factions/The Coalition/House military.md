@@ -1,3 +1,7 @@
+---
+redirect: true
+---
+
 # House military
 
 Reference concept note.

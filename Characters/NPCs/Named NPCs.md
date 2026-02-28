@@ -1,3 +1,7 @@
+---
+redirect: true
+---
+
 # Named NPCs
 
 Legacy/shortcut note.

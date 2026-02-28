@@ -1,3 +1,7 @@
+---
+redirect: true
+---
+
 # Black Market
 
 Reference concept note.

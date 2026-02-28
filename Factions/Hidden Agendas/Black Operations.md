@@ -1,3 +1,7 @@
+---
+redirect: true
+---
+
 # Black Operations
 
 Reference concept note.

@@ -1,3 +1,7 @@
+---
+redirect: true
+---
+
 # Secret Societies
 
 Reference concept note.

@@ -1,3 +1,7 @@
+---
+redirect: true
+---
+
 # Synthesis
 
 Reference concept note.

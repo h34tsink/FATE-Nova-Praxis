@@ -1,3 +1,7 @@
+---
+redirect: true
+---
+
 # New Montreal
 
 Regional city reference note.

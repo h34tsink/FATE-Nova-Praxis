@@ -1,3 +1,7 @@
+---
+redirect: true
+---
+
 # Generic NPCs
 
 Legacy/shortcut note.

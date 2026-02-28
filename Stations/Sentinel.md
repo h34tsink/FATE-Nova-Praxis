@@ -1,3 +1,7 @@
+---
+redirect: true
+---
+
 # Sentinel
 
 Legacy/shortcut note.

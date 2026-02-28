@@ -1,3 +1,7 @@
+---
+redirect: true
+---
+
 # Plot
 
 Legacy/shortcut note.

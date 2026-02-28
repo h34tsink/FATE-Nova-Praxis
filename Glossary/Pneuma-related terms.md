@@ -1,3 +1,7 @@
+---
+redirect: true
+---
+
 # Pneuma-related terms
 
 Legacy/shortcut glossary note.

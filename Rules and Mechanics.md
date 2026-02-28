@@ -1,3 +1,7 @@
+---
+redirect: true
+---
+
 # Rules and Mechanics
 
 Legacy/shortcut note.

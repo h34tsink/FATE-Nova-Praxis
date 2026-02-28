@@ -1,3 +1,7 @@
+---
+redirect: true
+---
+
 # Erebos Depths
 
 Sub-location reference note.

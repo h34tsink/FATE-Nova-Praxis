@@ -1,3 +1,7 @@
+---
+redirect: true
+---
+
 # Information Control
 
 Reference concept note.

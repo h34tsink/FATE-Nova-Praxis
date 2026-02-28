@@ -1,3 +1,7 @@
+---
+redirect: true
+---
+
 # Glossary
 
 Legacy/shortcut note.

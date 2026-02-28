@@ -1,3 +1,7 @@
+---
+redirect: true
+---
+
 # Savants
 
 Reference concept note.

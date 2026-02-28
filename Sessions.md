@@ -1,3 +1,7 @@
+---
+redirect: true
+---
+
 # Sessions
 
 Legacy/shortcut note.
