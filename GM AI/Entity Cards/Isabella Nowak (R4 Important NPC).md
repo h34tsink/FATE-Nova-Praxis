@@ -1,3 +1,13 @@
+---
+aliases:
+	- npc nowak
+	- /npc nowak
+	- npc isabella
+tags:
+	- gm-ai
+	- entity-card
+---
+
 # Isabella Nowak (R4 Important NPC)
 
 ## Identity

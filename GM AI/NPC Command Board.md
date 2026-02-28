@@ -1,0 +1,59 @@
+---
+aliases:
+  - npc command board
+  - /npc
+tags:
+  - gm-ai
+  - runtime
+---
+
+# NPC Command Board
+
+**Summary:** Fast in-session invocation map for entity dialogue. Use `Ctrl+O` (Quick Switcher) or Omnisearch and type the command token (for example `npc kestrel`).
+
+## Lore
+This note keeps your runtime entity calls deterministic and table-speed. Each token maps to one canonical entity card with voice profile, motivations, and knowledge boundaries.
+
+## Mechanics
+- **Trigger:** You need an in-character line from a known entity.
+- **Procedure:**
+  1. Open Quick Switcher (`Ctrl+O`) or Omnisearch.
+  2. Type one command token below (without backticks if preferred).
+  3. Open the matching entity card.
+  4. Copy the current context + intent into [[GM AI/Claude Code - Prompt Pack]] section 1.
+- **Inputs/Outputs:**
+  - Input: command token + scene context
+  - Output: 1-4 line in-character response + intent line
+- **Failure handling:**
+  - If no result appears, reindex search and retry with entity name only.
+  - If two results appear, pick the card in `GM AI/Entity Cards/`.
+
+### Command Tokens
+- `npc kestrel` → [[GM AI/Entity Cards/Kestrel (R4 Important NPC)]]
+- `npc nowak` → [[GM AI/Entity Cards/Isabella Nowak (R4 Important NPC)]]
+- `npc chimera` → [[GM AI/Entity Cards/Chimera (R5 Villain)]]
+- `npc valare-fork` → [[GM AI/Entity Cards/Valare Fork (R4 Important NPC)]]
+- `npc valare-integrated` → [[GM AI/Entity Cards/Valare Integrated (R4 Personal Agent Ally)]]
+- `npc seren` → [[GM AI/Entity Cards/Seren (R3 Important Contact)]]
+- `npc kal` → [[GM AI/Entity Cards/Kal Paddock (R2 Minor Contact)]]
+- `npc lighthouse` → [[GM AI/Entity Cards/Lighthouse Tactical Controller (R3 Systems Agent)]]
+
+### Runnable Example
+- Token: `npc nowak`
+- Context:
+  - Mutineers are advancing on her command deck.
+  - PCs demand a full disclosure in exchange for extraction.
+  - Kimura comms just went dark.
+- Prompt block to use: [[GM AI/Claude Code - Prompt Pack#1) Speak as Entity (Default)]]
+
+## Continuity
+- **Assumptions:** Command tokens are used as aliases for fast note lookup, not shell-like parser commands.
+- **Conflicts to resolve:** If you want literal slash-command execution (`/npc ...` in editor), add a dedicated slash-command plugin later.
+
+## Links
+- [[GM AI/Claude Code - GM Runtime System]]
+- [[GM AI/Claude Code - Prompt Pack]]
+- [[GM AI/Claude Code - Persona & Complexity Matrix]]
+- [[GM AI/Entity Card Template]]
+
+#ttrpg #nova-praxis #gm-ai

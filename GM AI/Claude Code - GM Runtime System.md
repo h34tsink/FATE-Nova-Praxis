@@ -13,6 +13,7 @@ Use this to run in-character dialogue and rapid lore lookups with Claude Code (d
 
 1. Open Claude Code in this vault root.
 2. Keep these files visible in one split pane:
+   - [[GM AI/NPC Command Board]]
    - [[GM AI/Claude Code - Persona & Complexity Matrix]]
    - [[GM AI/Entity Card Template]]
    - [[GM AI/Claude Code - Prompt Pack]]

@@ -1,3 +1,12 @@
+---
+aliases:
+	- npc seren
+	- /npc seren
+tags:
+	- gm-ai
+	- entity-card
+---
+
 # Seren (R3 Important Contact)
 
 ## Identity

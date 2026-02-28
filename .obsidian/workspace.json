@@ -6,6 +6,7 @@
       {
         "id": "f72671d6922cfe59",
         "type": "tabs",
+        "dimension": 48.42312746386334,
         "children": [
           {
             "id": "c250c3d2cc609401",
@@ -20,6 +21,28 @@
               },
               "icon": "lucide-file",
               "title": "Session 9 - Guide"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ce73f57a2114cf5e",
+        "type": "tabs",
+        "dimension": 51.57687253613666,
+        "children": [
+          {
+            "id": "dd42c598de4d40a9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Characters/NPCs/Named NPCs/Isabella Nowak.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Isabella Nowak"
             }
           }
         ]
@@ -90,7 +113,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 318.5
+    "width": 318.5,
+    "collapsed": true
   },
   "right": {
     "id": "2808606aa7204ff9",
@@ -238,8 +262,13 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "c250c3d2cc609401",
+  "active": "dd42c598de4d40a9",
   "lastOpenFiles": [
+    "Characters/NPCs/Nowak.md",
+    "Characters/NPCs/Named NPCs/Isabella Nowak.md",
+    "Sessions/Session 9/Session 9 - Scenes and Zones.md",
+    "GM AI/NPC Command Board.md",
+    "Sessions/Session 9/Session 9 - Guide.md",
     "_Quarantine/cloudsync_enc_20260228_152259/quarantine_report.txt",
     "_Quarantine/cloudsync_enc_20260228_152259",
     "_Quarantine/cloudsync_enc_20260228_152232/quarantine_report.txt",
@@ -261,21 +290,16 @@
     "GM AI/Claude Code - Persona & Complexity Matrix.md",
     "GM AI/Claude Code - GM Runtime System.md",
     "GM AI",
-    "Sessions/Session 9/Session 9 - Scenes and Zones.md",
     "Characters/NPCs/Named NPCs/Siri.md.tmp.13968.1772303736153",
     "Campaign Overview/Cold Start Syndicate - Campaign Summary.md.tmp.13968.1772303690488",
     "Sessions/Session 9/Session 9 - Ops Index.md",
     "Sessions/Session 9/Session 9 - Live Dashboard.md",
-    "Sessions/Session 9/Session 9 - Guide.md",
     "Sessions/Session 9/Session 9 - Beats (GM Runtime).md",
     "Glossary/Compel.md",
     "Sessions/Session 9/Session 9 - Obsidian Optimization Plan.md",
     "Sessions/Session 9/Session 9 - GM Command Board.md",
     "Character Creation Summary.md",
     "Sessions/Session 9/Session 9 - Part 3 - Civil Unrest - The Nowak Situation.md",
-    "Factions/Savants.md",
-    "Factions/The Coalition/House military.md",
-    "Stations",
     "Media/Ships/playersShip.webp",
     "Locations/Colonized Universe.canvas",
     "Vehicles/Chickenhawk Image.png",

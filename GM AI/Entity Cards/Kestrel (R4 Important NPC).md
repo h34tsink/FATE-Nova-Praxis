@@ -1,3 +1,12 @@
+---
+aliases:
+	- npc kestrel
+	- /npc kestrel
+tags:
+	- gm-ai
+	- entity-card
+---
+
 # Kestrel (R4 Important NPC)
 
 ## Identity

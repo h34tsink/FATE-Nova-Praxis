@@ -1,3 +1,14 @@
+---
+aliases:
+	- npc lighthouse
+	- /npc lighthouse
+	- agent lighthouse
+	- /agent lighthouse
+tags:
+	- gm-ai
+	- entity-card
+---
+
 # Lighthouse Tactical Controller (R3 Systems Agent)
 
 ## Identity

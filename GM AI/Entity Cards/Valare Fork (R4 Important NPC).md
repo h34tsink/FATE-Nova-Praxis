@@ -1,3 +1,13 @@
+---
+aliases:
+	- npc valare-fork
+	- /npc valare-fork
+	- npc valare fork
+tags:
+	- gm-ai
+	- entity-card
+---
+
 # Valare Fork (R4 Important NPC)
 
 ## Identity

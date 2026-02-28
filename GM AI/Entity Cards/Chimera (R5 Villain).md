@@ -1,3 +1,12 @@
+---
+aliases:
+	- npc chimera
+	- /npc chimera
+tags:
+	- gm-ai
+	- entity-card
+---
+
 # Chimera (R5 Villain)
 
 ## Identity
