@@ -3,11 +3,11 @@ title: Sentinel Station
 category: Sol System - Earth-Lagrange Network
 summary: Largest Coalition military installation; logistics and resurrection super-hub
 tags:
-	- location
-	- sol-system
-	- station
-	- military
-	- coalition
+  - location
+  - sol-system
+  - station
+  - military
+  - coalition
 ---
 
 ## Overview

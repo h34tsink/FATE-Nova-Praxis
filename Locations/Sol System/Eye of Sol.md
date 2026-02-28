@@ -3,10 +3,10 @@ title: Eye of Sol
 category: Sol System - Earth-Lagrange Network
 summary: Rebuilt public jump gate and major transit waypoint in the Earth system
 tags:
-	- location
-	- sol-system
-	- station
-	- jump-gate
+  - location
+  - sol-system
+  - station
+  - jump-gate
 ---
 
 ## Overview

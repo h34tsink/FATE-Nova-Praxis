@@ -3,10 +3,10 @@ title: Odysseus Station
 category: Sol System - Luna Orbit
 summary: Major Dalianis research station focused on advanced jump-drive design
 tags:
-	- location
-	- sol-system
-	- station
-	- research
+  - location
+  - sol-system
+  - station
+  - research
 ---
 
 ## Overview

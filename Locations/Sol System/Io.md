@@ -3,10 +3,10 @@ title: Io
 category: Sol System - Jovian Moons
 summary: Volcanically active Jovian moon used for specialized extraction and hazardous research operations
 tags:
-	- location
-	- sol-system
-	- moon
-	- research
+  - location
+  - sol-system
+  - moon
+  - research
 ---
 
 ## Overview

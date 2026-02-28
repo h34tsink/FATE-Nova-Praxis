@@ -3,10 +3,10 @@ title: Deimos
 category: Sol System - Martian Moons
 summary: Twin-settlement military moon anchored by Coalition training and garrison functions
 tags:
-	- location
-	- sol-system
-	- moon
-	- military
+  - location
+  - sol-system
+  - moon
+  - military
 ---
 
 ## Overview

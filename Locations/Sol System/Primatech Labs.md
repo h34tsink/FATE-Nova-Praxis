@@ -3,11 +3,11 @@ title: Primatech Labs
 category: Sol System - Earth-Lagrange Network
 summary: House Jinzhan black-site R&D and ordnance hub supporting Earth quarantine forces
 tags:
-	- location
-	- sol-system
-	- station
-	- research
-	- military
+  - location
+  - sol-system
+  - station
+  - research
+  - military
 ---
 
 ## Overview

@@ -3,10 +3,10 @@ title: Phobos
 category: Sol System - Martian Moons
 summary: Dalianis power-seat moon-city combining heavy ship construction, elite leisure, and sleeve logistics
 tags:
-	- location
-	- sol-system
-	- moon
-	- industry
+  - location
+  - sol-system
+  - moon
+  - industry
 ---
 
 ## Overview

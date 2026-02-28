@@ -3,10 +3,10 @@ title: Persephone Station
 category: Sol System - Pluto Frontier
 summary: Pluto-orbit research and observation platform supporting deep-frontier operations
 tags:
-	- location
-	- sol-system
-	- station
-	- frontier
+  - location
+  - sol-system
+  - station
+  - frontier
 ---
 
 ## Overview

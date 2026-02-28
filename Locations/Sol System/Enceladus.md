@@ -3,10 +3,10 @@ title: Enceladus
 category: Sol System - Saturnian Moons
 summary: Ice-moon research outpost focused on subsurface-water and life-potential studies
 tags:
-	- location
-	- sol-system
-	- moon
-	- research
+  - location
+  - sol-system
+  - moon
+  - research
 ---
 
 ## Overview

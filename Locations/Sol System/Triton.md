@@ -3,10 +3,10 @@ title: Triton
 category: Sol System - Neptunian Moons
 summary: Neptune’s principal moon and anchor point for Naesock orbital industrial operations
 tags:
-	- location
-	- sol-system
-	- moon
-	- frontier
+  - location
+  - sol-system
+  - moon
+  - frontier
 ---
 
 ## Overview
