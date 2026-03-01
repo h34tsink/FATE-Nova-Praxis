@@ -7,7 +7,8 @@
       "Bash(python -c \"import pdfplumber; print\\(''pdfplumber available''\\)\")",
       "Bash(python -c \"import fitz; print\\(''pymupdf available''\\)\")",
       "Bash(python -c \":*)",
-      "Bash(python _Assets/Scripts/clean_machinations_extract.py)"
+      "Bash(python _Assets/Scripts/clean_machinations_extract.py)",
+      "Bash(test -d \"x:/My Drive/Obsidian Vaults/FATE - Nova Praxis/Characters/Named NPCs\")"
     ]
   }
 }
