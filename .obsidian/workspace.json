@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "e16cd5b08afc69e8",
+        "id": "ba4b23de3484a2ca",
         "type": "tabs",
         "children": [
           {
-            "id": "f3ff659d02d89174",
+            "id": "31529de1e029ffff",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Sessions/Session 9/Valare - Backstory Update.md",
-                "mode": "preview",
-                "source": false,
-                "backlinks": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Valare - Backstory Update"
+              "title": "New tab"
             }
           }
         ]
@@ -238,8 +233,9 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "f3ff659d02d89174",
+  "active": "31529de1e029ffff",
   "lastOpenFiles": [
+    "Sessions/Session 9/Valare - Backstory Update.md",
     "_Assets/Scripts/Start-GMSession.ps1",
     "_Assets/Scripts/np-gm-aliases.ps1",
     "_Assets/Scripts/clean_machinations_extract.py",
@@ -263,7 +259,6 @@
     "Rules and Mechanics/Pneuma Rules/Pneuma Compendium.md.tmp.74960.1772331416842",
     "Rules and Mechanics/Pneuma Rules/Pneuma Compendium.md.tmp.74960.1772331401964",
     "Rules and Mechanics/Pneuma Rules/Pneuma Compendium.md.tmp.74960.1772331392905",
-    "Rules and Mechanics/Pneuma Rules/Pneuma Compendium.md.tmp.74960.1772331383673",
     "Rules and Mechanics/Pneuma Rules/The Physics of Pneuma.md",
     "Rules and Mechanics/Pneuma Rules/Pneuma_Architects_Echo_Rules.md",
     "Rules and Mechanics/Pneuma Rules/Pneuma Player Handout.md",

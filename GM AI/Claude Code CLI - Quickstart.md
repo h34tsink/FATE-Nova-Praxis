@@ -50,6 +50,20 @@ Dot-source bootstrap to load aliases and seed state from latest session note:
 . .\_Assets\Scripts\Start-GMSession.ps1
 ```
 
+Prefer a live dashboard note when available:
+
+```powershell
+. .\_Assets\Scripts\Start-GMSession.ps1 -FromDashboard
+```
+
+Target a specific dashboard set when multiple are active:
+
+```powershell
+. .\_Assets\Scripts\Start-GMSession.ps1 -DashboardName "Session 9"
+```
+
+`-DashboardName` implies dashboard mode and prefers the most recently edited `Live Dashboard` note whose path/name contains your filter text.
+
 Seed from a specific note and copy full context:
 
 ```powershell

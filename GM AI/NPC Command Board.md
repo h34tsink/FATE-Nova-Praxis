@@ -57,6 +57,8 @@ This note keeps your runtime entity calls deterministic and table-speed. Each to
 
 - Optional one-step startup:
   - `. .\_Assets\Scripts\Start-GMSession.ps1`
+  - `. .\_Assets\Scripts\Start-GMSession.ps1 -FromDashboard`
+  - `. .\_Assets\Scripts\Start-GMSession.ps1 -DashboardName "Session 9"`
 - Load aliases once per terminal session:
   - `. .\_Assets\Scripts\np-gm-aliases.ps1`
 - Set table state once per scene:

@@ -3,6 +3,8 @@ param(
     [string]$Npc,
     [string]$Objective,
     [string[]]$Scene,
+    [switch]$FromDashboard,
+    [string]$DashboardName,
     [switch]$NoSeed,
     [switch]$CopyContext
 )
@@ -24,7 +26,11 @@ if (-not (Test-Path $aliasesPath)) {
 . $aliasesPath
 
 function Resolve-SessionPath {
-    param([string]$InputPath)
+    param(
+        [string]$InputPath,
+        [bool]$PreferDashboard = $false,
+        [string]$DashboardFilter = ''
+    )
 
     if (-not [string]::IsNullOrWhiteSpace($InputPath)) {
         if (Test-Path $InputPath) {
@@ -44,10 +50,36 @@ function Resolve-SessionPath {
         return $null
     }
 
+    if ($PreferDashboard) {
+        $dashboardCandidates = Get-ChildItem $sessionsDir -Recurse -File -Filter '*.md' |
+            Where-Object { $_.Name -match 'Live Dashboard' }
+
+        if (-not [string]::IsNullOrWhiteSpace($DashboardFilter)) {
+            $pattern = [regex]::Escape($DashboardFilter)
+            $filtered = $dashboardCandidates | Where-Object {
+                $_.FullName -match $pattern -or $_.Name -match $pattern
+            }
+
+            $dash = $filtered |
+                Sort-Object LastWriteTime -Descending |
+                Select-Object -First 1
+        }
+
+        if (-not $dash) {
+            $dash = $dashboardCandidates |
+                Sort-Object LastWriteTime -Descending |
+                Select-Object -First 1
+        }
+
+        if ($dash) {
+            return $dash.FullName
+        }
+    }
+
     $latest = Get-ChildItem $sessionsDir -Recurse -File -Filter '*.md' |
-        Where-Object { $_.Name -ne 'Index.md' } |
-        Sort-Object LastWriteTime -Descending |
-        Select-Object -First 1
+    Where-Object { $_.Name -ne 'Index.md' } |
+    Sort-Object LastWriteTime -Descending |
+    Select-Object -First 1
 
     return if ($latest) { $latest.FullName } else { $null }
 }
@@ -107,11 +139,11 @@ function Parse-SessionSeed {
 
     if ($sceneCandidates.Count -eq 0) {
         $sceneCandidates = $lines |
-            Where-Object { $_ -match '^\s*[-*]\s+(.+)$' } |
-            ForEach-Object {
-                [regex]::Match($_, '^\s*[-*]\s+(.+)$').Groups[1].Value.Trim()
-            } |
-            Where-Object { -not [string]::IsNullOrWhiteSpace($_) }
+        Where-Object { $_ -match '^\s*[-*]\s+(.+)$' } |
+        ForEach-Object {
+            [regex]::Match($_, '^\s*[-*]\s+(.+)$').Groups[1].Value.Trim()
+        } |
+        Where-Object { -not [string]::IsNullOrWhiteSpace($_) }
     }
 
     $scene = @($sceneCandidates | Select-Object -First 3)
@@ -130,7 +162,8 @@ function Parse-SessionSeed {
     }
 }
 
-$sessionPath = Resolve-SessionPath -InputPath $SessionNote
+$preferDashboard = $FromDashboard -or -not [string]::IsNullOrWhiteSpace($DashboardName)
+$sessionPath = Resolve-SessionPath -InputPath $SessionNote -PreferDashboard:$preferDashboard -DashboardFilter $DashboardName
 $seed = Parse-SessionSeed -Path $sessionPath
 
 $activeNpc = if (-not [string]::IsNullOrWhiteSpace($Npc)) { $Npc.ToLowerInvariant() } else { $seed.npc }
