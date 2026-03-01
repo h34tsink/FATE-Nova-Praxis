@@ -26,6 +26,18 @@ npm run check
 npm start
 ```
 
+## Recommended on Cloud-Synced Vaults (Windows)
+
+If your vault is on Google Drive / OneDrive and `npm install` throws `EBADF` or tar errors,
+install from a local mirror instead:
+
+```powershell
+pwsh -File "X:\My Drive\Obsidian Vaults\FATE - Nova Praxis\_Assets\Scripts\Install-NovaPraxisMcpLocal.ps1"
+```
+
+This copies the MCP server to `%LOCALAPPDATA%\nova-praxis-gm-mcp`, installs dependencies,
+and prints a ready-to-paste MCP config snippet.
+
 ## Claude Desktop / MCP config snippet
 
 Use your MCP client config to point at this command:
@@ -42,6 +54,8 @@ Use your MCP client config to point at this command:
   }
 }
 ```
+
+For cloud-synced vaults, prefer the local mirrored path printed by `Install-NovaPraxisMcpLocal.ps1`.
 
 ## Notes
 
