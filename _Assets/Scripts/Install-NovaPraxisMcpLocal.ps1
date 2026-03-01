@@ -22,7 +22,13 @@ Copy-Item -Path (Join-Path $sourcePath '*') -Destination $localPath -Recurse -Fo
 if (-not $SkipInstall) {
     Push-Location $localPath
     try {
-        npm install
+    try {
+      npm install
+    } catch {
+      Write-Host "Initial npm install failed; cleaning cache and retrying..." -ForegroundColor Yellow
+      npm cache clean --force
+      npm install
+    }
         npm run check
     }
     finally {
@@ -30,13 +36,15 @@ if (-not $SkipInstall) {
     }
 }
 
+$mcpPath = (Join-Path $localPath 'server.mjs').Replace('\', '/')
+
 $configSnippet = @"
 {
   "mcpServers": {
     "nova-praxis-gm": {
       "command": "node",
       "args": [
-        "$($localPath.Replace('\\', '/'))/server.mjs"
+        "$mcpPath"
       ]
     }
   }
@@ -45,7 +53,7 @@ $configSnippet = @"
 
 Write-Host "Local MCP server synced to: $localPath" -ForegroundColor Green
 Write-Host "Run server manually (optional):" -ForegroundColor Cyan
-Write-Host "  node \"$localPath\\server.mjs\"" -ForegroundColor DarkCyan
+Write-Host ("  node `"{0}\server.mjs`"" -f $localPath) -ForegroundColor DarkCyan
 Write-Host "" 
 Write-Host "Claude MCP config snippet:" -ForegroundColor Cyan
 Write-Host $configSnippet

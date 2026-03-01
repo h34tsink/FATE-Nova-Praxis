@@ -8,7 +8,8 @@
       "Bash(python -c \"import fitz; print\\(''pymupdf available''\\)\")",
       "Bash(python -c \":*)",
       "Bash(python _Assets/Scripts/clean_machinations_extract.py)",
-      "Bash(test -d \"x:/My Drive/Obsidian Vaults/FATE - Nova Praxis/Characters/Named NPCs\")"
+      "Bash(test -d \"x:/My Drive/Obsidian Vaults/FATE - Nova Praxis/Characters/Named NPCs\")",
+      "Bash(wc -l \"x:/My Drive/Obsidian Vaults/FATE - Nova Praxis/Nova Praxis Rulebook \\(Cleaned\\).txt\")"
     ]
   }
 }
