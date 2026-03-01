@@ -25,12 +25,24 @@ if (-not (Test-Path $aliasesPath)) {
 
 . $aliasesPath
 
+function Invoke-GmRouter {
+    param([Parameter(ValueFromRemainingArguments = $true)][string[]]$RouterArgs)
+    & pwsh -NoProfile -File $routerPath @RouterArgs
+}
+
 function Resolve-SessionPath {
     param(
         [string]$InputPath,
         [bool]$PreferDashboard = $false,
         [string]$DashboardFilter = ''
     )
+
+    if (-not [string]::IsNullOrWhiteSpace($InputPath)) {
+        if ($InputPath -match '^https?://_vscodecontentref_/') {
+            Write-Warning "Ignoring VS Code content reference argument: $InputPath"
+            $InputPath = $null
+        }
+    }
 
     if (-not [string]::IsNullOrWhiteSpace($InputPath)) {
         if (Test-Path $InputPath) {
@@ -52,7 +64,7 @@ function Resolve-SessionPath {
 
     if ($PreferDashboard) {
         $dashboardCandidates = Get-ChildItem $sessionsDir -Recurse -File -Filter '*.md' |
-            Where-Object { $_.Name -match 'Live Dashboard' }
+        Where-Object { $_.Name -match 'Live Dashboard' }
 
         if (-not [string]::IsNullOrWhiteSpace($DashboardFilter)) {
             $pattern = [regex]::Escape($DashboardFilter)
@@ -61,14 +73,14 @@ function Resolve-SessionPath {
             }
 
             $dash = $filtered |
-                Sort-Object LastWriteTime -Descending |
-                Select-Object -First 1
+            Sort-Object LastWriteTime -Descending |
+            Select-Object -First 1
         }
 
         if (-not $dash) {
             $dash = $dashboardCandidates |
-                Sort-Object LastWriteTime -Descending |
-                Select-Object -First 1
+            Sort-Object LastWriteTime -Descending |
+            Select-Object -First 1
         }
 
         if ($dash) {
@@ -186,7 +198,7 @@ if (-not $NoSeed) {
         $args += $activeScene
     }
 
-    & pwsh -File $routerPath @args | Out-Host
+    Invoke-GmRouter @args | Out-Host
 }
 
 if ($sessionPath) {
@@ -194,11 +206,11 @@ if ($sessionPath) {
 }
 
 if ($CopyContext) {
-    & pwsh -File $routerPath /gm -profile full -copy | Out-Host
+    Invoke-GmRouter /gm -profile full -copy | Out-Host
     Write-Host 'Full GM context copied to clipboard.' -ForegroundColor Cyan
 }
 
-& pwsh -File $routerPath /state-show | Out-Host
+Invoke-GmRouter /state-show | Out-Host
 
 Write-Host 'Ready: gm | npc | gmask | gmstate' -ForegroundColor Green
 Write-Host 'Tip: dot-source this file to keep aliases in your current shell:' -ForegroundColor DarkGray

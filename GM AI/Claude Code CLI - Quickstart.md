@@ -6,23 +6,23 @@
 From vault root:
 
 ```powershell
-pwsh -File .\_Assets\Scripts\np-gm-npc.ps1 -Npc valare-integrated -Context "Players repaired mnemonic core","She demands merger terms first","She gives off-grid hide sites" -Copy
+pwsh -NoProfile -File .\_Assets\Scripts\np-gm-npc.ps1 -Npc valare-integrated -Context "Players repaired mnemonic core","She demands merger terms first","She gives off-grid hide sites" -Copy
 ```
 
 ## Router Commands (Slash-Style)
 From vault root:
 
 ```powershell
-pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm -Copy
-pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm -profile full -Copy
-pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm -profile rules -Copy
-pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /npc valare-integrated -mode summary
-pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /npc valare-integrated -context "Players repaired mnemonic core" "She demands merger terms first" "She gives likely hide sites" -style table-short -Copy
-pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm-ask -game "What is the likely HPA response timeline?" -Copy
-pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm-ask -game "What is the likely HPA response timeline?" -domain history -style gm-deep -Copy
-pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm-ask -npc nowak -player "Aeddarius" "Where is your fork hiding?" -style table-short -Copy
-pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /state-set -active-npc nowak -objective "Delay disclosure until exfil window" -scene "Mutineers entering deck B" "Kimura comms dark" "PCs demand full disclosure"
-pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /state-show
+pwsh -NoProfile -File .\_Assets\Scripts\np-gm-router.ps1 /gm -Copy
+pwsh -NoProfile -File .\_Assets\Scripts\np-gm-router.ps1 /gm -profile full -Copy
+pwsh -NoProfile -File .\_Assets\Scripts\np-gm-router.ps1 /gm -profile rules -Copy
+pwsh -NoProfile -File .\_Assets\Scripts\np-gm-router.ps1 /npc valare-integrated -mode summary
+pwsh -NoProfile -File .\_Assets\Scripts\np-gm-router.ps1 /npc valare-integrated -context "Players repaired mnemonic core" "She demands merger terms first" "She gives likely hide sites" -style table-short -Copy
+pwsh -NoProfile -File .\_Assets\Scripts\np-gm-router.ps1 /gm-ask -game "What is the likely HPA response timeline?" -Copy
+pwsh -NoProfile -File .\_Assets\Scripts\np-gm-router.ps1 /gm-ask -game "What is the likely HPA response timeline?" -domain history -style gm-deep -Copy
+pwsh -NoProfile -File .\_Assets\Scripts\np-gm-router.ps1 /gm-ask -npc nowak -player "Aeddarius" "Where is your fork hiding?" -style table-short -Copy
+pwsh -NoProfile -File .\_Assets\Scripts\np-gm-router.ps1 /state-set -active-npc nowak -objective "Delay disclosure until exfil window" -scene "Mutineers entering deck B" "Kimura comms dark" "PCs demand full disclosure"
+pwsh -NoProfile -File .\_Assets\Scripts\np-gm-router.ps1 /state-show
 ```
 
 ## Speed Aliases (Recommended)

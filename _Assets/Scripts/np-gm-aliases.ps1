@@ -1,25 +1,30 @@
 $script:VaultRoot = Resolve-Path (Join-Path $PSScriptRoot '..\..')
 $script:RouterPath = Join-Path $script:VaultRoot '_Assets\Scripts\np-gm-router.ps1'
 
+function Invoke-GmRouter {
+    param([Parameter(ValueFromRemainingArguments = $true)][string[]]$RouterArgs)
+    & pwsh -NoProfile -File $script:RouterPath @RouterArgs
+}
+
 function gm {
     param([Parameter(ValueFromRemainingArguments = $true)][string[]]$Args)
-    & pwsh -File $script:RouterPath /gm @Args
+    Invoke-GmRouter /gm @Args
 }
 
 function npc {
     param([Parameter(ValueFromRemainingArguments = $true)][string[]]$Args)
-    & pwsh -File $script:RouterPath /npc @Args
+    Invoke-GmRouter /npc @Args
 }
 
 function gmask {
     param([Parameter(ValueFromRemainingArguments = $true)][string[]]$Args)
-    & pwsh -File $script:RouterPath /gm-ask @Args
+    Invoke-GmRouter /gm-ask @Args
 }
 
 function gmstate {
     param([Parameter(ValueFromRemainingArguments = $true)][string[]]$Args)
     if (-not $Args -or $Args.Count -eq 0) {
-        & pwsh -File $script:RouterPath /state-show
+        Invoke-GmRouter /state-show
         return
     }
 
@@ -27,16 +32,16 @@ function gmstate {
     $tail = if ($Args.Count -gt 1) { @($Args[1..($Args.Count - 1)]) } else { @() }
     switch ($sub) {
         'show' {
-            & pwsh -File $script:RouterPath /state-show @tail
+            Invoke-GmRouter /state-show @tail
         }
         'set' {
-            & pwsh -File $script:RouterPath /state-set @tail
+            Invoke-GmRouter /state-set @tail
         }
         'clear' {
-            & pwsh -File $script:RouterPath /state-clear @tail
+            Invoke-GmRouter /state-clear @tail
         }
         default {
-            & pwsh -File $script:RouterPath /state-show @Args
+            Invoke-GmRouter /state-show @Args
         }
     }
 }
