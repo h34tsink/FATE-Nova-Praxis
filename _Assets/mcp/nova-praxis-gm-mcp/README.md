@@ -38,6 +38,14 @@ pwsh -File "X:\My Drive\Obsidian Vaults\FATE - Nova Praxis\_Assets\Scripts\Insta
 This copies the MCP server to `%LOCALAPPDATA%\nova-praxis-gm-mcp`, installs dependencies,
 and prints a ready-to-paste MCP config snippet.
 
+To automatically update Claude Desktop MCP config (with backup):
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File "X:\My Drive\Obsidian Vaults\FATE - Nova Praxis\_Assets\Scripts\Set-NovaPraxisMcpConfig.ps1"
+```
+
+Default target is `%APPDATA%\Claude\claude_desktop_config.json`.
+
 ## Claude Desktop / MCP config snippet
 
 Use your MCP client config to point at this command:
