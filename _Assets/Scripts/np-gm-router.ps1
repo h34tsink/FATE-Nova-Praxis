@@ -10,16 +10,16 @@ $entityCardsDir = Join-Path $vaultRoot 'GM AI\Entity Cards'
 $statePath = Join-Path $vaultRoot '_Assets\Scripts\np-gm-state.json'
 
 $npcMap = @{
-    'kestrel'           = 'Kestrel (R4 Important NPC).md'
-    'nowak'             = 'Isabella Nowak (R4 Important NPC).md'
-    'isabella'          = 'Isabella Nowak (R4 Important NPC).md'
-    'chimera'           = 'Chimera (R5 Villain).md'
-    'valare-fork'       = 'Valare Fork (R4 Important NPC).md'
-    'valare-integrated' = 'Valare Integrated (R4 Personal Agent Ally).md'
-    'seren'             = 'Seren (R3 Important Contact).md'
-    'kal'               = 'Kal Paddock (R2 Minor Contact).md'
-    'paddock'           = 'Kal Paddock (R2 Minor Contact).md'
-    'lighthouse'        = 'Lighthouse Tactical Controller (R3 Systems Agent).md'
+    'kestrel'           = 'R4\Kestrel (R4 Important NPC).md'
+    'nowak'             = 'R4\Isabella Nowak (R4 Important NPC).md'
+    'isabella'          = 'R4\Isabella Nowak (R4 Important NPC).md'
+    'chimera'           = 'R5\Chimera (R5 Villain).md'
+    'valare-fork'       = 'R4\Valare Fork (R4 Important NPC).md'
+    'valare-integrated' = 'R4\Valare Integrated (R4 Personal Agent Ally).md'
+    'seren'             = 'R3\Seren (R3 Important Contact).md'
+    'kal'               = 'R2\Kal Paddock (R2 Minor Contact).md'
+    'paddock'           = 'R2\Kal Paddock (R2 Minor Contact).md'
+    'lighthouse'        = 'R3\Lighthouse Tactical Controller (R3 Systems Agent).md'
 }
 
 function Show-Help {

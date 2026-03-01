@@ -21,16 +21,16 @@ $ErrorActionPreference = 'Stop'
 $vaultRoot = Resolve-Path (Join-Path $PSScriptRoot '..\..')
 
 $npcMap = @{
-    'kestrel' = 'GM AI\Entity Cards\Kestrel (R4 Important NPC).md'
-    'nowak' = 'GM AI\Entity Cards\Isabella Nowak (R4 Important NPC).md'
-    'isabella' = 'GM AI\Entity Cards\Isabella Nowak (R4 Important NPC).md'
-    'chimera' = 'GM AI\Entity Cards\Chimera (R5 Villain).md'
-    'valare-fork' = 'GM AI\Entity Cards\Valare Fork (R4 Important NPC).md'
-    'valare-integrated' = 'GM AI\Entity Cards\Valare Integrated (R4 Personal Agent Ally).md'
-    'seren' = 'GM AI\Entity Cards\Seren (R3 Important Contact).md'
-    'kal' = 'GM AI\Entity Cards\Kal Paddock (R2 Minor Contact).md'
-    'paddock' = 'GM AI\Entity Cards\Kal Paddock (R2 Minor Contact).md'
-    'lighthouse' = 'GM AI\Entity Cards\Lighthouse Tactical Controller (R3 Systems Agent).md'
+    'kestrel' = 'GM AI\Entity Cards\R4\Kestrel (R4 Important NPC).md'
+    'nowak' = 'GM AI\Entity Cards\R4\Isabella Nowak (R4 Important NPC).md'
+    'isabella' = 'GM AI\Entity Cards\R4\Isabella Nowak (R4 Important NPC).md'
+    'chimera' = 'GM AI\Entity Cards\R5\Chimera (R5 Villain).md'
+    'valare-fork' = 'GM AI\Entity Cards\R4\Valare Fork (R4 Important NPC).md'
+    'valare-integrated' = 'GM AI\Entity Cards\R4\Valare Integrated (R4 Personal Agent Ally).md'
+    'seren' = 'GM AI\Entity Cards\R3\Seren (R3 Important Contact).md'
+    'kal' = 'GM AI\Entity Cards\R2\Kal Paddock (R2 Minor Contact).md'
+    'paddock' = 'GM AI\Entity Cards\R2\Kal Paddock (R2 Minor Contact).md'
+    'lighthouse' = 'GM AI\Entity Cards\R3\Lighthouse Tactical Controller (R3 Systems Agent).md'
 }
 
 if ($ShowNpcs) {
