@@ -1,4 +1,11 @@
 
+---
+
+status: canonical
+audience: gm
+ruleset: nova-praxis-fate
+---
+
 # Pneuma: **The Architects’ Echo**
 *A Nova Praxis rules chapter for Fate-based tables*
 

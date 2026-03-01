@@ -1,3 +1,9 @@
+---
+status: reference
+audience: gm
+ruleset: nova-praxis-fate
+---
+
 # Pneuma Backlash Consequences (Flavor Pack)
 *Use these when Pneuma’s “pressure” converts into harm. All are written as Consequence Aspects you can invoke/compel.*
 

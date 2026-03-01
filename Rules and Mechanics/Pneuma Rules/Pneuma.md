@@ -1,5 +1,15 @@
+---
+status: optional
+audience: table
+ruleset: nova-praxis-fate
+---
+
 # Pneuma Stunt: Entropic Convergence Pressure (ECP)
 *A Nova Praxis / FATE stunt write-up: lore first, then table-ready mechanics.*
+
+> [!note] Module Position
+> This file is an **optional focused stunt module** for tables that want a lighter Pneuma layer.
+> The canonical full subsystem is [[Rules and Mechanics/Pneuma Rules/Pneuma_Architects_Echo_Rules]].
 
 ---
 

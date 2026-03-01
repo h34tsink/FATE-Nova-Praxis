@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sessions/Session 9/Valare - Character Profile.md",
-                "mode": "preview",
+                "file": "Rules and Mechanics/Pneuma Rules/Pneuma.md",
+                "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Valare - Character Profile"
+              "title": "Pneuma"
             }
           }
         ]
@@ -154,8 +154,8 @@
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "advanced-tables-toolbar"
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
             }
           },
           {
@@ -204,7 +204,7 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -240,11 +240,30 @@
   },
   "active": "8be95e9e9491c4a3",
   "lastOpenFiles": [
+    "Rules and Mechanics/Pneuma Rules/Pneuma Compendium for Storyteller.md",
+    "Rules and Mechanics/Pneuma Rules/Pneuma_MD_Compendium.md",
+    "Rules and Mechanics/Pneuma Rules/Pneuma Compendium.md",
+    "_Assets/Reports/REDUNDANCY_AUDIT_2026-02-28.md",
+    "Rules and Mechanics/Pneuma Rules/The Physics of Pneuma.md.tmp.74960.1772331469468",
+    "Rules and Mechanics/Pneuma Rules/Pneuma Compendium.md.tmp.74960.1772331416842",
+    "Rules and Mechanics/Pneuma Rules/Pneuma Compendium.md.tmp.74960.1772331401964",
+    "Rules and Mechanics/Pneuma Rules/Pneuma Compendium.md.tmp.74960.1772331392905",
+    "Rules and Mechanics/Pneuma Rules/Pneuma Compendium.md.tmp.74960.1772331383673",
+    "Rules and Mechanics/Pneuma Rules/The Physics of Pneuma.md",
+    "Rules and Mechanics/Pneuma Rules/Pneuma Compendium.md.tmp.74960.1772331377181",
+    "Rules and Mechanics/Pneuma Rules/Pneuma_Architects_Echo_Rules.md",
+    "Rules and Mechanics/Pneuma Rules/Pneuma Player Handout.md",
+    "Rules and Mechanics/Pneuma Rules/Pneuma GM Adjudication Matrix.md",
+    "Rules and Mechanics/Pneuma Rules/Pneuma Backlash Consequences.md",
+    "Rules and Mechanics/Pneuma Rules/Pneuma Compendium.md.tmp.74960.1772331174153",
+    "Rules and Mechanics/Pneuma Rules/gm_data_cache_encounter.md",
+    "Rules and Mechanics/Pneuma Rules/Index.md",
+    "Sessions/Session 9/Valare - Character Profile.md",
+    "_Assets/Scripts/clean_pdf_extract.py.tmp.74960.1772330660998",
+    "Nova Praxis Rulebook (Cleaned).txt",
+    "_Assets/Scripts/clean_pdf_extract.py",
+    "CHARACTER_CREATION_SUMMARY.md",
     "_Assets/Reports/VAULT_CLEANUP_REVIEW.md",
-    "_Assets/Reports/missing_wikilinks_top.txt",
-    "_Assets/Reports/lore_missing_wikilinks_top.txt",
-    "_Assets/Reports/conni_audit_fresh.json",
-    "_Assets/Reports",
     "VAULT_CLEANUP_REVIEW.md",
     "Sessions/Session 9/Session 9 - Obsidian Optimization Plan.md",
     "Sessions/Session 9/Session 9 - Beats (GM Runtime).md",
@@ -256,26 +275,7 @@
     "Sessions/Session 9/Session 9 - Guide.md",
     "Characters/NPCs/Nowak.md",
     "Sessions/Session 9/Session 9 - Scenes and Zones.md",
-    "_Quarantine/cloudsync_enc_20260228_152259/quarantine_report.txt",
-    "_Quarantine/cloudsync_enc_20260228_152259",
-    "_Quarantine/cloudsync_enc_20260228_152232/quarantine_report.txt",
-    "_Quarantine/cloudsync_enc_20260228_152232",
-    "_Quarantine",
     "GM AI/Entity Cards/Lighthouse Tactical Controller (R3 Systems Agent).md",
-    "GM AI/Entity Cards/Kal Paddock (R2 Minor Contact).md",
-    "GM AI/Entity Cards/Seren (R3 Important Contact).md",
-    "GM AI/Entity Cards/Valare Integrated (R4 Personal Agent Ally).md",
-    "GM AI/Entity Cards/Valare Fork (R4 Important NPC).md",
-    "GM AI/Entity Cards/Chimera (R5 Villain).md",
-    "GM AI/Entity Cards/Kestrel (R4 Important NPC).md",
-    "GM AI/Entity Cards",
-    "CLAUDE.md",
-    "GM AI/Entity Card Template.md",
-    "GM AI/Claude Code - Prompt Pack.md",
-    "GM AI/Claude Code - Persona & Complexity Matrix.md",
-    "GM AI/Claude Code - GM Runtime System.md",
-    "Sessions/Session 9/Session 9 - Ops Index.md",
-    "Glossary/Compel.md",
     "Media/Ships/playersShip.webp",
     "Locations/Colonized Universe.canvas",
     "Vehicles/Chickenhawk Image.png",

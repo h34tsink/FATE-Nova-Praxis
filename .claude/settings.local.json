@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python \"_Assets/Scripts/clean_pdf_extract.py\")",
+      "Bash(python3 -c \":*)"
+    ]
+  }
+}
