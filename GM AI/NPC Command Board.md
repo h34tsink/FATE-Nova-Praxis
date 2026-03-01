@@ -46,6 +46,13 @@ This note keeps your runtime entity calls deterministic and table-speed. Each to
   - Kimura comms just went dark.
 - Prompt block to use: [[GM AI/Claude Code - Prompt Pack#1) Speak as Entity (Default)]]
 
+### Claude Code CLI Callable Flow
+
+- From vault root, run:
+  - `pwsh -File .\_Assets\Scripts\np-gm-npc.ps1 -Npc valare-integrated -Context "Players repaired mnemonic core","She demands merger terms first","She gives off-grid hide sites" -Copy`
+- Paste clipboard output into Claude Code CLI and send.
+- Full usage: [[GM AI/Claude Code CLI - Quickstart]]
+
 ## Continuity
 - **Assumptions:** Command tokens are used as aliases for fast note lookup, not shell-like parser commands.
 - **Conflicts to resolve:** If you want literal slash-command execution (`/npc ...` in editor), add a dedicated slash-command plugin later.
