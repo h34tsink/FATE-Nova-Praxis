@@ -16,6 +16,7 @@ aliases:
 # Talon of Freedom Officer
 
 **Sleeve:** None (Pure)
+**CID:** `TO62TF19` (Operational false CID)
 **Size:** 0
 
 ## Aspects

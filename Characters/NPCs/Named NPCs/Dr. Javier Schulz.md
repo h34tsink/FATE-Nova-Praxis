@@ -30,6 +30,7 @@ Schulz himself is driven by a conviction that his work is humanity's true path f
 **State:** Unknown
 **Allegiance:** [[Factions/Houses/House Silva]] (former)
 **Size:** 0
+**CID:** `JS39SV74` (Legacy legal CID; likely flagged due to former status)
 
 ### Aspects
 - Creator of the Progenesis Virus

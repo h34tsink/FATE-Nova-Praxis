@@ -14,6 +14,7 @@ aliases:
 # Lighthouse Security Operative
 
 **Sleeve:** None (Pure)
+**CID:** `LS59TS24` (Legal Coalition CID)
 **Size:** 0
 
 ## Aspects

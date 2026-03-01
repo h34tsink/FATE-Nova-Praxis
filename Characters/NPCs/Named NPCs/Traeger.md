@@ -31,6 +31,7 @@ He occupies a heavily augmented [[Ursus]] sleeve — a massive, combat-optimized
 **State:** Sleeved (heavily augmented [[Ursus]] sleeve)
 **Allegiance:** [[Factions/Houses/House Dalianis]]
 **Size:** 0
+**CID:** `TR66DL11` (Legal Coalition CID)
 
 ### Aspects
 - Knight of House Dalianis, "The Viking"

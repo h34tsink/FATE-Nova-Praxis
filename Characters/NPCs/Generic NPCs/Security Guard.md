@@ -14,6 +14,7 @@ aliases:
 # Security Guard
 
 **Sleeve:** [[Biosleeve]] (Beta)  
+**CID:** `SG73CS18` (Legal Coalition CID)
 **Size:** 0
 
 ## Aspects

@@ -28,6 +28,7 @@ Whether Adams serves as a patron or an antagonist depends entirely on the campai
 **Allegiance:** [[Factions/Houses/House Silva]]
 **Size:** 0
 **Rep:** 8
+**CID:** `GA77XR42` (Operational false CID)
 
 ### Aspects
 

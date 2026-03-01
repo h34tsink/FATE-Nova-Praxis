@@ -30,6 +30,7 @@ Blackburn's ultimate goal is a strike at Luna — the seat of Coalition power. H
 **State:** Unknown
 **Allegiance:** [[Talons of Freedom]] (cover: [[Factions/Houses/House Silva]] Legate)
 **Size:** 0
+**CID:** `AB54SL37` (Operational false CID supporting House Silva cover identity)
 
 ### Aspects
 - True Leader of the Talons of Freedom

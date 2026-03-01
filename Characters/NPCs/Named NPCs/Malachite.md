@@ -26,6 +26,7 @@ Malachite's true loyalties lie with the Tetragon and the elimination of internal
 
 **State:** Not specified
 **Allegiance:** [[Factions/Houses/House Tsarya]] / [[Scholae Palatinae]]
+**CID:** `ML27TS88` (Legal Coalition CID)
 
 - Crew member aboard the Grigori
 - Directs the Battle of Carthage

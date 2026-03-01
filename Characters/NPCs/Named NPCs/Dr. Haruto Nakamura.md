@@ -28,6 +28,7 @@ Cold, methodical, and utterly without remorse, Nakamura represents the dark side
 **State:** Unknown
 **Allegiance:** [[Factions/Houses/House Kimura]] (Mindscapes subsidiary)
 **Size:** 0
+**CID:** `HN84KM25` (Legal Coalition CID)
 
 ### Aspects
 - Head of Illegal Ego-Merging Research

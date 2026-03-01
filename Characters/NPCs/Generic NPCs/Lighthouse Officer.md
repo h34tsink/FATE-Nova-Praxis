@@ -15,6 +15,7 @@ aliases:
 # Lighthouse Officer
 
 **Sleeve:** None (Pure)
+**CID:** `LO47TS30` (Legal Coalition CID)
 **Size:** 0
 
 ## Aspects

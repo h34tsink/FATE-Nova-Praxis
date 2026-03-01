@@ -14,6 +14,7 @@ aliases:
 # Lighthouse Heavy
 
 **Sleeve:** None (Pure)
+**CID:** `LH28TS76` (Legal Coalition CID)
 **Size:** 0
 
 ## Aspects

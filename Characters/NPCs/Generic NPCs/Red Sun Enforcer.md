@@ -15,6 +15,7 @@ aliases:
 # Red Sun Enforcer
 
 **Sleeve:** Sleeved ([[Jinsoku]] Cybersleeve)
+**CID:** `RE68KM57` (Legal Coalition CID)
 **Size:** 0
 
 ## Aspects

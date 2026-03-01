@@ -29,6 +29,7 @@ His treachery is the central thread connecting the later campaign arcs, and unma
 **State:** Unknown
 **Allegiance:** [[Factions/Houses/House Tsarya]]
 **Size:** 0
+**CID:** `GM90TS55` (Legal Coalition CID)
 
 ### Aspects
 - Tsarya General with a Hidden Agenda

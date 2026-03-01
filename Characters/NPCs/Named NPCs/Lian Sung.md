@@ -26,6 +26,7 @@ When the PCs' equipment is ready, Sung instructs them to meet her at an unused d
 
 **State:** Pure (with discreet bio-tech augmentations)
 **Allegiance:** [[Factions/Houses/House Jinzhan]]
+**CID:** `LS82JH16` (Legal Coalition CID)
 
 - Logistics coordinator for the Enceladus mission
 - Provides apartments, gear, and a ship on Titan

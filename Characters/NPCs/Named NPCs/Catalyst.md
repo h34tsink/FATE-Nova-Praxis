@@ -26,6 +26,7 @@ In demeanor, Catalyst is calm, serene, and graceful. Every movement is measured,
 **State:** Sleeved (Biosleeve)
 **Allegiance:** [[Factions/Houses/House Cipriani]] (Chariot subsidiary)
 **Size:** 0
+**CID:** `CA31MN65` (Legal Coalition CID)
 
 ### Aspects
 - Enigmatic Representative of Chariot

@@ -24,8 +24,9 @@ The meeting itself carries risk. Tsou's ship is later destroyed by a [[Talons of
 
 ## Mechanics
 
-**State:** Pure
+**State:** Sleeved (likely)
 **Allegiance:** [[Factions/Houses/House Jinzhan]]
+**CID:** `WT44JZ73` (Legal Coalition CID)
 
 - Patron who initiates the Enceladus mission arc
 - Skilled negotiator — PCs can push for better contract terms

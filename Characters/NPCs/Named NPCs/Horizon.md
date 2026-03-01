@@ -27,6 +27,7 @@ Little is known about Horizon's personal history or motivations. What matters is
 
 **State:** Not specified
 **Allegiance:** [[Factions/Houses/House Silva]] / [[Oversight]]
+**CID:** `HZ13SV80` (Legal Coalition CID)
 
 - Handler assigned at Phalanx Formation rank
 - Relays orders from Oversight

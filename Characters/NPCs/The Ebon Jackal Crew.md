@@ -30,6 +30,7 @@ A sample crew that demonstrates diverse character concepts, allegiances, and con
 ### [[Durian Konrad|Durian Konrad]] - Political Operative
 - **State:** [[Biosleeve]] (Delta)
 - **Allegiance:** [[Factions/Houses/House Silva|House Silva]]
+- **CID:** `DK55SV20` (Legal Coalition CID)
 - **Role:** Diplomat and manipulator
 - **Motivation:** Political advancement and balance of power
 - **Conflict:** Distrusted by superiors, ties to apostate arms dealers
@@ -37,6 +38,7 @@ A sample crew that demonstrates diverse character concepts, allegiances, and con
 ### [[Xavier Wilhelm|Xavier Wilhelm]] - Idealist Warrior
 - **State:** Pure
 - **Allegiance:** [[Factions/Houses/House Cipriani|House Cipriani]]
+- **CID:** `XW40CP77` (Legal Coalition CID)
 - **Role:** Combat specialist and moral compass
 - **Motivation:** Human unity across factional lines
 - **Conflict:** Apostate upbringing vs House loyalty
@@ -44,6 +46,7 @@ A sample crew that demonstrates diverse character concepts, allegiances, and con
 ### [[Tiver Andlat|Tiver Andlat]] - Criminal Savant
 - **State:** [[Cybersleeve]] (Jinsoku)
 - **Allegiance:** [[Factions/Houses/House Kimura|House Kimura]]
+- **CID:** `TA18KM52` (Legal Coalition CID)
 - **Role:** Technical infiltration and criminal connections
 - **Motivation:** Personal advancement and control
 - **Conflict:** Criminal background vs legitimate operations
@@ -51,6 +54,7 @@ A sample crew that demonstrates diverse character concepts, allegiances, and con
 ### [[Christov Draiku|Christov Draiku]] - SIM Chef/Programmer
 - **State:** [[SIM]]
 - **Allegiance:** [[Factions/Houses/House Tsarya|House Tsarya]]
+- **CID:** `CD72TS14` (Legal Coalition CID)
 - **Role:** Ship systems and culinary specialist
 - **Motivation:** Culinary fame and digital comfort
 - **Conflict:** Digital limitations vs physical world needs

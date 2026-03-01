@@ -28,6 +28,8 @@ Tejun openly dislikes and distrusts [[Concetta Allegro]], viewing her [[Factions
 **State:** SIM
 **Allegiance:** [[Factions/Houses/House Kimura]] / Tetragon
 
+**CID:** `TJ91KM43` (Legal Coalition CID)
+
 - Advisor on PR, law, and politics
 - [[Admiral Drivas]]' informant within the Scholae
 - Loyalties: Tetragon > PCs

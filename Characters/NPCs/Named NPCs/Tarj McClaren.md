@@ -26,6 +26,7 @@ The tension McClaren creates between Protectorate authority and apostate communi
 
 **State:** Not specified
 **Allegiance:** [[Factions/Houses/House Dalianis]] / Protectorate
+**CID:** `TM58DK21` (Legal Coalition CID)
 
 - Centurion rank within House Dalianis
 - Pressuring [[Kestrel]]'s people on Asola

@@ -15,6 +15,7 @@ aliases:
 # Talon of Freedom Soldier
 
 **Sleeve:** None (Pure)
+**CID:** `TS33TF61` (Operational false CID)
 **Size:** 0
 
 ## Aspects

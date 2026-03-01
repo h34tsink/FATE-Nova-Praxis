@@ -26,6 +26,7 @@ Lucas is a man running out of time. If the PCs don't intervene to protect him, t
 
 **State:** Not specified (likely Sleeved)
 **Allegiance:** [[Factions/Houses/House Silva]]
+**CID:** `LL63QV08` (Legal Coalition CID; known to use false IDs for smuggling)
 
 - Motivated by survival above all else
 - Knows details of Silva weapons smuggling routes and Talon contacts

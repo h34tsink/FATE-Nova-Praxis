@@ -28,6 +28,7 @@ Sakamoto would rather destroy all her research — and herself — than allow th
 **State:** Unknown (likely Sleeved)
 **Allegiance:** [[Factions/Houses/House Kimura]] (defected)
 **Size:** 0
+**CID:** `RS26KM94` (Legal Coalition CID, status likely flagged after defection)
 
 ### Aspects
 - Discoverer of the Antiphage

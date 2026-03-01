@@ -26,6 +26,7 @@ Later in the campaign, Allegro contacts the PCs from Earth to offer an escape ro
 
 **State:** Not specified
 **Allegiance:** [[Factions/Houses/House Cipriani]]
+**CID:** `CN48CP62` (Legal Coalition CID)
 
 - Intel provider for the Scholae Palatinae
 - Uses Cipriani back-channels for off-the-books assistance
@@ -35,7 +36,6 @@ Later in the campaign, Allegro contacts the PCs from Earth to offer an escape ro
 
 ## Continuity
 
-- **Source:** Machinations
 - **Assumptions:** State not specified. Her presence on Earth later in the campaign implies significant resources and access.
 
 ## Links

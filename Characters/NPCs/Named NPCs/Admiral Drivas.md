@@ -27,6 +27,7 @@ The nature of the Admiral's leadership style — whether hands-off or micromanag
 
 **State:** Not specified
 **Allegiance:** [[The Coalition]] / Tetragon
+**CID:** `AD70CQ29` (Legal Coalition CID)
 
 - Commands the [[Scholae Palatinae]]
 - Briefs and directs PCs during Campaign Arc 4

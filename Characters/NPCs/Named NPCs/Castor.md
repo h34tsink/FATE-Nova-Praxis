@@ -25,6 +25,7 @@ His operational discipline extends to data extraction: Castor downloads harveste
 
 **State:** Not specified
 **Allegiance:** [[Factions/Houses/House Dalianis]]
+**CID:** `CT35DL72` (Legal Coalition CID)
 
 - Carries Fog of War CIST (suppresses local mesh)
 - Downloads and transmits harvester files to Dalianis

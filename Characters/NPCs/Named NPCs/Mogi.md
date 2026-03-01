@@ -25,6 +25,7 @@ The Viking tracks Mogi down and kills him while he is logged into Stygia via ego
 
 **State:** Pure
 **Allegiance:** [[Factions/Houses/House Jinzhan]]
+**CID:** `MG52JZ40` (Legal Coalition CID)
 
 - Informant who tried to expose quarantine smuggling
 - Murdered by [[Traeger|The Viking]] via ego channel in Stygia

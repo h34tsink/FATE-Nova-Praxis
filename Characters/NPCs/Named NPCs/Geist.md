@@ -28,6 +28,7 @@ The Seraphim's true nature, goals, and organizational structure remain among the
 **State:** Sleeved (heavily augmented Synthesized biosleeve), Savant
 **Allegiance:** [[Seraphim]]
 **Size:** 0
+**CID:** `GS14SR60` (Operational false CID)
 
 ### Aspects
 - Seraphim Field Agent

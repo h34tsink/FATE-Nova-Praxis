@@ -14,6 +14,7 @@ aliases:
 # Cyber-Merc
 
 **Sleeve:** [[Cybersleeve]] (Beta) 
+**CID:** `CM41CT93` (Contractor CID, legal)
 **Size:** 0
 
 ## Aspects
