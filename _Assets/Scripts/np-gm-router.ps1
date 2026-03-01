@@ -142,9 +142,9 @@ function Build-NpcObject {
         Fear           = Get-CardValue -CardText $card -Pattern '-\s*Fear\s*/\s*pressure point:\s*(.+)$'
         RedLine        = Get-CardValue -CardText $card -Pattern '-\s*Red line:\s*(.+)$'
         MustHide       = Get-CardValue -CardText $card -Pattern '-\s*Must hide:\s*(.+)$'
-        EntryLine      = Get-CardValue -CardText $card -Pattern '-\s*Entry line:\s*"(.+)"$'
-        EscalationLine = Get-CardValue -CardText $card -Pattern '-\s*Escalation line:\s*"(.+)"$'
-        ExitLine       = Get-CardValue -CardText $card -Pattern '-\s*Exit line:\s*"(.+)"$'
+        EntryLine      = (Get-CardValue -CardText $card -Pattern '-\s*Entry line:\s*"?(.+?)"?$').Trim('"')
+        EscalationLine = (Get-CardValue -CardText $card -Pattern '-\s*Escalation line:\s*"?(.+?)"?$').Trim('"')
+        ExitLine       = (Get-CardValue -CardText $card -Pattern '-\s*Exit line:\s*"?(.+?)"?$').Trim('"')
     }
 }
 
@@ -323,9 +323,9 @@ function Build-NpcAttitude {
 NPC attitude profile: $($Npc.Name)
 - Baseline tone: $($Npc.Tone)
 - Cadence: $($Npc.Cadence)
-- Entry line: "$($Npc.EntryLine)"
-- Escalation line: "$($Npc.EscalationLine)"
-- Exit line: "$($Npc.ExitLine)"
+- Entry line: $($Npc.EntryLine)
+- Escalation line: $($Npc.EscalationLine)
+- Exit line: $($Npc.ExitLine)
 "@
 }
 
