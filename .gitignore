@@ -19,3 +19,13 @@ Rules and Mechanics/FATE/PXL_20251025_230742229.VB-03.MAIN.mp4
 Rules and Mechanics/FATE/PXL_20251025_230751473.VB-01.COVER.mp4
 Rules and Mechanics/FATE/PXL_20251025_230856324.VB-01.COVER.mp4
 Rules and Mechanics/FATE/PXL_20251025_230856324.VB-03.MAIN.mp4
+
+# Windows metadata
+desktop.ini
+
+# Node/npm artifacts
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
