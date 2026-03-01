@@ -119,6 +119,17 @@ Expected default response shape:
 
 Tip: If you want dialogue only, append `Dialogue only, no GM notes.`
 
+## Narrative Humanizer Quick Prompts
+
+Use these one-liners after a narrative/NPC response to polish tone without changing canon.
+
+- Light: `Apply Narrative Humanizer Mode (light). Preserve all facts and intent.`
+- Medium: `Apply Narrative Humanizer Mode (medium). Keep voice specific and remove AI-sounding phrasing.`
+- Aggressive: `Apply Narrative Humanizer Mode (aggressive). Keep canon and mechanics unchanged.`
+
+Do **not** use this for mechanics rulings; keep those in Rules Adjudication Mode.
+Reference: [[GM AI/Narrative Humanizer Mode]]
+
 ## Rules Questions (High-Confidence Mode)
 
 For mechanics questions, prefer `/gm-ask -game` with rules domain:
