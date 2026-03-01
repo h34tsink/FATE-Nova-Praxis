@@ -27,7 +27,7 @@ if (-not (Test-Path $aliasesPath)) {
 
 function Invoke-GmRouter {
     param([Parameter(ValueFromRemainingArguments = $true)][string[]]$RouterArgs)
-    & pwsh -NoProfile -File $routerPath @RouterArgs
+    & $routerPath @RouterArgs
 }
 
 function Resolve-SessionPath {

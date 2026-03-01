@@ -3,7 +3,7 @@ $script:RouterPath = Join-Path $script:VaultRoot '_Assets\Scripts\np-gm-router.p
 
 function Invoke-GmRouter {
     param([Parameter(ValueFromRemainingArguments = $true)][string[]]$RouterArgs)
-    & pwsh -NoProfile -File $script:RouterPath @RouterArgs
+    & $script:RouterPath @RouterArgs
 }
 
 function gm {
