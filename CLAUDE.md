@@ -48,6 +48,33 @@ The `GM AI/` folder contains a complete at-table workflow for Claude Code:
 
 Lore questions should prefer vault canon first, then `pdf_full_extract.txt` and `machinations_full_extract.txt`. Flag uncertainty rather than inventing answers.
 
+## Natural-Language NPC Dialogue Mode
+
+When the user asks natural-language questions such as:
+
+- "What would Valare say to Grace if she asked X?"
+- "How would Nowak answer this in scene?"
+
+Claude Code should treat this as an **NPC dialogue request** and respond in this format by default:
+
+1. **In-character line(s)** (1–4 lines, voice-accurate to the entity card)
+2. **Intent:** one line explaining what the NPC is trying to do
+3. **Hidden truth (GM-only):** one short line unless user asks to hide GM notes
+
+Source priority for these answers:
+
+1. `GM AI/Entity Cards/*.md`
+2. `GM AI/Claude Code - Persona & Complexity Matrix.md`
+3. Relevant session files under `Sessions/` (prefer active dashboard/runtime files)
+4. Canon lore files and extracts (`pdf_full_extract.txt`, `machinations_full_extract.txt`)
+
+Behavior constraints:
+
+- Keep continuity with current session state and prior events.
+- If canon is uncertain or conflicting, include a short confidence note.
+- Distinguish established fact vs rumor/belief where relevant.
+- Never break character voice unless the user explicitly asks for analysis mode.
+
 ## Character Creator App
 
 Located at `nova-praxis-character-creator/`. SvelteKit + TypeScript + Vite.

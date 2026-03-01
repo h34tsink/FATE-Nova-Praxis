@@ -101,6 +101,24 @@ Router modes:
 3. Paste output into Claude Code CLI chat.
 4. Repeat per beat; update state only when scene facts change.
 
+## Direct Natural-Language in Claude Code
+
+After startup (`Start-GMSession.ps1`), you can ask directly in Claude Code without running `/npc` first.
+
+Example prompt:
+
+```text
+What would Valare say to Grace if she asked, "Why were you at the spacestation in the first place?"
+```
+
+Expected default response shape:
+
+- In-character response (voice-accurate)
+- Intent: ...
+- Hidden truth (GM-only): ...
+
+Tip: If you want dialogue only, append `Dialogue only, no GM notes.`
+
 ## Lore
 This workflow uses entity card metadata as default source for class/rank/goal/secret and keeps output consistent with `GM AI/Claude Code - Prompt Pack.md` block 1.
 
