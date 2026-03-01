@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+LIMIT_MB="${GIT_MAX_FILE_MB:-90}"
+if ! [[ "$LIMIT_MB" =~ ^[0-9]+$ ]]; then
+  echo "[pre-push] Invalid GIT_MAX_FILE_MB value: $LIMIT_MB" >&2
+  exit 1
+fi
+
+LIMIT_BYTES=$((LIMIT_MB * 1024 * 1024))
+ZERO_SHA="0000000000000000000000000000000000000000"
+
+found=0
+declare -A seen
+
+check_object() {
+  local oid="$1"
+  local path="$2"
+
+  if [[ -n "${seen[$oid]:-}" ]]; then
+    return
+  fi
+  seen[$oid]=1
+
+  local size
+  size="$(git cat-file -s "$oid" 2>/dev/null || echo 0)"
+  if [[ "$size" =~ ^[0-9]+$ ]] && (( size > LIMIT_BYTES )); then
+    local size_mb
+    size_mb=$(awk -v s="$size" 'BEGIN { printf "%.2f", s/1024/1024 }')
+    echo "[pre-push] BLOCKED: ${path} (${size_mb} MB) exceeds ${LIMIT_MB} MB limit" >&2
+    found=1
+  fi
+}
+
+while read -r local_ref local_sha remote_ref remote_sha; do
+  [[ -z "${local_ref:-}" ]] && continue
+
+  if [[ "$local_sha" == "$ZERO_SHA" ]]; then
+    continue
+  fi
+
+  if [[ "$remote_sha" == "$ZERO_SHA" ]]; then
+    range="$local_sha"
+  else
+    range="$remote_sha..$local_sha"
+  fi
+
+  while IFS= read -r line; do
+    [[ -z "$line" ]] && continue
+
+    oid="${line%% *}"
+    path="${line#* }"
+
+    if [[ "$oid" == "$path" ]]; then
+      continue
+    fi
+
+    check_object "$oid" "$path"
+  done < <(git rev-list --objects "$range")
+done
+
+if (( found )); then
+  echo "[pre-push] Push aborted. Use Git LFS or keep large binaries out of repository history." >&2
+  exit 1
+fi
+
+exit 0

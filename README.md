@@ -74,6 +74,20 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\_Assets\Scripts\Set-NovaPr
 - Do not commit large binary video files (especially `.mp4`) to git history
 - If a push is rejected for large files, remove oversized blobs before retrying
 
+### Pre-push size guard (recommended)
+
+Enable the repository hook path and large-file pre-push blocker:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\_Assets\Scripts\Enable-RepoGitHooks.ps1
+```
+
+Default limit is `90 MB` per blob in pushed commits. To change it for a session:
+
+```powershell
+$env:GIT_MAX_FILE_MB = 80
+```
+
 ## Conventions
 
 - Prefer linking existing notes over duplicating canon
