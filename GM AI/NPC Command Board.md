@@ -53,6 +53,17 @@ This note keeps your runtime entity calls deterministic and table-speed. Each to
 - Paste clipboard output into Claude Code CLI and send.
 - Full usage: [[GM AI/Claude Code CLI - Quickstart]]
 
+### Fast Router Flow
+
+- Load aliases once per terminal session:
+  - `. .\_Assets\Scripts\np-gm-aliases.ps1`
+- Set table state once per scene:
+  - `gmstate set -active-npc nowak -objective "Delay disclosure until exfil" -scene "Mutineers entering deck B" "Kimura comms dark"`
+- Pull the active NPC prompt without retyping context:
+  - `npc -mode prompt -style table-short -copy`
+- Ask game/rules with deeper backstage structure:
+  - `gmask -game "What can they prove right now?" -domain rules -style gm-deep -copy`
+
 ## Continuity
 - **Assumptions:** Command tokens are used as aliases for fast note lookup, not shell-like parser commands.
 - **Conflicts to resolve:** If you want literal slash-command execution (`/npc ...` in editor), add a dedicated slash-command plugin later.

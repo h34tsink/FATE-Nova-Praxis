@@ -7,6 +7,7 @@ $ErrorActionPreference = 'Stop'
 
 $vaultRoot = Resolve-Path (Join-Path $PSScriptRoot '..\..')
 $entityCardsDir = Join-Path $vaultRoot 'GM AI\Entity Cards'
+$statePath = Join-Path $vaultRoot '_Assets\Scripts\np-gm-state.json'
 
 $npcMap = @{
     'kestrel'           = 'Kestrel (R4 Important NPC).md'
@@ -24,12 +25,75 @@ $npcMap = @{
 function Show-Help {
     @"
 np-gm-router usage (from vault root):
-    pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm [-profile core|full|rules|history|lore|location|gear] [-copy]
-  pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /npc <name> [-mode prompt|summary|details|attitude|mission] [-context "a" "b" "c"] [-goal "..."] [-secret "..."] [-copy]
-    pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm-ask -game "<question>" [-domain core|full|rules|history|lore|location|gear] [-copy]
-  pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm-ask -npc <name> "<question>" [-copy]
-  pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm-ask -npc <name> -player "<player>" "<question>" [-copy]
+    pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm [-profile core|full|rules|history|lore|location|gear] [-style table-short|gm-deep] [-copy]
+  pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /npc <name> [-mode prompt|summary|details|attitude|mission] [-style table-short|gm-deep] [-context "a" "b" "c"] [-goal "..."] [-secret "..."] [-copy]
+    pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm-ask -game "<question>" [-domain core|full|rules|history|lore|location|gear] [-style table-short|gm-deep] [-copy]
+  pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm-ask -npc <name> "<question>" [-style table-short|gm-deep] [-copy]
+  pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm-ask -npc <name> -player "<player>" "<question>" [-style table-short|gm-deep] [-copy]
+  pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /state-show
+  pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /state-set [-active-npc <name>] [-objective "..."] [-scene "a" "b" "c"] [-clear-scene]
+  pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /state-clear
   pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /npc-list
+"@
+}
+
+function New-SessionState {
+    [pscustomobject]@{
+        activeNpc = ''
+        objective = ''
+        scene     = @()
+        updatedAt = (Get-Date).ToString('s')
+    }
+}
+
+function Load-SessionState {
+    if (-not (Test-Path $statePath)) {
+        return New-SessionState
+    }
+
+    try {
+        $raw = Get-Content $statePath -Raw
+        $state = $raw | ConvertFrom-Json
+        if (-not $state.scene) {
+            $state | Add-Member -MemberType NoteProperty -Name scene -Value @() -Force
+        }
+        return $state
+    }
+    catch {
+        return New-SessionState
+    }
+}
+
+function Save-SessionState {
+    param([pscustomobject]$State)
+
+    $State.updatedAt = (Get-Date).ToString('s')
+    $dir = Split-Path $statePath -Parent
+    if (-not (Test-Path $dir)) {
+        New-Item -ItemType Directory -Path $dir -Force | Out-Null
+    }
+
+    $State | ConvertTo-Json -Depth 6 | Set-Content -Path $statePath -Encoding UTF8
+}
+
+function Get-SessionStateText {
+    param([pscustomobject]$State)
+
+    $sceneLines = @($State.scene | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
+    $sceneBlock = if ($sceneLines.Count -gt 0) {
+        ($sceneLines | ForEach-Object { "- $_" }) -join [Environment]::NewLine
+    }
+    else {
+        '- [none]'
+    }
+
+    @"
+Session state:
+- Active NPC: $(if ([string]::IsNullOrWhiteSpace($State.activeNpc)) { '[none]' } else { $State.activeNpc })
+- Objective: $(if ([string]::IsNullOrWhiteSpace($State.objective)) { '[none]' } else { $State.objective })
+- Updated: $(if ([string]::IsNullOrWhiteSpace($State.updatedAt)) { '[unknown]' } else { $State.updatedAt })
+Scene bullets:
+$sceneBlock
 "@
 }
 
@@ -85,9 +149,12 @@ function Build-NpcObject {
 }
 
 function Build-GmContext {
-    param([string]$Profile = 'core')
+    param(
+        [string]$Profile = 'full',
+        [pscustomobject]$State
+    )
 
-    $profileValue = if ([string]::IsNullOrWhiteSpace($Profile)) { 'core' } else { $Profile.Trim().ToLowerInvariant() }
+    $profileValue = if ([string]::IsNullOrWhiteSpace($Profile)) { 'full' } else { $Profile.Trim().ToLowerInvariant() }
 
     $profileFiles = switch ($profileValue) {
         'full' {
@@ -112,7 +179,8 @@ function Build-GmContext {
                 'Data/nova-praxis-sleeves.ts',
                 'Data/augmentations.ts',
                 'pdf_full_extract.txt',
-                'machinations_full_extract.txt'
+                'machinations_full_extract.txt',
+                'Nova Praxis Rulebook (Cleaned).txt'
             )
         }
         'rules' {
@@ -164,12 +232,14 @@ function Build-GmContext {
                 'GM AI/Claude Code - Persona & Complexity Matrix.md',
                 'GM AI/NPC Command Board.md',
                 'pdf_full_extract.txt',
-                'machinations_full_extract.txt'
+                'machinations_full_extract.txt',
+                'Nova Praxis Rulebook (Cleaned).txt'
             )
         }
     }
 
     $fileBlock = ($profileFiles | ForEach-Object { "- $_" }) -join [Environment]::NewLine
+    $stateBlock = if ($State) { Get-SessionStateText -State $State } else { 'Session state: [not loaded]' }
 
     @"
 You are running as Nova Praxis GM copilot.
@@ -184,6 +254,8 @@ Active context profile: $profileValue
 
 Primary context files:
 $fileBlock
+
+$stateBlock
 "@
 }
 
@@ -192,20 +264,22 @@ function Build-NpcPrompt {
         [pscustomobject]$Npc,
         [string[]]$Context,
         [string]$GoalOverride,
-        [string]$SecretOverride
+        [string]$SecretOverride,
+        [string]$Style = 'table-short'
     )
 
-    if (-not $Context -or $Context.Count -eq 0) {
-        throw 'Missing context. Use -context "bullet1" "bullet2" ...'
-    }
-
     $ctx = ($Context | Where-Object { -not [string]::IsNullOrWhiteSpace($_) } | Select-Object -First 3)
-    if ($ctx.Count -eq 0) { throw 'No non-empty context lines provided.' }
+    if ($ctx.Count -eq 0) {
+        $ctx = @('[scene context missing - add -context or set /state-set -scene]')
+    }
 
     $goal = if (-not [string]::IsNullOrWhiteSpace($GoalOverride)) { $GoalOverride } elseif ($Npc.PrimaryGoal) { $Npc.PrimaryGoal } else { '[goal]' }
     $secret = if (-not [string]::IsNullOrWhiteSpace($SecretOverride)) { $SecretOverride } elseif ($Npc.MustHide) { $Npc.MustHide } else { '[secret]' }
 
     $ctxBlock = ($ctx | ForEach-Object { "- $_" }) -join [Environment]::NewLine
+    $styleValue = if ([string]::IsNullOrWhiteSpace($Style)) { 'table-short' } else { $Style.Trim().ToLowerInvariant() }
+    $lengthRule = if ($styleValue -eq 'gm-deep') { 'Keep response concise (2-6 lines).' } else { 'Keep response concise (1-2 lines).' }
+    $intentRule = if ($styleValue -eq 'gm-deep') { 'Include Intent and one GM Note line after dialogue.' } else { 'Include one Intent line after dialogue.' }
 
     @"
 You are speaking as: **$($Npc.Name)**.
@@ -218,13 +292,14 @@ What they must avoid revealing: **$secret**.
 
 Constraints:
 - Stay in-canon using vault notes and extracted PDFs.
-- Keep response concise (1-4 lines).
+- $lengthRule
 - Match speech style for class + rank.
-- Include one Intent line after dialogue.
+- $intentRule
 
 Return:
 1) In-character response
 2) Intent: ...
+3) GM Note: ... (only if style is gm-deep)
 "@
 }
 
@@ -257,7 +332,9 @@ NPC attitude profile: $($Npc.Name)
 function Build-GmAskGame {
     param(
         [string]$Question,
-        [string]$Domain = 'core'
+        [string]$Domain = 'core',
+        [string]$Style = 'table-short',
+        [pscustomobject]$State
     )
 
     $domainValue = if ([string]::IsNullOrWhiteSpace($Domain)) { 'core' } else { $Domain.Trim().ToLowerInvariant() }
@@ -272,16 +349,22 @@ function Build-GmAskGame {
         default { 'Use core GM runtime and immediate scene context first.' }
     }
 
+    $styleValue = if ([string]::IsNullOrWhiteSpace($Style)) { 'table-short' } else { $Style.Trim().ToLowerInvariant() }
+    $lengthHint = if ($styleValue -eq 'gm-deep') { 'Provide structured answer up to 16 lines with brief headings.' } else { 'Keep under 8 lines unless asked for detail.' }
+    $stateHint = if ($State) { Get-SessionStateText -State $State } else { 'Session state: [not loaded]' }
+
     @"
 GM question:
 $Question
 
 $domainHint
 
+$stateHint
+
 Answer as rules-and-lore arbiter for Nova Praxis FATE.
 Use vault canon first, then pdf_full_extract.txt and machinations_full_extract.txt.
 If conflict exists: show conflict summary, chosen interpretation, and confidence (low/med/high).
-Keep under 8 lines unless asked for detail.
+$lengthHint
 "@
 }
 
@@ -289,8 +372,13 @@ function Build-GmAskNpc {
     param(
         [pscustomobject]$Npc,
         [string]$Question,
-        [string]$PlayerName
+        [string]$PlayerName,
+        [string]$Style = 'table-short'
     )
+
+    $styleValue = if ([string]::IsNullOrWhiteSpace($Style)) { 'table-short' } else { $Style.Trim().ToLowerInvariant() }
+    $publicLineHint = if ($styleValue -eq 'gm-deep') { '2-4 lines' } else { '1-2 lines' }
+    $hiddenHint = if ($styleValue -eq 'gm-deep') { 'Hidden truth (GM-only): include one short paragraph.' } else { 'Hidden truth (GM-only): one line.' }
 
     if ([string]::IsNullOrWhiteSpace($PlayerName)) {
         @"
@@ -301,6 +389,7 @@ Answer in-character but with GM-facing clarity:
 - What you would say publicly
 - What you are concealing
 - Intent (one line)
+- Public answer length: $publicLineHint
 "@
     }
     else {
@@ -308,9 +397,9 @@ Answer in-character but with GM-facing clarity:
 You are $($Npc.Name). Player '$PlayerName' asks in-scene:
 $Question
 
-Respond exactly as the NPC would in-game (1-4 lines), then include:
+Respond exactly as the NPC would in-game ($publicLineHint), then include:
 Intent: ...
-Hidden truth (GM-only): ...
+$hiddenHint
 "@
     }
 }
@@ -355,14 +444,19 @@ if ($InputArgs.Count -gt 1) {
 $copy = $false
 $json = $false
 $mode = 'prompt'
-$profile = 'core'
+$profile = 'full'
 $domain = 'core'
+$style = 'table-short'
 $npcName = $null
 $playerName = $null
 $goal = $null
 $secret = $null
+$objective = $null
+$sceneOverride = $null
+$clearScene = $false
 $context = @()
 $question = $null
+$state = Load-SessionState
 
 for ($i = 0; $i -lt $rest.Count; $i++) {
     $token = $rest[$i]
@@ -381,9 +475,17 @@ for ($i = 0; $i -lt $rest.Count; $i++) {
             if ($i + 1 -lt $rest.Count) { $i++; $domain = $rest[$i].ToLowerInvariant(); continue }
             throw 'Missing value for -domain'
         }
+        '^-style$' {
+            if ($i + 1 -lt $rest.Count) { $i++; $style = $rest[$i].ToLowerInvariant(); continue }
+            throw 'Missing value for -style'
+        }
         '^-npc$' {
             if ($i + 1 -lt $rest.Count) { $i++; $npcName = $rest[$i].ToLowerInvariant(); continue }
             throw 'Missing value for -npc'
+        }
+        '^-active-npc$' {
+            if ($i + 1 -lt $rest.Count) { $i++; $npcName = $rest[$i].ToLowerInvariant(); continue }
+            throw 'Missing value for -active-npc'
         }
         '^-player$' {
             if ($i + 1 -lt $rest.Count) { $i++; $playerName = $rest[$i]; continue }
@@ -403,6 +505,22 @@ for ($i = 0; $i -lt $rest.Count; $i++) {
                 $context += $rest[$i]
             }
             continue
+        }
+        '^-scene$' {
+            $sceneOverride = @()
+            while ($i + 1 -lt $rest.Count -and -not $rest[$i + 1].StartsWith('-')) {
+                $i++
+                $sceneOverride += $rest[$i]
+            }
+            continue
+        }
+        '^-clear-scene$' {
+            $clearScene = $true
+            continue
+        }
+        '^-objective$' {
+            if ($i + 1 -lt $rest.Count) { $i++; $objective = $rest[$i]; continue }
+            throw 'Missing value for -objective'
         }
         '^-game$' {
             if ($i + 1 -lt $rest.Count) { $i++; $question = $rest[$i]; continue }
@@ -430,15 +548,65 @@ switch ($cmd) {
         break
     }
     '/gm' {
-        $text = Build-GmContext -Profile $profile
+        $text = Build-GmContext -Profile $profile -State $state
         Emit-Output -Text $text -Copy $copy -AsJson $json -Type 'gm-context' -Command $cmd
         break
     }
+    '/state-show' {
+        $text = Get-SessionStateText -State $state
+        Emit-Output -Text $text -Copy $copy -AsJson $json -Type 'state-show' -Command $cmd
+        break
+    }
+    '/state-clear' {
+        $state = New-SessionState
+        Save-SessionState -State $state
+        $text = 'Session state reset.'
+        Emit-Output -Text $text -Copy $copy -AsJson $json -Type 'state-clear' -Command $cmd
+        break
+    }
+    '/state-set' {
+        if (-not [string]::IsNullOrWhiteSpace($npcName)) {
+            if (-not $npcMap.ContainsKey($npcName)) {
+                throw "Unknown NPC '$npcName'. Use /npc-list."
+            }
+            $state.activeNpc = $npcName
+        }
+
+        if (-not [string]::IsNullOrWhiteSpace($objective)) {
+            $state.objective = $objective
+        }
+
+        if ($clearScene) {
+            $state.scene = @()
+        }
+
+        if ($sceneOverride -and $sceneOverride.Count -gt 0) {
+            $state.scene = @($sceneOverride | Where-Object { -not [string]::IsNullOrWhiteSpace($_) } | Select-Object -First 6)
+        }
+
+        Save-SessionState -State $state
+        $text = Get-SessionStateText -State $state
+        Emit-Output -Text $text -Copy $copy -AsJson $json -Type 'state-set' -Command $cmd
+        break
+    }
     '/npc' {
+        if ([string]::IsNullOrWhiteSpace($npcName) -and -not [string]::IsNullOrWhiteSpace($state.activeNpc)) {
+            $npcName = $state.activeNpc
+        }
+
         if ([string]::IsNullOrWhiteSpace($npcName)) {
-            throw 'Usage: /npc <name> [-mode prompt|summary|details|attitude|mission] [-context ...]'
+            throw 'Usage: /npc <name> [-mode prompt|summary|details|attitude|mission] [-context ...] OR set /state-set -active-npc <name>'
         }
         $npc = Build-NpcObject -NpcKey $npcName
+        $state.activeNpc = $npcName
+
+        if (($mode -eq 'prompt') -and ($context.Count -eq 0) -and $state.scene) {
+            $context = @($state.scene)
+        }
+
+        if ([string]::IsNullOrWhiteSpace($goal) -and -not [string]::IsNullOrWhiteSpace($state.objective)) {
+            $goal = $state.objective
+        }
 
         switch ($mode) {
             'summary' { $text = Build-NpcSummary -Npc $npc }
@@ -453,17 +621,23 @@ Mission profile: $($npc.Name)
 - Red line: $($npc.RedLine)
 "@
             }
-            default { $text = Build-NpcPrompt -Npc $npc -Context $context -GoalOverride $goal -SecretOverride $secret }
+            default { $text = Build-NpcPrompt -Npc $npc -Context $context -GoalOverride $goal -SecretOverride $secret -Style $style }
         }
+
+        Save-SessionState -State $state
 
         Emit-Output -Text $text -Copy $copy -AsJson $json -Type "npc-$mode" -Command $cmd
         break
     }
     '/gm-ask' {
         if ($question -and -not $npcName) {
-            $text = Build-GmAskGame -Question $question -Domain $domain
+            $text = Build-GmAskGame -Question $question -Domain $domain -Style $style -State $state
             Emit-Output -Text $text -Copy $copy -AsJson $json -Type 'gm-ask-game' -Command $cmd
             break
+        }
+
+        if (-not $npcName -and -not [string]::IsNullOrWhiteSpace($state.activeNpc)) {
+            $npcName = $state.activeNpc
         }
 
         if (-not $npcName) {
@@ -475,11 +649,13 @@ Mission profile: $($npc.Name)
         }
 
         $npc = Build-NpcObject -NpcKey $npcName
-        $text = Build-GmAskNpc -Npc $npc -Question $question -PlayerName $playerName
+        $state.activeNpc = $npcName
+        Save-SessionState -State $state
+        $text = Build-GmAskNpc -Npc $npc -Question $question -PlayerName $playerName -Style $style
         Emit-Output -Text $text -Copy $copy -AsJson $json -Type 'gm-ask-npc' -Command $cmd
         break
     }
     default {
-        throw "Unknown command '$cmd'. Use /help, /gm, /npc, /gm-ask, /npc-list"
+        throw "Unknown command '$cmd'. Use /help, /gm, /npc, /gm-ask, /npc-list, /state-show, /state-set, /state-clear"
     }
 }
