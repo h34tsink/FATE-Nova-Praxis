@@ -7,6 +7,9 @@ param(
 
 $ErrorActionPreference = 'Stop'
 
+$hadInvalidConfig = $false
+$didWriteConfig = $false
+
 $configDir = Split-Path -Parent $ConfigPath
 if (-not (Test-Path $configDir)) {
     if ($PSCmdlet.ShouldProcess($configDir, 'Create config directory')) {
@@ -23,8 +26,10 @@ if (Test-Path $ConfigPath) {
             if ($parsed) {
                 $config = $parsed
             }
-        } catch {
-            throw "Config file exists but is not valid JSON: $ConfigPath"
+        }
+        catch {
+            $hadInvalidConfig = $true
+            $config = @{}
         }
     }
 }
@@ -33,7 +38,7 @@ if (-not $config.ContainsKey('mcpServers') -or -not $config.mcpServers) {
     $config.mcpServers = @{}
 }
 
-$mcpPath = $ServerPath.Replace('\\', '/')
+$mcpPath = $ServerPath.Replace('\', '/')
 $config.mcpServers[$ServerName] = @{
     command = 'node'
     args    = @($mcpPath)
@@ -50,6 +55,16 @@ if (Test-Path $ConfigPath) {
 $json = $config | ConvertTo-Json -Depth 20
 if ($PSCmdlet.ShouldProcess($ConfigPath, 'Write MCP server configuration')) {
     Set-Content -Path $ConfigPath -Value $json -Encoding UTF8
+    $didWriteConfig = $true
+}
+
+if ($hadInvalidConfig) {
+    if ($didWriteConfig) {
+        Write-Host "Existing config was invalid JSON; wrote a clean config after backup." -ForegroundColor Yellow
+    }
+    else {
+        Write-Host "Existing config is invalid JSON; script would write a clean config after backup." -ForegroundColor Yellow
+    }
 }
 
 Write-Host "MCP config updated: $ConfigPath" -ForegroundColor Green
