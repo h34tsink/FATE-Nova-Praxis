@@ -119,6 +119,27 @@ Expected default response shape:
 
 Tip: If you want dialogue only, append `Dialogue only, no GM notes.`
 
+## Rules Questions (High-Confidence Mode)
+
+For mechanics questions, prefer `/gm-ask -game` with rules domain:
+
+```powershell
+gmask -game "How many Fate Points do players refresh to each session?" -domain rules -style gm-deep -copy
+```
+
+Expected response format:
+
+- Answer (single ruling sentence)
+- Exceptions/Modifiers (state/stunt/edge-case bullets)
+- Source files checked
+- Confidence (high/medium/low + reason)
+
+Tip: Add this suffix to your natural-language rules question if you want stricter adjudication output:
+
+```text
+Use Rules Adjudication Mode format.
+```
+
 ## Lore
 This workflow uses entity card metadata as default source for class/rank/goal/secret and keeps output consistent with `GM AI/Claude Code - Prompt Pack.md` block 1.
 

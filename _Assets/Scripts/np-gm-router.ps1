@@ -349,9 +349,32 @@ function Build-GmAskGame {
         default { 'Use core GM runtime and immediate scene context first.' }
     }
 
+    $isRulesMode = $domainValue -eq 'rules' -or $domainValue -eq 'full' -or ($Question -match '(?i)\b(refresh|fate point|fate points|stunt|stunts|stress|consequence|consequences|action|simple action|free action|compel|invoke|difficulty|roll|skill rank)\b')
+
     $styleValue = if ([string]::IsNullOrWhiteSpace($Style)) { 'table-short' } else { $Style.Trim().ToLowerInvariant() }
     $lengthHint = if ($styleValue -eq 'gm-deep') { 'Provide structured answer up to 16 lines with brief headings.' } else { 'Keep under 8 lines unless asked for detail.' }
     $stateHint = if ($State) { Get-SessionStateText -State $State } else { 'Session state: [not loaded]' }
+    $rulesFormat = if ($isRulesMode) {
+        @"
+Rules adjudication output format (required):
+1) Answer: one clear ruling sentence.
+2) Exceptions/Modifiers: 1-4 bullets.
+3) Source files checked: 2-5 concrete files.
+4) Confidence: high|medium|low with a one-line reason.
+
+Rules source priority:
+- Nova Praxis Rulebook (Cleaned).txt
+- pdf_full_extract.txt
+- Rules and Mechanics/*.md
+- Data/*.ts
+- Glossary/templates/reference notes
+
+If sources conflict, prefer higher-priority source and explicitly state conflict + chosen ruling.
+"@
+    }
+    else {
+        'For non-rules questions, keep narrative utility and continuity as priority.'
+    }
 
     @"
 GM question:
@@ -364,6 +387,7 @@ $stateHint
 Answer as rules-and-lore arbiter for Nova Praxis FATE.
 Use vault canon first, then pdf_full_extract.txt and machinations_full_extract.txt.
 If conflict exists: show conflict summary, chosen interpretation, and confidence (low/med/high).
+$rulesFormat
 $lengthHint
 "@
 }

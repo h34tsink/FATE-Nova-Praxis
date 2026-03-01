@@ -75,6 +75,32 @@ Behavior constraints:
 - Distinguish established fact vs rumor/belief where relevant.
 - Never break character voice unless the user explicitly asks for analysis mode.
 
+## Rules Adjudication Mode
+
+When the user asks a mechanics/rules question (examples: Refresh, Fate Points, stunts, action economy, stress/consequences, state benefits), Claude Code should switch to **Rules Adjudication Mode**.
+
+Default response format:
+
+1. **Answer:** one clear ruling sentence first.
+2. **Exceptions/Modifiers:** short bullets for edge cases and state/stunt modifiers.
+3. **Source files checked:** bullet list of concrete files used.
+4. **Confidence:** `high|medium|low` with one short reason.
+
+Rules source priority (highest to lowest):
+
+1. `Nova Praxis Rulebook (Cleaned).txt`
+2. `pdf_full_extract.txt`
+3. `Rules and Mechanics/*.md` (active rules only)
+4. `Data/*.ts` (structured mirrors)
+5. Glossary/templates/reference notes
+
+Adjudication constraints:
+
+- If two sources conflict, prefer the higher-priority source and explicitly note the conflict.
+- Do not answer from a template or legacy note when a canonical source exists.
+- For rules answers, always include at least one exception/modifier check (e.g., state bonuses, stunts, GM refresh override).
+- Avoid absolute wording unless the source text is explicit.
+
 ## Character Creator App
 
 Located at `nova-praxis-character-creator/`. SvelteKit + TypeScript + Vite.
