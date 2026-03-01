@@ -26,17 +26,18 @@ This note keeps your runtime entity calls deterministic and table-speed. Each to
   - Output: 1-4 line in-character response + intent line
 - **Failure handling:**
   - If no result appears, reindex search and retry with entity name only.
-  - If two results appear, pick the card in `GM AI/Entity Cards/`.
+  - If two results appear, pick the card in `GM AI/Entity Cards/R*/`.
 
 ### Command Tokens
-- `npc kestrel` → [[GM AI/Entity Cards/Kestrel (R4 Important NPC)]]
-- `npc nowak` → [[GM AI/Entity Cards/Isabella Nowak (R4 Important NPC)]]
-- `npc chimera` → [[GM AI/Entity Cards/Chimera (R5 Villain)]]
-- `npc valare-fork` → [[GM AI/Entity Cards/Valare Fork (R4 Important NPC)]]
-- `npc valare-integrated` → [[GM AI/Entity Cards/Valare Integrated (R4 Personal Agent Ally)]]
-- `npc seren` → [[GM AI/Entity Cards/Seren (R3 Important Contact)]]
-- `npc kal` → [[GM AI/Entity Cards/Kal Paddock (R2 Minor Contact)]]
-- `npc lighthouse` → [[GM AI/Entity Cards/Lighthouse Tactical Controller (R3 Systems Agent)]]
+
+- `npc kestrel` → [[GM AI/Entity Cards/R4/Kestrel (R4 Important NPC)]]
+- `npc nowak` → [[GM AI/Entity Cards/R4/Isabella Nowak (R4 Important NPC)]]
+- `npc chimera` → [[GM AI/Entity Cards/R5/Chimera (R5 Villain)]]
+- `npc valare-fork` → [[GM AI/Entity Cards/R4/Valare Fork (R4 Important NPC)]]
+- `npc valare-integrated` → [[GM AI/Entity Cards/R4/Valare Integrated (R4 Personal Agent Ally)]]
+- `npc seren` → [[GM AI/Entity Cards/R3/Seren (R3 Important Contact)]]
+- `npc kal` → [[GM AI/Entity Cards/R2/Kal Paddock (R2 Minor Contact)]]
+- `npc lighthouse` → [[GM AI/Entity Cards/R3/Lighthouse Tactical Controller (R3 Systems Agent)]]
 
 ### Runnable Example
 - Token: `npc nowak`

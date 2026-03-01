@@ -157,6 +157,6 @@ This workflow uses entity card metadata as default source for class/rank/goal/se
 ## Links
 - [[GM AI/NPC Command Board]]
 - [[GM AI/Claude Code - Prompt Pack]]
-- [[GM AI/Entity Cards/Valare Integrated (R4 Personal Agent Ally)]]
+- [[GM AI/Entity Cards/R4/Valare Integrated (R4 Personal Agent Ally)]]
 
 #ttrpg #nova-praxis #gm-ai #cli

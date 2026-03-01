@@ -63,7 +63,7 @@ Claude Code should treat this as an **NPC dialogue request** and respond in this
 
 Source priority for these answers:
 
-1. `GM AI/Entity Cards/*.md`
+1. `GM AI/Entity Cards/**/*.md`
 2. `GM AI/Claude Code - Persona & Complexity Matrix.md`
 3. Relevant session files under `Sessions/` (prefer active dashboard/runtime files)
 4. Canon lore files and extracts (`pdf_full_extract.txt`, `machinations_full_extract.txt`)
