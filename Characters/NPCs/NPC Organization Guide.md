@@ -22,8 +22,15 @@ These are template-style characters designed for quick use in encounters. They h
 
 **Examples:**
 - [[Apostate Street Tough]]
+- [[Apostate Worker]]
 - [[Cyber-Merc]]
 - [[Security Guard]]
+- [[Lighthouse Heavy]]
+- [[Lighthouse Security Operative]]
+- [[Lighthouse Officer]]
+- [[Red Sun Enforcer]]
+- [[Talon of Freedom Soldier]]
+- [[Talon of Freedom Officer]]
 
 
 ## Named NPCs (Major Characters)
@@ -36,18 +43,45 @@ These are unique individuals with:
 - Campaign-significant roles
 - Story hooks and adventure seeds
 
-**Examples:**
-- [[Gabriel Adams]] - Complex patron/antagonist
-- [[Greyton]] - Legendary assassin
-- [[Jace Welder]] - Idealistic ship captain
-- [[Durian Konrad]] - Political manipulator
-- [[Xavier Wilhelm]] - Unity-focused warrior
-- [[Tiver Andlat]] - Criminal savant hacker
-- [[Christov Draiku]] - SIM chef/programmer
-- [[Kestrel]] - Fixer and information broker
-- [[Isabella Nowak]] - Desperate House executive
-- [[Characters/NPCs/Named NPCs/Valare]] - Defector savant (deceased but recoverable)
-- [[Characters/Savage Worlds/NPCs/Named NPCs/Chimera]] - Major campaign villain *(still being converted)*
+**Patrons & Contacts:**
+- [[Gabriel Adams]] — Casino manager, transhumanist patron/antagonist (House Silva)
+- [[Catalyst]] — Enigmatic Cipriani representative, hires Auxiliaries
+- [[Kestrel]] — Fixer and apostate information broker (House Kimura)
+- [[Isabella Nowak]] — Desperate House Tsarya executive
+- [[Horizon]] — Phalanx Formation handler (House Silva / Oversight)
+- [[Wei Tsou]] — House Jinzhan patron for the Enceladus mission
+- [[Lian Sung]] — House Jinzhan logistics coordinator
+- [[Concetta Allegro]] — House Cipriani intel operative
+- [[Salvadore Bendry]] — Second Chances mnemonics engineer
+
+**Antagonists & Threats:**
+- [[Chimera]] — Major campaign villain, gestalt ego entity
+- [[General Stanislaw Markov]] — House Tsarya traitor, campaign-arc antagonist
+- [[Traeger]] — "The Viking," Knight of House Dalianis, celebrity warrior
+- [[Greyton]] — Legendary ancient assassin (Apostate)
+- [[Aaron Blackburn]] — True leader of the Talons of Freedom under deep cover
+- [[Dr. Javier Schulz]] — Creator of the Progenesis virus (House Silva)
+- [[Dr. Haruto Nakamura]] — Illegal ego-merging researcher, Chimera's creator
+- [[Rusila Alvid]] — Pirate leader operating from New Turin
+
+**Supporting Cast:**
+- [[Rin Sakamoto]] — Pacifist biologist, antiphage discoverer (House Kimura)
+- [[Lester Lucas]] — Smuggler, captain of The Chickenhawk (House Silva)
+- [[Castor]] — The Viking's partner and handler (House Dalianis)
+- [[Mogi]] — House Jinzhan informant, murdered by the Viking
+- [[Geist]] — Seraphim field agent on Sanctuary
+- [[Admiral Drivas]] — Tetragon admiral, Scholae Palatinae commander
+- [[Tejun]] — SIM advisor to the Scholae (House Kimura)
+- [[Malachite]] — Grigori crew, Tsarya manipulator in the Scholae
+- [[Camber Roche]] — Mayor of Gondolin apostate enclave
+- [[Tarj McClaren]] — Centurion pressuring apostates on Asola
+
+**Ebon Jackal Crew** *(see [[The Ebon Jackal Crew]])*:
+- [[Jace Welder]] — Captain and pilot
+- [[Durian Konrad]] — Political operative (House Silva)
+- [[Xavier Wilhelm]] — Idealist warrior (House Cipriani)
+- [[Tiver Andlat]] — Criminal savant hacker (House Kimura)
+- [[Christov Draiku]] — SIM chef/programmer (House Tsarya)
 
 
 ## Crew Groups
@@ -61,6 +95,28 @@ Pre-designed groups of NPCs that work together, providing:
 
 **Examples:**
 - [[The Ebon Jackal Crew]] - Diverse salvage crew with hidden agendas
+
+
+## Drones & Creatures
+**Location:** `Characters/NPCs/Drones and Creatures/`
+
+Autonomous combat platforms and synthetic creatures with full stat blocks:
+- [[Harvester]] — Delta head-hunting drone (auto-decapitates Taken Out targets)
+- [[Kraken]] — Epsilon Federation-era tentacle horror (boss-level)
+- [[Imex V44 Case Spider]] — Beta infiltration drone disguised as a briefcase
+- [[Aegis S-11 Wasp]] — Alpha personal defense drone
+- [[Black Gate Cerberus Guardian]] — Gamma dog-shaped security drone (AR:6)
+- [[Ardent Lonestar Armed Responder]] — Gamma humanoid security drone (AR:7, WR:7)
+
+
+## Vehicles & Ships
+**Location:** `Characters/NPCs/Vehicles/`
+
+Ships and combat vehicles with full vehicular stat blocks:
+- [[The Chickenhawk]] — Size 4 smuggling cargo ship (has resurrection chamber)
+- [[Raptor Interceptor]] — Size 2 Dalianis fighter drone (glass cannon)
+- [[Silverpike]] — Size 4 House Turin smuggler ship (unarmed, fast)
+- [[Honey Badger]] — Size 3 Tsarya assault warframe (slow but devastating)
 
 
 ## Recurring & Advancing NPCs
