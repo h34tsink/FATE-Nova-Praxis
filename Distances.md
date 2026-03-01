@@ -1,3 +1,7 @@
+---
+redirect: true
+---
+
 # Distances
 
 Legacy navigation alias for travel-distance references.

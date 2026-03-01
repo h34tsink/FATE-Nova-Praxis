@@ -1,3 +1,7 @@
+---
+redirect: true
+---
+
 # Coalition of Free States
 
 The central polity/governance bloc in Nova Praxis.

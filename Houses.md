@@ -1,3 +1,7 @@
+---
+redirect: true
+---
+
 # Houses
 
 Legacy/shortcut note.

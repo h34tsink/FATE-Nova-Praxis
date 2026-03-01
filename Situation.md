@@ -1,3 +1,7 @@
+---
+redirect: true
+---
+
 # Situation
 
 Shortcut for scenario-level plotting.
