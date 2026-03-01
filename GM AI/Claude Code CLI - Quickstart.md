@@ -42,6 +42,26 @@ npc -mode prompt -style table-short -copy
 gmask -game "What can they prove right now?" -domain rules -style gm-deep -copy
 ```
 
+## One-Step Bootstrap (Recommended)
+
+Dot-source bootstrap to load aliases and seed state from latest session note:
+
+```powershell
+. .\_Assets\Scripts\Start-GMSession.ps1
+```
+
+Seed from a specific note and copy full context:
+
+```powershell
+. .\_Assets\Scripts\Start-GMSession.ps1 -SessionNote "Sessions/Session 9/Session 9 - Beats (GM Runtime).md" -CopyContext
+```
+
+Override inferred values:
+
+```powershell
+. .\_Assets\Scripts\Start-GMSession.ps1 -Npc nowak -Objective "Delay disclosure until extraction" -Scene "Mutineers entering deck B" "Kimura comms dark"
+```
+
 - `-Npc`: one of `kestrel nowak isabella chimera valare-fork valare-integrated seren kal paddock lighthouse`
 - `-Context`: 1-3 scene bullets
 - `-Goal`: optional override for current objective
