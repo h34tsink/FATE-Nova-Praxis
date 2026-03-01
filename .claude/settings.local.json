@@ -2,7 +2,12 @@
   "permissions": {
     "allow": [
       "Bash(python \"_Assets/Scripts/clean_pdf_extract.py\")",
-      "Bash(python3 -c \":*)"
+      "Bash(python3 -c \":*)",
+      "Bash(python -c \"import PyPDF2; print\\(''PyPDF2 available''\\)\")",
+      "Bash(python -c \"import pdfplumber; print\\(''pdfplumber available''\\)\")",
+      "Bash(python -c \"import fitz; print\\(''pymupdf available''\\)\")",
+      "Bash(python -c \":*)",
+      "Bash(python _Assets/Scripts/clean_machinations_extract.py)"
     ]
   }
 }

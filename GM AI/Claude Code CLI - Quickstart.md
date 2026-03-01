@@ -14,9 +14,12 @@ From vault root:
 
 ```powershell
 pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm -Copy
+pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm -profile full -Copy
+pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm -profile rules -Copy
 pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /npc valare-integrated -mode summary
 pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /npc valare-integrated -context "Players repaired mnemonic core" "She demands merger terms first" "She gives likely hide sites" -Copy
 pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm-ask -game "What is the likely HPA response timeline?" -Copy
+pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm-ask -game "What is the likely HPA response timeline?" -domain history -Copy
 pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm-ask -npc nowak -player "Aeddarius" "Where is your fork hiding?" -Copy
 ```
 
@@ -30,8 +33,10 @@ pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm-ask -npc nowak -player "Aeddar
 
 Router modes:
 - `/gm`: load GM runtime context block
+- `/gm -profile full`: load full-boat context (rules/history/lore/location/gear)
 - `/npc`: build NPC prompt or summary/details/attitude/mission payload
 - `/gm-ask -game`: ask the game/lore/rules oracle
+- `/gm-ask -game -domain <area>`: target question scope (`core|full|rules|history|lore|location|gear`)
 - `/gm-ask -npc`: ask as storyteller backstage or as in-scene player (`-player`)
 
 ## Typical Loop

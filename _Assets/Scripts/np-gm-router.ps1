@@ -24,9 +24,9 @@ $npcMap = @{
 function Show-Help {
     @"
 np-gm-router usage (from vault root):
-  pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm [-copy]
+    pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm [-profile core|full|rules|history|lore|location|gear] [-copy]
   pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /npc <name> [-mode prompt|summary|details|attitude|mission] [-context "a" "b" "c"] [-goal "..."] [-secret "..."] [-copy]
-  pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm-ask -game "<question>" [-copy]
+    pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm-ask -game "<question>" [-domain core|full|rules|history|lore|location|gear] [-copy]
   pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm-ask -npc <name> "<question>" [-copy]
   pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /gm-ask -npc <name> -player "<player>" "<question>" [-copy]
   pwsh -File .\_Assets\Scripts\np-gm-router.ps1 /npc-list
@@ -67,24 +67,110 @@ function Build-NpcObject {
     $card = Read-CardText -NpcKey $NpcKey
 
     [pscustomobject]@{
-        Key = $NpcKey
-        Name = Get-CardValue -CardText $card -Pattern '-\s*Name:\s*(.+)$' -Fallback $NpcKey
-        Class = Get-CardValue -CardText $card -Pattern '-\s*Class:\s*(.+)$' -Fallback 'Important NPC'
-        Rank = Get-CardValue -CardText $card -Pattern '-\s*Complexity Rank:\s*(.+)$' -Fallback 'R3'
-        Tone = Get-CardValue -CardText $card -Pattern '-\s*Baseline tone:\s*(.+)$'
-        Cadence = Get-CardValue -CardText $card -Pattern '-\s*Cadence:\s*(.+)$'
-        PrimaryGoal = Get-CardValue -CardText $card -Pattern '-\s*Primary goal:\s*(.+)$'
-        SecondaryGoal = Get-CardValue -CardText $card -Pattern '-\s*Secondary goal:\s*(.+)$'
-        Fear = Get-CardValue -CardText $card -Pattern '-\s*Fear\s*/\s*pressure point:\s*(.+)$'
-        RedLine = Get-CardValue -CardText $card -Pattern '-\s*Red line:\s*(.+)$'
-        MustHide = Get-CardValue -CardText $card -Pattern '-\s*Must hide:\s*(.+)$'
-        EntryLine = Get-CardValue -CardText $card -Pattern '-\s*Entry line:\s*"(.+)"$'
+        Key            = $NpcKey
+        Name           = Get-CardValue -CardText $card -Pattern '-\s*Name:\s*(.+)$' -Fallback $NpcKey
+        Class          = Get-CardValue -CardText $card -Pattern '-\s*Class:\s*(.+)$' -Fallback 'Important NPC'
+        Rank           = Get-CardValue -CardText $card -Pattern '-\s*Complexity Rank:\s*(.+)$' -Fallback 'R3'
+        Tone           = Get-CardValue -CardText $card -Pattern '-\s*Baseline tone:\s*(.+)$'
+        Cadence        = Get-CardValue -CardText $card -Pattern '-\s*Cadence:\s*(.+)$'
+        PrimaryGoal    = Get-CardValue -CardText $card -Pattern '-\s*Primary goal:\s*(.+)$'
+        SecondaryGoal  = Get-CardValue -CardText $card -Pattern '-\s*Secondary goal:\s*(.+)$'
+        Fear           = Get-CardValue -CardText $card -Pattern '-\s*Fear\s*/\s*pressure point:\s*(.+)$'
+        RedLine        = Get-CardValue -CardText $card -Pattern '-\s*Red line:\s*(.+)$'
+        MustHide       = Get-CardValue -CardText $card -Pattern '-\s*Must hide:\s*(.+)$'
+        EntryLine      = Get-CardValue -CardText $card -Pattern '-\s*Entry line:\s*"(.+)"$'
         EscalationLine = Get-CardValue -CardText $card -Pattern '-\s*Escalation line:\s*"(.+)"$'
-        ExitLine = Get-CardValue -CardText $card -Pattern '-\s*Exit line:\s*"(.+)"$'
+        ExitLine       = Get-CardValue -CardText $card -Pattern '-\s*Exit line:\s*"(.+)"$'
     }
 }
 
 function Build-GmContext {
+    param([string]$Profile = 'core')
+
+    $profileValue = if ([string]::IsNullOrWhiteSpace($Profile)) { 'core' } else { $Profile.Trim().ToLowerInvariant() }
+
+    $profileFiles = switch ($profileValue) {
+        'full' {
+            @(
+                'GM AI/Claude Code - GM Runtime System.md',
+                'GM AI/Claude Code - Prompt Pack.md',
+                'GM AI/Claude Code - Persona & Complexity Matrix.md',
+                'GM AI/NPC Command Board.md',
+                'Campaign Overview/Timeline of Events.md',
+                'Campaign Overview/What has Come Before.md',
+                'Campaign Overview/Cold Start Syndicate - Campaign Summary.md',
+                'Sessions/Index.md',
+                'Plot/Index.md',
+                'Factions/Index.md',
+                'Locations/Index.md',
+                'Rules and Mechanics/Index.md',
+                'Rules and Mechanics/Pneuma Rules/Index.md',
+                'Data/gear.ts',
+                'Data/nova-praxis-skills.ts',
+                'Data/nova-praxis-states.ts',
+                'Data/nova-praxis-houses.ts',
+                'Data/nova-praxis-sleeves.ts',
+                'Data/augmentations.ts',
+                'pdf_full_extract.txt',
+                'machinations_full_extract.txt'
+            )
+        }
+        'rules' {
+            @(
+                'Rules and Mechanics/Index.md',
+                'Rules and Mechanics/Pneuma Rules/Index.md',
+                'Rules and Mechanics/Pneuma Rules/Pneuma_Architects_Echo_Rules.md',
+                'Rules and Mechanics/Savant Programs Guide.md',
+                'Rules and Mechanics/Skills.md'
+            )
+        }
+        'history' {
+            @(
+                'Campaign Overview/Timeline of Events.md',
+                'Campaign Overview/What has Come Before.md',
+                'Campaign Overview/Cold Start Syndicate - Campaign Summary.md',
+                'Sessions/Index.md'
+            )
+        }
+        'lore' {
+            @(
+                'Factions/Index.md',
+                'Glossary/Index.md',
+                'Cosmology/bardic_cosmology_for_game_universe_v1.md',
+                'pdf_full_extract.txt',
+                'machinations_full_extract.txt'
+            )
+        }
+        'location' {
+            @(
+                'Locations/Index.md',
+                'Locations/Sol System/Index.md',
+                'Locations/Exoplanets/Index.md'
+            )
+        }
+        'gear' {
+            @(
+                'Data/gear.ts',
+                'Data/augmentations.ts',
+                'Data/nova-praxis-sleeves.ts',
+                'Rules and Mechanics/Equipment.md',
+                'Rules and Mechanics/Augmentations.md'
+            )
+        }
+        default {
+            @(
+                'GM AI/Claude Code - GM Runtime System.md',
+                'GM AI/Claude Code - Prompt Pack.md',
+                'GM AI/Claude Code - Persona & Complexity Matrix.md',
+                'GM AI/NPC Command Board.md',
+                'pdf_full_extract.txt',
+                'machinations_full_extract.txt'
+            )
+        }
+    }
+
+    $fileBlock = ($profileFiles | ForEach-Object { "- $_" }) -join [Environment]::NewLine
+
     @"
 You are running as Nova Praxis GM copilot.
 
@@ -94,11 +180,10 @@ Hard rules:
 - Distinguish what is true vs what an NPC believes.
 - Maintain tone: transhuman, corporate/memetic pressure, identity continuity.
 
-Primary runtime files:
-- GM AI/Claude Code - GM Runtime System.md
-- GM AI/Claude Code - Prompt Pack.md
-- GM AI/Claude Code - Persona & Complexity Matrix.md
-- GM AI/NPC Command Board.md
+Active context profile: $profileValue
+
+Primary context files:
+$fileBlock
 "@
 }
 
@@ -170,11 +255,28 @@ NPC attitude profile: $($Npc.Name)
 }
 
 function Build-GmAskGame {
-    param([string]$Question)
+    param(
+        [string]$Question,
+        [string]$Domain = 'core'
+    )
+
+    $domainValue = if ([string]::IsNullOrWhiteSpace($Domain)) { 'core' } else { $Domain.Trim().ToLowerInvariant() }
+
+    $domainHint = switch ($domainValue) {
+        'full' { 'Use full campaign context: rules + history + lore + locations + gear + session continuity.' }
+        'rules' { 'Prioritize rules adjudication and mechanical consistency first.' }
+        'history' { 'Prioritize timeline continuity, prior events, and established campaign consequences.' }
+        'lore' { 'Prioritize faction/cosmology/world canon and narrative plausibility.' }
+        'location' { 'Prioritize spatial/location continuity, local constraints, and travel plausibility.' }
+        'gear' { 'Prioritize equipment/augmentation/sleeve constraints and loadout realism.' }
+        default { 'Use core GM runtime and immediate scene context first.' }
+    }
 
     @"
 GM question:
 $Question
+
+$domainHint
 
 Answer as rules-and-lore arbiter for Nova Praxis FATE.
 Use vault canon first, then pdf_full_extract.txt and machinations_full_extract.txt.
@@ -191,7 +293,7 @@ function Build-GmAskNpc {
     )
 
     if ([string]::IsNullOrWhiteSpace($PlayerName)) {
-@"
+        @"
 You are $($Npc.Name). The GM is asking you backstage (not in front of players).
 Question: $Question
 
@@ -202,7 +304,7 @@ Answer in-character but with GM-facing clarity:
 "@
     }
     else {
-@"
+        @"
 You are $($Npc.Name). Player '$PlayerName' asks in-scene:
 $Question
 
@@ -229,9 +331,9 @@ function Emit-Output {
     if ($AsJson) {
         [pscustomobject]@{
             command = $Command
-            type = $Type
+            type    = $Type
             content = $Text
-            copied = $Copy
+            copied  = $Copy
         } | ConvertTo-Json -Depth 5
     }
     else {
@@ -253,6 +355,8 @@ if ($InputArgs.Count -gt 1) {
 $copy = $false
 $json = $false
 $mode = 'prompt'
+$profile = 'core'
+$domain = 'core'
 $npcName = $null
 $playerName = $null
 $goal = $null
@@ -268,6 +372,14 @@ for ($i = 0; $i -lt $rest.Count; $i++) {
         '^-mode$' {
             if ($i + 1 -lt $rest.Count) { $i++; $mode = $rest[$i].ToLowerInvariant(); continue }
             throw 'Missing value for -mode'
+        }
+        '^-profile$' {
+            if ($i + 1 -lt $rest.Count) { $i++; $profile = $rest[$i].ToLowerInvariant(); continue }
+            throw 'Missing value for -profile'
+        }
+        '^-domain$' {
+            if ($i + 1 -lt $rest.Count) { $i++; $domain = $rest[$i].ToLowerInvariant(); continue }
+            throw 'Missing value for -domain'
         }
         '^-npc$' {
             if ($i + 1 -lt $rest.Count) { $i++; $npcName = $rest[$i].ToLowerInvariant(); continue }
@@ -318,7 +430,7 @@ switch ($cmd) {
         break
     }
     '/gm' {
-        $text = Build-GmContext
+        $text = Build-GmContext -Profile $profile
         Emit-Output -Text $text -Copy $copy -AsJson $json -Type 'gm-context' -Command $cmd
         break
     }
@@ -349,7 +461,7 @@ Mission profile: $($npc.Name)
     }
     '/gm-ask' {
         if ($question -and -not $npcName) {
-            $text = Build-GmAskGame -Question $question
+            $text = Build-GmAskGame -Question $question -Domain $domain
             Emit-Output -Text $text -Copy $copy -AsJson $json -Type 'gm-ask-game' -Command $cmd
             break
         }
