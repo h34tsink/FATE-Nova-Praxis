@@ -3,7 +3,7 @@
 
 **Player:** Sara  
 **Rank:** Novice  
-**State:** [[SIM]] ([[Apotheosis|Apotheosized]])  
+**State:** [[Glossary/SIM]] ([[Glossary/Apotheosis|Apotheosized]])  
 **Origin:** SIM Recluse  
 **Allegiance:** [[Factions/Houses/House Kimura|House Kimura]]  
 **Rep-Rating:** 6  
@@ -52,7 +52,7 @@
 
 **Augmentation Limit:** 5 AV
 
-- **[[Apotheosis]]** (AV 3) - Mindset and mnemonic core _(doesn't count against limit for SIMs)_
+- **[[Glossary/Apotheosis]]** (AV 3) - Mindset and mnemonic core _(doesn't count against limit for SIMs)_
 - **Data Jack and Storage** (AV 1) - Data interface and storage
 - **Performance Enhanced** (AV 3, Top of the Line) - +2 bonus ranks to Agility-based skills for virtual avatar
 

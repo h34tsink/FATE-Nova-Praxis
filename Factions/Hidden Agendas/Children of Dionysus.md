@@ -99,8 +99,8 @@ While media portrayal emphasizes criminality, most violence attributed to Childr
 
 ## Related Factions
 
-- [[Apostates]]
-- [[Coalition of Free States]]
-- [[Neo-Religions]]
-- [[Transhumans]]
+- [[Factions/Ideologies/Apostates]]
+- Coalition of Free States
+- Neo-Religions
+- [[Factions/Ideologies/Transhumans]]
 - [[Rings of Olympus]]

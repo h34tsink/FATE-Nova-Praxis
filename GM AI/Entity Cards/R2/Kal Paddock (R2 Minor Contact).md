@@ -48,5 +48,5 @@ tags:
 - `/npc kal`
 
 ## Linked Notes
-- [[Characters/NPCs/Named NPCs/Kal Paddock]]
-- [[Cere/Deepshaft Tavern]]
+- Kal Paddock
+- [[Locations/Cere/Deepshaft Tavern]]

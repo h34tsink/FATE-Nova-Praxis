@@ -7,7 +7,7 @@
 ## Core Travel/Reference
 - [[Locations/Galaxy map]]
 - [[Locations/Plot Locations]]
-- [[Locations/Asteroid Belts]]
+- Asteroid Belts
 - [[Locations/Virtual Realities]]
 
 ## Commonly Referenced Stations

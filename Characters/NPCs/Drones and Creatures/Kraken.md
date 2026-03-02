@@ -67,5 +67,5 @@ Multi-Attacker gives it TWO attack actions per turn. With six weapon systems (3 
 
 ## Links
 
-- [[Characters/NPCs/Drones and Creatures/Index|Drones and Creatures Index]]
+- Drones and Creatures Index
 - [[Glossary/Index]]

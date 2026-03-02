@@ -142,10 +142,10 @@ Neo-Religions engage deeply with:
 
 ## Related Factions
 
-- [[Coalition of Free States]]
-- [[Transhumans]]
+- Coalition of Free States
+- [[Factions/Ideologies/Transhumans]]
 - [[Mimirians]]
 - [[Astralists]]
 - [[Traditional Religions]]
-- [[Apostates]]
-- [[House Kimura]]
+- [[Factions/Ideologies/Apostates]]
+- House Kimura

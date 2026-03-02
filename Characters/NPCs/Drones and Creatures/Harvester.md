@@ -61,5 +61,5 @@ The Head Hunter augmentation is brutal — any target Taken Out is automatically
 
 ## Links
 
-- [[Characters/NPCs/Drones and Creatures/Index|Drones and Creatures Index]]
+- Drones and Creatures Index
 - [[Glossary/Index]]

@@ -13,11 +13,11 @@ aliases:
 
 # Admiral Drivas
 
-**Summary:** Tetragon admiral who commands the [[Scholae Palatinae]]. Directs the PCs in Campaign Arc 4.
+**Summary:** Tetragon admiral who commands the Scholae Palatinae. Directs the PCs in Campaign Arc 4.
 
 ## Lore
 
-Admiral Drivas is a high-ranking member of the Tetragon, the Coalition's supreme military authority. In Campaign Arc 4, Drivas assumes direct command over the [[Scholae Palatinae]] and, by extension, the PCs' operations.
+Admiral Drivas is a high-ranking member of the Tetragon, the Coalition's supreme military authority. In Campaign Arc 4, Drivas assumes direct command over the Scholae Palatinae and, by extension, the PCs' operations.
 
 Drivas represents the highest levels of Coalition military authority — the kind of officer who moves fleets and shapes policy. When Drivas gives orders, they carry the weight of the entire Protectorate behind them. The Admiral briefs and directs the PCs through their Scholae missions, setting objectives that serve both the Coalition's strategic interests and the Tetragon's broader agenda.
 
@@ -26,10 +26,10 @@ The nature of the Admiral's leadership style — whether hands-off or micromanag
 ## Mechanics
 
 **State:** Not specified
-**Allegiance:** [[The Coalition]] / Tetragon
+**Allegiance:** The Coalition / Tetragon
 **CID:** `AD70CQ29` (Legal Coalition CID)
 
-- Commands the [[Scholae Palatinae]]
+- Commands the Scholae Palatinae
 - Briefs and directs PCs during Campaign Arc 4
 - Represents Tetragon-level military authority
 - Orders carry institutional weight
@@ -41,8 +41,8 @@ The nature of the Admiral's leadership style — whether hands-off or micromanag
 
 ## Links
 
-- [[The Coalition]]
-- [[Scholae Palatinae]]
+- The Coalition
+- Scholae Palatinae
 - [[Tejun]]
 - [[Concetta Allegro]]
 - [[Malachite]]

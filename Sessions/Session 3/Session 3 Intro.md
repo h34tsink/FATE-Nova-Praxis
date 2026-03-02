@@ -3,11 +3,11 @@
 
 ## Scene Setting
 
-Amidst the void of space, where stars dance and dreams are woven into the tapestry of the cosmos, the aftermath of conflict and chaos lay bare on Europa Station. Here, the remnants of Zephyr Solis's fateful decision linger, a testimony to the fragile balance between ambition and consequence. As the airlock's ruptured wound gapes, so too does the vast expanse of [[Jupiter]] fill the view, its colossal form overshadowing all else, a silent behemoth reflecting upon its children's actions with its singular red eye.
+Amidst the void of space, where stars dance and dreams are woven into the tapestry of the cosmos, the aftermath of conflict and chaos lay bare on Europa Station. Here, the remnants of Zephyr Solis's fateful decision linger, a testimony to the fragile balance between ambition and consequence. As the airlock's ruptured wound gapes, so too does the vast expanse of Jupiter fill the view, its colossal form overshadowing all else, a silent behemoth reflecting upon its children's actions with its singular red eye.
 
-The torn docking bay becomes a precipice of reflection, a fracture between the known and the unknown. Beyond it, [[Jupiter]], in its magnificence, offers a meditation on our insignificance and yet, paradoxically, our potential. For within its looming shadow, one can't help but ponder - in this vast universe, swirling with uncertainties, what drives one to seek power, to make choices that alter destinies, and what cost comes with such pursuits?
+The torn docking bay becomes a precipice of reflection, a fracture between the known and the unknown. Beyond it, Jupiter, in its magnificence, offers a meditation on our insignificance and yet, paradoxically, our potential. For within its looming shadow, one can't help but ponder - in this vast universe, swirling with uncertainties, what drives one to seek power, to make choices that alter destinies, and what cost comes with such pursuits?
 
-You gather on this edge, drawn into a dance of existence and purpose, treading the line between what has been and what's yet to come. Your journey intertwined with the threads of fate and choice, and with [[Jupiter]] as your witness, you move forward, finding your path in a universe that’s both indifferent and profoundly connected.
+You gather on this edge, drawn into a dance of existence and purpose, treading the line between what has been and what's yet to come. Your journey intertwined with the threads of fate and choice, and with Jupiter as your witness, you move forward, finding your path in a universe that’s both indifferent and profoundly connected.
 
 ---
 
@@ -28,7 +28,7 @@ The party regroups on Europa Station, reflecting on the consequences of recent e
 ## Key Events
 
 - The aftermath of the airlock breach and Zephyr Solis's decision is felt throughout the station.
-- [[Jupiter]] serves as a constant reminder of the stakes and the scale of their actions.
+- Jupiter serves as a constant reminder of the stakes and the scale of their actions.
 - The party begins to plan their next moves, setting the stage for future sessions.
 
 ---

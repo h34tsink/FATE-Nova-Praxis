@@ -111,14 +111,14 @@ Venus remains fundamentally hostile despite settlement:
 
 ## Related Locations
 
-- [[The Venusian Maiden]] (research station)
-- [[Gondolin]] (apostate city)
+- The Venusian Maiden (research station)
+- Gondolin (apostate city)
 - [[Mercury]] (nearby inner planet)
 - [[Earth]] (comparison to origin world)
 
 ## Related Factions
 
-- [[Apostates]]
-- [[House Dalianis]]
-- [[Purists]]
-- [[Transhumans]]
+- [[Factions/Ideologies/Apostates]]
+- House Dalianis
+- [[Factions/Ideologies/Purists]]
+- [[Factions/Ideologies/Transhumans]]

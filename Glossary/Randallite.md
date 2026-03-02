@@ -2,7 +2,7 @@
 
 **Origin:** Lisa Randall (brane cosmology, Randall-Sundrum model)
 **Class:** Exotic material — bulk-precipitated crystalline metal
-**Summary:** The only known material that originates outside our brane. Randallite precipitates from the multiversal bulk under extreme energy conditions, condensing into a crystalline metallic lattice that acts as a natural resonant anchor for [[Glossary/Pneuma|Pneuma]] effects.
+**Summary:** The only known material that originates outside our brane. Randallite precipitates from the multiversal bulk under extreme energy conditions, condensing into a crystalline metallic lattice that acts as a natural resonant anchor for Pneuma effects.
 
 ---
 
@@ -42,7 +42,7 @@ Without randallite (or its synthetic mimics), Pneuma effects require a rare natu
 
 **Two forms exist:**
 - **Natural randallite** — alien-origin or stellar-precipitated. Higher purity, stronger resonance, rarer. Used in [[Rules and Mechanics/Pneuma Rules/Pneuma Unified Rules (Draft)|Tier III-IV artifacts]].
-- **Synthetic randallite** — Mimir-derived fabrication mimics the lattice structure using achievable physics. Lower purity, noisier [[Glossary/Signature|signature]], more available. Used in Tier I-II artifacts. Often called simply "synthetic" or "synth-rand."
+- **Synthetic randallite** — Mimir-derived fabrication mimics the lattice structure using achievable physics. Lower purity, noisier signature, more available. Used in Tier I-II artifacts. Often called simply "synthetic" or "synth-rand."
 
 ---
 
@@ -103,7 +103,7 @@ Randallite has accumulated names the way any valuable, dangerous, and politicall
 
 - A derelict freighter's manifest lists "bulk substrate, 400g" — enough to build multiple Tier III artifacts. Every faction wants it.
 - A Kimura lab achieves controlled precipitation for 0.3 seconds. The resulting sample is 11 milligrams. The energy bill would power a station for a week. They want to do it again.
-- Street dealer is selling "black glass" that's actually synth-rand with a dirty lattice — it works, but the [[Glossary/Signature|signature]] is deafening. HPA is already triangulating.
+- Street dealer is selling "black glass" that's actually synth-rand with a dirty lattice — it works, but the signature is deafening. HPA is already triangulating.
 - A PC finds a randallite seed in a place it shouldn't be — inside a pre-Mimir ruin, in a human grave, in their own sleeve's maintenance cavity.
 
 ---

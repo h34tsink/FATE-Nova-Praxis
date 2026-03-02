@@ -102,7 +102,7 @@
 ## Obsidian Link Update Strategy
 
 **Automatic Updates:**
-- Obsidian will auto-update most `[[WikiLinks]]` when files are moved within the app
+- Obsidian will auto-update most `WikiLinks` when files are moved within the app
 - Must use Obsidian's file move functionality, not OS file manager
 
 **Manual Updates Required:**

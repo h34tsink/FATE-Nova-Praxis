@@ -2,7 +2,7 @@
 - **Division:** Centurions (Security Patrol)
 - **Appearance:** 
     - Tall, rugged man with close-cropped salt-and-pepper hair and piercing blue eyes.
-- **[[Background]]:** 
+- **[[Characters/Players/Grace Pryzbylski/Background]]:** 
     - Captain Guinness has a storied history in the Centurions, having been a key figure in various high-profile operations across Coalition space. Known for his no-nonsense approach and unwavering dedication to duty, he’s respected by both his peers and subordinates.
 - **Character Trait:** 
     - Commanding presence, tactical thinker.

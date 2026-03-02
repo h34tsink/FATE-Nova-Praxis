@@ -1,6 +1,6 @@
 #Jinzhan #house 
 # Jinzhan (GIN-ZAH-ON)
-**Traits:** Strongly Purist, Independent and Isolationist, Seeks the destruction of [[Earth]]
+**Traits:** Strongly Purist, Independent and Isolationist, Seeks the destruction of Earth
 
 **Discounts:** Cost of purchasing any of the following types of goods is reduced by 1:
 - Construction

@@ -14,7 +14,7 @@ aliases:
 
 ## Lore
 
-The Chickenhawk is a mid-size cargo vessel originally registered to a false CID by the smuggler Lester Lucas. Outwardly unremarkable, its interior has been extensively modified with hidden compartments, a mnemonics lab, and a resurrection chamber — an extraordinarily rare and valuable configuration. The ship was seized by the [[Talons of Freedom]] following Lucas's death and may be recoverable by the PCs during the Ghosts in Darkness adventure.
+The Chickenhawk is a mid-size cargo vessel originally registered to a false CID by the smuggler Lester Lucas. Outwardly unremarkable, its interior has been extensively modified with hidden compartments, a mnemonics lab, and a resurrection chamber — an extraordinarily rare and valuable configuration. The ship was seized by the Talons of Freedom following Lucas's death and may be recoverable by the PCs during the Ghosts in Darkness adventure.
 
 ## Mechanics
 
@@ -79,11 +79,11 @@ The Chickenhawk is a mid-size cargo vessel originally registered to a false CID 
 
 ## GM Notes
 
-Registered to a false CID by Lester Lucas. Seized by the [[Talons of Freedom]]. The PCs may recover it during the Ghosts in Darkness adventure. Includes a mnemonics lab and resurrection chamber — rare and valuable, making this ship a significant prize. The damaged umbilical is a plot hook that requires repair before the ship can dock safely at most stations.
+Registered to a false CID by Lester Lucas. Seized by the Talons of Freedom. The PCs may recover it during the Ghosts in Darkness adventure. Includes a mnemonics lab and resurrection chamber — rare and valuable, making this ship a significant prize. The damaged umbilical is a plot hook that requires repair before the ship can dock safely at most stations.
 
 ## Links
 
 - [[Characters/NPCs/Named NPCs/Lester Lucas]]
-- [[Talons of Freedom]]
-- [[Characters/NPCs/Vehicles/Index|Vehicles Index]]
+- Talons of Freedom
+- Vehicles Index
 - [[Glossary/Index]]

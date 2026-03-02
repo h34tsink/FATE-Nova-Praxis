@@ -242,7 +242,7 @@ Official programs fall into these categories:
 
 ### Valare's Specialization
 
-[[Valare]] is a **cover-up specialist** who worked for House Tsarya during the Shadow War. Her program selection reflects this role:
+Valare is a **cover-up specialist** who worked for House Tsarya during the Shadow War. Her program selection reflects this role:
 
 - **Track Eraser** - Her signature ability; critical for post-operation cleanup
 - **Ghost Protocol** - Allows her to work undetected during active operations

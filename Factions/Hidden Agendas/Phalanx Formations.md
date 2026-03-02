@@ -148,9 +148,9 @@ Phalanx Formations represent:
 
 ## Related Factions
 
-- [[Coalition of Free States]]
-- [[Oversight]] (governing body)
-- [[Protectorate]] (military branch)
-- [[Existential Threats]] (concept)
-- [[WMDs]] (weapons)
-- [[Black Operations]] (concept)
+- Coalition of Free States
+- [[Glossary/Oversight]] (governing body)
+- [[Factions/The Coalition/Protectorate]] (military branch)
+- Existential Threats (concept)
+- WMDs (weapons)
+- Black Operations (concept)

@@ -13,5 +13,5 @@ Europa Station is a major Coalition installation in the Jovian sphere, used as a
 - [[Sessions/Session 1/Session 1 - Game Summary]]
 - [[Sessions/Session 2/Session 2 - Game Summary]]
 - [[Sessions/Session 3/Session 3 Intro]]
-- [[Apostate]]
-- [[Scholae Palatinae]]
+- [[Groups/Apostate]]
+- Scholae Palatinae

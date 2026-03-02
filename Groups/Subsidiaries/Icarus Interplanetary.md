@@ -1,1 +1,1 @@
-A subsidiary of [[House Cipriani]], specializes in the transport of goods. Most planets have an Icarus Hub in orbit around it, which is usually the first stop for any imports and exports.
+A subsidiary of House Cipriani, specializes in the transport of goods. Most planets have an Icarus Hub in orbit around it, which is usually the first stop for any imports and exports.

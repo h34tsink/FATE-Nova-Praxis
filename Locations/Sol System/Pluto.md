@@ -221,13 +221,13 @@ Pluto represents the absolute frontier of human civilization—the farthest perm
 
 - [[Persephone Station]] (orbital research platform)
 - [[Charon Crossing]] (mining colony)
-- [[Erebos Depths]] (underground habitat)
+- Erebos Depths (underground habitat)
 - [[Neptune]] (nearest major planet)
 - [[Kuiper Belt]] (surrounding region)
 
 ## Related Factions
 
-- [[Coalition of Free States]]
-- [[House Kimura]]
-- [[House Dalianis]]
-- [[Apostates]] (possible refuge)
+- Coalition of Free States
+- House Kimura
+- House Dalianis
+- [[Factions/Ideologies/Apostates]] (possible refuge)

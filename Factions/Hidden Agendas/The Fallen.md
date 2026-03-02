@@ -150,9 +150,9 @@ Among Coalition's most serious threats despite limited military capability:
 
 ## Related Factions
 
-- [[Coalition of Free States]]
-- [[Savant]] (term)
-- [[Mimir]]
-- [[Consciousness Upload]]
-- [[SIM]]
-- [[Fork]] (consciousness copying technology)
+- Coalition of Free States
+- [[Glossary/Savant]] (term)
+- [[Glossary/Mimir]]
+- [[Glossary/Consciousness Upload]]
+- [[Glossary/SIM]]
+- [[Glossary/Fork]] (consciousness copying technology)

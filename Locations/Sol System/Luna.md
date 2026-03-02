@@ -161,7 +161,7 @@ Luna represents humanity's first true off-world colony and remains crucial to Co
 ## Related Locations
 
 - [[Serro]] (House Silva city)
-- [[Asola]] (House Tsarya city)
+- Asola (House Tsarya city)
 - [[Rho]] (Gambling and Shadow War hub)
 - [[Odysseus Station]] (Research facility)
 - [[Earth]] (parent body, visible from Luna)
@@ -169,12 +169,12 @@ Luna represents humanity's first true off-world colony and remains crucial to Co
 
 ## Related Factions
 
-- [[House Silva]]
-- [[House Tsarya]]
-- [[House Cipriani]]
-- [[House Kimura]]
-- [[House Dalianis]]
-- [[Talons of Freedom]]
-- [[Apostates]]
-- [[Transhumans]]
-- [[Purists]]
+- House Silva
+- House Tsarya
+- House Cipriani
+- House Kimura
+- House Dalianis
+- Talons of Freedom
+- [[Factions/Ideologies/Apostates]]
+- [[Factions/Ideologies/Transhumans]]
+- [[Factions/Ideologies/Purists]]

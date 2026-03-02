@@ -132,11 +132,11 @@ Talons of Freedom represent:
 
 ## Related Factions
 
-- [[House Silva]]
-- [[Apostates]]
+- House Silva
+- [[Factions/Ideologies/Apostates]]
 - [[Rings of Olympus]]
 - [[Remnant Forces]]
-- [[Coalition of Free States]]
+- Coalition of Free States
 - [[Piracy and Insurgency]]
-- [[Vantage]] (location)
-- [[Naesock Processing Hub]] (location)
+- [[Locations/Sol System/Vantage]] (location)
+- Naesock Processing Hub (location)

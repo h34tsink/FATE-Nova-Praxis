@@ -2,4 +2,4 @@ Kuiper Belt refers to the outer-system frontier of scattered stations, routes, a
 
 ## Related
 - [[Locations/Sol System/Pluto]]
-- [[Coalition of Free States]]
+- Coalition of Free States

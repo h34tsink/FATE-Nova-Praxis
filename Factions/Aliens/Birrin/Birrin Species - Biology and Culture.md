@@ -47,7 +47,7 @@ The **Birrin** are the first confirmed sapient alien species encountered by post
 **Senses:**
 - **Vision:** Excellent; independent eye control allows simultaneous multi-angle observation
 - **Vibration sense:** Exceptional; can detect minute structural vibrations through limbs and body
-- **Resonance awareness:** Natural sensitivity to harmonic frequencies (cultural importance; potential link to [[Pneuma]] phenomena)
+- **Resonance awareness:** Natural sensitivity to harmonic frequencies (cultural importance; potential link to Pneuma phenomena)
 - **Olfaction:** Moderate; chemical detection through beak apertures
 - **Thermal sense:** Acute; necessary for thermoregulation in variable environments
 
@@ -314,7 +314,7 @@ The **Birrin** are the first confirmed sapient alien species encountered by post
 
 ### What Birrin Know (Truth)
 
-The Birrin have independently discovered what humans call **[[Pneuma]]** — the "interaction layer" between consciousness and reality. They call it **The Resonance** or **The Deep Structure**.
+The Birrin have independently discovered what humans call **Pneuma** — the "interaction layer" between consciousness and reality. They call it **The Resonance** or **The Deep Structure**.
 
 **Birrin Understanding:**
 - Recognized approximately 400 years ago (Second Age research)
@@ -377,8 +377,8 @@ The Birrin have independently discovered what humans call **[[Pneuma]]** — the
 **Mechanical Basis:**
 - Use Birrin species rules from main faction file
 - Standard FATE aspects, skills, stunts
-- Compatible with Nova Praxis [[Sleeves|sleeve]] system (Birrin biosleeve)
-- Can use [[Augmentations]] adapted for hexapod anatomy
+- Compatible with Nova Praxis sleeve system (Birrin biosleeve)
+- Can use Augmentations adapted for hexapod anatomy
 
 **Character Concepts:**
 - **Envoy embedded with human crew:** Learning humanity's chaotic methods
@@ -482,7 +482,7 @@ The Birrin have independently discovered what humans call **[[Pneuma]]** — the
 - [[Mechanics/FATE/Pneuma Rules/_Pneuma Index|Pneuma System Index]]
 - [[Mechanics/FATE/Pneuma Rules/_Pneuma Rules|Pneuma Rules]]
 - [[Mechanics/FATE/Pneuma Rules/_Pneuma Lore and Physics|Pneuma Lore and Physics]]
-- [[Glossary/Pneuma-related terms]]
+- Pneuma-related terms
 
 ### Factions
 - [[Factions/Aliens/Birrin/The Chriirahn Concord|The Chriirahn Concord Faction]]

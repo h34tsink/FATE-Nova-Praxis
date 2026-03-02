@@ -32,8 +32,8 @@ Use this note to run the **Icarus Hub race to Nowak**.
 
 ## Setup Snapshot (Read/Paraphrase)
 
-- The crew must reach **Icarus Hub** orbiting [[Proch]].
-- Contacting [[Isabella Nowak|Nowak]] remotely fails; direct contact is required.
+- The crew must reach **Icarus Hub** orbiting Proch.
+- Contacting Nowak remotely fails; direct contact is required.
 - On approach, a cube section detonates: mutiny is active.
 - Hub battlespace includes Lighthouse forces, Talons/apostates, and cleanup teams.
 
@@ -41,7 +41,7 @@ Use this note to run the **Icarus Hub race to Nowak**.
 
 - **Mutiny Chaos:** route instability, crowds, fighting fronts.
 - **Frame-Up:** forged digital traces tie PCs to the uprising.
-- **Kestrel Hunt:** [[Characters/NPCs/Named NPCs/Kestrel|Kestrel]] is moving to erase liabilities.
+- **Kestrel Hunt:** Kestrel is moving to erase liabilities.
 - **System Degradation:** flaky mesh, unstable life support, sealed segments.
 
 Use and invoke scene aspects aggressively:

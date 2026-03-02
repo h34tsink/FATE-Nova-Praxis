@@ -113,8 +113,8 @@ Use transition support note: [[Part 3 Transition - All Valare Outcomes]].
 
 Pick one and continue play immediately:
 
-- [[Seren]] provides a constrained lead in exchange for non-coercion assurances.
-- Hidden Refuge route is confirmed through old mining access on [[Cere]].
+- Seren provides a constrained lead in exchange for non-coercion assurances.
+- Hidden Refuge route is confirmed through old mining access on Cere.
 - Incoming faction window: agents arrive before two more meaningful actions finish.
 
 <!-- conni: streamlined runbook -->

@@ -6,7 +6,7 @@ In the aftermath of the skirmish, the haunting hum of the defeated Dragon Spider
 
 Yet, even as the Dragon Spider's lifeblood stains the metallic floor, a shadow spreads its cold tendrils through the cosmos, a void that no light can pierce. For Death has cast its net, not of flesh and bone, but of firewalls and encrypted silence. Communication lines severed, the station is now a drifting island in an ocean of black, cut off from the touchstones of reality.
 
-You are heroes and prisoners both, knights in digital armor stranded in a fortress without a drawbridge. The Mindsets you’ve recovered [[Whisper]] promises of human essence, a glimmer of what once was. Yet they also serve as reminders—haunting echoes of lives that may never fully return. All that remains are questions. Questions that gnaw at the very fabric of your being: What are you willing to sacrifice to reach the unreachable? Who will you become when faced with the unnamable?
+You are heroes and prisoners both, knights in digital armor stranded in a fortress without a drawbridge. The Mindsets you’ve recovered Whisper promises of human essence, a glimmer of what once was. Yet they also serve as reminders—haunting echoes of lives that may never fully return. All that remains are questions. Questions that gnaw at the very fabric of your being: What are you willing to sacrifice to reach the unreachable? Who will you become when faced with the unnamable?
 
 As you stand there, confronted by the existential uncertainties of a universe that teeters on the precipice of chaos, you realize one immutable truth: The battle was but a prologue. Now begins your true odyssey—into darkness, into silence, into the very heart of Death itself.
 

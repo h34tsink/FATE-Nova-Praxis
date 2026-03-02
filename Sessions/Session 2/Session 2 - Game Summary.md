@@ -13,10 +13,10 @@ aliases:
 
 ## Key Events
 
-- The crew follows the thread from Parallax’s stolen hardware to [[Europa Station]]’s compromised maintenance and logistics.
+- The crew follows the thread from Parallax’s stolen hardware to Europa Station’s compromised maintenance and logistics.
 - Evidence confirms the station’s internal team replacements weren’t random—this is a coordinated Apostate operation with real access.
 - A confrontation escalates into an emergency response in a critical station zone (docks/maintenance/ops), forcing the crew to choose between containment and collateral.
-- [[Zephyr Solis]] makes the call that saves lives in the moment—but the station takes lasting damage (the breach seen in Session 3).
+- Zephyr Solis makes the call that saves lives in the moment—but the station takes lasting damage (the breach seen in Session 3).
 
 ## Leads / Clues
 
@@ -26,7 +26,7 @@ aliases:
 
 ## NPC / Faction Shifts
 
-- [[Europa Station]] security and command now treat the crew as capable but disruptive—assets with a risk profile.
+- Europa Station security and command now treat the crew as capable but disruptive—assets with a risk profile.
 - The Apostates mark the crew as personal obstacles (not just witnesses).
 
 ## Assets / Losses
@@ -38,7 +38,7 @@ aliases:
 
 - Who built the Apostates’ cover package (credentials + scheduling + operational familiarity)?
 - What exactly did the Apostates intend to move/steal during the chaos window?
-- What is [[Zephyr Solis]]’s personal stake (fear, loyalty, coercion, or necessity)?
+- What is Zephyr Solis’s personal stake (fear, loyalty, coercion, or necessity)?
 
 ## Next Session
 
@@ -52,7 +52,7 @@ aliases:
 
 ## Links
 
-- [[Sessions]]
-- [[Europa Station]]
-- [[Zephyr Solis]]
-- [[Apostate]]
+- Sessions
+- Europa Station
+- Zephyr Solis
+- [[Groups/Apostate]]

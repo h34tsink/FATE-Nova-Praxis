@@ -20,7 +20,7 @@ Wei Tsou is an older man, approximately 120 years old, though he appears to be i
 
 Tsou arranges to meet the PCs on one of the kill-sats orbiting Earth, a deliberate choice that underscores both the importance of the quarantine and the gravity of the mission. He offers a contract to investigate lost contact with a Jinzhan science team stationed on Enceladus. He is a practiced negotiator, but observant PCs can leverage a better deal if they read between the lines.
 
-The meeting itself carries risk. Tsou's ship is later destroyed by a [[Talons of Freedom]] bomb — a targeted attack that demonstrates how far the Talons' reach extends. Whether Tsou survives the explosion is left to the GM's discretion, and his fate could generate additional sessions of play depending on the campaign's direction.
+The meeting itself carries risk. Tsou's ship is later destroyed by a Talons of Freedom bomb — a targeted attack that demonstrates how far the Talons' reach extends. Whether Tsou survives the explosion is left to the GM's discretion, and his fate could generate additional sessions of play depending on the campaign's direction.
 
 ## Mechanics
 
@@ -41,5 +41,5 @@ The meeting itself carries risk. Tsou's ship is later destroyed by a [[Talons of
 ## Links
 
 - [[Factions/Houses/House Jinzhan]]
-- [[Talons of Freedom]]
+- Talons of Freedom
 - [[Lian Sung]]

@@ -18,47 +18,47 @@ tags:
 
 ### Sample NPCs (Provided by User)
 
-1. **[[Gabriel Adams]]** - House Silva casino manager
-2. **[[Greyton]]** - Legendary assassin
-3. **[[Jace Welder]]** - Ship captain and pilot
-4. **[[Durian Konrad]]** - Political operative
-5. **[[Xavier Wilhelm]]** - Idealist warrior
-6. **[[Tiver Andlat]]** - Criminal savant
-7. **[[Christov Draiku]]** - SIM chef/programmer
+1. **[[Characters/NPCs/Named NPCs/Gabriel Adams]]** - House Silva casino manager
+2. **[[Characters/NPCs/Named NPCs/Greyton]]** - Legendary assassin
+3. **Jace Welder** - Ship captain and pilot
+4. **Durian Konrad** - Political operative
+5. **Xavier Wilhelm** - Idealist warrior
+6. **Tiver Andlat** - Criminal savant
+7. **Christov Draiku** - SIM chef/programmer
 
 ### Converted from SWADE
 
-8. **[[Kestrel]]** - Fixer and Red Sun operative
-9. **[[Isabella Nowak]]** - House Tsarya executive
-10. **[[Characters/NPCs/Named NPCs/Valare]]** - Defector savant (deceased)
-11. **[[Chimera]]** - Major gestalt antagonist
-12. **[[Lester Lucas]]** - House Silva smuggler
-13. **[[Carmen Ashford]]** - Technophage researcher with messianic complex
-14. **[[Silvermist]]** - Notorious fixer and information broker
-15. **[[Whisper]]** - Black market dealer on Vantage Station
-16. **[[Doc Holiday]]** - Rogue Silva medic serving Apostates
-17. **[[The Fallen - War]]** - Combat-focused rogue Savant
-18. **[[The Fallen - Conquest]]** - System-conquering rogue Savant
-19. **[[The Fallen - Death]]** - Stealth assassin rogue Savant
-20. **[[The Fallen - Famine]]** - Resource-sabotaging rogue Savant
-21. **[[Cassian Rhys]]** - House Dalianis black market dealer
-22. **[[Seren]]** - Talon-friendly contact with asteroid base
-23. **[[Hydra]]** - Gestalt aberration consuming consciousness
-24. **[[Lorenzo Cipriani]]** - House Cipriani CIST technology specialist
-25. **[[Valeria Cipriani]]** - House Cipriani social coordinator and diplomat
-26. **[[The Keeper]]** - Guardian of ancient knowledge and secrets
-27. **[[The Summoner]]** - Master of digital conjuring and VR manipulation
-28. **[[The Trapper]]** - Tactical genius specializing in ambushes and environmental control
-29. **[[The Harvester]]** - Resource extractor and opportunistic collector
-23. **[[Hydra]]** - Gestalt aberration consuming consciousness
-23. **[[Lorenzo Cipriani]]** - House Cipriani CIST technology specialist
-24. **[[Valeria Cipriani]]** - House Cipriani social coordinator and diplomat
+8. **Kestrel** - Fixer and Red Sun operative
+9. **Isabella Nowak** - House Tsarya executive
+10. **Valare** - Defector savant (deceased)
+11. **Chimera** - Major gestalt antagonist
+12. **[[Characters/NPCs/Named NPCs/Lester Lucas]]** - House Silva smuggler
+13. **Carmen Ashford** - Technophage researcher with messianic complex
+14. **Silvermist** - Notorious fixer and information broker
+15. **Whisper** - Black market dealer on Vantage Station
+16. **Doc Holiday** - Rogue Silva medic serving Apostates
+17. **The Fallen - War** - Combat-focused rogue Savant
+18. **The Fallen - Conquest** - System-conquering rogue Savant
+19. **The Fallen - Death** - Stealth assassin rogue Savant
+20. **The Fallen - Famine** - Resource-sabotaging rogue Savant
+21. **Cassian Rhys** - House Dalianis black market dealer
+22. **Seren** - Talon-friendly contact with asteroid base
+23. **Hydra** - Gestalt aberration consuming consciousness
+24. **Lorenzo Cipriani** - House Cipriani CIST technology specialist
+25. **Valeria Cipriani** - House Cipriani social coordinator and diplomat
+26. **The Keeper** - Guardian of ancient knowledge and secrets
+27. **The Summoner** - Master of digital conjuring and VR manipulation
+28. **The Trapper** - Tactical genius specializing in ambushes and environmental control
+29. **The Harvester** - Resource extractor and opportunistic collector
+23. **Hydra** - Gestalt aberration consuming consciousness
+23. **Lorenzo Cipriani** - House Cipriani CIST technology specialist
+24. **Valeria Cipriani** - House Cipriani social coordinator and diplomat
 
 ### Generic NPCs
 
-- **[[Apostate Street Tough]]**
-- **[[Cyber-Merc]]**
-- **[[Security Guard]]**
+- **[[Characters/NPCs/Generic NPCs/Apostate Street Tough]]**
+- **[[Characters/NPCs/Generic NPCs/Cyber-Merc]]**
+- **[[Characters/NPCs/Generic NPCs/Security Guard]]**
 
 ## Remaining SWADE NPCs to Convert
 

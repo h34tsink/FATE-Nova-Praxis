@@ -21,7 +21,7 @@ aliases:
 
 **Campaign Arc:** Civil Unrest Part 3  
 **Session(s):** Session 10+ (or triggered when PCs finish [[Sessions/Valare's Situation|Valare situation]])  
-**Primary Focus:** Background chaos while PCs pursue [[Characters/NPCs/Nowak|Nowak's location]]  
+**Primary Focus:** Background chaos while PCs pursue Nowak's location  
 **Status:** Ready to activate  
 **Scope:** Regional destabilization, Nowak's Talon connection revealed, hub destruction, 400-600 Talon recruitment
 
@@ -29,7 +29,7 @@ aliases:
 
 ## Overview
 
-Until now, the PCs have only heard whispers about the [[Factions/Talons of Freedom|Talons of Freedom]] planning a big move against the Coalition. Those rumors are about to materialize into a **full-scale mutiny operation**.
+Until now, the PCs have only heard whispers about the Talons of Freedom planning a big move against the Coalition. Those rumors are about to materialize into a **full-scale mutiny operation**.
 
 **The Icarus Hub** has been selected as target. About a year ago, Talon leadership approved "Fracture Protocol"—a coordinated strike against one of the Coalition's critical infrastructure nodes. This hub not only houses a growing, disgruntled working class but also offers immense strategic and material value if seized. Its fall would:
 
@@ -53,7 +53,7 @@ The Talons know they cannot withstand full Coalition military might. This is not
 
 ### Preparation Phase (Completed Before Session Start)
 
-**With [[Characters/NPCs/Chimera|Chimera]]'s aid**, the Talons have spent months preparing:
+**With Chimera's aid**, the Talons have spent months preparing:
 
 **Infrastructure Infiltration:**
 - Planted **20-30 agents** throughout the hub in various roles (maintenance, security, logistics, docking control)
@@ -221,7 +221,7 @@ This is NOT a coincidence that PCs are chasing Nowak while this happens.
 ### The Real Situation
 
 **Nowak's True Identity:**
-- Is a [[Factions/Talons of Freedom|Talon of Freedom]] **high-level coordinator**
+- Is a Talon of Freedom **high-level coordinator**
 - Her "mysterious outpost" location is actually a **Talon staging base**
 - The job she hired the PCs for is part of larger Talon preparation
 

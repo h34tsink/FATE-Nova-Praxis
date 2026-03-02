@@ -34,4 +34,4 @@ aliases:
 - **Dagger, Mono-Edged** WR: 2 *(Small)*
 
 ## GM Notes
-The **[[Stunt|Payback]]** allows the Street Tough to spend an **[[Fate Point|FP]]** to make an attack against the person who injured them as an Instant Action any time they are physically attacked and suffer a **[[Consequences|Consequence]]**.
+The **[[Glossary/Stunt|Payback]]** allows the Street Tough to spend an **[[Glossary/Fate Point|FP]]** to make an attack against the person who injured them as an Instant Action any time they are physically attacked and suffer a **[[Glossary/Consequences|Consequence]]**.

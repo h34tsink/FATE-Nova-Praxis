@@ -148,7 +148,7 @@ Neptune represents the outer boundary of Coalition-controlled space. The ice gia
 
 ## Related Locations
 
-- [[Naesock Processing Hub]] (primary facility)
+- Naesock Processing Hub (primary facility)
 - [[Triton]] (active ice moon)
 - [[Uranus]] (sister ice giant)
 - [[Saturn]] (inner gas giant)
@@ -156,7 +156,7 @@ Neptune represents the outer boundary of Coalition-controlled space. The ice gia
 
 ## Related Factions
 
-- [[House Kimura]]
-- [[Coalition of Free States]]
-- [[Talons of Freedom]]
-- [[Monitors]]
+- House Kimura
+- Coalition of Free States
+- Talons of Freedom
+- [[Glossary/Monitors]]

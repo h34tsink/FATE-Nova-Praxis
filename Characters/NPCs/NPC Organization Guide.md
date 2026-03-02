@@ -15,22 +15,22 @@ This vault organizes NPCs by complexity and campaign importance:
 **Location:** `Characters/NPCs/Generic NPCs/`
 
 These are template-style characters designed for quick use in encounters. They have:
-- Basic stats and **[[Aspect]]s**
-- Simple **[[Stunt]]s** and gear
+- Basic stats and **[[Glossary/Aspect]]s**
+- Simple **[[Glossary/Stunt]]s** and gear
 - Intended for multiple uses (guards, thugs, common enemies)
 - Easy to scale up or down for different encounters
 
 **Examples:**
-- [[Apostate Street Tough]]
-- [[Apostate Worker]]
-- [[Cyber-Merc]]
-- [[Security Guard]]
-- [[Lighthouse Heavy]]
-- [[Lighthouse Security Operative]]
-- [[Lighthouse Officer]]
-- [[Red Sun Enforcer]]
-- [[Talon of Freedom Soldier]]
-- [[Talon of Freedom Officer]]
+- [[Characters/NPCs/Generic NPCs/Apostate Street Tough]]
+- [[Characters/NPCs/Generic NPCs/Apostate Worker]]
+- [[Characters/NPCs/Generic NPCs/Cyber-Merc]]
+- [[Characters/NPCs/Generic NPCs/Security Guard]]
+- [[Characters/NPCs/Generic NPCs/Lighthouse Heavy]]
+- [[Characters/NPCs/Generic NPCs/Lighthouse Security Operative]]
+- [[Characters/NPCs/Generic NPCs/Lighthouse Officer]]
+- [[Characters/NPCs/Generic NPCs/Red Sun Enforcer]]
+- [[Characters/NPCs/Generic NPCs/Talon of Freedom Soldier]]
+- [[Characters/NPCs/Generic NPCs/Talon of Freedom Officer]]
 
 
 ## Named NPCs (Major Characters)
@@ -39,49 +39,49 @@ These are template-style characters designed for quick use in encounters. They h
 These are unique individuals with:
 - Full character development and backgrounds
 - Complex motivations and relationships
-- Detailed stat blocks with multiple **[[Aspect]]s**
+- Detailed stat blocks with multiple **[[Glossary/Aspect]]s**
 - Campaign-significant roles
 - Story hooks and adventure seeds
 
 **Patrons & Contacts:**
-- [[Gabriel Adams]] — Casino manager, transhumanist patron/antagonist (House Silva)
-- [[Catalyst]] — Enigmatic Cipriani representative, hires Auxiliaries
-- [[Kestrel]] — Fixer and apostate information broker (House Kimura)
-- [[Isabella Nowak]] — Desperate House Tsarya executive
-- [[Horizon]] — Phalanx Formation handler (House Silva / Oversight)
-- [[Wei Tsou]] — House Jinzhan patron for the Enceladus mission
-- [[Lian Sung]] — House Jinzhan logistics coordinator
-- [[Concetta Allegro]] — House Cipriani intel operative
-- [[Salvadore Bendry]] — Second Chances mnemonics engineer
+- [[Characters/NPCs/Named NPCs/Gabriel Adams]] — Casino manager, transhumanist patron/antagonist (House Silva)
+- [[Characters/NPCs/Named NPCs/Catalyst]] — Enigmatic Cipriani representative, hires Auxiliaries
+- Kestrel — Fixer and apostate information broker (House Kimura)
+- Isabella Nowak — Desperate House Tsarya executive
+- [[Characters/NPCs/Named NPCs/Horizon]] — Phalanx Formation handler (House Silva / Oversight)
+- [[Characters/NPCs/Named NPCs/Wei Tsou]] — House Jinzhan patron for the Enceladus mission
+- [[Characters/NPCs/Named NPCs/Lian Sung]] — House Jinzhan logistics coordinator
+- [[Characters/NPCs/Named NPCs/Concetta Allegro]] — House Cipriani intel operative
+- [[Characters/NPCs/Named NPCs/Salvadore Bendry]] — Second Chances mnemonics engineer
 
 **Antagonists & Threats:**
-- [[Chimera]] — Major campaign villain, gestalt ego entity
-- [[General Stanislaw Markov]] — House Tsarya traitor, campaign-arc antagonist
-- [[Traeger]] — "The Viking," Knight of House Dalianis, celebrity warrior
-- [[Greyton]] — Legendary ancient assassin (Apostate)
-- [[Aaron Blackburn]] — True leader of the Talons of Freedom under deep cover
-- [[Dr. Javier Schulz]] — Creator of the Progenesis virus (House Silva)
-- [[Dr. Haruto Nakamura]] — Illegal ego-merging researcher, Chimera's creator
-- [[Rusila Alvid]] — Pirate leader operating from New Turin
+- Chimera — Major campaign villain, gestalt ego entity
+- [[Characters/NPCs/Named NPCs/General Stanislaw Markov]] — House Tsarya traitor, campaign-arc antagonist
+- [[Characters/NPCs/Named NPCs/Traeger]] — "The Viking," Knight of House Dalianis, celebrity warrior
+- [[Characters/NPCs/Named NPCs/Greyton]] — Legendary ancient assassin (Apostate)
+- [[Characters/NPCs/Named NPCs/Aaron Blackburn]] — True leader of the Talons of Freedom under deep cover
+- [[Characters/NPCs/Named NPCs/Dr. Javier Schulz]] — Creator of the Progenesis virus (House Silva)
+- [[Characters/NPCs/Named NPCs/Dr. Haruto Nakamura]] — Illegal ego-merging researcher, Chimera's creator
+- [[Characters/NPCs/Named NPCs/Rusila Alvid]] — Pirate leader operating from New Turin
 
 **Supporting Cast:**
-- [[Rin Sakamoto]] — Pacifist biologist, antiphage discoverer (House Kimura)
-- [[Lester Lucas]] — Smuggler, captain of The Chickenhawk (House Silva)
-- [[Castor]] — The Viking's partner and handler (House Dalianis)
-- [[Mogi]] — House Jinzhan informant, murdered by the Viking
-- [[Geist]] — Seraphim field agent on Sanctuary
-- [[Admiral Drivas]] — Tetragon admiral, Scholae Palatinae commander
-- [[Tejun]] — SIM advisor to the Scholae (House Kimura)
-- [[Malachite]] — Grigori crew, Tsarya manipulator in the Scholae
-- [[Camber Roche]] — Mayor of Gondolin apostate enclave
-- [[Tarj McClaren]] — Centurion pressuring apostates on Asola
+- [[Characters/NPCs/Named NPCs/Rin Sakamoto]] — Pacifist biologist, antiphage discoverer (House Kimura)
+- [[Characters/NPCs/Named NPCs/Lester Lucas]] — Smuggler, captain of The Chickenhawk (House Silva)
+- [[Characters/NPCs/Named NPCs/Castor]] — The Viking's partner and handler (House Dalianis)
+- [[Characters/NPCs/Named NPCs/Mogi]] — House Jinzhan informant, murdered by the Viking
+- [[Characters/NPCs/Named NPCs/Geist]] — Seraphim field agent on Sanctuary
+- [[Characters/NPCs/Named NPCs/Admiral Drivas]] — Tetragon admiral, Scholae Palatinae commander
+- [[Characters/NPCs/Named NPCs/Tejun]] — SIM advisor to the Scholae (House Kimura)
+- [[Characters/NPCs/Named NPCs/Malachite]] — Grigori crew, Tsarya manipulator in the Scholae
+- [[Characters/NPCs/Named NPCs/Camber Roche]] — Mayor of Gondolin apostate enclave
+- [[Characters/NPCs/Named NPCs/Tarj McClaren]] — Centurion pressuring apostates on Asola
 
 **Ebon Jackal Crew** *(see [[The Ebon Jackal Crew]])*:
-- [[Jace Welder]] — Captain and pilot
-- [[Durian Konrad]] — Political operative (House Silva)
-- [[Xavier Wilhelm]] — Idealist warrior (House Cipriani)
-- [[Tiver Andlat]] — Criminal savant hacker (House Kimura)
-- [[Christov Draiku]] — SIM chef/programmer (House Tsarya)
+- Jace Welder — Captain and pilot
+- Durian Konrad — Political operative (House Silva)
+- Xavier Wilhelm — Idealist warrior (House Cipriani)
+- Tiver Andlat — Criminal savant hacker (House Kimura)
+- Christov Draiku — SIM chef/programmer (House Tsarya)
 
 
 ## Crew Groups
@@ -101,22 +101,22 @@ Pre-designed groups of NPCs that work together, providing:
 **Location:** `Characters/NPCs/Drones and Creatures/`
 
 Autonomous combat platforms and synthetic creatures with full stat blocks:
-- [[Harvester]] — Delta head-hunting drone (auto-decapitates Taken Out targets)
-- [[Kraken]] — Epsilon Federation-era tentacle horror (boss-level)
-- [[Imex V44 Case Spider]] — Beta infiltration drone disguised as a briefcase
-- [[Aegis S-11 Wasp]] — Alpha personal defense drone
-- [[Black Gate Cerberus Guardian]] — Gamma dog-shaped security drone (AR:6)
-- [[Ardent Lonestar Armed Responder]] — Gamma humanoid security drone (AR:7, WR:7)
+- [[Characters/NPCs/Drones and Creatures/Harvester]] — Delta head-hunting drone (auto-decapitates Taken Out targets)
+- [[Characters/NPCs/Drones and Creatures/Kraken]] — Epsilon Federation-era tentacle horror (boss-level)
+- [[Characters/NPCs/Drones and Creatures/Imex V44 Case Spider]] — Beta infiltration drone disguised as a briefcase
+- [[Characters/NPCs/Drones and Creatures/Aegis S-11 Wasp]] — Alpha personal defense drone
+- [[Characters/NPCs/Drones and Creatures/Black Gate Cerberus Guardian]] — Gamma dog-shaped security drone (AR:6)
+- [[Characters/NPCs/Drones and Creatures/Ardent Lonestar Armed Responder]] — Gamma humanoid security drone (AR:7, WR:7)
 
 
 ## Vehicles & Ships
 **Location:** `Characters/NPCs/Vehicles/`
 
 Ships and combat vehicles with full vehicular stat blocks:
-- [[The Chickenhawk]] — Size 4 smuggling cargo ship (has resurrection chamber)
-- [[Raptor Interceptor]] — Size 2 Dalianis fighter drone (glass cannon)
-- [[Silverpike]] — Size 4 House Turin smuggler ship (unarmed, fast)
-- [[Honey Badger]] — Size 3 Tsarya assault warframe (slow but devastating)
+- [[Characters/NPCs/Vehicles/The Chickenhawk]] — Size 4 smuggling cargo ship (has resurrection chamber)
+- [[Characters/NPCs/Vehicles/Raptor Interceptor]] — Size 2 Dalianis fighter drone (glass cannon)
+- [[Characters/NPCs/Vehicles/Silverpike]] — Size 4 House Turin smuggler ship (unarmed, fast)
+- [[Characters/NPCs/Vehicles/Honey Badger]] — Size 3 Tsarya assault warframe (slow but devastating)
 
 
 ## Recurring & Advancing NPCs
@@ -125,8 +125,8 @@ Some NPCs may return in multiple sessions or advance in power and influence. Tra
 
 ### Generic NPCs
 - **Copy and modify** for different encounters
-- **Scale difficulty** by adjusting **[[Skill]]** levels
-- **Add custom [[Aspect]]s** for specific situations
+- **Scale difficulty** by adjusting **[[Glossary/Skill]]** levels
+- **Add custom [[Glossary/Aspect]]s** for specific situations
 - **Combine multiple types** for varied encounters
 
 ### Named NPCs
@@ -171,4 +171,4 @@ Some NPCs may return in multiple sessions or advance in power and influence. Tra
 ---
 
 
-*For more about NPC creation in FATE, see the core rules on **[[Stunt]]s**, **[[Aspect]]s**, and character advancement.*
+*For more about NPC creation in FATE, see the core rules on **[[Glossary/Stunt]]s**, **[[Glossary/Aspect]]s**, and character advancement.*

@@ -62,7 +62,7 @@ The team is tasked with infiltrating a high-security corporate office to steal a
 
 ---
 
-### Detailed Specifics for [[Silvermist]]'s Interaction with the Players
+### Detailed Specifics for Silvermist's Interaction with the Players
 
 #### The Initial Meeting with Grift
 
@@ -70,28 +70,28 @@ The team is tasked with infiltrating a high-security corporate office to steal a
 
 - **Scene Setup:** Grift receives a cryptic message on a secure channel, directing him to meet at the Nebula Lounge at a specific time. The message includes a passphrase for identification.
 
-- **Encounter Details:** [[Silvermist]] awaits in a private booth, shrouded in shadows. She greets Grift with a nod, offering a seat. She wastes no time, swiftly moving to discuss the mission, laying out holographic blueprints and data files as she talks.
+- **Encounter Details:** Silvermist awaits in a private booth, shrouded in shadows. She greets Grift with a nod, offering a seat. She wastes no time, swiftly moving to discuss the mission, laying out holographic blueprints and data files as she talks.
 
 #### Mission Briefing
 
-- **Objective Explanation:** [[Silvermist]] details the importance of the compiler template, emphasizing its rarity and the security measures protecting it.
+- **Objective Explanation:** Silvermist details the importance of the compiler template, emphasizing its rarity and the security measures protecting it.
 
 - **Intel Provided:** She shares intelligence on the building's layout, security shifts, potential weak points, and the location of the vault. She also provides information about key personnel, including the security chief and the IT specialist.
 
 - **Resources Offered:** Advanced hacking tools, a blueprint of the security system, fake IDs, and a small device capable of temporarily disabling electronic locks.
 
-- **[[Timeline]]:** She stresses the urgency of the mission, indicating a narrow window of opportunity due to an upcoming security system upgrade.
+- **[[Sessions/Session 7/Timeline]]:** She stresses the urgency of the mission, indicating a narrow window of opportunity due to an upcoming security system upgrade.
 
 #### Communication Style and Follow-Ups
 
-- **Secure Communications:** Post-meeting, [[Silvermist]] uses an encrypted messaging system for updates, coded language, and emergency contacts. She expects brief, clear updates and dislikes unnecessary chatter.
+- **Secure Communications:** Post-meeting, Silvermist uses an encrypted messaging system for updates, coded language, and emergency contacts. She expects brief, clear updates and dislikes unnecessary chatter.
 
 - **Check-Ins:** Scheduled check-ins before and after critical mission phases. She insists on being updated immediately if anything goes awry.
 
 #### Handling Conflict and Failure
 
-- **Scenario Planning:** [[Silvermist]] expects the players to plan for contingencies and to adapt as needed. She cautions against underestimating the security team.
+- **Scenario Planning:** Silvermist expects the players to plan for contingencies and to adapt as needed. She cautions against underestimating the security team.
 
-- **Response to Failure:** If the mission fails or the team is compromised, [[Silvermist]] becomes distant and calculating. She may offer a secondary mission to salvage the [[Situation]] or cut ties if she deems the team a liability.
+- **Response to Failure:** If the mission fails or the team is compromised, Silvermist becomes distant and calculating. She may offer a secondary mission to salvage the Situation or cut ties if she deems the team a liability.
 
-- **Redemption Opportunities:** Depending on the nature of the failure, [[Silvermist]] might offer a chance for redemption through another, possibly more dangerous mission, or require the team to fix their mistake without additional support.
+- **Redemption Opportunities:** Depending on the nature of the failure, Silvermist might offer a chance for redemption through another, possibly more dangerous mission, or require the team to fix their mistake without additional support.

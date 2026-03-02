@@ -48,6 +48,6 @@ tags:
 - `/npc valare-fork`
 
 ## Linked Notes
-- [[Characters/NPCs/Named NPCs/Valare]]
+- Valare
 - [[Sessions/Session 9/Valare - Character Profile]]
 - [[Sessions/Session 9/Valare - Negotiation Quick Reference (GM Cheat Sheet)]]

@@ -25,4 +25,4 @@ Valhalla is a major growth settlement on Sanctuary, often discussed as both a de
 
 ## Related
 - [[Locations/Exoplanets/Sanctuary]]
-- [[Coalition of Free States]]
+- Coalition of Free States

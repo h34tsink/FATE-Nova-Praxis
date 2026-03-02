@@ -161,9 +161,9 @@ Illumination represents:
 
 ## Related Factions
 
-- [[Coalition of Free States]]
-- [[Unseen Court]]
-- [[Mimir]]
-- [[Secret Societies]] (concept)
-- [[Information Control]] (strategy)
-- [[Conspiracy Theories]] (player speculation)
+- Coalition of Free States
+- Unseen Court
+- [[Glossary/Mimir]]
+- Secret Societies (concept)
+- Information Control (strategy)
+- Conspiracy Theories (player speculation)

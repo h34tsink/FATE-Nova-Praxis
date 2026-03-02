@@ -38,4 +38,4 @@ aliases:
 - **ME Shortsword** WR: 3
 
 ## GM Notes
-Rank-and-file [[Talons of Freedom]] fighters. Undisciplined but brave. Fights hardest when cornered — invoke "Fights Hardest with Back to the Wall" when they're outnumbered or trapped. Concentrated Fire makes them dangerous in groups. Use as cannon fodder for Talon encounters.
+Rank-and-file Talons of Freedom fighters. Undisciplined but brave. Fights hardest when cornered — invoke "Fights Hardest with Back to the Wall" when they're outnumbered or trapped. Concentrated Fire makes them dangerous in groups. Use as cannon fodder for Talon encounters.

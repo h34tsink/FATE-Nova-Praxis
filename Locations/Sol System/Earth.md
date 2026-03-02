@@ -154,10 +154,10 @@ Earth represents:
 
 ## Related Factions
 
-- [[Coalition of Free States]]
-- [[House Jinzhan]]
-- [[House Silva]]
-- [[House Dalianis]]
-- [[House Cipriani]]
-- [[Protectorate]]
-- [[Technophage]] (threat/entity)
+- Coalition of Free States
+- House Jinzhan
+- House Silva
+- House Dalianis
+- House Cipriani
+- [[Factions/The Coalition/Protectorate]]
+- [[Glossary/Technophage]] (threat/entity)

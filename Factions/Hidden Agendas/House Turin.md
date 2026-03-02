@@ -111,11 +111,11 @@ House Turin represents:
 
 ## Related Factions
 
-- [[House Tsarya]]
-- [[Apostates]]
-- [[Factions/Talons of Freedom]]
+- House Tsarya
+- [[Factions/Ideologies/Apostates]]
+- Talons of Freedom
 - [[Rings of Olympus]]
 - [[Remnant Forces]]
 - [[Piracy and Insurgency]]
-- [[Coalition of Free States]]
-- [[New Turin]]
+- Coalition of Free States
+- [[Locations/Sol System/New Turin]]

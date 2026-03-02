@@ -136,9 +136,9 @@ Afflicted represent unprecedented moral dilemma:
 
 ## Related Factions
 
-- [[Coalition of Free States]]
-- [[Apostates]]
-- [[Transhumans]]
-- [[Biotech]] (science)
-- [[Human Personhood Accord]]
-- [[Healthcare systems]] (medical)
+- Coalition of Free States
+- [[Factions/Ideologies/Apostates]]
+- [[Factions/Ideologies/Transhumans]]
+- Biotech (science)
+- [[Glossary/Human Personhood Accord]]
+- Healthcare systems (medical)

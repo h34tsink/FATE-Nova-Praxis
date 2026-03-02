@@ -65,11 +65,11 @@ Apostates span wide range of motivations:
 
 ## Related Groups & Factions
 
-- [[Coalition of Free States]]
-- [[House Turin]]
-- [[Talons of Freedom]]
-- [[Remnant Forces]]
-- [[Rings of Olympus]]
+- Coalition of Free States
+- [[Factions/Hidden Agendas/House Turin]]
+- Talons of Freedom
+- [[Factions/Hidden Agendas/Remnant Forces]]
+- [[Factions/Hidden Agendas/Rings of Olympus]]
 - [[Purists]]
 - [[Transhumans]]
 - [[Apostates in the Seraphim's Vision]]

@@ -65,12 +65,12 @@ Growing number of transhumanists/posthumans within House increasingly appreciate
 
 ## Related Factions
 
-- [[Coalition of Free States]]
+- Coalition of Free States
 - [[House Cipriani]]
 - [[House Dalianis]]
 - [[House Kimura]]
 - [[House Jinzhan]]
 - [[House Silva]]
-- [[Purists]]
-- [[House Turin]]
-- [[Transhumans]]
+- [[Factions/Ideologies/Purists]]
+- [[Factions/Hidden Agendas/House Turin]]
+- [[Factions/Ideologies/Transhumans]]

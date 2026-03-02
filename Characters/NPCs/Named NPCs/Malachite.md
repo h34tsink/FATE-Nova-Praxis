@@ -12,11 +12,11 @@ aliases:
 
 # Malachite
 
-**Summary:** Grigori crew member from [[Factions/Houses/House Tsarya]]. Part of the [[Scholae Palatinae]].
+**Summary:** Grigori crew member from [[Factions/Houses/House Tsarya]]. Part of the Scholae Palatinae.
 
 ## Lore
 
-Malachite is a [[Factions/Houses/House Tsarya]] operative assigned to the [[Scholae Palatinae]], serving as a crew member aboard the Grigori. On the surface, Malachite is another specialist contributing to the Scholae's mission. Beneath that surface lies a master manipulator with an agenda that supersedes loyalty to the PCs or the team.
+Malachite is a [[Factions/Houses/House Tsarya]] operative assigned to the Scholae Palatinae, serving as a crew member aboard the Grigori. On the surface, Malachite is another specialist contributing to the Scholae's mission. Beneath that surface lies a master manipulator with an agenda that supersedes loyalty to the PCs or the team.
 
 During the Battle of Carthage, Malachite directs operations from the Grigori's ship — and reveals a true purpose. Malachite manipulates both the PCs and [[General Stanislaw Markov]] into the canyon, engineering a scenario designed to eliminate Markov and end [[Factions/Houses/House Tsarya]]'s treachery from within. The PCs are tools in this scheme, expendable if necessary.
 
@@ -25,7 +25,7 @@ Malachite's true loyalties lie with the Tetragon and the elimination of internal
 ## Mechanics
 
 **State:** Not specified
-**Allegiance:** [[Factions/Houses/House Tsarya]] / [[Scholae Palatinae]]
+**Allegiance:** [[Factions/Houses/House Tsarya]] / Scholae Palatinae
 **CID:** `ML27TS88` (Legal Coalition CID)
 
 - Crew member aboard the Grigori
@@ -42,6 +42,6 @@ Malachite's true loyalties lie with the Tetragon and the elimination of internal
 ## Links
 
 - [[Factions/Houses/House Tsarya]]
-- [[Scholae Palatinae]]
+- Scholae Palatinae
 - [[General Stanislaw Markov]]
 - [[Admiral Drivas]]

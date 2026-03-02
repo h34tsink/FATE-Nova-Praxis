@@ -17,7 +17,7 @@ campaign: [Campaign Name]
 # [Character Name]
 
 > [!info]- Quick Reference
-> **State:** [Pure/[[Biosleeve]]/[[Cybersleeve]]/[[SIM]]]  
+> **State:** [Pure/[[Glossary/Biosleeve]]/[[Glossary/Cybersleeve]]/[[Glossary/SIM]]]  
 > **Size:** [0 for human-sized, 1 for massive, -1 for tiny]  
 > **Allegiance:** [[Factions/The Coalition/Houses Reference|[House Name]]] or [[Factions/Ideologies/Apostates|Apostate]]  
 > **Rep Rating:** [Number 4-10+ or N/A for Apostates]  
@@ -52,7 +52,7 @@ campaign: [Campaign Name]
 **5. [Expertise Aspect]** - *What are you good at?*
 
 ### Automatic Aspects *(if applicable)*
-- **[[Apotheosis|Apotheosized]]** *(Sleeved or SIM only)*
+- **[[Glossary/Apotheosis|Apotheosized]]** *(Sleeved or SIM only)*
 - **[Physical Trait]** *(Pure only)*
 - **[Sleeve-specific aspects]** *(From augmentations/modifications)*
 
@@ -116,7 +116,7 @@ campaign: [Campaign Name]
 > Each augmentation has an AV (Augmentation Value) cost
 
 ### Core Augmentations
-- **[[Augmentations#Apotheosis|Apotheosis]]** (AV 3, Free with sleeve) - Mindset & mnemonic core
+- **Apotheosis** (AV 3, Free with sleeve) - Mindset & mnemonic core
 
 ### Physical Augmentations
 - **[Augmentation Name]** (AV X) - *Brief effect*

@@ -52,5 +52,5 @@ tags:
 - `/npc chimera`
 
 ## Linked Notes
-- [[Characters/NPCs/Named NPCs/Chimera]]
+- Chimera
 - [[Sessions/Session 9/Session 9 - Beats (GM Runtime)]]

@@ -1,6 +1,6 @@
 ### **Overview**
 
-In this adventure, the players investigate a mesh blackout on **Vantage Station** that mirrors a similar incident affecting them. Their investigation leads them through a web of intrigue involving **[[SWADE - Nova Praxis/Characters/NPCs/Lester Lucas|Lester Lucas]]**, the **[[SWADE - Nova Praxis/Groups/Talons of Freedom|Talons of Freedom]]**, and ultimately points them toward **[[SWADE - Nova Praxis/Characters/NPCs/Isabella Nowak|Isabella Nowak]]** of **[[SWADE - Nova Praxis/Groups/The Coalition/Houses/House Tsarya|House Tsarya]]** on the **Icarus Hub** orbiting **[[SWADE - Nova Praxis/Locations/Exo Planets/Proch|Proch]]**. Along the way, they encounter **[[SWADE - Nova Praxis/Characters/NPCs/Chimera|Chimera]]**, a gestalt entity intent on self-preservation at any cost.
+In this adventure, the players investigate a mesh blackout on **Vantage Station** that mirrors a similar incident affecting them. Their investigation leads them through a web of intrigue involving **[[Characters/NPCs/Named NPCs/Lester Lucas|Lester Lucas]]**, the **Talons of Freedom**, and ultimately points them toward **Isabella Nowak** of **House Tsarya** on the **Icarus Hub** orbiting **Proch**. Along the way, they encounter **Chimera**, a gestalt entity intent on self-preservation at any cost.
 
 ---
 
@@ -9,9 +9,9 @@ In this adventure, the players investigate a mesh blackout on **Vantage Station*
 ### **Preparation**
 
 - **Review Key NPCs:**
-  - **[[Lester Lucas]]**: Smuggler entangled with the Talons, desperate to escape.
-  - **[[Characters/NPCs/Valare]]**: Savant whose mnemonic core holds vital information.
-  - **[[Talons of Freedom]] Members**: Antagonists with their own agenda.
+  - **[[Characters/NPCs/Named NPCs/Lester Lucas]]**: Smuggler entangled with the Talons, desperate to escape.
+  - **Valare**: Savant whose mnemonic core holds vital information.
+  - **Talons of Freedom Members**: Antagonists with their own agenda.
   - **Additional NPCs**: Dockworkers, security officers, merchants, and informants on Vantage.
 
 - **Familiarize with Locations:**
@@ -30,12 +30,12 @@ In this adventure, the players investigate a mesh blackout on **Vantage Station*
 
 **Scene Setting:**
 
-- Describe the vibrant atmosphere of Vantage Station, contrasting it with [[Asola|Asola's]] industrial environment. [[Notes for Arrival at Vantage |Arrival at Vantage]]
+- Describe the vibrant atmosphere of Vantage Station, contrasting it with Asola's industrial environment. [[Sessions/Session 7/Notes/Notes for Arrival at Vantage|Arrival at Vantage]]
 - Emphasize the strict security measures, especially regarding weapons.
 
 **NPC Interactions:**
 
-- **Security Officer:** Conducts [[SWADE - Nova Praxis/Rules and Mechanics/Setting Terminology#^62ef2e|CID]] checks and reminds them of the weapon policies.
+- **Security Officer:** Conducts CID checks and reminds them of the weapon policies.
 - **Merchant or Tour Guide:** Provides general information and hints about the station's underbelly.
 - **Whisper's Den Lead:** A subtle invitation to a hidden speakeasy for those seeking illicit goods or information.
 
@@ -70,7 +70,7 @@ In this adventure, the players investigate a mesh blackout on **Vantage Station*
 
 - **Information Broker (perhaps at Whisper's Den):**
   - Offers detailed information for a price or favor.
-  - [**Secret 3**] The [[The Chickenhawk - CHKN738921|Chickenhawk]] was involved in the blackout.
+  - [**Secret 3**] The [[Vehicles/Ships/The Chickenhawk - CHKN738921|Chickenhawk]] was involved in the blackout.
 
 **Alternative Clues if Players Deviate:**
 
@@ -467,4 +467,4 @@ In this adventure, the players investigate a mesh blackout on **Vantage Station*
 
 ---
 
-**By integrating these steps and being responsive to your players' decisions, you'll create an immersive and dynamic adventure that keeps them invested in unraveling the mystery of [[Characters/NPCs/Chimera|Chimera]] and their own forgotten past.**
+**By integrating these steps and being responsive to your players' decisions, you'll create an immersive and dynamic adventure that keeps them invested in unraveling the mystery of Chimera and their own forgotten past.**

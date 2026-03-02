@@ -182,13 +182,13 @@ Sagitta represents the Coalition's newest major colonial venture—an aggressive
 ## Related Locations
 
 - [[Sanctuary]] (sister colony)
-- [[Cygnus Alpha]] (sister colony)
+- [[Locations/Exo Planets/Cygnus Alpha]] (sister colony)
 - [[Proch]] (sister colony)
 - [[Chengdan]] (sister colony)
 
 ## Related Factions
 
-- [[Coalition of Free States]]
-- [[House Dalianis]]
-- [[House Kimura]]
-- [[Apostates]]
+- Coalition of Free States
+- House Dalianis
+- House Kimura
+- [[Factions/Ideologies/Apostates]]

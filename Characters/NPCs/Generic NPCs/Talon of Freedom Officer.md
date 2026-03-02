@@ -41,4 +41,4 @@ aliases:
 - **ME Cavalry Saber** WR: 4 *(Large)*
 
 ## GM Notes
-[[Talons of Freedom]] field commander. A force multiplier — Banner of Hope clears all stress from an ally, and Inspire Greatness gives +3 to an ally's roll. These two stunts together can dramatically extend a fight. Accepts he may die fighting for a better tomorrow. Use one per Talon squad.
+Talons of Freedom field commander. A force multiplier — Banner of Hope clears all stress from an ally, and Inspire Greatness gives +3 to an ally's roll. These two stunts together can dramatically extend a fight. Accepts he may die fighting for a better tomorrow. Use one per Talon squad.

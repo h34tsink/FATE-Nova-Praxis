@@ -11,7 +11,7 @@
 - Transition to new economic models, including the Rep-Reward system in Europe.
 - Continued reliance on traditional economies in less developed nations.
 - Significant advancements in space exploration, including the discovery of rapid alien evolution on Europa.
-- Proposals and rejections of the [[Earth]] Unification Act (EUA).
+- Proposals and rejections of the Earth Unification Act (EUA).
 
 ## 9-10 PS (2051-2052 AD)
 - Start of the construction of the space elevator 'The Beanstalk'.
@@ -26,11 +26,11 @@
 
 ## 19-24 PS (2061-2066 AD)
 - Launch of the first cold fusion-powered spacecraft, the Archangel.
-- Formation of the United Federation of [[Earth]] (The Federation).
+- Formation of the United Federation of Earth (The Federation).
 - First successful Apotheosis procedure, performed on Angelique Barns.
 
 ## 25-29 PS (2067-2071 AD)
-- Archangel aids in the colonization of [[Mars]] and the construction of the Beanstalk.
+- Archangel aids in the colonization of Mars and the construction of the Beanstalk.
 - Formation of the National Freedom Alliance (the Alliance) by the USA, Brazil, and Italy.
 - Introduction of AI pilots and gravitics-propelled flying cars, called “skiffs”.
 
@@ -57,17 +57,17 @@
 - Both the Alliance and Federation plan to explore the Sirius system.
 
 ## 53-58 PS (2095-2100 AD)
-- Discovery of a lush, [[Earth]]-like planet named [[Proch]] in the Sirius system.
-- Eruption of open warfare over [[Proch]] between the Alliance and the Federation.
+- Discovery of a lush, Earth-like planet named Proch in the Sirius system.
+- Eruption of open warfare over Proch between the Alliance and the Federation.
 
 ## 59-69 PS (2101-2111 AD)
 - Decade-long Consolidation Wars across multiple planets and star systems.
-- Rapid expansion of human colonies, including on [[Proch]], [[Cygnus Alpha]], and [[Chengdan]].
-- Olympus becomes the most populous city outside [[Earth]] and a major warzone.
+- Rapid expansion of human colonies, including on Proch, [[Locations/Exo Planets/Cygnus Alpha]], and Chengdan.
+- Olympus becomes the most populous city outside Earth and a major warzone.
 
 ## 70 PS (2112 AD)
-- Devastation of [[Earth]] by a technophage released by the Federation.
-- Spread of the technophage across major parts of [[Earth]], leading to a global catastrophe.
+- Devastation of Earth by a technophage released by the Federation.
+- Spread of the technophage across major parts of Earth, leading to a global catastrophe.
 
 ## 71 PS (2113 AD)
 - End of the war due to the technophage threat; start of the Exodus.
@@ -88,7 +88,7 @@
 
 ## 87-93 PS (2129-2135 AD)
 - Increase in attacks on House facilities by rebel groups.
-- Unusual activity observed on [[Earth]], indicating possible technophage evolution.
+- Unusual activity observed on Earth, indicating possible technophage evolution.
 
 ## 94-98 PS (2136-2140 AD) (The Present)
 - Total human population estimated at 94.6 million, with 80% as Coalition citizens.

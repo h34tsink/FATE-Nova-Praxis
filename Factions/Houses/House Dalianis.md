@@ -44,11 +44,11 @@ Dalianis is "willing to compromise" - leadership values results over political c
 
 ## Related Factions
 
-- [[Coalition of Free States]]
+- Coalition of Free States
 - [[House Cipriani]]
 - [[House Silva]]
 - [[House Kimura]]
 - [[House Jinzhan]]
 - [[House Tsarya]]
-- [[Purists]]
-- [[Apostates]]
+- [[Factions/Ideologies/Purists]]
+- [[Factions/Ideologies/Apostates]]

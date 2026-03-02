@@ -188,7 +188,7 @@ When you have any formal leverage (Concord backing, crisis situation, clear haza
 +2 to [[Glossary/Rapport|Rapport]] when communicating nonverbally through display posture, resonance taps, or vibration signals. Works best with other Birrin or those trained to read your signals.
 
 #### **Cultural Bridge**
-+2 to [[Glossary/Empathy|Empathy]] or [[Glossary/Rapport|Rapport]] when mediating between human factions. Your alien perspective lets you see past species-specific biases.
++2 to Empathy or [[Glossary/Rapport|Rapport]] when mediating between human factions. Your alien perspective lets you see past species-specific biases.
 
 ### Knowledge Stunts
 
@@ -210,7 +210,7 @@ Once per session, you may "lock" a device/door/system via resonance authority if
 ### Navigation Stunts
 
 #### **Silent Corridor**
-+2 to [[Glossary/Pilot|Pilot]] or [[Glossary/Stealth|Stealth]] when plotting routes with minimal sensor footprint or navigating "dark" space lanes. Probe-lineage training.
++2 to Pilot or Stealth when plotting routes with minimal sensor footprint or navigating "dark" space lanes. Probe-lineage training.
 
 #### **Structure Sense**
 +2 to [[Glossary/Notice|Notice]] or [[Glossary/Investigate|Investigate]] when assessing structural integrity, hidden passages, or environmental hazards through vibration/pressure awareness.
@@ -656,7 +656,7 @@ Later stunts might reflect:
 - [[Mechanics/FATE/Pneuma Rules/_Pneuma Index|Pneuma System Index]]
 
 ### Campaign Materials
-- [[Sessions/Quiet Pier mini-arc]] (if created)
+- Quiet Pier mini-arc (if created)
 - First contact scenarios
 - Containment protocol documents
 

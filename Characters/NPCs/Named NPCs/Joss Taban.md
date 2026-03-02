@@ -41,4 +41,4 @@ He's been busier than usual lately. More packages, more unfamiliar faces, more t
 ## Links
 
 - [[Locations/Asteroid Belts/Asteroids/Cere]]
-- [[Shadow Market]]
+- [[Locations/Shadow Market]]

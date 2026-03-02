@@ -146,10 +146,10 @@ Second Chances represent:
 
 ## Related Factions
 
-- [[House Tsarya]]
-- [[Coalition of Free States]]
-- [[Apostates]]
-- [[Transhumans]]
-- [[Fork]] (consciousness copying)
-- [[Consciousness Upload]]
-- [[Resurrection Chamber]]
+- House Tsarya
+- Coalition of Free States
+- [[Factions/Ideologies/Apostates]]
+- [[Factions/Ideologies/Transhumans]]
+- [[Glossary/Fork]] (consciousness copying)
+- [[Glossary/Consciousness Upload]]
+- [[Glossary/Resurrection Chamber]]

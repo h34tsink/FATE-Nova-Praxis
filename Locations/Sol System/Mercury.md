@@ -106,13 +106,13 @@ Mercury's antimatter production gives House Cipriani extraordinary leverage:
 - [[Mercurial Gateway]] (jump gate)
 - [[Balor]] (habitat)
 - [[Earth]] (connection via Eye of Sol)
-- [[House Cipriani]] (primary controller)
-- [[Specular Spread]] (facility)
-- [[Base 10]] (facility)
+- House Cipriani (primary controller)
+- Specular Spread (facility)
+- Base 10 (facility)
 
 ## Related Factions
 
-- [[House Cipriani]]
-- [[Talons of Freedom]]
-- [[Piracy and Insurgency]]
-- [[Remnant Forces]]
+- House Cipriani
+- Talons of Freedom
+- [[Factions/Hidden Agendas/Piracy and Insurgency]]
+- [[Factions/Hidden Agendas/Remnant Forces]]

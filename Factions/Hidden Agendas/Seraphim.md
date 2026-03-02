@@ -148,10 +148,10 @@ Seraphim represent:
 
 ## Related Factions
 
-- [[Coalition of Free States]]
-- [[House Kimura]]
-- [[Transhumans]]
-- [[Synthesis]] (augmentation type)
-- [[Mimir]] (ancient AI)
-- [[Apotheosis]] (consciousness uploading)
-- [[Elysium]] (location)
+- Coalition of Free States
+- House Kimura
+- [[Factions/Ideologies/Transhumans]]
+- Synthesis (augmentation type)
+- [[Glossary/Mimir]] (ancient AI)
+- [[Glossary/Apotheosis]] (consciousness uploading)
+- [[Locations/Sol System/Elysium]] (location)

@@ -124,9 +124,9 @@ Red Sun represents:
 
 ## Related Factions
 
-- [[House Kimura]]
-- [[Apostates]]
+- House Kimura
+- [[Factions/Ideologies/Apostates]]
 - [[Rings of Olympus]]
 - [[Talons of Freedom]]
-- [[Coalition of Free States]]
-- [[Transhumans]]
+- Coalition of Free States
+- [[Factions/Ideologies/Transhumans]]

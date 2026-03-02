@@ -24,17 +24,17 @@
 - **Security:** Known for its stringent safety measures, housing many important Coalition figures.
 
 ##### Charon
-- **[[Background]]:** The first Martian colony, now a center for terraforming research.
+- **[[Characters/Players/Grace Pryzbylski/Background]]:** The first Martian colony, now a center for terraforming research.
 - **Community:** Populated by transhumanists, with strong backing from Houses Silva and Kimura.
 
 ##### Minos
-- **History:** Formerly a mining site, now a growing [[apostate]] enclave.
+- **History:** Formerly a mining site, now a growing [[Groups/Apostate]] enclave.
 - **Location:** Situated in the Valles Marineris trench, predominantly underground.
 
 ##### Phobos
-- **Function:** Houses the largest production facilities of [[House Dalianis]] and a significant city.
+- **Function:** Houses the largest production facilities of House Dalianis and a significant city.
 - **Facilities:** Known for Thetis Revival Labs, the largest resleeving facility in the galaxy.
-- **Inter-House Collaboration:** A site of cooperation between [[House Dalianis]] and Jinzhan, crucial for Mars' infrastructure.
+- **Inter-House Collaboration:** A site of cooperation between House Dalianis and Jinzhan, crucial for Mars' infrastructure.
 
 ##### Deimos
 - **Cities:** Features two cities, Kratos (devoted to the Coalition military) and Voltair (with a large Catholic population).

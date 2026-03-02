@@ -31,10 +31,10 @@ You woke up 100 years late in the Nova Praxis future, owing your survival to an 
 - **Session 2:** The Europa situation escalates into open crisis; the crew confronts the inside-job and pays for hard choices as the station is left damaged and paranoid.
 - **Session 3:** Aftermath on Europa—regrouping, reckoning, and committing (or not) to the deeper conflict.
 - **Session 4:** Dragon Spider fallout and the station’s isolation; the rogue S.I.M. “Death” cuts communications and turns survival into a psychological siege.
-- **Session 5:** The crew contains “Death” inside station hostware after a possession/near-suicide spiral; they earn attention from Coalition special-ops via [[Scholae Palatinae]].
-- **Session 6:** A salvage job from [[Kestrel]] goes bad: illegal mnemonics research, erasure, and the creation of [[Chimera]]; the crew is declared dead and restored, now chasing the missing truth.
-- **Session 7:** Escape from Vantage Station with [[Lester Lucas]]; the crew recovers [[Valare]]’s mnemonic core—her biosleeve is dead, but the core survives.
-- **Session 8:** Valare’s core is restored; [[Isabella Nowak|Nowak]]’s role becomes clear; Valare’s fork is alive and hiding ([[Cere]]/[[Shadow Market]] leads); the crew secures the core and gains a battle cruiser.
+- **Session 5:** The crew contains “Death” inside station hostware after a possession/near-suicide spiral; they earn attention from Coalition special-ops via Scholae Palatinae.
+- **Session 6:** A salvage job from Kestrel goes bad: illegal mnemonics research, erasure, and the creation of Chimera; the crew is declared dead and restored, now chasing the missing truth.
+- **Session 7:** Escape from Vantage Station with [[Characters/NPCs/Named NPCs/Lester Lucas]]; the crew recovers Valare’s mnemonic core—her biosleeve is dead, but the core survives.
+- **Session 8:** Valare’s core is restored; Nowak’s role becomes clear; Valare’s fork is alive and hiding (Cere/[[Locations/Shadow Market]] leads); the crew secures the core and gains a battle cruiser.
 - **Session 9 (current arc):** The hunt for Valare’s fork becomes a consent-and-coercion crucible: factions close in, exposure rises, and the question is whether you secure the merge or protect her agency.
 
 ## Current status (where you are now)
@@ -45,6 +45,6 @@ You woke up 100 years late in the Nova Praxis future, owing your survival to an 
 
 ## Useful links
 
-- [[Sessions]]
-- [[Session 9 - Guide]]
-- [[Session 9 - Scenes and Zones]]
+- Sessions
+- [[Sessions/Session 9/Session 9 - Guide]]
+- [[Sessions/Session 9/Session 9 - Scenes and Zones]]

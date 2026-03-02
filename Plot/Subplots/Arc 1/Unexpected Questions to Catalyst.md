@@ -27,6 +27,6 @@
 9. **Question: "Have you ever been in love?"**
     
     - **Answer:** "Personal emotions do not play a role in my duties. Let's keep our focus on the mission."
-10. **Question: "If we succeed, can we get a tour of [[House Cipriani]]'s private collections or archives?"**
+10. **Question: "If we succeed, can we get a tour of House Cipriani's private collections or archives?"**
     
-    - **Answer:** "[[House Cipriani]] values its privacy, and access to its collections is highly restricted. However, successful completion of this mission will certainly elevate your standing."
+    - **Answer:** "House Cipriani values its privacy, and access to its collections is highly restricted. However, successful completion of this mission will certainly elevate your standing."

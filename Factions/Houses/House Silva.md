@@ -64,12 +64,12 @@ Silva requires mercenary crews with reputation for:
 
 ## Related Factions
 
-- [[Coalition of Free States]]
+- Coalition of Free States
 - [[House Cipriani]]
 - [[House Dalianis]]
 - [[House Kimura]]
 - [[House Jinzhan]]
 - [[House Tsarya]]
-- [[Transhumans]]
-- [[Apostates]]
-- [[Talons of Freedom]]
+- [[Factions/Ideologies/Transhumans]]
+- [[Factions/Ideologies/Apostates]]
+- Talons of Freedom

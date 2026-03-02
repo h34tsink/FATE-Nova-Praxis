@@ -6,7 +6,7 @@
 #### Notable Settlements/Locations
 
 ##### The Colony
-- **Nature:** A large [[apostate]] community located deep within Uranus's atmosphere.
+- **Nature:** A large [[Groups/Apostate]] community located deep within Uranus's atmosphere.
 - **Structure:** Composed of a network of interconnected spacecraft and prefabricated structures, including a notable ship, The Kraken.
 - **Power Source:** Primarily relies on APEX drives from the ships, supplemented by cold fusion reactors using Uranus's hydrogen.
 - **Society:** Characterized by a tight-knit community of vagabonds and the displaced, where cooperation is key and crimes are severely punished.

@@ -157,14 +157,14 @@ Shouye exists as House Jinzhan's most strategically important asset—the agricu
 
 ## Related Locations
 
-- [[House Jinzhan]] (parent faction)
+- House Jinzhan (parent faction)
 - [[Chengdan]] (sister colony)
 - [[Sanctuary]] (apostate haven)
-- [[Mars]] (Coalition capital receiving food)
+- Mars (Coalition capital receiving food)
 
 ## Related Factions
 
-- [[House Jinzhan]]
-- [[Coalition of Free States]]
-- [[Apostates]]
-- [[Talons of Freedom]]
+- House Jinzhan
+- Coalition of Free States
+- [[Factions/Ideologies/Apostates]]
+- Talons of Freedom

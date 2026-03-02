@@ -13,13 +13,13 @@ Let's break down practical techniques, drawing from the sources and our conversa
 
 - If players venture too far off course, subtly remind them of their goals or unresolved plot points through in-game elements:
     - **NPC Conversations:** An NPC could casually mention a rumor related to the main plot, or express concern that the players are neglecting a crucial task.
-    - **Environmental Details:** A discovered note, a news broadcast overheard in a bar, or a change in the environment (e.g., increased security presence) could hint at the urgency of the main [[Situation]].
+    - **Environmental Details:** A discovered note, a news broadcast overheard in a bar, or a change in the environment (e.g., increased security presence) could hint at the urgency of the main Situation.
     - **Encounters:** A minor encounter with an enemy faction could serve as a reminder of the larger conflict at play.
 
 **2. Tempting Tangents:**
 
 - Anticipate potential player deviations and design side-quests or subplots that tie back into the main narrative:
-    - **Example:** The sources mention that the NPC [[Kestrel]] might require favors from the players. You could design these favors as mini-adventures that ultimately lead the players closer to the information they need in "PART 2."
+    - **Example:** The sources mention that the NPC Kestrel might require favors from the players. You could design these favors as mini-adventures that ultimately lead the players closer to the information they need in "PART 2."
 - This approach provides players with choices while subtly guiding them back toward your intended path.
 
 **3. Personal Stakes:**
@@ -31,7 +31,7 @@ Let's break down practical techniques, drawing from the sources and our conversa
 **4. Unexpected Complications:**
 
 - Introduce unforeseen challenges or obstacles that force players to re-evaluate their priorities and potentially redirect their course:
-    - **Example:** An unexpected attack by the [[Talons of Freedom]] could create a sense of urgency and remind players of the importance of completing their objectives.
+    - **Example:** An unexpected attack by the Talons of Freedom could create a sense of urgency and remind players of the importance of completing their objectives.
     - Resource shortages (like the dwindling ammo mechanic suggested in the sources) or time-sensitive events could also serve as compelling complications.
 
 **5. Utilizing "[[Mission Frameworks]]":**

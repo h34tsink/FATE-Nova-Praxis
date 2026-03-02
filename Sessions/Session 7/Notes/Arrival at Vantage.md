@@ -2,19 +2,19 @@
 
 ### Leaving Asola
 
-[[Asola]], a sprawling industrial city dominated by [[House Tsarya]], is known for its Purist tradition and the ever-present reminder of the Coalition quarantine. The stark lunar landscape, punctuated by massive fabrication plants and worker dormitories, serves as a constant visual cue of the harsh realities of life on the moon.
+Asola, a sprawling industrial city dominated by House Tsarya, is known for its Purist tradition and the ever-present reminder of the Coalition quarantine. The stark lunar landscape, punctuated by massive fabrication plants and worker dormitories, serves as a constant visual cue of the harsh realities of life on the moon.
 
-To reach Vantage from [[Asola]], the players would need to travel to a spaceport, either within the city or a nearby facility designated for civilian travel. The sources don't provide information on specific spaceports in [[Asola]], but the GM could invent one or use an existing location like Rho, the entertainment capital of the Sol system, as a point of departure.
+To reach Vantage from Asola, the players would need to travel to a spaceport, either within the city or a nearby facility designated for civilian travel. The sources don't provide information on specific spaceports in Asola, but the GM could invent one or use an existing location like Rho, the entertainment capital of the Sol system, as a point of departure.
 
 ### The Journey
 
 The trip to Vantage could involve a shuttle ride to a larger vessel waiting in orbit, or the players might directly board their newly acquired or rented ship. The sources describe various ship options, ranging from small shuttles to luxurious passenger liners, offering diverse possibilities for the players' mode of transport.
 
-As the players leave [[Asola]] behind, the expansive view of the lunar surface gives way to the inky blackness of space, dotted with stars and the pale blue sphere of [[Earth]] hanging in the distance. Vantage, situated at [[Earth]]-Moon Lagrange Point 1, would be a prominent landmark, a beacon of activity against the celestial canvas.
+As the players leave Asola behind, the expansive view of the lunar surface gives way to the inky blackness of space, dotted with stars and the pale blue sphere of Earth hanging in the distance. Vantage, situated at Earth-Moon Lagrange Point 1, would be a prominent landmark, a beacon of activity against the celestial canvas.
 
 ### Approaching Vantage
 
-Vantage's imposing silhouette grows larger as your ship, approaches. Its unique design, blending historical significance with a bustling spaceport, sets it apart from the stark functionality of [[Asola]]. The station teems with life, a hub for tourists, Coalition forces, and those seeking to stay connected to a quarantined [[Earth]].
+Vantage's imposing silhouette grows larger as your ship, approaches. Its unique design, blending historical significance with a bustling spaceport, sets it apart from the stark functionality of Asola. The station teems with life, a hub for tourists, Coalition forces, and those seeking to stay connected to a quarantined Earth.
 
 ### Docking Dialogue
 
@@ -53,10 +53,10 @@ The sources provide details on the process of obtaining a weapons license. It is
 The encounter with the security checkpoint serves as a reminder of the Coalition's tight control over weaponry and the potential consequences of violating these regulations. It highlights the challenges faced by characters operating outside the law, forcing them to consider the risks and rewards of carrying weapons within Coalition-controlled space.
 ### Vantage Atmosphere
 
-The station's ambiance is a stark contrast to the industrial pragmatism of [[Asola]].
+The station's ambiance is a stark contrast to the industrial pragmatism of Asola.
 
-- **Bustling Crowds**: Vantage's corridors are filled with a diverse mix of people – tourists marveling at the view of [[Earth]], Coalition officers on official business, merchants peddling their wares, and those seeking refuge from the quarantine.
-- **Historical Significance**: Vantage's historical displays and exhibits, dedicated to [[Earth]]'s past, add a layer of melancholy to the bustling atmosphere.
-- **[[Earth]]'s Presence**: The sight of [[Earth]], a forbidden paradise hanging just beyond reach, casts a long shadow over Vantage.
+- **Bustling Crowds**: Vantage's corridors are filled with a diverse mix of people – tourists marveling at the view of Earth, Coalition officers on official business, merchants peddling their wares, and those seeking refuge from the quarantine.
+- **Historical Significance**: Vantage's historical displays and exhibits, dedicated to Earth's past, add a layer of melancholy to the bustling atmosphere.
+- **Earth's Presence**: The sight of Earth, a forbidden paradise hanging just beyond reach, casts a long shadow over Vantage.
 
-This blend of history, opportunity, and the weight of [[Earth]]'s quarantine creates a unique and memorable backdrop for the players' investigation.
+This blend of history, opportunity, and the weight of Earth's quarantine creates a unique and memorable backdrop for the players' investigation.

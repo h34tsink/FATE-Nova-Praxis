@@ -178,15 +178,15 @@ Sanctuary represents the apostate movement's greatest achievement—a thriving c
 
 ## Related Locations
 
-- [[New Montreal]] (primary city)
+- New Montreal (primary city)
 - [[Valhalla]] (secondary city/military base)
-- [[The Colony]] (sister apostate haven)
-- [[Minos]] (apostate settlement on Mars)
+- [[Locations/The Colony]] (sister apostate haven)
+- [[Locations/Sol System/Minos]] (apostate settlement on Mars)
 
 ## Related Factions
 
-- [[Apostates]]
-- [[House Jinzhan]]
-- [[Coalition of Free States]]
-- [[Talons of Freedom]]
-- [[Seraphim]] (possible connection)
+- [[Factions/Ideologies/Apostates]]
+- House Jinzhan
+- Coalition of Free States
+- Talons of Freedom
+- [[Factions/Hidden Agendas/Seraphim]] (possible connection)

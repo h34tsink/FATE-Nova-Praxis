@@ -3,7 +3,7 @@
 
 **Player:** Christa  
 **Rank:** Novice  
-**State:** [[Biosleeve]] (Beta, [[Apotheosis|Apotheosized]])  
+**State:** [[Glossary/Biosleeve]] (Beta, [[Glossary/Apotheosis|Apotheosized]])  
 **Origin:** Actress/Spy  
 **Allegiance:** [[Factions/Houses/House Silva|House Silva]]  
 **Rep-Rating:** 6  
@@ -44,7 +44,7 @@
 
 **Augmentation Limit:** 8 AV _(Endurance 3 x 2 + Beta Biosleeve bonus)_
 
-- **[[Apotheosis]]** (AV 3) - Mindset and mnemonic core _(doesn't count against limit)_
+- **[[Glossary/Apotheosis]]** (AV 3) - Mindset and mnemonic core _(doesn't count against limit)_
 - **Arterial Toxin Filter** (AV 1) - Blood purification system
 - **Cosmetic Customization** (AV 1) - Appearance modification capability
 - **Exceptional Genegineering** (AV 1) - Enhanced bioware integration _(doesn't count against limit, +1 aug slot)_

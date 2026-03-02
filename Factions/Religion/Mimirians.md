@@ -103,10 +103,10 @@ Mimirians demonstrate unusual ability to integrate technology into spiritual fra
 
 ## Related Factions
 
-- [[Coalition of Free States]]
-- [[House Kimura]]
+- Coalition of Free States
+- House Kimura
 - [[Astralists]]
 - [[Traditional Religions]]
 - [[Neo-Religions]]
-- [[Transhumans]]
-- [[Mimir]]
+- [[Factions/Ideologies/Transhumans]]
+- [[Glossary/Mimir]]

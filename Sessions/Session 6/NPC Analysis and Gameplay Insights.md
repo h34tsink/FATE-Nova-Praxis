@@ -3,7 +3,7 @@
 ## Kestrel
 
 - **Role:** A connector and a somewhat naive player in the grand scheme, whose actions inadvertently tie various factions together.
-- **Gameplay Insight:** [[Characters/NPCs/Kestrel]]'s limited understanding of the Shadow War makes him an interesting NPC for players to interact with. His missions could serve as entry points for players into the larger conflict, providing opportunities for character development and revealing the depth of the setting's politics.
+- **Gameplay Insight:** Kestrel's limited understanding of the Shadow War makes him an interesting NPC for players to interact with. His missions could serve as entry points for players into the larger conflict, providing opportunities for character development and revealing the depth of the setting's politics.
 
 ## Lester Lucas
 
@@ -13,7 +13,7 @@
 ## Valare
 
 - **Role:** A pivotal figure whose actions and fate deeply impact the scenario's unfolding events, illustrating the high stakes of the Shadow War.
-- **Gameplay Insight:** [[Characters/NPCs/Valare]]'s backstory and abilities can lead to missions centered around digital espionage, hacking, and the moral implications of her actions. Her death and potential resurrection could be a major plot point, involving players in the high-tech, high-stakes world of cyber warfare and espionage.
+- **Gameplay Insight:** Valare's backstory and abilities can lead to missions centered around digital espionage, hacking, and the moral implications of her actions. Her death and potential resurrection could be a major plot point, involving players in the high-tech, high-stakes world of cyber warfare and espionage.
 
 ## Isabella Nowak
 
@@ -23,7 +23,7 @@
 ## Chimera
 
 - **Role:** A unique and tragic figure representing the dangers and ethical quandaries of advanced technology, particularly in the realm of consciousness and identity.
-- **Gameplay Insight:** [[Chimera]]'s existence opens up discussions on identity, ethics, and technology, making for a complex ally or antagonist. Players might work to help [[Chimera]] find a resolution or peace, or perhaps exploit his unique abilities for their ends, depending on their moral compass and objectives.
+- **Gameplay Insight:** Chimera's existence opens up discussions on identity, ethics, and technology, making for a complex ally or antagonist. Players might work to help Chimera find a resolution or peace, or perhaps exploit his unique abilities for their ends, depending on their moral compass and objectives.
 
 ---
 

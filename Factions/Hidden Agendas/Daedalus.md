@@ -148,10 +148,10 @@ Daedalus represents:
 
 ## Related Factions
 
-- [[Coalition of Free States]]
-- [[Mimir]] (predecessor)
-- [[Oversight]] (possible controllers)
-- [[Artificial Intelligence]]
-- [[Dynamic Creation Engine]]
-- [[Archive]] (Mimir Archive)
-- [[Savant]] (human AI-equivalent)
+- Coalition of Free States
+- [[Glossary/Mimir]] (predecessor)
+- [[Glossary/Oversight]] (possible controllers)
+- [[Glossary/Artificial Intelligence]]
+- [[Glossary/Dynamic Creation Engine]]
+- Archive (Mimir Archive)
+- [[Glossary/Savant]] (human AI-equivalent)

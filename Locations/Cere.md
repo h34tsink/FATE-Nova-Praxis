@@ -13,8 +13,8 @@ aliases:
 
 **Type:** Mining Colony  
 **Environment:** Harsh, failing infrastructure, dangerous  
-**Notable NPCs:** [[Kal Paddock]] (Deepshaft Tavern)  
-**Factions:** [[Shadow Market]] presence, [[Talons of Freedom]] sympathizers  
+**Notable NPCs:** Kal Paddock (Deepshaft Tavern)  
+**Factions:** [[Shadow Market]] presence, Talons of Freedom sympathizers  
 
 ## Overview
 
@@ -29,7 +29,7 @@ Cere is a brutal mining colony at the edge of viable habitability. Infrastructur
 
 ## Session 9 Relevance
 
-Cere is where [[Valare|Valare's fork]] has been hiding. The harsh environment and patchwork social networks make it ideal for someone trying to disappear while still monitoring threats through digital means.
+Cere is where Valare's fork has been hiding. The harsh environment and patchwork social networks make it ideal for someone trying to disappear while still monitoring threats through digital means.
 
 ## GM Notes
 

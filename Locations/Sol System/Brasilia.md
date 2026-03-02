@@ -27,4 +27,4 @@ Brasilia was the Alliance capital and the initial deployment site of the Gray Pl
 ## Related
 - [[Locations/Sol System/Earth]]
 - [[Glossary/Technophage]]
-- [[Coalition of Free States]]
+- Coalition of Free States

@@ -7,7 +7,7 @@
 #### Notable Settlements/Locations
 
 ##### The Warehouse
-- **Function:** A clandestine storage facility for [[House Dalianis]], holding weapons, antimatter, and war supplies.
+- **Function:** A clandestine storage facility for House Dalianis, holding weapons, antimatter, and war supplies.
 - **Security:** Highly secretive, the exact location is unknown, but it's a target for local criminals seeking to acquire valuable resources.
 
 ##### The Warrens
@@ -15,7 +15,7 @@
 - **Activity:** A hotbed for illicit trade and black market dealings, where the wrong inquiries can be fatal.
 
 ##### APEX Test Site
-- **Purpose:** Used by [[House Cipriani]] for testing new APEX technology, taking advantage of Cygnus Alpha's isolation.
+- **Purpose:** Used by House Cipriani for testing new APEX technology, taking advantage of Cygnus Alpha's isolation.
 - **Security Concerns:** The site is heavily guarded due to the valuable antimatter and the risk of piracy.
 
 #### Cygnus Alpha's Unique Characteristics
@@ -30,5 +30,5 @@
 
 #### Current Issues and Activities
 - **Weaponized Satellite:** Discovery of a weaponized survey satellite has sparked tensions between Houses Dalianis and Cipriani.
-- **Emerging Groups:** The arrival of the [[Talons of Freedom]] in the Warrens is causing unrest among the local criminal and [[apostate]] communities.
-- **Stolen Combat Frame:** A missing heavy combat frame from the Warehouse has put [[House Dalianis]] on a frantic search, with suspicions pointing towards the Warrens.
+- **Emerging Groups:** The arrival of the Talons of Freedom in the Warrens is causing unrest among the local criminal and [[Groups/Apostate]] communities.
+- **Stolen Combat Frame:** A missing heavy combat frame from the Warehouse has put House Dalianis on a frantic search, with suspicions pointing towards the Warrens.

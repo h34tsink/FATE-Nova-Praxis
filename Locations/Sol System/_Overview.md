@@ -21,19 +21,19 @@ The Sol System is humanity's birthplace and the heart of the Coalition. Despite 
 ## Major Settlements
 
 ### Cities
-- [[Cities/Olympus]] - Mars capital, 6M+ population, government center
-- [[Cities/Serro]] - Luna biotech hub, House Silva headquarters
+- [[Locations/Sol System/Olympus]] - Mars capital, 6M+ population, government center
+- [[Locations/Sol System/Serro]] - Luna biotech hub, House Silva headquarters
 - [[Cities/Asola]] - Luna manufacturing, House Tsarya oppression
-- [[Cities/Rho]] - Luna entertainment district, Shadow War epicenter
+- [[Locations/Sol System/Rho]] - Luna entertainment district, Shadow War epicenter
 
 ### Stations
 - [[Stations/Europa Station]] - Jupiter research, biological mystery
 - [[Stations/Naesock Processing Hub]] - Neptune weapons development
-- [[Stations/Vantage]] - Earth L1, Coalition monitoring
-- [[Stations/Eye of Sol]] - Earth L2, communications hub
-- [[Stations/Ansari Station]] - Earth L4, House Dalianis shipyards
-- [[Stations/Primatech Labs]] - Earth L4, House Jinzhan R&D
-- [[Stations/Sentinel]] - Earth L5, military fortress
+- [[Locations/Sol System/Vantage]] - Earth L1, Coalition monitoring
+- [[Locations/Sol System/Eye of Sol]] - Earth L2, communications hub
+- [[Locations/Sol System/Ansari Station]] - Earth L4, House Dalianis shipyards
+- [[Locations/Sol System/Primatech Labs]] - Earth L4, House Jinzhan R&D
+- Sentinel - Earth L5, military fortress
 
 ## Strategic Significance
 
@@ -48,4 +48,4 @@ The Sol System contains:
 
 - Return to [[../Index|Locations Index]]
 - See also: [[../Exoplanets/_Overview|Exoplanets Overview]]
-- Related: [[../../Factions/The Coalition/Coalition Houses|Coalition Houses]]
+- Related: Coalition Houses

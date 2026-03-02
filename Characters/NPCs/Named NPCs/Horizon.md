@@ -13,11 +13,11 @@ aliases:
 
 # Horizon
 
-**Summary:** [[Phalanx Formation]] handler from [[Factions/Houses/House Silva]]. The PCs' liaison with [[Oversight]].
+**Summary:** Phalanx Formation handler from [[Factions/Houses/House Silva]]. The PCs' liaison with [[Glossary/Oversight]].
 
 ## Lore
 
-Horizon becomes the PCs' handler once they are promoted to [[Phalanx Formation]] status — an elevation that places them within the operational reach of [[Oversight]], the shadowy 4th Legion organization that directs covert operations for the Protectorate.
+Horizon becomes the PCs' handler once they are promoted to Phalanx Formation status — an elevation that places them within the operational reach of [[Glossary/Oversight]], the shadowy 4th Legion organization that directs covert operations for the Protectorate.
 
 As a professional contact, Horizon relays orders from Oversight and manages the PCs' relationship with the Protectorate hierarchy. The name itself — likely a callsign rather than a birth name — reflects the operational culture of covert work within [[Factions/Houses/House Silva]]. Horizon is the voice in the PCs' ears, the intermediary between their squad and the intelligence apparatus that decides where they go and what they do.
 
@@ -26,7 +26,7 @@ Little is known about Horizon's personal history or motivations. What matters is
 ## Mechanics
 
 **State:** Not specified
-**Allegiance:** [[Factions/Houses/House Silva]] / [[Oversight]]
+**Allegiance:** [[Factions/Houses/House Silva]] / [[Glossary/Oversight]]
 **CID:** `HZ13SV80` (Legal Coalition CID)
 
 - Handler assigned at Phalanx Formation rank
@@ -42,5 +42,5 @@ Little is known about Horizon's personal history or motivations. What matters is
 ## Links
 
 - [[Factions/Houses/House Silva]]
-- [[Phalanx Formation]]
-- [[Oversight]]
+- Phalanx Formation
+- [[Glossary/Oversight]]

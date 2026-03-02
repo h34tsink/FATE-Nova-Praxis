@@ -56,5 +56,5 @@ tags:
 - `/npc declan-royce`
 
 ## Linked Notes
-- [[Glossary/Centurion]]
+- Centurion
 - [[Glossary/Monitors]]

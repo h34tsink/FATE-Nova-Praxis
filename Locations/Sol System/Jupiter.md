@@ -125,7 +125,7 @@ Jupiter dominates the outer solar system as the largest planet in human space. W
 
 ## Related Factions
 
-- [[House Silva]]
-- [[House Jinzhan]]
-- [[Coalition of Free States]]
-- [[Monitors]]
+- House Silva
+- House Jinzhan
+- Coalition of Free States
+- [[Glossary/Monitors]]

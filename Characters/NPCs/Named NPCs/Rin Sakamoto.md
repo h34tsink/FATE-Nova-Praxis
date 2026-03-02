@@ -19,7 +19,7 @@ Dr. Rin Sakamoto is a biologist formerly affiliated with [[Factions/Houses/House
 
 But Sakamoto also understood the terrible flipside of her discovery. A microbe that could break down carbon nanostructures would not discriminate between the technophage and the carbon nanotube foundations of modern technology. In the wrong hands, it would not be a cure — it would be a weapon capable of dismantling civilization's infrastructure from the inside out.
 
-A staunch pacifist, Sakamoto made the only choice she could live with: she ran. She went into hiding with the [[Talons of Freedom]], hoping their anti-establishment ideology would shield her from those who would exploit her work. She was wrong. The Talons eventually grasped the microbe's weapon potential and kidnapped her, dragging her back to Enceladus to force her to weaponize it.
+A staunch pacifist, Sakamoto made the only choice she could live with: she ran. She went into hiding with the Talons of Freedom, hoping their anti-establishment ideology would shield her from those who would exploit her work. She was wrong. The Talons eventually grasped the microbe's weapon potential and kidnapped her, dragging her back to Enceladus to force her to weaponize it.
 
 Sakamoto would rather destroy all her research — and herself — than allow the antiphage to become a tool of destruction. Her resolve on this point is absolute.
 
@@ -45,5 +45,5 @@ Sakamoto would rather destroy all her research — and herself — than allow th
 
 - [[Factions/Houses/House Kimura]]
 - [[Glossary/Technophage]]
-- [[Talons of Freedom]]
-- [[Locations/Enceladus]]
+- Talons of Freedom
+- [[Locations/Sol System/Enceladus]]

@@ -148,14 +148,14 @@ Chengdan represents House Kimura's premier colonial achievement—and its darkes
 
 ## Related Locations
 
-- [[House Kimura]] (parent faction)
+- House Kimura (parent faction)
 - [[Shouye]] (sister colony)
-- [[The Colony]] (apostate haven)
+- [[Locations/The Colony]] (apostate haven)
 - [[Sanctuary]] (apostate colony)
 
 ## Related Factions
 
-- [[House Kimura]]
-- [[Transhumans]]
-- [[Apostates]]
-- [[Seraphim]] (possible connection)
+- House Kimura
+- [[Factions/Ideologies/Transhumans]]
+- [[Factions/Ideologies/Apostates]]
+- [[Factions/Hidden Agendas/Seraphim]] (possible connection)

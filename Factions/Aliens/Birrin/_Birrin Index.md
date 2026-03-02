@@ -395,9 +395,9 @@ Measured, careful word choice. Literal interpretation. Physical punctuation (rad
 - [[Glossary/Sleeves|Sleeve System]]
 
 **GM Resources:**
-- [[Sessions/]] — Session notes and planning
-- [[Plot/]] — Campaign arc tracking
-- [[Characters/NPCs/]] — NPC database
+- Sessions/ — Session notes and planning
+- Plot/ — Campaign arc tracking
+- Characters/NPCs/ — NPC database
 
 ---
 

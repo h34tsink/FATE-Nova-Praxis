@@ -61,13 +61,13 @@ The Coalition's military and law enforcement branch, responsible for:
 - Hunting transhuman extremists and HPA violators
 - Maintaining order in contested territories
 
-See: [[The Protectorate/]] for detailed structure
+See: The Protectorate/ for detailed structure
 
 ## Member Houses
 
 The Coalition is built on seven major corporate Houses, each wielding enormous economic and political power:
 
-### [[Houses/House Cipriani|House Cipriani]]
+### House Cipriani
 - **Primary Influence:** Mercury
 - **Specialization:** Energy monopoly (antimatter), compilers, vehicles, CIST technology
 - **Ideology:** Strongly Purist
@@ -75,7 +75,7 @@ The Coalition is built on seven major corporate Houses, each wielding enormous e
 - **Alliances:** House Tsarya (strong), House Silva (partners)
 - **Rivalries:** House Dalianis (bitter feud), House Kimura (virtual vacation competition)
 
-### [[Houses/House Dalianis|House Dalianis]]
+### House Dalianis
 - **Primary Influence:** Olympus, Ansari Station
 - **Specialization:** Starships, rail/coil guns, combat drones
 - **Ideology:** Purist, but pragmatic results-oriented
@@ -83,7 +83,7 @@ The Coalition is built on seven major corporate Houses, each wielding enormous e
 - **Alliances:** House Kimura (strong), House Jinzhan (Earth quarantine cooperation)
 - **Rivalries:** House Cipriani (Cygnus Alpha dispute), House Tsarya (Ceres resources)
 
-### [[Houses/House Jinzhan|House Jinzhan]]
+### House Jinzhan
 - **Primary Influence:** Shouye (food production)
 - **Specialization:** Construction, security technology, weaponry, explosives
 - **Ideology:** Strongly Purist, isolationist, technophobic
@@ -91,7 +91,7 @@ The Coalition is built on seven major corporate Houses, each wielding enormous e
 - **Focus:** Planet-destroying weapons research to eradicate technophage
 - **Alliances:** House Dalianis (Earth quarantine, Mars development)
 
-### [[Houses/House Kimura|House Kimura]]
+### House Kimura
 - **Primary Influence:** Chengdan
 - **Specialization:** Computer hardware/software, cybersleeves, cyber-augmentations, recon warframes
 - **Ideology:** Transhuman, politically liberal, opposes HPA
@@ -100,7 +100,7 @@ The Coalition is built on seven major corporate Houses, each wielding enormous e
 - **Alliances:** House Dalianis (computer systems/drones), House Silva (electronics)
 - **Rivalries:** House Cipriani (virtual vacation sabotage), House Tsarya (warframe market)
 
-### [[Houses/House Silva|House Silva]]
+### House Silva
 - **Primary Influence:** Luna (Serro)
 - **Specialization:** Biosleeves, biotech augmentations, PAc weapons
 - **Ideology:** Transhuman, openly disregards HPA
@@ -108,7 +108,7 @@ The Coalition is built on seven major corporate Houses, each wielding enormous e
 - **Practices:** Genetic experimentation on indentured servants, "reset" contracts for mercenaries
 - **Alliances:** House Tsarya (smuggling), House Cipriani (mutual enemy Dalianis), House Kimura (electronics)
 
-### [[Houses/House Tsarya|House Tsarya]]
+### House Tsarya
 - **Primary Influence:** Proch, Luna (Asola)
 - **Specialization:** Armor (vehicular/personal), ground vehicles, assault warframes
 - **Ideology:** Traditionally Purist, increasingly accepting Apotheosized for expendable roles
@@ -117,7 +117,7 @@ The Coalition is built on seven major corporate Houses, each wielding enormous e
 - **Alliances:** House Cipriani (strong), House Silva (black market contacts)
 - **Rivalries:** House Kimura (warframe market), House Dalianis (Ceres resources)
 
-### [[Hidden Agendas/House Turin|House Turin]]
+### [[Factions/Hidden Agendas/House Turin|House Turin]]
 - **Primary Influence:** New Turin (Mars)
 - **Specialization:** Criminal operations, smuggling, black market
 - **Ideology:** Profit above all, Russian Mafia (Bratva) heritage
@@ -171,25 +171,25 @@ The primary social currency of the Coalition:
 
 ## Ideological Divisions
 
-### [[Ideologies/Purists|Purists]] (~53% of Coalition)
+### [[Factions/Ideologies/Purists|Purists]] (~53% of Coalition)
 - Prefer minimal augmentation
 - Support HPA restrictions
 - Cultural default in Coalition society
 - Dominant in Houses: Cipriani, Dalianis, Jinzhan, Tsarya
 
-### [[Ideologies/Transhumans|Transhumans]]
+### [[Factions/Ideologies/Transhumans|Transhumans]]
 - Advocate augmentation and enhancement
 - Oppose HPA limitations
 - Push boundaries of human modification
 - Dominant in Houses: Kimura, Silva
 
-### [[Ideologies/Apostates|Apostates]] (~20% of humanity)
+### [[Factions/Ideologies/Apostates|Apostates]] (~20% of humanity)
 - Live outside Coalition system
 - No CID or official citizenship
 - Black market economy and trade networks
 - Independent settlements throughout space
 
-### [[Ideologies/Purifiers|Purifiers]]
+### [[Factions/Ideologies/Purifiers|Purifiers]]
 - Violent anti-augmentation extremists
 - Pursue terrorist attacks on augmented individuals
 - Hunted by Protectorate
@@ -225,33 +225,33 @@ The primary social currency of the Coalition:
 
 ### Hidden Agendas
 Multiple secret organizations operate within and against Coalition:
-- [[Hidden Agendas/The Fallen|The Fallen]] - Mad Savants spreading chaos
-- [[Hidden Agendas/Talons of Freedom|Talons of Freedom]] - US military remnants
-- [[Hidden Agendas/Children of Dionysus|Children of Dionysus]] - Anarchist psychedelics
-- [[Hidden Agendas/Red Sun|Red Sun]] - Modern Yakuza serving Kimura
-- [[Hidden Agendas/Rings of Olympus|Rings of Olympus]] - Mars criminal syndicate
+- [[Factions/Hidden Agendas/The Fallen|The Fallen]] - Mad Savants spreading chaos
+- Talons of Freedom - US military remnants
+- [[Factions/Hidden Agendas/Children of Dionysus|Children of Dionysus]] - Anarchist psychedelics
+- [[Factions/Hidden Agendas/Red Sun|Red Sun]] - Modern Yakuza serving Kimura
+- [[Factions/Hidden Agendas/Rings of Olympus|Rings of Olympus]] - Mars criminal syndicate
 
 ## Related Documentation
 
 ### Government Structure
 - [[Coalition Authority|Coalition Authority Details]]
 - [[Coalition Voting|Coalition Voting System]]
-- [[The Protectorate/|Protectorate Organization]]
+- Protectorate Organization
 
 ### Member Houses
 - [[Houses/|Coalition Houses Directory]]
-- [[../Glossary/Coalition Houses|Houses Reference Guide]]
+- [[Glossary/Coalition Houses|Houses Reference Guide]]
 
 ### Ideologies
-- [[Ideologies/|Ideological Factions]]
+- Ideological Factions
 
 ### Locations
 - [[../../Locations/Sol System/_Overview|Sol System Overview]]
 - [[../../Locations/Exoplanets/_Overview|Exoplanet Colonies]]
 
 ### Opposition Forces
-- [[Hidden Agendas/|Hidden Agendas and Secret Organizations]]
-- [[Ideologies/Apostates|Apostate Networks]]
+- Hidden Agendas and Secret Organizations
+- [[Factions/Ideologies/Apostates|Apostate Networks]]
 
 ---
 

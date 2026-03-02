@@ -13,7 +13,7 @@ aliases:
 
 # Dr. Javier Schulz
 
-**Summary:** Rogue [[Factions/Houses/House Silva]] scientist who created the [[Progenesis]] virus.
+**Summary:** Rogue [[Factions/Houses/House Silva]] scientist who created the Progenesis virus.
 
 ## Lore
 
@@ -21,7 +21,7 @@ Dr. Javier Schulz is a tragic figure whose suffering birthed one of the most fea
 
 That suffering forged an obsession. Schulz dedicated his life to achieving biological immortality — not through the sleeves and digital backups of mainstream transhumanism, but through raw biological transformation. Working within [[Factions/Houses/House Silva]]'s research apparatus, he developed the Progenesis formula: a treatment designed to grant hyper-regeneration and biological perfection.
 
-The results were horrifying. Test subjects gained extraordinary regenerative abilities, but the process induced severe physical deformities and progressive psychosis. Rather than abandoning the project, Schulz made the formula viral — transmissible, self-propagating, and impossible to contain. The [[Progenesis Afflicted]] are his legacy: twisted, maddened beings trapped between transcendence and monstrosity.
+The results were horrifying. Test subjects gained extraordinary regenerative abilities, but the process induced severe physical deformities and progressive psychosis. Rather than abandoning the project, Schulz made the formula viral — transmissible, self-propagating, and impossible to contain. The [[Factions/Hidden Agendas/Progenesis Afflicted]] are his legacy: twisted, maddened beings trapped between transcendence and monstrosity.
 
 Schulz himself is driven by a conviction that his work is humanity's true path forward — that the deformities and madness are temporary obstacles on the road to perfection. Whether he is a visionary, a madman, or both is a question the campaign must grapple with.
 
@@ -46,6 +46,6 @@ Schulz himself is driven by a conviction that his work is humanity's true path f
 ## Links
 
 - [[Factions/Houses/House Silva]]
-- [[Progenesis]]
-- [[Progenesis Afflicted]]
-- [[Glossary/Purist]]
+- Progenesis
+- [[Factions/Hidden Agendas/Progenesis Afflicted]]
+- Purist

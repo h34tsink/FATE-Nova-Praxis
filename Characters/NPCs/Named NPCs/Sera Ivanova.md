@@ -12,7 +12,7 @@ aliases:
 
 # Sera Ivanova
 
-**Summary:** Community organizer in [[Locations/Asteroid Belts/Asteroids/Cere|Cere's]] Refugee Quarters. [[Talons of Freedom]] sympathizer. Protects the people corporate forgot.
+**Summary:** Community organizer in [[Locations/Asteroid Belts/Asteroids/Cere|Cere's]] Refugee Quarters. Talons of Freedom sympathizer. Protects the people corporate forgot.
 
 ## Lore
 
@@ -25,7 +25,7 @@ Sera knows that someone has been hiding in the deep mining shafts. She's noticed
 ## Mechanics
 
 **State:** Sleeved (biosleeve, basic augmentations)
-**Allegiance:** [[Talons of Freedom]] (sympathizer, not operative)
+**Allegiance:** Talons of Freedom (sympathizer, not operative)
 **Size:** 0
 **CID:** `SI39CR16` (Legal Coalition CID — may be using a replacement identity)
 
@@ -42,4 +42,4 @@ Sera knows that someone has been hiding in the deep mining shafts. She's noticed
 ## Links
 
 - [[Locations/Asteroid Belts/Asteroids/Cere]]
-- [[Talons of Freedom]]
+- Talons of Freedom

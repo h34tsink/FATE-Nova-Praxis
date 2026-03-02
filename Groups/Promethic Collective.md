@@ -1,6 +1,6 @@
 ### The Promethic Collective
 
-Originally established as an **R&D firm**, the **Promethic Collective** has evolved in the post-Exodus era to serve as the central body that facilitates **cooperation and information sharing** among the **Dalianis baronies**. While each barony focuses on its own goals, the Collective works to create **synergy and efficiency**, promoting unity within **[[House Dalianis]]**. When interacting with other Houses, the Promethic Collective represents the baronies under the banner of **[[House Dalianis]]**, ensuring a unified voice in external relations. 
+Originally established as an **R&D firm**, the **Promethic Collective** has evolved in the post-Exodus era to serve as the central body that facilitates **cooperation and information sharing** among the **Dalianis baronies**. While each barony focuses on its own goals, the Collective works to create **synergy and efficiency**, promoting unity within **House Dalianis**. When interacting with other Houses, the Promethic Collective represents the baronies under the banner of **House Dalianis**, ensuring a unified voice in external relations. 
 
 Additionally, the Collective is responsible for **internal law enforcement** and managing critical infrastructure, playing a vital role in maintaining order and cohesion within the House.
 
@@ -22,6 +22,6 @@ These titles grant individuals privileges within the House, where **commoners** 
 
 ### Interactions and Influence
 
-Though **[[House Dalianis]]** maintains a largely **Purist** identity, this does not heavily influence their relationships with other factions. Their alliance with **[[House Kimura]]** highlights their willingness to compromise when necessary, showcasing their pragmatic approach to diplomacy and internal dealings.
+Though **House Dalianis** maintains a largely **Purist** identity, this does not heavily influence their relationships with other factions. Their alliance with **House Kimura** highlights their willingness to compromise when necessary, showcasing their pragmatic approach to diplomacy and internal dealings.
 
 The House places great importance on **results** over politics, and their hierarchy increasingly reflects a return to **feudal traditions**. This meritocratic outlook means that individuals or crews—regardless of their **posthuman** status—can rise through the ranks of Dalianis society based on their ability to contribute, sometimes surpassing even the most vocal Purists in status and influence.

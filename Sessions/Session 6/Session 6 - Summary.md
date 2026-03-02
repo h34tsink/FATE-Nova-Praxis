@@ -44,9 +44,9 @@ The Apotheosized crew is sent on a salvage contract by Kestrel (Kimuran Astralis
 
 ## Links
 
-- [[Sessions]]
-- [[Kestrel]]
-- [[Isabella Nowak]]
-- [[Valare]]
-- [[Chimera]]
-- [[Talons of Freedom]]
+- Sessions
+- Kestrel
+- Isabella Nowak
+- Valare
+- Chimera
+- Talons of Freedom

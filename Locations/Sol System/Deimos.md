@@ -32,5 +32,5 @@ Deimos contains two major settlements in its craters: **Kratos** and **Voltair**
 
 ## Related
 - [[Locations/Sol System/Mars]]
-- [[Coalition of Free States]]
+- Coalition of Free States
 - [[Factions/The Coalition/Coalition Security Forces]]

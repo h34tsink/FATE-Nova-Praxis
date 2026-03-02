@@ -3,7 +3,7 @@
 - **Notable Features:** Known for its iron-rich crust, used in starship construction, and unique habitats built inside canyons.
 
 ### Proch
-- **Visual Description:** A lush, [[Earth]]-like planet with dense jungles, large reptiles, and diverse terrain echoing [[Earth]]'s Mesozoic period.
+- **Visual Description:** A lush, Earth-like planet with dense jungles, large reptiles, and diverse terrain echoing Earth's Mesozoic period.
 - **Notable Features:** Hosts the Samara city and Akim Ranch, famous for its large and aggressive indigenous wildlife, particularly "dragons."
 
 ### [[Sagitta]]
@@ -12,8 +12,8 @@
 
 ### [[Sanctuary]]
 - **Visual Description:** A desert world covered in sand and sandstone formations, with extreme heat and sandstorms.
-- **Notable Features:** Originally a hidden [[Apostate]] colony with interconnected ships under the sand, now expanding to surface settlements like New Montreal.
+- **Notable Features:** Originally a hidden [[Groups/Apostate]] colony with interconnected ships under the sand, now expanding to surface settlements like New Montreal.
 
 ### Shouye
-- **Visual Description:** Resembles [[Earth]] with lush greenery, farmlands, and teeming with large insects, some aggressive and used as mascots.
-- **Notable Features:** Largest source of naturally grown food in the Coalition, heavily guarded by [[House Jinzhan]] with restricted surface access.
+- **Visual Description:** Resembles Earth with lush greenery, farmlands, and teeming with large insects, some aggressive and used as mascots.
+- **Notable Features:** Largest source of naturally grown food in the Coalition, heavily guarded by House Jinzhan with restricted surface access.

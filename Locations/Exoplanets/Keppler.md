@@ -25,4 +25,4 @@ Keppler is the principal city on Proch and a major industrial center tied to his
 
 ## Related
 - [[Locations/Exoplanets/Proch]]
-- [[Coalition of Free States]]
+- Coalition of Free States

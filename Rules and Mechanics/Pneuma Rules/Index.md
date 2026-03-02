@@ -26,12 +26,12 @@ Pneuma should feel like rare, dangerous, traceable access to reality’s interfa
 - [[Rules and Mechanics/Pneuma Rules/The Physics of Pneuma]] (lore/terminology support)
 
 ### Legacy Compatibility Stubs
-- [[Rules and Mechanics/Pneuma Rules/Pneuma Compendium for Storyteller]]
-- [[Rules and Mechanics/Pneuma Rules/Pneuma_MD_Compendium]]
-- [[Rules and Mechanics/Pneuma Rules/Pneuma Compendium]]
+- [[Archive/Old Rules/Pneuma Variants/Pneuma Compendium for Storyteller]]
+- [[Archive/Old Rules/Pneuma Variants/Pneuma_MD_Compendium]]
+- [[Mechanics/FATE/Pneuma Compendium]]
 
 ### Data Asset
-- [[Rules and Mechanics/Pneuma Rules/mimir_advanced_engineering_logs.jsonl]]
+- mimir_advanced_engineering_logs.jsonl
 
 ## Continuity
 - **Assumption:** `Pneuma_Architects_Echo_Rules.md` is source-of-truth for mechanical rulings.
@@ -39,7 +39,7 @@ Pneuma should feel like rare, dangerous, traceable access to reality’s interfa
 - **Publishing Rule:** Treat compendiums as export/reference bundles, not independent rules authorities.
 
 ## Links
-- [[Rules and Mechanics/Index]]
+- Index
 - [[Glossary/Index]]
 - [[Data/SAVANT PROGRAMS]]
 

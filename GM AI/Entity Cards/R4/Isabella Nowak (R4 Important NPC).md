@@ -53,5 +53,5 @@ tags:
 - `/npc nowak`
 
 ## Linked Notes
-- [[Characters/NPCs/Named NPCs/Isabella Nowak]]
+- Isabella Nowak
 - [[Sessions/Session 9/Session 9 - Part 3 - Civil Unrest - The Nowak Situation]]

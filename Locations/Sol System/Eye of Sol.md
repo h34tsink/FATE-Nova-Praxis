@@ -29,4 +29,4 @@ Located at Earth-Moon Lagrange Point 2, Eye of Sol is one of the two public jump
 - [[Locations/Sol System/Earth]]
 - [[Glossary/Jump Gate]]
 - [[Locations/Sol System/Sentinel Station]]
-- [[Coalition of Free States]]
+- Coalition of Free States

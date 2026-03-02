@@ -39,8 +39,8 @@ The asteroid Cere is a rugged, isolated settlement orbiting the outskirts of a m
   - These shafts extend deep into Cere’s interior, providing ample hiding spots for those wishing to remain out of sight.
   - Dangerous and poorly mapped, they’re home to collapsing tunnels, toxic gas pockets, and predatory scavengers.
 
-- **[[Shadow Market]]**:
-- A notorious haven for those living off the grid, the [[Shadow Market]] operates in the darker corners of Cere. Here, players might find information about Valare’s fork or those who facilitated her escape.
+- **[[Locations/Shadow Market]]**:
+- A notorious haven for those living off the grid, the [[Locations/Shadow Market]] operates in the darker corners of Cere. Here, players might find information about Valare’s fork or those who facilitated her escape.
 
 - **Available Goods**:
 - Illegal Weapons:

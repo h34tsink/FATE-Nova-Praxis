@@ -144,5 +144,5 @@ A comprehensive reference for all skills in Nova Praxis.
 ## Links
 
 - [[Glossary/Skills]]
-- [[Rules and Mechanics]]
+- Rules and Mechanics
 

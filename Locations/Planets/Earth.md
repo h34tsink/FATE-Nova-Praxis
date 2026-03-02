@@ -29,17 +29,17 @@
 
 ##### Ansari Station
 - **Location:** Orbiting at the Earth-Moon Lagrange Point 3.
-- **Function:** [[House Dalianis]]’ largest shipyard, playing a crucial role in the Coalition's fleet construction and maintenance.
+- **Function:** House Dalianis’ largest shipyard, playing a crucial role in the Coalition's fleet construction and maintenance.
 - **Community:** The station is akin to a bustling city in space, housing thousands of workers and their families, and providing a wide range of services and amenities.
 
 ##### Primatech Labs
 - **Situated:** At the Earth-Moon Lagrange Point 4.
-- **Purpose:** A key research and development facility for [[House Jinzhan]], focused on ordinance and armaments for quarantine enforcement.
+- **Purpose:** A key research and development facility for House Jinzhan, focused on ordinance and armaments for quarantine enforcement.
 - **Current Focus:** Analysis of a technophage-modified drone, stirring up inter-house tensions and intrigue within the Coalition.
 
 ##### Sentinel Station
 - **Location:** At the Earth-Moon Lagrange Point 5.
-- **Status:** The largest Coalition military installation in the galaxy, operated primarily by [[House Silva]] and [[House Tsarya]].
+- **Status:** The largest Coalition military installation in the galaxy, operated primarily by House Silva and House Tsarya.
 - **Capabilities:** Houses advanced military production facilities, resurrection chambers for Coalition soldiers, and is one of the sites for undergoing Apotheosis for military personnel.
 
 #### Earth's Role Post-Technophage

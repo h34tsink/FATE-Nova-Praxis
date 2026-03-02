@@ -1,7 +1,7 @@
 # Session 9: Finding Valare’s Fork
 
 > [!warning] Deprecated
-> This note is kept for history. Use [[Session 9 - Scenes and Zones]] (scene/zone structure) and [[Session 9 - Guide]] (runbook).
+> This note is kept for history. Use [[Sessions/Session 9/Session 9 - Scenes and Zones]] (scene/zone structure) and [[Sessions/Session 9/Session 9 - Guide]] (runbook).
 
 > **System:** Nova Praxis (FATE)  
 > **Theme:** Identity, consent, trauma, and consequence  

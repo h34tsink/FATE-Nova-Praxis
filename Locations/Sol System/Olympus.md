@@ -183,12 +183,12 @@ Olympus stands as humanity's greatest political and social achievement—and its
 
 ## Related Factions
 
-- [[Coalition of Free States]]
-- [[House Silva]]
-- [[House Dalianis]]
-- [[House Cipriani]]
-- [[House Kimura]]
-- [[House Jinzhan]]
-- [[House Tsarya]]
-- [[Monitors]]
-- [[Apostates]]
+- Coalition of Free States
+- House Silva
+- House Dalianis
+- House Cipriani
+- House Kimura
+- House Jinzhan
+- House Tsarya
+- [[Glossary/Monitors]]
+- [[Factions/Ideologies/Apostates]]

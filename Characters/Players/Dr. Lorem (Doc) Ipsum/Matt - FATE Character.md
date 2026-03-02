@@ -3,7 +3,7 @@
 
 **Player:** Matthew  
 **Rank:** Novice  
-**State:** [[Biosleeve]] (Beta, [[Apotheosis|Apotheosized]])  
+**State:** [[Glossary/Biosleeve]] (Beta, [[Glossary/Apotheosis|Apotheosized]])  
 **Origin:** Astronaut  
 **Allegiance:** [[Factions/Houses/House Silva|House Silva]]  
 **Rep-Rating:** 8  
@@ -46,7 +46,7 @@
 
 **Augmentation Limit:** 8 AV (Supported by Vigor) / 6 AV (Native to Sleeve)
 
-- **[[Apotheosis]]** (AV 3) - Mindset and mnemonic core _(doesn't count against limit as part of sleeve)_
+- **[[Glossary/Apotheosis]]** (AV 3) - Mindset and mnemonic core _(doesn't count against limit as part of sleeve)_
 - **Upgrade:** Remote Backup (AV 1) - Wireless ego backup to secure server
 - **Synthesis** (AV 4) - Nanocybernetic blend, immunity to poisons/diseases, reduced need for food/water/sleep, grants Synthesized Biological Perfection Aspect _(counts against limit)_
 - **Esper Vent** (AV 1) - Hollow synthetic replacements to store esper swarm _(counts against limit)_

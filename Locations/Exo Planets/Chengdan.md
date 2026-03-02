@@ -4,19 +4,19 @@
 - **Established:** 56 PS (Post-Singularity)
 - **Estimated Population:** 9.3 million
 
-#### Notable Settlements/[[Plot Locations]]
+#### Notable Settlements/[[Locations/Plot Locations]]
 
 ##### New Tokyo
-- **Character:** The original colony established by [[House Kimura]], now a sprawling megacity capital.
+- **Character:** The original colony established by House Kimura, now a sprawling megacity capital.
 - **Development:** Expanded steadily, becoming a technological marvel with wide open plazas, large parks, and advanced computing technology.
-- **Population:** Houses a significant portion of Chengdan's population, including many of [[House Kimura]]’s SIM citizens.
+- **Population:** Houses a significant portion of Chengdan's population, including many of House Kimura’s SIM citizens.
 
 ##### Kawako Platforms
 - **Function:** Mobile drilling platforms mining most of Chengdan’s water supply.
-- **Operation:** Move between temperate zones for optimal resource extraction. Named after river spirits, resembling old [[Earth]]'s deep-sea oil rigs.
+- **Operation:** Move between temperate zones for optimal resource extraction. Named after river spirits, resembling old Earth's deep-sea oil rigs.
 
 ##### Libman Research Station
-- **Run by:** [[House Silva]].
+- **Run by:** House Silva.
 - **Purpose:** Studies Chengdan's indigenous wildlife, unusually open to visitors, raising questions about other more secretive research stations on the planet.
 
 #### Chengdan's Unique Characteristics
@@ -25,8 +25,8 @@
 - **Water Sources:** Surface water is scarce, leading to reliance on underground pockets and rivers.
 
 #### Sociopolitical Dynamics
-- **[[House Kimura]]’s Dominance:** As the primary colonizer, [[House Kimura]] exerts significant influence over Chengdan, especially in New Tokyo.
-- **[[House Silva]]’s Research Interest:** Silva’s involvement in researching Chengdan’s unique wildlife indicates a broader scientific interest in the planet’s extreme ecological conditions.
+- **House Kimura’s Dominance:** As the primary colonizer, House Kimura exerts significant influence over Chengdan, especially in New Tokyo.
+- **House Silva’s Research Interest:** Silva’s involvement in researching Chengdan’s unique wildlife indicates a broader scientific interest in the planet’s extreme ecological conditions.
 
 #### Current Issues and Activities
 - **Mysterious Humanoids:** Reports of posthuman aberrants in the wild, potentially using primitive tools and armor grown from their bodies, sparking hunting expeditions.

@@ -11,11 +11,11 @@ aliases: []
 
 # Geist
 
-**Summary:** [[Seraphim]] field agent operating covertly on Sanctuary. Expert in stealth and evasion.
+**Summary:** [[Factions/Hidden Agendas/Seraphim]] field agent operating covertly on Sanctuary. Expert in stealth and evasion.
 
 ## Lore
 
-Geist is a ghost in every sense that matters. A field agent of the [[Seraphim]] — one of the most mysterious and poorly understood factions in the post-Exodus world — she operates covertly on Sanctuary, intervening in events from the shadows with surgical precision.
+Geist is a ghost in every sense that matters. A field agent of the [[Factions/Hidden Agendas/Seraphim]] — one of the most mysterious and poorly understood factions in the post-Exodus world — she operates covertly on Sanctuary, intervening in events from the shadows with surgical precision.
 
 The PCs may never see her face, but they will feel her presence. A locked door opens just as they need it. A sniper round eliminates a threat they never saw coming. A note slipped under a door provides intelligence they had no way of obtaining. Geist aids the PCs during operations on Sanctuary, but she does so on her own terms: indirectly, anonymously, and without explanation.
 
@@ -26,7 +26,7 @@ The Seraphim's true nature, goals, and organizational structure remain among the
 ## Mechanics
 
 **State:** Sleeved (heavily augmented Synthesized biosleeve), Savant
-**Allegiance:** [[Seraphim]]
+**Allegiance:** [[Factions/Hidden Agendas/Seraphim]]
 **Size:** 0
 **CID:** `GS14SR60` (Operational false CID)
 
@@ -44,7 +44,7 @@ The Seraphim's true nature, goals, and organizational structure remain among the
 
 ## Links
 
-- [[Seraphim]]
+- [[Factions/Hidden Agendas/Seraphim]]
 - [[Glossary/Savant]]
 - [[Glossary/Biosleeve]]
-- [[Locations/Sanctuary]]
+- Sanctuary

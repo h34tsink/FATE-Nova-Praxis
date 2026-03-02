@@ -59,5 +59,5 @@ Folds into an inconspicuous briefcase for transport. Stealth 3 makes it excellen
 
 ## Links
 
-- [[Characters/NPCs/Drones and Creatures/Index|Drones and Creatures Index]]
+- Drones and Creatures Index
 - [[Glossary/Index]]

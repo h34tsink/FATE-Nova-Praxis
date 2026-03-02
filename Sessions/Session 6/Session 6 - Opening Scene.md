@@ -11,7 +11,7 @@ aliases:
 
 ## Goal
 
-The PCs must infiltrate, take control of, and navigate the "Liberty's Claw" spaceship from The [[Talons of Freedom]] to a secure location without being detected or engaging in direct conflict with Talon forces.
+The PCs must infiltrate, take control of, and navigate the "Liberty's Claw" spaceship from The Talons of Freedom to a secure location without being detected or engaging in direct conflict with Talon forces.
 
 ## Complexity: 8
 
@@ -20,7 +20,7 @@ The PCs must infiltrate, take control of, and navigate the "Liberty's Claw" spac
 ## Characteristics
 
 - The "Liberty's Claw" is currently docked at a hidden asteroid base within a nebula, making it difficult to approach undetected.
-- The [[Talons of Freedom]] have recently increased their security measures due to intelligence leaks.
+- The Talons of Freedom have recently increased their security measures due to intelligence leaks.
 - The spaceship is equipped with state-of-the-art AI defense systems that control most of the ship's operations.
 - The crew aboard "Liberty's Claw" are loyal to the Talons and highly trained in combat and security protocols.
 

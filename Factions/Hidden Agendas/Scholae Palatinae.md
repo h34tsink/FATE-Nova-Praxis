@@ -144,9 +144,9 @@ Scholae Palatinae represent:
 
 ## Related Factions
 
-- [[Coalition of Free States]]
-- [[Tetragon]] (mysterious authority)
-- [[Oversight]] (governing body)
-- [[Protectorate]] (military)
+- Coalition of Free States
+- Tetragon (mysterious authority)
+- [[Glossary/Oversight]] (governing body)
+- [[Factions/The Coalition/Protectorate]] (military)
 - [[Phalanx Formations]]
-- [[House military]] (various Houses)
+- [[Factions/The Coalition/House military]] (various Houses)

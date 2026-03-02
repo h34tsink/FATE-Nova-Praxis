@@ -12,11 +12,11 @@ aliases:
 
 # Concetta Allegro
 
-**Summary:** [[Factions/Houses/House Cipriani]] operative providing intelligence to the [[Scholae Palatinae]].
+**Summary:** [[Factions/Houses/House Cipriani]] operative providing intelligence to the Scholae Palatinae.
 
 ## Lore
 
-Concetta Allegro is a [[Factions/Houses/House Cipriani]] operative embedded within the [[Scholae Palatinae]] team. Officially, she provides the Scholae with intelligence to track a missing Auxiliary crew. Unofficially, she leverages Cipriani back-channels to help the PCs off the books — a dual role that makes her invaluable but potentially compromised.
+Concetta Allegro is a [[Factions/Houses/House Cipriani]] operative embedded within the Scholae Palatinae team. Officially, she provides the Scholae with intelligence to track a missing Auxiliary crew. Unofficially, she leverages Cipriani back-channels to help the PCs off the books — a dual role that makes her invaluable but potentially compromised.
 
 Allegro is well-connected within both the Houses and apostate communities, a network that gives her access to information that official channels cannot or will not provide. This makes her a powerful ally, but also one whose true loyalties are difficult to pin down. [[Tejun]] openly distrusts her, and not without reason — Cipriani's interests do not always align with the Tetragon's.
 
@@ -41,6 +41,6 @@ Later in the campaign, Allegro contacts the PCs from Earth to offer an escape ro
 ## Links
 
 - [[Factions/Houses/House Cipriani]]
-- [[Scholae Palatinae]]
+- Scholae Palatinae
 - [[Tejun]]
 - [[Admiral Drivas]]

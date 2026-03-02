@@ -21,7 +21,7 @@ The **Talons of Freedom** represent a significant threat to the Coalition's stab
     - **Black Market Operations:**  
         Running a vast network for trading illegal goods, specializing in weapons and armaments to bolster their forces.
 - **Current Objective:**  
-    Orchestrating a major strike against the Coalition, aiming to capture the **Icarus Hub** orbiting [[Proch]]. This ambitious operation includes plans to cripple Coalition defenses, seize resources, and potentially spark a wider rebellion.
+    Orchestrating a major strike against the Coalition, aiming to capture the **Icarus Hub** orbiting Proch. This ambitious operation includes plans to cripple Coalition defenses, seize resources, and potentially spark a wider rebellion.
     
 
 ---

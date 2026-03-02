@@ -154,16 +154,16 @@ Uranus orbits at the edge of Coalition space, a distant ice giant orbited by a m
 
 ## Related Locations
 
-- [[The Colony]] (primary settlement)
+- [[Locations/The Colony]] (primary settlement)
 - [[Saturn]] (sister ice giant)
 - [[Neptune]] (sister ice giant)
-- [[Sanctuary]] (sister apostate colony)
-- [[The Colony]] (Uranus apostate haven)
+- Sanctuary (sister apostate colony)
+- [[Locations/The Colony]] (Uranus apostate haven)
 
 ## Related Factions
 
-- [[Apostates]]
-- [[Coalition of Free States]]
-- [[Children of Dionysus]]
-- [[Talons of Freedom]]
-- [[Piracy and Insurgency]]
+- [[Factions/Ideologies/Apostates]]
+- Coalition of Free States
+- [[Factions/Hidden Agendas/Children of Dionysus]]
+- Talons of Freedom
+- [[Factions/Hidden Agendas/Piracy and Insurgency]]

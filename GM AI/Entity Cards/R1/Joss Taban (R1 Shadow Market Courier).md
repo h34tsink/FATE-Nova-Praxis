@@ -50,4 +50,4 @@ tags:
 ## Linked Notes
 - [[Characters/NPCs/Named NPCs/Joss Taban]]
 - [[Locations/Asteroid Belts/Asteroids/Cere]]
-- [[Shadow Market]]
+- [[Locations/Shadow Market]]

@@ -2,7 +2,7 @@
 - **Division:** Ministry of Parks and Wildlife
 - **Appearance:** 
     - Middle-aged with wavy golden hair, always seen in elegant, yet environmentally-themed attire.
-- **[[Background]]:** 
+- **[[Characters/Players/Grace Pryzbylski/Background]]:** 
     - A fervent environmentalist, Aria has dedicated her life to preserving the diverse ecosystems of Coalition planets. She often clashes with other Ministries over development projects.
 - **Character Trait:** 
     - Passionate, sometimes headstrong.

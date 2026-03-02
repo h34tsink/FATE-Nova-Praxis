@@ -13,7 +13,7 @@ aliases:
 
 # Cyber-Merc
 
-**Sleeve:** [[Cybersleeve]] (Beta) 
+**Sleeve:** [[Glossary/Cybersleeve]] (Beta) 
 **CID:** `CM41CT93` (Contractor CID, legal)
 **Size:** 0
 
@@ -23,10 +23,10 @@ aliases:
 
 ## Skills
 **Sleeve Skills:** Athletics 4, Endurance 3, Perception 1  
-**Notable Skills:** [[Cohesion]] 1, Firearms 3, Intimidation 4, Melee 2, Resolve 2
+**Notable Skills:** [[Glossary/Cohesion]] 1, Firearms 3, Intimidation 4, Melee 2, Resolve 2
 
 ## Stunts/Augmentations
-- **[[Apotheosis]]**
+- **[[Glossary/Apotheosis]]**
 - **Fully Synthetic**
 - **Bio-Skin Sheath**
 - **Counter Attack**
@@ -39,4 +39,4 @@ aliases:
 - **Gravitic Baton** WR: 3
 
 ## GM Notes
-The **Counter Attack** [[Stunt]] allows the Cyber-Merc to make a free melee attack as an Instant Action when they generate **[[Spin]]** on a test to defend against a melee attack, or close (same zone) ranged attack.
+The **Counter Attack** [[Glossary/Stunt]] allows the Cyber-Merc to make a free melee attack as an Instant Action when they generate **[[Glossary/Spin]]** on a test to defend against a melee attack, or close (same zone) ranged attack.

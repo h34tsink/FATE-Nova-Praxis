@@ -50,4 +50,4 @@ tags:
 ## Linked Notes
 - [[Characters/NPCs/Named NPCs/Sera Ivanova]]
 - [[Locations/Asteroid Belts/Asteroids/Cere]]
-- [[Talons of Freedom]]
+- Talons of Freedom

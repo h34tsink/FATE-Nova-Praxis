@@ -24,11 +24,11 @@ But the fame masks a deteriorating mind. Traeger has been resleeved too many tim
 
 Traeger operates from his ship, the Meatlocker, with a crew that follows him out of a mix of loyalty, fear, and the profit his celebrity generates. His companion Castor is the only person capable of talking him down from a fight — and even Castor's influence is waning as the fragmentation worsens. Traeger carries a high-end remote backup module, meaning killing him is a temporary inconvenience at best.
 
-He occupies a heavily augmented [[Ursus]] sleeve — a massive, combat-optimized platform that matches his brutal fighting style. He will fight to the death unless Castor convinces him to withdraw, and even then, he will remember the slight.
+He occupies a heavily augmented Ursus sleeve — a massive, combat-optimized platform that matches his brutal fighting style. He will fight to the death unless Castor convinces him to withdraw, and even then, he will remember the slight.
 
 ## Mechanics
 
-**State:** Sleeved (heavily augmented [[Ursus]] sleeve)
+**State:** Sleeved (heavily augmented Ursus sleeve)
 **Allegiance:** [[Factions/Houses/House Dalianis]]
 **Size:** 0
 **CID:** `TR66DL11` (Legal Coalition CID)
@@ -48,6 +48,6 @@ He occupies a heavily augmented [[Ursus]] sleeve — a massive, combat-optimized
 ## Links
 
 - [[Factions/Houses/House Dalianis]]
-- [[Glossary/Resleeving]]
+- Resleeving
 - [[Glossary/Fragmentation]]
-- [[Glossary/Knight]]
+- Knight

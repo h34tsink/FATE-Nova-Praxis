@@ -61,7 +61,7 @@ Academics, Mimirians, and corporate researchers use these terms to discuss (or d
 ## Related Campaign Content
 
 ### Factions & Species
-- [[Factions/Aliens/The Birrin|The Birrin]] — First sapient aliens encountered; maintain strict Pneuma containment protocols
+- [[Groups/Aliens/The Birrin/The Birrin|The Birrin]] — First sapient aliens encountered; maintain strict Pneuma containment protocols
   - Concord containment doctrine
   - Resonance cages and quarantine procedures
   - "Silent Routes" and relic wardenship

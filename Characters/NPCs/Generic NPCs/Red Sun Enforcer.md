@@ -14,7 +14,7 @@ aliases:
 
 # Red Sun Enforcer
 
-**Sleeve:** Sleeved ([[Jinsoku]] Cybersleeve)
+**Sleeve:** Sleeved (Jinsoku Cybersleeve)
 **CID:** `RE68KM57` (Legal Coalition CID)
 **Size:** 0
 
@@ -34,9 +34,9 @@ aliases:
 **Notable Skills:** Guile 2, Firearms 4 (adjusted for Combat Training), Intimidation 2, Melee 5 (adjusted), Resolve 3, Strategy 2
 
 ## Stunts/Augmentations
-- **[[Combat Training]]** (+2 all attacks, already factored)
+- **Combat Training** (+2 all attacks, already factored)
 - **Concentrated Fire** (once/scene attack + ally attacks same foe as Instant Action)
-- **[[Apotheosis]]**
+- **[[Glossary/Apotheosis]]**
 - **Bio-Skin Sheath**
 - **Fully Synthetic**
 - **Auditory Amp and Filtering Module**
@@ -52,4 +52,4 @@ aliases:
 - **ME Longsword (Katana)** WR: 4
 
 ## GM Notes
-[[Red Sun]] is [[Factions/Houses/House Kimura]]'s covert enforcement arm. These operatives are heavily augmented for stealth and close combat. Concentrated Fire allows coordinating a devastating alpha-strike. Perception 4 makes them very hard to sneak past.
+[[Factions/Hidden Agendas/Red Sun]] is [[Factions/Houses/House Kimura]]'s covert enforcement arm. These operatives are heavily augmented for stealth and close combat. Concentrated Fire allows coordinating a devastating alpha-strike. Perception 4 makes them very hard to sneak past.

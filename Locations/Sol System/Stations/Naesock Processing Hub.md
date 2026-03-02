@@ -1,6 +1,6 @@
 ### The Naesock Processing Hub: An Apostate Haven in the Shadow of Neptune
 
-The **Naesock Processing Hub** is a massive space station orbiting **Triton**, [[Neptune]]'s largest moon. Originally designed as a primary processing and storage facility for resources extracted from [[Neptune]]'s arcs, the station has undergone significant changes in recent years.
+The **Naesock Processing Hub** is a massive space station orbiting **Triton**, Neptune's largest moon. Originally designed as a primary processing and storage facility for resources extracted from Neptune's arcs, the station has undergone significant changes in recent years.
 
 ---
 
@@ -37,8 +37,8 @@ The **Naesock Processing Hub** stands as a symbol of the changing dynamics betwe
 
 ### Key Points to Consider
 
-- The **Naesock Processing Hub** could serve as a valuable location for the PCs to gather information, acquire illicit goods, or establish contact with [[Apostate]] factions.
+- The **Naesock Processing Hub** could serve as a valuable location for the PCs to gather information, acquire illicit goods, or establish contact with [[Groups/Apostate]] factions.
 
-- **[[House Silva]]’s influence** within the station might present both opportunities and challenges for the PCs, depending on their objectives and allegiances.
+- **House Silva’s influence** within the station might present both opportunities and challenges for the PCs, depending on their objectives and allegiances.
 
 - The presence of a **thriving black market** suggests the existence of various criminal elements and potentially dangerous individuals operating within the station’s lower levels.

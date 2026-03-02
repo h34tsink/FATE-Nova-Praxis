@@ -194,5 +194,5 @@ A comprehensive reference for all firearms in Nova Praxis.
 ## Links
 
 - [[Glossary/Firearms]]
-- [[Rules and Mechanics]]
+- Rules and Mechanics
 

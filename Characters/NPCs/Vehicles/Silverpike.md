@@ -10,11 +10,11 @@ aliases: []
 
 # Silverpike
 
-**Summary:** Size 4 modified cargo ship outfitted for smuggling by [[Factions/Houses/House Turin]].
+**Summary:** Size 4 modified cargo ship outfitted for smuggling by [[Factions/Hidden Agendas/House Turin]].
 
 ## Lore
 
-The Silverpike is a modified cargo freighter outfitted for smuggling operations by [[Factions/Houses/House Turin]]. To casual observation it looks like a stock standard freighter, but beneath the unassuming hull lies dozens of hidden compartments, heavily compartmentalized internal sections, and engines that can build serious speed in a straight-away. Unarmed by design — the Silverpike relies on stealth and speed rather than firepower.
+The Silverpike is a modified cargo freighter outfitted for smuggling operations by [[Factions/Hidden Agendas/House Turin]]. To casual observation it looks like a stock standard freighter, but beneath the unassuming hull lies dozens of hidden compartments, heavily compartmentalized internal sections, and engines that can build serious speed in a straight-away. Unarmed by design — the Silverpike relies on stealth and speed rather than firepower.
 
 ## Mechanics
 
@@ -71,6 +71,6 @@ An unarmed smuggler's ship — fast and stealthy but defenseless in a fight. Doz
 
 ## Links
 
-- [[Factions/Houses/House Turin]]
-- [[Characters/NPCs/Vehicles/Index|Vehicles Index]]
+- [[Factions/Hidden Agendas/House Turin]]
+- Vehicles Index
 - [[Glossary/Index]]

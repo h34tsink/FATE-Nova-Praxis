@@ -61,5 +61,5 @@ The corporate security workhorse. AR 7 + WR:7 makes this a serious threat. Voice
 
 ## Links
 
-- [[Characters/NPCs/Drones and Creatures/Index|Drones and Creatures Index]]
+- Drones and Creatures Index
 - [[Glossary/Index]]

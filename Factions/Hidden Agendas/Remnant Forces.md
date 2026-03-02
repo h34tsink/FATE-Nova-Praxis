@@ -3,4 +3,4 @@ Remnant Forces are fragmented survivors, holdouts, and ex-command elements opera
 ## Related
 - [[Factions/Hidden Agendas/Talons of Freedom]]
 - [[Factions/Ideologies/Apostates]]
-- [[Coalition of Free States]]
+- Coalition of Free States

@@ -65,4 +65,4 @@ The session began with our characters scattered across the System, each drawn in
 
 ## Links
 
-- [[Sessions]]
+- Sessions

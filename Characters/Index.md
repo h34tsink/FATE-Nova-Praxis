@@ -6,10 +6,10 @@
 - [[Characters/NPCs/The Ebon Jackal Crew]]
 
 ## Named NPCs
-- [[Characters/NPCs/Named NPCs]]
+- Named NPCs
 
 ## Generic NPCs
-- [[Characters/NPCs/Generic NPCs]]
+- Generic NPCs
 
 ## Players
 - [[Characters/Players/Aeddarius Crucial/Dan - FATE Character]]

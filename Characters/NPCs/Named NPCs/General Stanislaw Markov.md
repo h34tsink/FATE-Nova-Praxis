@@ -18,9 +18,9 @@ aliases:
 
 General Stanislaw Markov is the most dangerous traitor in the Coalition's military hierarchy. A high-ranking officer of [[Factions/Houses/House Tsarya]], Markov is the person most directly responsible for Tsarya's covert support of rebel forces operating against the Coalition's interests. He feeds intelligence about the PCs and their operations to mercenary forces, turning routine missions into lethal ambushes.
 
-Markov's treachery extends beyond simple information warfare. He leverages [[Second Chances]] — the resleeving and backup infrastructure — to ensure that [[Glossary/Apotheosis|Apotheosized]] PCs are not merely killed but permanently deleted from backup. Death in Nova Praxis is usually temporary; Markov makes it permanent.
+Markov's treachery extends beyond simple information warfare. He leverages [[Factions/Hidden Agendas/Second Chances]] — the resleeving and backup infrastructure — to ensure that [[Glossary/Apotheosis|Apotheosized]] PCs are not merely killed but permanently deleted from backup. Death in Nova Praxis is usually temporary; Markov makes it permanent.
 
-The most unsettling aspect of Markov's betrayal is that he may not be acting entirely of his own volition. Evidence suggests he is directed by a mysterious force — possibly the [[Unseen Court]], or "War," one of the [[Fallen]]. Whether Markov is a willing collaborator, a manipulated pawn, or something else entirely is a question the campaign must answer.
+The most unsettling aspect of Markov's betrayal is that he may not be acting entirely of his own volition. Evidence suggests he is directed by a mysterious force — possibly the Unseen Court, or "War," one of the Fallen. Whether Markov is a willing collaborator, a manipulated pawn, or something else entirely is a question the campaign must answer.
 
 His treachery is the central thread connecting the later campaign arcs, and unmasking him is one of the most consequential moments in the Machinations storyline.
 
@@ -45,7 +45,7 @@ His treachery is the central thread connecting the later campaign arcs, and unma
 ## Links
 
 - [[Factions/Houses/House Tsarya]]
-- [[Second Chances]]
+- [[Factions/Hidden Agendas/Second Chances]]
 - [[Glossary/Apotheosis]]
-- [[Unseen Court]]
-- [[Fallen]]
+- Unseen Court
+- Fallen

@@ -103,7 +103,7 @@ Rings of Olympus represent:
 
 - [[House Turin]]
 - [[Talons of Freedom]]
-- [[Apostates]]
-- [[Coalition of Free States]]
+- [[Factions/Ideologies/Apostates]]
+- Coalition of Free States
 - [[Piracy and Insurgency]]
-- [[Olympus]] (location)
+- [[Locations/Sol System/Olympus]] (location)

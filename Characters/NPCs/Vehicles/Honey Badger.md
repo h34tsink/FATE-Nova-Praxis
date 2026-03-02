@@ -78,5 +78,5 @@ Slow (Speed 0, Maneuverability 0) but devastating. Three weapon systems all at W
 ## Links
 
 - [[Factions/Houses/House Tsarya]]
-- [[Characters/NPCs/Vehicles/Index|Vehicles Index]]
+- Vehicles Index
 - [[Glossary/Index]]

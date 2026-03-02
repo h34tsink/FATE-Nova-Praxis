@@ -63,9 +63,9 @@ While unified under astral plane belief, Astralist faith includes various sects:
 
 ## Related Factions
 
-- [[Coalition of Free States]]
-- [[House Kimura]]
+- Coalition of Free States
+- House Kimura
 - [[Mimirians]]
 - [[Traditional Religions]]
 - [[Neo-Religions]]
-- [[Transhumans]]
+- [[Factions/Ideologies/Transhumans]]

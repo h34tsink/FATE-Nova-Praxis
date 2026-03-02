@@ -11,7 +11,7 @@
 - **Lifestyle:** Basic life support functions are maintained, with air supplied through disguised vents and food grown hydroponically.
 
 ##### Valhalla
-- **Vision:** Planned as the first true [[apostate]] city on the planet's surface.
+- **Vision:** Planned as the first true [[Groups/Apostate]] city on the planet's surface.
 - **Current State:** Consists of a cleared area with a few prefabricated shelters, representing the aspirations for a free and independent community.
 
 ##### Sanctuary’s Hydroponics Farms
@@ -19,7 +19,7 @@
 - **Security:** These facilities are heavily guarded, with a shoot-first policy against intruders.
 
 #### Sanctuary's Unique Characteristics
-- **[[Apostate]] Colony:** Founded by apostates as a haven from Coalition control, not officially recognized by the Coalition.
+- **[[Groups/Apostate]] Colony:** Founded by apostates as a haven from Coalition control, not officially recognized by the Coalition.
 - **Harsh Environment:** Covered in sand and sandstone, with extreme heat and frequent sandstorms, yet hospitable enough for human life without terraforming.
 - **Strategic Concealment:** Initial settlement designed for stealth, with ships buried to avoid detection from orbit.
 

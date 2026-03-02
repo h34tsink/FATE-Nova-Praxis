@@ -148,8 +148,8 @@ Cygnus Alpha represents Coalition expansion efforts into the Cygnus system. The 
 
 ## Related Factions
 
-- [[Coalition of Free States]]
-- [[House Kimura]]
-- [[House Dalianis]]
-- [[Apostates]]
-- [[Piracy and Insurgency]]
+- Coalition of Free States
+- House Kimura
+- House Dalianis
+- [[Factions/Ideologies/Apostates]]
+- [[Factions/Hidden Agendas/Piracy and Insurgency]]

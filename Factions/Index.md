@@ -10,7 +10,7 @@ The primary governmental and corporate alliance of humanity.
 - [[The Coalition/_Coalition Overview|Coalition Overview]] - Complete government structure, policies, and member Houses
 - [[The Coalition/Coalition Authority|Coalition Authority]] - Governmental responsibilities and ministries
 - [[The Coalition/Coalition Voting|Coalition Voting System]] - Direct democracy through CVS
-- [[The Coalition/The Protectorate/|The Protectorate]] - Military and law enforcement branch
+- The Protectorate - Military and law enforcement branch
 
 ### Coalition Houses
 
@@ -117,8 +117,8 @@ Reference for:
 
 - [[../Locations/Sol System/_Overview|Sol System Territories]]
 - [[../Locations/Exoplanets/_Overview|Exoplanet Colonies]]
-- [[../Glossary/|Game Mechanics Glossary]]
-- [[../Campaign Overview/|Campaign Context]]
+- Game Mechanics Glossary
+- Campaign Context
 
 ---
 

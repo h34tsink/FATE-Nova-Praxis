@@ -98,4 +98,4 @@ Whether Adams serves as a patron or an antagonist depends entirely on the campai
 - [[Factions/Houses/House Silva]]
 - [[Glossary/Apotheosis]]
 - [[Glossary/Biosleeve]]
-- [[Glossary/Resleeving]]
+- Resleeving

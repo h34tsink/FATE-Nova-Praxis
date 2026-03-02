@@ -12,18 +12,18 @@
 
 ##### Feiwode Fields
 - **Importance:** Shouye’s most fertile agricultural region, vital for producing a variety of natural foods.
-- **Security:** Heavily fortified, reflecting [[House Jinzhan]]’s protective stance and growing paranoia.
+- **Security:** Heavily fortified, reflecting House Jinzhan’s protective stance and growing paranoia.
 
 ##### Zhanshi Post
-- **Role:** A large military installation for training the People’s Guardian soldiers of [[House Jinzhan]].
+- **Role:** A large military installation for training the People’s Guardian soldiers of House Jinzhan.
 - **Transparency:** Unusually open to surveillance, possibly as a deterrent strategy.
 
 #### Shouye's Unique Characteristics
-- **Last Coalition Planet Colonized:** Founded as a necessity for the surviving Chinese population post-[[Earth]] fall.
-- **Ecologically Rich:** Similar to [[Earth]], with a high-oxygen atmosphere and a plethora of insect life, many of which are large and aggressive.
+- **Last Coalition Planet Colonized:** Founded as a necessity for the surviving Chinese population post-Earth fall.
+- **Ecologically Rich:** Similar to Earth, with a high-oxygen atmosphere and a plethora of insect life, many of which are large and aggressive.
 
 #### Sociopolitical Dynamics
-- **[[House Jinzhan]]'s Domain:** Shouye functions as the capital for [[House Jinzhan]], heavily guarding its lush world.
+- **House Jinzhan's Domain:** Shouye functions as the capital for House Jinzhan, heavily guarding its lush world.
 - **Restricted Access:** Entry to the planet is tightly controlled, with only Jinzhan citizens and official business permitted on the surface.
 
 #### Current Issues and Activities

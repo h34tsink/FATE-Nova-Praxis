@@ -10,8 +10,8 @@
 
 ## Political and Environmental Changes
 - **Global War**: Political upheaval resulted in a devastating global war, causing significant loss of life and environmental damage.
-- **[[Earth]]'s Demise**: A Technophage attack leads to [[Earth]]'s downfall, forcing mankind to evacuate in an event called the Exodus.
-- **Rise of [[The Houses]]**: Corporations evolve into governing Houses, forming the Coalition of Free States.
+- **Earth's Demise**: A Technophage attack leads to Earth's downfall, forcing mankind to evacuate in an event called the Exodus.
+- **Rise of [[Groups/The Houses]]**: Corporations evolve into governing Houses, forming the Coalition of Free States.
 
 ## Legacy of the Singularity
 - **Dynamic Creation Engine**: Birth of a special AI (Mimir) responsible for major technological advancements.
@@ -19,8 +19,8 @@
 
 ## Post-Singularity Society
 - **Economic Overhaul**: Introduction of compilers and a new economy based on reputation and favors (Inter-Rep system).
-- **The Fall of [[Earth]]**: The catastrophic impact of the Technophage and the ensuing Exodus.
-- **Rise of [[The Houses]]**: Formation of corporate governments and the Coalition.
+- **The Fall of Earth**: The catastrophic impact of the Technophage and the ensuing Exodus.
+- **Rise of [[Groups/The Houses]]**: Formation of corporate governments and the Coalition.
 
 ## New Technologies and Lifestyle Changes
 - **Augmented and Virtual Reality**: Transformation of human-computer interaction.
@@ -28,7 +28,7 @@
 - **Savants**: Individuals who bypass mindset restrictions, representing the bleeding edge of human evolution.
 
 ## Ongoing Struggles
-- **Political Intrigue**: Tensions between [[The Houses]] and apostates, shadow wars, and hidden agendas.
+- **Political Intrigue**: Tensions between [[Groups/The Houses]] and apostates, shadow wars, and hidden agendas.
 - **Humanity Preservation Act**: Legal battles over the extent of augmentation and the definition of humanity.
 - **Infinite Frontiers**: Expansion to new planets and technological advancements in space travel.
 

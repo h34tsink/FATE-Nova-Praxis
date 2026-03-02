@@ -41,5 +41,5 @@ In demeanor, Catalyst is calm, serene, and graceful. Every movement is measured,
 ## Links
 
 - [[Factions/Houses/House Cipriani]]
-- [[Glossary/Auxiliary]]
+- Auxiliary
 - [[Glossary/Biosleeve]]

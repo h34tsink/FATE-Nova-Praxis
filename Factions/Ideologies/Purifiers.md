@@ -70,9 +70,9 @@ While specific documented incidents in Session 9 context may be limited, Purifie
 ## Related Factions
 
 - [[Purists]]
-- [[Coalition of Free States]]
+- Coalition of Free States
 - [[Transhumans]]
-- [[Coalition Security Forces]]
+- [[Factions/The Coalition/Coalition Security Forces]]
 - [[Apostates]]
-- [[House Cipriani]]
-- [[House Jinzhan]]
+- House Cipriani
+- House Jinzhan

@@ -63,24 +63,24 @@ Just as physics honors Newton, Planck, and Pascal, Nova Praxis culture has coine
 
 | Name | Origin | Meaning / Usage |
 |---|---|---|
-| [[Kochen Unit]] | Simon Kochen (*Free Will Theorem*) | A "unit" of Pneuma influence; used in research papers and parody. |
-| [[Bell Weight]] | John Bell | How much Pneuma disturbs local causality. |
-| [[Planck Twitch]] | Max Planck | The smallest detectable Pneuma nudge. |
-| [[Hilbert Surge]] | Hilbert Space | Sudden burst of probability manipulation. |
-| [[Lorentz Drift]] | Hendrik Lorentz | Skeptical slang for perceived spacetime "warps." |
-| [[Born's Constant]] | Max Born | Joke term: Pneuma "adjusts" the probability constant. |
-| [[Schrödinger Slip]] | Erwin Schrödinger | Unstable Pneuma effect, like the cat's fate. |
-| [[Everett Branch]] | Hugh Everett | Suggests Pneuma hops multiverse branches. |
-| [[Libet Response]] | Benjamin Libet | Delay before Pneuma manifests; also used medically. |
-| [[Penrose Field]] | Roger Penrose | The aura or resonance around Pneuma-users. |
-| [[Zeilinger Syndrome]] | Anton Zeilinger | Entanglement stress caused by over-channeling. |
-| [[Feynman Kick]] | Richard Feynman | Chaotic, playful Pneuma burst. |
-| [[Wheeler Nodes]] | John A. Wheeler | Mental "anchors" used in bracing techniques. |
-| [[Choice Charge]] | Street slang | "Loading up" to bend an outcome. |
-| [[Free Spin]] | Street slang | Tilting randomness casually in your favor. |
-| [[Collapse Push]] | Technical slang | Forcing a collapse toward a chosen result. |
-| [[Script Break]] | Security slang | Official term for unlawful Pneuma manipulation. |
-| [[Mimir's Echo]] | Poetic slang | Pneuma as the last whisper of Mimir's mind. |
+| [[Glossary/Kochen Unit]] | Simon Kochen (*Free Will Theorem*) | A "unit" of Pneuma influence; used in research papers and parody. |
+| [[Glossary/Bell Weight]] | John Bell | How much Pneuma disturbs local causality. |
+| [[Glossary/Planck Twitch]] | Max Planck | The smallest detectable Pneuma nudge. |
+| [[Glossary/Hilbert Surge]] | Hilbert Space | Sudden burst of probability manipulation. |
+| [[Glossary/Lorentz Drift]] | Hendrik Lorentz | Skeptical slang for perceived spacetime "warps." |
+| [[Glossary/Born's Constant]] | Max Born | Joke term: Pneuma "adjusts" the probability constant. |
+| [[Glossary/Schrödinger Slip]] | Erwin Schrödinger | Unstable Pneuma effect, like the cat's fate. |
+| [[Glossary/Everett Branch]] | Hugh Everett | Suggests Pneuma hops multiverse branches. |
+| [[Glossary/Libet Response]] | Benjamin Libet | Delay before Pneuma manifests; also used medically. |
+| [[Glossary/Penrose Field]] | Roger Penrose | The aura or resonance around Pneuma-users. |
+| [[Glossary/Zeilinger Syndrome]] | Anton Zeilinger | Entanglement stress caused by over-channeling. |
+| [[Glossary/Feynman Kick]] | Richard Feynman | Chaotic, playful Pneuma burst. |
+| [[Glossary/Wheeler Nodes]] | John A. Wheeler | Mental "anchors" used in bracing techniques. |
+| [[Glossary/Choice Charge]] | Street slang | "Loading up" to bend an outcome. |
+| [[Glossary/Free Spin]] | Street slang | Tilting randomness casually in your favor. |
+| [[Glossary/Collapse Push]] | Technical slang | Forcing a collapse toward a chosen result. |
+| [[Glossary/Script Break]] | Security slang | Official term for unlawful Pneuma manipulation. |
+| [[Glossary/Mimir's Echo]] | Poetic slang | Pneuma as the last whisper of Mimir's mind. |
 
 ---
 

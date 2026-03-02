@@ -3,7 +3,7 @@
 
 **Player:** James  
 **Rank:** Novice  
-**State:** [[Cybersleeve]] (Delta, [[Apotheosis|Apotheosized]])  
+**State:** [[Glossary/Cybersleeve]] (Delta, [[Glossary/Apotheosis|Apotheosized]])  
 **Origin:** Mnemonic Courier  
 **Allegiance:** [[Factions/Houses/House Kimura|House Kimura]]  
 **Rep-Rating:** 10  
@@ -49,7 +49,7 @@
 
 **Augmentation Limit:** 7 AV
 
-- **[[Apotheosis]]** (AV 3) - Mindset and mnemonic core _(doesn't count against limit)_
+- **[[Glossary/Apotheosis]]** (AV 3) - Mindset and mnemonic core _(doesn't count against limit)_
 - **Fully Synthetic** (AV Special) - Complete synthetic body composition _(doesn't count against limit)_
 - **Bio-Skin Sheath** (AV 1) - Natural-feeling synthetic skin
 - **Optimized Power System** (AV 1) - Efficient power management for cyberware _(doesn't count against limit for cost calculation)_

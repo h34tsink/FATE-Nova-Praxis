@@ -535,7 +535,7 @@ The following custom programs have been created for this campaign:
 - **Ghost Protocol** - Enhanced stealth in digital systems; prevents monitoring detection  
 - **Data Miner** - Extracts hidden, deleted, or encrypted information
 
-These programs follow official Savant Program structure and are used by NPCs like [[Valare]].
+These programs follow official Savant Program structure and are used by NPCs like Valare.
 
 ---
 

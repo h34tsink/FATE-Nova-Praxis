@@ -6,7 +6,7 @@
 - **Success**: Effort ≥ Difficulty.
 - **Failure**: Effort < Difficulty.
 
-### Spin / [[Stall]]
+### Spin / [[Glossary/Stall]]
 - **Spin**: succeed by **3+ Shifts** (Effort ≥ Difficulty + 3).
 - **Stall**: fail by **3+ Shifts** (Effort ≤ Difficulty − 3).
 - In opposed rolls (contests/conflict), **Spin overrides Stall** (same exchange can’t “be both”).

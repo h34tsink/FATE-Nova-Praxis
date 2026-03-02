@@ -79,18 +79,18 @@ Transhumans and apostates often intersect:
 - **Conflict with tradition** - Tension between transhumanist ideals and Coalition conservatism
 
 ### Notable Organizations
-- [[House Kimura]] - Primary institutional support
-- [[Red Sun]] - Employs many transhuman operatives
-- [[The Seraphim]] - Represent ultimate transhuman evolution ideal
+- House Kimura - Primary institutional support
+- [[Factions/Hidden Agendas/Red Sun]] - Employs many transhuman operatives
+- [[Factions/The Seraphim]] - Represent ultimate transhuman evolution ideal
 
 ## Related Factions
 
-- [[House Kimura]]
-- [[House Silva]]
-- [[House Dalianis]]
+- House Kimura
+- House Silva
+- House Dalianis
 - [[Apostates]]
 - [[Purists]]
-- [[Astralists]]
-- [[Mimirians]]
-- [[The Seraphim]]
-- [[Aberrants]]
+- Astralists
+- Mimirians
+- [[Factions/The Seraphim]]
+- [[Glossary/Aberrants]]

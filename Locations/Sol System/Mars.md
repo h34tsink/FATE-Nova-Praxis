@@ -244,14 +244,14 @@ Mars stands as humanity's greatest achievement in terraforming and colonization.
 
 ## Related Factions
 
-- [[Coalition of Free States]]
-- [[House Cipriani]]
-- [[House Dalianis]]
-- [[House Jinzhan]]
-- [[House Silva]]
-- [[House Kimura]]
-- [[House Tsarya]]
-- [[House Turin]]
-- [[Apostates]]
-- [[Rings of Olympus]]
-- [[Talons of Freedom]]
+- Coalition of Free States
+- House Cipriani
+- House Dalianis
+- House Jinzhan
+- House Silva
+- House Kimura
+- House Tsarya
+- [[Factions/Hidden Agendas/House Turin]]
+- [[Factions/Ideologies/Apostates]]
+- [[Factions/Hidden Agendas/Rings of Olympus]]
+- Talons of Freedom

@@ -20,7 +20,7 @@ Greyton is a name whispered in the darkest corners of Coalition space — a rumo
 
 What is known — or rather, what is suspected — is that Greyton's memories pre-date the Exodus itself, making the entity one of the oldest continuous consciousnesses in existence. A head full of lifetimes has honed skills to a razor edge. Greyton operates with a simple creed: "For the Clan!" and an absolute conviction that the clan has never been, and never shall be, defeated.
 
-Greyton is an [[Glossary/Apostate|Apostate]], operating outside the House system entirely. The cybersleeve is a forgotten design — a Gamma-class synthetic body that predates modern manufacturing standards, further deepening the mystery of Greyton's true origins. One shot is always enough.
+Greyton is an [[Groups/Apostate|Apostate]], operating outside the House system entirely. The cybersleeve is a forgotten design — a Gamma-class synthetic body that predates modern manufacturing standards, further deepening the mystery of Greyton's true origins. One shot is always enough.
 
 ## Mechanics
 
@@ -86,7 +86,7 @@ Greyton is an [[Glossary/Apostate|Apostate]], operating outside the House system
 
 ## Links
 
-- [[Glossary/Apostate]]
+- [[Groups/Apostate]]
 - [[Glossary/Cybersleeve]]
 - [[Glossary/Apotheosis]]
-- [[Glossary/Exodus]]
+- Exodus

@@ -69,7 +69,7 @@ aliases:
 - **Trigger:** Exposure clock is at 1+, OR PCs took obvious action (comms to known Talon sympathizers, public scene, **sloppy data searches**, etc.).
 - **What Happens:** 
   - A tail appears: someone following at distance, or a contact reports being asked about the PCs.
-  - A face from a faction ([[Talons of Freedom]], [[Factions/The Coalition/_Coalition Overview|Coalition]], [[Shadow Market]]) appears in the same zone.
+  - A face from a faction (Talons of Freedom, [[Factions/The Coalition/_Coalition Overview|Coalition]], [[Locations/Shadow Market]]) appears in the same zone.
   - A message arrives: *"You're asking the wrong people. Back off."*
   - **OR:** Valare's programs detect the investigation and she sends a warning (burst transmission, dead drop message, or unexpected contact): *"Stop looking. You don't understand what you're doing."*
 - **GM Move:** **Don't trap them**—this is pressure, not a fight scene (unless they escalate). Offer exit options:
@@ -154,7 +154,7 @@ aliases:
 ### Beat 2.4: Rival Team Encounter (or Narrow Escape)
 - **Trigger:** Exposure is 2+, OR they've been loud in Scene 1 and now they're loud in Scene 2.
 - **What Happens:**
-  - A patrol enters the mining section ([[Talons of Freedom]], [[Factions/The Coalition/_Coalition Overview|Coalition]], [[Shadow Market]] runner, or local security)
+  - A patrol enters the mining section (Talons of Freedom, [[Factions/The Coalition/_Coalition Overview|Coalition]], [[Locations/Shadow Market]] runner, or local security)
   - The PCs hear comms chatter (coordinating, closing in)
   - They find fresh bootprints / hear footsteps nearby
   - **Savant Counter-Move:** Valare's programs may have also detected the incoming rivals (she monitors the colony network). She could:
@@ -350,7 +350,7 @@ aliases:
 - **Trigger:** End of Scene 4 / end of session OR transition to Part 3.
 - **What Happens:**
   - An NPC (Siren, faction representative, or campaign-relevant contact) delivers news that reframes the PCs' victory
-  - **OR: The PCs need to contact [[Isabella Nowak|Nowak]]** to follow up on the Valare situation and learn about the outpost
+  - **OR: The PCs need to contact Nowak** to follow up on the Valare situation and learn about the outpost
   - A new threat emerges that was in motion the whole time
   - A mystery deepens (what was Valare's death really about? Who benefits from keeping forks off the grid?)
 - **Nowak Connection:**
@@ -374,7 +374,7 @@ aliases:
 
 - **Trigger:** PCs decide they must reach Nowak in person.
 - **What Happens:**
-  - PCs must arrange travel to **Icarus Hub orbiting [[Proch]]**
+  - PCs must arrange travel to **Icarus Hub orbiting Proch**
   - **Travel time options:**
     - In the Chickenhawk or jump-capable ship: **~20 hours**
     - Using public jump-ring network: **~30 hours**
@@ -445,10 +445,10 @@ aliases:
   - Establish the **time pressure**: 10 minutes per round
   - Introduce the **scene aspects** from the game book
   - **Reveal the stakes:**
-    - [[Characters/NPCs/Chimera|Chimera]] helped instigate this
+    - Chimera helped instigate this
     - Nowak has unleashed **Lighthouse with extreme prejudice**
     - PCs are being **flagged as instigators** (Chimera's frame-up)
-    - [[Characters/NPCs/Named NPCs/Kestrel|Kestrel]] and Red Suns are also coming to kill Nowak (and the PCs)
+    - Kestrel and Red Suns are also coming to kill Nowak (and the PCs)
 - **Scene Aspects (Remind Players):**
   - **"Icarus Hub in Orbit Around Proch"**
   - **"Lighthouse has been called in to put down the threat... with extreme prejudice."**

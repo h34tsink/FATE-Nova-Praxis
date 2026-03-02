@@ -182,5 +182,5 @@ Included augmentations do not count against your augmentation point total.
 ## Links
 
 - [[Mechanics/Sleeves]]
-- [[Glossary]]
+- Glossary
 

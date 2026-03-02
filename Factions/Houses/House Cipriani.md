@@ -67,11 +67,11 @@ Cipriani's Purist composition strains relationships with bio-liberal Houses like
 ## Related Factions
 
 
-- [[Coalition of Free States]]
+- Coalition of Free States
 - [[House Dalianis]]
 - [[House Silva]]
 - [[House Tsarya]]
 - [[House Kimura]]
 - [[House Jinzhan]]
-- [[Purists]]
-- [[Talons of Freedom]]
+- [[Factions/Ideologies/Purists]]
+- Talons of Freedom

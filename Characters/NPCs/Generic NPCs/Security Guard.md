@@ -13,7 +13,7 @@ aliases:
 
 # Security Guard
 
-**Sleeve:** [[Biosleeve]] (Beta)  
+**Sleeve:** [[Glossary/Biosleeve]] (Beta)  
 **CID:** `SG73CS18` (Legal Coalition CID)
 **Size:** 0
 
@@ -22,10 +22,10 @@ aliases:
 
 ## Skills
 **Sleeve Skills:** Athletics 3, Endurance 3, Perception 3  
-**Notable Skills:** [[Cohesion]] 1, Firearms 3, Intimidation 4, Melee 2, Resolve 2
+**Notable Skills:** [[Glossary/Cohesion]] 1, Firearms 3, Intimidation 4, Melee 2, Resolve 2
 
 ## Stunts/Augmentations
-- **[[Apotheosis]]**
+- **[[Glossary/Apotheosis]]**
 - **Combat Training**
 
 ## Combat Stats

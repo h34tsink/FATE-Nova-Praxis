@@ -3,4 +3,4 @@ Ansari Station is the massive Dalianis shipyard and industrial military hub in t
 ## Related
 - [[Locations/Sol System/Earth]]
 - [[Factions/Houses/House Dalianis]]
-- [[Coalition of Free States]]
+- Coalition of Free States

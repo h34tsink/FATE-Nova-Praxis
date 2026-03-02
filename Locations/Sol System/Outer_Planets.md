@@ -180,17 +180,17 @@ Beyond Mars, the outer Coalition territory grows increasingly lawless and myster
 - [[Tartarus]] (prison)
 - [[Europa Research Station]] (life research)
 - [[Titan City]] (mining hub)
-- [[The Colony]] (apostate haven)
-- [[Naesock Processing Hub]] (research facility)
+- [[Locations/The Colony]] (apostate haven)
+- Naesock Processing Hub (research facility)
 
 ## Related Factions
 
-- [[Coalition of Free States]]
-- [[House Jinzhan]]
-- [[House Silva]]
-- [[House Kimura]]
-- [[House Dalianis]]
-- [[Apostates]]
-- [[Piracy and Insurgency]]
-- [[Children of Dionysus]]
-- [[Talons of Freedom]]
+- Coalition of Free States
+- House Jinzhan
+- House Silva
+- House Kimura
+- House Dalianis
+- [[Factions/Ideologies/Apostates]]
+- [[Factions/Hidden Agendas/Piracy and Insurgency]]
+- [[Factions/Hidden Agendas/Children of Dionysus]]
+- Talons of Freedom

@@ -1,1 +1,1 @@
-Grace formed a bond with Aiden Ishida, a transgender drone enthusiast and fellow [[House Kimura]] member, over their shared transgender experience and drone expertise. Aiden helps Grace with drone projects and finding rare blueprints or software for specific jobs.
+Grace formed a bond with Aiden Ishida, a transgender drone enthusiast and fellow House Kimura member, over their shared transgender experience and drone expertise. Aiden helps Grace with drone projects and finding rare blueprints or software for specific jobs.

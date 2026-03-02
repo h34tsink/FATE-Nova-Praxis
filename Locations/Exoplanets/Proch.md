@@ -192,12 +192,12 @@ Proch holds special significance in human history as the first human colony esta
 ## Related Locations
 
 - [[Keppler]] (primary city)
-- [[Giordino]] (secondary city)
+- Giordino (secondary city)
 - [[Sanctuary]] (sister colony)
 - [[Chengdan]] (sister colony)
 
 ## Related Factions
 
-- [[Coalition of Free States]]
-- [[Apostates]]
-- [[Talons of Freedom]]
+- Coalition of Free States
+- [[Factions/Ideologies/Apostates]]
+- Talons of Freedom

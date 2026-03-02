@@ -184,5 +184,5 @@ The most powerful portable railgun system available, firing ultra-high velocity 
 ## Links
 
 - [[Mechanics/Firearms]]
-- [[Glossary]]
+- Glossary
 

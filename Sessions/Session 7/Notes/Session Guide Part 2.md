@@ -4,9 +4,9 @@ This guide expands on the outline provided in the sources for "PART 2 - A DIFFER
 
 ### Part 2: A Different Vantage Point
 
-**Context:** The players, having recently resurrected on [[Locations/Asola|Asola]], are seeking answers about a mission that went wrong and resulted in their deaths. Their investigation into missing mesh data leads them to Vantage station, the site of a recent mesh blackout similar to the one that wiped their own records. They don't yet know the connection, but their search will lead them to [[Characters/NPCs/Lester Lucas|Lester Lucas]], a smuggler with a dangerous secret.
+**Context:** The players, having recently resurrected on [[Locations/Asola|Asola]], are seeking answers about a mission that went wrong and resulted in their deaths. Their investigation into missing mesh data leads them to Vantage station, the site of a recent mesh blackout similar to the one that wiped their own records. They don't yet know the connection, but their search will lead them to [[Characters/NPCs/Named NPCs/Lester Lucas|Lester Lucas]], a smuggler with a dangerous secret.
 
-**Goal:** Guide the players through the investigation of the mesh blackout on Vantage, ultimately leading them to [[Characters/NPCs/Lester Lucas|Lester Lucas]] and the information he possesses.
+**Goal:** Guide the players through the investigation of the mesh blackout on Vantage, ultimately leading them to [[Characters/NPCs/Named NPCs/Lester Lucas|Lester Lucas]] and the information he possesses.
 
 ### Step 1: Arrival on Vantage and Initial Investigation
 
@@ -17,7 +17,7 @@ This guide expands on the outline provided in the sources for "PART 2 - A DIFFER
 - **Initial Clues:** Provide players with opportunities to gather information:
     - **Public Terminals:** Checking public mesh terminals could reveal news reports and forum discussions about the blackout, mentioning the affected level and docking bay number.
     - **Dockworkers and Centurions:** Casual conversations with NPCs like dockworkers or station security (Centurions) could reveal rumors about unusual activity in the affected docking bay around the time of the blackout. They might mention a specific ship or its captain.
-  - **[[SWADE - Nova Praxis/Groups/Talons of Freedom|Talons of Freedom]]:** A more daring approach could involve confronting members of the [[Factions/Hidden Agendas/Talons of Freedom|Talons of Freedom]], a potentially hostile faction. A successful Intimidation check could force them to divulge information about the blackout, but it might also make the players targets.
+  - **Talons of Freedom:** A more daring approach could involve confronting members of the [[Factions/Hidden Agendas/Talons of Freedom|Talons of Freedom]], a potentially hostile faction. A successful Intimidation check could force them to divulge information about the blackout, but it might also make the players targets.
 
 - **Steering Players:**
   - **If players ignore the blackout:** Have an NPC approach them, offering a seemingly unrelated job that takes them to the affected level of the station, drawing their attention to the lingering effects of the blackout.
@@ -26,10 +26,10 @@ This guide expands on the outline provided in the sources for "PART 2 - A DIFFER
 ### Step 2: Finding Lester Lucas
 
 - **Following the Clues:** Based on the information gathered, players should be able to trace the blackout to docking bay 117 and the ship that was docked there – the _Chickenhawk_.
-- **[[Characters/NPCs/Lester Lucas|Lester Lucas]]:** Introduce [[SWADE - Nova Praxis/Characters/NPCs/Lester Lucas|Lester Lucas]] as a wary and secretive smuggler, living in fear on Vantage. He's aware that the [[Factions/Hidden Agendas/Talons of Freedom|Talons of Freedom]] are watching him and wants to leave the station as soon as possible.
+- **[[Characters/NPCs/Named NPCs/Lester Lucas|Lester Lucas]]:** Introduce [[Characters/NPCs/Named NPCs/Lester Lucas|Lester Lucas]] as a wary and secretive smuggler, living in fear on Vantage. He's aware that the [[Factions/Hidden Agendas/Talons of Freedom|Talons of Freedom]] are watching him and wants to leave the station as soon as possible.
 - **Potential Interactions:**
   - **Direct Approach:** Players could try to contact Lester directly, but he'll be suspicious and reluctant to talk. He might demand proof that they can be trusted or offer a trade for information.
-  - **Indirect Approach:** Players could gather information about Lester from [[Other NPCs]]. This might involve bribing contacts, using Networking skills, or employing a Savant Program like **Pattern Scan** to uncover his past.
+  - **Indirect Approach:** Players could gather information about Lester from Other NPCs. This might involve bribing contacts, using Networking skills, or employing a Savant Program like **Pattern Scan** to uncover his past.
 - **Steering Players:**
   - **If players struggle to find Lester:** Have a contact mention his name or provide a clue to his location. Perhaps an NPC witnessed a meeting between Lester and a member of the [[Factions/Hidden Agendas/Talons of Freedom|Talons of Freedom]], or a Savant Program reveals a transaction between Lester and a known associate.
   - **If players attempt to harm Lester:** Make it clear that he's not a fighter and will likely flee or offer to bargain for his life. Emphasize his fear of the [[Factions/Hidden Agendas/Talons of Freedom|Talons of Freedom]] and suggest that he might have valuable information to trade.
@@ -38,7 +38,7 @@ This guide expands on the outline provided in the sources for "PART 2 - A DIFFER
 
 The players can choose to gather information using several methods:
 
-- **Networking:** Utilizing either **[[Apostate]]** or **House Networking** skills. Research is possible but suffers a -1 penalty.
+- **Networking:** Utilizing either **[[Groups/Apostate]]** or **House Networking** skills. Research is possible but suffers a -1 penalty.
 - **Social Skills:** Engaging with friendly NPCs like dockworkers or Centurions. **Intimidation** could also yield results if used against a Talon of Freedom member.
 
 #### Die Rolls & Information
@@ -48,15 +48,15 @@ For each method, have the players make a skill roll. Each success unlocks a piec
 - **Secret: 2** – The blackout happened in a docking bay on level 11.
 - **Secret: 3** – The blackout happened in docking bay 117 while the _Chickenhawk_ was docked there.
 - **Secret: 4** – The blackout was used to hide a transfer of goods. Witnesses heard an explosion during this time.
-- **Secret: 5** – Multiple bodies were carried out of the dock after the explosion. A deal likely went sour. The captain of the _Chickenhawk_ was smuggling weapons to the [[Talons of Freedom]] in exchange for food. He is missing.
-- **Secret: 6** – The _Chickenhawk_ belongs to [[Lester Lucas]], a member of [[House Silva]]. The ship has been moved to quarantine. Lester is usually found in the Waypoint Bar.
+- **Secret: 5** – Multiple bodies were carried out of the dock after the explosion. A deal likely went sour. The captain of the _Chickenhawk_ was smuggling weapons to the Talons of Freedom in exchange for food. He is missing.
+- **Secret: 6** – The _Chickenhawk_ belongs to [[Characters/NPCs/Named NPCs/Lester Lucas]], a member of House Silva. The ship has been moved to quarantine. Lester is usually found in the Waypoint Bar.
 - **Secret: 7** – Lucas never left Vantage. He changed his ship's ID and docked in a secure repair bay, located at the end of an arm protruding from the station. To reach the ship, one must travel down a heavily secured passageway or exit the station and traverse the arm externally.
 
 ### Meeting Lester
 
-**Direct Approach (Waypoint Bar):** If the players choose to confront Lester directly, they can find him at the Waypoint Bar. However, Lester is wary and secretive, living in fear of the [[Talons of Freedom]].
+**Direct Approach (Waypoint Bar):** If the players choose to confront Lester directly, they can find him at the Waypoint Bar. However, Lester is wary and secretive, living in fear of the Talons of Freedom.
 
-- He will demand **proof of trust** before divulging any information. This could involve completing a task for him, offering a bribe, or leveraging knowledge about his [[Situation]].
+- He will demand **proof of trust** before divulging any information. This could involve completing a task for him, offering a bribe, or leveraging knowledge about his Situation.
 
 **Indirect Approach:** If the players fail their initial skill rolls, they struggle to find Lester. **Word of their investigation reaches him through his network of low-Rep civilians and apostates**. Fearing the Talons, he seeks them out, hoping they can help him escape Vantage.
 
@@ -68,7 +68,7 @@ If the players attempt a direct approach, have one player make a **Persuasion** 
 
 - **Success:** Lester cautiously agrees to talk, but demands something in return.
 - **Failure:** He refuses to cooperate and warns them to drop the investigation.
-- **Critical Failure:** He alerts the [[Talons of Freedom]], leading to an ambush.
+- **Critical Failure:** He alerts the Talons of Freedom, leading to an ambush.
 
 ### Steering the Players
 

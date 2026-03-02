@@ -7,5 +7,5 @@ Self-replicating machine threat that consumed Earth and remains under Coalition 
 
 ## Related
 - [[Locations/Sol System/Earth]]
-- [[Coalition of Free States]]
+- Coalition of Free States
 - [[Glossary/Monitors]]

@@ -119,11 +119,11 @@ Traditional Religions in Coalition represent:
 
 ## Related Factions
 
-- [[Coalition of Free States]]
-- [[Purists]]
-- [[House Tsarya]]
-- [[House Jinzhan]]
+- Coalition of Free States
+- [[Factions/Ideologies/Purists]]
+- House Tsarya
+- House Jinzhan
 - [[Astralists]]
 - [[Mimirians]]
 - [[Neo-Religions]]
-- [[Apostates]]
+- [[Factions/Ideologies/Apostates]]

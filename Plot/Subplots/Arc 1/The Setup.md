@@ -1,6 +1,6 @@
 ## 1. The Invitation
 - **Scenario**: The PCs receive a cryptic yet enticing message from a trusted contact, instructing them to meet an individual named Catalyst on the Alistair space station orbiting Titan.
-- **GM [[Notes]]**: 
+- **GM Notes**: 
   - Highlight the mystery and potential rewards of the meeting, suggesting gains like a significant reputation increase, exclusive gear, or a valuable false CID. 
   - Use this as an opportunity to tap into the PCs' individual backgrounds, hinting that the employer knows their desires and histories.
 
@@ -15,12 +15,12 @@
 - **Character Description**: 
   - Catalyst is an enigmatic figure, tall and slender, with a gender-neutral appearance. They have smooth, hairless skin and wear a sleek, black bodysuit accentuated with a skirt-like flare.
   - Their head is adorned with an ebony circlet, set with a large diamond over the forehead, creating an air of mystique and authority.
-- **GM [[Notes]]**: 
+- **GM Notes**: 
   - Emphasize Catalyst's calm demeanor and graceful movements, making them a captivating yet unreadable character.
   - Use a neutral tone for their voice, adding a subtle echo effect to enhance their otherworldly presence.
 
 ## 4. The Briefing
-- **Scenario**: Catalyst, representing [[House Cipriani]], outlines the mission: investigate a compromised waypoint station (Waypoint S-9) involved in smuggling.
+- **Scenario**: Catalyst, representing House Cipriani, outlines the mission: investigate a compromised waypoint station (Waypoint S-9) involved in smuggling.
 - **Key Points**:
   - The PCs must gather evidence of smuggling, identify at least three individuals involved, and, if possible, trace the source of the contraband.
   - Catalyst offers a reward tailored to the PCs' desires, leaving room for negotiation but with a firm stance.
@@ -28,17 +28,17 @@
   - [[Unexpected Questions to Catalyst]]
 
 ## 5. Planning and Travel to Waypoint S-9
-- **Scenario**: The PCs strategize their approach and set off for the waypoint station, a crucial junction for mining operations in [[Saturn]]'s rings.
+- **Scenario**: The PCs strategize their approach and set off for the waypoint station, a crucial junction for mining operations in Saturn's rings.
 - **GM Advice**: 
   - Encourage diverse planning, considering stealth, diplomacy, or direct confrontation.
   - Detail the journey to Waypoint S-9, describing the transition from the busy hub of Alistair to the more utilitarian and rugged environment of the mining station.
 
 ## 6. Investigation at Waypoint S-9
 - **Scenario**: The PCs explore the station, seeking clues and contacts.
-- **GM [[Notes]]**: 
+- **GM Notes**: 
   - Provide descriptions of the station's merchant area, busy with miners and traders, and the quieter hotel zone.
   - Introduce NPCs that could aid or hinder the PCs, depending on their approach.
-  - [[1. Possible NPCs]]
+  - 1. Possible NPCs
 
 ## 7. The Massacre Discovery
 - **Scenario**: The PCs discover a brutal massacre at one of the docks.
@@ -55,7 +55,7 @@
 - **Scenario**: Falsely accused, the PCs must clear their names.
 - **Path to Resolution**:
   - Focus on the gold cards found at the massacre, each stamped with unique minter’s markings.
-  - The PCs must navigate the underworld or use their contacts to trace these cards to Gondolin on [[Venus]].
+  - The PCs must navigate the underworld or use their contacts to trace these cards to Gondolin on Venus.
 
 ## 10. Gondolin and Bandit Hunt
 - **Scenario**: In Gondolin, a hub of tension and secrets, the PCs delve deeper into the conspiracy.

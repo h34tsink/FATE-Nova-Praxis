@@ -2,4 +2,4 @@ Europa Research Station is a strategic research outpost in outer-system operatio
 
 ## Related
 - [[Locations/Sol System/Jupiter]]
-- [[Coalition of Free States]]
+- Coalition of Free States

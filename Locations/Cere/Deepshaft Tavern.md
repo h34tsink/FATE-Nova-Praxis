@@ -12,8 +12,8 @@ aliases:
 
 # Deepshaft Tavern
 
-**Location:** [[Cere|Cere Mining Colony]]  
-**Operator:** [[Kal Paddock]]  
+**Location:** Cere Mining Colony  
+**Operator:** Kal Paddock  
 **Type:** Information Hub / Refuge Shelter  
 **Atmosphere:** Tense, distrustful, but hospitable to those who pay  
 
@@ -25,18 +25,18 @@ The bar itself is made from salvaged mining equipment, the lights flicker in way
 
 ## Notable NPCs
 
-- **[[Kal Paddock]]** — Owner and information broker; his word is law here
+- **Kal Paddock** — Owner and information broker; his word is law here
 
 ## Session 9 Scene 1 Role
 
-The Deepshaft Tavern is the first stop for investigating **[[Valare|Valare's fork]]**. Kal has seen her, heard about her, and knows which questions trigger attention.
+The Deepshaft Tavern is the first stop for investigating **Valare's fork**. Kal has seen her, heard about her, and knows which questions trigger attention.
 
 **Possible Scene Beats:**
 
-- PCs enter and ask openly about Valare (alerts everyone, including [[Valare|Valare's programs]])
+- PCs enter and ask openly about Valare (alerts everyone, including Valare's programs)
 - PCs approach Kal quietly for information (costs a favor or resources)
-- A [[Talons of Freedom|Talon]] sympathizer tests the PCs' intentions
-- [[Shadow Market]] runners are also here, asking questions
+- A Talon sympathizer tests the PCs' intentions
+- [[Locations/Shadow Market]] runners are also here, asking questions
 
 ## GM Notes
 

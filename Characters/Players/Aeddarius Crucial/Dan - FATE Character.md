@@ -3,7 +3,7 @@
 
 **Player:** Dan  
 **Rank:** Novice  
-**State:** [[Pure]]  
+**State:** [[Glossary/Pure]]  
 **Origin:** Aristocratic Nobleman  
 **Allegiance:** [[Factions/Houses/House Dalianis|House Dalianis]] - Pure Aesthetic  
 **Rep-Rating:** 8  

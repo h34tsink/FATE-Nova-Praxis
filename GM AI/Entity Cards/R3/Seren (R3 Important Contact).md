@@ -47,5 +47,5 @@ tags:
 - `/npc seren`
 
 ## Linked Notes
-- [[Characters/NPCs/Named NPCs/Seren]]
-- [[Characters/NPCs/Named NPCs/Seren – Talon-Friendly Contact]]
+- Seren
+- Seren – Talon-Friendly Contact

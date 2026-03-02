@@ -3,7 +3,7 @@
 
 **Player:** Rob  
 **Rank:** Novice  
-**State:** [[Cybersleeve]] (Beta)  
+**State:** [[Glossary/Cybersleeve]] (Beta)  
 **Origin:** Hacker  
 **Allegiance:** [[Factions/Houses/House Kimura|House Kimura]]  
 **Rep-Rating:** 7  
@@ -45,7 +45,7 @@
 
 **Augmentation Limit:** 5 AV
 
-- **[[Apotheosis]]** (AV 3) - Mindset and mnemonic core _(doesn't count against limit as part of sleeve)_
+- **[[Glossary/Apotheosis]]** (AV 3) - Mindset and mnemonic core _(doesn't count against limit as part of sleeve)_
 - **Upgrade:** Cognet Capable (AV +1) - Secure, multi-channel communication
 - **Implicit:** Data Jack and Storage (AV 1) - Data interface and storage
 - **Skinweave Armor** (AV 1) - AR 3

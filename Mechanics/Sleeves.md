@@ -191,5 +191,5 @@ Cybersleeves are fully synthetic bodies with non-magnetic metal skeletons and sy
 ## Links
 
 - [[Glossary/Sleeves]]
-- [[Rules and Mechanics]]
+- Rules and Mechanics
 

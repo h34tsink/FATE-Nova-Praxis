@@ -79,12 +79,12 @@ Most mainstream Purists repudiate Purifier violence while maintaining ideologica
 
 ## Related Factions
 
-- [[Coalition of Free States]]
-- [[House Cipriani]]
-- [[House Jinzhan]]
-- [[House Tsarya]]
+- Coalition of Free States
+- House Cipriani
+- House Jinzhan
+- House Tsarya
 - [[Purifiers]]
 - [[Transhumans]]
 - [[Apostates]]
-- [[Traditional Religions]]
+- Traditional Religions
 - [[Humanity Preservation Act]]

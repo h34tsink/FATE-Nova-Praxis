@@ -2,11 +2,11 @@
 
 ## Setting
 
-The PCs awaken in a resurrection chamber on [[Asola]], three months after being declared dead, with no memories since their last backup before a mission. The chamber is sterile and softly lit, with diagnostic equipment humming quietly. The sense of disorientation is palpable as the group regains consciousness.
+The PCs awaken in a resurrection chamber on Asola, three months after being declared dead, with no memories since their last backup before a mission. The chamber is sterile and softly lit, with diagnostic equipment humming quietly. The sense of disorientation is palpable as the group regains consciousness.
 
 ## Resurrection
 
-The PCs are revived by Second Chances, a backup service, under the care of Salvadore “Sal” Bendry, an [[Apostate]] mnemonics engineer and a SIM. Recovery treatments begin immediately: biosleeves receive a massage and meal to restore physical comfort, while cybersleeves undergo further diagnostics and recalibration. Sal is calm and reassuring, explaining the process and monitoring their progress.
+The PCs are revived by Second Chances, a backup service, under the care of Salvadore “Sal” Bendry, an [[Groups/Apostate]] mnemonics engineer and a SIM. Recovery treatments begin immediately: biosleeves receive a massage and meal to restore physical comfort, while cybersleeves undergo further diagnostics and recalibration. Sal is calm and reassuring, explaining the process and monitoring their progress.
 
 ## SIM Experience
 
@@ -14,7 +14,7 @@ SIM PCs experience awakening in a serene, virtual glade, greeted by Sal at a woo
 
 ## Explanation
 
-Sal informs the PCs that they have been restored from backup due to their mnemonic cores not being recoverable post-mortem, following a standard three-month waiting period. All gear and sleeves are as they left them in storage prior to the mission. The PCs quickly realize that their records have been scrubbed of the last two months' events, except for their meeting with [[Kestrel]].
+Sal informs the PCs that they have been restored from backup due to their mnemonic cores not being recoverable post-mortem, following a standard three-month waiting period. All gear and sleeves are as they left them in storage prior to the mission. The PCs quickly realize that their records have been scrubbed of the last two months' events, except for their meeting with Kestrel.
 
 ## Pure Characters
 

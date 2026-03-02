@@ -8,40 +8,40 @@
 ## Redirect Stubs (Kept, now tagged)
 These files are compatibility/shortcut notes and were marked with `redirect: true` frontmatter:
 
-- [[Glossary]]
-- [[Plot]]
-- [[Rules and Mechanics]]
-- [[Sessions]]
-- [[Characters/NPCs/Generic NPCs]]
-- [[Characters/NPCs/Named NPCs]]
-- [[Locations/Vantage Station]]
-- [[Locations/Sol System/Erebos Depths]]
-- [[Locations/Exoplanets/Giordino]]
-- [[Locations/Exoplanets/New Montreal]]
-- [[Glossary/Pneuma-related terms]]
-- [[Factions/Savants]]
+- Glossary
+- Plot
+- Rules and Mechanics
+- Sessions
+- Generic NPCs
+- Named NPCs
+- Vantage Station
+- Erebos Depths
+- Giordino
+- New Montreal
+- Pneuma-related terms
+- Savants
 - [[Factions/The Coalition/House military]]
 - [[Factions/Hidden Agendas/Black Market]]
-- [[Factions/Hidden Agendas/Black Operations]]
-- [[Factions/Hidden Agendas/Existential Threats]]
-- [[Factions/Hidden Agendas/Information Control]]
-- [[Factions/Hidden Agendas/Secret Societies]]
-- [[Factions/Hidden Agendas/Synthesis]]
-- [[Factions/Hidden Agendas/Unseen Court]]
-- [[Stations/Sentinel]]
+- Black Operations
+- Existential Threats
+- Information Control
+- Secret Societies
+- Synthesis
+- Unseen Court
+- Sentinel
 
 ## Empty Files (Delete Candidates)
 High-confidence removal candidates:
 
-- [[.trash/Kimura]]
-- [[.trash/Recap]]
-- [[.trash/Silvermist]]
-- [[.trash/Untitled 2]]
-- [[.trash/Untitled]]
+- Kimura
+- Recap
+- Silvermist
+- Untitled 2
+- [[Characters/Players/Dr. Lorem (Doc) Ipsum/Untitled]]
 
 Review before deletion:
 
-- [[Characters/Players/Aeddarius Crucial/Notes]]
+- Notes
 
 ## Notes
 - Oversized frontmatter values were found only in `[[.trash/Briar Blackwood]]` and are non-operational because they are in trash.

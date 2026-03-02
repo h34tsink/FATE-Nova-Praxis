@@ -1,6 +1,6 @@
 # Data Wipes: Valare vs Chimera
 
-The sources detail two distinct instances of data manipulation related to the players' lost memories: one performed by [[Characters/NPCs/01. Named NPCs/Valare|Valare]] and the other by [[Chimera]]. Here's a breakdown of their actions and motivations:
+The sources detail two distinct instances of data manipulation related to the players' lost memories: one performed by Valare and the other by Chimera. Here's a breakdown of their actions and motivations:
 
 ## Valare's Actions
 

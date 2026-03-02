@@ -165,11 +165,11 @@ Piracy and Insurgency represent:
 
 ## Related Factions
 
-- [[Coalition of Free States]]
+- Coalition of Free States
 - [[Talons of Freedom]]
-- [[Apostates]]
+- [[Factions/Ideologies/Apostates]]
 - [[House Turin]]
 - [[Rings of Olympus]]
 - [[Red Sun]]
 - [[Black Market]]
-- [[Insurgency]] (concept)
+- Insurgency (concept)

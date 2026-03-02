@@ -56,5 +56,5 @@ About 1/3 meter long. Hovers near its owner as a personal security drone. Strate
 
 ## Links
 
-- [[Characters/NPCs/Drones and Creatures/Index|Drones and Creatures Index]]
+- Drones and Creatures Index
 - [[Glossary/Index]]

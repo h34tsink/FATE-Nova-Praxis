@@ -56,10 +56,10 @@ Standing about one meter at the shoulder, the Black Gate Cerberus Guardian is a 
 
 ## GM Notes
 
-About 1 meter at the shoulder. Skinless appearance with shiny black synthetic musculature — deliberately intimidating. AR 6 makes it very tough. Low WR:2 bite but Melee 4 means it hits reliably and can generate spin/advantages easily. Neura-Surge lets it take an extra action at cost. Excellent for facility security encounters. One of the sample characters, [[Characters/NPCs/Named NPCs/Christov Draiku|Christov Draiku]], owns one of these.
+About 1 meter at the shoulder. Skinless appearance with shiny black synthetic musculature — deliberately intimidating. AR 6 makes it very tough. Low WR:2 bite but Melee 4 means it hits reliably and can generate spin/advantages easily. Neura-Surge lets it take an extra action at cost. Excellent for facility security encounters. One of the sample characters, Christov Draiku, owns one of these.
 
 ## Links
 
-- [[Characters/NPCs/Drones and Creatures/Index|Drones and Creatures Index]]
-- [[Characters/NPCs/Named NPCs/Christov Draiku]]
+- Drones and Creatures Index
+- Christov Draiku
 - [[Glossary/Index]]

@@ -172,8 +172,8 @@ Saturn stands as the outer system's primary resource hub, with Titan serving as 
 
 ## Related Factions
 
-- [[House Silva]]
-- [[House Dalianis]]
-- [[House Kimura]]
-- [[House Cipriani]]
-- [[Coalition of Free States]]
+- House Silva
+- House Dalianis
+- House Kimura
+- House Cipriani
+- Coalition of Free States

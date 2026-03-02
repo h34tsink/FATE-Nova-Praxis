@@ -772,9 +772,9 @@ This arc serves as introduction to [[Mechanics/FATE/Pneuma Rules/_Pneuma Rules|P
 - [[Mechanics/FATE/Pneuma Rules/_Pneuma Lore and Physics|Pneuma Lore]]
 
 ### Campaign Resources
-- [[Sessions/]] — Session notes
-- [[Plot/]] — Campaign arc tracking
-- [[Characters/NPCs/]] — NPC database
+- Sessions/ — Session notes
+- Plot/ — Campaign arc tracking
+- Characters/NPCs/ — NPC database
 
 ---
 

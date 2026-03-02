@@ -53,12 +53,12 @@ Kimura is extremely liberal politically and does not support the Humanity Preser
 
 ## Related Factions
 
-- [[Coalition of Free States]]
+- Coalition of Free States
 - [[House Dalianis]]
 - [[House Cipriani]]
 - [[House Silva]]
 - [[House Jinzhan]]
 - [[House Tsarya]]
-- [[Transhumans]]
-- [[Red Sun]]
-- [[Astralists]]
+- [[Factions/Ideologies/Transhumans]]
+- [[Factions/Hidden Agendas/Red Sun]]
+- Astralists

@@ -532,7 +532,7 @@ Your sleeve provides **augmentation points** to spend on modifications:
 - Each augmentation costs Augmentation Value (AV)
 - Cannot exceed your sleeve's augmentation point budget
 - Some augmentations are included free with certain sleeves
-- See [[Augmentations]] for full list
+- See Augmentations for full list
 
 ---
 
@@ -551,10 +551,10 @@ Based on your **Assets** skill and **Rep Rating** (for House members):
 
 ### Gear Categories
 
-**Weapons** - See [[Firearms]] and [[Melee Weapons]]
-**Armor** - See [[Armor]]
-**Equipment** - See [[Equipment]]
-**Explosives** - See [[Explosives]]
+**Weapons** - See Firearms and Melee Weapons
+**Armor** - See Armor
+**Equipment** - See Equipment
+**Explosives** - See Explosives
 
 ### Gear Selection Tips
 

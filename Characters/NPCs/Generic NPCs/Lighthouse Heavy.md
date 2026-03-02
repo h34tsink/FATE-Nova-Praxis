@@ -27,7 +27,7 @@ aliases:
 **Notable Skills:** Firearms 5 (adjusted for Combat Training), Intimidation 4, Melee 3 (adjusted), Resolve 2, Strategy 2
 
 ## Stunts/Augmentations
-- **[[Combat Training]]** (+2 all attacks, already factored in skill ratings)
+- **Combat Training** (+2 all attacks, already factored in skill ratings)
 - **Slayer** (spend FP: +3 stress on non-Consequence attacks with Huge(P) weapon)
 
 ## Combat Stats

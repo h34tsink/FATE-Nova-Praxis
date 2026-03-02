@@ -3,4 +3,4 @@ Human Personhood Accord is a legal doctrine regulating augmentation boundaries, 
 ## Related
 - [[Factions/Ideologies/Purists]]
 - [[Glossary/CID]]
-- [[Coalition of Free States]]
+- Coalition of Free States

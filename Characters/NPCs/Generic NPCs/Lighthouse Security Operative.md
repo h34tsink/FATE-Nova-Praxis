@@ -27,7 +27,7 @@ aliases:
 **Notable Skills:** Firearms 5 (adjusted for Combat Training), Intimidation 3, Melee 4 (adjusted), Resolve 2, Strategy 2
 
 ## Stunts/Augmentations
-- **[[Combat Training]]** (+2 all attacks, already factored)
+- **Combat Training** (+2 all attacks, already factored)
 - **Marksman** (+2 to Take Aim; once/scene reduce target AR by 3 for one attack)
 
 ## Combat Stats

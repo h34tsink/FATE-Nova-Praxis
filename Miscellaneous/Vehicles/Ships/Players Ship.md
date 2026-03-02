@@ -1,5 +1,5 @@
 The O'Neill Two L's - **ONLL-694141**
-A freighter originally owned by [[House Cipriani]] damaged by pirates and salvaged by the Players.
+A freighter originally owned by House Cipriani damaged by pirates and salvaged by the Players.
 Top Speed is in atmosphere. In space multiple it by 100.
 
 | Ship  | Size | Handling | Top Speed (MPH) | Toughness | ECM (Firewall) | Free Mods (Max Mods) | Crew | Base Cost |
@@ -26,7 +26,7 @@ Weapons:
 | Auto-Cannon, Medium | 50/100/200 |  3d8  |  3  |  100  |  2   |     2     |
 | Auto-Cannon, Medium | 50/100/200 |  3d8  |  3  |  100  |  2   |     2     |
 
-[[Notes]]: AP 8, HW. Covers 31 to 50mm rounds. A full reload costs Rep 3.
+Notes: AP 8, HW. Covers 31 to 50mm rounds. A full reload costs Rep 3.
 
 `dice: 2d6`
 

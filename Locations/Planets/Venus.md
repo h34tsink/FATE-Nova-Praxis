@@ -6,7 +6,7 @@
 #### Notable Locations
 
 ##### Gondolin
-- **Nature:** A hidden [[apostate]] enclave and the largest of its kind in the solar system.
+- **Nature:** A hidden [[Groups/Apostate]] enclave and the largest of its kind in the solar system.
 - **Population:** Approximately 435,000, residing in a complex built by Vulcan swarms, now facing overpopulation issues.
 - **Government and Society:** Governed by an elected mayor, currently a transhumanist SIM named Camber Roche. The city struggles with strict population control measures, including laws restricting families to one child.
 - **Cultural Dynamics:** Inhabited by a diverse population including former Americans, Italians, Greeks, and Africans. Despite electing a transhumanist mayor, most residents are Purists, wary of Apotheosis.
@@ -14,7 +14,7 @@
 
 ##### The Venusian Maiden (The Maiden)
 - **Function:** A research station set up to study Venus, contributing to understanding of planetary formation and [[Earth]]'s history.
-- **Additional Activities:** Houses one of [[House Dalianis]]’ weapon labs and serves as a covert meeting point for dealings with Gondolin.
+- **Additional Activities:** Houses one of House Dalianis’ weapon labs and serves as a covert meeting point for dealings with Gondolin.
 - **Population:** Around 25,000, involved in research and experimental work.
 
 #### Venus in the Coalition's Perspective

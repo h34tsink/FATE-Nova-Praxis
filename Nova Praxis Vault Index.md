@@ -4,28 +4,28 @@ Welcome to your Obsidian vault for Nova Praxis! This index links to all major se
 
 ## Campaign Overview
 
-- [[Campaign Overview/Pre-Singularity Events]]
+- Pre-Singularity Events
 - [[Campaign Overview/Timeline of Events]]
 - [[Campaign Overview/What has Come Before]]
 
 ## Characters
 
 ### Organization & Reference
-- [[NPC Organization Guide]]
-- [[Conversion Progress]]
+- [[Characters/NPCs/NPC Organization Guide]]
+- [[Characters/Conversion Progress]]
 
 ### Savage Worlds (Converting to FATE)
-- [[Characters/Savage Worlds/Drones/Ardent LS-7 "Lonestar" Armed Responder]]
-- [[Characters/Savage Worlds/Drones/Harvester Drone]]
-- [[Characters/Savage Worlds/Drones/Kraken (Refurbished)]]
-- [[Characters/Savage Worlds/Drones/Kraken Drone]]
-- [[Characters/Savage Worlds/NPCs/Potential NPCs]]
-- [[Characters/Savage Worlds/NPCs/Named NPCs]]
-- [[Characters/Savage Worlds/NPCs/Named NPCs/Chimera]] *(Key Antagonist - Converting)*
+- Ardent LS-7 "Lonestar" Armed Responder
+- Harvester Drone
+- Kraken (Refurbished)
+- Kraken Drone
+- Potential NPCs
+- Named NPCs
+- Chimera *(Key Antagonist - Converting)*
 
 ### FATE (Converted Characters)
 **Crew Groups:**
-- [[The Ebon Jackal Crew]] *(Sample Diverse Crew)*
+- [[Characters/NPCs/The Ebon Jackal Crew]] *(Sample Diverse Crew)*
 
 **Named NPCs:**
 

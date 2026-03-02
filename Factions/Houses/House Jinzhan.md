@@ -50,11 +50,11 @@ Jinzhan engagement in Shadow War typically targets specific acquisition/eliminat
 
 ## Related Factions
 
-- [[Coalition of Free States]]
+- Coalition of Free States
 - [[House Dalianis]]
 - [[House Cipriani]]
 - [[House Kimura]]
 - [[House Silva]]
 - [[House Tsarya]]
-- [[Purists]]
-- [[Coalition Security Forces]]
+- [[Factions/Ideologies/Purists]]
+- [[Factions/The Coalition/Coalition Security Forces]]

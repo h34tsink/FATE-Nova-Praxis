@@ -23,7 +23,7 @@ Dislikes: Losing control of a situation, Betrayal or disloyalty from allies, Inc
 ```
 > # `=this.file.name` (`=this.pronouns`)
 > **Pronounced:**  "`=this.Pronounced`"
-> ![[Briar Blackwood.jpg|300]]
+> !300
 > ###### Bio
 >  |
 > ---|---|

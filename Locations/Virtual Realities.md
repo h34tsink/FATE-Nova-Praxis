@@ -3,4 +3,4 @@
 This note tracks major simulated environments and shared virtual domains.
 
 - See also: [[Locations/Index]]
-- Related: [[Extranet]], [[Mesh_Web]]
+- Related: [[Glossary/Extranet]], [[Glossary/Mesh_Web]]

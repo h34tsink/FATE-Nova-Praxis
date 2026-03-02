@@ -42,4 +42,4 @@ Weeks before the PCs arrive, someone bought a specific list of supplies from Mir
 ## Links
 
 - [[Locations/Asteroid Belts/Asteroids/Cere]]
-- [[Shadow Market]]
+- [[Locations/Shadow Market]]
