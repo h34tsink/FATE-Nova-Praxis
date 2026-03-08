@@ -9,7 +9,9 @@
       "Bash(python -c \":*)",
       "Bash(python _Assets/Scripts/clean_machinations_extract.py)",
       "Bash(test -d \"x:/My Drive/Obsidian Vaults/FATE - Nova Praxis/Characters/Named NPCs\")",
-      "Bash(wc -l \"x:/My Drive/Obsidian Vaults/FATE - Nova Praxis/Nova Praxis Rulebook \\(Cleaned\\).txt\")"
+      "Bash(wc -l \"x:/My Drive/Obsidian Vaults/FATE - Nova Praxis/Nova Praxis Rulebook \\(Cleaned\\).txt\")",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)"
     ]
   }
 }
