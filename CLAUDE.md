@@ -103,6 +103,35 @@ Adjudication constraints:
 - For rules answers, always include at least one exception/modifier check (e.g., state bonuses, stunts, GM refresh override).
 - Avoid absolute wording unless the source text is explicit.
 
+## GM Cockpit Plugin (`nova-praxis-gm/`)
+
+A Claude Code plugin providing slash commands, auto-activating skills, and specialized agents for at-table GM use.
+
+**Slash Commands:**
+
+- `/gm-start [session#]` — Bootstrap a session (loads context, NPCs, scene lineup)
+- `/rules [question]` — Rules oracle with source citations and confidence rating
+- `/npc [token] "[situation]"` — Voice-accurate NPC dialogue matching entity card and rank
+- `/scene [description]` — Scene framing with zones, aspects, NPCs, compels
+- `/recap` — Current session state summary in under 20 lines
+
+**Skills (auto-activating):**
+
+- `rules-adjudication` — Triggers on any mechanics/rules question asked naturally
+- `npc-dialogue` — Triggers on "What would X say..." patterns
+- `narrative-humanizer` — Triggers on requests to polish prose
+
+**Agents:**
+
+- `rules-oracle` — Deep multi-source rules research
+- `npc-voice` — Rich contextual dialogue for R3+ NPCs
+
+**Obsidian Dashboards:**
+
+- `GM Dashboard.md` — Single-pane command center at vault root
+- `Rules and Mechanics/Rules Quick Reference - Unified.md` — Consolidated cheat sheet
+- `GM AI/NPC Roster - Active.md` — At-a-glance NPC roster with command tokens
+
 ## Character Creator App
 
 Located at `nova-praxis-character-creator/`. SvelteKit + TypeScript + Vite.

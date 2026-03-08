@@ -35,7 +35,12 @@
       "Bash(PYTHONIOENCODING=utf-8 \"$APPDATA/Python/Python313/Scripts/notebooklm.exe\" generate infographic --orientation portrait)",
       "Bash(PYTHONIOENCODING=utf-8 \"$APPDATA/Python/Python313/Scripts/notebooklm.exe\" download infographic \"D:/ObsidianVaults/FATE - Nova Praxis/_Assets/Infographics/Chimera_Portrait.png\")",
       "Bash(PYTHONIOENCODING=utf-8 \"$APPDATA/Python/Python313/Scripts/notebooklm.exe\" download infographic \"D:/ObsidianVaults/FATE - Nova Praxis/_Assets/Infographics/Valare_Integrated_Portrait.png\")",
-      "Bash(PYTHONIOENCODING=utf-8 \"$APPDATA/Python/Python313/Scripts/notebooklm.exe\" download infographic \"D:/ObsidianVaults/FATE - Nova Praxis/_Assets/Infographics/Valare_Fork_Portrait.png\")"
+      "Bash(PYTHONIOENCODING=utf-8 \"$APPDATA/Python/Python313/Scripts/notebooklm.exe\" download infographic \"D:/ObsidianVaults/FATE - Nova Praxis/_Assets/Infographics/Valare_Fork_Portrait.png\")",
+      "Bash(ls -lh \"d:/ObsidianVaults/FATE - Nova Praxis/\"*.txt)",
+      "Bash(grep -v \"^\\\\.$\")",
+      "Bash(grep -v \"^FATE$\")",
+      "Bash(grep -E \"\\\\.\\(ts|md\\)$\")",
+      "Bash(wc -l \"d:/ObsidianVaults/FATE - Nova Praxis/\"*.txt)"
     ]
   }
 }
