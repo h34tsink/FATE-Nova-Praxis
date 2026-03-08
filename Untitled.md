@@ -1,0 +1,1 @@
+obsidian://open?vault=FATE%20-%20Nova%20Praxis&file=GM%20Dashboard
