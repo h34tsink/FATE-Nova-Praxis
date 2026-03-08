@@ -80,20 +80,29 @@ Aspects tied to specific zones in a conflict. One per zone.
 
 ## Response Format
 
-For each category that applies, output:
+Use this compact table format for each category. Skip categories that don't apply.
 
-### [Category Name]
+```
+## [Category Name]
 
-- *"Aspect Name"* — [1-line description of how to invoke AND how to compel]
-- *"Aspect Name"* — [invoke/compel]
-- ...
+| Aspect | Invoke | Compel |
+|--------|--------|--------|
+| "Aspect Name" | +2 when... | -2 when... |
+```
+
+For Maneuver Aspects, add a Skill column. For Consequences, add a Severity column.
+
+Keep each cell SHORT — sentence fragments, not full sentences. The table must be scannable in under 5 seconds per category.
+
+Separate categories with a blank line and `---` divider.
 
 ## Output Constraints
 
-- Keep each Aspect to 2-6 words (punchy, memorable at the table)
-- Every Aspect MUST be double-edged (suggest both invoke and compel usage)
-- Use Nova Praxis vocabulary: mesh, sleeve, ego, fork, CID, House names, Apotheosis, SINC, mnemonic, etc.
-- Draw from vault lore: `Factions/`, `Locations/`, `Glossary/` for setting-accurate language
+- 2-6 words per Aspect (punchy, memorable at the table)
+- Every Aspect MUST be double-edged
+- Nova Praxis vocabulary: mesh, sleeve, ego, fork, CID, House names, Apotheosis, SINC, mnemonic, etc.
+- Draw from vault lore: `Factions/`, `Locations/`, `Glossary/`
 - If the subject is an NPC, read their entity card for personality-grounded aspects
-- Total output: 15-25 Aspects across all relevant categories
-- No generic fantasy tropes — this is hard sci-fi transhumanism
+- Total: 15-25 Aspects across all relevant categories
+- No generic fantasy tropes — hard sci-fi transhumanism only
+- Do NOT use long prose descriptions — tables only

@@ -49,7 +49,27 @@
       "Bash(done)",
       "Bash(while read file)",
       "Bash(for file in \"Sessions/Session 9/Session 9 - Guide.md\" \"GM AI/NPC Command Board.md\" \"Glossary/Agent.md\" \"Characters/NPCs/Named NPCs/Castor.md\" \"Factions/Hidden Agendas/Black Market.md\" \"Locations/Stations/Ansari Station.md\")",
-      "Bash(xargs -I {} head -20 \"{}\")"
+      "Bash(xargs -I {} head -20 \"{}\")",
+      "Read(//c/Users/satur/.claude/**)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); [print\\(f''{k}: {v.get\\(\"\"installPath\"\",\"\"NO PATH\"\"\\)}''\\) for k,v in d.items\\(\\)]\")",
+      "Bash(claude plugin install --help)",
+      "Bash(claude plugins --help)",
+      "Bash(claude plugin --help)",
+      "Bash(claude plugin list)",
+      "Bash(claude plugin validate \"D:/ObsidianVaults/FATE - Nova Praxis/nova-praxis-gm\")",
+      "Bash(claude plugin list --json)",
+      "Bash(claude plugin enable --help)",
+      "Bash(claude plugin enable \"nova-praxis-gm@local\")",
+      "Bash(claude plugin marketplace --help)",
+      "Bash(claude plugin marketplace list --json)",
+      "Bash(claude plugin marketplace list)",
+      "Bash(claude plugin marketplace add --help)",
+      "Bash(cmd //c \"mklink /J \"\"C:\\\\Users\\\\satur\\\\.claude\\\\plugins\\\\local-marketplace\\\\plugins\\\\nova-praxis-gm\"\" \"\"D:\\\\ObsidianVaults\\\\FATE - Nova Praxis\\\\nova-praxis-gm\"\"\")",
+      "Bash(powershell.exe -NoProfile -Command \"New-Item -ItemType Junction -Path ''C:\\\\Users\\\\satur\\\\.claude\\\\plugins\\\\local-marketplace\\\\plugins\\\\nova-praxis-gm'' -Target ''D:\\\\ObsidianVaults\\\\FATE - Nova Praxis\\\\nova-praxis-gm''\")",
+      "Bash(claude plugin marketplace add \"C:/Users/satur/.claude/plugins/local-marketplace\")",
+      "Bash(claude plugin marketplace add \"C:\\\\Users\\\\satur\\\\.claude\\\\plugins\\\\local-marketplace\")",
+      "Bash(claude plugin marketplace add \"file:///C:/Users/satur/.claude/plugins/local-marketplace\")",
+      "Bash(claude plugin marketplace add \"./local-marketplace\")"
     ]
   }
 }
