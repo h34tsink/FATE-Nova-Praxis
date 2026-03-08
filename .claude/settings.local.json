@@ -11,7 +11,31 @@
       "Bash(test -d \"x:/My Drive/Obsidian Vaults/FATE - Nova Praxis/Characters/Named NPCs\")",
       "Bash(wc -l \"x:/My Drive/Obsidian Vaults/FATE - Nova Praxis/Nova Praxis Rulebook \\(Cleaned\\).txt\")",
       "WebFetch(domain:github.com)",
-      "WebFetch(domain:raw.githubusercontent.com)"
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(notebooklm auth check)",
+      "Bash(pip install notebooklm-py)",
+      "Bash(python -m notebooklm auth check)",
+      "Bash(where notebooklm)",
+      "Bash(python -c \"import notebooklm; print\\(notebooklm.__file__\\)\")",
+      "Read(//d/ObsidianVaults/FATE - Nova Praxis/$APPDATA/Python/Python313/Scripts/**)",
+      "Read(//c/Python313/Scripts/**)",
+      "Bash(pip show notebooklm-py)",
+      "Bash(ls /c/Python313/Scripts/notebooklm*)",
+      "Bash(\"$APPDATA/Python/Python313/Scripts/notebooklm.exe\" auth check)",
+      "Bash(PYTHONIOENCODING=utf-8 \"$APPDATA/Python/Python313/Scripts/notebooklm.exe\" auth check)",
+      "Bash(PYTHONIOENCODING=utf-8 \"$APPDATA/Python/Python313/Scripts/notebooklm.exe\" create \"Chimera - R5 Villain\")",
+      "Bash(PYTHONIOENCODING=utf-8 \"$APPDATA/Python/Python313/Scripts/notebooklm.exe\" use e3917b15-bdec-4e6b-91c4-54597ef87bfd)",
+      "Bash(PYTHONIOENCODING=utf-8 \"$APPDATA/Python/Python313/Scripts/notebooklm.exe\" source add \"D:/ObsidianVaults/FATE - Nova Praxis/GM AI/Entity Cards/R5/Chimera \\(R5 Villain\\).md\")",
+      "Bash(PYTHONIOENCODING=utf-8 \"$APPDATA/Python/Python313/Scripts/notebooklm.exe\" create \"Valare Integrated - R4 Personal Agent Ally\")",
+      "Bash(PYTHONIOENCODING=utf-8 \"$APPDATA/Python/Python313/Scripts/notebooklm.exe\" use c478303d-ca75-4b87-b632-6c1e871dc4eb)",
+      "Bash(PYTHONIOENCODING=utf-8 \"$APPDATA/Python/Python313/Scripts/notebooklm.exe\" source add \"D:/ObsidianVaults/FATE - Nova Praxis/GM AI/Entity Cards/R4/Valare Integrated \\(R4 Personal Agent Ally\\).md\")",
+      "Bash(PYTHONIOENCODING=utf-8 \"$APPDATA/Python/Python313/Scripts/notebooklm.exe\" create \"Valare Fork - R4 Important NPC\")",
+      "Bash(PYTHONIOENCODING=utf-8 \"$APPDATA/Python/Python313/Scripts/notebooklm.exe\" use e297bcb0-5481-41ce-8c37-cf721f2c5950)",
+      "Bash(PYTHONIOENCODING=utf-8 \"$APPDATA/Python/Python313/Scripts/notebooklm.exe\" source add \"D:/ObsidianVaults/FATE - Nova Praxis/GM AI/Entity Cards/R4/Valare Fork \\(R4 Important NPC\\).md\")",
+      "Bash(PYTHONIOENCODING=utf-8 \"$APPDATA/Python/Python313/Scripts/notebooklm.exe\" generate infographic --orientation portrait)",
+      "Bash(PYTHONIOENCODING=utf-8 \"$APPDATA/Python/Python313/Scripts/notebooklm.exe\" download infographic \"D:/ObsidianVaults/FATE - Nova Praxis/_Assets/Infographics/Chimera_Portrait.png\")",
+      "Bash(PYTHONIOENCODING=utf-8 \"$APPDATA/Python/Python313/Scripts/notebooklm.exe\" download infographic \"D:/ObsidianVaults/FATE - Nova Praxis/_Assets/Infographics/Valare_Integrated_Portrait.png\")",
+      "Bash(PYTHONIOENCODING=utf-8 \"$APPDATA/Python/Python313/Scripts/notebooklm.exe\" download infographic \"D:/ObsidianVaults/FATE - Nova Praxis/_Assets/Infographics/Valare_Fork_Portrait.png\")"
     ]
   }
 }
