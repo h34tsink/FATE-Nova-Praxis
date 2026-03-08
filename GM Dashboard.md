@@ -64,7 +64,7 @@ TABLE
   faction as "Faction"
 FROM "GM AI/Entity Cards"
 WHERE status = "active" AND rank != null
-SORT choice(rank, "R5", 1, "R4", 2, "R3", 3, "R2", 4, "R1", 5) ASC
+SORT rank DESC
 ```
 
 > Use `/npc [token] "[situation]"` in Claude Code for instant dialogue.
@@ -76,13 +76,13 @@ SORT choice(rank, "R5", 1, "R4", 2, "R3", 3, "R2", 4, "R1", 5) ASC
 | Player | Character | State | High Concept |
 |--------|-----------|-------|-------------|
 | Dan | [[Characters/Players/Aeddarius Crucial/Aeddarius Crucial - FATE Character\|Aeddarius Crucial]] | Pure | Aesthetic Aristocrat |
-| Christa | [[Characters/Players/Azaria Dawson/Azaria Dawson - FATE Character\|Azaria Dawson]] | — | — |
+| Christa | [[Characters/Players/Azaria Dawson/Azaria Dawson - FATE Character\|Azaria Dawson]] | Sleeved | *(Undefined)* |
 | Matt | [[Characters/Players/Dr. Lorem (Doc) Ipsum/Dr. Lorem (Doc) Ipsum - FATE Character\|Dr. Lorem "Doc" Ipsum]] | — | — |
-| Rob | [[Characters/Players/Dustin Halloway/Dustin Halloway - FATE Character\|Dustin "Grift" Halloway]] | — | — |
-| Sara | [[Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character\|Grace Pryzbylski]] | — | — |
-| James | [[Characters/Players/Kallius/Kallius - FATE Character\|Kallius]] | — | — |
+| Rob | [[Characters/Players/Dustin (Grift) Halloway/Dustin Halloway - FATE Character\|Dustin "Grift" Halloway]] | Sleeved | Ghost in the System Seeks Identity |
+| Sara | [[Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character\|Grace Pryzbylski]] | SIM | SIM Drone Jock Recluse |
+| James | [[Characters/Players/Kallius/Kallius - FATE Character\|Kallius]] | Sleeved | Black Market Memory Merchant |
 
-> Fill in State and High Concept from each PC sheet before Session 10.
+> Still need: Aeddarius (Dan) and Doc Ipsum (Matt) from character creator. Azaria (Christa) High Concept TBD.
 
 ---
 
@@ -127,7 +127,7 @@ SORT choice(rank, "R5", 1, "R4", 2, "R3", 3, "R2", 4, "R1", 5) ASC
 
 **Damage:** Shifts + WR - AR = Stress (min 0)
 **Taken Out:** Stress track full + can't take more Consequences
-**Concession:** Surrender early = +1 FP
+**Concession:** Surrender early; gain FP only if opponent refuses
 
 ---
 

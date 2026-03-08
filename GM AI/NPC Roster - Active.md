@@ -26,7 +26,7 @@ TABLE
   status as "Status"
 FROM "GM AI/Entity Cards"
 WHERE rank != null
-SORT choice(rank, "R5", 1, "R4", 2, "R3", 3, "R2", 4, "R1", 5) ASC
+SORT rank DESC
 ```
 
 > New entity cards auto-appear here when you add `rank`, `class`, `faction`, `token`, and `status` to their frontmatter.

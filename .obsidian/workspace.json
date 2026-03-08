@@ -13,54 +13,31 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GM Dashboard.md",
-                "mode": "preview",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "GM Dashboard"
-            }
-          }
-        ]
-      },
-      {
-        "id": "e555cf8b5c91d555",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "9025803f9393f578",
-            "type": "leaf",
-            "state": {
-              "type": "kanban",
-              "state": {
-                "file": "GM Session Board.md",
-                "kanbanViewState": {
-                  "kanban-plugin": "board",
-                  "list-collapse": []
-                }
-              },
-              "icon": "lucide-trello",
-              "title": "GM Session Board"
-            }
-          },
-          {
-            "id": "eeead840d2077185",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes.md",
+                "file": "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Notes"
+              "title": "Grace Pryzbylski - FATE Character"
+            }
+          },
+          {
+            "id": "5da26ec0ca5861aa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Rules and Mechanics/Savant Programs - Game Reference.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Savant Programs - Game Reference"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -275,44 +252,44 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "eeead840d2077185",
+  "active": "f9f06a9f18196b26",
   "lastOpenFiles": [
-    "Characters/gen-characters/wraith.md",
-    "Characters/gen-characters/wei_zhang.md",
-    "Characters/gen-characters/shadow.md",
-    "Characters/gen-characters/sergeant_viktor_petrov.md",
-    "Characters/gen-characters/raven.md",
-    "Characters/gen-characters/oracle.md",
-    "Characters/gen-characters/nexus.md",
-    "Characters/gen-characters/kira_vance.md",
-    "Characters/gen-characters/kallius_old.md",
-    "Characters/gen-characters/kallius.md",
-    "Characters/gen-characters/grace_pryzbilski.md",
-    "Characters/gen-characters/dustin_grift_halloway.md",
-    "Characters/gen-characters/dr_alexis_storm.md",
-    "Characters/gen-characters/commander_james_drake.md",
-    "Characters/gen-characters/cipher.md",
-    "Characters/gen-characters/captain_elena_vasquez.md",
-    "Characters/gen-characters/azaria_dawson.md",
-    "Characters/gen-characters/aria_7.md",
-    "Characters/gen-characters/ammelid_larom.md",
-    "Characters/gen-characters/ambassador_lucia_moretti.md",
-    "Characters/gen-characters",
-    "GM Dashboard.md",
-    "Notes.md",
-    "Rules and Mechanics/Savant Programs - Game Reference.md.tmp.26080.1773011376700",
-    "Rules and Mechanics/Savant Programs - Game Reference.md.tmp.26080.1773011367468",
-    "Rules and Mechanics/Savant Programs - Game Reference.md.tmp.26080.1773011360983",
-    "Rules and Mechanics/Savant Programs - Game Reference.md.tmp.26080.1773011353773",
-    "Rules and Mechanics/Savant Programs Guide.md.tmp.26080.1773011342089",
-    "Rules and Mechanics/Sleeves.md.tmp.26080.1773011339732",
-    "Rules and Mechanics/Savant Programs Guide.md.tmp.26080.1773011327221",
-    "Rules and Mechanics/Sleeves.md.tmp.26080.1773011319404",
-    "Rules and Mechanics/Savant Programs Guide.md.tmp.26080.1773011318474",
-    "Characters/characters/wraith.md",
-    "Characters/characters/wei_zhang.md",
-    "Characters/characters/shadow.md",
-    "Characters/characters/sergeant_viktor_petrov.md",
+    "Characters/Players/Azaria Dawson/Azaria Dawson - FATE Character.md.tmp.26080.1773013255780",
+    "Characters/Players/Kallius/Kallius - FATE Character.md.tmp.26080.1773013253669",
+    "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md.tmp.26080.1773013248527",
+    "Characters/Players/PC Overview.md",
+    "Characters/Players/PC Overview.md.tmp.26080.1773013242043",
+    "Characters/Players/Aeddarius Crucial/Aeddarius Crucial - FATE Character.md.tmp.26080.1773013228157",
+    "Characters/Players/Aeddarius Crucial/Aeddarius Crucial - FATE Character.md.tmp.26080.1773013226928",
+    "Characters/Players/Aeddarius Crucial/Aeddarius Crucial - FATE Character.md.tmp.26080.1773013225563",
+    "Characters/Players/Azaria Dawson/Azaria Dawson - FATE Character.md.tmp.26080.1773013212996",
+    "Characters/Players/Azaria Dawson/Azaria Dawson - FATE Character.md.tmp.26080.1773013211857",
+    "Characters/Players/Azaria Dawson/Azaria Dawson - FATE Character.md.tmp.26080.1773013210542",
+    "Characters/Players/Kallius/Kallius - FATE Character.md.tmp.26080.1773013198794",
+    "Rules and Mechanics/Stunts.md",
+    "Vehicles/drones.md",
+    "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md",
+    "Archive/SWADE Character Sheets/James - FATE Character (SWADE).md",
+    "Archive/SWADE Character Sheets/Sara - FATE Character (SWADE).md",
+    "Archive/SWADE Character Sheets/Rob - FATE Character (SWADE).md",
+    "Archive/SWADE Character Sheets/Matt - FATE Character (SWADE).md",
+    "Archive/SWADE Character Sheets/Christa - FATE Character (SWADE).md",
+    "Archive/SWADE Character Sheets/Dan - FATE Character (SWADE).md",
+    "Vehicles/vehicles.md",
+    "Miscellaneous/Vehicles/vehicles.md",
+    "Miscellaneous/Vehicles/drones.md",
+    "Characters/Players/grace_pryzbilski.md",
+    "Characters/Players/dustin_grift_halloway.md",
+    "Characters/Players/azaria_dawson.md",
+    "Characters/Players/drones.md",
+    "Characters/Players/vehicles.md",
+    "Characters/Players/kallius.md",
+    "Rules and Mechanics/Savant Programs - Game Reference.md",
+    "Characters/Players/Grace Pryzbylski/Sara - FATE Character.md",
+    "GM AI/NPC Roster - Active.md",
+    "Characters/Players/Aeddarius Crucial/Aeddarius Crucial - FATE Character.md",
+    "Characters/Players/Azaria Dawson/Azaria Dawson - FATE Character.md",
+    "Characters/Players/Kallius/Kallius - FATE Character.md",
     "_Assets/Infographics/Valare_Fork_Portrait.png",
     "_Assets/Infographics/Valare_Integrated_Portrait.png",
     "_Assets/Infographics/Chimera_Portrait.png",
