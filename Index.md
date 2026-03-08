@@ -15,6 +15,7 @@ Use this as your canonical top-level navigation note.
 - `/npc [name] "[situation]"` — Voice-accurate NPC dialogue
 - `/scene [description]` — Scene framing with zones and aspects
 - `/recap` — Where are we right now?
+- `/aspects [subject]` — Generate double-edged FATE Aspects for any game element
 
 ## GM AI
 

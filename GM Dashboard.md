@@ -24,6 +24,7 @@ Single-pane command center. Scan for state, use Claude Code for interactive quer
 | `/npc` | NPC dialogue — voice-accurate | `/npc kestrel "What's your price?"` |
 | `/scene` | Scene framing — zones, aspects, NPCs | `/scene docking bay confrontation` |
 | `/recap` | Session state — where are we? | `/recap` |
+| `/aspects` | Generate Aspects for any game element | `/aspects zero-g cargo bay firefight` |
 
 ---
 

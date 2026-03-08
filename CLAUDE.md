@@ -114,6 +114,7 @@ A Claude Code plugin providing slash commands, auto-activating skills, and speci
 - `/npc [token] "[situation]"` — Voice-accurate NPC dialogue matching entity card and rank
 - `/scene [description]` — Scene framing with zones, aspects, NPCs, compels
 - `/recap` — Current session state summary in under 20 lines
+- `/aspects [subject]` — Generate double-edged FATE Aspects for scenes, NPCs, consequences, maneuvers, etc.
 
 **Skills (auto-activating):**
 
