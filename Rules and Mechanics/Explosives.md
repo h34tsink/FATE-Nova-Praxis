@@ -32,17 +32,17 @@ A comprehensive reference for all explosives in Nova Praxis.
 > **💰 Cost:** 4 | **💥 EXR:** 4 | **📍 Area:** 1  
 > **⚠️ Restricted:** Yes
 > 
-> A less-than-lethal explosive that blasts the area with super-sticky strands that entangle those caught in the spray. The gooper creates movement restrictions without causing direct physical harm.
-> 
-> **🕸️ Special:** Less-than-lethal, Super-sticky strands, Entangles targets
+> A less-than-lethal explosive that blasts the area with super-sticky strands that entangle those caught in the spray. Deals no stress. Armor has no effect. Creates a Block on movement equal to your attack Effort.
+>
+> **🕸️ Special:** Deals no stress, Armor has no effect, Creates Block on movement equal to attack Effort
 
 > [!explosive]- Hell Ball
-> **💰 Cost:** 5 | **💥 EXR:** 8 | **📍 Area:** 1  
-> **🎯 Aspects:** Anti-Vehicular, Incendiary  
+> **💰 Cost:** 5 | **💥 EXR:** 8 | **📍 Area:** 1
+> **🎯 Aspects:** Tremendous Heat and Shockwave
 > **⚠️ Restricted:** Yes
-> 
+>
 > A thermobaric grenade that releases combustible gases before exploding for massive overpressure and extreme heat. The Hell Ball creates an inferno with tremendous heat and devastating shockwaves, making it highly effective against both personnel and structures.
-> 
+>
 > **🔥 Special:** Thermobaric, Massive overpressure, Extreme heat
 
 > [!explosive]- Smoke Grenade

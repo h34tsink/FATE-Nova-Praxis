@@ -27,7 +27,7 @@ Modern computer systems, being Mimir-tech devices, are highly robust and do not 
 * **Execution Difficulty**: 3 + highest of target's SINC or S. Eng
 * **Activation Time**: Simple Action
 * **Description**: Allows you to hack into another person's **mnemonic core** and retrieve stored data, including records of thoughts and sensory data from past experiences.
-  * If your execution test generates Spin, the target is unaware of the intrusion.
+  * If your execution test generates Spin, the target is unaware of the intrusion. If you succeed without Spin, the target's Agent detects the intrusion.
   * **Success**: Gain a single-word answer to a question.
   * **Spin**: Gain a few sentences, or experience an entire scene the target was present for.
   * **5+ Shifts**: Learn almost any fact the target knows or experience several days of their life.
@@ -38,6 +38,8 @@ Modern computer systems, being Mimir-tech devices, are highly robust and do not 
 * **Activation Time**: Simple Action
 * **Duration**: Permanent until dismissed
 * **Description**: Hijacks the sensory data passing through your target's mindset (or host system), causing them to **see objects that aren't real**. These AR illusions are detailed enough to pass for real objects but do not make sounds. Legal systems normally restrict realistic AR displays, making this ability very useful. The illusion moves at any speed but disappears if you lose sight of it.
+  * **Stall**: Target becomes aware of the intrusion attempt.
+  * **Detection**: Observers can attempt a Perception test to pierce the illusion. Difficulty = 2 + Shifts generated on execution. Moving illusions grant observers +2 on the detection test. Illusions larger than human-sized (Size 0) suffer -1 to the detection difficulty per Size category above 0.
 
 ### Blackout
 
@@ -176,11 +178,11 @@ Modern computer systems, being Mimir-tech devices, are highly robust and do not 
 
 * **Execution Difficulty**: Highest of target's SINC or S. Engineering
 * **Activation Time**: Simple Action
-* **Description**: Your Daemon overwhelms the target system with intrusion attempts, causing it to become unstable, lock up, or shut down. Used against those with a System Stress Track or active cybernetic Augmentations.
+* **Description**: Your Daemon overwhelms the target system with intrusion attempts, causing it to become unstable, lock up, or shut down. Used against those with a System Stress Track or active cybernetic Augmentations. Can also be used against machines such as drones.
   * **Choose one of three effects**:
     * **System Attack**: If target is another Savant, deal System stress equal to (Shifts generated +2).
     * **Ego Strike**: Direct attack against an Apotheosized ego (mindset or SIM). Target suffers Mental stress equal to Shifts generated.
-    * **Cybernetic Feedback**: Causes damage to a specific cybernetic Augmentation. Augmentation temporarily ceases to function and target suffers Physical stress equal to Shifts generated.
+    * **Hardware Failure**: Causes a cybernetic Augmentation with an active function (e.g., cybernetic limb, implanted weapon) to become damaged or stop functioning. Has no effect on passive augmentations (e.g., subdermal armor). Can also be used against machines and drones. Target suffers Physical stress equal to Shifts generated; armor does not help. Any Consequence should relate to the Augmentation, which will not function until the Consequence is cleared.
 
 ### System Invasion
 
@@ -195,3 +197,21 @@ Modern computer systems, being Mimir-tech devices, are highly robust and do not 
   * **5+ Shifts (Computer System)**: Gain complete control of the system (cannot modify Mimir-tech OS core).
 * **Upgrades**:
   * **Usurper**: Force Apotheosized minds to obey same commands as drones. Execution difficulty based on higher of target's Cohesion, S.Eng, or SINC.
+
+---
+
+## Savant-Related Stunts
+
+### Savant (Prerequisite Stunt)
+
+* **Requires**: SIM State Stunt or Apotheosis Augmentation
+* **Effect**: Grants a SINC Skill Rank of 1 and one free Savant Program of your choice. You may now purchase additional Savant Programs with Stunts gained during character creation or from Major Milestones.
+* **Disadvantage Aspect**: You also gain a new "Disadvantage" Aspect representing the negative side effects of hacking the mindset (e.g., *Glitchy Short-Term Memory*, *Occasional Uncontrollable Muscle Spasms*, *Left Eye Severed from Visual Cortex*). This damage is repairable: at any Milestone, you may reduce a Skill of your choice by -1 (not below 0) to remove this Aspect.
+
+### Specialized Program
+
+* **Effect**: Select one Savant Program you know. You gain a **+2 bonus on execution tests** for that Program.
+
+### System Slip
+
+* **Effect**: You gain **+3 on Stealth tests** to avoid being detected on a computer system. In addition, you increase the **execution difficulty of any Savant Program directed at you by +2**.

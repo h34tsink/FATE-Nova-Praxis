@@ -22,16 +22,16 @@ A comprehensive reference for all firearms in Nova Praxis.
 
 > [!weapon]- Light PAc Pistol
 > **💰 Cost:** 5 | **⚔️ WR:** 4 | **📏 Range:** 4  
-> **🎯 Aspects:** Particle Accelerator, Small, Beam Weapon  
+> **🎯 Aspects:** Particle Accelerator, Small
 > **⚠️ Restricted:** Yes
-> 
+>
 > A particle accelerator weapon that fires a focused stream of charged particles. The beam can cause significant damage but performs poorly in vacuum environments.
 
 > [!weapon]- Heavy PAc Pistol
-> **💰 Cost:** 6 | **⚔️ WR:** 5 | **📏 Range:** 4  
-> **🎯 Aspects:** Particle Accelerator, Small, Beam Weapon  
+> **💰 Cost:** 6 | **⚔️ WR:** 5 | **📏 Range:** 4
+> **🎯 Aspects:** Particle Accelerator, Small
 > **⚠️ Restricted:** Yes
-> 
+>
 > A high-powered particle accelerator pistol capable of devastating damage. The focused particle beam can punch through most defenses but requires atmospheric conditions to function optimally.
 
 ---
@@ -114,14 +114,53 @@ A comprehensive reference for all firearms in Nova Praxis.
 
 ---
 
-## 🔫 Shotguns
+## 🔫 Rail-Arrays
 
-> [!weapon]- Combat Shotgun
-> **💰 Cost:** 5 | **⚔️ WR:** 5 | **📏 Range:** 1  
-> **🎯 Aspects:** Shotgun, -2 WR for Silent  
+> [!weapon]- Light Rail-Array
+> **💰 Cost:** 6 | **⚔️ WR:** 5 | **📏 Range:** 2
+> **🎯 Aspects:** Armor Penetrating, Large, Shotgun(P), -2 WR for Silent
 > **⚠️ Restricted:** Yes
-> 
-> A pump-action or semi-automatic shotgun designed for combat use. The wide spread pattern is devastating at close range but loses effectiveness quickly at distance.
+>
+> A multi-barrel railgun array that fires a spread of electromagnetically accelerated projectiles. The shotgun-like spread pattern combined with armor-piercing rail technology makes it devastating at close to medium range.
+
+> [!weapon]- Heavy Rail-Array
+> **💰 Cost:** 7 | **⚔️ WR:** 6 | **📏 Range:** 2
+> **🎯 Aspects:** Armor Penetrating, Large, Shotgun(P), -2 WR for Silent
+> **⚠️ Restricted:** Yes
+>
+> An enhanced rail-array with increased power output and additional barrels. Delivers a wider and more devastating spread of armor-piercing projectiles at the cost of increased size and energy consumption.
+
+---
+
+## 🔫 Sniper Rifles
+
+> [!weapon]- Light Sniper Rail-Rifle
+> **💰 Cost:** 6 | **⚔️ WR:** 6 | **📏 Range:** 7
+> **🎯 Aspects:** Anti-Vehicular, Armor Penetrating, Day/Night Scope, Huge(P), -2 WR for Silent
+> **⚠️ Restricted:** Yes
+>
+> A long-range railgun rifle designed for precision shooting. The electromagnetic acceleration system delivers armor-piercing rounds at extreme velocities, effective against both personnel and light vehicles.
+
+> [!weapon]- Heavy Sniper Rail-Rifle
+> **💰 Cost:** 7 | **⚔️ WR:** 7 | **📏 Range:** 7
+> **🎯 Aspects:** Anti-Vehicular, Armor Penetrating, Day/Night Scope, Huge(P), -2 WR for Silent
+> **⚠️ Restricted:** Yes
+>
+> An enhanced sniper railgun with increased power output and heavier projectiles. Capable of penetrating vehicle armor and fortifications at extreme range.
+
+> [!weapon]- Light PAc Sniper Rifle
+> **💰 Cost:** 8 | **⚔️ WR:** 8 | **📏 Range:** 9
+> **🎯 Aspects:** Particle Accelerator, Anti-Vehicular, Day/Night Scope, Huge(P)
+> **⚠️ Restricted:** Yes
+>
+> A particle accelerator weapon optimized for long-range precision fire. The focused particle beam maintains coherence over extreme distances, making it devastating against distant targets and vehicles.
+
+> [!weapon]- Heavy PAc Sniper Rifle
+> **💰 Cost:** 9 | **⚔️ WR:** 9 | **📏 Range:** 9
+> **🎯 Aspects:** Particle Accelerator, Anti-Vehicular, Day/Night Scope, Huge(P)
+> **⚠️ Restricted:** Yes
+>
+> The most powerful portable particle accelerator sniper platform available. Delivers devastating focused particle beams at extreme range, capable of disabling vehicles and penetrating heavy fortifications.
 
 ---
 
@@ -157,32 +196,32 @@ A comprehensive reference for all firearms in Nova Praxis.
 > **📝 Notes:** See Explosives table for damage; WR varies by grenade type
 
 > [!weapon]- Light Plasma Flamer
-> **💰 Cost:** 6 | **⚔️ WR:** 5 | **📏 Range:** 2  
-> **🎯 Aspects:** Huge(P), Incendiary, Environmental Hazard  
+> **💰 Cost:** 6 | **⚔️ WR:** 5 | **📏 Range:** 2
+> **🎯 Aspects:** Huge(P)
 > **⚠️ Restricted:** Yes
-> 
-> A directed-energy weapon that projects superheated plasma streams. Targets hit by the plasma suffer severe burns and the affected zone catches fire with intense heat.
-> 
-> **📝 Notes:** Targets hit + zone On Fire (Intensity 6 Environmental Hazard)
+>
+> A directed-energy weapon that projects superheated plasma streams. Targets who suffer stress and the zone attacked are On Fire, subjected to Intensity 6 Environmental Hazard.
+>
+> **📝 Notes:** Targets who suffer stress + zone are On Fire (Intensity 6 Environmental Hazard)
 
 > [!weapon]- Heavy Plasma Flamer
-> **💰 Cost:** 7 | **⚔️ WR:** 6 | **📏 Range:** 2  
-> **🎯 Aspects:** Huge(P), Incendiary, Environmental Hazard  
+> **💰 Cost:** 7 | **⚔️ WR:** 6 | **📏 Range:** 2
+> **🎯 Aspects:** Huge(P)
 > **⚠️ Restricted:** Yes
-> 
-> An enhanced plasma weapon that creates larger and more intense plasma streams. The increased power output results in more devastating burns and wider areas of intense fire.
-> 
-> **📝 Notes:** Targets hit + zone On Fire (Intensity 6 Environmental Hazard)
+>
+> An enhanced plasma weapon that creates larger and more intense plasma streams. Targets who suffer stress and the zone attacked are On Fire, subjected to Intensity 6 Environmental Hazard.
+>
+> **📝 Notes:** Targets who suffer stress + zone are On Fire (Intensity 6 Environmental Hazard)
 
 > [!weapon]- Rocket Launcher (RPG)
-> **💰 Cost:** 10 | **⚔️ WR:** 9 | **📏 Range:** 4 | **💥 EXR:** 4  
+> **💰 Cost:** 10 | **💥 EXR:** 9 | **📏 Range:** 4
 > **🎯 Aspects:** Explosive, Anti-Vehicular, Huge(P), Slow Firing(P)  
 > **⚠️ Restricted:** Yes
 > 
 > A shoulder-fired rocket-propelled grenade launcher designed to destroy vehicles and fortifications. The high-explosive warhead delivers devastating damage but requires time to reload between shots.
 
 > [!weapon]- Kinetic Strike Rail-Cannon
-> **💰 Cost:** 11 | **⚔️ WR:** 10 | **📏 Range:** 4 | **💥 EXR:** 5  
+> **💰 Cost:** 11 | **💥 EXR:** 10 | **📏 Range:** 5  
 > **🎯 Aspects:** Explosive, Anti-Vehicular, Huge(P), Slow Firing(P)  
 > **⚠️ Restricted:** Yes
 > 

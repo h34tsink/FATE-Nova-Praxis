@@ -188,7 +188,7 @@ Control a swarm of nanomachines with your thoughts. Swarm can take nearly any sh
 - **Deadly Swarm:** +2 bonus on attack and grapple tests
 - **Manipulative:** SINC counts as 2 ranks higher for manipulation/grapple (not for execution test)
 - **Sensory Feed:** Swarm sends audio/video feedback (Diff: 3), range increases to 1 km
-- **Versatile Armor:** Assign two features to armor: Enhanced Mobility, Actuators, High Density Plating, Hydrostatic Gel Layer, Integrated Weaponry (Mono-Edge Shortsword), Reinforced Cyber-Musculature, or Vacuum Sealed and Shielded
+- **Versatile Armor:** Assign two features to armor: Enhanced Mobility Actuators, High Density Plating, Hydrostatic Gel Layer, Integrated Weaponry (Mono-Edge Shortsword), Reinforced Cyber-Musculature, or Vacuum Sealed and Shielded
 
 ---
 
@@ -410,8 +410,8 @@ Launch barrage of intrusion attempts to overwhelm target system, causing instabi
 **System Attack:** (Savant to Savant only)  
 Deal System Stress = Shifts generated +2 to target's System Stress Track
 
-**Hardware Failure:** (Augmentations/machines)  
-Damage cybernetic Augmentation or stop active functions (drones, etc.). Target suffers Physical Stress = Shifts generated. Armor doesn't help. Consequence relates to Augmentation (non-functional until cleared)
+**Hardware Failure:** (Augmentations/machines/drones)
+Cause a cybernetic Augmentation with an active function (e.g., cybernetic limb, implanted weapon) to become damaged or stop functioning. Has no effect on passive augmentations (e.g., subdermal armor). Can also be used against machines and drones. Target suffers Physical Stress = Shifts generated. Armor doesn't help. Consequence relates to Augmentation (non-functional until cleared)
 
 **Ego Strike:** (Against Apotheosized egos)  
 Direct attack against ego on mindset or SIM host. Target suffers Mental Stress = Shifts generated.
@@ -515,7 +515,7 @@ Used by Pattern Scan, Security Skim for specific targets
 | | Deadly Swarm | +2 bonus on attack/grapple tests |
 | | Manipulative | SINC counts as 2 ranks higher for manipulation |
 | | Sensory Feed | Swarm sends audio/video; range 1 km |
-| | Versatile Armor | Assign 2 armor features (Enhanced Mobility, Actuators, etc.) |
+| | Versatile Armor | Assign 2 armor features (Enhanced Mobility Actuators, etc.) |
 | **Memory Hack** | Flash Memory | Real-time editing (Diff: +2, Simple Action); causes Mild/Moderate/Severe Consequence |
 | **Overload** | Power Surge | Attack powered objects; WR depends on object type |
 | **Puppeteer** | Drone Lord | Possess owned drones without executing Program |
@@ -546,7 +546,7 @@ These programs follow official Savant Program structure and are used by NPCs lik
 3. **Make SINC Test:** Roll SINC skill vs. Program difficulty
 4. **Determine Result:**
    - **Success:** Program works as intended
-   - **Failure (no Stall):** Suffer System Stress = Shifts missed; effect may be partial
+   - **Failure (no Stall):** Program fully activates, but you suffer System Stress = Shifts missed
    - **Stall:** Suffer System Stress + Program fails completely
 5. **Apply Effect:** Based on Shifts generated (more Shifts = better result)
 6. **Consider Upgrades:** Some programs have upgrade options (purchased separately as Stunts)

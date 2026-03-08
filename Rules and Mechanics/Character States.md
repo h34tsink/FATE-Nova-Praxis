@@ -48,15 +48,17 @@ A comprehensive reference for all character states in Nova Praxis.
 > **⭐ Free Stunts:**
 > - SIM State (automatic)
 > 
-> **🎲 Choice Stunts (select from):**
+> **🎲 Choice Stunt (pick ONE from):**
 > - Digitally Evolved
 > - Digital Spider
 > - Drone Jock
 > - Infusion
-> - Skilled SINC
+> - Skilled (SINC)
 > - System Slip
-> 
-> **📊 Skill Bonuses:**
+>
+> > **House Rule:** +1 SINC and +1 Software Engineering are campaign additions, not in the core rulebook.
+>
+> **📊 Skill Bonuses (House Rule):**
 > - +1 SINC (max rank 5)
 > - +1 Software Engineering (max rank 5)
 
@@ -67,8 +69,14 @@ A comprehensive reference for all character states in Nova Praxis.
 > **📡 Lag Penalty:**
 > May suffer penalties due to lag on Skill tests when acting through machines located a great distance from the host:
 > - Within 1000 km: no penalty
-> - Same star system: -2 penalty
+> - Same star system (>1000 km): -2 penalty
 > - Outside star system: -4 penalty
+>
+> **⏱️ Hosting Transfer Times:**
+>
+> - Within 1000 km: ~10 minutes
+> - Same star system (>1000 km): ~1 hour
+> - Out-of-system host: ~4 hours
 > 
 > **🤖 Physical Interaction:**
 > Requires drones for physical interaction.
@@ -99,6 +107,17 @@ A comprehensive reference for all character states in Nova Praxis.
 > 
 > **📝 Note:**
 > Later steps in the character creation process will guide you through determining your Assets and Rep-Rating.
+
+---
+
+## 🔄 Changing States During Play
+
+> [!info]- State Transitions
+> It is possible to change states during play. A Pure character can purchase the Apotheosis Augmentation. Once you have undergone Apotheosis, you can change between Sleeved and SIM states via a resurrection chamber.
+>
+> **However, you can never go back to being Pure.**
+>
+> Should you change states, you automatically lose the State Benefits of your previous state and gain the State Benefits of your new state.
 
 ---
 

@@ -16,7 +16,9 @@ Drones are a ubiquitous part of life in the **Coalition** and many **apostate en
     Most military operations are conducted primarily by drones—sometimes exclusively.
     
 
-> **Note:** While this overview focuses on human-sized drones, almost any vehicle (starship, warframe, etc.) can be fitted with an AI or remotely piloted. Distance introduces _lag_, which can impact performance (think: SIM lag, but for murderbots).
+> **Note:** While this overview focuses on human-sized drones, almost any vehicle (starship, warframe, etc.) can be fitted with an AI or remotely piloted. Distance introduces _lag_ (same penalties as SIM lag), which can impact performance at great distances.
+>
+> **System Attacks:** Savant Programs can target drone controllers, not just the drone itself. A Savant who successfully attacks a drone operator through the control link can disrupt the operator's connection or cause feedback stress.
 
 ---
 
@@ -102,9 +104,11 @@ Drones are “built” almost like cybersleeves, but with these crucial differen
     - +1 Stealth
         
 - **Armored (AV 2):**
-    
+
     - +3 to natural Armor Rating
-        
+
+    - Cannot be taken more than once
+
     - Cannot be stacked or combined with Skinweave
         
 - **Armed (AV 2):**

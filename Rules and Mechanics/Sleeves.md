@@ -81,7 +81,7 @@ Biosleeves are genetically engineered biological bodies that have undergone gene
 
 ## 🤖 Cybersleeves
 
-Cybersleeves are fully synthetic bodies with non-magnetic metal skeletons and synthetic muscles.
+Cybersleeves are fully synthetic bodies with non-magnetic metal skeletons and synthetic muscles. All cybersleeves have a natural Armor Rating (AR); this AR bonus **does not stack with the AR bonus provided by wearing armor**.
 
 > [!sleeve]- Alpha Cybersleeve
 > **💰 Cost:** 5 | **💪 Physical Skill Ranks:** 7 | **🔧 Augmentation Points:** 3 | **🛡️ AR:** 1
@@ -178,14 +178,46 @@ Cybersleeves are fully synthetic bodies with non-magnetic metal skeletons and sy
 
 > [!info]- Starting Sleeve Cost Formula
 > Your starting sleeve cost is determined by:
-> 
+>
 > **MAX(Assets Skill Rank, Rep-Rating) + 4**
-> 
+>
 > Physical skill ranks provided by your sleeve are distributed among Athletics, Endurance, and Perception with a maximum of 5 per skill.
-> 
+>
 > Included augmentations do not count against your augmentation point total.
 
 ---
+
+## 📏 Augmentation Limit
+
+A sleeve (or Pure human body) can support a total number of Augmentations equal to its **Endurance Skill x2**. Some augmentations (Apotheosis, Fully Synthetic, Cosmetic Customization, Bio-Skin Sheath, Striking Looks, Optimized Power System, Exceptional Genegineering) do not count against this limit.
+
+---
+
+## 🔧 Sleeve Customization Options
+
+You can elect to increase the Cost of your sleeve by **+1** in exchange for one of the following options:
+
+- **Trade Skill Ranks for APs (or vice versa):** Trade up to 3 Physical Skill Ranks, on a 1-for-1 basis, for a maximum of 3 Augmentation Points — or trade APs for Skill Ranks.
+- **Clone of Original Body:** Make the sleeve a clone of your original body or current sleeve. It takes about two weeks to flash-clone a sleeve. Clones are easier to integrate with during resleeving.
+
+---
+
+## 💰 Aftermarket Augmentation Costs
+
+When you purchase an augmentation without using the APs provided by a new sleeve, it is an "aftermarket" purchase.
+
+> **Aug Cost = Total Number of Augs + (AV x 2)**
+
+Some augs (such as Apotheosis) do not count toward the max number of augs you can support. These also do not count when determining the total number of augs for Cost purposes.
+
+Installation requires a few hours and an Education test (Difficulty = 1 + Aug's AV). Most professionals will refuse to apply restricted Augmentations without a license.
+
+**Aftermarket Upgrades:** The Cost of applying an aftermarket upgrade is:
+
+> **Upgrade Cost = Total Number of Augs + (Total AV of Aug + Upgrade(s)) x 2**
+
+---
+
 **Tags:** #character #sleeves #bodies #cybernetics #biotech #reference
 
 ## Links

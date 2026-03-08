@@ -78,7 +78,7 @@ A comprehensive reference for all melee weapons in Nova Praxis.
 
 > [!weapon]- Punch/Kick (Unarmed)
 > **💰 Cost:** 0 | **⚔️ WR:** 0 | **📏 Range:** 0  
-> **🎯 Aspects:** Unarmed, Small  
+> **🎯 Aspects:** Unarmed
 > **⚠️ Restricted:** No
 > 
 > Basic hand-to-hand combat using fists, elbows, knees, and feet. While not as effective as weapons, unarmed combat is always available and difficult to restrict.
