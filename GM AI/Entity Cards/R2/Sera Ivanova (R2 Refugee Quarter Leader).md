@@ -6,6 +6,11 @@ aliases:
 tags:
   - "gm-ai"
   - "entity-card"
+rank: "R2"
+class: "Minor NPC"
+faction: "Talons of Freedom"
+token: "sera"
+status: "active"
 ---
 
 # Sera Ivanova (R2 Refugee Quarter Leader)

@@ -5,6 +5,11 @@ aliases:
 tags:
   - "gm-ai"
   - "entity-card"
+rank: "R4"
+class: "Important NPC"
+faction: "House Kimura"
+token: "kestrel"
+status: "active"
 ---
 
 # Kestrel (R4 Important NPC)

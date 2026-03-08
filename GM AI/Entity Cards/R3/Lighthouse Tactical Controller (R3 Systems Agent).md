@@ -7,6 +7,11 @@ aliases:
 tags:
   - "gm-ai"
   - "entity-card"
+rank: "R3"
+class: "Systems Agent"
+faction: "Tsarya"
+token: "lighthouse"
+status: "active"
 ---
 
 # Lighthouse Tactical Controller (R3 Systems Agent)

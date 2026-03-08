@@ -6,6 +6,11 @@ aliases:
 tags:
   - "gm-ai"
   - "entity-card"
+rank: "R2"
+class: "Minor NPC"
+faction: "Independent"
+token: "kal"
+status: "active"
 ---
 
 # Kal Paddock (R2 Minor Contact)

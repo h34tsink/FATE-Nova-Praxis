@@ -6,6 +6,11 @@ aliases:
 tags:
   - "gm-ai"
   - "entity-card"
+rank: "R3"
+class: "Important NPC"
+faction: "Coalition Protectorate"
+token: "declan-royce"
+status: "active"
 ---
 
 # Declan Royce (R3 Centurion Patrol Officer)

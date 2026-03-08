@@ -5,6 +5,11 @@ aliases:
 tags:
   - "gm-ai"
   - "entity-card"
+rank: "R5"
+class: "Villain"
+faction: "Kimura"
+token: "chimera"
+status: "active"
 ---
 
 # Chimera (R5 Villain)

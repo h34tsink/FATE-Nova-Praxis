@@ -40,7 +40,16 @@
       "Bash(grep -v \"^\\\\.$\")",
       "Bash(grep -v \"^FATE$\")",
       "Bash(grep -E \"\\\\.\\(ts|md\\)$\")",
-      "Bash(wc -l \"d:/ObsidianVaults/FATE - Nova Praxis/\"*.txt)"
+      "Bash(wc -l \"d:/ObsidianVaults/FATE - Nova Praxis/\"*.txt)",
+      "Bash(xargs -0 head -30)",
+      "Bash(grep -E \"^---$|^[a-z_-]+:\")",
+      "Bash(while IFS= read -r file)",
+      "Bash(do echo \"=== $file ===\")",
+      "Read(//d/ObsidianVaults/FATE - Nova Praxis/**)",
+      "Bash(done)",
+      "Bash(while read file)",
+      "Bash(for file in \"Sessions/Session 9/Session 9 - Guide.md\" \"GM AI/NPC Command Board.md\" \"Glossary/Agent.md\" \"Characters/NPCs/Named NPCs/Castor.md\" \"Factions/Hidden Agendas/Black Market.md\" \"Locations/Stations/Ansari Station.md\")",
+      "Bash(xargs -I {} head -20 \"{}\")"
     ]
   }
 }

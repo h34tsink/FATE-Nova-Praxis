@@ -5,6 +5,11 @@ aliases:
 tags:
   - "gm-ai"
   - "entity-card"
+rank: "R3"
+class: "Important NPC"
+faction: "Talons of Freedom"
+token: "seren"
+status: "active"
 ---
 
 # Seren (R3 Important Contact)

@@ -6,6 +6,11 @@ aliases:
 tags:
   - "gm-ai"
   - "entity-card"
+rank: "R2"
+class: "Minor NPC"
+faction: "Independent"
+token: "mira"
+status: "active"
 ---
 
 # Mira Okafor (R2 Core Markets Vendor)

@@ -6,6 +6,11 @@ aliases:
 tags:
 - gm-ai
 - entity-card
+rank: "R4"
+class: "Important NPC"
+faction: "House Tsarya"
+token: "nowak"
+status: "active"
 ---
 
 # Isabella Nowak (R4 Important NPC)

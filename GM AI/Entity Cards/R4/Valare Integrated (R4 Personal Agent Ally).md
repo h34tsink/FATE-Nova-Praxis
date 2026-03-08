@@ -6,6 +6,11 @@ aliases:
 tags:
   - "gm-ai"
   - "entity-card"
+rank: "R4"
+class: "Personal Agent"
+faction: "Independent"
+token: "valare-integrated"
+status: "active"
 ---
 
 # Valare Integrated (R4 Personal Agent Ally)

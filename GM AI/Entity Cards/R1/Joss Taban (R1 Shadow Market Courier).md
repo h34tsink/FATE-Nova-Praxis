@@ -6,6 +6,11 @@ aliases:
 tags:
   - "gm-ai"
   - "entity-card"
+rank: "R1"
+class: "Minor NPC"
+faction: "Shadow Market"
+token: "joss"
+status: "active"
 ---
 
 # Joss Taban (R1 Shadow Market Courier)

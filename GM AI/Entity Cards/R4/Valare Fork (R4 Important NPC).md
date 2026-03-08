@@ -6,6 +6,11 @@ aliases:
 tags:
   - "gm-ai"
   - "entity-card"
+rank: "R4"
+class: "Important NPC"
+faction: "Independent"
+token: "valare-fork"
+status: "active"
 ---
 
 # Valare Fork (R4 Important NPC)

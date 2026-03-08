@@ -6,6 +6,11 @@ aliases:
 tags:
   - "gm-ai"
   - "entity-card"
+rank: "R2"
+class: "Minor NPC"
+faction: "Independent"
+token: "udo"
+status: "active"
 ---
 
 # Udo Grein (R2 Mining Shaft Scavenger)

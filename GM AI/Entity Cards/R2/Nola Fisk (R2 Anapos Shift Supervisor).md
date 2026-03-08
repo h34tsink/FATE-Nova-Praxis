@@ -6,6 +6,11 @@ aliases:
 tags:
   - "gm-ai"
   - "entity-card"
+rank: "R2"
+class: "Minor NPC"
+faction: "Trident"
+token: "nola"
+status: "active"
 ---
 
 # Nola Fisk (R2 Anapos Shift Supervisor)

@@ -6,6 +6,11 @@ aliases:
 tags:
   - "gm-ai"
   - "entity-card"
+rank: "R1"
+class: "Minor NPC"
+faction: "none"
+token: "declan"
+status: "active"
 ---
 
 # Declan "Patch" Yuen (R1 Docking Bay Mechanic)
