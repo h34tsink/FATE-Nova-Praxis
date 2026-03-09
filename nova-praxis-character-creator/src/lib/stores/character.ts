@@ -4,7 +4,9 @@ export interface Character {
 	// Identity
 	name: string;
 	playerName: string;
-	
+	portrait: string | null;        // filename from /portraits/, e.g. "Grace.png"
+	savantAspect: string;           // aspect text when Savant stunt is taken
+
 	// Aspects
 	aspects: {
 		ambition: string;
@@ -58,6 +60,8 @@ function createCharacterStore() {
 	const defaultCharacter: Character = {
 		name: '',
 		playerName: '',
+		portrait: null,
+		savantAspect: '',
 		aspects: {
 			ambition: '',
 			belief: '',
@@ -135,6 +139,13 @@ function createCharacterStore() {
 			});
 		},
 		
+		setPortrait: (filename: string | null) => {
+			update(char => ({ ...char, portrait: filename }));
+		},
+		setSavantAspect: (value: string) => {
+			update(char => ({ ...char, savantAspect: value }));
+		},
+
 		calculateStress: () => {
 			update(char => {
 				const endurance = char.physicalSkills.endurance || 0;
