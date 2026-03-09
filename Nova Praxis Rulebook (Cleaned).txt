@@ -3413,7 +3413,7 @@ Rank 1: Assets, Demolitions, Mnemonics, Networking (House), Research, Resolve
 Stunts:
 Savant – You can select Savant Programs as Stunts, and gain a SINC rating of 1.
 Esper Lord (Savant Program, Free) – You can control a swarm of espers (pg. 186).
-Skilled (SINC) – Your SINC Skill Rank is increased by +1.
+Ski
 Oracle Pattering (Savant Program) – You can make reliable predictions of future events (pg.
 190).
 
