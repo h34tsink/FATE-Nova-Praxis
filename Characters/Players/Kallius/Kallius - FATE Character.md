@@ -58,10 +58,10 @@ His downtime is spent researching ways to halt ego fragmentation — a threat th
 
 | Rank | Skills |
 |------|--------|
-| +4 Great | [[Rules and Mechanics/Skills#Mnemonics\|Mnemonics]], [[Rules and Mechanics/Skills#Engineering, Software (S.Eng)\|Engineering Software]], [[Rules and Mechanics/Skills#Cohesion\|Cohesion]] |
-| +3 Good | [[Rules and Mechanics/Skills#Engineering, Hardware (H.Eng)\|Engineering Hardware]], [[Rules and Mechanics/Skills#Firearms\|Firearms]], [[Rules and Mechanics/Skills#SINC\|SINC]] |
-| +2 Fair | [[Rules and Mechanics/Skills#Guile\|Guile]], [[Rules and Mechanics/Skills#Resolve\|Resolve]], [[Rules and Mechanics/Skills#Melee\|Melee]], [[Rules and Mechanics/Skills#Pilot\|Pilot]] |
-| +1 Average | [[Rules and Mechanics/Skills#Networking, House (H.Net)\|House Networking]], [[Rules and Mechanics/Skills#Education\|Education]], [[Rules and Mechanics/Skills#Research\|Research]], [[Rules and Mechanics/Skills#Assets\|Assets]], [[Rules and Mechanics/Skills#Strategy\|Strategy]], [[Rules and Mechanics/Skills#Diplomacy\|Diplomacy]] |
+| +4 Great | [[Rules and Mechanics/Skills#Mnemonics\|Mnemonics]], [[Rules and Mechanics/Skills#Engineering, Software (S.Eng)\|Engineering Software]], [[Rules and Mechanics/Skills#Engineering, Hardware (H.Eng)\|Engineering Hardware]] |
+| +3 Good | [[Rules and Mechanics/Skills#Cohesion\|Cohesion]], [[Rules and Mechanics/Skills#Firearms\|Firearms]], [[Rules and Mechanics/Skills#SINC\|SINC]] |
+| +2 Fair | [[Rules and Mechanics/Skills#Guile\|Guile]], [[Rules and Mechanics/Skills#Resolve\|Resolve]], [[Rules and Mechanics/Skills#Education\|Education]], [[Rules and Mechanics/Skills#Research\|Research]] |
+| +1 Average | [[Rules and Mechanics/Skills#Networking, House (H.Net)\|House Networking]], [[Rules and Mechanics/Skills#Pilot\|Pilot]], [[Rules and Mechanics/Skills#Melee\|Melee]], [[Rules and Mechanics/Skills#Assets\|Assets]], [[Rules and Mechanics/Skills#Strategy\|Strategy]], [[Rules and Mechanics/Skills#Diplomacy\|Diplomacy]] |
 
 **Physical Skills:**
 
@@ -82,6 +82,7 @@ His downtime is spent researching ways to halt ego fragmentation — a threat th
 | [[Rules and Mechanics/Stunts#Savant\|Savant]] | Grants SINC 1, access to [[Rules and Mechanics/Savant Programs - Game Reference\|Savant Programs]], mandatory Disadvantage aspect |
 | [[Rules and Mechanics/Stunts#Specialized Program\|Specialized Program]] | +2 bonus to execute Memory Hack |
 | [[Rules and Mechanics/Stunts#Skilled\|Skilled]] | +1 to SINC (included in rank above) |
+| [[Rules and Mechanics/Stunts#Licensed\|Licensed]] | Can purchase restricted equipment using Rep-Rating instead of Assets |
 
 ---
 
@@ -90,8 +91,7 @@ His downtime is spent researching ways to halt ego fragmentation — a threat th
 | Program | Effect |
 |---------|--------|
 | [[Rules and Mechanics/Savant Programs - Game Reference#Memory Hack\|Memory Hack]] *(Specialized)* | Edit, implant, or extract memories. **+2 bonus** from Specialized Program stunt |
-
-> Access Memory removed — unaccounted program. Re-acquire at next Major Milestone.
+| [[Rules and Mechanics/Savant Programs - Game Reference#Access Memory\|Access Memory]] | Read a target's surface memories or recent experiences |
 
 ---
 
@@ -230,10 +230,9 @@ His downtime is spent researching ways to halt ego fragmentation — a threat th
 | # | Type | Spent On | Notes |
 | --- | --- | --- | --- |
 | 1 | Minor | Skill swap | Pre-session adjustment |
-| 2 | — | *Available* | |
-| 3 | — | *Available* | |
-| 4 | — | *Available* | |
+| 2 | Major | Access Memory program + Eng Hardware↔Cohesion swap | Eng Hardware →+4, Cohesion →+3 |
+| 3 | Minor | Education↔Pilot swap, Research↔Melee swap | Education/Research →+2, Pilot/Melee →+1 |
+| 4 | Major | Licensed stunt | Can buy restricted gear via Rep-Rating |
 
-> **Budget:** 4 milestones total. 1 spent, 3 remaining.
-> **Queued for next Major:** Re-acquire Access Memory (removed — was unaccounted program).
-> **Next Milestone:** Major
+> **Budget:** 4 milestones total. 4 spent, 0 remaining.
+> **All milestones spent.**
