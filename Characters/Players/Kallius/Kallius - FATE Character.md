@@ -97,6 +97,16 @@ His downtime is spent researching ways to halt ego fragmentation — a threat th
 
 ## Sleeves
 
+> **Resleeving Note:** Kallius owns two sleeves. When he decants into the stored Alpha Biosleeve, his Physical Skills, sleeve aspects, augmentations, AR, and Physical Stress all change to match that sleeve. Mental skills, Savant programs, and non-physical stats stay the same. See each sleeve block below for the exact swap values.
+>
+> | Stat | Delta Cybersleeve (Active) | Alpha Biosleeve (Stored) |
+> | --- | --- | --- |
+> | **Physical Skills** | End +4, Ath +3, Per +3 (10) | Ath +3, End +3, Per +2 (8) |
+> | **Physical Stress** | 6 (2 + End 4) | 5 (2 + End 3) |
+> | **Sleeve Aspects** | Synthetic Biology, Inhuman Appearance | Gene-Fixed Biosleeve, Unattractive |
+> | **Base AR** | 2 | 0 |
+> | **Aug Points** | 7 | 2 |
+
 ### Alpha Biosleeve (Stored)
 
 | Field | Value |

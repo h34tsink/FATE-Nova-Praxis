@@ -22,6 +22,24 @@ A comprehensive reference for all stunts in Nova Praxis.
 
 ---
 
+## SIM Choice Stunts
+
+> [!stunt]- Digital Spider
+> **State:** SIM (choice stunt)
+>
+> You've been to every corner of the Extranet, and know where to look for obscure information.
+> You gain a +2 bonus on all Research rolls to perform Assessments related to a person, place, or thing that can be found on the Extranet.
+
+> [!stunt]- Digitally Evolved
+> **State:** SIM (choice stunt)
+> **Requires:** Savant Stunt
+>
+> You have managed to modify your ego's code in such a way that, when loaded into a virtual environment, your virtual body is greatly enhanced.
+> You gain a +2 bonus on Athletics, Endurance, and Perception Skill tests while in a virtuality.
+> You also gain a +1 bonus on attack tests made using the Firearms or Melee Skills.
+
+---
+
 ## General Stunts
 
 > [!stunt]- Battlefield Command
@@ -48,6 +66,10 @@ A comprehensive reference for all stunts in Nova Praxis.
 > You have obtained a license to acquire restricted equipment, and may do so using your Rep-Rating. Normally a character must use Assets to acquire restricted items.
 > Note that excessive purchasing of restricted items can still result in investigation by authorities. Attempting to fabricate a half dozen guns or a large quantity of explosives may flag you for investigation.
 > While restricted equipment is very useful for bartering with apostates, getting caught doing so could result in severe criminal punishment. A PC who gets caught would likely lose their license. If this happens, the GM should allow the PC to replace this Stunt with another at their next Milestone.
+
+> [!stunt]- Refreshed
+> Your Refresh Rating is increased by +1.
+> You may take this Stunt a total of three times.
 
 > [!stunt]- Reputable
 > You've left those who've met you with good impressions, or you've contributed something meaningful to the lives of the people of the galaxy.
@@ -76,7 +98,7 @@ A comprehensive reference for all stunts in Nova Praxis.
 
 ---
 
-## Savant Stunts
+## Savant / SIM Stunts
 
 > [!stunt]- Savant
 > **Requires:** SIM State Stunt or [[Augmentations#Apotheosis|Apotheosis]] Augmentation
@@ -86,6 +108,14 @@ A comprehensive reference for all stunts in Nova Praxis.
 > During character creation you may improve your SINC Skill by selecting the [[#Skilled|Skilled]] Stunt. After character creation you may improve this Skill like any other.
 > You also gain a Savant Program of your choice, and may now purchase additional Savant Programs with the Stunts you get during character creation or from Major Milestones.
 > In addition, you also gain a new "Disadvantage" Aspect that represents the negative side effects of hacking the mindset. *Glitchy Short-Term Memory*, *Occasional Uncontrollable Muscle Spasms*, or *Left Eye Severed from Visual Cortex* are good examples.
+
+> [!stunt]- Infusion
+> **Requires:** Savant Stunt
+>
+> You have managed to modify your ego's code, adding additional code that mimics one or more pieces of equipment. This code becomes a part of your ego and cannot be separated.
+> When you load into a virtuality, you gain the ability to call this equipment into being at will. Your ego's infused equipment functions just as it would if it were real, and obeys the physical laws of the virtual environment.
+> You may infuse any number of items so long as their combined Cost does not exceed your SINC Skill rank +5.
+> You may select this Stunt multiple times. Each time you do, you may infuse additional items, adding +3 to the total Cost of items you can infuse. Each time you take this Stunt, you may also liquidate previously infused items and infuse a whole new set.
 
 > [!stunt]- Specialized Program
 > You've spent a great deal of time mastering a specific Savant Program, honing your SINC to a razor's edge. Select one Savant Program you know.
