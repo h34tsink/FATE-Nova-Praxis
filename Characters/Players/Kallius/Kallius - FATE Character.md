@@ -139,15 +139,21 @@ His downtime is spent researching ways to halt ego fragmentation — a threat th
 
 ## Augmentations (Active Sleeve)
 
-| Augmentation | AV | Effect |
-|-------------|-----|--------|
-| [[Rules and Mechanics/Augmentations#Bio Skin Sheath\|Bio Skin Sheath]] | 1 | Natural skin covering; Synthetic Biology no longer Persistent |
-| [[Rules and Mechanics/Augmentations#Smuggler's Compartment\|Smuggler's Compartment]] | 1 | Hidden body compartment. **Upgrade: Charlatan** — fools radiation-based sensors |
-| [[Rules and Mechanics/Augmentations#Custom Built\|Custom Built]] | 1 | Sleeve built for specific task; gains descriptive aspect |
-| [[Rules and Mechanics/Augmentations#Hidden Weapon System\|Hidden Weapon System]] | 1 | Concealed weapon mount (restricted) |
-| [[Rules and Mechanics/Augmentations#Retinal Implant\|Retinal Implant]] | 1 | Zoom, low-light, AR interface |
-| [[Rules and Mechanics/Augmentations#Data Jack\|Data Jack]] | 1 | Wired interface port + data storage |
-| [[Rules and Mechanics/Augmentations#SIM Cell Module\|SIM Cell Module]] | 1 | Hosts [[Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character\|Grace Pryzbylski]] |
+> **AP Accounting:** Delta Cybersleeve = 7 points. Bio Skin Sheath is a free sleeve choice (does not count). Data Jack is free with Apotheosis (does not count). All others cost 1 AP each.
+
+| Augmentation | AV | Counts | Effect |
+|-------------|-----|--------|--------|
+| [[Rules and Mechanics/Augmentations#Bio Skin Sheath\|Bio Skin Sheath]] | — | Free (sleeve choice) | Natural skin covering; Synthetic Biology no longer Persistent |
+| [[Rules and Mechanics/Augmentations#Data Jack\|Data Jack]] | — | Free (w/ Apotheosis) | Wired interface port + data storage |
+| [[Rules and Mechanics/Augmentations#Smuggler's Compartment\|Smuggler's Compartment]] | 1 | ✓ | Hidden body compartment. **Upgrade: Charlatan** — fools radiation-based sensors |
+| [[Rules and Mechanics/Augmentations#Custom Built\|Custom Built]] | 1 | ✓ | Sleeve built for specific task; gains descriptive aspect |
+| [[Rules and Mechanics/Augmentations#Hidden Weapon System\|Hidden Weapon System]] | 1 | ✓ | Concealed weapon mount (restricted) |
+| [[Rules and Mechanics/Augmentations#Retinal Implant\|Retinal Implant]] | 1 | ✓ | Zoom, low-light, AR interface |
+| [[Rules and Mechanics/Augmentations#SIM Cell Module\|SIM Cell Module]] | 1 | ✓ | Hosts [[Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character\|Grace Pryzbylski]] |
+| [[Rules and Mechanics/Augmentations#SMR Transceiver\|SMR Transceiver]] | 1 | ✓ | Sub-mm radiation sensors; see through clothing, paper, plastic — not skin or metal |
+| [[Rules and Mechanics/Augmentations#Crypto-Laser Link\|Crypto-Laser Link]] | 1 | ✓ | IR laser transceiver; silent, encrypted, invisible comms |
+
+> **AP Used: 7 / 7** — sleeve full.
 
 ---
 
