@@ -9,7 +9,8 @@
 	import StepSleeve from '$lib/components/StepSleeve.svelte';
 	import StepGear from '$lib/components/StepGear.svelte';
 	import StepFinalize from '$lib/components/StepFinalize.svelte';
-	
+	import CharacterLoader from '$lib/components/CharacterLoader.svelte';
+
 	let currentStep = 0;
 	
 	const steps = [
@@ -44,6 +45,13 @@
 		currentStep = index;
 	}
 </script>
+
+<div class="page-header">
+	<CharacterLoader />
+	<a href="/sheet" target="_blank">
+		<button class="secondary">Print Sheet</button>
+	</a>
+</div>
 
 <div class="character-creator">
 	<div class="progress-bar">
@@ -91,6 +99,14 @@
 </div>
 
 <style>
+	.page-header {
+		max-width: 1200px;
+		margin: 1rem auto 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
 	.character-creator {
 		max-width: 1200px;
 		margin: 0 auto;
