@@ -211,7 +211,55 @@
         </div><!-- /p1-body -->
     </div>
     <div class="sheet sheet-page-2">
-        <p style="color:#999">Page 2 — coming in next tasks</p>
+        <!-- Page 2 header -->
+        <h1 class="char-name p2-title">{c.name || 'Character'} — Page 2</h1>
+        <hr class="sheet-rule" />
+
+        <!-- GEAR + ALLIES row -->
+        <div class="p2-top">
+            <div class="p2-gear">
+                <div class="section-header">Gear</div>
+                {#if c.gear.length}
+                    {#each c.gear as item}
+                        <div class="gear-row">
+                            <strong>{item.name}</strong>
+                            <span class="gear-tag">{item.type.toUpperCase()}</span>
+                            {#if item.quantity > 1}
+                                <span class="gear-qty">×{item.quantity}</span>
+                            {/if}
+                        </div>
+                    {/each}
+                {:else}
+                    <p class="empty-note">No gear recorded</p>
+                {/if}
+            </div>
+            <div class="p2-allies">
+                <div class="section-header">Allies &amp; Contacts</div>
+                <p class="empty-note"><em>No allies recorded — use this space to track important contacts, allies, and relationships.</em></p>
+            </div>
+        </div>
+
+        <hr class="sheet-rule" />
+
+        <!-- DRONES + VEHICLES row -->
+        <div class="p2-bottom-row">
+            <div class="p2-drones">
+                <div class="section-header">Drones</div>
+                <p class="empty-note"><em>No drones recorded</em></p>
+            </div>
+            <div class="p2-vehicles">
+                <div class="section-header">Vehicles</div>
+                <p class="empty-note"><em>No vehicles recorded</em></p>
+            </div>
+        </div>
+
+        <hr class="sheet-rule" />
+
+        <!-- NOTES -->
+        <div class="p2-notes">
+            <div class="section-header">Notes</div>
+            <div class="notes-space"></div>
+        </div>
     </div>
 </div>
 
@@ -393,6 +441,15 @@
         border-top: var(--rule);
         margin: 6px 0;
     }
+
+    /* ── Page 2 ── */
+    .p2-title { font-size: 16pt; margin-bottom: 0.3rem; }
+    .p2-top { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 0.4rem 0; }
+    .p2-bottom-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 0.4rem 0; }
+    .gear-row { font-size: 9.5pt; line-height: 1.6; }
+    .gear-qty { font-size: 8.5pt; color: #666; margin-left: 4px; }
+    .empty-note { font-size: 9pt; color: #888; font-style: italic; margin-top: 4px; }
+    .notes-space { min-height: 2.5in; }
 
     /* ── Stunts + state ── */
     .stunts-header-row {
