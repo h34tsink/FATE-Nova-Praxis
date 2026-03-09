@@ -70,7 +70,9 @@
       "Bash(claude plugin marketplace add \"C:\\\\Users\\\\satur\\\\.claude\\\\plugins\\\\local-marketplace\")",
       "Bash(claude plugin marketplace add \"file:///C:/Users/satur/.claude/plugins/local-marketplace\")",
       "Bash(claude plugin marketplace add \"./local-marketplace\")",
-      "Bash(wc -l \"d:/ObsidianVaults/FATE - Nova Praxis/Nova Praxis Rulebook \\(Cleaned\\).txt\")"
+      "Bash(wc -l \"d:/ObsidianVaults/FATE - Nova Praxis/Nova Praxis Rulebook \\(Cleaned\\).txt\")",
+      "Bash(find \"d:/ObsidianVaults/FATE - Nova Praxis/nova-praxis-gm\" -type f -exec wc -l {} +)",
+      "Bash(ls -lh \"d:/ObsidianVaults/FATE - Nova Praxis/Nova Praxis Rulebook \\(Cleaned\\).txt\")"
     ]
   }
 }
