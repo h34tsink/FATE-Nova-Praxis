@@ -158,6 +158,35 @@ Uses `marked` for markdown rendering. Static site generation via `@sveltejs/adap
 - `.gitignore` covers `.trash/` and video files in `Mechanics/FATE/` and `Rules and Mechanics/FATE/`
 - Branch: `main` only
 
+## Auto-Save Routing
+
+When generating vault content, **always save to the correct folder automatically** — do not just display the output. Use the Write tool to create the file at the canonical path. If the parent folder doesn't exist, create it.
+
+### Routing Rules
+
+| Content Type | Path Pattern | Naming Convention |
+|-------------|-------------|-------------------|
+| **Scene** | `Sessions/Session {N}/Scenes/Scene {NN} - {Title}.md` | Two-digit scene number, title case. Frontmatter: `session`, `scene`, tags `type/scene` |
+| **Entity Card** | `GM AI/Entity Cards/R{N}/{Name} (R{N} {Class}).md` | Rank folder (R1–R5). Class = Minor NPC, Important NPC, Villain, etc. |
+| **Named NPC** (lore page) | `Characters/Named NPCs/{Name}.md` | Title case full name. Tags: `character`, `NPC`, `named` |
+| **Location** | `Locations/{Region}/{Name}.md` | Region subfolder if applicable (e.g., `Sol System/`, `Cere/`). Top-level if no region |
+| **Glossary Entry** | `Glossary/{Term}.md` | Title case term name |
+| **Session Doc** | `Sessions/Session {N}/Session {N} - {Type}.md` | Type = Game Summary, Beats, Guide, Live Dashboard, etc. |
+| **Plot/Situation** | `Plot/Situations/{Name}.md` or `Plot/Subplots/{Name}.md` | Context-dependent |
+| **Rules Reference** | `Rules and Mechanics/{Topic}.md` | Active rules only; never write to `Mechanics/` (legacy) |
+| **PC Character Sheet** | `Characters/Players/{PC Name}/{PC Name} - FATE Character.md` | Match existing folder name |
+| **Drone/Creature** | `Characters/NPCs/Drones and Creatures/{Name}.md` | For non-humanoid entities |
+| **Vehicle** | `Characters/NPCs/Vehicles/{Name}.md` | For ships, mechs, etc. |
+
+### Auto-Save Behavior
+
+- **Always save generated content** to the correct path without being asked. If the user requests a scene, NPC, entity card, or location, write the file after generating it.
+- **Announce the save path** briefly: "Saved to `Sessions/Session 9/Scenes/Scene 03 - The Ambush.md`"
+- **Include proper frontmatter** matching the content type's conventions (tags, aliases, session/scene numbers, rank/class for entities).
+- **Wikilink all proper nouns** in saved content per Conni Mode conventions.
+- **If the session number is ambiguous**, check the most recent session folder or ask.
+- **If a file already exists at that path**, warn before overwriting — offer to update instead.
+
 ## Key Conventions
 
 - **Mechanics subsystems** must include: Trigger, Procedure, Inputs/Outputs, Failure handling, and one runnable example

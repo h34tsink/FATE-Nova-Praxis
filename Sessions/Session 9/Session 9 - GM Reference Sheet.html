@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Session 9 — GM Reference Sheet</title>
+<style>
+  @page { size: letter portrait; margin: 0.28in 0.3in; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 7.5pt;
+    color: #111;
+    background: #fff;
+    width: 7.9in;
+  }
+
+  /* ── HEADER BAR ── */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2.5px solid #111;
+    padding-bottom: 3px;
+    margin-bottom: 5px;
+  }
+  .h-title { font-size: 14pt; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; line-height: 1; }
+  .h-sub   { font-size: 6.5pt; color: #555; letter-spacing: 1px; margin-top: 1px; }
+  .h-right { font-size: 6.5pt; color: #555; text-align: right; line-height: 1.4; }
+
+  /* ── EXPOSURE CLOCK (full-width strip) ── */
+  .clock-strip {
+    display: flex;
+    align-items: stretch;
+    border: 2px solid #111;
+    margin-bottom: 5px;
+  }
+  .clock-label-left {
+    font-size: 6pt;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    padding: 4px 3px;
+    background: #111;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .clock-cells {
+    display: flex;
+    flex: 1;
+  }
+  .clock-cell {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 10px;
+    border-left: 1.5px solid #ccc;
+  }
+  .clock-cell:first-child { border-left: none; }
+  .clock-circle {
+    width: 36px;
+    height: 36px;
+    border: 2.5px solid #111;
+    border-radius: 50%;
+    background: #fff;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .clock-n { font-size: 13pt; font-weight: bold; color: #ddd; }
+  .clock-text { line-height: 1.3; }
+  .clock-text strong { font-size: 7.5pt; display: block; }
+  .clock-text span   { font-size: 6.5pt; color: #555; }
+
+  /* ── TICK RULE ── */
+  .tick-rule {
+    font-size: 6pt;
+    color: #555;
+    text-align: right;
+    padding: 1px 4px 2px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 5px;
+    letter-spacing: 0.3px;
+  }
+
+  /* ── 3-COLUMN BODY ── */
+  .cols3 {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr 1fr;
+    gap: 5px;
+    margin-bottom: 5px;
+  }
+
+  /* ── 2-COLUMN BOTTOM ── */
+  .cols2 {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 5px;
+    margin-bottom: 5px;
+  }
+
+  /* ── PANEL ── */
+  .panel {
+    border: 1.5px solid #111;
+    padding: 4px 5px;
+  }
+  .ptitle {
+    font-size: 6.5pt;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #111;
+    margin-bottom: 4px;
+    padding-bottom: 1px;
+  }
+  .psub {
+    font-size: 6pt;
+    color: #555;
+    margin-bottom: 3px;
+    line-height: 1.4;
+  }
+  .pdivider { border: none; border-top: 1px dashed #bbb; margin: 4px 0; }
+
+  /* ── SCENE QUEUE ── */
+  .scene-list { list-style: none; }
+  .scene-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    margin-bottom: 4px;
+    line-height: 1.25;
+  }
+  .scene-list li:last-child { margin-bottom: 0; }
+  .scheck {
+    width: 13px; height: 13px;
+    border: 1.5px solid #111;
+    flex-shrink: 0;
+    margin-top: 1px;
+    background: #fff;
+  }
+  .sname { font-weight: bold; font-size: 7.5pt; display: block; }
+  .snote { font-size: 6pt; color: #555; }
+
+  /* ── DECISION ROWS ── */
+  .dsect { font-size: 6pt; letter-spacing: 1px; text-transform: uppercase; color: #888; margin: 3px 0 2px; }
+  .drow  { display: flex; align-items: center; gap: 5px; margin-bottom: 3px; }
+  .drow:last-child { margin-bottom: 0; }
+  .dcheck { width: 13px; height: 13px; border: 1.5px solid #111; flex-shrink: 0; background: #fff; }
+  .dlabel { font-size: 7pt; font-weight: bold; }
+  .dnote  { font-size: 6pt; color: #555; margin-left: auto; text-align: right; }
+
+  /* ── MERGE TRACK ── */
+  .merge-boxes {
+    display: flex;
+    gap: 3px;
+    flex-wrap: wrap;
+    margin: 3px 0;
+  }
+  .mbox {
+    width: 18px; height: 18px;
+    border: 1.5px solid #111;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6pt;
+    color: #ccc;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+
+  /* ── NOWAK TRACK ── */
+  .track-row {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    flex-wrap: nowrap;
+    margin: 2px 0;
+  }
+  .tbox {
+    width: 17px; height: 17px;
+    border: 1.5px solid #111;
+    background: #fff;
+    flex-shrink: 0;
+  }
+  .tsep { font-size: 9pt; color: #aaa; line-height: 1; padding: 0 1px; }
+  .tlabel { font-size: 6pt; font-weight: bold; color: #444; margin: 2px 0 1px; }
+
+  /* ── FATE POINTS ── */
+  .fp-table { width: 100%; border-collapse: collapse; }
+  .fp-table th, .fp-table td {
+    border: 1px solid #111;
+    padding: 2px 3px;
+    font-size: 6.5pt;
+    text-align: center;
+  }
+  .fp-table th { background: #eee; font-size: 6pt; letter-spacing: 1px; text-transform: uppercase; }
+  .fp-table td:first-child { text-align: left; font-weight: bold; min-width: 70px; }
+  .dot {
+    display: inline-block;
+    width: 11px; height: 11px;
+    border: 1.5px solid #111;
+    border-radius: 50%;
+    background: #fff;
+    margin: 0 1px;
+    vertical-align: middle;
+  }
+
+  /* ── CONSEQUENCES ── */
+  .con-table { width: 100%; border-collapse: collapse; margin-top: 3px; }
+  .con-table th, .con-table td {
+    border: 1px solid #111;
+    padding: 2px 3px;
+    font-size: 6.5pt;
+  }
+  .con-table th { background: #eee; font-size: 6pt; letter-spacing: 1px; text-transform: uppercase; }
+  .con-table td:first-child { font-weight: bold; white-space: nowrap; }
+  .con-table td:nth-child(2), .con-table td:nth-child(3) { text-align: center; white-space: nowrap; }
+  .con-write { min-width: 80px; height: 16px; }
+
+  /* ── NPC QUICK REF ── */
+  .npc-table { width: 100%; border-collapse: collapse; }
+  .npc-table td {
+    border: 1px solid #ccc;
+    padding: 2px 4px;
+    font-size: 6.5pt;
+    vertical-align: top;
+    line-height: 1.3;
+  }
+  .npc-table tr:last-child td { border-bottom: 1px solid #111; }
+  .npc-name { font-weight: bold; white-space: nowrap; min-width: 72px; }
+  .npc-tok  { font-family: monospace; font-size: 6pt; background: #f5f5f5; padding: 0 3px; border: 1px solid #ddd; white-space: nowrap; }
+  .npc-note { color: #444; }
+
+  /* ── GM NOTES ── */
+  .note-line { border-bottom: 1px solid #bbb; height: 17px; margin-bottom: 3px; }
+  .note-line:last-child { margin-bottom: 0; }
+
+  /* ── FOOTER ── */
+  .footer {
+    border-top: 1px solid #aaa;
+    padding-top: 2px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 6pt;
+    color: #888;
+    letter-spacing: 0.3px;
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div>
+    <div class="h-title">Session 9</div>
+    <div class="h-sub">Cold Start Syndicate · Nova Praxis (FATE)</div>
+  </div>
+  <div class="h-right">
+    Hunt for Valare's fork · Consent vs. coercion<br>
+    Exposure → Civil Unrest → Nowak Race
+  </div>
+</div>
+
+<!-- EXPOSURE CLOCK -->
+<div class="clock-strip">
+  <div class="clock-label-left">Exposure</div>
+  <div class="clock-cells">
+    <div class="clock-cell">
+      <div class="clock-circle"><div class="clock-n">1</div></div>
+      <div class="clock-text"><strong>Rumors Spread</strong><span>PCs are noticed</span></div>
+    </div>
+    <div class="clock-cell">
+      <div class="clock-circle"><div class="clock-n">2</div></div>
+      <div class="clock-text"><strong>Location Narrowed</strong><span>Search tightens</span></div>
+    </div>
+    <div class="clock-cell">
+      <div class="clock-circle"><div class="clock-n">3</div></div>
+      <div class="clock-text"><strong>Agents Move</strong><span>Faction teams deploy</span></div>
+    </div>
+    <div class="clock-cell">
+      <div class="clock-circle"><div class="clock-n">4</div></div>
+      <div class="clock-text"><strong>Intervention</strong><span>Extraction crisis</span></div>
+    </div>
+  </div>
+</div>
+<div class="tick-rule">Tick on: failure · delay · noisy success · coercive tactics · obvious digital search around Valare</div>
+
+<!-- 3-COLUMN MAIN BODY -->
+<div class="cols3">
+
+  <!-- COL 1: SCENE QUEUE + APPROACH -->
+  <div>
+    <div class="panel">
+      <div class="ptitle">▸ Scene Queue</div>
+      <ul class="scene-list">
+        <li><div class="scheck"></div><div><span class="sname">01 — Approach to Cere</span><span class="snote">Pre-dock · comms scan · rival in queue · Kal</span></div></li>
+        <li><div class="scheck"></div><div><span class="sname">02 — Echoes in the Noise</span><span class="snote">Investigate · 1 clue clean / 2 w/ cost</span></div></li>
+        <li><div class="scheck"></div><div><span class="sname">03 — The Place She Hid</span><span class="snote">Race to fork · 1 hazard + 1 human / zone</span></div></li>
+        <li><div class="scheck"></div><div><span class="sname">04 — I Don't Want to Die Again</span><span class="snote">Consent conv. · Extended Action ↓</span></div></li>
+        <li><div class="scheck"></div><div><span class="sname">05 — Consequences</span><span class="snote">Fallout · heat · obligations · Pt3 launch</span></div></li>
+        <li><div class="scheck"></div><div><span class="sname">06 — Civil Unrest / Nowak Race</span><span class="snote">Icarus Hub burning · Sequence track ↓</span></div></li>
+      </ul>
+    </div>
+
+    <div class="panel" style="margin-top:5px;">
+      <div class="ptitle">▦ PC Approach — Valare</div>
+      <div class="drow"><div class="dcheck"></div><div class="dlabel">Respectful / Empathetic</div></div>
+      <div class="drow"><div class="dcheck"></div><div class="dlabel">Manipulative / Transactional</div></div>
+      <div class="drow"><div class="dcheck"></div><div class="dlabel">Coercive / Forced</div></div>
+    </div>
+  </div>
+
+  <!-- COL 2: MERGE + NOWAK -->
+  <div>
+    <div class="panel">
+      <div class="ptitle">◈ Valare Merge — Extended Action</div>
+      <div class="psub">Difficulty: 4 · Mark: 12 · Time/Roll: 10 min</div>
+      <div class="psub" style="font-style:italic;margin-top:-1px;">"This Decision Cannot Be Taken Back"</div>
+      <div class="merge-boxes">
+        <div class="mbox">1</div><div class="mbox">2</div><div class="mbox">3</div><div class="mbox">4</div>
+        <div class="mbox">5</div><div class="mbox">6</div><div class="mbox">7</div><div class="mbox">8</div>
+        <div class="mbox">9</div><div class="mbox">10</div><div class="mbox">11</div><div class="mbox">12</div>
+      </div>
+      <div class="psub" style="margin-top:3px;"><strong>Spin</strong> = mark –1 &nbsp;·&nbsp; <strong>Stall</strong> = fork flees / merge impossible</div>
+      <hr class="pdivider">
+      <div class="dsect">Merge Outcome</div>
+      <div class="drow"><div class="dcheck"></div><div class="dlabel">Willing Merge</div><div class="dnote">Best intel + ally; new obligations</div></div>
+      <div class="drow"><div class="dcheck"></div><div class="dlabel">Refusal</div><div class="dnote">Partial intel; mystery pressure</div></div>
+      <div class="drow"><div class="dcheck"></div><div class="dlabel">Forced Merge</div><div class="dnote">High intel; hostile fallout</div></div>
+    </div>
+
+    <div class="panel" style="margin-top:5px;">
+      <div class="ptitle">⚡ Part 3 — Reaching Nowak</div>
+      <div class="psub">Difficulty: Hard (4) · Round: 10 min · Fail: Nowak dead → Kestrel sends coords</div>
+      <div class="tlabel">Standard — 16 boxes</div>
+      <div class="track-row">
+        <div class="tbox"></div><div class="tbox"></div><div class="tbox"></div><div class="tbox"></div>
+        <div class="tsep">|</div>
+        <div class="tbox"></div><div class="tbox"></div><div class="tbox"></div><div class="tbox"></div>
+        <div class="tsep">|</div>
+        <div class="tbox"></div><div class="tbox"></div><div class="tbox"></div><div class="tbox"></div>
+        <div class="tsep">|</div>
+        <div class="tbox"></div><div class="tbox"></div><div class="tbox"></div><div class="tbox"></div>
+      </div>
+      <div class="tlabel" style="margin-top:5px;">Fast Close — 8 boxes</div>
+      <div class="track-row">
+        <div class="tbox"></div><div class="tbox"></div><div class="tbox"></div><div class="tbox"></div>
+        <div class="tsep">|</div>
+        <div class="tbox"></div><div class="tbox"></div><div class="tbox"></div><div class="tbox"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COL 3: FATE POINTS + CONSEQUENCES -->
+  <div>
+    <div class="panel">
+      <div class="ptitle">◎ Fate Points</div>
+      <div class="psub">Refresh 5 default · Pure state +2 · Resets each session</div>
+      <table class="fp-table">
+        <tr><th>PC</th><th>● ● ● ● ●</th></tr>
+        <tr><td>Aeddarius</td><td><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></td></tr>
+        <tr><td>Azaria</td><td><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></td></tr>
+        <tr><td>Doc Ipsum</td><td><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></td></tr>
+        <tr><td>Grift</td><td><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></td></tr>
+        <tr><td>Grace</td><td><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></td></tr>
+        <tr><td>Kallius</td><td><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></td></tr>
+      </table>
+    </div>
+
+    <div class="panel" style="margin-top:5px;">
+      <div class="ptitle">⬛ Consequences</div>
+      <table class="con-table">
+        <tr><th>Type</th><th>–Str</th><th>Clears</th><th>Aspect</th></tr>
+        <tr><td>Mild</td><td>2</td><td>Scene</td><td class="con-write"></td></tr>
+        <tr><td>Moderate</td><td>4</td><td>Session</td><td class="con-write"></td></tr>
+        <tr><td>Severe</td><td>6</td><td>Arc (P)</td><td class="con-write"></td></tr>
+        <tr><td>Extreme</td><td>8</td><td>Perm.</td><td class="con-write"></td></tr>
+      </table>
+      <div class="psub" style="margin-top:3px;">First invoke on a consequence is <strong>free</strong>. All are compellable Aspects.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- 2-COLUMN BOTTOM: NPC REF + GM NOTES -->
+<div class="cols2">
+
+  <!-- NPC QUICK REF -->
+  <div class="panel">
+    <div class="ptitle">▣ NPC Quick Reference</div>
+    <table class="npc-table">
+      <tr>
+        <td class="npc-name">Valare (Fork)</td>
+        <td><code class="npc-tok">valare-fork</code></td>
+        <td class="npc-note">Traumatized. Refuses merge. Flees if pushed. <em>"I won't die for your timeline."</em></td>
+      </tr>
+      <tr>
+        <td class="npc-name">Seren</td>
+        <td><code class="npc-tok">seren</code></td>
+        <td class="npc-note">Talon contact. Loyalty-gated. Trades leads for non-coercion proof. <em>"Proof first."</em></td>
+      </tr>
+      <tr>
+        <td class="npc-name">Kestrel</td>
+        <td><code class="npc-tok">kestrel</code></td>
+        <td class="npc-note">Kimura operative. Transactional. Moving to erase Nowak. Has an off-ramp if PCs offer one.</td>
+      </tr>
+      <tr>
+        <td class="npc-name">Nowak</td>
+        <td><code class="npc-tok">nowak</code></td>
+        <td class="npc-note">Tsarya exec in survival mode. Access = value. <em>"Secure my extraction, get the chain."</em></td>
+      </tr>
+      <tr>
+        <td class="npc-name">Kal Paddock</td>
+        <td><code class="npc-tok">paddock</code></td>
+        <td class="npc-note">Deepshaft Tavern fixer. Neutral. Info at a price. Warns rivals if PCs are too loud.</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- GM NOTES -->
+  <div class="panel">
+    <div class="ptitle">✎ Live State / Notes</div>
+    <div class="note-line"></div>
+    <div class="note-line"></div>
+    <div class="note-line"></div>
+    <div class="note-line"></div>
+    <div class="note-line"></div>
+    <div class="note-line"></div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <span>Session 9 · Cold Start Syndicate · Nova Praxis (FATE) · 2026</span>
+  <span>Anti-railroad: failure = cost &amp; context change, NOT blocked progress · every scene delivers ≥1 lead</span>
+</div>
+
+</body>
+</html>

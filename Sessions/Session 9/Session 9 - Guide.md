@@ -11,110 +11,227 @@ aliases:
 
 # Session 9: Guide
 
-Use this as the **primary runbook** during play.
+**Primary runbook.** Everything else is reference — this is what you run from.
 
-- Scene framing + clues + compels: [[Session 9 - Scenes and Zones]]
-- Beat-by-beat escalation detail: [[Session 9 - Beats (GM Runtime)]]
-- Part 3 (Nowak / Icarus Hub): [[Session 9 - Part 3 - Civil Unrest - The Nowak Situation]]
-- Valare negotiation references: [[Valare - Negotiation Quick Reference (GM Cheat Sheet)]], [[Valare - What She Knows (Complete Framework)]]
-- At-table command dashboard: [[Session 9 - Ops Index]], [[Session 9 - GM Command Board]]
+---
 
-## Session Intent (30-second brief)
+## Quick Links
 
-- PCs are hunting Valare’s fork under pressure.
-- Every noisy move increases faction attention.
-- The core ethical question is consent vs coercion.
-- The ending pivots into Icarus Hub civil unrest.
+| Doc | Purpose |
+| --- | --- |
+| [[Session 9 - Scenes and Zones]] | Scene framing, zones, clues, compels |
+| [[Session 9 - Beats (GM Runtime)]] | Beat-by-beat escalation detail |
+| [[Session 9 - Part 3 - Civil Unrest - The Nowak Situation]] | Part 3: Nowak race on Icarus Hub |
+| [[Valare - Negotiation Quick Reference (GM Cheat Sheet)]] | Valare stance tracking + response matrix |
+| [[Valare - What She Knows (Complete Framework)]] | Information reveal tiers |
+| [[Session 9 - GM Command Board]] | Live Kanban checklist |
+| [[Session 9 - Print Sheet]] | Laminated dry-erase reference |
 
-## GM Operating Loop (Use Every Scene)
+---
 
-1. **Frame pressure:** What is urgent right now?
-2. **Ask intent:** What exactly are the PCs trying to achieve in this beat?
-3. **Resolve action:** Roll/fiction outcome.
-4. **Apply consequence:** Tick Exposure, add aspect, spend/offer compel, reveal clue.
-5. **Advance position:** Move to next zone/beat with a clear handoff line.
+## Session Intent (30 Seconds)
 
-If energy dips: tick Exposure once and introduce a visible change (tail, comms warning, checkpoint, rival arrival).
+> PCs hunt Valare's fork under time pressure. Every noisy move ticks the Exposure clock. The core ethical question is **consent vs. coercion**. The session ends with a pivot into Icarus Hub civil unrest (Part 3).
 
-## Exposure Clock (Single Source)
+**Estimated Length:** 3–4 hrs (Scenes 1–4 only) | 5–6 hrs (full session with Part 3)
 
-Tick on failures, delays, noisy success, coercive tactics, or obvious digital search patterns around Valare.
+---
 
-1. **Rumors Spread** — PCs are noticed.
-2. **Location Narrowed** — search pattern tightens around fork location.
-3. **Agents Move** — faction teams deploy.
-4. **Intervention** — confrontation/extraction crisis.
+## Party Quick Reference
 
-### Anti-railroad rule
+| PC | Player | Key Role | Top Compel Target |
+| --- | --- | --- | --- |
+| [[Characters/Players/Aeddarius Crucial/Aeddarius Crucial - FATE Character\|Aeddarius]] | Dan | Strategic Commander, Face | The Habit Behind the Composure |
+| [[Characters/Players/Azaria Dawson/Azaria Dawson - FATE Character\|Azaria]] | Christa | Social Face, Infiltrator | Celebrity Status At Any Cost |
+| [[Characters/Players/Dr. Lorem (Doc) Ipsum/Dr. Lorem Ipsum - FATE Character\|Doc]] | Matt | Combat, Pilot, Esper Lord | Fire Still Burns Behind My Eyes |
+| [[Characters/Players/Dustin (Grift) Halloway/Dustin Halloway - FATE Character\|Grift]] | Rob | Hacking, Investigation | Curiosity Kills More Than Cats |
+| [[Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character\|Grace]] | Sara | Drones, Engineering, Recon | Thin Skinned and Trauma-Triggered |
+| [[Characters/Players/Kallius/Kallius - FATE Character\|Kallius]] | James | Mnemonics, Combat | I Know a Truth the Coalition Would Kill to Bury |
 
-- Never block progress completely.
-- Failure changes **cost and context**, not forward motion.
-- Every scene should still deliver at least one actionable lead.
+---
 
-## Scene Flow (Fast Runtime)
+## GM Operating Loop (Every Scene)
+
+```
+1. FRAME PRESSURE  → What is urgent right now?
+2. ASK INTENT      → What exactly are the PCs trying to do?
+3. RESOLVE ACTION   → Roll or fiction outcome
+4. APPLY CONSEQUENCE → Tick Exposure / add aspect / compel / reveal clue
+5. ADVANCE POSITION → Move to next zone/beat with a clear handoff line
+```
+
+**If energy dips:** Tick Exposure once. Introduce a visible change: tail spotted, comms intercept warning, checkpoint ahead, rival arrives in zone.
+
+---
+
+## Exposure Clock
+
+**4-segment clock.** Tick on: failures, delays, noisy success, coercive tactics, digital searches mentioning Valare by name.
+
+| Segment | What Happens | GM Action |
+| --- | --- | --- |
+| **1 — Rumors Spread** | PCs are noticed | A contact warns them; someone follows at distance |
+| **2 — Location Narrowed** | Search pattern tightens | Rival faction appears in same zone; Valare sends warning burst |
+| **3 — Agents Move** | Faction teams deploy | Active pursuit; routes compromised; NPCs go quiet |
+| **4 — Intervention** | Confrontation/extraction crisis | Faction team arrives at Valare's location; forced escalation |
+
+**Tick triggers (examples):**
+- Failed investigation roll in public
+- Loud confrontation in any zone
+- Digital query using Valare's name or sleeve description
+- Spending more than one "shift" in the same zone
+- Coercing an NPC who then reports them
+
+---
+
+## Scene Flow
 
 ### Scene 1 — Echoes in the Noise
 
-Goal: acquire leads without exposing intent.
+**Goal:** Acquire leads without exposing intent.
+**Zones:** Deepshaft Tavern / Core Markets / Shadow Relay Node / Abandoned Mining Access
 
-- Pull from [[Session 9 - Scenes and Zones#Zone Notes — Scene 1]].
-- Award 1 clue on clean success; 2 clues on success-with-cost.
-- If PCs go loud, tick Exposure and show who noticed.
+| Action | Result |
+| --- | --- |
+| Clean success | 1 clue (location, sleeve description, or contact name) |
+| Success with cost | 2 clues + tick Exposure or owe a favor |
+| Failure | False or stale lead + tick Exposure |
+| Going loud | Immediate Exposure tick + show who noticed |
+
+**Key NPCs:** Kal Paddock (docking fixer), Shadow Market runner (competitive)
+**Valare's awareness:** Her savant programs monitor digital searches. Sloppy queries = she knows they're coming.
+
+**Handoff → Scene 2:** *"You have enough to move. Staying helps cover; moving keeps initiative. Which risk?"*
+
+---
 
 ### Scene 2 — The Place She Hid
 
-Goal: reach fork location before rivals.
+**Goal:** Reach fork location before rivals.
+**Zones:** Collapsing Tunnels / Toxic Air Pocket / Scavenger Nest / Hidden Refuge
 
-- Use 1 hazard + 1 human pressure beat per zone at most.
-- At Exposure 2+, add rival team pressure.
-- End with clear safehouse state: clean approach or compromised entry.
+- Use **1 hazard + 1 human pressure** beat per zone (max).
+- At **Exposure 2+**, add rival team pressure.
+- End with clear safehouse state: **clean approach** or **compromised entry**.
 
-### Scene 3 — Consent Conversation
+**Handoff → Scene 3:** *"You found her refuge. Decide your opening tone before anyone reaches for a weapon."*
 
-Goal: determine relationship outcome with Valare.
+---
 
-- Use [[Valare - Negotiation Quick Reference (GM Cheat Sheet)]] for stance tracking.
-- Use [[Valare - What She Knows (Complete Framework)]] for reveal tiering.
-- Keep stakes explicit: identity, trauma, agency, urgency.
+### Scene 3 — I Don't Want to Die Again
 
-### Scene 4 — Fallout and Hook
+**Goal:** Determine relationship outcome with Valare.
+**Zones:** Private Habitat / Mnemonic Projection Space / External Threat Vector
 
-Goal: lock consequences and launch next phase.
+**Extended Action: Convincing Valare to Merge**
+
+| Field | Value |
+| --- | --- |
+| Difficulty | 4 (Moderate) |
+| Total Mark | 12 |
+| Time per Roll | 10 minutes (fiction) |
+| Key Aspect | *This Decision Cannot Be Taken Back* |
+| Spin | Reduce mark by 1 |
+| Stall | Fork flees, breaks down, or merge becomes impossible |
+
+**Valare's Red Lines (trigger escape/fight):**
+- Physical restraint or network lockdown
+- Threatening the mnemonic core
+- Identity dismissal ("just a copy")
+- Authority language or faction offers without consent
+
+**What Makes Her Say Yes:**
+- Genuine respect for her autonomy
+- Addressing her specific fears (death replay, identity loss, technical risk)
+- Giving her control over timing and conditions
+- Personal investment in her wellbeing (not just the mission)
+
+**Reference:** [[Valare - Negotiation Quick Reference (GM Cheat Sheet)]] for stance tracking, [[Valare - What She Knows (Complete Framework)]] for reveal tiers.
+
+**Handoff → Scene 4:** *"The choice is made. Now the galaxy responds to how you made it."*
+
+---
+
+### Scene 4 — Consequences
+
+**Goal:** Lock fallout and launch next phase.
+**Zones:** Observation Deck / Encrypted Comms / Quiet Moment
 
 - Decide who noticed and what story is spreading.
-- Mark lasting obligations/debts/heat.
+- Mark lasting obligations, debts, faction heat.
 - Push directly into Part 3 setup.
+
+**Handoff → Scene 5:** *"Whatever happened with Valare, Icarus is already burning. We cut to transit and first sight of the hub."*
+
+---
 
 ### Scene 5 — Civil Unrest (Part 3)
 
-Goal: race to Nowak during hub chaos.
+**Goal:** Race to Nowak during hub chaos.
+**Run from:** [[Session 9 - Part 3 - Civil Unrest - The Nowak Situation]]
 
-- Run from [[Session 9 - Part 3 - Civil Unrest - The Nowak Situation]].
-- Keep the sequence visible and consequences immediate.
+**Sequence Track (Reaching Nowak):**
 
-## Canonical Part 3 Defaults (Machinations 1.1)
+| Field | Value |
+| --- | --- |
+| Track | `☐☐☐☐ ∣ ☐☐☐☐ ∣ ☐☐☐☐ ∣ ☐☐☐☐` (16 boxes, or 8 for fast close) |
+| Round Time | 10 minutes |
+| Difficulty | Hard (4) |
+| Failure Pivot | Nowak dead; Kestrel sends Opportunity Four coordinates |
 
-- **Sequence:** Reaching Nowak
-- **Goal:** Reach and capture Nowak for interrogation
-- **Track:** `☐☐☐☐ | ☐☐☐☐ | ☐☐☐☐ | ☐☐☐☐`
-- **Round Time:** 10 minutes
-- **Difficulty:** Hard (4)
-- **Failure Pivot:** Nowak is dead before PC contact; Kestrel sends outpost coordinates
+**Scene Aspects (invoke aggressively):**
+- *Icarus Hub in Orbit Around Proch*
+- *Lighthouse Is Here with Extreme Prejudice*
+- *Mesh Instability During Explosions*
+- *Much of the Station Is Damaged*
+- *Reinforcements Are Coming from Proch*
 
-## Outcome Anchor (Use at End of Session)
+**Encounter Palette (drop in as needed):**
 
-- **Willing Merge:** best intel + ally support; new protection obligations.
-- **Refusal:** partial intel; stronger mystery pressure in Part 3.
-- **Forced Merge:** high intel + unstable/hostile relationship fallout.
+| Type | Options |
+| --- | --- |
+| Security | Lighthouse checkpoint sweep / Heavy assault team redeploy / Transit corridor lockout |
+| Environmental | Partial decompression / Fire suppression failure / Power loss in lift segment |
+| Political | Talon cell demands alignment proof / Apostate workers need aid / Dock records show forged PC signatures |
 
-Use transition support note: [[Part 3 Transition - All Valare Outcomes]].
+---
 
-## If the Table Stalls (Emergency Injects)
+## Outcome Anchor (End of Session)
+
+| Outcome | Intel | Relationship | Part 3 Impact |
+| --- | --- | --- | --- |
+| **Willing Merge** | Full (Tier 3) — Chimera confirmed, Kestrel's role, frameup details | Ally with obligations | Fully prepared and informed |
+| **Refusal** | Partial (Tier 1–2) | Distant or absent | Must discover truth through investigation |
+| **Forced Merge** | Full but unstable | Hostile, resentful, unreliable | Prepared but unstable; asset is a liability |
+
+**Transition support:** [[Part 3 Transition - All Valare Outcomes]]
+
+---
+
+## Valare Information Tiers (Quick Reference)
+
+**Tier 1 (shared if trust exists):** Her resurrection, why she refuses to merge, Nowak connection, general hub warning
+
+**Tier 2 (requires negotiation):** Nowak's role in mutiny, Kestrel's suspicious presence, benefactor theories, digital frameup pattern
+
+**Tier 3 (merge only):** Chimera is the benefactor, Chimera's purpose, Kestrel's true role (containment/cleanup), original Valare's death (deliberate betrayal), frameup specifics, Opportunity Four
+
+---
+
+## Emergency Injects (If Table Stalls)
 
 Pick one and continue play immediately:
 
-- Seren provides a constrained lead in exchange for non-coercion assurances.
-- Hidden Refuge route is confirmed through old mining access on Cere.
-- Incoming faction window: agents arrive before two more meaningful actions finish.
+1. **Seren contact:** Provides a constrained lead in exchange for non-coercion assurances.
+2. **Mining access route:** Hidden Refuge path confirmed through old mining access on Cere.
+3. **Faction window:** Agents arrive before two more meaningful actions finish — move or lose initiative.
 
-<!-- conni: streamlined runbook -->
+---
+
+## Anti-Railroad Rule
+
+- Never block progress completely.
+- Failure changes **cost and context**, not forward motion.
+- Every scene delivers at least one actionable lead.
+
+<!-- conni: improved runbook v2 -->
