@@ -7,8 +7,8 @@ tags:
 state: Sleeved
 house: Kimura
 skill-distribution: Expert
-refresh: 3
-fate-points: 2
+refresh: 5
+fate-points: 5
 rep-rating: 3
 high-concept: Black Market Memory Merchant
 physical-stress: 6
@@ -23,8 +23,8 @@ consequences: "Mental Moderate: Anxiety Spiral"
 **State:** [[Glossary/Cybersleeve|Sleeved]] (Delta Cybersleeve)
 **House:** [[Factions/Houses/House Kimura|House Kimura]]
 **Skill Distribution:** Expert
-**Refresh:** 3
-**Fate Points:** 2
+**Refresh:** 5
+**Fate Points:** 5
 **Rep Rating:** 10
 **Rep Bumps:** 10
 

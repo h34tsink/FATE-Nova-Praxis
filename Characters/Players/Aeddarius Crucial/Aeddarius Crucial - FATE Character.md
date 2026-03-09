@@ -8,8 +8,8 @@ tags:
 state: Pure
 house: Dalianis
 skill-distribution: Expert
-refresh: 3
-fate-points: 3
+refresh: 7
+fate-points: 7
 rep-rating: 8
 high-concept: Aesthetic Aristocrat
 physical-stress: 4
@@ -22,8 +22,8 @@ mental-stress: 6
 **State:** [[Glossary/Pure|Pure]]
 **House:** [[Factions/Houses/House Dalianis|House Dalianis]]
 **Skill Distribution:** Expert
-**Refresh:** 3
-**Fate Points:** 3
+**Refresh:** 7
+**Fate Points:** 7
 **Rep Rating:** 8
 **Rep Bumps:** 12
 

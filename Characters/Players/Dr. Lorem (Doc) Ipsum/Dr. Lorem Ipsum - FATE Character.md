@@ -9,8 +9,8 @@ tags:
 state: Sleeved
 house: Silva
 skill-distribution: Expert
-refresh: 3
-fate-points: 3
+refresh: 5
+fate-points: 5
 rep-rating: 8
 high-concept: Synthesized Astronaut, Lord of the Swarm
 physical-stress: 6
@@ -24,8 +24,8 @@ system-stress: 6
 **State:** [[Glossary/Cybersleeve|Sleeved]] (Gamma Biosleeve)
 **House:** [[Factions/Houses/House Silva|House Silva]]
 **Skill Distribution:** Expert
-**Refresh:** 3
-**Fate Points:** 3
+**Refresh:** 5
+**Fate Points:** 5
 **Rep Rating:** 8
 **Rep Bumps:** 12
 

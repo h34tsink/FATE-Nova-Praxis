@@ -8,8 +8,8 @@ tags:
 state: SIM
 house: Kimura
 skill-distribution: Specialist
-refresh: 3
-fate-points: 4
+refresh: 5
+fate-points: 5
 rep-rating: 3
 high-concept: SIM Drone Jock Recluse
 physical-stress: 5
@@ -23,8 +23,8 @@ system-stress: 6
 **State:** [[Glossary/SIM|SIM]]
 **House:** [[Factions/Houses/House Kimura|House Kimura]]
 **Skill Distribution:** Specialist
-**Refresh:** 3
-**Fate Points:** 4
+**Refresh:** 5
+**Fate Points:** 5
 **Rep Rating:** 6
 **Rep Bumps:** 12
 

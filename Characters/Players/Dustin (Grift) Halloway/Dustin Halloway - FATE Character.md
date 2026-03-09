@@ -9,8 +9,8 @@ tags:
 state: Sleeved
 house: Kimura
 skill-distribution: Expert
-refresh: 3
-fate-points: 3
+refresh: 5
+fate-points: 5
 rep-rating: 6
 high-concept: Ghost in the System Seeks Identity
 physical-stress: 5
@@ -24,8 +24,8 @@ system-stress: 6
 **State:** [[Glossary/Cybersleeve|Sleeved]] (Beta Cybersleeve)
 **House:** [[Factions/Houses/House Kimura|House Kimura]]
 **Skill Distribution:** Expert
-**Refresh:** 3
-**Fate Points:** 3
+**Refresh:** 5
+**Fate Points:** 5
 **Rep Rating:** 7
 **Rep Bumps:** 1
 
