@@ -95,7 +95,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "milestone",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -139,8 +139,7 @@
               "title": "Notebook Navigator"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -293,23 +292,25 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "a0680864420eca0e",
+  "active": "8cc94c71b16ef3f5",
   "lastOpenFiles": [
+    "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md",
+    "Rules and Mechanics/Savant Programs - Game Reference.md",
+    "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md.tmp.64748.1773095374299",
+    "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md.tmp.64748.1773095367987",
+    "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md.tmp.64748.1773095362764",
+    "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md.tmp.64748.1773095357767",
+    "Rules and Mechanics/Stunts.md",
     "Character Creation Summary.md",
     "Sessions/Session 6/Summary.md",
     "Sessions/Session 9/Scenes/Scene 01 - Approach to Cere.md",
     "Untitled Kanban.md",
-    "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md",
     "CLAUDE.md.tmp.36228.1773070640945",
     "nova-praxis-character-creator/src/routes/sheet/+page.svelte.tmp.92176.1773031476456",
     "nova-praxis-character-creator/static/test-grace.json",
     "nova-praxis-character-creator/vite.config.js.timestamp-1773030625120-25220f21fe3cc.mjs",
     "nova-praxis-character-creator/src/lib/components/CharacterLoader.svelte.tmp.92176.1773030492655",
     "nova-praxis-character-creator/vite.config.js.timestamp-1773030440675-f13469b4a8fde.mjs",
-    "nova-praxis-character-creator/vite.config.js.timestamp-1773030362918-3e648e52c7fc4.mjs",
-    "nova-praxis-character-creator/vite.config.js.timestamp-1773030338779-528595d92e93a.mjs",
-    "nova-praxis-character-creator/src/lib/components/StepFinalize.svelte",
-    "nova-praxis-character-creator/src/lib/components/StepGear.svelte",
     "nova-praxis-character-creator/node_modules/aria-query/README.md",
     "nova-praxis-character-creator/node_modules/@esbuild/win32-x64/README.md",
     "nova-praxis-character-creator/node_modules/axobject-query/README.md",
@@ -328,9 +329,6 @@
     "nova-praxis-character-creator/node_modules/anymatch/README.md",
     "nova-praxis-character-creator/node_modules/@sveltejs/kit/src/types/synthetic/$lib.md",
     "nova-praxis-character-creator/node_modules/@sveltejs/kit/src/types/synthetic/$env+static+public.md",
-    "nova-praxis-character-creator/node_modules/@sveltejs/kit/src/types/synthetic/$env+static+private.md",
-    "nova-praxis-character-creator/node_modules/@sveltejs/kit/src/types/synthetic/$env+dynamic+public.md",
-    "nova-praxis-character-creator/node_modules/@sveltejs/kit/src/types/synthetic/$env+dynamic+private.md",
     "nova-praxis-character-creator/static/portraits/Kallius.png",
     "nova-praxis-character-creator/static/portraits/Dustin.png",
     "nova-praxis-character-creator/static/portraits/Azaria-Dawson.png",
