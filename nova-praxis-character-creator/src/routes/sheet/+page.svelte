@@ -84,7 +84,61 @@
         </div>
 
         <hr class="sheet-rule" />
-        <!-- remainder of page 1 goes here in later tasks -->
+
+        <!-- MAIN CONTENT + SIDEBAR GRID -->
+        <div class="p1-body">
+            <div class="p1-main">
+
+                <!-- ALLEGIANCE -->
+                <div class="section">
+                    <div class="section-header">Allegiance</div>
+                    <table class="allegiance-table">
+                        <tr>
+                            <td class="al-label">House</td>
+                            <td>{c.houseAffiliation ?? '—'}</td>
+                        </tr>
+                        <tr>
+                            <td class="al-label">Market</td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td class="al-label">Discount</td>
+                            <td>—</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <hr class="sheet-rule" />
+
+                <!-- SKILLS -->
+                <div class="section">
+                    <div class="section-header">Skills</div>
+                    {#each [5, 4, 3, 2, 1] as rank}
+                        {#if Object.entries(c.skills).some(([, v]) => v === rank)}
+                            <div class="skill-rank-row">
+                                <span class="rank-label">Rank {rank}:</span>
+                                <span class="rank-skills">
+                                    {#each Object.entries(c.skills).filter(([, v]) => v === rank) as [name], i}
+                                        {#if rank >= 3}
+                                            <span class="skill-pill">{name.replace(/_/g, ' ')}</span>
+                                        {:else}
+                                            {#if i > 0}<span class="skill-sep"> · </span>{/if}
+                                            {name.replace(/_/g, ' ')}
+                                        {/if}
+                                    {/each}
+                                </span>
+                            </div>
+                        {/if}
+                    {/each}
+                </div>
+
+            </div><!-- /p1-main -->
+
+            <!-- SIDEBAR (stress tracks) — added in next task -->
+            <div class="p1-sidebar">
+                <p style="color:#aaa;font-size:8pt">Stress sidebar — next task</p>
+            </div>
+        </div><!-- /p1-body -->
     </div>
     <div class="sheet sheet-page-2">
         <p style="color:#999">Page 2 — coming in next tasks</p>
@@ -198,6 +252,21 @@
         vertical-align: middle;
         letter-spacing: 0.03em;
     }
+
+    /* ── Body grid ── */
+    .p1-body {
+        display: grid;
+        grid-template-columns: 1fr 160px;
+        gap: 0.75rem;
+    }
+    .section { margin-bottom: 0.5rem; }
+    .allegiance-table { border-collapse: collapse; font-size: 9.5pt; width: 100%; }
+    .allegiance-table td { padding: 1px 8px 1px 0; vertical-align: top; }
+    .al-label { font-weight: 700; color: #333; width: 70px; }
+    .skill-rank-row { display: flex; align-items: baseline; gap: 0.4rem; margin: 2px 0; font-size: 9.5pt; }
+    .rank-label { font-weight: 700; min-width: 52px; color: #333; }
+    .rank-skills { flex: 1; }
+    .skill-sep { color: #888; }
 
     /* ── Header ── */
     .p1-header {
