@@ -32,7 +32,7 @@
     {#if open}
         <div class="loader-body">
             <p class="help">Paste a character JSON below to load it, or click Export to copy the current character.</p>
-            <textarea bind:value={jsonText} rows={12} placeholder='{ "name": "...", ... }'></textarea>
+            <textarea bind:value={jsonText} rows={12} placeholder='Paste character JSON here...'></textarea>
             {#if error}<p class="error">{error}</p>{/if}
             <div class="loader-actions">
                 <button on:click={exportCurrent}>Export Current</button>

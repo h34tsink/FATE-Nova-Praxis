@@ -56,6 +56,18 @@ export interface Character {
 	mentalStress: number;
 }
 
+const STORAGE_KEY = 'nova-praxis-character';
+
+function loadFromStorage(): Character | null {
+	if (typeof localStorage === 'undefined') return null;
+	try {
+		const saved = localStorage.getItem(STORAGE_KEY);
+		return saved ? JSON.parse(saved) : null;
+	} catch {
+		return null;
+	}
+}
+
 function createCharacterStore() {
 	const defaultCharacter: Character = {
 		name: '',
@@ -88,7 +100,15 @@ function createCharacterStore() {
 		mentalStress: 2
 	};
 
-	const { subscribe, set, update } = writable<Character>(defaultCharacter);
+	const initial = loadFromStorage() ?? defaultCharacter;
+	const { subscribe, set, update } = writable<Character>(initial);
+
+	// Persist every change to localStorage
+	subscribe(value => {
+		if (typeof localStorage !== 'undefined') {
+			localStorage.setItem(STORAGE_KEY, JSON.stringify(value));
+		}
+	});
 
 	return {
 		subscribe,
