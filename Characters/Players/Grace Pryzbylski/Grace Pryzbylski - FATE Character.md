@@ -44,15 +44,15 @@ Grace found empowerment as a [[Glossary/SIM|SIM]], discarding the body that caus
 
 ## Aspects
 
-| # | Aspect | Notes |
-| --- | --- | --- |
-| **HC** | **SIM Drone Jock Recluse** | Digital entity, physically absent, operates through drones |
-| 2 | Shield My Few Friends From Everything | Protective of Kallius, the party |
-| 3 | Always Observing, Never Observed | Surveillance specialist; avoids being the focus |
-| 4 | Kallius' Personal Ward | Deep bond; lives in his SIM cell |
-| 5 | Thin Skinned and Trauma-Triggered | Vulnerable to social/mental attacks; compellable in confrontations |
-| 6 | "Dance, Puppets!" — Neural Command Choreographer | Drone mastery, puppeteer savant |
-| 7 | Scopophobia | Fear of being seen; avoids direct observation |
+| # | Aspect | Type | Invoke | Compel |
+| --- | --- | --- | --- | --- |
+| **HC** | **SIM Drone Jock Recluse** | High Concept | Engineering feats, drone ops, digital stealth | No physical body; dependent on mesh/drones |
+| 2 | Shield My Few Friends From Everything | Ambition | Reckless heroics to protect allies; tactical overwatch | Endangers herself for allies; manipulated via threats to friends |
+| 3 | Always Observing, Never Observed | Belief | Surveillance, recon, spotting threats first | Refuses to act directly; paralyzed when forced into the open |
+| 4 | Kallius' Personal Ward | Connection | Coordination with Kallius; access to his resources/SIM cell | Kallius threatened = Grace compromised; codependency |
+| 5 | Thin Skinned and Trauma-Triggered | Disadvantage | Empathy; reads emotional subtext others miss | Crumbles under personal attacks; Taunt/Intimidation vulnerability |
+| 6 | "Dance, Puppets!" — Neural Command Choreographer | Expertise | Drone control, Puppeteer program, multi-drone coordination | Overcommits to drone control; blind to meatspace threats |
+| 7 | Scopophobia | Savant | *(Savant Disadvantage)* Avoids detection; extreme stealth motivation | Fear of being seen; refuses to appear in person; freezes when exposed |
 
 ---
 

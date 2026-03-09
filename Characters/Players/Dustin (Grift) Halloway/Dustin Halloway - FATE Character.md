@@ -41,15 +41,15 @@ He has a complicated relationship with [[Characters/Named NPCs/Briar Blackwood|B
 
 ## Aspects
 
-| # | Aspect | Notes |
-| --- | --- | --- |
-| **HC** | **Ghost in the System Seeks Identity** | Rootless digital soul in a synthetic body |
-| 2 | Truth Hunter in a World of Lies | Investigative drive; can't leave a mystery alone |
-| 3 | Corporate Loyalty Is Programmed Slavery | Anti-authority streak; compellable when dealing with Coalition bureaucracy |
-| 4 | Briar's Favors Always Come with Interest | Entangled with a dangerous contact |
-| 5 | Curiosity Kills More Than Cats | Compulsive investigation; walks into traps |
-| 6 | Digital Locks Are Just Suggestions | Hacker confidence; social engineering expertise |
-| 7 | Craves Sensations My Digital Mind Can't Process | Existential longing; drawn to visceral physical experiences |
+| # | Aspect | Type | Invoke | Compel |
+| --- | --- | --- | --- | --- |
+| **HC** | **Ghost in the System Seeks Identity** | High Concept | Infiltration, social engineering, blending in | Rootless; identity crisis; doesn't belong anywhere |
+| 2 | Truth Hunter in a World of Lies | Ambition | Investigation, uncovering secrets, seeing through deception | Can't let a mystery go; obsessive pursuit of truth endangers the mission |
+| 3 | Corporate Loyalty Is Programmed Slavery | Belief | Resisting authority; rallying others against oppression | Refuses legitimate orders; alienates allies in power structures |
+| 4 | Briar's Favors Always Come with Interest | Connection | Calling in underworld contacts; access to black market intel | Briar calls in debts at the worst moment; dragged into side jobs |
+| 5 | Curiosity Kills More Than Cats | Disadvantage | Noticing details others miss; asking the right question | Walks into obvious traps; investigates when he should run |
+| 6 | Digital Locks Are Just Suggestions | Expertise | Hacking, bypassing security, social engineering tech systems | Overconfident; underestimates physical/analog defenses |
+| 7 | Craves Sensations My Digital Mind Can't Process | Savant | *(Savant Disadvantage)* Empathy with biological beings; understanding physical experience | Lured by physical temptations; distracted by sensory input; existential despair |
 
 ---
 

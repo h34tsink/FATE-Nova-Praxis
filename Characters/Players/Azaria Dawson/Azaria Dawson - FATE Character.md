@@ -43,14 +43,16 @@ Azaria is the party's face: the one who talks her way past security, reads a roo
 
 ## Aspects
 
-| # | Aspect | Notes |
-|---|--------|-------|
-| **HC** | *(Undefined — to be defined)* | Needs a High Concept |
-| 2 | Celebrity Status At Any Cost | Fame-driven; will sacrifice principles for exposure |
-| 3 | *(Belief — to be defined)* | |
-| 4 | *(Connection — to be defined)* | |
-| 5 | *(Disadvantage — to be defined)* | |
-| 6 | *(Expertise — to be defined)* | |
+| # | Aspect | Type | Invoke | Compel |
+| --- | --- | --- | --- | --- |
+| **HC** | *(Undefined — Christa to define)* | High Concept | | |
+| 2 | Celebrity Status At Any Cost | Ambition | Social leverage from fame; +2 Favor tests (Fame stunt) | Does something reckless for exposure; recognized at the wrong time |
+| 3 | *(Belief — Christa to define)* | Belief | | |
+| 4 | *(Connection — Christa to define)* | Connection | | |
+| 5 | *(Disadvantage — Christa to define)* | Disadvantage | | |
+| 6 | *(Expertise — Christa to define)* | Expertise | | |
+
+> **No Savant Disadvantage** — Azaria is not a Savant.
 
 ---
 

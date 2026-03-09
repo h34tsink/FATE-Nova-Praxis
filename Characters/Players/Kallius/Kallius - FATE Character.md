@@ -42,15 +42,15 @@ His downtime is spent researching ways to halt ego fragmentation — a threat th
 
 ## Aspects
 
-| #      | Aspect                                           | Notes                                                            |
-| ------ | ------------------------------------------------ | ---------------------------------------------------------------- |
-| **HC** | **Black Market Memory Merchant**                 | Illegal mnemonic trade; compellable when authorities investigate |
-| 2      | Perfect Neural Resurrection Through Data Mastery | Obsessive pursuit of flawless ego preservation                   |
-| 3      | The Past Is Currency, I'm the Bank               | Transactional worldview; leverage through knowledge              |
-| 4      | My Pure Self Still Calls                         | Internal conflict about augmentation and identity                |
-| 5      | I Know a Truth the Coalition Would Kill to Bury  | Dangerous knowledge; a ticking clock                             |
-| 6      | Mnemonic Savant, Memory Palace Architect         | Expertise in memory structures and neural architecture           |
-| 7      | Virtual or Not, Reality Is the Same to Me        | Comfortable in both physical and virtual spaces                  |
+| # | Aspect | Type | Invoke | Compel |
+| --- | --- | --- | --- | --- |
+| **HC** | **Black Market Memory Merchant** | High Concept | Mnemonic ops, memory trade, underworld contacts | Authorities investigate; clients betray him; illegal work exposed |
+| 2 | Perfect Neural Resurrection Through Data Mastery | Ambition | Ego preservation, resleeving expertise, fragmentation repair | Obsessive perfectionism; risks everything for a breakthrough |
+| 3 | The Past Is Currency, I'm the Bank | Belief | Leverage through knowledge; reading people's histories | Transactional worldview alienates allies; treats relationships as trades |
+| 4 | My Pure Self Still Calls | Connection | Conviction in moments of identity crisis; anchor to original self | Hesitates when augmentation is the answer; guilt over what he's become |
+| 5 | I Know a Truth the Coalition Would Kill to Bury | Disadvantage | Dangerous leverage against powerful enemies | Paranoia; targeted by factions; the truth puts everyone near him at risk |
+| 6 | Mnemonic Savant, Memory Palace Architect | Expertise | Memory editing, neural architecture, data recovery | Overestimates his control; ego fragmentation from overuse |
+| 7 | Virtual or Not, Reality Is the Same to Me | Savant | *(Savant Disadvantage)* Seamless VR/meatspace operation; no lag hesitation | Blurred perception of real vs. virtual; exploitable by illusions/AR attacks |
 
 ---
 
