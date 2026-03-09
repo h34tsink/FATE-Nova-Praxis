@@ -1,5 +1,7 @@
 ---
 redirect: true
+tags:
+  - linker-exclude
 ---
 
 # Black Market

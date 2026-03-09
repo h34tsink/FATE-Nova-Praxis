@@ -25,7 +25,7 @@ mental-stress: 6
 **Refresh:** 3
 **Fate Points:** 3
 **Rep Rating:** 8
-**Rep Bumps:** 0
+**Rep Bumps:** 12
 
 ## Aspects
 
