@@ -6,6 +6,22 @@
     character.subscribe(v => c = v);
 
     function print() { window.print(); }
+
+    function fpSegments(refresh: number) {
+        const cx = 40, cy = 40, r = 34, gap = 3;
+        const segments = [];
+        for (let i = 0; i < refresh; i++) {
+            const startAngle = (i / refresh) * 2 * Math.PI - Math.PI / 2 + (gap / (2 * r));
+            const endAngle = ((i + 1) / refresh) * 2 * Math.PI - Math.PI / 2 - (gap / (2 * r));
+            const x1 = cx + r * Math.cos(startAngle);
+            const y1 = cy + r * Math.sin(startAngle);
+            const x2 = cx + r * Math.cos(endAngle);
+            const y2 = cy + r * Math.sin(endAngle);
+            const large = endAngle - startAngle > Math.PI ? 1 : 0;
+            segments.push(`M ${cx} ${cy} L ${x1} ${y1} A ${r} ${r} 0 ${large} 1 ${x2} ${y2} Z`);
+        }
+        return segments;
+    }
 </script>
 
 <svelte:head>
@@ -19,7 +35,56 @@
 
 <div class="sheet-wrap">
     <div class="sheet sheet-page-1">
-        <p style="color:#999">Page 1 — coming in next tasks</p>
+        <!-- HEADER ROW -->
+        <div class="p1-header">
+            <div class="p1-aspects">
+                <div class="p1-name-row">
+                    <h1 class="char-name">{c.name || 'Character Name'}</h1>
+                    <span class="high-concept">{c.aspects.ambition || ''}</span>
+                </div>
+                <div class="aspect-list">
+                    {#each [
+                        ['AMBITION', c.aspects.ambition],
+                        ['BELIEF', c.aspects.belief],
+                        ['CONNECTION', c.aspects.connection],
+                        ['DISADVANTAGE', c.aspects.disadvantage],
+                        ['EXPERTISE', c.aspects.expertise],
+                        ...(c.savantAspect ? [['SAVANT', c.savantAspect]] : [])
+                    ] as [label, value]}
+                        <div class="aspect-row">
+                            <span class="aspect-label">{label}:</span>
+                            <span class="aspect-value">{value || '—'}</span>
+                        </div>
+                    {/each}
+                </div>
+            </div>
+
+            <div class="p1-fp-block">
+                <svg class="fp-wheel" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                    {#each fpSegments(c.refresh) as d}
+                        <path {d} fill="none" stroke="#2855a0" stroke-width="1.5" />
+                    {/each}
+                    <text x="40" y="45" text-anchor="middle" font-size="20" font-weight="700" fill="#1a2e5a">
+                        {c.refresh}
+                    </text>
+                </svg>
+                <div class="bumps-assets">
+                    Bumps: <strong>{c.repRating ?? 0}</strong>
+                    &nbsp;&nbsp;Assets: <strong>{c.skills['assets'] ?? 0}</strong>
+                </div>
+            </div>
+
+            <div class="p1-portrait">
+                {#if c.portrait}
+                    <img src="/portraits/{c.portrait}" alt="{c.name} portrait" />
+                {:else}
+                    <div class="portrait-placeholder">No portrait</div>
+                {/if}
+            </div>
+        </div>
+
+        <hr class="sheet-rule" />
+        <!-- remainder of page 1 goes here in later tasks -->
     </div>
     <div class="sheet sheet-page-2">
         <p style="color:#999">Page 2 — coming in next tasks</p>
@@ -132,6 +197,62 @@
         margin-left: 4px;
         vertical-align: middle;
         letter-spacing: 0.03em;
+    }
+
+    /* ── Header ── */
+    .p1-header {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        gap: 0.75rem;
+        margin-bottom: 0.4rem;
+    }
+    .char-name {
+        font-size: 22pt;
+        font-weight: 900;
+        color: var(--navy);
+        letter-spacing: -0.02em;
+        line-height: 1;
+    }
+    .high-concept {
+        font-style: italic;
+        font-size: 12pt;
+        color: #444;
+        margin-left: 1rem;
+        align-self: flex-end;
+    }
+    .p1-name-row {
+        display: flex;
+        align-items: baseline;
+        gap: 0.5rem;
+        margin-bottom: 0.4rem;
+        border-bottom: var(--rule);
+        padding-bottom: 4px;
+    }
+    .aspect-row { display: flex; gap: 0.4rem; line-height: 1.55; }
+    .aspect-label { font-weight: 700; color: var(--blue); font-size: 9pt; min-width: 90px; }
+    .aspect-value { font-size: 9.5pt; }
+    .fp-wheel { width: 80px; height: 80px; }
+    .bumps-assets { font-size: 8.5pt; text-align: center; margin-top: 4px; color: #555; }
+    .p1-portrait img {
+        width: 130px;
+        height: 140px;
+        object-fit: cover;
+        border: 1.5px solid #ccc;
+    }
+    .portrait-placeholder {
+        width: 130px;
+        height: 140px;
+        border: 1.5px dashed #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 8pt;
+        color: #aaa;
+    }
+    .sheet-rule {
+        border: none;
+        border-top: var(--rule);
+        margin: 6px 0;
     }
 
     /* ── AR badge ── */
