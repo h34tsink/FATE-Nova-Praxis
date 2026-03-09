@@ -175,4 +175,4 @@ Azaria is the party's face: the one who talks her way past security, reads a roo
 | 4 | — | *Available* | |
 
 > **Budget:** 4 milestones total. 1 spent, 3 remaining.
-> **Next Milestone:** Minor
+> **Next Milestone:** Major

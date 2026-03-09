@@ -61,12 +61,12 @@ Grace found empowerment as a [[Glossary/SIM|SIM]], discarding the body that caus
 | Rank | Skills |
 | --- | --- |
 | +5 Superb | [[Rules and Mechanics/Skills#Engineering, Hardware (H.Eng)\|Engineering Hardware]] |
-| +4 Great | [[Rules and Mechanics/Skills#Engineering, Software (S.Eng)\|Engineering Software]], [[Rules and Mechanics/Skills#Research\|Research]] |
-| +3 Good | [[Rules and Mechanics/Skills#SINC\|SINC]], [[Rules and Mechanics/Skills#Stealth\|Stealth]] |
+| +4 Great | [[Rules and Mechanics/Skills#Engineering, Software (S.Eng)\|Engineering Software]], [[Rules and Mechanics/Skills#SINC\|SINC]] |
+| +3 Good | [[Rules and Mechanics/Skills#Research\|Research]], [[Rules and Mechanics/Skills#Stealth\|Stealth]] |
 | +2 Fair | [[Rules and Mechanics/Skills#Education\|Education]], [[Rules and Mechanics/Skills#Insight\|Insight]], [[Rules and Mechanics/Skills#Mnemonics\|Mnemonics]] |
 | +1 Average | [[Rules and Mechanics/Skills#Guile\|Guile]], [[Rules and Mechanics/Skills#Diplomacy\|Diplomacy]], [[Rules and Mechanics/Skills#Intimidation\|Intimidation]], [[Rules and Mechanics/Skills#Pilot\|Pilot]], [[Rules and Mechanics/Skills#Resolve\|Resolve]], [[Rules and Mechanics/Skills#Networking, House (H.Net)\|House Networking]] |
 
-> Specialist column shape: 1/2/2/3/6. SINC demoted from +4→+3, Mnemonics promoted from +1→+2.
+> Specialist column shape: 1/2/2/3/6. SINC demoted +4→+3 at chargen, then swapped back to +4 (Major Milestone 2); Research dropped to +3. Mnemonics promoted from +1→+2 at chargen.
 
 **Physical Skills (Virtual Avatar):**
 
@@ -86,11 +86,13 @@ Grace found empowerment as a [[Glossary/SIM|SIM]], discarding the body that caus
 | --- | --- |
 | [[Rules and Mechanics/Stunts#Savant\|Savant]] | Grants SINC 1, access to [[Rules and Mechanics/Savant Programs - Game Reference\|Savant Programs]], mandatory Disadvantage aspect (Scopophobia) |
 | [[Rules and Mechanics/Stunts#Skilled\|Skilled]] | +1 to SINC (included in rank above) |
+| [[Rules and Mechanics/Stunts#Drone-Jock\|Drone-Jock]] | Drone Cost –1; two chosen Skills +1 on any drone purchased; drones gain +1 Augmentation Point |
+| [[Rules and Mechanics/Stunts#Specialized Program\|Specialized Program (Puppeteer)]] | +2 bonus on all attempts to execute the Puppeteer program |
 | [[Rules and Mechanics/Stunts#System Slip\|System Slip]] | +2 Stealth vs. detection on host systems; +2 execution difficulty for Savant Programs targeting her |
 
 **SIM State Choice Stunt:** System Slip (from SIM free pick list)
 
-> **[PLAYER DECISION]** Grace has 1 unspent purchased stunt slot. Sara should pick a 3rd purchased stunt. System Slip is the free SIM choice stunt and does not count against purchased limit.
+> **Stunt Slots Used:** Savant (1) + Skilled (2) + Drone-Jock (3) = 3 chargen purchased. Specialized Program acquired via Major Milestone 2. System Slip is the free SIM choice stunt and does not count against the purchased limit.
 
 ---
 
@@ -162,10 +164,9 @@ Grace found empowerment as a [[Glossary/SIM|SIM]], discarding the body that caus
 | # | Type | Spent On | Notes |
 | --- | --- | --- | --- |
 | 1 | Minor | Chargen finalization | SWADE-to-FATE conversion adjustments |
-| 2 | — | *Available* | |
+| 2 | Major | Specialized Program (Puppeteer) stunt + SINC/Research skill swap | +2 on Puppeteer execution; SINC →+4, Research →+3 |
 | 3 | — | *Available* | |
 | 4 | — | *Available* | |
 
-> **Budget:** 4 milestones total. 1 spent, 3 remaining.
-> **Pending:** Sara still has 1 unspent purchased stunt slot (does not require a milestone — chargen allowance).
+> **Budget:** 4 milestones total. 2 spent, 2 remaining.
 > **Next Milestone:** Minor

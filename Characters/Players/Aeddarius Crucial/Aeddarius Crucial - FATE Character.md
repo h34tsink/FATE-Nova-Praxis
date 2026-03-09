@@ -167,4 +167,4 @@ His addiction — substance unspecified, masked by wealth and composure — is t
 | 4 | — | *Available* | |
 
 > **Budget:** 4 milestones total. 1 spent, 3 remaining.
-> **Next Milestone:** Minor
+> **Next Milestone:** Major

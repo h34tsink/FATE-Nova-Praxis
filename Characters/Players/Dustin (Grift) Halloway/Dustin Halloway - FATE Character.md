@@ -87,8 +87,7 @@ He has a complicated relationship with [[Characters/Named NPCs/Briar Blackwood|B
 | Program | Effect |
 | --- | --- |
 | [[Rules and Mechanics/Savant Programs - Game Reference#System Invasion\|System Invasion]] | Breach system security; opposed by target's firewall or SINC |
-
-> Pattern Scan removed — unaccounted program. Re-acquire at next Major Milestone.
+| [[Rules and Mechanics/Savant Programs - Game Reference#Pattern Scan\|Pattern Scan]] | Detect patterns in data, identify encrypted communications, spot anomalies |
 
 ---
 
@@ -176,10 +175,9 @@ He has a complicated relationship with [[Characters/Named NPCs/Briar Blackwood|B
 | # | Type | Spent On | Notes |
 | --- | --- | --- | --- |
 | 1 | Minor | Chargen finalization | SWADE-to-FATE conversion adjustments |
-| 2 | — | *Available* | |
+| 2 | Major | Acquired Pattern Scan | Re-acquired program (was removed as unaccounted) |
 | 3 | — | *Available* | |
 | 4 | — | *Available* | |
 
-> **Budget:** 4 milestones total. 1 spent, 3 remaining.
-> **Queued for next Major:** Re-acquire Pattern Scan (removed — was unaccounted program).
+> **Budget:** 4 milestones total. 2 spent, 2 remaining.
 > **Next Milestone:** Minor

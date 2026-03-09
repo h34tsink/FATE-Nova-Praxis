@@ -192,4 +192,4 @@ Between missions, Doc pursues what he calls "ascension" — a theoretical state 
 | 4 | — | *Available* | |
 
 > **Budget:** 4 milestones total. 1 spent, 3 remaining.
-> **Next Milestone:** Minor
+> **Next Milestone:** Major
