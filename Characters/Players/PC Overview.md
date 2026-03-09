@@ -41,9 +41,9 @@ SORT file.name ASC
 | Rob | [[Characters/Players/Dustin (Grift) Halloway/Dustin Halloway - FATE Character\|Dustin "Grift" Halloway]] | Sleeved | Kimura |
 | Sara | [[Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character\|Grace Pryzbylski]] | SIM | Kimura |
 | James | [[Characters/Players/Kallius/Kallius - FATE Character\|Kallius]] | Sleeved | Kimura |
-| Matt | Dr. Lorem "Doc" Ipsum | — | — |
+| Matt | [[Characters/Players/Dr. Lorem (Doc) Ipsum/Dr. Lorem Ipsum - FATE Character\|Dr. Lorem "Doc" Ipsum]] | Sleeved | Silva |
 
-> **Doc Ipsum** (Matt) still needs a FATE character sheet. No character creator export exists yet.
+> **Doc Ipsum** (Matt) sheet is a SWADE conversion — Matt should verify in the character creator and export a canonical version.
 
 ---
 
@@ -83,10 +83,11 @@ All characters use the **ABCDE Aspect Framework**:
 | Azaria | *TBD* | Celebrity Status At Any Cost | *TBD* | *TBD* | *TBD* | *TBD* | — |
 | Grift | Ghost in the System Seeks Identity | Truth Hunter in a World of Lies | Corporate Loyalty Is Programmed Slavery | Briar's Favors Always Come with Interest | Curiosity Kills More Than Cats | Digital Locks Are Just Suggestions | Craves Sensations My Digital Mind Can't Process |
 | Grace | SIM Drone Jock Recluse | Shield My Few Friends From Everything | Always Observing, Never Observed | Kallius' Personal Ward | Thin Skinned and Trauma-Triggered | "Dance, Puppets!" — Neural Command Choreographer | Scopophobia |
+| Doc | Synthesized Astronaut, Lord of the Swarm | Ascension Lies Between Flesh and Synthetics | A Gentleman's Word Is Absolute, God Is Not | Scion of Silva's Inner Circle | Fire Still Burns Behind My Eyes | One with the Swarm — Millions Move as One | Evolved Beyond the Baseline |
 | Kallius | Black Market Memory Merchant | Perfect Neural Resurrection Through Data Mastery | The Past Is Currency, I'm the Bank | My Pure Self Still Calls | I Know a Truth the Coalition Would Kill to Bury | Mnemonic Savant, Memory Palace Architect | Virtual or Not, Reality Is the Same to Me |
 
 > **Azaria** has 4 undefined aspects — Christa should finalize before Session 10.
-> **Aeddarius** aspects are GM proposals from session evidence — Dan has final approval.
+> **Aeddarius** and **Doc** aspects are GM proposals from session evidence — Dan and Matt have final approval.
 
 ---
 
@@ -122,11 +123,13 @@ SORT file.name ASC
 |------|---------|-----------|
 | **Strategic Commander** | Aeddarius | Kallius |
 | **Social Face** | Azaria | Aeddarius |
-| **Combat (Direct)** | Aeddarius (Ludwig) | Kallius |
+| **Combat (Direct)** | Doc (Esper Swarm) | Aeddarius (Ludwig) |
 | **Combat (Drone)** | Grace | Aeddarius (Ludwig) |
+| **Combat (Ranged)** | Doc (Firearms +4) | Kallius (Firearms +3) |
 | **Hacking / Intrusion** | Grift | Grace |
 | **Mnemonic Ops** | Kallius | Grift |
-| **Engineering** | Grace (Hardware) | Kallius (Software) |
+| **Engineering** | Grace (Hardware) | Doc (Software +4) |
+| **Pilot** | Doc (+4) | Kallius (+2) |
 | **Surveillance / Recon** | Grace | Aeddarius (Perception +4) |
 | **Investigation** | Grift | Kallius |
 
@@ -138,6 +141,7 @@ SORT file.name ASC
 |-----------|---------|------|----------|
 | Aeddarius | No | — | — |
 | Azaria | No | — | — |
+| Doc | Yes | +3 | Esper Lord |
 | Grift | Yes | +3 | System Invasion, Pattern Scan |
 | Grace | Yes | +4 | Puppeteer |
 | Kallius | Yes | +4 | Memory Hack (+2), Access Memory |
@@ -150,7 +154,7 @@ SORT file.name ASC
 |-----------|-------|-----------|
 | Aeddarius Crucial | [[Characters/Players/Aeddarius Crucial/Aeddarius Crucial - FATE Character\|Sheet]] | — |
 | Azaria Dawson | [[Characters/Players/Azaria Dawson/Azaria Dawson - FATE Character\|Sheet]] | [[Characters/Players/Azaria Dawson/Interlude\|Interlude]] |
-| Dr. Lorem "Doc" Ipsum | — *(needs export)* | [[Characters/Players/Dr. Lorem (Doc) Ipsum/Interlude\|Interlude]] |
+| Dr. Lorem "Doc" Ipsum | [[Characters/Players/Dr. Lorem (Doc) Ipsum/Dr. Lorem Ipsum - FATE Character\|Sheet]] | [[Characters/Players/Dr. Lorem (Doc) Ipsum/Interlude\|Interlude]] |
 | Dustin "Grift" Halloway | [[Characters/Players/Dustin (Grift) Halloway/Dustin Halloway - FATE Character\|Sheet]] | [[Characters/Players/Dustin (Grift) Halloway/Interlude\|Interlude]] |
 | Grace Pryzbylski | [[Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character\|Sheet]] | — |
 | Kallius | [[Characters/Players/Kallius/Kallius - FATE Character\|Sheet]] | [[Characters/Players/Kallius/Interlude\|Interlude]] |
@@ -163,6 +167,7 @@ SORT file.name ASC
 |-----------|---------------|
 | Aeddarius | Minor |
 | Azaria | Minor |
+| Doc | Minor |
 | Grift | Minor |
 | Grace | Minor |
 | Kallius | Major |
