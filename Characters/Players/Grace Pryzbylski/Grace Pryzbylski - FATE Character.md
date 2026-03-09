@@ -92,7 +92,7 @@ Grace found empowerment as a [[Glossary/SIM|SIM]], discarding the body that caus
 
 **SIM State Choice Stunt:** System Slip (from SIM free pick list)
 
-> **Stunt Slots Used:** Savant (1) + Skilled (2) + Drone-Jock (3) = 3 chargen purchased. Specialized Program acquired via Major Milestone 2. System Slip is the free SIM choice stunt and does not count against the purchased limit.
+> **Stunt Slots Used:** Savant (1) + Skilled (2) + Drone-Jock (3) = 3 chargen purchased. Specialized Program acquired via Major Milestone 2. Eminent Domain acquired via Major Milestone 4. System Slip is the free SIM choice stunt and does not count against the purchased limit.
 
 ---
 
@@ -101,6 +101,7 @@ Grace found empowerment as a [[Glossary/SIM|SIM]], discarding the body that caus
 | Program | Effect |
 | --- | --- |
 | [[Rules and Mechanics/Savant Programs - Game Reference#Puppeteer\|Puppeteer]] | Possess a drone: +2 Skill bonus, perceive only through drone senses, gain 2 temporary Fate Points for drone Aspects |
+| [[Rules and Mechanics/Savant Programs - Game Reference#Eminent Domain\|Eminent Domain]] | Seize control of computer systems in area (Diff 3+, +3 for heavy security); create Aspects like *Zero-G* or *Lights Out!*; lasts 1 round before security AI shuts you out |
 
 ---
 
@@ -166,7 +167,7 @@ Grace found empowerment as a [[Glossary/SIM|SIM]], discarding the body that caus
 | 1 | Minor | Chargen finalization | SWADE-to-FATE conversion adjustments |
 | 2 | Major | Specialized Program (Puppeteer) stunt + SINC/Research skill swap | +2 on Puppeteer execution; SINC →+4, Research →+3 |
 | 3 | Minor | SINC/Hardware Eng skill swap | SINC +4→+5, Hardware Eng +5→+4 |
-| 4 | — | *Available* | |
+| 4 | Major | Eminent Domain (Savant Program) | Seize control of computer systems; Diff 3+ vs. SINC +5 |
 
-> **Budget:** 4 milestones total. 3 spent, 1 remaining.
-> **Next Milestone:** Major
+> **Budget:** 4 milestones total. 4 spent, 0 remaining.
+> **Next Milestone:** Minor (when budget increases)
