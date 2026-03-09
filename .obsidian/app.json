@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "readableLineLength": true,
+  "readableLineLength": false,
   "useMarkdownLinks": false,
   "pdfExportSettings": {
     "pageSize": "Letter",
