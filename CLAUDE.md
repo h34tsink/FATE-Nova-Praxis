@@ -48,6 +48,8 @@ The `GM AI/` folder contains a complete at-table workflow for Claude Code:
 
 Lore questions should prefer vault canon first, then `pdf_full_extract.txt` and `machinations_full_extract.txt`. Flag uncertainty rather than inventing answers.
 
+Plugin sync after editing `nova-praxis-gm/`: `claude plugin update nova-praxis-gm@nova-praxis-local`
+
 ## Natural-Language NPC Dialogue Mode
 
 When the user asks natural-language questions such as:

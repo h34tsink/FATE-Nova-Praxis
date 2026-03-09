@@ -76,7 +76,8 @@
       "Bash(for d in \"D:/ObsidianVaults/FATE - Nova Praxis/Characters/Players/Aeddarius Crucial\" \"D:/ObsidianVaults/FATE - Nova Praxis/Characters/Players/Azaria Dawson\" \"D:/ObsidianVaults/FATE - Nova Praxis/Characters/Players/Dr. Lorem \\(Doc\\) Ipsum\" \"D:/ObsidianVaults/FATE - Nova Praxis/Characters/Players/Dustin \\(Grift\\) Halloway\" \"D:/ObsidianVaults/FATE - Nova Praxis/Characters/Players/Grace Pryzbylski\" \"D:/ObsidianVaults/FATE - Nova Praxis/Characters/Players/Kallius\")",
       "Bash(do echo \"=== $d ===\")",
       "Bash(python:*)",
-      "Bash(claude plugin:*)"
+      "Bash(claude plugin:*)",
+      "WebSearch"
     ]
   }
 }
