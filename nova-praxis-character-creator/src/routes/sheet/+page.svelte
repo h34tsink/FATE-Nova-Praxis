@@ -82,32 +82,9 @@
             </div>
         </div>
 
-        <hr class="sheet-rule" />
-
         <!-- MAIN CONTENT + SIDEBAR GRID -->
         <div class="p1-body">
             <div class="p1-main">
-
-                <!-- ALLEGIANCE -->
-                <div class="section">
-                    <div class="section-header">Allegiance</div>
-                    <table class="allegiance-table">
-                        <tr>
-                            <td class="al-label">House</td>
-                            <td>{c.houseAffiliation ?? '—'}</td>
-                        </tr>
-                        <tr>
-                            <td class="al-label">Market</td>
-                            <td>—</td>
-                        </tr>
-                        <tr>
-                            <td class="al-label">Discount</td>
-                            <td>—</td>
-                        </tr>
-                    </table>
-                </div>
-
-                <hr class="sheet-rule" />
 
                 <!-- SKILLS -->
                 <div class="section">
@@ -115,15 +92,10 @@
                     {#each [5, 4, 3, 2, 1] as rank}
                         {#if Object.entries(c.skills).some(([, v]) => v === rank)}
                             <div class="skill-rank-row">
-                                <span class="rank-label">Rank {rank}:</span>
+                                <span class="rank-label">{rank}:</span>
                                 <span class="rank-skills">
-                                    {#each Object.entries(c.skills).filter(([, v]) => v === rank) as [name], i}
-                                        {#if rank >= 3}
-                                            <span class="skill-pill">{name.replace(/_/g, ' ')}</span>
-                                        {:else}
-                                            {#if i > 0}<span class="skill-sep"> · </span>{/if}
-                                            {name.replace(/_/g, ' ')}
-                                        {/if}
+                                    {#each Object.entries(c.skills).filter(([, v]) => v === rank) as [name]}
+                                        <span class="skill-pill">{name.replace(/_/g, ' ')}</span>
                                     {/each}
                                 </span>
                             </div>
@@ -352,9 +324,9 @@
         background: var(--pill-bg);
         border: 1px solid #c8cce8;
         border-radius: 3px;
-        padding: 1px 6px;
-        margin: 1px 2px;
-        font-size: 9.5pt;
+        padding: 0px 4px;
+        margin: 1px 1px;
+        font-size: 8pt;
     }
 
     /* ── Gear / type badges ── */
@@ -374,17 +346,13 @@
     /* ── Body grid ── */
     .p1-body {
         display: grid;
-        grid-template-columns: 1fr 160px;
+        grid-template-columns: 1fr 220px;
         gap: 0.75rem;
     }
     .section { margin-bottom: 0.5rem; }
-    .allegiance-table { border-collapse: collapse; font-size: 9.5pt; width: 100%; }
-    .allegiance-table td { padding: 1px 8px 1px 0; vertical-align: top; }
-    .al-label { font-weight: 700; color: #333; width: 70px; }
-    .skill-rank-row { display: flex; align-items: baseline; gap: 0.4rem; margin: 2px 0; font-size: 9.5pt; }
-    .rank-label { font-weight: 700; min-width: 52px; color: #333; }
+    .skill-rank-row { display: flex; align-items: baseline; gap: 0.3rem; margin: 1px 0; font-size: 8pt; }
+    .rank-label { font-weight: 700; min-width: 14px; color: #333; }
     .rank-skills { flex: 1; }
-    .skill-sep { color: #888; }
 
     /* ── Header ── */
     .p1-header {
@@ -421,14 +389,15 @@
     .fp-wheel { width: 80px; height: 80px; }
     .bumps-assets { font-size: 8.5pt; text-align: center; margin-top: 4px; color: #555; }
     .p1-portrait img {
-        width: 130px;
-        height: 140px;
+        width: 220px;
+        height: 220px;
         object-fit: cover;
+        object-position: top;
         border: 1.5px solid #ccc;
     }
     .portrait-placeholder {
-        width: 130px;
-        height: 140px;
+        width: 220px;
+        height: 220px;
         border: 1.5px dashed #ccc;
         display: flex;
         align-items: center;
@@ -465,27 +434,27 @@
     .aug-row { font-size: 9pt; line-height: 1.5; }
 
     /* ── Sidebar stress tracks ── */
-    .p1-sidebar { font-size: 8.5pt; }
-    .stress-track { margin-bottom: 8px; }
+    .p1-sidebar { font-size: 8pt; }
+    .stress-track { margin-bottom: 10px; }
     .stress-track-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 3px;
+        margin-bottom: 4px;
     }
-    .stress-label { font-weight: 700; font-size: 9.5pt; }
+    .stress-label { font-weight: 700; font-size: 9pt; }
     .stress-boxes { display: flex; align-items: center; gap: 2px; }
     .consequence-row {
         display: flex;
-        align-items: baseline;
+        align-items: flex-end;
         gap: 4px;
-        margin: 2px 0;
+        margin: 0 0 6px 0;
+        min-height: 28px;
     }
-    .con-label { color: #555; white-space: nowrap; min-width: 88px; }
+    .con-label { color: #555; white-space: nowrap; min-width: 80px; line-height: 1; padding-bottom: 2px; }
     .con-line {
         flex: 1;
         border-bottom: 1px solid #999;
-        margin-bottom: 2px;
     }
 
     /* ── AR badge ── */

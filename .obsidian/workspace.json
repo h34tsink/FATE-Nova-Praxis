@@ -309,6 +309,7 @@
   },
   "active": "8cc94c71b16ef3f5",
   "lastOpenFiles": [
+    "nova-praxis-character-creator/src/routes/sheet/+page.svelte.tmp.92176.1773031476456",
     "nova-praxis-character-creator/static/test-grace.json",
     "nova-praxis-character-creator/vite.config.js.timestamp-1773030625120-25220f21fe3cc.mjs",
     "nova-praxis-character-creator/src/lib/components/CharacterLoader.svelte.tmp.92176.1773030492655",
@@ -319,7 +320,6 @@
     "nova-praxis-character-creator/src/lib/components/StepGear.svelte",
     "nova-praxis-character-creator/src/lib/components/StepSleeve.svelte",
     "nova-praxis-character-creator/src/lib/components/StepStunts.svelte",
-    "nova-praxis-character-creator/src/lib/components/StepRep.svelte",
     "nova-praxis-character-creator/node_modules/aria-query/README.md",
     "nova-praxis-character-creator/node_modules/@esbuild/win32-x64/README.md",
     "nova-praxis-character-creator/node_modules/axobject-query/README.md",
