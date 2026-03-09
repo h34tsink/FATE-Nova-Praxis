@@ -69,8 +69,7 @@
                     </text>
                 </svg>
                 <div class="bumps-assets">
-                    Bumps: <strong>{c.repRating ?? 0}</strong>
-                    &nbsp;&nbsp;Assets: <strong>{c.skills['assets'] ?? 0}</strong>
+                    Assets: <strong>{c.skills['assets'] ?? 0}</strong>
                 </div>
             </div>
 
@@ -132,11 +131,82 @@
                     {/each}
                 </div>
 
+                <hr class="sheet-rule" />
+
+                <!-- STUNTS -->
+                <div class="section">
+                    <div class="stunts-header-row">
+                        <span class="section-header" style="border:none;padding:0;margin:0">Stunts:</span>
+                        <span class="fp-row">
+                            Fate Points:
+                            {#each Array(c.refresh) as _}
+                                <span class="stress-box"></span>
+                            {/each}
+                            &nbsp;&nbsp;Refresh: <strong>{c.refresh}</strong>
+                        </span>
+                    </div>
+                    {#each c.stunts as stunt}
+                        <div class="stunt-row"><strong>{stunt}</strong></div>
+                    {/each}
+                    {#if c.stunts.length === 0}
+                        <div class="stunt-row" style="color:#aaa">No stunts recorded</div>
+                    {/if}
+                </div>
+
+                <hr class="sheet-rule" />
+
+                <!-- STATE + AUGMENTATIONS -->
+                <div class="state-aug-row">
+                    <div class="state-block">
+                        <div class="section-header">State: {c.characterState?.toUpperCase() ?? '—'}</div>
+                        <div class="state-detail">
+                            <strong>Physical Skills ({c.characterState?.toUpperCase()}):</strong><br/>
+                            Athletics {c.physicalSkills.athletics},
+                            Endurance {c.physicalSkills.endurance},
+                            Perception {c.physicalSkills.perception}
+                        </div>
+                    </div>
+                    <div class="aug-block">
+                        <div class="section-header">Augmentations:</div>
+                        {#if c.sleeve?.augmentations?.length}
+                            {#each c.sleeve.augmentations as aug}
+                                <div class="aug-row">{aug}</div>
+                            {/each}
+                        {:else}
+                            <div style="color:#aaa;font-size:8.5pt">None</div>
+                        {/if}
+                    </div>
+                </div>
+
             </div><!-- /p1-main -->
 
-            <!-- SIDEBAR (stress tracks) — added in next task -->
+            <!-- SIDEBAR: stress tracks -->
             <div class="p1-sidebar">
-                <p style="color:#aaa;font-size:8pt">Stress sidebar — next task</p>
+                {#each [
+                    { label: 'Mental', boxes: c.mentalStress, ar: null },
+                    { label: 'Physical', boxes: c.physicalStress, ar: c.sleeve?.type === 'cybersleeve' ? 1 : null },
+                    ...(c.characterState === 'sim' ? [{ label: 'System', boxes: 5, ar: null }] : [])
+                ] as track}
+                    <div class="stress-track">
+                        <div class="stress-track-header">
+                            <span class="stress-label">{track.label}</span>
+                            <span class="stress-boxes">
+                                {#each Array(track.boxes) as _}
+                                    <span class="stress-box"></span>
+                                {/each}
+                                {#if track.ar}
+                                    <span class="ar-badge">AR +{track.ar}</span>
+                                {/if}
+                            </span>
+                        </div>
+                        {#each [['Mild', '−2'], ['Moderate', '−4'], ['Severe(P)', '−6'], ['Extreme(P)', '−8']] as [name, val]}
+                            <div class="consequence-row">
+                                <span class="con-label">{name} ({val})</span>
+                                <span class="con-line"></span>
+                            </div>
+                        {/each}
+                    </div>
+                {/each}
             </div>
         </div><!-- /p1-body -->
     </div>
@@ -322,6 +392,43 @@
         border: none;
         border-top: var(--rule);
         margin: 6px 0;
+    }
+
+    /* ── Stunts + state ── */
+    .stunts-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 4px;
+    }
+    .fp-row { font-size: 9pt; }
+    .stunt-row { font-size: 9pt; line-height: 1.5; margin: 1px 0; }
+    .state-aug-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 9pt; }
+    .state-detail { margin-top: 3px; }
+    .aug-row { font-size: 9pt; line-height: 1.5; }
+
+    /* ── Sidebar stress tracks ── */
+    .p1-sidebar { font-size: 8.5pt; }
+    .stress-track { margin-bottom: 8px; }
+    .stress-track-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3px;
+    }
+    .stress-label { font-weight: 700; font-size: 9.5pt; }
+    .stress-boxes { display: flex; align-items: center; gap: 2px; }
+    .consequence-row {
+        display: flex;
+        align-items: baseline;
+        gap: 4px;
+        margin: 2px 0;
+    }
+    .con-label { color: #555; white-space: nowrap; min-width: 88px; }
+    .con-line {
+        flex: 1;
+        border-bottom: 1px solid #999;
+        margin-bottom: 2px;
     }
 
     /* ── AR badge ── */
