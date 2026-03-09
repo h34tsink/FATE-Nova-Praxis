@@ -62,10 +62,10 @@ Azaria is the party's face: the one who talks her way past security, reads a roo
 
 | Rank | Skills |
 |------|--------|
-| +4 Great | [[Rules and Mechanics/Skills#Guile\|Guile]], [[Rules and Mechanics/Skills#Diplomacy\|Diplomacy]], [[Rules and Mechanics/Skills#Resolve\|Resolve]] |
-| +3 Good | [[Rules and Mechanics/Skills#Insight\|Insight]], [[Rules and Mechanics/Skills#Stealth\|Stealth]], [[Rules and Mechanics/Skills#Networking, House (H.Net)\|House Networking]] |
+| +4 Great | [[Rules and Mechanics/Skills#Guile\|Guile]], [[Rules and Mechanics/Skills#Diplomacy\|Diplomacy]] (+1 Agent), [[Rules and Mechanics/Skills#Resolve\|Resolve]] |
+| +3 Good | [[Rules and Mechanics/Skills#Insight\|Insight]] (+2 Agent), [[Rules and Mechanics/Skills#Stealth\|Stealth]], [[Rules and Mechanics/Skills#Networking, House (H.Net)\|House Networking]] |
 | +2 Fair | [[Rules and Mechanics/Skills#Assets\|Assets]], [[Rules and Mechanics/Skills#Cohesion\|Cohesion]], [[Rules and Mechanics/Skills#Melee\|Melee]], [[Rules and Mechanics/Skills#Networking, Apostate (A.Net)\|Apostate Networking]] |
-| +1 Average | [[Rules and Mechanics/Skills#Education\|Education]], [[Rules and Mechanics/Skills#Research\|Research]], [[Rules and Mechanics/Skills#Strategy\|Strategy]], [[Rules and Mechanics/Skills#Engineering, Software (S.Eng)\|Engineering Software]], [[Rules and Mechanics/Skills#Intimidation\|Intimidation]], [[Rules and Mechanics/Skills#Pilot\|Pilot]] |
+| +1 Average | [[Rules and Mechanics/Skills#Education\|Education]] (+1 Agent), [[Rules and Mechanics/Skills#Research\|Research]], [[Rules and Mechanics/Skills#Strategy\|Strategy]], [[Rules and Mechanics/Skills#Engineering, Software (S.Eng)\|Engineering Software]], [[Rules and Mechanics/Skills#Intimidation\|Intimidation]], [[Rules and Mechanics/Skills#Pilot\|Pilot]] |
 
 **Physical Skills:**
 

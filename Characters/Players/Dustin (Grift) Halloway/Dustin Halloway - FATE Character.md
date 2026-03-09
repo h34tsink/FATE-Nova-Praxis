@@ -59,7 +59,7 @@ He has a complicated relationship with [[Characters/Named NPCs/Briar Blackwood|B
 | --- | --- |
 | +4 Great | [[Rules and Mechanics/Skills#Networking, House (H.Net)\|House Networking]], [[Rules and Mechanics/Skills#Mnemonics\|Mnemonics]], [[Rules and Mechanics/Skills#Engineering, Software (S.Eng)\|Engineering Software]] |
 | +3 Good | [[Rules and Mechanics/Skills#Education\|Education]], [[Rules and Mechanics/Skills#Cohesion\|Cohesion]], [[Rules and Mechanics/Skills#Guile\|Guile]], [[Rules and Mechanics/Skills#SINC\|SINC]] |
-| +2 Fair | [[Rules and Mechanics/Skills#Research\|Research]], [[Rules and Mechanics/Skills#Engineering, Hardware (H.Eng)\|Engineering Hardware]], [[Rules and Mechanics/Skills#Stealth\|Stealth]], [[Rules and Mechanics/Skills#Insight\|Insight]] |
+| +2 Fair | [[Rules and Mechanics/Skills#Research\|Research]] (+1 Agent), [[Rules and Mechanics/Skills#Engineering, Hardware (H.Eng)\|Engineering Hardware]], [[Rules and Mechanics/Skills#Stealth\|Stealth]], [[Rules and Mechanics/Skills#Insight\|Insight]] (+1 Agent) |
 | +1 Average | [[Rules and Mechanics/Skills#Strategy\|Strategy]], [[Rules and Mechanics/Skills#Resolve\|Resolve]], [[Rules and Mechanics/Skills#Intimidation\|Intimidation]], [[Rules and Mechanics/Skills#Diplomacy\|Diplomacy]], [[Rules and Mechanics/Skills#Melee\|Melee]], [[Rules and Mechanics/Skills#Assets\|Assets]] |
 
 **Physical Skills:**

@@ -79,7 +79,18 @@
       "Bash(claude plugin:*)",
       "WebSearch",
       "Bash(ls -d \"d:/ObsidianVaults/FATE - Nova Praxis/Sessions/Session \"*)",
-      "Bash(sort -t' ' -k2 -n)"
+      "Bash(sort -t' ' -k2 -n)",
+      "Bash(mongosh \"mongodb://192.168.1.104:27017/shadowsynthDB\" --eval \"db.getCollectionNames\\(\\)\" --quiet)",
+      "Bash(mongosh \"mongodb://192.168.1.104:27017\" --eval \"db.adminCommand\\(''listDatabases''\\)\" --quiet)",
+      "Bash(mongosh \"mongodb://192.168.1.104:27017/shadowsynth\" --eval \"db.getCollectionNames\\(\\)\" --quiet)",
+      "Bash(mongosh \"mongodb://192.168.1.104:27017/shadowsynth\" --eval \"db.agents.find\\(\\).toArray\\(\\)\" --quiet)",
+      "Bash(mongosh \"mongodb://192.168.1.104:27017/shadowsynth\" --eval \"db.characters.find\\({}, {name: 1, ''gear.agents'': 1, ''equipment.agents'': 1, agent: 1, agentLevel: 1, agentSkills: 1}\\).toArray\\(\\)\" --quiet)",
+      "Bash(mongosh \"mongodb://192.168.1.104:27017/shadowsynth\" --eval \"db.characters.find\\({name: {''$in'': [''Grace Pryzbilski'', ''Dustin \"\"Grift\"\" Halloway'', ''Kallius'', ''Azaria Dawson'']}}, {name: 1, gear: 1, equipment: 1, agent: 1}\\).toArray\\(\\)\" --quiet)",
+      "Bash(mongosh \"mongodb://192.168.1.104:27017/shadowsynth\" --quiet --eval 'db.characters.find\\({name: {$in: [\"\"Grace Pryzbilski\"\", \"\"Dustin \\\\\"\"Grift\\\\\"\" Halloway\"\", \"\"Kallius\"\", \"\"Azaria Dawson\"\"]}}, {name: 1, gear: 1, equipment: 1, agent: 1}\\).toArray\\(\\)')",
+      "Bash(mongosh \"mongodb://192.168.1.104:27017/shadowsynth\" --quiet --eval 'JSON.stringify\\(db.characters.findOne\\({name: \"\"Grace Pryzbilski\"\"}\\), null, 2\\)')",
+      "Bash(mongosh \"mongodb://192.168.1.104:27017/shadowsynth\" --quiet --eval 'db.characters.find\\({name: {$in: [\"\"Kallius\"\", \"\"Azaria Dawson\"\", \"\"Dustin \\\\\"\"Grift\\\\\"\" Halloway\"\"]}}, {name: 1, startingGear: 1, gearCustomizations: 1}\\).toArray\\(\\)')",
+      "Bash(mongosh \"mongodb://192.168.1.104:27017/shadowsynth\" --quiet --eval 'db.characters.find\\({name: /Dustin|Grift|Aeddarius|Doc|Lorem/i}, {name: 1, startingGear: 1, gearCustomizations: 1}\\).toArray\\(\\)')",
+      "Bash(mongosh \"mongodb://192.168.1.104:27017/shadowsynth\" --quiet --eval 'db.characters.find\\({campaignId: \"\"6940d0c6a1419f86cba60f51\"\"}, {name: 1, startingGear: 1, gearCustomizations: 1}\\).toArray\\(\\)')"
     ]
   }
 }

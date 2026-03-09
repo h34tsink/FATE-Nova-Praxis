@@ -58,8 +58,8 @@ His downtime is spent researching ways to halt ego fragmentation — a threat th
 
 | Rank | Skills |
 |------|--------|
-| +5 Superb | [[Rules and Mechanics/Skills#Mnemonics\|Mnemonics]] |
-| +4 Great | [[Rules and Mechanics/Skills#Engineering, Software (S.Eng)\|Engineering Software]], [[Rules and Mechanics/Skills#Engineering, Hardware (H.Eng)\|Engineering Hardware]], [[Rules and Mechanics/Skills#SINC\|SINC]] |
+| +5 Superb | [[Rules and Mechanics/Skills#Mnemonics\|Mnemonics]] (+1 Agent) |
+| +4 Great | [[Rules and Mechanics/Skills#Engineering, Software (S.Eng)\|Engineering Software]] (+1 Agent), [[Rules and Mechanics/Skills#Engineering, Hardware (H.Eng)\|Engineering Hardware]] (+2 Agent), [[Rules and Mechanics/Skills#SINC\|SINC]] |
 | +3 Good | [[Rules and Mechanics/Skills#Cohesion\|Cohesion]], [[Rules and Mechanics/Skills#Firearms\|Firearms]] |
 | +2 Fair | [[Rules and Mechanics/Skills#Guile\|Guile]], [[Rules and Mechanics/Skills#Resolve\|Resolve]], [[Rules and Mechanics/Skills#Education\|Education]] |
 | +1 Average | [[Rules and Mechanics/Skills#Networking, House (H.Net)\|House Networking]], [[Rules and Mechanics/Skills#Pilot\|Pilot]], [[Rules and Mechanics/Skills#Melee\|Melee]], [[Rules and Mechanics/Skills#Assets\|Assets]], [[Rules and Mechanics/Skills#Research\|Research]], [[Rules and Mechanics/Skills#Strategy\|Strategy]] |

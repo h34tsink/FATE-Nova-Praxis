@@ -139,7 +139,8 @@
               "title": "Notebook Navigator"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -292,26 +293,26 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "8cc94c71b16ef3f5",
+  "active": "a0680864420eca0e",
   "lastOpenFiles": [
-    "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md.tmp.64748.1773096128559",
-    "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md.tmp.64748.1773096122560",
-    "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md.tmp.64748.1773096116998",
-    "Rules and Mechanics/Savant Programs - Game Reference.md",
+    "Characters/Players/Kallius/Kallius - FATE Character.md.tmp.64748.1773097536349",
+    "Characters/Players/Azaria Dawson/Azaria Dawson - FATE Character.md.tmp.64748.1773097530304",
+    "Characters/Players/Azaria Dawson/Azaria Dawson - FATE Character.md.tmp.64748.1773097518972",
+    "Characters/Players/Kallius/Kallius - FATE Character.md.tmp.64748.1773097517443",
+    "Characters/Players/Dustin (Grift) Halloway/Dustin Halloway - FATE Character.md.tmp.64748.1773097515209",
+    "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md.tmp.64748.1773097512526",
+    "Sessions/Session 9/Scenes/Scene 01 - Approach to Cere.md",
+    "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md.tmp.64748.1773097288618",
+    "nova-praxis-character-creator/node_modules/typescript/lib/zh-tw/diagnosticMessages.generated.json",
+    "nova-praxis-character-creator/node_modules/typescript/lib/zh-tw",
+    "nova-praxis-character-creator/node_modules/typescript/lib/ja/diagnosticMessages.generated.json",
+    "nova-praxis-character-creator/node_modules/typescript/lib/ja",
     "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md",
-    "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md.tmp.64748.1773095374299",
-    "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md.tmp.64748.1773095367987",
-    "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md.tmp.64748.1773095362764",
-    "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md.tmp.64748.1773095357767",
+    "Rules and Mechanics/Savant Programs - Game Reference.md",
     "Rules and Mechanics/Stunts.md",
     "Character Creation Summary.md",
     "Sessions/Session 6/Summary.md",
-    "Sessions/Session 9/Scenes/Scene 01 - Approach to Cere.md",
     "Untitled Kanban.md",
-    "CLAUDE.md.tmp.36228.1773070640945",
-    "nova-praxis-character-creator/src/routes/sheet/+page.svelte.tmp.92176.1773031476456",
-    "nova-praxis-character-creator/static/test-grace.json",
-    "nova-praxis-character-creator/vite.config.js.timestamp-1773030625120-25220f21fe3cc.mjs",
     "nova-praxis-character-creator/node_modules/aria-query/README.md",
     "nova-praxis-character-creator/node_modules/@esbuild/win32-x64/README.md",
     "nova-praxis-character-creator/node_modules/axobject-query/README.md",
