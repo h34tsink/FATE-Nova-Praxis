@@ -11,9 +11,9 @@ skill-distribution: Expert
 refresh: 5
 fate-points: 5
 rep-rating: 5
-high-concept: TBD
-physical-stress: 6
-mental-stress: 5
+high-concept: Silva's Favourite Camera-Ready Operative
+physical-stress: 5
+mental-stress: 6
 ---
 
 # Azaria Dawson
@@ -37,7 +37,7 @@ Her recent excitement centers on a Sensi recording project — a deal that could
 
 Azaria is the party's face: the one who talks her way past security, reads a room in seconds, and makes the right impression at the right time. She's also the most physically capable party member in raw biosleeve terms, with a Beta Biosleeve tuned for performance and enhanced with pheromone control.
 
-> **Note:** Several aspects remain undefined. Christa should finalize High Concept and fill in Belief, Connection, Disadvantage, and Expertise aspects.
+> **Note:** Aspects are GM proposals based on session evidence. Christa has final approval and may rename or replace any of them.
 
 ---
 
@@ -45,12 +45,14 @@ Azaria is the party's face: the one who talks her way past security, reads a roo
 
 | # | Aspect | Type | Invoke | Compel |
 | --- | --- | --- | --- | --- |
-| **HC** | *(Undefined — Christa to define)* | High Concept | | |
+| **HC** | Silva's Favourite Camera-Ready Operative | High Concept | Social infiltration, celebrity access, Silva backing | Public profile draws attention; House expects media-friendly results |
 | 2 | Celebrity Status At Any Cost | Ambition | Social leverage from fame; +2 Favor tests (Fame stunt) | Does something reckless for exposure; recognized at the wrong time |
-| 3 | *(Belief — Christa to define)* | Belief | | |
-| 4 | *(Connection — Christa to define)* | Connection | | |
-| 5 | *(Disadvantage — Christa to define)* | Disadvantage | | |
-| 6 | *(Expertise — Christa to define)* | Expertise | | |
+| 3 | Beauty Is the Best Disguise | Belief | Charm disarms suspicion; leveraging appearance to manipulate | Underestimates people who see past the surface; vanity exploited |
+| 4 | Silva Showpiece with Dalianis Strings Attached | Connection | House resources, biotech access, Aeddarius' political cover | Silva demands publicity ops; Dalianis connection creates divided loyalty |
+| 5 | The Real Me Isn't Camera-Ready | Disadvantage | Genuine vulnerability earns trust; empathy from shared insecurity | Crumbles when the mask slips; exploitable impostor syndrome |
+| 6 | Read the Room Before Anyone Else Does | Expertise | Social reads, detecting lies, anticipating betrayal | Over-reads situations; paranoid about hidden motives |
+
+> **[GM PROPOSALS]** — All aspects above are GM drafts based on session evidence. Christa has final approval and may rename or replace any of them.
 
 > **No Savant Disadvantage** — Azaria is not a Savant.
 
@@ -127,8 +129,8 @@ Azaria is the party's face: the one who talks her way past security, reads a roo
 
 | Track | Boxes | Source |
 |-------|-------|-------|
-| Physical | 6 | 2 base + Athletics 3 + Endurance 3 (capped) |
-| Mental | 5 | 2 base + Cohesion 2 + Resolve 4 (capped) |
+| Physical | 5 | 2 base + Endurance 3 |
+| Mental | 6 | 2 base + Resolve 4 |
 
 > No System Stress track — Azaria is not a Savant and has no SINC skill.
 
@@ -160,7 +162,17 @@ Azaria is the party's face: the one who talks her way past security, reads a roo
 - **Compel Targets:** Celebrity Status At Any Cost (does something reckless for exposure), undefined Disadvantage (once defined), Fame (recognized at the wrong time)
 - **Invoke Targets:** Celebrity Status (social leverage), Guile/Diplomacy at +4 (party's strongest face), Pheromone Control (biological NPCs)
 - **Party Role:** Primary face, social infiltrator, intelligence gatherer. Not a combatant by build but has Melee +2 and Athletics +3 for physical situations.
-- **Incomplete Aspects:** 4 of 6 aspects TBD. These should be finalized before Session 10 — they represent significant compel and invoke opportunities being left on the table.
+- **Aspect Status:** All 6 aspects now have GM proposals. Christa should review and finalize before Session 10 — especially HC, Belief, and Disadvantage which drive compels.
 - **Transhumanist Value:** Her sleeves get +2 AP and +1 max augs. If she upgrades to a Gamma or Delta biosleeve, this stunt becomes very powerful.
 
-**Next Milestone:** Minor
+## Milestones
+
+| # | Type | Spent On | Notes |
+| --- | --- | --- | --- |
+| 1 | Minor | Chargen finalization | SWADE-to-FATE conversion adjustments |
+| 2 | — | *Available* | |
+| 3 | — | *Available* | |
+| 4 | — | *Available* | |
+
+> **Budget:** 4 milestones total. 1 spent, 3 remaining.
+> **Next Milestone:** Minor

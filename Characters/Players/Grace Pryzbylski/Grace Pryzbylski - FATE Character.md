@@ -61,10 +61,12 @@ Grace found empowerment as a [[Glossary/SIM|SIM]], discarding the body that caus
 | Rank | Skills |
 | --- | --- |
 | +5 Superb | [[Rules and Mechanics/Skills#Engineering, Hardware (H.Eng)\|Engineering Hardware]] |
-| +4 Great | [[Rules and Mechanics/Skills#Engineering, Software (S.Eng)\|Engineering Software]], [[Rules and Mechanics/Skills#Research\|Research]], [[Rules and Mechanics/Skills#SINC\|SINC]] |
-| +3 Good | [[Rules and Mechanics/Skills#Stealth\|Stealth]] |
-| +2 Fair | [[Rules and Mechanics/Skills#Education\|Education]], [[Rules and Mechanics/Skills#Insight\|Insight]] |
-| +1 Average | [[Rules and Mechanics/Skills#Guile\|Guile]], [[Rules and Mechanics/Skills#Diplomacy\|Diplomacy]], [[Rules and Mechanics/Skills#Intimidation\|Intimidation]], [[Rules and Mechanics/Skills#Mnemonics\|Mnemonics]], [[Rules and Mechanics/Skills#Pilot\|Pilot]], [[Rules and Mechanics/Skills#Resolve\|Resolve]], [[Rules and Mechanics/Skills#Networking, House (H.Net)\|House Networking]] |
+| +4 Great | [[Rules and Mechanics/Skills#Engineering, Software (S.Eng)\|Engineering Software]], [[Rules and Mechanics/Skills#Research\|Research]] |
+| +3 Good | [[Rules and Mechanics/Skills#SINC\|SINC]], [[Rules and Mechanics/Skills#Stealth\|Stealth]] |
+| +2 Fair | [[Rules and Mechanics/Skills#Education\|Education]], [[Rules and Mechanics/Skills#Insight\|Insight]], [[Rules and Mechanics/Skills#Mnemonics\|Mnemonics]] |
+| +1 Average | [[Rules and Mechanics/Skills#Guile\|Guile]], [[Rules and Mechanics/Skills#Diplomacy\|Diplomacy]], [[Rules and Mechanics/Skills#Intimidation\|Intimidation]], [[Rules and Mechanics/Skills#Pilot\|Pilot]], [[Rules and Mechanics/Skills#Resolve\|Resolve]], [[Rules and Mechanics/Skills#Networking, House (H.Net)\|House Networking]] |
+
+> Specialist column shape: 1/2/2/3/6. SINC demoted from +4→+3, Mnemonics promoted from +1→+2.
 
 **Physical Skills (Virtual Avatar):**
 
@@ -88,6 +90,8 @@ Grace found empowerment as a [[Glossary/SIM|SIM]], discarding the body that caus
 
 **SIM State Choice Stunt:** System Slip (from SIM free pick list)
 
+> **[PLAYER DECISION]** Grace has 1 unspent purchased stunt slot. Sara should pick a 3rd purchased stunt. System Slip is the free SIM choice stunt and does not count against purchased limit.
+
 ---
 
 ## Savant Programs
@@ -100,11 +104,7 @@ Grace found empowerment as a [[Glossary/SIM|SIM]], discarding the body that caus
 
 ## Augmentations
 
-| Augmentation | AV | Effect |
-| --- | --- | --- |
-| [[Rules and Mechanics/Augmentations#Adrenal Boost Module\|Adrenal Boost Module]] | 1 | Free Action: +1 Athletics/Melee, +1 stress absorbed by Physical Consequences. Lasts Endurance rounds, then "Got the Shakes" aspect |
-| [[Rules and Mechanics/Augmentations#Beholder Sensory Suite\|Beholder Sensory Suite]] | 2 | 360-degree vision via distributed sensors. Persistent aspect |
-| [[Rules and Mechanics/Augmentations#Auditory Amp Filter\|Auditory Amp and Filter Module]] | 1 | Enhanced hearing with noise filtering. Persistent aspect |
+> **None.** Grace is a SIM — she has no physical body and cannot have augmentations. She interacts with the physical world via drones (Puppeteer program). Drone-mounted sensor equivalents can be acquired at a milestone if Sara wants them.
 
 ---
 
@@ -157,4 +157,15 @@ Grace found empowerment as a [[Glossary/SIM|SIM]], discarding the body that caus
 - **Vulnerability:** SIM lag penalties (-2 same system / -4 out-of-system); dependent on mesh/drone access
 - **Growth Arc:** Recovery from trauma, building confidence, choosing to interact with the physical world
 
-**Next Milestone:** Minor
+## Milestones
+
+| # | Type | Spent On | Notes |
+| --- | --- | --- | --- |
+| 1 | Minor | Chargen finalization | SWADE-to-FATE conversion adjustments |
+| 2 | — | *Available* | |
+| 3 | — | *Available* | |
+| 4 | — | *Available* | |
+
+> **Budget:** 4 milestones total. 1 spent, 3 remaining.
+> **Pending:** Sara still has 1 unspent purchased stunt slot (does not require a milestone — chargen allowance).
+> **Next Milestone:** Minor

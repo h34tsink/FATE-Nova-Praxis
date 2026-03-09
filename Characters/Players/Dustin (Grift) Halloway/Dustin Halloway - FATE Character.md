@@ -14,7 +14,7 @@ fate-points: 5
 rep-rating: 6
 high-concept: Ghost in the System Seeks Identity
 physical-stress: 5
-mental-stress: 5
+mental-stress: 3
 system-stress: 6
 ---
 
@@ -59,16 +59,16 @@ He has a complicated relationship with [[Characters/Named NPCs/Briar Blackwood|B
 | --- | --- |
 | +4 Great | [[Rules and Mechanics/Skills#Networking, House (H.Net)\|House Networking]], [[Rules and Mechanics/Skills#Mnemonics\|Mnemonics]], [[Rules and Mechanics/Skills#Engineering, Software (S.Eng)\|Engineering Software]] |
 | +3 Good | [[Rules and Mechanics/Skills#Education\|Education]], [[Rules and Mechanics/Skills#Cohesion\|Cohesion]], [[Rules and Mechanics/Skills#Guile\|Guile]], [[Rules and Mechanics/Skills#SINC\|SINC]] |
-| +2 Fair | [[Rules and Mechanics/Skills#Research\|Research]], [[Rules and Mechanics/Skills#Engineering, Hardware (H.Eng)\|Engineering Hardware]] |
-| +1 Average | [[Rules and Mechanics/Skills#Strategy\|Strategy]], [[Rules and Mechanics/Skills#Resolve\|Resolve]], [[Rules and Mechanics/Skills#Insight\|Insight]], [[Rules and Mechanics/Skills#Intimidation\|Intimidation]], [[Rules and Mechanics/Skills#Stealth\|Stealth]], [[Rules and Mechanics/Skills#Diplomacy\|Diplomacy]], [[Rules and Mechanics/Skills#Melee\|Melee]], [[Rules and Mechanics/Skills#Assets\|Assets]] |
+| +2 Fair | [[Rules and Mechanics/Skills#Research\|Research]], [[Rules and Mechanics/Skills#Engineering, Hardware (H.Eng)\|Engineering Hardware]], [[Rules and Mechanics/Skills#Stealth\|Stealth]], [[Rules and Mechanics/Skills#Insight\|Insight]] |
+| +1 Average | [[Rules and Mechanics/Skills#Strategy\|Strategy]], [[Rules and Mechanics/Skills#Resolve\|Resolve]], [[Rules and Mechanics/Skills#Intimidation\|Intimidation]], [[Rules and Mechanics/Skills#Diplomacy\|Diplomacy]], [[Rules and Mechanics/Skills#Melee\|Melee]], [[Rules and Mechanics/Skills#Assets\|Assets]] |
 
 **Physical Skills:**
 
 | Skill | Rank | Notes |
 | --- | --- | --- |
 | [[Rules and Mechanics/Skills#Endurance\|Endurance]] | +3 | Primary physical stat |
-| [[Rules and Mechanics/Skills#Athletics\|Athletics]] | +2 | |
-| [[Rules and Mechanics/Skills#Perception\|Perception]] | +1 | |
+| [[Rules and Mechanics/Skills#Athletics\|Athletics]] | +3 | |
+| [[Rules and Mechanics/Skills#Perception\|Perception]] | +2 | |
 
 ---
 
@@ -87,7 +87,8 @@ He has a complicated relationship with [[Characters/Named NPCs/Briar Blackwood|B
 | Program | Effect |
 | --- | --- |
 | [[Rules and Mechanics/Savant Programs - Game Reference#System Invasion\|System Invasion]] | Breach system security; opposed by target's firewall or SINC |
-| [[Rules and Mechanics/Savant Programs - Game Reference#Pattern Scan\|Pattern Scan]] | Detect patterns in data, identify encrypted communications, spot anomalies |
+
+> Pattern Scan removed — unaccounted program. Re-acquire at next Major Milestone.
 
 ---
 
@@ -135,7 +136,7 @@ He has a complicated relationship with [[Characters/Named NPCs/Briar Blackwood|B
 | Track | Boxes | Source |
 | --- | --- | --- |
 | Physical | 5 | 2 base + Endurance 3 |
-| Mental | 5 | 2 base + Cohesion 3 |
+| Mental | 3 | 2 base + Resolve 1 |
 | System | 6 | 2 base + Eng Software 4 |
 
 ---
@@ -170,4 +171,15 @@ He has a complicated relationship with [[Characters/Named NPCs/Briar Blackwood|B
 - **Approach:** Grift prefers social engineering and system intrusion over combat. He'll talk his way in, hack what he can't talk through, and fight only as a last resort.
 - **Growth Arc:** Finding something worth being loyal to; resolving identity crisis between digital existence and physical longing
 
-**Next Milestone:** Minor
+## Milestones
+
+| # | Type | Spent On | Notes |
+| --- | --- | --- | --- |
+| 1 | Minor | Chargen finalization | SWADE-to-FATE conversion adjustments |
+| 2 | — | *Available* | |
+| 3 | — | *Available* | |
+| 4 | — | *Available* | |
+
+> **Budget:** 4 milestones total. 1 spent, 3 remaining.
+> **Queued for next Major:** Re-acquire Pattern Scan (removed — was unaccounted program).
+> **Next Milestone:** Minor

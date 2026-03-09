@@ -14,7 +14,7 @@ fate-points: 5
 rep-rating: 8
 high-concept: Synthesized Astronaut, Lord of the Swarm
 physical-stress: 6
-mental-stress: 5
+mental-stress: 4
 system-stress: 6
 ---
 
@@ -40,7 +40,6 @@ Doc carries the rigid bearing of a man trained for deep-space operations: method
 His deepest vulnerability is fire. Something happened during hibernation — the details are locked behind trauma — but open flame, plasma discharge, and even aggressive thermal signatures trigger a visceral fear response that no amount of Synthesis perfection can override.
 
 Between missions, Doc pursues what he calls "ascension" — a theoretical state where biological and synthetic architectures merge so completely that the distinction becomes meaningless. His interlude writings reference a consciousness named Sid Acharya who experienced the heat death of the universe through digital time dilation — whether this is allegory, recovered memory, or something stranger remains unclear.
-
 
 ---
 
@@ -86,7 +85,6 @@ Between missions, Doc pursues what he calls "ascension" — a theoretical state 
 | [[Rules and Mechanics/Stunts#Savant\|Savant]] | Grants SINC 1, access to [[Rules and Mechanics/Savant Programs - Game Reference\|Savant Programs]], mandatory Disadvantage aspect (Evolved Beyond the Baseline) |
 | [[Rules and Mechanics/Stunts#Skilled\|Skilled]] | +1 to SINC (included in rank above) |
 | [[Rules and Mechanics/Stunts#Licensed\|Licensed]] | Can purchase restricted equipment using Rep-Rating instead of Assets |
-| [[Rules and Mechanics/Stunts#Reputable\|Reputable]] | +2 Rep-Rating *(already included in 8)* |
 
 ---
 
@@ -144,7 +142,7 @@ Between missions, Doc pursues what he calls "ascension" — a theoretical state 
 | Track | Boxes | Source |
 | --- | --- | --- |
 | Physical | 6 | 2 base + Endurance 4 |
-| Mental | 5 | 2 base + Resolve 2 + Cohesion 1 |
+| Mental | 4 | 2 base + Resolve 2 |
 | System | 6 | 2 base + Eng Software 4 |
 
 ---
@@ -184,4 +182,14 @@ Between missions, Doc pursues what he calls "ascension" — a theoretical state 
 
 > **Note:** This sheet was converted from the SWADE-era character. Matt should verify in the character creator and export a canonical version. Aspects are GM proposals based on session evidence and SWADE hindrances — Matt has final approval.
 
-**Next Milestone:** Minor
+## Milestones
+
+| # | Type | Spent On | Notes |
+| --- | --- | --- | --- |
+| 1 | Minor | Chargen finalization | SWADE-to-FATE conversion adjustments |
+| 2 | — | *Available* | |
+| 3 | — | *Available* | |
+| 4 | — | *Available* | |
+
+> **Budget:** 4 milestones total. 1 spent, 3 remaining.
+> **Next Milestone:** Minor

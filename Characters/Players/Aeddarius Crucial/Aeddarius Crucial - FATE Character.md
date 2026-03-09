@@ -49,7 +49,7 @@ His addiction — substance unspecified, masked by wealth and composure — is t
 | 4 | Newly Minted Lord with Old Debts | Connection | House resources, political access, calling in favors | House demands loyalty missions; political rivals exploit inexperience |
 | 5 | The Habit Behind the Composure | Disadvantage | Calm under fire (medicated); maintaining social mask | Withdrawal in the field; supply cut off; secret discovered |
 | 6 | Always Challenges the Strongest Foe | Expertise | Courage against impossible odds; refusing to back down | Reckless escalation; ignores tactical retreats; endangers allies |
-| 7 | Ludwig Speaks for Me When Diplomacy Fails | Free | Combat via drone proxy; interrogation; intimidation | Ludwig damaged/compromised; reliance on a machine contradicts Pure ideals |
+| 7 | Ludwig Speaks for Me When Diplomacy Fails | Physical Trait | Combat via drone proxy; interrogation; intimidation | Ludwig damaged/compromised; reliance on a machine contradicts Pure ideals |
 
 > **No Savant Disadvantage** — Aeddarius is not a Savant.
 
@@ -60,7 +60,7 @@ His addiction — substance unspecified, masked by wealth and composure — is t
 | Rank | Skills |
 | --- | --- |
 | +4 Great | [[Rules and Mechanics/Skills#Education\|Education]], [[Rules and Mechanics/Skills#Networking, House (H.Net)\|House Networking]], [[Rules and Mechanics/Skills#Strategy\|Strategy]] |
-| +3 Good | [[Rules and Mechanics/Skills#Diplomacy\|Diplomacy]], [[Rules and Mechanics/Skills#Insight\|Insight]], [[Rules and Mechanics/Skills#Resolve\|Resolve]] |
+| +3 Good | [[Rules and Mechanics/Skills#Diplomacy\|Diplomacy]], [[Rules and Mechanics/Skills#Insight\|Insight]], [[Rules and Mechanics/Skills#Resolve\|Resolve]] *(+4 effective — Pure +1 bonus)* |
 | +2 Fair | [[Rules and Mechanics/Skills#Firearms\|Firearms]], [[Rules and Mechanics/Skills#Pilot\|Pilot]], [[Rules and Mechanics/Skills#Guile\|Guile]], [[Rules and Mechanics/Skills#Intimidation\|Intimidation]] |
 | +1 Average | [[Rules and Mechanics/Skills#Assets\|Assets]], [[Rules and Mechanics/Skills#Cohesion\|Cohesion]], [[Rules and Mechanics/Skills#Engineering, Hardware (H.Eng)\|Engineering Hardware]], [[Rules and Mechanics/Skills#Melee\|Melee]], [[Rules and Mechanics/Skills#Research\|Research]], [[Rules and Mechanics/Skills#Stealth\|Stealth]] |
 
@@ -117,7 +117,7 @@ His addiction — substance unspecified, masked by wealth and composure — is t
 | Track | Boxes | Source |
 | --- | --- | --- |
 | Physical | 4 | 2 base + Endurance 2 |
-| Mental | 6 | 2 base + Resolve 3 + Cohesion 1 |
+| Mental | 6 | 2 base + Resolve 4 (Pure +1 bonus) |
 
 > No System Stress track — Aeddarius is not a Savant and has no SINC skill.
 
@@ -157,4 +157,14 @@ His addiction — substance unspecified, masked by wealth and composure — is t
 
 > **Note:** This sheet was converted from the SWADE-era character. Dan should verify in the character creator and export a canonical version. Aspects are GM proposals based on session evidence — Dan has final approval.
 
-**Next Milestone:** Minor
+## Milestones
+
+| # | Type | Spent On | Notes |
+| --- | --- | --- | --- |
+| 1 | Minor | Chargen finalization | SWADE-to-FATE conversion adjustments |
+| 2 | — | *Available* | |
+| 3 | — | *Available* | |
+| 4 | — | *Available* | |
+
+> **Budget:** 4 milestones total. 1 spent, 3 remaining.
+> **Next Milestone:** Minor
