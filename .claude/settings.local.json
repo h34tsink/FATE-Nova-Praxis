@@ -77,7 +77,9 @@
       "Bash(do echo \"=== $d ===\")",
       "Bash(python:*)",
       "Bash(claude plugin:*)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(ls -d \"d:/ObsidianVaults/FATE - Nova Praxis/Sessions/Session \"*)",
+      "Bash(sort -t' ' -k2 -n)"
     ]
   }
 }

@@ -39,5 +39,6 @@
   "obsidian-tasks-plugin",
   "obsidian-kanban",
   "obsidian-mind-map",
-  "note-toolbar"
+  "note-toolbar",
+  "terminal"
 ]
