@@ -29,13 +29,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Characters/Players/Dr. Lorem (Doc) Ipsum/Dr. Lorem Ipsum - FATE Character.md",
-                "mode": "preview",
+                "file": "Characters/Players/PC Overview.md",
+                "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Dr. Lorem Ipsum - FATE Character"
+              "title": "PC Overview"
             }
           },
           {
@@ -69,7 +69,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       },
       {
         "id": "697123d5b31f7bf1",
@@ -150,8 +150,8 @@
             "state": {
               "type": "notebook-navigator",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "notebook-navigator"
+              "icon": "notebook-navigator",
+              "title": "Notebook Navigator"
             }
           }
         ],
@@ -159,7 +159,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 318.5
+    "width": 321.5
   },
   "right": {
     "id": "2808606aa7204ff9",
@@ -307,11 +307,18 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "8cc94c71b16ef3f5",
+  "active": "a0680864420eca0e",
   "lastOpenFiles": [
-    "Characters/Players/Dustin (Grift) Halloway/Dustin Halloway - FATE Character.md",
+    "Characters/Players/Kallius/Kallius - FATE Character.md",
+    "Characters/Players/PC Overview.md",
+    "Characters/Index.md",
+    "Characters/Players/Grace Pryzbylski/Background.md",
+    "Characters/Players/Grace Pryzbylski/NPC Ally.md",
+    "Characters/Players/Azaria Dawson/Azaria Dawson - FATE Character.md",
     "Characters/Players/Dr. Lorem (Doc) Ipsum/Dr. Lorem Ipsum - FATE Character.md",
     "Characters/Players/Aeddarius Crucial/Aeddarius Crucial - FATE Character.md",
+    "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md",
+    "Characters/Players/Dustin (Grift) Halloway/Dustin Halloway - FATE Character.md",
     "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md.tmp.59560.1773018763589",
     "Characters/Players/Dr. Lorem (Doc) Ipsum/Dr. Lorem Ipsum - FATE Character.md.tmp.59560.1773018762331",
     "Characters/Players/Dustin (Grift) Halloway/Dustin Halloway - FATE Character.md.tmp.59560.1773018761494",
@@ -328,22 +335,16 @@
     "Sessions/Session 9/Session 9 - Scenes and Zones.md",
     "Sessions/Session 9/Valare - Negotiation Quick Reference (GM Cheat Sheet).md",
     "Sessions/Session 9/Session 9 - Live Dashboard.md",
-    "Characters/Players/Azaria Dawson/Azaria Dawson - FATE Character.md",
-    "Characters/Players/PC Overview.md",
-    "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md",
     "Templates/FATE Character Template.md",
     "Mechanics/Skills.md",
     "Rules and Mechanics/Savant Programs - Game Reference.md",
     "Characters/Players/Dr. Lorem (Doc) Ipsum/Interlude.md",
-    "Characters/Players/Kallius/Kallius - FATE Character.md",
     "Rules and Mechanics/Augmentations.md",
     "Factions/Hidden Agendas/Black Market.md",
     "Rules and Mechanics/Stunts.md",
     "Vehicles/drones.md",
     "Archive/SWADE Character Sheets/James - FATE Character (SWADE).md",
     "Archive/SWADE Character Sheets/Sara - FATE Character (SWADE).md",
-    "Archive/SWADE Character Sheets/Rob - FATE Character (SWADE).md",
-    "Archive/SWADE Character Sheets/Matt - FATE Character (SWADE).md",
     "_Assets/Infographics/Valare_Fork_Portrait.png",
     "_Assets/Infographics/Valare_Integrated_Portrait.png",
     "_Assets/Infographics/Chimera_Portrait.png",

@@ -41,6 +41,7 @@ His deepest vulnerability is fire. Something happened during hibernation — the
 
 Between missions, Doc pursues what he calls "ascension" — a theoretical state where biological and synthetic architectures merge so completely that the distinction becomes meaningless. His interlude writings reference a consciousness named Sid Acharya who experienced the heat death of the universe through digital time dilation — whether this is allegory, recovered memory, or something stranger remains unclear.
 
+
 ---
 
 ## Aspects
