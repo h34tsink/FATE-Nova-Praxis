@@ -140,18 +140,53 @@ if ($needsEnable) {
     Write-Host "[OK] Enabled nova-praxis-gm in settings.json"
 }
 
-# Step 6: Install plugin via Claude CLI
+# Step 6: Install plugin directly into cache (bypasses marketplace discovery)
 Write-Host ""
-Write-Host "Running: claude plugin install nova-praxis-gm@nova-praxis-local"
-Write-Host ""
+$CacheDir = Join-Path $PluginsDir 'cache\nova-praxis-local\nova-praxis-gm\1.0.0'
+if (-not (Test-Path $CacheDir)) {
+    New-Item -ItemType Directory -Path $CacheDir -Force | Out-Null
+}
 
-try {
-    & claude plugin install nova-praxis-gm@nova-praxis-local
-    Write-Host ""
-    Write-Host "[OK] Plugin installed successfully"
-} catch {
-    Write-Host "[!!] Plugin install command failed. You may need to run manually:"
-    Write-Host "     claude plugin install nova-praxis-gm@nova-praxis-local"
+foreach ($folder in @('commands', 'skills', 'agents')) {
+    $src = Join-Path $PluginSource $folder
+    $dst = Join-Path $CacheDir $folder
+    if (Test-Path $src) {
+        if (Test-Path $dst) { Remove-Item $dst -Recurse -Force }
+        Copy-Item $src $dst -Recurse
+    }
+}
+
+$pluginJsonSrc = Join-Path $PluginSource 'plugin.json'
+if (Test-Path $pluginJsonSrc) {
+    Copy-Item $pluginJsonSrc (Join-Path $CacheDir 'plugin.json') -Force
+}
+Write-Host "[OK] Plugin files copied to cache at $CacheDir"
+
+# Step 7: Register in installed_plugins.json
+$InstalledFile = Join-Path $PluginsDir 'installed_plugins.json'
+$now = (Get-Date).ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ss.fffZ')
+
+if (Test-Path $InstalledFile) {
+    $registry = Get-Content $InstalledFile -Raw | ConvertFrom-Json
+} else {
+    $registry = [PSCustomObject]@{ version = 2; plugins = [PSCustomObject]@{} }
+}
+
+if (-not $registry.plugins.PSObject.Properties['nova-praxis-gm@nova-praxis-local']) {
+    $entry = @(
+        [PSCustomObject]@{
+            scope       = 'user'
+            installPath = $CacheDir
+            version     = '1.0.0'
+            installedAt = $now
+            lastUpdated = $now
+        }
+    )
+    $registry.plugins | Add-Member -NotePropertyName 'nova-praxis-gm@nova-praxis-local' -NotePropertyValue $entry
+    $registry | ConvertTo-Json -Depth 10 | Set-Content $InstalledFile -Encoding UTF8
+    Write-Host "[OK] Plugin registered in installed_plugins.json"
+} else {
+    Write-Host "[--] Plugin already registered in installed_plugins.json"
 }
 
 Write-Host ""
