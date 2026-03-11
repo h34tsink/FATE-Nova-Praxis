@@ -38,7 +38,34 @@ if (-not (Test-Path $MarketPlugins)) {
     Write-Host "[--] Local marketplace already exists"
 }
 
-# Step 2: Create README if missing
+# Step 2: Create marketplace manifest (.claude-plugin/marketplace.json)
+$ManifestDir  = Join-Path $MarketDir '.claude-plugin'
+$ManifestFile = Join-Path $ManifestDir 'marketplace.json'
+if (-not (Test-Path $ManifestFile) -or $Force) {
+    if (-not (Test-Path $ManifestDir)) {
+        New-Item -ItemType Directory -Path $ManifestDir -Force | Out-Null
+    }
+    $manifest = @{
+        name        = 'nova-praxis-local'
+        description = 'Local plugins for Nova Praxis TTRPG campaign'
+        owner       = @{ name = 'Sean'; email = 'local@localhost' }
+        plugins     = @(
+            @{
+                name        = 'nova-praxis-gm'
+                description = 'GM cockpit for running Nova Praxis TTRPG sessions'
+                version     = '1.0.0'
+                source      = './plugins/nova-praxis-gm'
+                category    = 'productivity'
+            }
+        )
+    }
+    $manifest | ConvertTo-Json -Depth 5 | Set-Content $ManifestFile -Encoding UTF8
+    Write-Host "[OK] Created marketplace manifest at $ManifestFile"
+} else {
+    Write-Host "[--] Marketplace manifest already exists"
+}
+
+# Step 2b: Create README if missing
 $ReadmePath = Join-Path $MarketDir 'README.md'
 if (-not (Test-Path $ReadmePath)) {
     Set-Content -Path $ReadmePath -Value 'Local plugin marketplace for Nova Praxis'
