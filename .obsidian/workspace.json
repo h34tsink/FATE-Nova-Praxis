@@ -295,6 +295,8 @@
   },
   "active": "e8f98fa1b1179ea2",
   "lastOpenFiles": [
+    "Start-GM.ps1",
+    "Start-GM.ps1.tmp.64748.1773192487394",
     "_Assets/Scripts/Setup-GMPlugin.ps1",
     "_Assets/Scripts/Setup-GMPlugin.ps1.tmp.64748.1773191867494",
     "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md",
@@ -306,8 +308,6 @@
     "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md.tmp.64748.1773097512526",
     "Sessions/Session 9/Scenes/Scene 01 - Approach to Cere.md",
     "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md.tmp.64748.1773097288618",
-    "nova-praxis-character-creator/node_modules/typescript/lib/zh-tw/diagnosticMessages.generated.json",
-    "nova-praxis-character-creator/node_modules/typescript/lib/zh-tw",
     "Rules and Mechanics/Savant Programs - Game Reference.md",
     "Rules and Mechanics/Stunts.md",
     "Character Creation Summary.md",
