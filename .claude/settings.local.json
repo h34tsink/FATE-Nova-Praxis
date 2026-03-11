@@ -94,7 +94,9 @@
       "Bash(where claude:*)",
       "Bash(git pull:*)",
       "Bash(git stash:*)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "Bash(ls -d \"C:/ObsidianVaults/FATE-Nova-Praxis/Sessions/Session \"* 2>/dev/null | sort -t' ' -k2 -n | tail -5)",
+      "Bash(ls -la /c/ObsidianVaults/FATE-Nova-Praxis/Locations/Cere*)"
     ]
   }
 }
