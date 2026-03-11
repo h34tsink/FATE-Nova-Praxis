@@ -11,7 +11,7 @@
   "baseFontSizeAction": true,
   "interfaceFontFamily": "Vault Cascadia Code NF",
   "monospaceFontFamily": "Vault Cascadia Code NF Mono",
-  "baseFontSize": 15,
+  "baseFontSize": 14,
   "theme": "obsidian",
   "textFontFamily": "Vault Cascadia Code NF"
 }

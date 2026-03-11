@@ -90,7 +90,11 @@
       "Bash(mongosh \"mongodb://192.168.1.104:27017/shadowsynth\" --quiet --eval 'JSON.stringify\\(db.characters.findOne\\({name: \"\"Grace Pryzbilski\"\"}\\), null, 2\\)')",
       "Bash(mongosh \"mongodb://192.168.1.104:27017/shadowsynth\" --quiet --eval 'db.characters.find\\({name: {$in: [\"\"Kallius\"\", \"\"Azaria Dawson\"\", \"\"Dustin \\\\\"\"Grift\\\\\"\" Halloway\"\"]}}, {name: 1, startingGear: 1, gearCustomizations: 1}\\).toArray\\(\\)')",
       "Bash(mongosh \"mongodb://192.168.1.104:27017/shadowsynth\" --quiet --eval 'db.characters.find\\({name: /Dustin|Grift|Aeddarius|Doc|Lorem/i}, {name: 1, startingGear: 1, gearCustomizations: 1}\\).toArray\\(\\)')",
-      "Bash(mongosh \"mongodb://192.168.1.104:27017/shadowsynth\" --quiet --eval 'db.characters.find\\({campaignId: \"\"6940d0c6a1419f86cba60f51\"\"}, {name: 1, startingGear: 1, gearCustomizations: 1}\\).toArray\\(\\)')"
+      "Bash(mongosh \"mongodb://192.168.1.104:27017/shadowsynth\" --quiet --eval 'db.characters.find\\({campaignId: \"\"6940d0c6a1419f86cba60f51\"\"}, {name: 1, startingGear: 1, gearCustomizations: 1}\\).toArray\\(\\)')",
+      "Bash(where claude:*)",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)",
+      "Bash(git checkout:*)"
     ]
   }
 }

@@ -54,7 +54,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       },
       {
         "id": "697123d5b31f7bf1",
@@ -144,7 +144,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 321.5
+    "width": 321.5,
+    "collapsed": true
   },
   "right": {
     "id": "2808606aa7204ff9",
@@ -208,8 +209,8 @@
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {},
-              "icon": "spreadsheet",
-              "title": "Advanced Tables"
+              "icon": "lucide-ghost",
+              "title": "advanced-tables-toolbar"
             }
           },
           {
@@ -253,8 +254,8 @@
             "state": {
               "type": "dice-view",
               "state": {},
-              "icon": "dice",
-              "title": "3D Dice"
+              "icon": "lucide-ghost",
+              "title": "dice-view"
             }
           }
         ],
@@ -267,6 +268,10 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "print:Print note": false,
+      "darlal-switcher-plus:Open in Headings Mode": false,
+      "darlal-switcher-plus:Open Symbols for the active editor": false,
+      "obsidian-kanban:Create new board": false,
       "bases:Create new base": true,
       "markdown-importer:Open format converter": true,
       "switcher:Open quick switcher": true,
@@ -285,18 +290,12 @@
       "obsidian-dice-box-plugin:Open Dice Box": false,
       "system3-relay:Relay": false,
       "obsidian-git:Open Git source control": false,
-      "templater-obsidian:Templater": false,
-      "print:Print note": false,
-      "darlal-switcher-plus:Open in Headings Mode": false,
-      "darlal-switcher-plus:Open Symbols for the active editor": false,
-      "obsidian-kanban:Create new board": false,
-      "terminal:Open terminal": false
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "e8f98fa1b1179ea2",
+  "active": "b87f3a475bc8ee33",
   "lastOpenFiles": [
-    "_Assets/Scripts/Setup-GMPlugin.ps1",
-    "_Assets/Scripts/Setup-GMPlugin.ps1.tmp.64748.1773191867494",
+    "Characters/Players/PC Overview.md",
     "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md",
     "Characters/Players/Kallius/Kallius - FATE Character.md.tmp.64748.1773097536349",
     "Characters/Players/Azaria Dawson/Azaria Dawson - FATE Character.md.tmp.64748.1773097530304",
@@ -308,6 +307,7 @@
     "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md.tmp.64748.1773097288618",
     "nova-praxis-character-creator/node_modules/typescript/lib/zh-tw/diagnosticMessages.generated.json",
     "nova-praxis-character-creator/node_modules/typescript/lib/zh-tw",
+    "nova-praxis-character-creator/node_modules/typescript/lib/ja/diagnosticMessages.generated.json",
     "Rules and Mechanics/Savant Programs - Game Reference.md",
     "Rules and Mechanics/Stunts.md",
     "Character Creation Summary.md",
