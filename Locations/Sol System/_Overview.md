@@ -46,6 +46,6 @@ The Sol System contains:
 
 ## Navigation
 
-- Return to [[../Index|Locations Index]]
-- See also: [[../Exoplanets/_Overview|Exoplanets Overview]]
+- Return to [[Locations/Index|Locations Index]]
+- See also: [[Locations/Exoplanets/_Overview|Exoplanets Overview]]
 - Related: Coalition Houses

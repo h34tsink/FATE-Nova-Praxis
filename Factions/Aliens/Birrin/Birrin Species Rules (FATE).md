@@ -293,7 +293,7 @@ These are common situations where being Birrin creates complications. Accept the
 
 ### Mechanical Integration
 
-Birrin characters can learn and use [[Mechanics/FATE/Pneuma Rules/_Pneuma Rules|Pneuma mechanics]], but with important differences from human users.
+Birrin characters can learn and use [[Rules and Mechanics/Pneuma Rules/Pneuma|Pneuma mechanics]], but with important differences from human users.
 
 **Access Method:**
 - Birrin use trained resonance methodology (not intuitive "reach")
@@ -653,7 +653,7 @@ Later stunts might reflect:
 ### Core Documents
 - [[Factions/Aliens/Birrin/Birrin Species - Biology and Culture|Birrin Species - Biology and Culture]]
 - [[Factions/Aliens/Birrin/The Chriirahn Concord|The Chriirahn Concord Faction]]
-- [[Mechanics/FATE/Pneuma Rules/_Pneuma Index|Pneuma System Index]]
+- [[Rules and Mechanics/Pneuma Rules/Index|Pneuma System Index]]
 
 ### Campaign Materials
 - Quiet Pier mini-arc (if created)

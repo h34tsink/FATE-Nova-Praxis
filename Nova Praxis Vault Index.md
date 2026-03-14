@@ -35,4 +35,4 @@ This note is kept for backward compatibility.
 
 - Canonical index: [[Index]]
 - Session launchpad: [[Sessions/Index]]
-- Mechanics launchpad: [[Mechanics/Index]]
+- Mechanics launchpad: [[Rules and Mechanics/Rules Quick Reference - Unified]]

@@ -25,6 +25,6 @@ Tartarus is the most notorious high-security incarceration site in Coalition spa
 - Covert extraction of a witness before sealed-court sentencing
 
 ## Related
-- [[Locations/Sol System/Outer_Planets]]
+- [[Locations/Sol System/Outer Planets]]
 - [[Locations/Asteroid Belts/SOL Belt]]
 - [[Factions/Houses/House Dalianis]]

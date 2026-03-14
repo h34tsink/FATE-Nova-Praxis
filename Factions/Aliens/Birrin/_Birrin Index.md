@@ -42,7 +42,7 @@ Five-session first contact adventure introducing Birrin to campaign. Complete wi
 
 ### Three-Sentence Summary
 
-The **Birrin** are humanity's first confirmed alien contact: six-limbed egg-layers from a tropical world who survived near-extinction when their First Technological Age collapsed. Their culture is built around **containment doctrine** — safety protocols driven by species trauma — and they react with dread to humanity's reckless curiosity around ancient artifacts and [[Mechanics/FATE/Pneuma Rules/_Pneuma Rules|Pneuma]] phenomena. They offer cooperation, but their diplomatic envoys carry quarantine orders in their pockets, just in case.
+The **Birrin** are humanity's first confirmed alien contact: six-limbed egg-layers from a tropical world who survived near-extinction when their First Technological Age collapsed. Their culture is built around **containment doctrine** — safety protocols driven by species trauma — and they react with dread to humanity's reckless curiosity around ancient artifacts and [[Rules and Mechanics/Pneuma Rules/Pneuma|Pneuma]] phenomena. They offer cooperation, but their diplomatic envoys carry quarantine orders in their pockets, just in case.
 
 ---
 
@@ -236,7 +236,7 @@ The **Concord** is the multi-house governmental coalition representing all Birri
 
 ### What Birrin Know (Truth)
 
-The Birrin have independently discovered **[[Mechanics/FATE/Pneuma Rules/_Pneuma Rules|Pneuma]]** (the "interaction layer" between consciousness and reality). They call it **The Resonance** or **The Deep Structure**.
+The Birrin have independently discovered **[[Rules and Mechanics/Pneuma Rules/Pneuma|Pneuma]]** (the "interaction layer" between consciousness and reality). They call it **The Resonance** or **The Deep Structure**.
 
 **Key Facts:**
 - Recognized ~400 years ago (Second Age research)
@@ -280,9 +280,9 @@ Humans accessing Pneuma is like children with nuclear weapons:
 ## Related Campaign Content
 
 ### Core Systems
-- [[Mechanics/FATE/Pneuma Rules/_Pneuma Index|Pneuma System Index]]
-- [[Mechanics/FATE/Pneuma Rules/_Pneuma Rules|Pneuma Rules]]
-- [[Mechanics/FATE/Pneuma Rules/_Pneuma Lore and Physics|Pneuma Lore and Physics]]
+- [[Rules and Mechanics/Pneuma Rules/Index|Pneuma System Index]]
+- [[Rules and Mechanics/Pneuma Rules/Pneuma|Pneuma Rules]]
+- [[Rules and Mechanics/Pneuma Rules/The Physics of Pneuma|Pneuma Lore and Physics]]
 
 ### Nova Praxis Integration
 - [[Glossary/Skills|Nova Praxis Skills]]
@@ -387,7 +387,7 @@ Measured, careful word choice. Literal interpretation. Physical punctuation (rad
 
 **Campaign Materials:**
 - [[Factions/Index|Faction Index]] — All factions overview
-- [[Mechanics/FATE/Pneuma Rules/_Pneuma Index|Pneuma Index]] — Related mechanics
+- [[Rules and Mechanics/Pneuma Rules/Index|Pneuma Index]] — Related mechanics
 
 **Character Resources:**
 - [[Templates/FATE Character Template|Character Template]]

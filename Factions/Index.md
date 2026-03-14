@@ -115,11 +115,11 @@ Reference for:
 
 ## Related Documentation
 
-- [[../Locations/Sol System/_Overview|Sol System Territories]]
-- [[../Locations/Exoplanets/_Overview|Exoplanet Colonies]]
+- [[Locations/Sol System/_Overview|Sol System Territories]]
+- [[Locations/Exoplanets/_Overview|Exoplanet Colonies]]
 - Game Mechanics Glossary
 - Campaign Context
 
 ---
 
-**Navigation:** Return to [[../Index|Vault Index]]
+**Navigation:** Return to [[Index|Vault Index]]

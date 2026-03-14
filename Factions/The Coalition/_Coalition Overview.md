@@ -239,15 +239,15 @@ Multiple secret organizations operate within and against Coalition:
 - Protectorate Organization
 
 ### Member Houses
-- [[Houses/|Coalition Houses Directory]]
+- [[Factions/The Coalition/Houses Reference|Coalition Houses Directory]]
 - [[Glossary/Coalition Houses|Houses Reference Guide]]
 
 ### Ideologies
 - Ideological Factions
 
 ### Locations
-- [[../../Locations/Sol System/_Overview|Sol System Overview]]
-- [[../../Locations/Exoplanets/_Overview|Exoplanet Colonies]]
+- [[Locations/Sol System/_Overview|Sol System Overview]]
+- [[Locations/Exoplanets/_Overview|Exoplanet Colonies]]
 
 ### Opposition Forces
 - Hidden Agendas and Secret Organizations

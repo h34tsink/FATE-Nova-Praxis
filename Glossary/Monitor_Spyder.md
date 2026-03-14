@@ -1,1 +1,0 @@
-A specialized AI used to oversee **meshes** and detect signs of unusual or criminal activity. Monitors act as watchdogs for digital and physical security, often scanning for anomalies in real-time.

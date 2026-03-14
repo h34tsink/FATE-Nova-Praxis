@@ -22,7 +22,7 @@ aliases:
 **Tone:** Eerie first contact → Containment tension → Cosmic horror hint  
 **Recommended Level:** Early-to-mid campaign (PCs established but not veteran)
 
-**Goal:** Introduce the [[Factions/Aliens/Birrin/_Birrin Index|Birrin]] as the first living sapient species encountered, tie them to Mimir breadcrumbs, and make [[Mechanics/FATE/Pneuma Rules/_Pneuma Rules|Pneuma]] feel dangerous and *real*.
+**Goal:** Introduce the [[Factions/Aliens/Birrin/_Birrin Index|Birrin]] as the first living sapient species encountered, tie them to Mimir breadcrumbs, and make [[Rules and Mechanics/Pneuma Rules/Pneuma|Pneuma]] feel dangerous and *real*.
 
 ---
 
@@ -228,7 +228,7 @@ Resistance → ticks Concord Patience, restricts information
 #### Scene 2: The Test
 
 **Setup:**  
-Birrin run full resonance scan. Any [[Mechanics/FATE/Pneuma Rules/_Pneuma Rules|Pneuma]] "spark" in PC crew spikes the readings dramatically.
+Birrin run full resonance scan. Any [[Rules and Mechanics/Pneuma Rules/Pneuma|Pneuma]] "spark" in PC crew spikes the readings dramatically.
 
 **Scene Aspects:**
 - *Harmonic Cage Activated* — Containment field surrounds scan area
@@ -317,7 +317,7 @@ The route passes through region of space with weird properties. Not just physica
 1. Physical hazards first (debris, thermal gradients) — standard space travel challenges
 2. Then weird stuff: sensors show things that aren't there; crew members finish each other's thoughts; déjà vu
 3. If Birrin present: they recognize "echo weather" and begin containment procedures
-4. Tick Anomaly Instability if PCs use [[Mechanics/FATE/Pneuma Rules/_Pneuma Rules|Pneuma]] abilities or push mental/spiritual actions
+4. Tick Anomaly Instability if PCs use [[Rules and Mechanics/Pneuma Rules/Pneuma|Pneuma]] abilities or push mental/spiritual actions
 
 **Encounter Options:**
 - **Environmental Challenge:** Navigate safely (overcome with Pilot, Notice, or Lore)
@@ -447,7 +447,7 @@ Someone takes a consequence (physical, mental, or spiritual) as the Echo tries t
 
 **Insight Gained (If PC Risks Consequence):**
 - Location of another Echo site
-- Understanding of [[Mechanics/FATE/Pneuma Rules/_Pneuma Rules|Pneuma]] principle (mechanical benefit)
+- Understanding of [[Rules and Mechanics/Pneuma Rules/Pneuma|Pneuma]] principle (mechanical benefit)
 - Memory from Mimir or Architects (plot revelation)
 - Temporary power (extra stunt, usable once)
 
@@ -711,7 +711,7 @@ Wrap up immediate arc; set hooks for future stories.
 
 ### Pneuma System Connection
 
-This arc serves as introduction to [[Mechanics/FATE/Pneuma Rules/_Pneuma Rules|Pneuma mechanics]]. PCs should finish with:
+This arc serves as introduction to [[Rules and Mechanics/Pneuma Rules/Pneuma|Pneuma mechanics]]. PCs should finish with:
 - Awareness that Pneuma exists
 - Understanding it's dangerous
 - Knowledge that Birrin have safer methodology
@@ -767,9 +767,9 @@ This arc serves as introduction to [[Mechanics/FATE/Pneuma Rules/_Pneuma Rules|P
 - [[Factions/Aliens/Birrin/The Chriirahn Concord|Concord Faction]]
 
 ### Pneuma System
-- [[Mechanics/FATE/Pneuma Rules/_Pneuma Index|Pneuma Index]]
-- [[Mechanics/FATE/Pneuma Rules/_Pneuma Rules|Pneuma Rules]]
-- [[Mechanics/FATE/Pneuma Rules/_Pneuma Lore and Physics|Pneuma Lore]]
+- [[Rules and Mechanics/Pneuma Rules/Index|Pneuma Index]]
+- [[Rules and Mechanics/Pneuma Rules/Pneuma|Pneuma Rules]]
+- [[Rules and Mechanics/Pneuma Rules/The Physics of Pneuma|Pneuma Lore]]
 
 ### Campaign Resources
 - Sessions/ — Session notes

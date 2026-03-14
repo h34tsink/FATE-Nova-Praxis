@@ -25,6 +25,6 @@
 - [[Glossary/Jump Gate]]
 
 ## Related
-- [[Mechanics/Index]]
+- [[Rules and Mechanics/Rules Quick Reference - Unified]]
 - [[Factions/Index]]
 - [[Locations/Index]]
