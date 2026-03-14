@@ -22,6 +22,8 @@ import * as aspects from './commands/aspects.js';
 import * as gmStart from './commands/gm-start.js';
 import * as sync from './commands/sync.js';
 import * as ask from './commands/ask.js';
+import * as playerAsk from './commands/player-ask.js';
+import { handleAutocomplete } from './autocomplete.js';
 
 interface Command {
   data: { name: string; toJSON(): unknown };
@@ -32,7 +34,7 @@ const commands = new Collection<string, Command>();
 
 const commandModules: Command[] = [
   lookup, glossary, character,
-  npc, scene, rules, recap, aspects, gmStart, sync, ask,
+  npc, scene, rules, recap, aspects, gmStart, sync, ask, playerAsk,
 ];
 
 for (const cmd of commandModules) {
@@ -74,6 +76,11 @@ client.once(Events.ClientReady, async (readyClient) => {
 
 // Handle interactions
 client.on(Events.InteractionCreate, async (interaction) => {
+  if (interaction.isAutocomplete()) {
+    await handleAutocomplete(interaction);
+    return;
+  }
+
   if (!interaction.isChatInputCommand()) return;
 
   const command = commands.get(interaction.commandName);
@@ -83,13 +90,14 @@ client.on(Events.InteractionCreate, async (interaction) => {
     await command.execute(interaction);
   } catch (err) {
     console.error(`Error executing /${interaction.commandName}:`, err);
-
-    const content = 'Something went wrong executing that command.';
-    if (interaction.replied || interaction.deferred) {
-      await interaction.followUp({ content, ephemeral: true });
-    } else {
-      await interaction.reply({ content, ephemeral: true });
-    }
+    try {
+      const content = 'Something went wrong executing that command.';
+      if (interaction.replied || interaction.deferred) {
+        await interaction.followUp({ content, ephemeral: true });
+      } else {
+        await interaction.reply({ content, ephemeral: true });
+      }
+    } catch { /* interaction expired */ }
   }
 });
 
@@ -103,6 +111,9 @@ async function shutdown() {
 
 process.on('SIGINT', shutdown);
 process.on('SIGTERM', shutdown);
+process.on('unhandledRejection', (err) => {
+  console.error('Unhandled rejection:', err);
+});
 
 // Verify database connection, then start bot
 async function main() {

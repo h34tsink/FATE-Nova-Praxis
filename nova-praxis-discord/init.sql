@@ -88,3 +88,19 @@ CREATE TABLE characters (
 );
 CREATE UNIQUE INDEX idx_characters_name ON characters (lower(name));
 CREATE INDEX idx_characters_discord ON characters (discord_user_id);
+
+-- session data (chunked by heading)
+CREATE TABLE sessions (
+    id          SERIAL PRIMARY KEY,
+    session_num INT NOT NULL,
+    file_path   TEXT NOT NULL,
+    file_type   TEXT,
+    heading     TEXT NOT NULL,
+    content     TEXT NOT NULL,
+    search_vec  TSVECTOR GENERATED ALWAYS AS (
+        setweight(to_tsvector('english', heading), 'A') ||
+        setweight(to_tsvector('english', content), 'B')
+    ) STORED
+);
+CREATE INDEX idx_sessions_search ON sessions USING GIN (search_vec);
+CREATE INDEX idx_sessions_num ON sessions (session_num);

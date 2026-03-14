@@ -6,7 +6,7 @@ export const data = new SlashCommandBuilder()
   .setName('lookup')
   .setDescription('Search game data: gear, augmentations, sleeves, skills, states, houses')
   .addStringOption((opt) =>
-    opt.setName('query').setDescription('What to search for').setRequired(true)
+    opt.setName('query').setDescription('What to search for').setRequired(true).setAutocomplete(true)
   )
   .addStringOption((opt) =>
     opt

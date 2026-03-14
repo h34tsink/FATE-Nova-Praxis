@@ -194,10 +194,55 @@ export async function upsertCharacter(
   return result.rows[0];
 }
 
+// --- Sessions ---
+
+export interface SessionRow {
+  id: number;
+  session_num: number;
+  file_path: string;
+  file_type: string | null;
+  heading: string;
+  content: string;
+  rank: number;
+}
+
+export async function getLatestSessionNum(): Promise<number> {
+  const result = await query<{ max: number }>('SELECT MAX(session_num) as max FROM sessions');
+  return result.rows[0]?.max ?? 0;
+}
+
+export async function getSessionSections(sessionNum: number, fileType?: string) {
+  const params: unknown[] = [sessionNum];
+  let sql = `SELECT * FROM sessions WHERE session_num = $1`;
+  if (fileType) {
+    sql += ` AND file_type = $2`;
+    params.push(fileType);
+  }
+  sql += ` ORDER BY id`;
+  const result = await query<SessionRow>(sql, params);
+  return result.rows;
+}
+
+export async function searchSessions(searchQuery: string, sessionNum?: number) {
+  const params: unknown[] = [searchQuery];
+  let sql = `
+    SELECT *, ts_rank(search_vec, plainto_tsquery('english', $1)) AS rank
+    FROM sessions
+    WHERE search_vec @@ plainto_tsquery('english', $1)
+  `;
+  if (sessionNum) {
+    sql += ` AND session_num = $2`;
+    params.push(sessionNum);
+  }
+  sql += ` ORDER BY rank DESC LIMIT 5`;
+  const result = await query<SessionRow>(sql, params);
+  return result.rows;
+}
+
 // --- Utility ---
 
 export async function getTableCounts() {
-  const tables = ['game_data', 'glossary', 'rules_sections', 'entity_cards', 'characters'];
+  const tables = ['game_data', 'glossary', 'rules_sections', 'entity_cards', 'characters', 'sessions'];
   const counts: Record<string, number> = {};
   for (const table of tables) {
     const result = await query<{ count: string }>(`SELECT count(*) FROM ${table}`);

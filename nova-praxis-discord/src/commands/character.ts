@@ -14,7 +14,7 @@ export const data = new SlashCommandBuilder()
       .setName('show')
       .setDescription('Show a character sheet')
       .addStringOption((opt) =>
-        opt.setName('name').setDescription('Character name').setRequired(true)
+        opt.setName('name').setDescription('Character name').setRequired(true).setAutocomplete(true)
       )
   )
   .addSubcommand((sub) =>
@@ -22,7 +22,7 @@ export const data = new SlashCommandBuilder()
       .setName('skills')
       .setDescription('Show a character\'s skills')
       .addStringOption((opt) =>
-        opt.setName('name').setDescription('Character name').setRequired(true)
+        opt.setName('name').setDescription('Character name').setRequired(true).setAutocomplete(true)
       )
   )
   .addSubcommand((sub) =>

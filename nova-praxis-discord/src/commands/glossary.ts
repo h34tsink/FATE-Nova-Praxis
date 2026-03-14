@@ -5,7 +5,7 @@ export const data = new SlashCommandBuilder()
   .setName('glossary')
   .setDescription('Look up a Nova Praxis term')
   .addStringOption((opt) =>
-    opt.setName('term').setDescription('Term to look up').setRequired(true)
+    opt.setName('term').setDescription('Term to look up').setRequired(true).setAutocomplete(true)
   );
 
 export async function execute(interaction: ChatInputCommandInteraction) {

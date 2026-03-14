@@ -5,22 +5,31 @@ import { query, end } from './db-connect.js';
 const VAULT = process.env.VAULT_PATH || 'd:/ObsidianVaults/FATE - Nova Praxis';
 const DATA_DIR = join(VAULT, 'Data');
 
-function stripTypeImports(src: string): string {
+function stripTypeAnnotations(src: string): string {
   return src
+    // Remove import type and import { } from '../types' etc
     .replace(/^import\s+type\s+.*$/gm, '')
     .replace(/^import\s+\{[^}]*\}\s+from\s+['"]\.\.\/types['"];?\s*$/gm, '')
     .replace(/^import\s+\{[^}]*\}\s+from\s+['"]\.\.\/domain\/[^'"]+['"];?\s*$/gm, '')
     .replace(/^export\s+type\s+.*$/gm, '')
-    .replace(/:\s*(Augmentation|CharacterState|House|SleeveVariant|GearItem|GearFeature)\[\]/g, '')
-    .replace(/:\s*(Augmentation|CharacterState|House|SleeveVariant|GearItem|GearFeature)/g, '');
+    // Remove type annotations on variables: `: TypeName[]` or `: TypeName`
+    .replace(/:\s*(Augmentation|CharacterState|House|SleeveVariant|GearItem|GearFeature|SleeveVariant)\[\]/g, '')
+    .replace(/:\s*(Augmentation|CharacterState|House|SleeveVariant|GearItem|GearFeature|SleeveVariant)\b/g, '')
+    // Remove function parameter type annotations: (param: type) -> (param)
+    .replace(/(\w+)\s*:\s*(?:string|number|boolean|unknown|void|any)(?:\s*\[\s*\])?/g, '$1')
+    // Remove function return type annotations: ): Type => or ): Type {
+    .replace(/\)\s*:\s*\w+(?:\[\])?\s*(?:\|\s*\w+(?:\[\])?)?\s*(?=[{=])/g, ') ')
+    // Remove export { } re-exports
+    .replace(/^export\s+\{[^}]*\};?\s*$/gm, '')
+    // Convert exports
+    .replace(/^export\s+const\s+/gm, 'const ')
+    .replace(/^export\s+default\s+/gm, 'module.exports = ')
+    .replace(/^export\s+function\s+/gm, 'function ');
 }
 
 function evalDataFile(filename: string, exportName: string): unknown[] {
   const raw = readFileSync(join(DATA_DIR, filename), 'utf-8');
-  const cleaned = stripTypeImports(raw)
-    .replace(/^export\s+const\s+/gm, 'const ')
-    .replace(/^export\s+default\s+/gm, 'module.exports = ')
-    .replace(/^export\s+function\s+/gm, 'function ');
+  const cleaned = stripTypeAnnotations(raw);
 
   const fn = new Function('module', 'exports', cleaned + `\nreturn ${exportName};`);
   const mod = { exports: {} };
@@ -77,7 +86,7 @@ function flattenGear(): ImportItem[] {
 
 function flattenAugmentations(): ImportItem[] {
   const raw = readFileSync(join(DATA_DIR, 'augmentations.ts'), 'utf-8');
-  const cleaned = stripTypeImports(raw)
+  const cleaned = stripTypeAnnotations(raw)
     .replace(/^export\s+const\s+/gm, 'const ')
     .replace(/^export\s+default\s+/gm, 'module.exports = ');
 
@@ -93,21 +102,50 @@ function flattenAugmentations(): ImportItem[] {
   }));
 }
 
+/**
+ * Extract a top-level array or object literal assigned to a variable.
+ * Matches: `const varName = [...]` or `const varName: Type[] = [...]`
+ * Uses bracket counting to find the complete literal.
+ */
+function extractLiteral(src: string, varName: string): unknown {
+  const pattern = new RegExp(`(?:const|let|var)\\s+${varName}[^=]*=\\s*`);
+  const match = src.match(pattern);
+  if (!match || match.index === undefined) return null;
+
+  const startIdx = match.index + match[0].length;
+  const openChar = src[startIdx];
+  const closeChar = openChar === '[' ? ']' : openChar === '{' ? '}' : null;
+  if (!closeChar) return null;
+
+  let depth = 0;
+  let inString: string | null = null;
+  for (let i = startIdx; i < src.length; i++) {
+    const ch = src[i];
+    if (inString) {
+      if (ch === inString && src[i - 1] !== '\\') inString = null;
+      continue;
+    }
+    if (ch === "'" || ch === '"' || ch === '`') { inString = ch; continue; }
+    if (ch === openChar) depth++;
+    if (ch === closeChar) depth--;
+    if (depth === 0) {
+      const literal = src.slice(startIdx, i + 1);
+      // eval as JS (no TS syntax in data literals)
+      return new Function(`return ${literal}`)();
+    }
+  }
+  return null;
+}
+
 function flattenSleeves(): ImportItem[] {
   const raw = readFileSync(join(DATA_DIR, 'nova-praxis-sleeves.ts'), 'utf-8');
-  const cleaned = stripTypeImports(raw)
-    .replace(/^export\s+const\s+/gm, 'const ')
-    .replace(/^export\s+default\s+/gm, 'module.exports = ');
-
   const items: ImportItem[] = [];
 
-  // Try biosleeves and cybersleeves
   for (const varName of ['biosleeves', 'cybersleeves']) {
     try {
-      const fn = new Function('module', 'exports', cleaned + `\nreturn ${varName};`);
-      const mod = { exports: {} };
-      const sleeves = fn(mod, mod.exports) as Record<string, unknown>[];
-      for (const s of sleeves) {
+      const arr = extractLiteral(raw, varName) as Record<string, unknown>[];
+      if (!arr) { console.warn(`  Sleeve var not found: ${varName}`); continue; }
+      for (const s of arr) {
         items.push({
           category: 'sleeve',
           name: s.name as string,
@@ -115,8 +153,8 @@ function flattenSleeves(): ImportItem[] {
           metadata: s,
         });
       }
-    } catch {
-      console.warn(`  Skipping sleeve var: ${varName}`);
+    } catch (e) {
+      console.warn(`  Skipping sleeve var: ${varName}`, (e as Error).message?.slice(0, 80));
     }
   }
 
@@ -135,7 +173,7 @@ function flattenSkills(): ImportItem[] {
 
 function flattenStates(): ImportItem[] {
   const raw = readFileSync(join(DATA_DIR, 'nova-praxis-states.ts'), 'utf-8');
-  const cleaned = stripTypeImports(raw)
+  const cleaned = stripTypeAnnotations(raw)
     .replace(/^export\s+default\s+/gm, 'module.exports = ')
     .replace(/^export\s+const\s+/gm, 'const ');
 
@@ -162,13 +200,31 @@ function flattenHouses(): ImportItem[] {
 }
 
 function flattenFateLadder(): ImportItem[] {
-  const arr = evalDataFile('fate-ladder.ts', 'fateLadder') as Record<string, unknown>[];
-  return arr.map((l) => ({
+  const raw = readFileSync(join(DATA_DIR, 'fate-ladder.ts'), 'utf-8');
+  const arr = extractLiteral(raw, 'fateLadder') as Record<string, unknown>[];
+  if (!arr) return [];
+
+  const items: ImportItem[] = arr.map((l) => ({
     category: 'fate_ladder',
     name: l.name as string,
     description: `+${l.value} ${l.adjective}`,
     metadata: l,
   }));
+
+  // Also grab skillDistributions
+  const dists = extractLiteral(raw, 'skillDistributions') as Record<string, Record<string, unknown>> | null;
+  if (dists) {
+    for (const [key, val] of Object.entries(dists)) {
+      items.push({
+        category: 'skill_distribution',
+        name: val.name as string,
+        description: (val.description as string) || '',
+        metadata: { id: key, ...val },
+      });
+    }
+  }
+
+  return items;
 }
 
 async function main() {

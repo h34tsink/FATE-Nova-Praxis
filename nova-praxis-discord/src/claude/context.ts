@@ -1,4 +1,4 @@
-import { getEntityCard, getEntityCardByName, searchRules } from '../db/queries.js';
+import { getEntityCard, getEntityCardByName, searchRules, getLatestSessionNum, getSessionSections } from '../db/queries.js';
 
 export async function buildNpcContext(token: string, situation: string): Promise<string> {
   const card = await getEntityCard(token) || await getEntityCardByName(token);
@@ -51,7 +51,31 @@ export async function buildRulesContext(question: string): Promise<{ fastAnswer:
 }
 
 export async function buildRecapContext(): Promise<string> {
-  return `Generate a session recap using the /recap command format from the nova-praxis-gm plugin.`;
+  const sessionNum = await getLatestSessionNum();
+  if (!sessionNum) return `Generate a session recap using the /recap command format from the nova-praxis-gm plugin.`;
+
+  const sections: string[] = [];
+
+  // Get state files first (GM Command Board, Live Dashboard)
+  const stateSections = await getSessionSections(sessionNum, 'state');
+  if (stateSections.length > 0) {
+    sections.push(`## Session ${sessionNum} — Live State\n\n${stateSections.map((s) => `### ${s.heading}\n${s.content}`).join('\n\n')}`);
+  }
+
+  // Get guide/index
+  const guideSections = await getSessionSections(sessionNum, 'guide');
+  if (guideSections.length > 0) {
+    sections.push(`## Session Guide\n\n${guideSections.slice(0, 5).map((s) => `### ${s.heading}\n${s.content}`).join('\n\n')}`);
+  }
+
+  // Get scenes
+  const sceneSections = await getSessionSections(sessionNum, 'scenes');
+  if (sceneSections.length > 0) {
+    sections.push(`## Scenes\n\n${sceneSections.slice(0, 5).map((s) => `### ${s.heading}\n${s.content}`).join('\n\n')}`);
+  }
+
+  const context = sections.join('\n\n---\n\n');
+  return `Using the following session ${sessionNum} data from the database, generate a recap using the /recap command format from the nova-praxis-gm plugin.\n\n${context}`;
 }
 
 export async function buildAspectsContext(subject: string): Promise<string> {
