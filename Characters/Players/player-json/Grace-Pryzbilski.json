@@ -1,0 +1,349 @@
+{
+  "version": 1,
+  "exportedAt": "2026-03-14T20:04:18.657Z",
+  "app": "nova-praxis-character-manager",
+  "character": {
+    "name": "Grace Pryzbilski",
+    "portrait": "data:image/jpeg;base64,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",
+    "description": "",
+    "characterState": "sim",
+    "houseAffiliation": "kimura",
+    "skillRankType": "specialist",
+    "skills": {
+      "engineering_hardware": 5,
+      "engineering_software": 4,
+      "stealth": 3,
+      "research": 4,
+      "education": 2,
+      "perception": 2,
+      "guile": 1,
+      "insight": 2,
+      "diplomacy": 1,
+      "intimidation": 1,
+      "mnemonics": 1,
+      "pilot": 1,
+      "resolve": 1,
+      "house_networking": 1,
+      "sinc": 3
+    },
+    "stunts": [
+      "savant",
+      "skilled",
+      "system_slip"
+    ],
+    "aspects": [
+      "SIM Drone Jock Recluse",
+      "Shield My Few Friends From Everything",
+      "Always Observing, Never Observed",
+      "Kalius' Personal Ward",
+      "Thin Skinned and Trauma-Triggered",
+      "\"Dance, Puppets!\" - Neural Command Choreographer",
+      "Scopophobia"
+    ],
+    "stressTracks": {
+      "physical": 2,
+      "mental": 2,
+      "system": 2
+    },
+    "refreshRating": 5,
+    "repRating": 7,
+    "repBumps": 6,
+    "assets": 0,
+    "notes": "",
+    "savantPrograms": [
+      "puppeteer"
+    ],
+    "sleeveId": null,
+    "sleeveCustomizations": {
+      "clone": false,
+      "physicalRanksToAPs": 0,
+      "apsToPhysicalRanks": 0
+    },
+    "physicalSkillAllocation": {
+      "athletics": 2,
+      "endurance": 3,
+      "perception": 2
+    },
+    "augmentations": [
+      "adrenal_boost_module",
+      "beholder_sensory_suite",
+      "auditory_amp_filter"
+    ],
+    "augmentationChoices": {},
+    "augmentationUpgrades": {},
+    "startingGear": [
+      "light_rail_pistol",
+      "reinforced_clothing",
+      "agent:beta"
+    ],
+    "gearCustomizations": {
+      "agent": {
+        "selectedSkillBonuses": [
+          {
+            "skillId": "research",
+            "bonus": 1
+          },
+          {
+            "skillId": "education",
+            "bonus": 1
+          }
+        ],
+        "customName": "Tybalt"
+      },
+      "agent:alpha": {
+        "customName": "Tybalt",
+        "selectedSkillBonuses": [
+          {
+            "skillId": "education",
+            "bonus": 1
+          }
+        ]
+      },
+      "light_rail_pistol": {
+        "gearTag": "virtual"
+      },
+      "reinforced_clothing": {
+        "gearTag": "virtual"
+      }
+    },
+    "milestones": {
+      "history": [],
+      "nextMilestoneType": "minor"
+    },
+    "consequences": {
+      "physicalMild": "",
+      "physicalModerate": "",
+      "physicalSevere": "",
+      "physicalExtreme": "",
+      "mentalMild": "",
+      "mentalModerate": "",
+      "mentalSevere": "",
+      "mentalExtreme": "",
+      "systemMild": "",
+      "systemModerate": "",
+      "systemSevere": "",
+      "systemExtreme": ""
+    },
+    "ownedDrones": [
+      {
+        "id": "3ddd67e9-72aa-48a2-b9a0-6d36fb44ad17",
+        "characterId": "6948b2774aaee12061fb4167",
+        "drone": {
+          "id": "12e40047-60b8-499e-83c0-604a8ed940f3",
+          "name": "Beedrill",
+          "tier": "alpha",
+          "cost": 4,
+          "restricted": true,
+          "aspects": [
+            "Synthetic Biology",
+            "Inhuman Appearance",
+            "Swift and Agile",
+            "Precision Targeting System"
+          ],
+          "skills": {
+            "strategy": 3,
+            "stealth": 2,
+            "firearms": 3,
+            "melee": 0,
+            "athletics": 3,
+            "perception": 2,
+            "endurance": 1
+          },
+          "augmentations": [
+            "Very Tiny Size",
+            "Flight Capable",
+            "Enhanced Sensors",
+            "Fully Synthetic"
+          ],
+          "armorRating": 2,
+          "weapons": [
+            {
+              "name": "Light PAc Pistol",
+              "wr": 4,
+              "range": 4,
+              "cost": 5,
+              "aspects": [
+                "Particle Accelerator",
+                "Small",
+                "Beam Weapon"
+              ]
+            }
+          ],
+          "description": "",
+          "role": "security"
+        },
+        "controlMode": "passive",
+        "currentDamage": 0,
+        "isActive": false
+      },
+      {
+        "id": "20d51f89-a203-46c9-a340-69b6cc926337",
+        "characterId": "6948b2774aaee12061fb4167",
+        "drone": {
+          "id": "c78920b4-2eb9-4c19-a5b3-c2b404540f88",
+          "name": "Scuttlebot",
+          "tier": "gamma",
+          "cost": 7,
+          "restricted": true,
+          "aspects": [
+            "Synthetic Biology",
+            "Inhuman Appearance",
+            "Shadow Operations",
+            "Enhanced Sensor Suite"
+          ],
+          "skills": {
+            "athletics": 3,
+            "endurance": 2,
+            "perception": 4,
+            "melee": 2,
+            "stealth": 4,
+            "strategy": 3
+          },
+          "augmentations": [
+            "Fully Synthetic",
+            "Tiny Size",
+            "Alternative Mobility System",
+            "Auditory Amp and Filter",
+            "Stealth Coating"
+          ],
+          "armorRating": 3,
+          "weapons": [
+            {
+              "name": "Short Sword, Mono-Edged",
+              "wr": 3,
+              "range": 0,
+              "cost": 3,
+              "aspects": [
+                "Mono-Edged"
+              ]
+            },
+            {
+              "name": "Short Sword, Mono-Edged",
+              "wr": 3,
+              "range": 0,
+              "cost": 3,
+              "aspects": [
+                "Mono-Edged"
+              ]
+            }
+          ],
+          "description": "",
+          "role": "scout"
+        },
+        "controlMode": "passive",
+        "currentDamage": 0,
+        "isActive": false
+      }
+    ],
+    "ownedVehicles": [],
+    "characterId": "char_1766371959725",
+    "createdAt": "2025-12-22T02:52:39.725Z",
+    "updatedAt": "2026-03-14T19:09:34.775Z",
+    "sessionState": {
+      "fatePoints": 5,
+      "stress": {
+        "physical": [
+          false,
+          true
+        ],
+        "mental": [
+          false,
+          true
+        ],
+        "system": []
+      },
+      "consequences": {
+        "mild": "",
+        "moderate": "",
+        "severe": ""
+      },
+      "gear": {
+        "agent": {
+          "condition": "pristine",
+          "customAspects": [],
+          "notes": ""
+        },
+        "light_rail_pistol": {
+          "condition": "pristine",
+          "customAspects": [],
+          "notes": "",
+          "ammo": 12,
+          "maxAmmo": 12
+        }
+      },
+      "programs": {
+        "puppeteer": {
+          "isRunning": true,
+          "executedThisScene": true,
+          "notes": ""
+        }
+      }
+    },
+    "mindset": {
+      "upgrades": {
+        "cognetCapable": false,
+        "remoteBackup": false,
+        "killSwitch": false
+      },
+      "lastBackupTimestamp": null,
+      "insuranceTier": "none",
+      "extranetStatus": true,
+      "mnemonicCoreStatus": "intact",
+      "sensies": [],
+      "version": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "counters": {
+        "resleeves": 0,
+        "forks": 0,
+        "merges": 0
+      }
+    },
+    "id": "6948b2774aaee12061fb4167",
+    "fatePoints": 4,
+    "stress": {
+      "system": [
+        3
+      ]
+    },
+    "skilledChoices": [
+      "sinc"
+    ],
+    "appliedStateBenefits": {
+      "refreshRatingBonus": 0,
+      "automaticAspects": [],
+      "automaticStunts": [],
+      "skillBonuses": {}
+    },
+    "statePhysicalRanks": {
+      "total": 6,
+      "used": 7,
+      "allocation": {
+        "athletics": 2,
+        "endurance": 3,
+        "perception": 2
+      }
+    },
+    "baseSkills": {
+      "engineering_hardware": 5,
+      "engineering_software": 4,
+      "stealth": 3,
+      "research": 4,
+      "education": 2,
+      "perception": 2,
+      "guile": 1,
+      "insight": 2,
+      "diplomacy": 1,
+      "intimidation": 1,
+      "mnemonics": 1,
+      "pilot": 1,
+      "resolve": 1,
+      "house_networking": 1,
+      "sinc": 3
+    },
+    "skilledChoice": "sinc",
+    "localId": "char_1766371959725"
+  }
+}

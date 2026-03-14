@@ -1,0 +1,29 @@
+{
+  "name": "nova-praxis-discord",
+  "version": "1.0.0",
+  "description": "Discord bot for Nova Praxis TTRPG — fast data lookups + Claude CLI GM intelligence",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "import": "tsx scripts/import-all.ts",
+    "import:game-data": "tsx scripts/import-game-data.ts",
+    "import:glossary": "tsx scripts/import-glossary.ts",
+    "import:rules": "tsx scripts/import-rules.ts",
+    "import:entities": "tsx scripts/import-entities.ts",
+    "import:characters": "tsx scripts/import-characters.ts"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.0",
+    "dotenv": "^16.4.0",
+    "pg": "^8.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/pg": "^8.11.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
