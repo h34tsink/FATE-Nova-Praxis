@@ -16,7 +16,7 @@ CREATE TABLE game_data (
 CREATE INDEX idx_game_data_search ON game_data USING GIN (search_vec);
 CREATE INDEX idx_game_data_category ON game_data (category);
 
--- glossary terms
+-- glossary terms (uses trigger for tsvector since array_to_string isn't immutable)
 CREATE TABLE glossary (
     id          SERIAL PRIMARY KEY,
     term        TEXT NOT NULL UNIQUE,
@@ -24,14 +24,24 @@ CREATE TABLE glossary (
     short_def   TEXT,
     long_def    TEXT,
     tags        TEXT[] DEFAULT '{}',
-    search_vec  TSVECTOR GENERATED ALWAYS AS (
-        setweight(to_tsvector('english', term), 'A') ||
-        setweight(to_tsvector('english', coalesce(array_to_string(aliases, ' '), '')), 'A') ||
-        setweight(to_tsvector('english', coalesce(short_def, '')), 'B') ||
-        setweight(to_tsvector('english', coalesce(long_def, '')), 'C')
-    ) STORED
+    search_vec  TSVECTOR
 );
 CREATE INDEX idx_glossary_search ON glossary USING GIN (search_vec);
+
+CREATE OR REPLACE FUNCTION glossary_search_vec_trigger() RETURNS trigger AS $$
+BEGIN
+  NEW.search_vec :=
+    setweight(to_tsvector('english', NEW.term), 'A') ||
+    setweight(to_tsvector('english', coalesce(array_to_string(NEW.aliases, ' '), '')), 'A') ||
+    setweight(to_tsvector('english', coalesce(NEW.short_def, '')), 'B') ||
+    setweight(to_tsvector('english', coalesce(NEW.long_def, '')), 'C');
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER glossary_search_update
+  BEFORE INSERT OR UPDATE ON glossary
+  FOR EACH ROW EXECUTE FUNCTION glossary_search_vec_trigger();
 
 -- rules sections (chunked by heading)
 CREATE TABLE rules_sections (

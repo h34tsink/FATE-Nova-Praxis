@@ -18,8 +18,10 @@ services:
       POSTGRES_DB: nova_praxis
       POSTGRES_USER: nova
       POSTGRES_PASSWORD: ${PGPASSWORD:-changeme}
+      POSTGRES_HOST_AUTH_METHOD: md5
+      POSTGRES_INITDB_ARGS: "--auth-host=md5"
     ports:
-      - "5432:5432"
+      - "5434:5432"
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U nova -d nova_praxis"]
       interval: 5s
