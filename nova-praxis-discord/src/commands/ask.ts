@@ -82,7 +82,9 @@ ${context || 'No relevant context found in the database.'}
 ## Question
 ${question}
 
-Answer concisely. If this is about an NPC, stay in-world. If about rules or gear, cite specifics.`;
+Answer concisely. If this is about an NPC, stay in-world. If about rules or gear, cite specifics.
+
+Format for Discord: use **bold**, *italic*, \`code\`, and > blockquotes. Use markdown tables for structured data. Keep it scannable.`;
 
     const result = await callClaude(prompt);
     const embeds = gmResponseEmbed('Ask', result.output);
