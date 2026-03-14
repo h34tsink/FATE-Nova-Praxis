@@ -3,10 +3,8 @@
 Use this note as the table-time launchpad for prep, runtime tracking, and post-session continuity.
 
 ## GM Runtime Kit
-- [[Mechanics/FATE/GM/GM Cheat Sheet]]
-- [[Mechanics/FATE/GM/Scene Flow]]
-- [[Mechanics/FATE/FATE Rules/Play Rules Quick Reference]]
-- [[Mechanics/FATE/FATE Rules/Rules - Table Tent]]
+- [[Rules and Mechanics/Rules Quick Reference - Unified]]
+- [[Rules and Mechanics/Gameplay]]
 
 ## Session Notes (Chronological)
 - [[Sessions/Session 1/Session 1 - Game Summary]]

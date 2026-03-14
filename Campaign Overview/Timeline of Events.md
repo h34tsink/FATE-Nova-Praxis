@@ -62,7 +62,7 @@
 
 ## 59-69 PS (2101-2111 AD)
 - Decade-long Consolidation Wars across multiple planets and star systems.
-- Rapid expansion of human colonies, including on Proch, [[Locations/Exo Planets/Cygnus Alpha]], and Chengdan.
+- Rapid expansion of human colonies, including on Proch, [[Locations/Exoplanets/Cygnus Alpha]], and Chengdan.
 - Olympus becomes the most populous city outside Earth and a major warzone.
 
 ## 70 PS (2112 AD)

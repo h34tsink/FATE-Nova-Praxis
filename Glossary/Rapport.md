@@ -3,4 +3,4 @@ Rapport is the skill used for connection, trust-building, and social comfort in 
 ## Related
 - Diplomacy
 - Insight
-- [[Mechanics/Skills]]
+- [[Rules and Mechanics/Skills]]

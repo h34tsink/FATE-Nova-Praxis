@@ -96,7 +96,10 @@
       "Bash(git stash:*)",
       "Bash(git checkout:*)",
       "Bash(ls -d \"C:/ObsidianVaults/FATE-Nova-Praxis/Sessions/Session \"* 2>/dev/null | sort -t' ' -k2 -n | tail -5)",
-      "Bash(ls -la /c/ObsidianVaults/FATE-Nova-Praxis/Locations/Cere*)"
+      "Bash(ls -la /c/ObsidianVaults/FATE-Nova-Praxis/Locations/Cere*)",
+      "Bash(find . -name \"*_*\" -path \"*/Locations/*\" -o -name \"*_*\" -path \"*/Glossary/*\" -o -name \"*_*\" -path \"*/Factions/*\" -o -name \"*_*\" -path \"*/Characters/*\" -o -name \"* \\(1\\)*\" -o -name \"*_v1 \\(1\\)*\")",
+      "Bash(find . -name \"* \\(1\\)*\" -not -path \"./.git/*\" -not -path \"./.obsidian/*\" -not -path \"*/node_modules/*\")",
+      "Bash(wc -l *.md Notes/*.md)"
     ]
   }
 }

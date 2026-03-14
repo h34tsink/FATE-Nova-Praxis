@@ -13,7 +13,7 @@ aliases:
 
 - [[Index]]
 - [[Glossary/Index]]
-- [[Mechanics/Index]]
+- [[Rules and Mechanics/Rules Quick Reference - Unified]]
 - [[Sessions/Index]]
 - [[Plot/Index]]
 

@@ -305,7 +305,7 @@ Once per session, ask the GM one question about an ancient site, phenomenon, or 
 - Require trained operator
 
 **Applications:**
-- [[Mechanics/FATE/Pneuma Rules/_Pneuma Rules|Pneuma]] containment
+- [[Rules and Mechanics/Pneuma Rules/Pneuma|Pneuma]] containment
 - Archaeological safety
 - Structural engineering
 - Non-invasive medical diagnostics
@@ -333,7 +333,7 @@ Once per session, ask the GM one question about an ancient site, phenomenon, or 
 
 **2. Contain Anomaly Threats**
 - Quarantine relic sites
-- Monitor [[Mechanics/FATE/Pneuma Rules/_Pneuma Rules|Pneuma]] manifestations
+- Monitor [[Rules and Mechanics/Pneuma Rules/Pneuma|Pneuma]] manifestations
 - Track "wildfire" incidents (humans accessing what they shouldn't)
 - Maintain Echo site surveillance
 - Prevent cascade effects
@@ -629,8 +629,8 @@ Some Birrin learning human-style Pneuma; Concord civil conflict erupts; PCs must
 - Cultural misunderstanding scenarios
 
 ### Related Systems
-- [[Mechanics/FATE/Pneuma Rules/_Pneuma Index|Pneuma System Index]]
-- [[Mechanics/FATE/Pneuma Rules/_Pneuma Rules|Pneuma Rules]]
+- [[Rules and Mechanics/Pneuma Rules/Index|Pneuma System Index]]
+- [[Rules and Mechanics/Pneuma Rules/Pneuma|Pneuma Rules]]
 - [[Glossary/Skills|Nova Praxis Skills]]
 
 ### Faction Interactions

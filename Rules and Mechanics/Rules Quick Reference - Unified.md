@@ -191,6 +191,6 @@ Moving ego to a new body = **mental attack (Edge 8)** vs Cohesion.
 
 ---
 
-**Full rules:** [[Rules and Mechanics/Gameplay]] | **GM Cheat Sheet:** [[Mechanics/FATE/GM/GM Cheat Sheet]] | **Play Rules:** [[Mechanics/FATE/FATE Rules/Play Rules Quick Reference]]
+**Full rules:** [[Rules and Mechanics/Gameplay]]
 
 #ttrpg #nova-praxis #rules #quick-reference

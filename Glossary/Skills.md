@@ -135,6 +135,6 @@ Your connections within apostate communities and underground networks. Similar t
 
 ## Links
 
-- [[Mechanics/Skills]]
+- [[Rules and Mechanics/Skills]]
 - Glossary
 

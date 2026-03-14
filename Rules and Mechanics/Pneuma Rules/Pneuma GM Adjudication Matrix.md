@@ -50,8 +50,8 @@ If uncertain between two skills:
 - **Drift Guard:** If a compendium uses different skill labels, canonical file overrides.
 
 ## Links
-- [[Rules and Mechanics/Pneuma Rules/Pneuma_Architects_Echo_Rules]]
+- [[Rules and Mechanics/Pneuma Rules/Pneuma Architects Echo Rules]]
 - [[Rules and Mechanics/Pneuma Rules/Pneuma Backlash Consequences]]
-- [[Rules and Mechanics/Pneuma Rules/gm_data_cache_encounter]]
+- [[Rules and Mechanics/Pneuma Rules/GM Data Cache Encounter]]
 
 #ttrpg #nova-praxis #mechanics #pneuma #gm

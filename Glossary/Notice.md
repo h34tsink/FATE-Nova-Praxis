@@ -3,4 +3,4 @@ Notice is the skill for situational awareness, rapid recognition, and catching d
 ## Related
 - Perception
 - Insight
-- [[Mechanics/Skills]]
+- [[Rules and Mechanics/Skills]]

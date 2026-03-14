@@ -35,7 +35,7 @@ Humanity's expansion beyond Sol System through Jump Gate technology has establis
 - Songhai capital city (300k)
 - Agricultural serfdom concerns
 
-### [[Locations/Exo Planets/Cygnus Alpha]]
+### [[Locations/Exoplanets/Cygnus Alpha]]
 **Mining Colony - 400,000 population**
 - Federation tunnel networks
 - Hidden apostate communities
@@ -89,6 +89,6 @@ Humanity's expansion beyond Sol System through Jump Gate technology has establis
 
 ## Navigation
 
-- Return to [[../Index|Locations Index]]
-- See also: [[../Sol System/_Overview|Sol System Overview]]
+- Return to [[Locations/Index|Locations Index]]
+- See also: [[Locations/Sol System/_Overview|Sol System Overview]]
 - Related: Coalition Houses

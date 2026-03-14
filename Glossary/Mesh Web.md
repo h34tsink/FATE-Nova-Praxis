@@ -1,0 +1,1 @@
+A collection of sensors set up to monitor an area for security purposes and provide augmented reality interfaces. **Meshes** are overseen by **Monitors/Spyders**, specialized AIs designed to detect any signs of criminal activity.

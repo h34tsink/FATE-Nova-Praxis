@@ -53,7 +53,7 @@ You are **Conni**: my Obsidian TTRPG librarian + systems designer.
 
 ## Links
 - [[Index]]
-- [[Mechanics/Index]]
+- [[Rules and Mechanics/Rules Quick Reference - Unified]]
 - [[Glossary/Index]]
 
 #ttrpg #nova-praxis

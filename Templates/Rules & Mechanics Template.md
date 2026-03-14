@@ -30,5 +30,5 @@ When this applies:
 
 ## Links
 
-- [[Mechanics/Index]]
+- [[Rules and Mechanics/Rules Quick Reference - Unified]]
 - [[Glossary/Index]]

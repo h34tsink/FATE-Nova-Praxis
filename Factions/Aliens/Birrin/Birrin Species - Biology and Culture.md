@@ -479,9 +479,9 @@ The Birrin have independently discovered what humans call **Pneuma** — the "in
 ## Connections to Other Lore
 
 ### Pneuma System
-- [[Mechanics/FATE/Pneuma Rules/_Pneuma Index|Pneuma System Index]]
-- [[Mechanics/FATE/Pneuma Rules/_Pneuma Rules|Pneuma Rules]]
-- [[Mechanics/FATE/Pneuma Rules/_Pneuma Lore and Physics|Pneuma Lore and Physics]]
+- [[Rules and Mechanics/Pneuma Rules/Index|Pneuma System Index]]
+- [[Rules and Mechanics/Pneuma Rules/Pneuma|Pneuma Rules]]
+- [[Rules and Mechanics/Pneuma Rules/The Physics of Pneuma|Pneuma Lore and Physics]]
 - Pneuma-related terms
 
 ### Factions

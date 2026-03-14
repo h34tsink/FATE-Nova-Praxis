@@ -58,11 +58,11 @@ Each use leaves a signature. If used publicly/often, HPA attention rises.
 
 ## Continuity
 - **Assumptions:** This handout omits GM-only truths and campaign secrets.
-- **Canonical Source:** If this conflicts with detailed text, use [[Rules and Mechanics/Pneuma Rules/Pneuma_Architects_Echo_Rules]].
+- **Canonical Source:** If this conflicts with detailed text, use [[Rules and Mechanics/Pneuma Rules/Pneuma Architects Echo Rules]].
 
 ## Links
 - [[Rules and Mechanics/Pneuma Rules/Index]]
-- [[Rules and Mechanics/Pneuma Rules/Pneuma_Architects_Echo_Rules]]
+- [[Rules and Mechanics/Pneuma Rules/Pneuma Architects Echo Rules]]
 - [[Rules and Mechanics/Pneuma Rules/Pneuma Backlash Consequences]]
 
 #ttrpg #nova-praxis #mechanics #pneuma
