@@ -14,21 +14,46 @@ interface GlossaryEntry {
 }
 
 function parseFrontmatter(content: string): { frontmatter: Record<string, unknown>; body: string } {
-  const match = content.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+  const match = content.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
   if (!match) return { frontmatter: {}, body: content };
 
   const fm: Record<string, unknown> = {};
-  for (const line of match[1].split('\n')) {
-    const kv = line.match(/^(\w+):\s*(.+)$/);
-    if (kv) {
-      const val = kv[2].trim();
+  const lines = match[1].split('\n');
+  let currentKey = '';
+
+  for (const rawLine of lines) {
+    const line = rawLine.replace(/\r$/, '');
+
+    // YAML list item: "  - value"
+    const listItem = line.match(/^\s+-\s+(.+)$/);
+    if (listItem && currentKey) {
+      if (!Array.isArray(fm[currentKey])) fm[currentKey] = [];
+      (fm[currentKey] as string[]).push(listItem[1].trim().replace(/^["']|["']$/g, ''));
+      continue;
+    }
+
+    // Key with inline value: "key: value"
+    const kvInline = line.match(/^(\w[\w\s]*\w|\w+):\s+(.+)$/);
+    if (kvInline) {
+      currentKey = kvInline[1].trim();
+      const val = kvInline[2].trim();
       if (val.startsWith('[') && val.endsWith(']')) {
-        fm[kv[1]] = val.slice(1, -1).split(',').map((s: string) => s.trim().replace(/^["']|["']$/g, ''));
+        fm[currentKey] = val.slice(1, -1).split(',').map((s: string) => s.trim().replace(/^["']|["']$/g, ''));
       } else {
-        fm[kv[1]] = val.replace(/^["']|["']$/g, '');
+        fm[currentKey] = val.replace(/^["']|["']$/g, '');
       }
+      continue;
+    }
+
+    // Key without value (list follows): "key:"
+    const kvEmpty = line.match(/^(\w[\w\s]*\w|\w+):\s*$/);
+    if (kvEmpty) {
+      currentKey = kvEmpty[1].trim();
+      fm[currentKey] = [];
+      continue;
     }
   }
+
   return { frontmatter: fm, body: match[2] };
 }
 
@@ -62,6 +87,8 @@ function parseGlossaryFile(filepath: string): GlossaryEntry | null {
   const cleanBody = body
     .replace(/\[\[([^\]|]+)\|([^\]]+)\]\]/g, '$2')  // [[link|display]] -> display
     .replace(/\[\[([^\]]+)\]\]/g, '$1')               // [[link]] -> link
+    .replace(/\*\*(.+?)\*\*/g, '$1')                  // **bold** -> bold
+    .replace(/\*(.+?)\*/g, '$1')                       // *italic* -> italic
     .replace(/^#\s+.+$/gm, '')                        // remove headings
     .trim();
 

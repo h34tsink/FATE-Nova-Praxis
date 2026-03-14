@@ -1,13 +1,7 @@
 services:
-  bot:
-    build: .
-    env_file: .env
-    volumes:
-      - ${VAULT_PATH:-./vault}:/vault:ro
-    depends_on:
-      db:
-        condition: service_healthy
-    restart: unless-stopped
+  # Bot runs locally (not in Docker) — needs Claude CLI on host
+  # Start with: npx tsx src/index.ts
+  # Or use: powershell -File start-bot.ps1
 
   db:
     image: postgres:16-alpine

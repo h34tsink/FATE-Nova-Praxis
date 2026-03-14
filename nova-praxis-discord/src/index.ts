@@ -21,6 +21,7 @@ import * as recap from './commands/recap.js';
 import * as aspects from './commands/aspects.js';
 import * as gmStart from './commands/gm-start.js';
 import * as sync from './commands/sync.js';
+import * as ask from './commands/ask.js';
 
 interface Command {
   data: { name: string; toJSON(): unknown };
@@ -31,7 +32,7 @@ const commands = new Collection<string, Command>();
 
 const commandModules: Command[] = [
   lookup, glossary, character,
-  npc, scene, rules, recap, aspects, gmStart, sync,
+  npc, scene, rules, recap, aspects, gmStart, sync, ask,
 ];
 
 for (const cmd of commandModules) {
