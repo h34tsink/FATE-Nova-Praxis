@@ -5,7 +5,7 @@ description: "Session state summary — where are we right now? Quick situationa
 
 ## Vault Operations
 
-Prefer `obsidian` CLI commands (via Bash tool) for discovering and reading session files. Fall back to Glob/Read if the CLI is unavailable or if CLI reads return ambiguous results.
+Prefer Obsidian CLI commands (via Bash tool). On this system the CLI binary is `"$LOCALAPPDATA/Obsidian/Obsidian.com"` — use this path instead of `obsidian` in all Bash commands. Prefer the CLI for discovering and reading session files. Fall back to Glob/Read if the CLI is unavailable or if CLI reads return ambiguous results.
 
 # Session Recap
 

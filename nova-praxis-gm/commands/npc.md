@@ -9,7 +9,7 @@ arguments:
 
 ## Vault Operations
 
-Prefer `obsidian` CLI commands (via Bash tool) for reading vault files. The CLI provides wikilink resolution (no need to know exact paths) and backlink traversal for continuity context. Fall back to Read/Grep if the CLI is unavailable (command not found or Obsidian not running) or if a CLI read matches multiple files (ambiguous resolution).
+Prefer Obsidian CLI commands (via Bash tool). On this system the CLI binary is `"$LOCALAPPDATA/Obsidian/Obsidian.com"` — use this path instead of `obsidian` in all Bash commands. Prefer the CLI for reading vault files. The CLI provides wikilink resolution (no need to know exact paths) and backlink traversal for continuity context. Fall back to Read/Grep if the CLI is unavailable (command not found or Obsidian not running) or if a CLI read matches multiple files (ambiguous resolution).
 
 # NPC Dialogue Generator
 

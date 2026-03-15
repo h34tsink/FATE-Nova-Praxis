@@ -9,7 +9,7 @@ arguments:
 
 ## Vault Operations
 
-Prefer `obsidian` CLI commands (via Bash tool) for reading, creating, searching, and modifying vault files. The CLI provides wikilink resolution, template application, and backlink traversal. Fall back to Read/Write/Grep if the CLI is unavailable (command not found or Obsidian not running) or if a CLI read matches multiple files (ambiguous resolution).
+Prefer Obsidian CLI commands (via Bash tool). On this system the CLI binary is `"$LOCALAPPDATA/Obsidian/Obsidian.com"` — use this path instead of `obsidian` in all Bash commands. Example: `"$LOCALAPPDATA/Obsidian/Obsidian.com" read file="Nowak"`. Prefer the CLI for reading, creating, searching, and modifying vault files. The CLI provides wikilink resolution, template application, and backlink traversal. Fall back to Read/Write/Grep if the CLI is unavailable (command not found or Obsidian not running) or if a CLI read matches multiple files (ambiguous resolution).
 
 # Scene Framing Helper
 
