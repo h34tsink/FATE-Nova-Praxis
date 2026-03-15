@@ -16,7 +16,12 @@
     "import:characters": "tsx scripts/import-characters.ts",
     "migrate": "tsx scripts/migrate.ts",
     "reset-db": "tsx scripts/reset-db.ts",
-    "reload": "npm run reset-db && npm run import"
+    "reload": "npm run reset-db && npm run import",
+    "docker:up": "docker compose up --build -d",
+    "docker:down": "docker compose down",
+    "docker:restart": "docker compose down && docker compose up --build -d",
+    "docker:logs": "docker compose logs -f bot",
+    "docker:reload": "npm run reload"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.78.0",
