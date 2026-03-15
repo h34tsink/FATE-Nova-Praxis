@@ -8,7 +8,7 @@ const MAX_FIELD_VALUE = 1024;
  * Discord embeds support: **bold**, *italic*, `code`, ```code blocks```, > quotes, ||spoilers||
  * Discord does NOT support: # headers, markdown tables, images
  */
-function formatForDiscord(text: string): string {
+export function formatForDiscord(text: string): string {
   let result = text;
 
   // Convert markdown tables to fixed-width code blocks
