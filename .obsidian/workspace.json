@@ -289,8 +289,7 @@
       "print:Print note": false,
       "darlal-switcher-plus:Open in Headings Mode": false,
       "darlal-switcher-plus:Open Symbols for the active editor": false,
-      "obsidian-kanban:Create new board": false,
-      "terminal:Open terminal": false
+      "obsidian-kanban:Create new board": false
     }
   },
   "active": "8cc94c71b16ef3f5",
