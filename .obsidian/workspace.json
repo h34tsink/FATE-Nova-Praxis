@@ -6,7 +6,7 @@
       {
         "id": "ab67460d20891661",
         "type": "tabs",
-        "dimension": 58.58791581805839,
+        "dimension": 54.8540393754243,
         "children": [
           {
             "id": "f9f06a9f18196b26",
@@ -59,7 +59,7 @@
       {
         "id": "697123d5b31f7bf1",
         "type": "tabs",
-        "dimension": 41.412084181941616,
+        "dimension": 45.1459606245757,
         "children": [
           {
             "id": "b87f3a475bc8ee33",
@@ -292,11 +292,11 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "8cc94c71b16ef3f5",
+  "active": "b87f3a475bc8ee33",
   "lastOpenFiles": [
+    "Locations/Cere.md",
     "Locations/Asteroid Belts/SOL Belt.md",
     "Locations/Asteroid Belts/Asteroids/Cere.md",
-    "Locations/Cere.md",
     "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md",
     "Characters/NPCs/Named NPCs/Malachite.md",
     "Characters/NPCs/Generic NPCs/Cyber-Merc.md",

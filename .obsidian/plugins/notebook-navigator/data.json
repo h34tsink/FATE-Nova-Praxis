@@ -12,7 +12,43 @@
       "hiddenFileNames": [],
       "hiddenFileTags": [],
       "periodicNotesFolder": "",
-      "propertyKeys": []
+      "propertyKeys": [],
+      "navRainbow": {
+        "mode": "none",
+        "shortcuts": {
+          "enabled": false,
+          "firstColor": "#ef4444",
+          "lastColor": "#8b5cf6",
+          "transitionStyle": "rgb"
+        },
+        "recent": {
+          "enabled": false,
+          "firstColor": "#ef4444",
+          "lastColor": "#8b5cf6",
+          "transitionStyle": "rgb"
+        },
+        "folders": {
+          "enabled": true,
+          "firstColor": "#ef4444",
+          "lastColor": "#8b5cf6",
+          "transitionStyle": "hue",
+          "scope": "root"
+        },
+        "tags": {
+          "enabled": false,
+          "firstColor": "#ef4444",
+          "lastColor": "#8b5cf6",
+          "transitionStyle": "hue",
+          "scope": "root"
+        },
+        "properties": {
+          "enabled": false,
+          "firstColor": "#ef4444",
+          "lastColor": "#8b5cf6",
+          "transitionStyle": "hue",
+          "scope": "root"
+        }
+      }
     }
   ],
   "vaultTitle": "navigation",
@@ -36,6 +72,8 @@
     "calendarWeeksToShow": "local",
     "compactItemHeight": "local",
     "compactItemHeightScaleText": "local",
+    "featureImageSize": "synced",
+    "featureImagePixelSize": "synced",
     "uiScale": "local"
   },
   "createNewNotesInNewTab": false,
@@ -134,8 +172,10 @@
   "frontmatterCreatedField": "",
   "frontmatterModifiedField": "",
   "frontmatterDateFormat": "",
-  "showFileIcons": true,
   "showFileIconUnfinishedTask": false,
+  "showFileBackgroundUnfinishedTask": false,
+  "unfinishedTaskBackgroundColor": "#ef000050",
+  "showFileIcons": true,
   "showFilenameMatchIcons": false,
   "fileNameIconMap": {},
   "showCategoryIcons": false,
@@ -155,6 +195,8 @@
     "feature"
   ],
   "featureImageExcludeProperties": [],
+  "featureImageSize": "64",
+  "featureImagePixelSize": "256",
   "forceSquareFeatureImage": true,
   "downloadExternalFeatureImages": true,
   "showFileTags": true,
@@ -165,9 +207,11 @@
   "showFileProperties": true,
   "colorFileProperties": true,
   "prioritizeColoredFileProperties": true,
-  "notePropertyType": "none",
   "showFilePropertiesInCompactMode": false,
   "showPropertiesOnSeparateRows": false,
+  "enablePropertyInternalLinks": true,
+  "enablePropertyExternalLinks": true,
+  "notePropertyType": "none",
   "showFileDate": true,
   "alphabeticalDateMode": "modified",
   "showParentFolder": true,
@@ -351,6 +395,7 @@
   "pinnedNotes": {},
   "fileIcons": {},
   "fileColors": {},
+  "fileBackgroundColors": {},
   "folderIcons": {},
   "folderColors": {},
   "folderBackgroundColors": {},
@@ -366,7 +411,11 @@
   "propertyIcons": {},
   "propertyColors": {},
   "propertyBackgroundColors": {},
+  "propertySortOverrides": {},
   "propertyTreeSortOverrides": {},
+  "propertyAppearances": {},
+  "virtualFolderColors": {},
+  "virtualFolderBackgroundColors": {},
   "navigationSeparators": {},
   "userColors": [
     "#ffffff",
@@ -390,7 +439,7 @@
     "#404040",
     "#404040"
   ],
-  "lastShownVersion": "2.4.3",
+  "lastShownVersion": "2.5.0",
   "rootFolderOrder": [],
   "rootTagOrder": [],
   "rootPropertyOrder": [],
