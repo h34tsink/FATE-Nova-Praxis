@@ -6,7 +6,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "dev": "tsx src/index.ts",
+    "dev": "npm run reload && tsx src/index.ts",
     "start": "node dist/index.js",
     "import": "tsx scripts/import-all.ts",
     "import:game-data": "tsx scripts/import-game-data.ts",
