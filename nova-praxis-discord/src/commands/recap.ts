@@ -1,9 +1,11 @@
-import { SlashCommandBuilder, ChatInputCommandInteraction } from 'discord.js';
+import { SlashCommandBuilder, ChatInputCommandInteraction, MessageFlags } from 'discord.js';
 import { isGM } from '../middleware/permissions.js';
 import { callClaude } from '../claude/cli.js';
 import { buildRecapContext } from '../claude/context.js';
 import { gmResponseEmbed } from '../embeds/gm-response.js';
 import { playerResponseEmbed } from '../embeds/player-response.js';
+import { cacheForShare } from '../share-cache.js';
+import { shareButton } from '../embeds/share-button.js';
 
 export const data = new SlashCommandBuilder()
   .setName('recap')
@@ -17,10 +19,14 @@ export async function execute(interaction: ChatInputCommandInteraction) {
   try {
     const prompt = await buildRecapContext();
     const result = await callClaude(prompt);
-    const embeds = gm
-      ? gmResponseEmbed('Recap', result.output)
-      : playerResponseEmbed('Recap', result.output);
-    await interaction.editReply({ embeds });
+    if (gm) {
+      const customId = cacheForShare('Recap', result.output, interaction.user.id);
+      const embeds = gmResponseEmbed('Recap', result.output);
+      await interaction.editReply({ embeds, components: [shareButton(customId)] });
+    } else {
+      const embeds = playerResponseEmbed('Recap', result.output);
+      await interaction.editReply({ embeds });
+    }
   } catch (err) {
     await interaction.editReply({
       content: `Claude CLI error: ${err instanceof Error ? err.message : 'unknown'}`,

@@ -1,9 +1,11 @@
-import { SlashCommandBuilder, ChatInputCommandInteraction } from 'discord.js';
+import { SlashCommandBuilder, ChatInputCommandInteraction, MessageFlags } from 'discord.js';
 import { isGM } from '../middleware/permissions.js';
 import { callClaude } from '../claude/cli.js';
 import { buildRulesContext } from '../claude/context.js';
 import { gmResponseEmbed, rulesEmbed } from '../embeds/gm-response.js';
 import { playerResponseEmbed } from '../embeds/player-response.js';
+import { cacheForShare } from '../share-cache.js';
+import { shareButton } from '../embeds/share-button.js';
 
 export const data = new SlashCommandBuilder()
   .setName('rules')
@@ -23,10 +25,18 @@ export async function execute(interaction: ChatInputCommandInteraction) {
     const parts = fastAnswer.split('\n\n**Source:**');
     const answer = parts[0];
     const source = parts[1]?.trim() || 'Indexed rules';
-    await interaction.reply({
-      embeds: [rulesEmbed(answer, source)],
-      ephemeral: gm,
-    });
+    if (gm) {
+      const customId = cacheForShare('Rules Lookup', fastAnswer, interaction.user.id);
+      await interaction.reply({
+        embeds: [rulesEmbed(answer, source)],
+        flags: MessageFlags.Ephemeral,
+        components: [shareButton(customId)],
+      });
+    } else {
+      await interaction.reply({
+        embeds: [rulesEmbed(answer, source)],
+      });
+    }
     return;
   }
 
@@ -35,10 +45,14 @@ export async function execute(interaction: ChatInputCommandInteraction) {
 
   try {
     const result = await callClaude(fullPrompt);
-    const embeds = gm
-      ? gmResponseEmbed('Rules', result.output)
-      : playerResponseEmbed('Rules', result.output);
-    await interaction.editReply({ embeds });
+    if (gm) {
+      const customId = cacheForShare('Rules', result.output, interaction.user.id);
+      const embeds = gmResponseEmbed('Rules', result.output);
+      await interaction.editReply({ embeds, components: [shareButton(customId)] });
+    } else {
+      const embeds = playerResponseEmbed('Rules', result.output);
+      await interaction.editReply({ embeds });
+    }
   } catch (err) {
     await interaction.editReply({
       content: `Claude CLI error: ${err instanceof Error ? err.message : 'unknown'}`,

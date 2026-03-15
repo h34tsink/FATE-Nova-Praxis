@@ -3,12 +3,16 @@ import {
   Collection,
   Events,
   GatewayIntentBits,
+  MessageFlags,
   REST,
   Routes,
   ChatInputCommandInteraction,
 } from 'discord.js';
 import { config } from './config.js';
 import { pool } from './db/client.js';
+import { consumeSharedContent } from './share-cache.js';
+import { playerResponseEmbed } from './embeds/player-response.js';
+import { disabledShareButton } from './embeds/share-button.js';
 
 // Import commands
 import * as lookup from './commands/lookup.js';
@@ -78,6 +82,42 @@ client.once(Events.ClientReady, async (readyClient) => {
 client.on(Events.InteractionCreate, async (interaction) => {
   if (interaction.isAutocomplete()) {
     await handleAutocomplete(interaction);
+    return;
+  }
+
+  // Handle share button clicks
+  if (interaction.isButton() && interaction.customId.startsWith('share_')) {
+    try {
+      const entry = consumeSharedContent(interaction.customId);
+      if (!entry) {
+        await interaction.reply({
+          content: 'Content expired — run the command again.',
+          flags: MessageFlags.Ephemeral,
+        });
+        return;
+      }
+
+      if (interaction.user.id !== entry.userId) {
+        await interaction.reply({
+          content: 'Only the GM who ran the command can share it.',
+          flags: MessageFlags.Ephemeral,
+        });
+        return;
+      }
+
+      // Post public player-safe embed
+      const embeds = playerResponseEmbed(entry.title, entry.content, 'Shared by GM');
+      if (interaction.channel && 'send' in interaction.channel) {
+        await interaction.channel.send({ embeds });
+      }
+
+      // Disable the button on the ephemeral message
+      await interaction.update({
+        components: [disabledShareButton(interaction.customId)],
+      });
+    } catch (err) {
+      console.error('Error handling share button:', err);
+    }
     return;
   }
 

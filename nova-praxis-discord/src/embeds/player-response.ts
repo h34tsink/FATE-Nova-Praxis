@@ -18,12 +18,18 @@ export function stripGmContent(content: string): string {
   for (const pattern of GM_PATTERNS) {
     result = result.replace(pattern, '');
   }
+  // Strip hidden aspect section blocks
+  result = result.replace(/###\s*Scene Aspects \(Hidden\)[\s\S]*?(?=###|$)/g, '');
   // Collapse runs of 3+ newlines into 2
   result = result.replace(/\n{3,}/g, '\n\n');
   return result.trim();
 }
 
-export function playerResponseEmbed(title: string, content: string): EmbedBuilder[] {
+export function playerResponseEmbed(
+  title: string,
+  content: string,
+  footer = 'Powered by Claude'
+): EmbedBuilder[] {
   const embeds: EmbedBuilder[] = [];
   const formatted = formatForDiscord(stripGmContent(content));
 
@@ -33,7 +39,7 @@ export function playerResponseEmbed(title: string, content: string): EmbedBuilde
         .setTitle(title)
         .setDescription(formatted)
         .setColor(0x5865f2)
-        .setFooter({ text: 'Powered by Claude' })
+        .setFooter({ text: footer })
     );
     return embeds;
   }

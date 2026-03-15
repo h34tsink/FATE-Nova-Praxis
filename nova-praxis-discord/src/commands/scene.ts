@@ -1,8 +1,10 @@
-import { SlashCommandBuilder, ChatInputCommandInteraction } from 'discord.js';
+import { SlashCommandBuilder, ChatInputCommandInteraction, MessageFlags } from 'discord.js';
 import { requireGM } from '../middleware/permissions.js';
 import { callClaude } from '../claude/cli.js';
 import { buildSceneContext } from '../claude/context.js';
 import { gmResponseEmbed } from '../embeds/gm-response.js';
+import { cacheForShare } from '../share-cache.js';
+import { shareButton } from '../embeds/share-button.js';
 
 export const data = new SlashCommandBuilder()
   .setName('scene')
@@ -14,15 +16,16 @@ export const data = new SlashCommandBuilder()
 export async function execute(interaction: ChatInputCommandInteraction) {
   if (!(await requireGM(interaction))) return;
 
-  await interaction.deferReply();
+  await interaction.deferReply({ flags: MessageFlags.Ephemeral });
 
   const description = interaction.options.getString('description', true);
 
   try {
     const prompt = await buildSceneContext(description);
     const result = await callClaude(prompt);
+    const customId = cacheForShare('Scene', result.output, interaction.user.id);
     const embeds = gmResponseEmbed('Scene', result.output);
-    await interaction.editReply({ embeds });
+    await interaction.editReply({ embeds, components: [shareButton(customId)] });
   } catch (err) {
     await interaction.editReply({
       content: `Claude CLI error: ${err instanceof Error ? err.message : 'unknown'}`,

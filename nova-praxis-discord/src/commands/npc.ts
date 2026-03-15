@@ -4,6 +4,8 @@ import { callClaude } from '../claude/cli.js';
 import { buildNpcContext } from '../claude/context.js';
 import { gmResponseEmbed } from '../embeds/gm-response.js';
 import { sendAsNpc } from '../webhooks.js';
+import { cacheForShare } from '../share-cache.js';
+import { shareButton } from '../embeds/share-button.js';
 
 export const data = new SlashCommandBuilder()
   .setName('npc')
@@ -54,6 +56,7 @@ export async function execute(interaction: ChatInputCommandInteraction) {
 
     const { dialogue, gmNotes } = splitDialogueAndNotes(result.output);
     const channel = interaction.channel;
+    const customId = cacheForShare(`NPC: ${token}`, result.output, interaction.user.id);
 
     // Try webhook mode for NPC dialogue, fall back to embed
     let webhookSent = false;
@@ -69,16 +72,19 @@ export async function execute(interaction: ChatInputCommandInteraction) {
     // If webhook failed or no dialogue split, send full response as embed
     if (!webhookSent) {
       const embeds = gmResponseEmbed(`NPC: ${token}`, result.output);
-      await interaction.editReply({ embeds });
+      await interaction.editReply({ embeds, components: [shareButton(customId)] });
       return;
     }
 
     // Send GM notes as ephemeral reply (only GM sees)
     if (gmNotes) {
       const embeds = gmResponseEmbed(`GM Notes: ${token}`, gmNotes);
-      await interaction.editReply({ embeds });
+      await interaction.editReply({ embeds, components: [shareButton(customId)] });
     } else {
-      await interaction.editReply({ content: 'Dialogue sent.' });
+      await interaction.editReply({
+        content: 'Dialogue sent.',
+        components: [shareButton(customId)],
+      });
     }
   } catch (err) {
     await interaction.editReply({
