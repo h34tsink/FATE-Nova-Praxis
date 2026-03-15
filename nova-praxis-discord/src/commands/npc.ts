@@ -43,9 +43,8 @@ function splitDialogueAndNotes(output: string): { dialogue: string; gmNotes: str
 }
 
 export async function execute(interaction: ChatInputCommandInteraction) {
-  if (!(await requireGM(interaction))) return;
-
   await interaction.deferReply({ flags: MessageFlags.Ephemeral });
+  if (!(await requireGM(interaction))) return;
 
   const token = interaction.options.getString('token', true);
   const situation = interaction.options.getString('situation') || '';

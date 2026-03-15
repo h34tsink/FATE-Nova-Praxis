@@ -1,4 +1,4 @@
-import { ChatInputCommandInteraction, GuildMember } from 'discord.js';
+import { ChatInputCommandInteraction, GuildMember, MessageFlags } from 'discord.js';
 import { config } from '../config.js';
 
 export function isGM(interaction: ChatInputCommandInteraction): boolean {
@@ -12,9 +12,13 @@ export function isGM(interaction: ChatInputCommandInteraction): boolean {
 export async function requireGM(interaction: ChatInputCommandInteraction): Promise<boolean> {
   if (isGM(interaction)) return true;
 
-  await interaction.reply({
-    content: 'This command is GM-only.',
-    ephemeral: true,
-  });
+  if (interaction.deferred || interaction.replied) {
+    await interaction.editReply({ content: 'This command is GM-only.' });
+  } else {
+    await interaction.reply({
+      content: 'This command is GM-only.',
+      flags: MessageFlags.Ephemeral,
+    });
+  }
   return false;
 }

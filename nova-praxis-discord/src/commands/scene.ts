@@ -14,9 +14,8 @@ export const data = new SlashCommandBuilder()
   );
 
 export async function execute(interaction: ChatInputCommandInteraction) {
-  if (!(await requireGM(interaction))) return;
-
   await interaction.deferReply({ flags: MessageFlags.Ephemeral });
+  if (!(await requireGM(interaction))) return;
 
   const description = interaction.options.getString('description', true);
 

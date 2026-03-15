@@ -1,4 +1,4 @@
-import { SlashCommandBuilder, ChatInputCommandInteraction } from 'discord.js';
+import { SlashCommandBuilder, ChatInputCommandInteraction, MessageFlags } from 'discord.js';
 import { requireGM } from '../middleware/permissions.js';
 import { callClaude } from '../claude/cli.js';
 import { searchGameData, searchGlossary, searchRules, getEntityCard, getEntityCardByName } from '../db/queries.js';
@@ -65,9 +65,8 @@ async function gatherContext(question: string): Promise<string> {
 }
 
 export async function execute(interaction: ChatInputCommandInteraction) {
+  await interaction.deferReply({ flags: MessageFlags.Ephemeral });
   if (!(await requireGM(interaction))) return;
-
-  await interaction.deferReply();
 
   const question = interaction.options.getString('question', true);
 
