@@ -43,17 +43,27 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sessions/Session 9/Scenes/Scene 01 - Approach to Cere/_Scene 01 - Approach to Cere.md",
+                "file": "Sessions/What Are the Talons Up To - COMPREHENSIVE.md",
                 "mode": "preview",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "_Scene 01 - Approach to Cere"
+              "title": "What Are the Talons Up To - COMPREHENSIVE"
+            }
+          },
+          {
+            "id": "c6b0feb6609c3e0f",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -269,19 +279,21 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "8cc94c71b16ef3f5",
+  "active": "c6b0feb6609c3e0f",
   "lastOpenFiles": [
-    "nova-praxis-gm/commands/rules.md.tmp.287432.1773549299851",
-    "nova-praxis-gm/commands/aspects.md.tmp.287432.1773549298819",
-    "nova-praxis-gm/commands/recap.md.tmp.287432.1773549297610",
-    "nova-praxis-gm/commands/gm-start.md.tmp.287432.1773549296583",
-    "nova-praxis-gm/commands/npc.md.tmp.287432.1773549295244",
-    "nova-praxis-gm/commands/scene.md.tmp.287432.1773549293920",
-    "nova-praxis-gm/commands/rules.md.tmp.287432.1773548975205",
-    "nova-praxis-gm/commands/aspects.md.tmp.287432.1773548973798",
-    "nova-praxis-gm/commands/recap.md.tmp.287432.1773548972011",
-    "nova-praxis-gm/commands/gm-start.md.tmp.287432.1773548970697",
-    "nova-praxis-gm/commands/npc.md.tmp.287432.1773548969669",
+    "Sessions/What Are the Talons Up To - COMPREHENSIVE.md",
+    "Sessions/Session 9/Prep/GM Reference Sheet.html.tmp.287432.1773551520797",
+    "Sessions/Session 9/Prep/GM Reference Sheet.html.tmp.287432.1773551515721",
+    "Sessions/Session 9/Prep/GM Reference Sheet.html.tmp.287432.1773551508491",
+    "Sessions/Session 9/Prep/GM Reference Sheet.html.tmp.287432.1773551502280",
+    "Sessions/Session 9/Prep/GM Reference Sheet.html.tmp.287432.1773551497784",
+    "Sessions/Session 9/Prep/GM Reference Sheet.html.tmp.287432.1773551492113",
+    "Sessions/Session 9/Prep/GM Reference Sheet.html.tmp.287432.1773551486793",
+    "Sessions/Session 9/Prep/GM Reference Sheet.html.tmp.287432.1773551476053",
+    "Sessions/Session 9/Prep/GM Reference Sheet.html.tmp.287432.1773551471739",
+    "Sessions/Session 9/Prep/GM Reference Sheet.html.tmp.287432.1773551466419",
+    "Sessions/Valare's Situation.md",
+    "Sessions/Session 9/Scenes/Scene 01 - Approach to Cere/_Scene 01 - Approach to Cere.md",
     "Locations/Cere.md",
     "Characters/Players/Aeddarius Crucial/Aeddarius Crucial - FATE Character.md",
     "Characters/Players/PC Overview.md",
@@ -297,7 +309,6 @@
     "Sessions/Session 9/Scenes/Scene 02 - Echoes in the Noise/Deepshaft Tavern.md",
     "Sessions/Session 9/Scenes/Scene 02 - Echoes in the Noise/Core Markets.md",
     "Sessions/Session 9/Scenes/Scene 02 - Echoes in the Noise/Abandoned Mining Access.md",
-    "Sessions/Session 9/Scenes/Scene 01 - Approach to Cere/_Scene 01 - Approach to Cere.md",
     "Sessions/Session 9/Scenes/Scene 01 - Approach to Cere/Outer Approach.md",
     "Sessions/Session 9/Scenes/Scene 01 - Approach to Cere/Docking Intake Queue.md",
     "Sessions/Session 9/Scenes/Scene 01 - Approach to Cere/Docking Bay Exterior.md",
@@ -306,7 +317,6 @@
     "Character Creation Summary.md",
     "Sessions/Session 6/Summary.md",
     "Untitled Kanban.md",
-    "nova-praxis-character-creator/node_modules/aria-query/README.md",
     "nova-praxis-character-creator/static/portraits/Kallius.png",
     "nova-praxis-character-creator/static/portraits/Dustin.png",
     "nova-praxis-character-creator/static/portraits/Azaria-Dawson.png",
