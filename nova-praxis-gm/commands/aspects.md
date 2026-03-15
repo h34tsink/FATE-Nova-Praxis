@@ -7,6 +7,10 @@ arguments:
     required: true
 ---
 
+## Vault Operations
+
+Prefer `obsidian` CLI commands (via Bash tool) for reading vault context (NPC entity cards, locations, factions). Fall back to Read/Grep if the CLI is unavailable or if CLI reads return ambiguous results.
+
 # Aspect Generator
 
 Generate evocative, playable FATE Aspects for any game element in a Nova Praxis session.
@@ -101,8 +105,9 @@ Separate categories with a blank line and `---` divider.
 - 2-6 words per Aspect (punchy, memorable at the table)
 - Every Aspect MUST be double-edged
 - Nova Praxis vocabulary: mesh, sleeve, ego, fork, CID, House names, Apotheosis, SINC, mnemonic, etc.
-- Draw from vault lore: `Factions/`, `Locations/`, `Glossary/`
-- If the subject is an NPC, read their entity card for personality-grounded aspects
+- Draw from vault lore using CLI: `obsidian read file="[Faction/Location/Term]"` and `obsidian backlinks file="[subject]"` for connected context
+- If the subject is an NPC, read their entity card: `obsidian read file="[NPC Name]"` (wikilink resolution finds it regardless of rank folder)
 - Total: 15-25 Aspects across all relevant categories
 - No generic fantasy tropes — hard sci-fi transhumanism only
 - Do NOT use long prose descriptions — tables only
+- After displaying aspects, if an active scene doc exists in the current session, offer to save them: `obsidian append file="[scene doc]" content="[aspects]" silent`. If no active scene doc, display only.

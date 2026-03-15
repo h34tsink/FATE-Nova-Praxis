@@ -3,6 +3,10 @@ name: recap
 description: "Session state summary — where are we right now? Quick situational awareness in 10 seconds."
 ---
 
+## Vault Operations
+
+Prefer `obsidian` CLI commands (via Bash tool) for discovering and reading session files. Fall back to Glob/Read if the CLI is unavailable or if CLI reads return ambiguous results.
+
 # Session Recap
 
 Generate a compact "where are we right now?" summary for the GM.
@@ -13,14 +17,27 @@ Read current session state and produce an at-a-glance summary.
 
 ## Source Files (read in order)
 
-1. Find the highest-numbered `Sessions/Session N/` folder
-2. Read any of these that exist:
-   - `Session N - GM Command Board.md` (live state)
-   - `Session N - Live Dashboard.md` (real-time tracker)
-   - `Session N - Ops Index.md` (master index)
-   - `Session N - Guide.md` (session runbook)
-   - `Session N - Scenes and Zones.md` (scene details)
-3. Read `Campaign Overview/Cold Start Syndicate - Campaign Summary.md` for arc context
+1. Find the most recent session folder:
+   ```bash
+   obsidian files path="Sessions" sort=modified limit=5
+   ```
+
+2. Read session state files using CLI wikilink resolution:
+   ```bash
+   obsidian read file="Session N - GM Command Board"
+   obsidian read file="Session N - Live Dashboard"
+   obsidian read file="Session N - Ops Index"
+   obsidian read file="Session N - Guide"
+   obsidian read file="Session N - Scenes and Zones"
+   ```
+   Skip any that don't exist.
+
+3. Read arc context:
+   ```bash
+   obsidian read file="Cold Start Syndicate - Campaign Summary"
+   ```
+
+If CLI is unavailable, fall back to Glob for `Sessions/Session */` folders and direct Read for each file.
 
 ## Response Format
 

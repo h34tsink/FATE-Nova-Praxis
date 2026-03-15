@@ -7,40 +7,68 @@ arguments:
     required: false
 ---
 
+## Vault Operations
+
+Prefer `obsidian` CLI commands (via Bash tool) for reading and discovering vault files. The CLI provides wikilink resolution and file listing with sort/filter. Fall back to Read/Glob if the CLI is unavailable (command not found or Obsidian not running) or if a CLI read matches multiple files (ambiguous resolution).
+
 # GM Session Bootstrap
 
 Initialize a GM session by loading all relevant context into Claude's working memory.
 
 ## Your Task
 
-Bootstrap session: **{{ session }}** (if blank, find the highest-numbered `Sessions/Session N/` folder)
+Bootstrap session: **{{ session }}** (if blank, use `obsidian files path="Sessions" sort=modified limit=1` to find the most recent session folder)
 
 ## Bootstrap Procedure
 
 ### Step 1: Locate Session Files
 
-Find and read these files for the target session (substitute N for session number):
+List all files in the session folder, then read each one:
 
-1. `Sessions/Session N/Session N - Ops Index.md` — master launchpad
-2. `Sessions/Session N/Session N - Guide.md` — primary runbook
-3. `Sessions/Session N/Session N - Scenes and Zones.md` — scene framing + zones
-4. `Sessions/Session N/Session N - GM Command Board.md` — live state tracker (if exists)
-5. `Sessions/Session N/Session N - Live Dashboard.md` — real-time state (if exists)
-6. `Sessions/Session N/Session N - Beats (GM Runtime).md` — beat-by-beat detail (if exists)
+```bash
+obsidian files path="Sessions/Session N" sort=modified
+```
 
-If any file doesn't exist, skip it and note what's missing.
+Read each file found using CLI wikilink resolution:
+
+```bash
+obsidian read file="Session N - Ops Index"
+obsidian read file="Session N - Guide"
+obsidian read file="Session N - Scenes and Zones"
+obsidian read file="Session N - GM Command Board"
+obsidian read file="Session N - Live Dashboard"
+obsidian read file="Session N - Beats (GM Runtime)"
+```
+
+If any file doesn't exist, skip it and note what's missing. If CLI is unavailable, fall back to Glob/Read with direct paths.
 
 ### Step 2: Load Arc Context
 
 Read:
-- `Campaign Overview/Cold Start Syndicate - Campaign Summary.md` — arc brief + session highlights
+
+```bash
+obsidian read file="Cold Start Syndicate - Campaign Summary"
+```
+
+Arc brief + session highlights.
 
 ### Step 3: Load Active NPCs
 
-From the session guide and scenes, identify which NPCs appear in this session. Read their entity cards from `GM AI/Entity Cards/`.
+From the session guide and scenes, identify which NPCs appear in this session. Read their entity cards using CLI wikilink resolution:
 
-Also read:
-- `GM AI/Claude Code - Persona & Complexity Matrix.md` — voice rules for all entity types
+```bash
+obsidian read file="[NPC Name]"
+```
+
+This finds the entity card regardless of rank folder. For each NPC identified, read their card.
+
+Also load the voice rules:
+
+```bash
+obsidian read file="Persona & Complexity Matrix"
+```
+
+If CLI is unavailable, read entity cards from `GM AI/Entity Cards/` and `GM AI/Claude Code - Persona & Complexity Matrix.md` directly.
 
 ### Step 4: Display Session Brief
 

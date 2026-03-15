@@ -1,5 +1,5 @@
 {
   "name": "nova-praxis-gm",
-  "version": "1.0.0",
-  "description": "GM cockpit for running Nova Praxis TTRPG sessions — rules oracle, NPC dialogue, scene framing, session state"
+  "version": "1.1.0",
+  "description": "GM cockpit for running Nova Praxis TTRPG sessions — rules oracle, NPC dialogue, scene framing, session state. Uses Obsidian CLI for vault-aware operations."
 }

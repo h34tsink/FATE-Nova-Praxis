@@ -7,6 +7,10 @@ arguments:
     required: true
 ---
 
+## Vault Operations
+
+Prefer `obsidian` CLI commands (via Bash tool) for reading vault files. The CLI provides wikilink resolution (no need to know exact paths) and backlink traversal for continuity context. Fall back to Read/Grep if the CLI is unavailable (command not found or Obsidian not running) or if a CLI read matches multiple files (ambiguous resolution).
+
 # NPC Dialogue Generator
 
 You are generating in-character NPC dialogue for a FATE-based Nova Praxis TTRPG session. The GM needs a fast, voice-accurate response.
@@ -25,7 +29,13 @@ Call the `get_entity_card` MCP tool with the NPC token. This returns parsed card
 
 For a full prompt payload with context, use the `npc_prompt` MCP tool instead (pass key + context array + style).
 
-If the token doesn't match, search `GM AI/Entity Cards/` and `Characters/Named NPCs/` manually.
+If the MCP tools are unavailable or the token doesn't match, use CLI wikilink resolution:
+
+```bash
+obsidian read file="[NPC Name]"
+```
+
+This resolves the entity card regardless of rank folder. If CLI is also unavailable, search `GM AI/Entity Cards/` and `Characters/Named NPCs/` manually with Glob/Read.
 
 ### Known Tokens
 
@@ -34,11 +44,16 @@ If the token doesn't match, search `GM AI/Entity Cards/` and `Characters/Named N
 ## Step 2: Voice Generation
 
 1. **Use the entity card data** — Identity, Voice Profile, Motivations, Knowledge Boundaries
-2. **Apply the Persona & Complexity Matrix** from `GM AI/Claude Code - Persona & Complexity Matrix.md`:
+2. **Apply the Persona & Complexity Matrix** (load via `obsidian read file="Persona & Complexity Matrix"`):
    - Match entity **class** for tone, cadence, lexicon
    - Match **rank** for dialogue length and complexity
 3. **Check session context** — read the most recent session dashboard or live state if available
-4. **Generate dialogue** respecting:
+4. **Check continuity via backlinks** — use CLI to find prior session references:
+   ```bash
+   obsidian backlinks file="[NPC Name]"
+   ```
+   Filter results to `Sessions/` and `Plot/` paths only. Skip Glossary, Factions, and Location backlinks unless specifically relevant to the current situation. Use this for continuity awareness — prior events, promises made, grudges held.
+5. **Generate dialogue** respecting:
    - Voice Profile: use signature phrasing, avoid words they avoid
    - Knowledge Boundaries: only say what they know or suspect; hide what they must hide
    - Motivations: every line serves their primary or secondary goal
