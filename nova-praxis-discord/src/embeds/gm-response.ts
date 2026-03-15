@@ -11,7 +11,7 @@ const MAX_FIELD_VALUE = 1024;
 export function formatForDiscord(text: string): string {
   let result = text;
 
-  // Convert markdown tables to fixed-width code blocks
+  // Convert markdown tables to Discord-friendly format
   result = result.replace(
     /((?:^\|.+\|$\n?)+)/gm,
     (tableBlock) => {
@@ -29,30 +29,55 @@ export function formatForDiscord(text: string): string {
 
       if (parsed.length === 0) return tableBlock;
 
-      // Calculate column widths
       const colCount = Math.max(...parsed.map((r) => r.length));
+      const headers = parsed[0] || [];
+      const dataRows = parsed.slice(1);
+
+      // Wide tables (3+ cols with long content) -> readable list format
+      const totalTextWidth = dataRows.reduce(
+        (sum, row) => sum + row.reduce((rs, cell) => rs + cell.length, 0),
+        0
+      );
+      const avgRowWidth = dataRows.length > 0 ? totalTextWidth / dataRows.length : 0;
+
+      if (colCount >= 3 && avgRowWidth > 60) {
+        const lines: string[] = [];
+        for (const row of dataRows) {
+          // First column = main item (bold)
+          lines.push(`**${row[0] || ''}**`);
+          // Remaining columns = labeled with header name
+          for (let c = 1; c < colCount; c++) {
+            if (row[c]) {
+              const label = headers[c] || `Col ${c}`;
+              lines.push(`  ${label}: ${row[c]}`);
+            }
+          }
+          lines.push('');
+        }
+        return lines.join('\n');
+      }
+
+      // Narrow tables -> fixed-width code block (existing behavior)
       const widths: number[] = [];
       for (let c = 0; c < colCount; c++) {
         widths[c] = Math.max(...parsed.map((r) => (r[c] || '').length), 2);
       }
 
-      // Build aligned table
-      const lines: string[] = [];
+      const codeLines: string[] = [];
       for (let i = 0; i < parsed.length; i++) {
         const row = parsed[i];
         const cells = [];
         for (let c = 0; c < colCount; c++) {
           cells.push((row[c] || '').padEnd(widths[c]));
         }
-        lines.push(cells.join(' | '));
+        codeLines.push(cells.join(' | '));
 
-        // Add separator after header row
         if (i === 0 && parsed.length > 1) {
-          lines.push(widths.map((w) => '-'.repeat(w)).join('-+-'));
+          codeLines.push(widths.map((w) => '-'.repeat(w)).join('-+-'));
         }
       }
 
-      return '```\n' + lines.join('\n') + '\n```';
+      return '```\n' + codeLines.join('\n') + '\n```';
     }
   );
 
