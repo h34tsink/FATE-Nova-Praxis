@@ -21,7 +21,7 @@ export const skillsData = [
     name: 'Demolitions',
     type: 'Standard Skill',
     description:
-      'The use of explosives to destroy structures, disable vehicles, breach obstacles, and harm others.'
+      'The ability to use explosives, such as grenades or satchel charges, both in combat and to demolish structures.'
   },
   {
     id: 'diplomacy',
@@ -35,7 +35,7 @@ export const skillsData = [
     name: 'Education',
     type: 'Standard Skill',
     description:
-      'Your general knowledge and educational background. Use this to recall facts, understand academic subjects, and make logical deductions.'
+      "Education measures 'book learning.' It covers history, science, geography, literature, sociology, government, physics, math, and other academic fields of study."
   },
   {
     id: 'engineering_hardware',
@@ -49,28 +49,28 @@ export const skillsData = [
     name: 'Engineering, Software (S.Eng)',
     type: 'Standard Skill',
     description:
-      'Understanding human-written software, writing or manipulating code, operating CISTs.'
+      'Your understanding of how human-written computer software works, both in how to write code and manipulate existing software. This Skill is also used to operate CISTs.'
   },
   {
     id: 'firearms',
     name: 'Firearms',
     type: 'Standard Skill',
     description:
-      'Your skill with projectile weapons including pistols, rifles, shotguns, and exotic projectile weapons.'
+      'Your capacity to use projectile weapons, be they railguns, coil guns, particle accelerators, or heavy artillery such as cannons or vehicular weaponry.'
   },
   {
     id: 'guile',
     name: 'Guile',
     type: 'Standard Skill',
     description:
-      'Your ability to lie, deceive, and manipulate others through words and actions. Also covers disguise and acting.'
+      'The ability to lie, con, seduce, or bluff. Also the ability to haggle for a good deal.'
   },
   {
     id: 'insight',
     name: 'Insight',
     type: 'Standard Skill',
     description:
-      'Your ability to read people, understand their motivations, detect lies, and notice behavioral cues.'
+      "Mental reflexes or 'common sense.' It is used to make quick and accurate decisions based on unexpected or incomplete information. It is also used to intuit other's emotions."
   },
   {
     id: 'intimidation',
@@ -83,28 +83,28 @@ export const skillsData = [
     name: 'Melee',
     type: 'Standard Skill',
     description:
-      'Your skill with hand-to-hand combat and melee weapons including knives, swords, clubs, and unarmed combat.'
+      'The understanding of how to use your body as a weapon, or how to use handheld melee weapons.'
   },
   {
     id: 'mnemonics',
     name: 'Mnemonics',
     type: 'Standard Skill',
     description:
-      'Your ability to interface with and manipulate digital systems, including mindsets, computers, and electronic devices.'
+      'The understanding of software minds, both human egos and AIs. You can perform mnemonic editing on an ego, and aid in resleeving, merging, and forking.'
   },
   {
     id: 'house_networking',
     name: 'Networking, House (H.Net)',
     type: 'Standard Skill',
     description:
-      'Contacts among the Houses; also determines starting Rep.'
+      'The number of contacts you have among the Houses and their desire or ability to help you. Also determines your starting Rep.'
   },
   {
     id: 'pilot',
     name: 'Pilot',
     type: 'Standard Skill',
     description:
-      'Your skill at operating various vehicles including ground vehicles, aircraft, spacecraft, and other transportation.'
+      'Your knowledge of driving and flying vehicles of all sorts, and your familiarity with their navigational systems.'
   },
   {
     id: 'research',
@@ -118,14 +118,14 @@ export const skillsData = [
     name: 'Resolve',
     type: 'Standard Skill',
     description:
-      'Your mental fortitude, willpower, and ability to resist mental influence, fear, and psychological attacks.'
+      'The measure of your courage, willpower, and ability to resist temptation. It also represents the drive to not quit in the face of overwhelming opposition. Adds to your Mental Stress Track.'
   },
   {
     id: 'sinc',
     name: 'SINC',
-    type: 'Savant Skill',
+    type: 'Special Skill',
     description:
-      'Synthetic Intelligence Neural Control - the ability to interface directly with computer systems and run Savant Programs. Only available to characters with the Savant Stunt.'
+      'The ability to write and use Self-Interfacing Neural Code, the computer code that comprises Savant Programs.'
   },
   {
     id: 'strategy',
@@ -139,14 +139,14 @@ export const skillsData = [
     name: 'Stealth',
     type: 'Standard Skill',
     description:
-      'Your ability to move unseen, hide from detection, and avoid notice through careful movement and concealment.'
+      'Your ability to hide, filch items, pick pockets, and move about unnoticed.'
   },
   {
     id: 'apostate_networking',
     name: 'Networking, Apostate (A.Net)',
-    type: 'Apostate Skill',
+    type: 'Standard Skill',
     description:
-      'Your connections within apostate communities and underground networks. Similar to Networking but specifically for non-Coalition contacts.'
+      'The quality and quantity of the contacts you have that are willing to provide you aid among apostates.'
   },
   {
     id: 'athletics',

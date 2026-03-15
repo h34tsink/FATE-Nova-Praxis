@@ -75,10 +75,6 @@ const states: CharacterState[] = [
 				refreshBonus: 0,
 				automaticAspects: [],
 				automaticStunts: ['sim_state'],
-				skillBonuses: {
-					sinc: { bonus: 1, maxRank: 5 },
-					software_engineering: { bonus: 1, maxRank: 5 }
-				},
 				choiceStunts: [
 					'digitally_evolved',
 					'digital_spider',

@@ -1,15 +1,15 @@
 export const fateLadder = [
-  { value: 8, name: 'Legendary', adjective: 'Legendary' },
-  { value: 7, name: 'Epic', adjective: 'Epic' },
-  { value: 6, name: 'Fantastic', adjective: 'Fantastic' },
+  { value: 8, name: 'Legendary', adjective: 'Legendary' }, // Beyond Nova Praxis core ladder
+  { value: 7, name: 'Epic', adjective: 'Epic' }, // Beyond Nova Praxis core ladder
+  { value: 6, name: 'Super Human', adjective: 'Super Human' },
   { value: 5, name: 'Superb', adjective: 'Superb' },
   { value: 4, name: 'Great', adjective: 'Great' },
   { value: 3, name: 'Good', adjective: 'Good' },
   { value: 2, name: 'Fair', adjective: 'Fair' },
   { value: 1, name: 'Average', adjective: 'Average' },
   { value: 0, name: 'Mediocre', adjective: 'Mediocre' },
-  { value: -1, name: 'Poor', adjective: 'Poor' },
-  { value: -2, name: 'Terrible', adjective: 'Terrible' }
+  { value: -1, name: 'Poor', adjective: 'Poor' }, // Standard FATE extension
+  { value: -2, name: 'Terrible', adjective: 'Terrible' } // Standard FATE extension
 ];
 
 export function getLadderStep(value: number) {
