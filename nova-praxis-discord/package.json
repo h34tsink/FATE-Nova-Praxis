@@ -13,7 +13,8 @@
     "import:glossary": "tsx scripts/import-glossary.ts",
     "import:rules": "tsx scripts/import-rules.ts",
     "import:entities": "tsx scripts/import-entities.ts",
-    "import:characters": "tsx scripts/import-characters.ts"
+    "import:characters": "tsx scripts/import-characters.ts",
+    "migrate": "tsx scripts/migrate.ts"
   },
   "dependencies": {
     "discord.js": "^14.16.0",

@@ -1,4 +1,5 @@
 import { getEntityCard, getEntityCardByName, searchRules, getLatestSessionNum, getSessionSections } from '../db/queries.js';
+import { getActiveAspects } from '../db/aspect-queries.js';
 
 export async function buildNpcContext(token: string, situation: string): Promise<string> {
   const card = await getEntityCard(token) || await getEntityCardByName(token);
@@ -72,6 +73,18 @@ export async function buildRecapContext(): Promise<string> {
   const sceneSections = await getSessionSections(sessionNum, 'scenes');
   if (sceneSections.length > 0) {
     sections.push(`## Scenes\n\n${sceneSections.slice(0, 5).map((s) => `### ${s.heading}\n${s.content}`).join('\n\n')}`);
+  }
+
+  // Get active aspects
+  const aspects = await getActiveAspects(sessionNum);
+  if (aspects.length > 0) {
+    const aspectLines = aspects.map((a) => {
+      let line = `- [${a.type}] ${a.text}`;
+      if (a.severity) line += ` — ${a.severity}`;
+      if (a.source) line += ` (${a.source})`;
+      return line;
+    });
+    sections.push(`## Active Aspects\n\n${aspectLines.join('\n')}`);
   }
 
   const context = sections.join('\n\n---\n\n');

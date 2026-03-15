@@ -239,10 +239,15 @@ export async function searchSessions(searchQuery: string, sessionNum?: number) {
   return result.rows;
 }
 
+// --- Aspects (re-export for cross-feature use) ---
+
+export { getActiveAspects } from './aspect-queries.js';
+export type { AspectWithUsage } from './aspect-queries.js';
+
 // --- Utility ---
 
 export async function getTableCounts() {
-  const tables = ['game_data', 'glossary', 'rules_sections', 'entity_cards', 'characters', 'sessions'];
+  const tables = ['game_data', 'glossary', 'rules_sections', 'entity_cards', 'characters', 'sessions', 'session_aspects', 'aspect_usage'];
   const counts: Record<string, number> = {};
   for (const table of tables) {
     const result = await query<{ count: string }>(`SELECT count(*) FROM ${table}`);
