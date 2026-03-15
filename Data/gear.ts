@@ -147,7 +147,7 @@ export const firearms: GearItem[] = [
 		cost: 5,
 		wr: 4,
 		range: 4,
-		aspects: ['Particle Accelerator', 'Small', 'Beam Weapon'],
+		aspects: ['Particle Accelerator', 'Small'],
 		description: 'A particle accelerator weapon that fires a focused stream of charged particles. The beam can cause significant damage but performs poorly in vacuum environments.',
 		restricted: true
 	},
@@ -159,7 +159,7 @@ export const firearms: GearItem[] = [
 		cost: 6,
 		wr: 5,
 		range: 4,
-		aspects: ['Particle Accelerator', 'Small', 'Beam Weapon'],
+		aspects: ['Particle Accelerator', 'Small'],
 		description: 'A high-powered particle accelerator pistol capable of devastating damage. The focused particle beam can punch through most defenses but requires atmospheric conditions to function optimally.',
 		restricted: true
 	},
@@ -290,15 +290,75 @@ export const firearms: GearItem[] = [
 
 	// Shotguns
 	{
-		id: 'combat_shotgun',
-		name: 'Combat Shotgun',
+		id: 'light_rail_array',
+		name: 'Light Rail-Array',
 		category: 'firearm',
 		subcategory: 'shotgun',
-		cost: 5,
+		cost: 6,
 		wr: 5,
-		range: 1,
-		aspects: ['Shotgun', '-2 WR for Silent'],
-		description: 'A pump-action or semi-automatic shotgun designed for combat use. The wide spread pattern is devastating at close range but loses effectiveness quickly at distance.',
+		range: 2,
+		aspects: ['Armor Penetrating', 'Large', 'Shotgun(P)'],
+		notes: ['Reduce WR by -2 for Silent'],
+		restricted: true
+	},
+	{
+		id: 'heavy_rail_array',
+		name: 'Heavy Rail-Array',
+		category: 'firearm',
+		subcategory: 'shotgun',
+		cost: 7,
+		wr: 6,
+		range: 2,
+		aspects: ['Armor Penetrating', 'Large', 'Shotgun(P)'],
+		notes: ['Reduce WR by -2 for Silent'],
+		restricted: true
+	},
+
+	// Sniper Rifles
+	{
+		id: 'light_sniper_rail_rifle',
+		name: 'Light Sniper Rail-Rifle',
+		category: 'firearm',
+		subcategory: 'sniper_rifle',
+		cost: 6,
+		wr: 6,
+		range: 7,
+		aspects: ['Anti-Vehicular', 'Armor Penetrating', 'Day/Night Scope', 'Huge(P)'],
+		notes: ['Reduce WR by -2 for Silent'],
+		restricted: true
+	},
+	{
+		id: 'heavy_sniper_rail_rifle',
+		name: 'Heavy Sniper Rail-Rifle',
+		category: 'firearm',
+		subcategory: 'sniper_rifle',
+		cost: 7,
+		wr: 7,
+		range: 7,
+		aspects: ['Anti-Vehicular', 'Armor Penetrating', 'Day/Night Scope', 'Huge(P)'],
+		notes: ['Reduce WR by -2 for Silent'],
+		restricted: true
+	},
+	{
+		id: 'light_pac_sniper_rifle',
+		name: 'Light PAc Sniper Rifle',
+		category: 'firearm',
+		subcategory: 'sniper_rifle',
+		cost: 8,
+		wr: 8,
+		range: 9,
+		aspects: ['Particle Accelerator', 'Anti-Vehicular', 'Day/Night Scope', 'Huge(P)'],
+		restricted: true
+	},
+	{
+		id: 'heavy_pac_sniper_rifle',
+		name: 'Heavy PAc Sniper Rifle',
+		category: 'firearm',
+		subcategory: 'sniper_rifle',
+		cost: 9,
+		wr: 9,
+		range: 9,
+		aspects: ['Particle Accelerator', 'Anti-Vehicular', 'Day/Night Scope', 'Huge(P)'],
 		restricted: true
 	},
 
@@ -382,9 +442,8 @@ export const firearms: GearItem[] = [
 		category: 'firearm',
 		subcategory: 'heavy',
 		cost: 10,
-		wr: 9,
+		exr: 9,
 		range: 4,
-		exr: 4,
 		aspects: ['Explosive', 'Anti-Vehicular', 'Huge(P)', 'Slow Firing(P)'],
 		description: 'A shoulder-fired rocket-propelled grenade launcher designed to destroy vehicles and fortifications. The high-explosive warhead delivers devastating damage but requires time to reload between shots.',
 		restricted: true
@@ -395,8 +454,8 @@ export const firearms: GearItem[] = [
 		category: 'firearm',
 		subcategory: 'heavy',
 		cost: 11,
-		wr: 10,
-		exr: 5,
+		exr: 10,
+		range: 5,
 		aspects: ['Explosive', 'Anti-Vehicular', 'Huge(P)', 'Slow Firing(P)'],
 		description: 'The most powerful portable railgun system available, firing ultra-high velocity projectiles that create explosive impacts. The kinetic energy is so intense that it produces explosive effects on impact.',
 		restricted: true
@@ -525,7 +584,7 @@ export const meleeWeapons: GearItem[] = [
 		cost: 0,
 		wr: 0,
 		range: 0,
-		aspects: ['Unarmed', 'Small'],
+		aspects: ['Unarmed'],
 		description: 'Basic hand-to-hand combat using fists, elbows, knees, and feet. While not as effective as weapons, unarmed combat is always available and difficult to restrict.',
 		restricted: false
 	},
@@ -1222,6 +1281,89 @@ export const equipment: GearItem[] = [
 		cost: 4,
 		description: 'Weapon-mounted targeting system',
 		restricted: true
+	},
+
+	// Manufacturing & Templates
+	{
+		id: 'compiler_template',
+		name: 'Compiler Template',
+		category: 'equipment',
+		subcategory: 'manufacturing',
+		cost: 'Cost of Item +2',
+		description: 'Software template for compilers to fabricate items',
+		restricted: false
+	},
+
+	// Insurance
+	{
+		id: 'resurrection_insurance_alpha',
+		name: 'Resurrection Insurance (Alpha)',
+		category: 'equipment',
+		subcategory: 'medical',
+		cost: 4,
+		description: 'Basic resurrection insurance policy',
+		restricted: false
+	},
+	{
+		id: 'resurrection_insurance_beta',
+		name: 'Resurrection Insurance (Beta)',
+		category: 'equipment',
+		subcategory: 'medical',
+		cost: 6,
+		restricted: false
+	},
+	{
+		id: 'resurrection_insurance_gamma',
+		name: 'Resurrection Insurance (Gamma)',
+		category: 'equipment',
+		subcategory: 'medical',
+		cost: 8,
+		restricted: false
+	},
+	{
+		id: 'resurrection_insurance_delta',
+		name: 'Resurrection Insurance (Delta)',
+		category: 'equipment',
+		subcategory: 'medical',
+		cost: 11,
+		restricted: false
+	},
+	{
+		id: 'resurrection_insurance_epsilon',
+		name: 'Resurrection Insurance (Epsilon)',
+		category: 'equipment',
+		subcategory: 'medical',
+		cost: 14,
+		restricted: false
+	},
+
+	// Virtual & Misc
+	{
+		id: 'simulated_augmentation',
+		name: 'Simulated Augmentation',
+		category: 'equipment',
+		subcategory: 'computing',
+		cost: 'Special',
+		description: 'Virtual augmentations for SIMs in VR environments',
+		restricted: false
+	},
+	{
+		id: 'simulated_memory_sensie',
+		name: 'Simulated Memory (Sensie)',
+		category: 'equipment',
+		subcategory: 'computing',
+		cost: 2,
+		description: 'Recorded sensory experience playback',
+		restricted: false
+	},
+	{
+		id: 'transportation',
+		name: 'Transportation',
+		category: 'equipment',
+		subcategory: 'utility',
+		cost: 'Varies',
+		description: 'Rental vehicles and transportation services',
+		restricted: false
 	}
 ];
 
