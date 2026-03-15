@@ -286,6 +286,7 @@
   },
   "active": "c6b0feb6609c3e0f",
   "lastOpenFiles": [
+    "README.md.tmp.362436.1773592739876",
     "nova-praxis-discord/package.json.tmp.287432.1773592360710",
     "nova-praxis-discord/Dockerfile.tmp.287432.1773592354130",
     "nova-praxis-discord/scripts/start.sh",
@@ -296,7 +297,6 @@
     "nova-praxis-discord/docker-compose.yml.tmp.287432.1773592180973",
     "nova-praxis-discord/Dockerfile.tmp.287432.1773592170339",
     "nova-praxis-discord/src/claude/context.ts.tmp.287432.1773591952162",
-    "nova-praxis-discord/src/commands/player-ask.ts.tmp.287432.1773591943969",
     "nova-praxis-discord/node_modules/@babel/runtime/README.md",
     "nova-praxis-discord/node_modules/@anthropic-ai/sdk/README.md",
     "nova-praxis-discord/node_modules/@anthropic-ai/sdk/CHANGELOG.md",
