@@ -1,8 +1,4 @@
 services:
-  # Bot runs locally (not in Docker) — needs Claude CLI on host
-  # Start with: npx tsx src/index.ts
-  # Or use: powershell -File start-bot.ps1
-
   db:
     image: postgres:16-alpine
     volumes:
@@ -21,6 +17,17 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
+    restart: unless-stopped
+
+  bot:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file: .env
+    environment:
+      PGHOST: db
+      PGPORT: 5432
     restart: unless-stopped
 
 volumes:
