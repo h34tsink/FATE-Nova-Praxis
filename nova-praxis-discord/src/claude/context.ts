@@ -1,4 +1,4 @@
-import { getEntityCard, getEntityCardByName, searchRules, getLatestSessionNum, getSessionSections } from '../db/queries.js';
+import { getEntityCard, getEntityCardByName, searchRules, searchGameData, searchGlossary, getLatestSessionNum, getSessionSections } from '../db/queries.js';
 import { getActiveAspects } from '../db/aspect-queries.js';
 
 export async function buildNpcContext(token: string, situation: string): Promise<string> {
@@ -30,7 +30,7 @@ export async function buildRulesContext(question: string): Promise<{ fastAnswer:
   // Try fast path — pg tsvector search
   const results = await searchRules(question);
 
-  if (results.length > 0 && results[0].rank > 0.3) {
+  if (results.length > 0 && results[0].rank > 0.1) {
     // High confidence — return pg result directly
     const top = results[0];
     const answer = `**${top.heading}**\n\n${top.content}`;

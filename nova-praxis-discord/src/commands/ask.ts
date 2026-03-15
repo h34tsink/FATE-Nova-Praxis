@@ -1,6 +1,6 @@
 import { SlashCommandBuilder, ChatInputCommandInteraction, MessageFlags } from 'discord.js';
 import { requireGM } from '../middleware/permissions.js';
-import { callClaude } from '../claude/cli.js';
+import { callApi } from '../claude/api.js';
 import { searchGameData, searchGlossary, searchRules, getEntityCard, getEntityCardByName } from '../db/queries.js';
 import { gmResponseEmbed } from '../embeds/gm-response.js';
 
@@ -85,7 +85,7 @@ Answer concisely. If this is about an NPC, stay in-world. If about rules or gear
 
 Format for Discord: use **bold**, *italic*, \`code\`, and > blockquotes. Use markdown tables for structured data. Keep it scannable.`;
 
-    const result = await callClaude(prompt);
+    const result = await callApi(prompt, 'quality');
     const embeds = gmResponseEmbed('Ask', result.output);
     await interaction.editReply({ embeds });
   } catch (err) {

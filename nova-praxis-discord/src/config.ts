@@ -14,4 +14,7 @@ export const config = {
     database: process.env.PGDATABASE || 'nova_praxis',
   },
   vaultPath: process.env.VAULT_PATH || '/vault',
+  anthropic: {
+    apiKey: process.env.ANTHROPIC_API_KEY || '',
+  },
 };

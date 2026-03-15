@@ -1,6 +1,6 @@
 import { SlashCommandBuilder, ChatInputCommandInteraction, MessageFlags } from 'discord.js';
 import { isGM } from '../middleware/permissions.js';
-import { callClaude } from '../claude/cli.js';
+import { callApi } from '../claude/api.js';
 import { buildRecapContext } from '../claude/context.js';
 import { gmResponseEmbed } from '../embeds/gm-response.js';
 import { playerResponseEmbed } from '../embeds/player-response.js';
@@ -18,7 +18,7 @@ export async function execute(interaction: ChatInputCommandInteraction) {
 
   try {
     const prompt = await buildRecapContext();
-    const result = await callClaude(prompt);
+    const result = await callApi(prompt, 'fast');
     if (gm) {
       const customId = cacheForShare('Recap', result.output, interaction.user.id);
       const embeds = gmResponseEmbed('Recap', result.output);

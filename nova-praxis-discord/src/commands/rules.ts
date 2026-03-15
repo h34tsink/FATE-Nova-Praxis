@@ -1,6 +1,6 @@
 import { SlashCommandBuilder, ChatInputCommandInteraction, MessageFlags } from 'discord.js';
 import { isGM } from '../middleware/permissions.js';
-import { callClaude } from '../claude/cli.js';
+import { callApi } from '../claude/api.js';
 import { buildRulesContext } from '../claude/context.js';
 import { gmResponseEmbed, rulesEmbed } from '../embeds/gm-response.js';
 import { playerResponseEmbed } from '../embeds/player-response.js';
@@ -44,7 +44,7 @@ export async function execute(interaction: ChatInputCommandInteraction) {
     }
 
     // Escalate to Claude CLI
-    const result = await callClaude(fullPrompt);
+    const result = await callApi(fullPrompt, 'fast');
     if (gm) {
       const customId = cacheForShare('Rules', result.output, interaction.user.id);
       const embeds = gmResponseEmbed('Rules', result.output);

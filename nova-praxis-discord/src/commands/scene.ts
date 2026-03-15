@@ -1,6 +1,6 @@
 import { SlashCommandBuilder, ChatInputCommandInteraction, MessageFlags } from 'discord.js';
 import { requireGM } from '../middleware/permissions.js';
-import { callClaude } from '../claude/cli.js';
+import { callApi } from '../claude/api.js';
 import { buildSceneContext } from '../claude/context.js';
 import { gmResponseEmbed } from '../embeds/gm-response.js';
 import { cacheForShare } from '../share-cache.js';
@@ -21,7 +21,7 @@ export async function execute(interaction: ChatInputCommandInteraction) {
 
   try {
     const prompt = await buildSceneContext(description);
-    const result = await callClaude(prompt);
+    const result = await callApi(prompt, 'quality');
     const customId = cacheForShare('Scene', result.output, interaction.user.id);
     const embeds = gmResponseEmbed('Scene', result.output);
     await interaction.editReply({ embeds, components: [shareButton(customId)] });

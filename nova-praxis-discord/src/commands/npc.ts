@@ -1,6 +1,6 @@
 import { SlashCommandBuilder, ChatInputCommandInteraction, TextChannel, MessageFlags } from 'discord.js';
 import { requireGM } from '../middleware/permissions.js';
-import { callClaude } from '../claude/cli.js';
+import { callApi } from '../claude/api.js';
 import { buildNpcContext } from '../claude/context.js';
 import { gmResponseEmbed } from '../embeds/gm-response.js';
 import { sendAsNpc } from '../webhooks.js';
@@ -51,7 +51,7 @@ export async function execute(interaction: ChatInputCommandInteraction) {
 
   try {
     const prompt = await buildNpcContext(token, situation);
-    const result = await callClaude(prompt);
+    const result = await callApi(prompt, 'quality');
 
     const { dialogue, gmNotes } = splitDialogueAndNotes(result.output);
     const channel = interaction.channel;

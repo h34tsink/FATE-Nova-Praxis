@@ -1,6 +1,6 @@
 import { SlashCommandBuilder, ChatInputCommandInteraction, MessageFlags } from 'discord.js';
 import { requireGM } from '../middleware/permissions.js';
-import { callClaude } from '../claude/cli.js';
+import { callApi } from '../claude/api.js';
 import { buildGmStartContext } from '../claude/context.js';
 import { gmResponseEmbed } from '../embeds/gm-response.js';
 import { cacheForShare } from '../share-cache.js';
@@ -21,7 +21,7 @@ export async function execute(interaction: ChatInputCommandInteraction) {
 
   try {
     const prompt = await buildGmStartContext(sessionNum);
-    const result = await callClaude(prompt, 120_000); // longer timeout for session bootstrap
+    const result = await callApi(prompt, 'quality', 4096);
     const customId = cacheForShare('Session Bootstrap', result.output, interaction.user.id);
     const embeds = gmResponseEmbed('Session Bootstrap', result.output);
     await interaction.editReply({ embeds, components: [shareButton(customId)] });

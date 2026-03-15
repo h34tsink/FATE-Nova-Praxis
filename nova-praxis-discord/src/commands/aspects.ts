@@ -6,7 +6,7 @@ import {
   ButtonStyle,
 } from 'discord.js';
 import { isGM, requireGM } from '../middleware/permissions.js';
-import { callClaude } from '../claude/cli.js';
+import { callApi } from '../claude/api.js';
 import { buildAspectsContext } from '../claude/context.js';
 import { gmResponseEmbed } from '../embeds/gm-response.js';
 import { getLatestSessionNum, getCharacter } from '../db/queries.js';
@@ -186,7 +186,7 @@ async function handleGenerate(interaction: ChatInputCommandInteraction) {
 
   try {
     const prompt = await buildAspectsContext(subject);
-    const result = await callClaude(prompt);
+    const result = await callApi(prompt, 'quality');
     const embeds = gmResponseEmbed('Aspects', result.output);
 
     // Parse aspect lines and create "Add to Scene" buttons
