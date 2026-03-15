@@ -9,7 +9,7 @@ arguments:
 
 ## Vault Operations
 
-Prefer Obsidian CLI commands (via Bash tool). On this system the CLI binary is `"$LOCALAPPDATA/Obsidian/Obsidian.com"` — use this path instead of `obsidian` in all Bash commands. Prefer the CLI for reading and discovering vault files. The CLI provides wikilink resolution and file listing with sort/filter. Fall back to Read/Glob if the CLI is unavailable (command not found or Obsidian not running) or if a CLI read matches multiple files (ambiguous resolution).
+Prefer Obsidian CLI commands (via Bash tool). On this system the CLI binary is `"C:/Users/satur/AppData/Local/Obsidian/Obsidian.com"` — use this path instead of `obsidian` in all Bash commands. Prefer the CLI for reading and discovering vault files. The CLI provides wikilink resolution and file listing with sort/filter. Fall back to Read/Glob if the CLI is unavailable (command not found or Obsidian not running) or if a CLI read matches multiple files (ambiguous resolution).
 
 # GM Session Bootstrap
 

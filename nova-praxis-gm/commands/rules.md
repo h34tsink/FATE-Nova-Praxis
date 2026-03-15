@@ -9,7 +9,7 @@ arguments:
 
 ## Vault Operations
 
-Use a hybrid approach: Obsidian CLI for vault markdown files. On this system the CLI binary is `"$LOCALAPPDATA/Obsidian/Obsidian.com"` — use this path instead of `obsidian` in all Bash commands. Use CLI (Rules and Mechanics, Glossary) and direct Read/Grep for extract files (`_Assets/Extracts/`). The extract files are 100K+ line raw text — CLI may not index them efficiently. Fall back entirely to Read/Grep if the CLI is unavailable or if CLI reads return ambiguous results.
+Use a hybrid approach: Obsidian CLI for vault markdown files. On this system the CLI binary is `"C:/Users/satur/AppData/Local/Obsidian/Obsidian.com"` — use this path instead of `obsidian` in all Bash commands. Use CLI (Rules and Mechanics, Glossary) and direct Read/Grep for extract files (`_Assets/Extracts/`). The extract files are 100K+ line raw text — CLI may not index them efficiently. Fall back entirely to Read/Grep if the CLI is unavailable or if CLI reads return ambiguous results.
 
 # Nova Praxis Rules Oracle
 
