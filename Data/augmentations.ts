@@ -55,7 +55,7 @@ const augmentations: Augmentation[] = [
     short: 'Natural skin-like covering for cybernetic limbs or sleeves.',
     long: 'A natural skin-like substance for covering cybernetic limbs or cybersleeves. Identifiable by lack of hair, glossy texture, and visible seams. Registers as synthetic to chemical sniffers, SMR transceivers, and animals. Improves tactile sensation, making the sleeve feel more alive. If fully sheathing a cybersleeve, the Synthetic Biology Aspect is no longer Persistent.', 
     av: 1, 
-    onlyFor: ['cybersleeve', 'sleeve'],
+    onlyFor: ['cybersleeve'],
     countsAgainstLimit: false // ⁵: Does not count against aug limit
   },
   
@@ -64,9 +64,9 @@ const augmentations: Augmentation[] = [
     id: 'optimized_power_system', 
     name: 'Optimized Power System', 
     short: 'Top-of-the-line power management for cyberware efficiency.',
-    long: 'Cyberware Augmentations depend on a top-of-the-line power management system for efficient power distribution and storage. Once per scene, you may invoke an Aspect from a cyberware Augmentation for free. Increases total number of augmentations your body/sleeve can support by +1, and does not count against total.', 
-    av: 1, 
-    onlyFor: ['cybersleeve'],
+    long: 'Cyberware Augmentations depend on a top-of-the-line power management system for efficient power distribution and storage. Once per scene, you may invoke an Aspect from a cyberware Augmentation for free. Increases total number of augmentations your body/sleeve can support by +1, and does not count against total.',
+    av: 1,
+    freeWith: 'sleeve_purchase',
     countsAgainstLimit: false, // ⁵: Does not count against aug limit
     increasesMaxAugCountBy: 1 // Increases total aug slots by +1
   },
@@ -76,7 +76,7 @@ const augmentations: Augmentation[] = [
     id: 'exceptional_genegineering', 
     name: 'Exceptional Genegineering', 
     short: 'Enhanced biological design; may be free if included.', 
-    long: 'Exceptional genetic design and engineering enhance the biological structure, providing superior performance and capabilities.',
+    long: 'Once per scene, you may invoke an Aspect gained from a bioware Augmentation without spending a Fate Point. This Augmentation also increases the total number of Augmentations your sleeve can support by +1, and does not itself count against that total number.',
     av: 1, 
     onlyFor: ['biosleeve'],
     countsAgainstLimit: false, // ⁵: Does not count against aug limit
@@ -90,14 +90,13 @@ const augmentations: Augmentation[] = [
     short: 'Trigger adrenaline surge for enhanced athletics and combat.',
     long: 'Allows you to trigger an adrenaline surge at will, increasing Athletics and Melee Skills by +1, and increasing stress absorbed by Physical Consequences by +1 for the duration. Lasts for rounds equal to your Endurance, after which you gain the Got the Shakes Aspect.',
     av: 1,
-    onlyFor: ['human', 'biosleeve'], // ³: Human/biosleeve only
-    freeWith: 'sleeve_purchase' // ¹: Free with sleeve purchase
+    onlyFor: ['human', 'biosleeve'] // ³: Human/biosleeve only
   },
   {
     id: 'alternative_mobility_system', 
     name: 'Alternative Mobility System',
     short: 'Replace legs with alternate locomotion (wheels, spider legs, etc.).',
-    long: 'Replace your natural legs with an alternative locomotion system such as wheels, spider legs, snake-like undulation, or other non-human movement methods.',
+    long: 'Replace your natural legs with an alternative locomotion system such as wheels, spider legs, snake-like undulation, or other non-human movement methods. You gain a Persistent Aspect that relates to your method of movement.',
     av: 1,
     violatesHPA: true // ⁶: HPA violation when applied as bioware
   },
@@ -105,7 +104,7 @@ const augmentations: Augmentation[] = [
     id: 'arterial_toxin_filter',
     name: 'Arterial Toxin Filter', 
     short: 'Heart filter cleanses toxins/bacteria, aids resistance and healing.',
-    long: 'A sophisticated filter system integrated into the circulatory system that cleanses toxins and harmful bacteria from the bloodstream, providing enhanced resistance to poisons and diseases while accelerating natural healing processes.',
+    long: 'A sophisticated filter system integrated into the circulatory system that cleanses toxins and harmful bacteria from the bloodstream, providing enhanced resistance to poisons and diseases while accelerating natural healing processes. Gains the Arterial Toxin Filter(P) Aspect.',
     av: 1,
     onlyFor: ['human', 'biosleeve'] // ³: Human/biosleeve only
   },
@@ -251,7 +250,7 @@ const augmentations: Augmentation[] = [
     id: 'neura_surge',
     name: 'Neura-Surge',
     short: 'Overclocks nerves/muscles for instant action and interrupt capability.',
-    long: 'Augmented nervous system threads body/sleeve, sending mind and body into overdrive when activated. Allows you to move and process info so quickly that the world appears to slow down. Activation is an Instant Action, can interrupt another\'s turn, and allows immediate Simple Action. Cannot be activated more than once per turn. Stresses muscles/nervous system, requiring Endurance test to activate (Difficulty 4). Failure results in physical stress equal to amount failed by.',
+    long: 'Augmented nervous system threads body/sleeve, sending mind and body into overdrive when activated. Allows you to move and process info so quickly that the world appears to slow down. Activation is an Instant Action, can interrupt another\'s turn, and allows immediate Simple Action. Cannot be activated more than once per turn. Stresses muscles/nervous system, requiring Endurance test to activate (Difficulty 4). Failure results in physical stress equal to amount failed by. The activation difficulty is increased by +1 for each subsequent use in the same scene.',
     av: 2,
     restricted: true
   },
@@ -259,7 +258,7 @@ const augmentations: Augmentation[] = [
     id: 'particle_detection_analysis',
     name: 'Particle Detection and Analysis Suite',
     short: 'Advanced sensors for detecting and analyzing particles.',
-    long: 'Advanced sensors for detecting and analyzing particles. Provides detailed information about atmospheric composition, trace chemicals, and airborne substances.',
+    long: 'Advanced sensors for detecting and analyzing particles. Gains the Particle Detection and Analysis Module(P) Aspect. Provides detailed information about atmospheric composition, trace chemicals, and airborne substances, including scent-tracking capability.',
     av: 1
   },
   {
