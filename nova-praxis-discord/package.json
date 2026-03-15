@@ -14,7 +14,9 @@
     "import:rules": "tsx scripts/import-rules.ts",
     "import:entities": "tsx scripts/import-entities.ts",
     "import:characters": "tsx scripts/import-characters.ts",
-    "migrate": "tsx scripts/migrate.ts"
+    "migrate": "tsx scripts/migrate.ts",
+    "reset-db": "tsx scripts/reset-db.ts",
+    "reload": "npm run reset-db && npm run import"
   },
   "dependencies": {
     "discord.js": "^14.16.0",
