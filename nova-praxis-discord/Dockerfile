@@ -8,4 +8,6 @@ COPY scripts/ ./scripts/
 COPY migrations/ ./migrations/
 COPY init.sql ./
 RUN npx tsc
-CMD ["node", "dist/index.js"]
+COPY scripts/start.sh ./
+RUN chmod +x start.sh
+CMD ["./start.sh"]

@@ -19,7 +19,7 @@
     "reload": "npm run reset-db && npm run import",
     "docker:up": "docker compose up --build -d",
     "docker:down": "docker compose down",
-    "docker:restart": "docker compose down && docker compose build --no-cache && docker compose up -d && npm run reload",
+    "docker:restart": "docker compose down && docker compose build --no-cache && docker compose up -d",
     "docker:logs": "docker compose logs -f bot",
     "docker:reload": "npm run reload"
   },
