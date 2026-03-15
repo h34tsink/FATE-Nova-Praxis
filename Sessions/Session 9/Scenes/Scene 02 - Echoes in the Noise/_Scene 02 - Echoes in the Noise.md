@@ -14,7 +14,7 @@ aliases:
 
 **Location:** Cere Mining Colony interior — tavern, markets, relay infrastructure, and abandoned mining tunnels
 
-**Purpose:** Investigation under pressure. Can the PCs find [[Sessions/Session 9/Valare - Character Profile|Valare]]'s fork without exposing her to predators?
+**Purpose:** Investigation under pressure. Can the PCs find [[Character Profile|Valare]]'s fork without exposing her to predators?
 
 ---
 

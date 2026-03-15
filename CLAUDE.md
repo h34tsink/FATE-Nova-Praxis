@@ -35,7 +35,9 @@ All vault markdown must follow the Conni Mode conventions defined in `Templates/
 | `GM AI/` | Claude Code runtime prompts for at-table use |
 | `Templates/` | 10 templates including Conni Mode system prompt |
 | `Archive/` | Deprecated factions, locations, and SWADE-era content |
-| `_Assets/Scripts/` | `conni_audit.ps1` (vault health audit), `create_glossary.py` |
+| `_Assets/Scripts/` | `conni_audit.ps1` (vault health audit), `create_glossary.py`, `Start-GM.ps1` |
+| `_Assets/Extracts/` | Full-text PDF extracts (rulebook, machinations) for Claude reference |
+| `nova-praxis-discord/` | Discord bot — PostgreSQL + Claude CLI hybrid for at-table use |
 
 ## GM AI Runtime System
 
@@ -46,7 +48,7 @@ The `GM AI/` folder contains a complete at-table workflow for Claude Code:
 - **Persona & Complexity Matrix** — Speech styles and behavior by entity rank
 - **Entity Card Template** — NPC stat blocks
 
-Lore questions should prefer vault canon first, then `pdf_full_extract.txt` and `machinations_full_extract.txt`. Flag uncertainty rather than inventing answers.
+Lore questions should prefer vault canon first, then `_Assets/Extracts/pdf_full_extract.txt` and `_Assets/Extracts/machinations_full_extract.txt`. Flag uncertainty rather than inventing answers.
 
 Plugin sync after editing `nova-praxis-gm/`: `claude plugin update nova-praxis-gm@nova-praxis-local`
 
@@ -68,7 +70,7 @@ Source priority for these answers:
 1. `GM AI/Entity Cards/**/*.md`
 2. `GM AI/Claude Code - Persona & Complexity Matrix.md`
 3. Relevant session files under `Sessions/` (prefer active dashboard/runtime files)
-4. Canon lore files and extracts (`pdf_full_extract.txt`, `machinations_full_extract.txt`)
+4. Canon lore files and extracts (`_Assets/Extracts/pdf_full_extract.txt`, `_Assets/Extracts/machinations_full_extract.txt`)
 
 Behavior constraints:
 
@@ -92,8 +94,8 @@ Default response format:
 
 Rules source priority (highest to lowest):
 
-1. `Nova Praxis Rulebook (Cleaned).txt`
-2. `pdf_full_extract.txt`
+1. `_Assets/Extracts/Nova Praxis Rulebook (Cleaned).txt`
+2. `_Assets/Extracts/pdf_full_extract.txt`
 3. `Rules and Mechanics/*.md` (active rules only)
 4. `Data/*.ts` (structured mirrors)
 5. Glossary/templates/reference notes

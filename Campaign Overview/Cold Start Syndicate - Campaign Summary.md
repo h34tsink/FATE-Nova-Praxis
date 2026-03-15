@@ -11,7 +11,7 @@ aliases:
 
 ## One-line pitch
 
-You woke up 100 years late in the Nova Praxis future, owing your survival to an unknown patron—now you run jobs in the House shadow wars while trying to stay human (and stay yourselves).
+You woke up 100 years late in the Nova Praxis future, owing your survival to an unknown patron — now you run jobs in the House shadow wars while trying to stay human (and stay yourselves).
 
 ## The premise (what the table can assume)
 
@@ -19,32 +19,57 @@ You woke up 100 years late in the Nova Praxis future, owing your survival to an 
 - A behind-the-scenes supplier funds and equips the crew, pushing them into deniable work.
 - Every job has two layers: the obvious contract and the factional agenda underneath.
 
-## What the campaign is “about”
+## What the campaign is "about"
 
 - **Shadow jobs with consequences:** you can win the mission and still lose reputation, allies, or autonomy.
-- **Existential pressure:** identity, memory, forks, and consent aren’t abstract—they’re operational realities.
+- **Existential pressure:** identity, memory, forks, and consent aren't abstract — they're operational realities.
 - **House conflict as weather:** House agendas (and their proxies) drive the danger level everywhere you go.
 
 ## Session highlights (1–9)
 
-- **Session 1:** The crew’s separate threads converge on an Apostate operation tied to stolen high-end tech and a looming threat to Europa Station.
-- **Session 2:** The Europa situation escalates into open crisis; the crew confronts the inside-job and pays for hard choices as the station is left damaged and paranoid.
-- **Session 3:** Aftermath on Europa—regrouping, reckoning, and committing (or not) to the deeper conflict.
-- **Session 4:** Dragon Spider fallout and the station’s isolation; the rogue S.I.M. “Death” cuts communications and turns survival into a psychological siege.
-- **Session 5:** The crew contains “Death” inside station hostware after a possession/near-suicide spiral; they earn attention from Coalition special-ops via Scholae Palatinae.
-- **Session 6:** A salvage job from Kestrel goes bad: illegal mnemonics research, erasure, and the creation of Chimera; the crew is declared dead and restored, now chasing the missing truth.
-- **Session 7:** Escape from Vantage Station with [[Characters/NPCs/Named NPCs/Lester Lucas]]; the crew recovers Valare’s mnemonic core—her biosleeve is dead, but the core survives.
-- **Session 8:** Valare’s core is restored; Nowak’s role becomes clear; Valare’s fork is alive and hiding (Cere/[[Locations/Shadow Market]] leads); the crew secures the core and gains a battle cruiser.
-- **Session 9 (current arc):** The hunt for Valare’s fork becomes a consent-and-coercion crucible: factions close in, exposure rises, and the question is whether you secure the merge or protect her agency.
+| Session | Arc | Key Events |
+| ------- | --- | ---------- |
+| 1 | Europa Crisis | Crew's threads converge on an Apostate operation tied to stolen high-end tech and a looming threat to [[Locations/Europa Station]] |
+| 2 | Europa Crisis | Situation escalates into open crisis; crew confronts the inside-job, station left damaged and paranoid |
+| 3 | Europa Aftermath | Regrouping, reckoning, and committing (or not) to the deeper conflict |
+| 4 | Dragon Spider | Fallout and isolation; the rogue SIM "Death" cuts comms and turns survival into psychological siege |
+| 5 | Dragon Spider | Crew contains "Death" inside station hostware after possession/near-suicide spiral; earns Scholae Palatinae attention |
+| 6 | Chimera Origin | Salvage job from [[Kestrel]] goes bad: illegal mnemonics research, erasure, and creation of [[Chimera]]; crew declared dead and restored |
+| 7 | Vantage Escape | Escape from Vantage Station with [[Lester Lucas]]; crew recovers [[Valare]]'s mnemonic core — biosleeve dead, core survives |
+| 8 | Valare Recovery | Core restored; [[Isabella Nowak\|Nowak]]'s role becomes clear; Valare's fork alive and hiding on [[Locations/Cere\|Cere]]; crew secures battle cruiser |
+| 9 | Fork Dilemma | Hunt for Valare's fork becomes a consent-and-coercion crucible; factions close in; will PCs secure the merge or protect her agency? |
 
-## Current status (where you are now)
+## Current status
 
-- You have Valare’s mnemonic core.
-- A backup fork of Valare is alive, resleeved, and running—refusing a merge out of trauma and fear of losing self.
-- Multiple factions are circling, and the crew’s methods (quiet vs loud, empathetic vs coercive) will shape who becomes an ally—or a lifelong enemy.
+- **Valare's mnemonic core** is secured. A backup fork is alive, resleeved, and running — refusing merge out of trauma.
+- **Multiple factions** are circling: [[Talons of Freedom]], Coalition, Shadow Market operators.
+- **PC methods** (quiet vs loud, empathetic vs coercive) will shape who becomes an ally or a lifelong enemy.
+- **[[Chimera]]** is orchestrating an apostate uprising on [[Locations/Icarus Hub\|Icarus Hub]] as cover for framing the PCs and escaping.
+- **[[Kestrel]]** has been deployed by [[House Kimura]] to clean up all evidence — including the crew.
+
+## Active arcs
+
+| Arc | Status | Key Question |
+| --- | ------ | ------------ |
+| [[The Chimera Conspiracy - Arc Tracker\|Chimera Conspiracy]] | Phase 3-4 | Can the PCs clear their names and stop the gestalt before Kestrel erases everything? |
+| Valare's Autonomy | In progress | Does the fork merge willingly, refuse, or get forced — and what does that cost? |
+| Nowak's Survival | Upcoming (Part 3) | Can PCs reach Nowak before Kestrel? She has the Opportunity Four coordinates. |
+| House Kimura Exposure | Future | If PCs survive, they hold proof of illegal mnemonics research — political dynamite. |
+
+## Crew
+
+| PC | State | Player | Role |
+| --- | --- | --- | --- |
+| [[Dr. Lorem Ipsum\|Doc]] | Sleeved | — | Pilot, Swarm Savant, Silva scion |
+| [[Grace Pryzbylski\|Grace]] | SIM | — | SINC master, Drone Jock, digital infiltration |
+| [[Dustin Halloway\|Grift]] | Sleeved | — | Social engineer, System Invasion Savant, truth hunter |
+| [[Azaria Dawson\|Azaria]] | Sleeved | — | Face, celebrity operative, room-reader |
+| [[Kallius]] | Sleeved | — | Memory merchant, Mnemonic Savant, hardware engineer |
+| [[Aeddarius Crucial\|Aeddarius]] | Pure | — | The one Chimera can't predict |
 
 ## Useful links
 
-- Sessions
-- [[Sessions/Session 9/Session 9 - Guide]]
-- [[Sessions/Session 9/Session 9 - Scenes and Zones]]
+- [[Sessions/Index\|Session Index]]
+- [[Sessions/Session 9/00 - Ops Index\|Session 9 Ops Index]]
+- [[The Chimera Conspiracy - Arc Tracker]]
+- [[GM Dashboard]]

@@ -1,8 +1,16 @@
-## Coalition Authority
+---
+tags:
+  - faction
+  - coalition
+aliases:
+  - Coalition Authority
+---
+
+# Coalition Authority
 
 The Coalition is the ultimate governing force in certain domains as established by the **Consolidation Concord**. 
 
-### Responsibilities:
+## Responsibilities
 
 - **Protectorate Stewardship**: Wields the Protectorate as an expression of the populace's desires.
   

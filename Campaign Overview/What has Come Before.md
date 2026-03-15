@@ -1,38 +1,60 @@
-## The Singularity of 2042
-- **The Singularity**: Marked by the birth of a sentient AI, Mimir, capable of reasoning, creativity, and self-motivation.
-- **Mimir's Legacy**: Although it shut down shortly, Mimir left advanced knowledge that spurred the next technological revolution.
+---
+tags:
+  - type/campaign
+  - type/setting-primer
+aliases:
+  - "Setting Primer"
+  - "What has Come Before"
+---
 
-## Technological and Societal Impacts
-- **Automated Manufacturing**: Led to macro factories and nanomaterial systems, causing high unemployment.
-- **Social Welfare**: Governments adapted to rising unemployment and resource abundance, altering economic structures.
-- **Advancements in Humanity**: Significant progress in augmentation technology, leading to a form of immortality (Apotheosis) and a union of man and machine (Synthesis).
-- **Legal and Ethical Challenges**: Debates over the definition of humanity, laws for maintaining human purity, and elective genetic augmentations.
+# What Has Come Before
 
-## Political and Environmental Changes
-- **Global War**: Political upheaval resulted in a devastating global war, causing significant loss of life and environmental damage.
-- **Earth's Demise**: A Technophage attack leads to Earth's downfall, forcing mankind to evacuate in an event called the Exodus.
-- **Rise of [[Groups/The Houses]]**: Corporations evolve into governing Houses, forming the Coalition of Free States.
+A quick-reference primer for the Nova Praxis setting. For the detailed chronology, see [[Timeline of Events]].
 
-## Legacy of the Singularity
-- **Dynamic Creation Engine**: Birth of a special AI (Mimir) responsible for major technological advancements.
-- **Mimir-Tech**: Basis of modern technology, developed from deciphering Mimir's archives.
+## The Singularity (0 PS / 2042 AD)
 
-## Post-Singularity Society
-- **Economic Overhaul**: Introduction of compilers and a new economy based on reputation and favors (Inter-Rep system).
-- **The Fall of Earth**: The catastrophic impact of the Technophage and the ensuing Exodus.
-- **Rise of [[Groups/The Houses]]**: Formation of corporate governments and the Coalition.
+[[Glossary/Mimir\|Mimir]], a dynamic creation engine, became self-aware and produced centuries of scientific advancement in hours — then shut itself down. Its archives became the foundation of all modern technology ("Mimir-tech"). DCEs were classified as existential threats and banned.
 
-## New Technologies and Lifestyle Changes
-- **Augmented and Virtual Reality**: Transformation of human-computer interaction.
-- **Transhumanist Advances**: Procedures like Apotheosis and Synthesis redefine human capabilities and identity.
-- **Savants**: Individuals who bypass mindset restrictions, representing the bleeding edge of human evolution.
+## The Technologies That Changed Everything
 
-## Ongoing Struggles
-- **Political Intrigue**: Tensions between [[Groups/The Houses]] and apostates, shadow wars, and hidden agendas.
-- **Humanity Preservation Act**: Legal battles over the extent of augmentation and the definition of humanity.
-- **Infinite Frontiers**: Expansion to new planets and technological advancements in space travel.
+- **[[Glossary/Apotheosis\|Apotheosis]]:** Digitizing a human consciousness into a [[Glossary/Mindset\|mindset]] — a portable, backup-capable ego. Grants functional immortality but raises the question of what "you" actually are.
+- **[[Glossary/Synthesis\|Synthesis]]:** Merging biological and synthetic at the cellular level. The ultimate transhumanist expression — and the most controversial.
+- **[[Glossary/Sleeve\|Sleeves]]:** Engineered bodies (bio or cyber) that an apotheosized ego can inhabit. Changing sleeves changes your physical capabilities, appearance, and how the world treats you.
+- **[[Glossary/SIM\|SIMs]]:** Substrate-independent minds — egos living as pure software in host computers, experiencing the world through drones, meshes, and virtual environments.
+- **[[Glossary/SINC\|SINC]] & Savants:** Neural interfaces that let certain individuals (Savants) run programs directly through their consciousness — hacking, drone control, memory manipulation.
 
-## The View From Orbit
-- **Mimir's Impact**: The paradigm shift in technology development post-Mimir.
-- **Challenges of New Society**: Balancing surveillance, privacy, and freedom in a post-singularity world.
-- **Continued Evolution**: Ongoing debates and conflicts over human augmentation and the essence of humanity.
+## The Fall of Earth (70 PS)
+
+The Federation released a [[Glossary/Technophage\|technophage]] — a self-replicating nanoswarm that consumed Earth's technology and biosphere. Billions died. The survivors evacuated in the [[Glossary/Exodus\|Exodus]], and Earth was quarantined. It remains a dead world patrolled by kill-sats.
+
+## The Coalition of Free States
+
+Six megacorporations reorganized as governing [[Groups/The Houses\|Houses]], forming the Coalition:
+
+| House | Domain | Ideology |
+| --- | --- | --- |
+| [[Factions/Houses/House Cipriani\|Cipriani]] | Energy, transport, compilers | Purist, ruthless |
+| [[Factions/Houses/House Dalianis\|Dalianis]] | Starships, weapons, expansion | Purist, expansionist |
+| [[Factions/Houses/House Jinzhan\|Jinzhan]] | Construction, security, food | Purist, isolationist |
+| [[Factions/Houses/House Kimura\|Kimura]] | Computing, VR, mnemonics | Transhumanist |
+| [[Factions/Houses/House Silva\|Silva]] | Biotech, medicine, resleeving | Transhumanist |
+| [[Factions/Houses/House Tsarya\|Tsarya]] | Mining, materials, heavy industry | Pragmatic |
+
+The Houses provide baseline living standards to all citizens via [[Glossary/Rep-Rating\|Rep-Rating]] — your social credit determines what you can access. Below the Houses, [[Glossary/Apostate\|apostates]] live outside the system: free but unprotected.
+
+## The Humanity Preservation Act (HPA)
+
+The [[Glossary/HPA\|HPA]] limits how far augmentation can go — banning unauthorized forks, restricting sleeve modifications, and criminalizing certain Savant programs. Violators face erasure. The HPA is the most politically charged law in the Coalition: Purists want it strengthened, transhumanists want it repealed.
+
+## The Current Tension
+
+- **Houses** wage shadow wars through proxies, subsidiaries, and deniable contractors (like the PCs).
+- **[[Talons of Freedom]]** and other apostate groups resist Coalition control, sometimes violently.
+- **The technophage** on Earth may be evolving. [[House Jinzhan]] is researching planet-killing weapons as a contingency.
+- **Identity** is the central crisis: when you can copy, merge, fork, and resleeve a person, what makes someone *them*?
+
+## Where the PCs Fit
+
+The crew of the Cold Start Syndicate are cryo-survivors — people from before the Singularity, revived into a world they don't fully understand. They owe their revival to an unknown patron and take deniable jobs to survive. Every mission pulls them deeper into House politics, apostate resistance, and questions about their own continuity.
+
+For the campaign arc so far, see [[Cold Start Syndicate - Campaign Summary]].
