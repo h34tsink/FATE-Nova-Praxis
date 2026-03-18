@@ -142,7 +142,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 321.5
+    "width": 262.5
   },
   "right": {
     "id": "2808606aa7204ff9",
@@ -290,8 +290,9 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "c6b0feb6609c3e0f",
+  "active": "8cc94c71b16ef3f5",
   "lastOpenFiles": [
+    "Sessions/Session 9/Live/Beats.md",
     "Data/fate-ladder.ts.tmp.287432.1773610166788",
     "Data/gear.ts.tmp.287432.1773610164239",
     "Data/nova-praxis-states.ts.tmp.287432.1773610161018",
@@ -302,9 +303,7 @@
     "Data/nova-praxis-skills.ts.tmp.287432.1773610148280",
     "Data/nova-praxis-skills.ts.tmp.287432.1773610144253",
     "Data/nova-praxis-skills.ts.tmp.287432.1773610142017",
-    "Data/nova-praxis-skills.ts.tmp.287432.1773610140242",
     "Glossary/Compel.md",
-    "Sessions/Session 9/Live/Beats.md",
     "Sessions/What Are the Talons Up To - COMPREHENSIVE.md",
     "Sessions/Session 9/Live/Guide.md",
     "nova-praxis-discord/node_modules/@anthropic-ai/sdk/src/_vendor/partial-json-parser/README.md",
