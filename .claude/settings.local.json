@@ -99,7 +99,8 @@
       "Bash(ls -la /c/ObsidianVaults/FATE-Nova-Praxis/Locations/Cere*)",
       "Bash(find . -name \"*_*\" -path \"*/Locations/*\" -o -name \"*_*\" -path \"*/Glossary/*\" -o -name \"*_*\" -path \"*/Factions/*\" -o -name \"*_*\" -path \"*/Characters/*\" -o -name \"* \\(1\\)*\" -o -name \"*_v1 \\(1\\)*\")",
       "Bash(find . -name \"* \\(1\\)*\" -not -path \"./.git/*\" -not -path \"./.obsidian/*\" -not -path \"*/node_modules/*\")",
-      "Bash(wc -l *.md Notes/*.md)"
+      "Bash(wc -l *.md Notes/*.md)",
+      "WebFetch(domain:ai.santiyounger.com)"
     ]
   }
 }
