@@ -37,28 +37,28 @@
     width: 100vw;
   }
 
-  /* Animated grid background */
+  /* Animated grid background — HIGH VISIBILITY */
   body::before {
     content: '';
     position: fixed;
     inset: 0;
     background:
-      linear-gradient(rgba(6,182,212,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(6,182,212,0.03) 1px, transparent 1px);
-    background-size: 60px 60px;
-    mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 30%, transparent 100%);
-    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 30%, transparent 100%);
+      linear-gradient(rgba(6,182,212,0.12) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(6,182,212,0.12) 1px, transparent 1px);
+    background-size: 50px 50px;
+    mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, black 20%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, black 20%, transparent 100%);
     pointer-events: none;
     z-index: 0;
-    animation: gridPulse 8s ease-in-out infinite;
+    animation: gridPulse 4s ease-in-out infinite;
   }
 
   @keyframes gridPulse {
-    0%, 100% { opacity: 0.6; }
+    0%, 100% { opacity: 0.5; }
     50% { opacity: 1; }
   }
 
-  /* Subtle scanline overlay */
+  /* Scanline overlay */
   body::after {
     content: '';
     position: fixed;
@@ -66,55 +66,68 @@
     background: repeating-linear-gradient(
       0deg,
       transparent,
-      transparent 2px,
-      rgba(0,0,0,0.03) 2px,
-      rgba(0,0,0,0.03) 4px
+      transparent 3px,
+      rgba(0,0,0,0.06) 3px,
+      rgba(0,0,0,0.06) 6px
     );
     pointer-events: none;
     z-index: 1;
   }
 
-  /* Floating orb ambient light */
+  /* Floating orb ambient light — CRANKED UP */
   .ambient-orb {
     position: fixed;
     border-radius: 50%;
-    filter: blur(100px);
+    filter: blur(80px);
     pointer-events: none;
     z-index: 0;
-    opacity: 0.4;
   }
   .ambient-orb.orb1 {
-    width: 500px; height: 500px;
-    background: radial-gradient(circle, var(--glow-cyan), transparent 70%);
-    top: -10%; right: -5%;
-    animation: orbDrift1 20s ease-in-out infinite;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(6,182,212,0.35), transparent 70%);
+    top: -15%; right: -8%;
+    opacity: 1;
+    animation: orbDrift1 12s ease-in-out infinite;
   }
   .ambient-orb.orb2 {
-    width: 400px; height: 400px;
-    background: radial-gradient(circle, var(--glow-blue), transparent 70%);
-    bottom: -10%; left: -5%;
-    animation: orbDrift2 25s ease-in-out infinite;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(59,130,246,0.25), transparent 70%);
+    bottom: -15%; left: -8%;
+    opacity: 1;
+    animation: orbDrift2 15s ease-in-out infinite;
   }
   .ambient-orb.orb3 {
-    width: 300px; height: 300px;
-    background: radial-gradient(circle, rgba(168,85,247,0.08), transparent 70%);
-    top: 40%; left: 50%;
-    animation: orbDrift3 18s ease-in-out infinite;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(168,85,247,0.2), transparent 70%);
+    top: 30%; left: 45%;
+    opacity: 1;
+    animation: orbDrift3 10s ease-in-out infinite;
   }
 
   @keyframes orbDrift1 {
     0%, 100% { transform: translate(0, 0); }
-    33% { transform: translate(-40px, 30px); }
-    66% { transform: translate(20px, -20px); }
+    25% { transform: translate(-60px, 40px); }
+    50% { transform: translate(-30px, 70px); }
+    75% { transform: translate(30px, 20px); }
   }
   @keyframes orbDrift2 {
     0%, 100% { transform: translate(0, 0); }
-    33% { transform: translate(30px, -25px); }
-    66% { transform: translate(-20px, 15px); }
+    25% { transform: translate(50px, -40px); }
+    50% { transform: translate(80px, -20px); }
+    75% { transform: translate(30px, -60px); }
   }
   @keyframes orbDrift3 {
     0%, 100% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(-30px, 20px) scale(1.1); }
+    33% { transform: translate(-50px, 30px) scale(1.2); }
+    66% { transform: translate(40px, -40px) scale(0.9); }
+  }
+
+  /* Particle canvas */
+  #particles {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
   }
 
   .slide {
@@ -145,10 +158,11 @@
     content: '';
     position: absolute;
     top: 0;
-    left: 10%;
-    right: 10%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(6,182,212,0.2), rgba(59,130,246,0.15), transparent);
+    left: 5%;
+    right: 5%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(6,182,212,0.5), rgba(59,130,246,0.4), transparent);
+    box-shadow: 0 0 15px rgba(6,182,212,0.3), 0 0 30px rgba(6,182,212,0.1);
   }
 
   /* Corner decoration */
@@ -157,11 +171,12 @@
     position: absolute;
     top: 1.5vh;
     right: 3vw;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     font-weight: 600;
     letter-spacing: 0.3em;
-    color: rgba(6,182,212,0.2);
+    color: rgba(6,182,212,0.4);
     text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(6,182,212,0.3);
   }
 
   .slide-inner {
@@ -180,8 +195,8 @@
     line-height: 1.1;
     margin-bottom: 0.5em;
   }
-  .title-slide h1 .swade { color: var(--red); text-shadow: 0 0 30px rgba(239,68,68,0.3); }
-  .title-slide h1 .fate { color: var(--blue); text-shadow: 0 0 30px rgba(59,130,246,0.3); }
+  .title-slide h1 .swade { color: var(--red); text-shadow: 0 0 40px rgba(239,68,68,0.5), 0 0 80px rgba(239,68,68,0.2); }
+  .title-slide h1 .fate { color: var(--blue); text-shadow: 0 0 40px rgba(59,130,246,0.5), 0 0 80px rgba(59,130,246,0.2); }
   .title-slide h1 .arrow { color: var(--text-dim); font-weight: 300; }
   .title-slide .subtitle {
     font-size: clamp(1.1rem, 2vw, 1.6rem);
@@ -206,20 +221,26 @@
   .title-slide::before {
     content: '';
     display: block;
-    width: 120px;
+    width: 200px;
     height: 2px;
     background: linear-gradient(90deg, transparent, var(--cyan), transparent);
     margin: 0 auto 2em;
-    box-shadow: 0 0 10px var(--glow-cyan);
+    box-shadow: 0 0 15px rgba(6,182,212,0.5), 0 0 40px rgba(6,182,212,0.2);
+    animation: lineGlow 3s ease-in-out infinite;
   }
   .title-slide::after {
     content: '';
     display: block;
-    width: 120px;
+    width: 200px;
     height: 2px;
     background: linear-gradient(90deg, transparent, var(--cyan), transparent);
     margin: 2em auto 0;
-    box-shadow: 0 0 10px var(--glow-cyan);
+    box-shadow: 0 0 15px rgba(6,182,212,0.5), 0 0 40px rgba(6,182,212,0.2);
+    animation: lineGlow 3s ease-in-out infinite 1.5s;
+  }
+  @keyframes lineGlow {
+    0%, 100% { opacity: 0.6; width: 200px; }
+    50% { opacity: 1; width: 250px; }
   }
 
   /* Section slides */
@@ -233,18 +254,23 @@
     color: var(--accent);
     font-weight: 800;
     margin-right: 0.3em;
-    text-shadow: 0 0 15px rgba(245,158,11,0.3);
+    text-shadow: 0 0 20px rgba(245,158,11,0.5), 0 0 40px rgba(245,158,11,0.2);
   }
 
   /* Decorative line under headings */
   h2::after {
     content: '';
     display: block;
-    width: 60px;
+    width: 80px;
     height: 2px;
     background: linear-gradient(90deg, var(--accent), transparent);
     margin-top: 0.3em;
-    box-shadow: 0 0 8px rgba(245,158,11,0.2);
+    box-shadow: 0 0 12px rgba(245,158,11,0.4);
+    animation: headingLine 4s ease-in-out infinite;
+  }
+  @keyframes headingLine {
+    0%, 100% { width: 80px; opacity: 0.7; }
+    50% { width: 120px; opacity: 1; }
   }
 
   h3 {
@@ -469,15 +495,124 @@
     .slide { padding: 3vh 4vw; }
   }
 
+  /* Staggered row entrance */
+  .slide.active tr {
+    animation: rowFadeIn 0.5s ease-out both;
+  }
+  .slide.active tr:nth-child(1) { animation-delay: 0.1s; }
+  .slide.active tr:nth-child(2) { animation-delay: 0.15s; }
+  .slide.active tr:nth-child(3) { animation-delay: 0.2s; }
+  .slide.active tr:nth-child(4) { animation-delay: 0.25s; }
+  .slide.active tr:nth-child(5) { animation-delay: 0.3s; }
+  .slide.active tr:nth-child(6) { animation-delay: 0.35s; }
+  .slide.active tr:nth-child(7) { animation-delay: 0.4s; }
+  .slide.active tr:nth-child(8) { animation-delay: 0.45s; }
+  .slide.active tr:nth-child(9) { animation-delay: 0.5s; }
+  .slide.active tr:nth-child(10) { animation-delay: 0.55s; }
+
+  @keyframes rowFadeIn {
+    from { opacity: 0; transform: translateX(-15px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  /* Staggered list items */
+  .slide.active li {
+    animation: listFadeIn 0.4s ease-out both;
+  }
+  .slide.active li:nth-child(1) { animation-delay: 0.1s; }
+  .slide.active li:nth-child(2) { animation-delay: 0.18s; }
+  .slide.active li:nth-child(3) { animation-delay: 0.26s; }
+  .slide.active li:nth-child(4) { animation-delay: 0.34s; }
+  .slide.active li:nth-child(5) { animation-delay: 0.42s; }
+
+  @keyframes listFadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Callout entrance */
+  .slide.active .callout {
+    animation: calloutFlash 0.6s ease-out 0.4s both;
+  }
+  @keyframes calloutFlash {
+    from { opacity: 0; transform: translateX(-10px); border-left-width: 0px; }
+    to { opacity: 1; transform: translateX(0); border-left-width: 4px; }
+  }
+
+  /* Card entrance */
+  .slide.active .card {
+    animation: cardPop 0.5s ease-out both;
+  }
+  .slide.active .card:nth-child(1) { animation-delay: 0.15s; }
+  .slide.active .card:nth-child(2) { animation-delay: 0.3s; }
+  .slide.active .card:nth-child(3) { animation-delay: 0.45s; }
+  @keyframes cardPop {
+    from { opacity: 0; transform: translateY(20px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  /* Flow step entrance */
+  .slide.active .flow-step {
+    animation: flowStepIn 0.4s ease-out both;
+  }
+  .slide.active .flow-step:nth-child(1) { animation-delay: 0.1s; }
+  .slide.active .flow-step:nth-child(3) { animation-delay: 0.25s; }
+  .slide.active .flow-step:nth-child(5) { animation-delay: 0.4s; }
+  .slide.active .flow-step:nth-child(7) { animation-delay: 0.55s; }
+  .slide.active .flow-step:nth-child(9) { animation-delay: 0.7s; }
+  .slide.active .flow-step:nth-child(11) { animation-delay: 0.85s; }
+  .slide.active .flow-arrow {
+    animation: arrowFadeIn 0.3s ease-out both;
+  }
+  .slide.active .flow-arrow:nth-child(2) { animation-delay: 0.2s; }
+  .slide.active .flow-arrow:nth-child(4) { animation-delay: 0.35s; }
+  .slide.active .flow-arrow:nth-child(6) { animation-delay: 0.5s; }
+  .slide.active .flow-arrow:nth-child(8) { animation-delay: 0.65s; }
+  .slide.active .flow-arrow:nth-child(10) { animation-delay: 0.8s; }
+  @keyframes flowStepIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @keyframes arrowFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* Column entrance */
+  .slide.active .col {
+    animation: colSlide 0.5s ease-out both;
+  }
+  .slide.active .col:nth-child(1) { animation-delay: 0.1s; }
+  .slide.active .col:nth-child(2) { animation-delay: 0.3s; }
+  @keyframes colSlide {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Formula box glow pulse */
+  .slide.active .formula-box {
+    animation: formulaPulse 2s ease-in-out infinite 0.5s;
+  }
+  @keyframes formulaPulse {
+    0%, 100% { box-shadow: 0 0 20px rgba(6,182,212,0.08), inset 0 0 20px rgba(6,182,212,0.03); }
+    50% { box-shadow: 0 0 30px rgba(6,182,212,0.2), inset 0 0 30px rgba(6,182,212,0.06), 0 0 60px rgba(6,182,212,0.1); }
+  }
+
   /* Print */
   @media print {
     .slide { display: flex !important; page-break-after: always; height: auto; min-height: 100vh; }
-    .nav { display: none; }
+    .nav, #particles, .ambient-orb { display: none; }
     body { overflow: visible; }
+    body::before, body::after { display: none; }
+    .slide.active tr, .slide.active li, .slide.active .callout, .slide.active .card,
+    .slide.active .flow-step, .slide.active .flow-arrow, .slide.active .col { animation: none !important; opacity: 1 !important; transform: none !important; }
   }
 </style>
 </head>
 <body>
+
+<!-- Particle field -->
+<canvas id="particles"></canvas>
 
 <!-- Ambient light orbs -->
 <div class="ambient-orb orb1"></div>
@@ -581,15 +716,15 @@
         <h3>FATE</h3>
         <ul>
           <li><strong>Stunts</strong> &mdash; similar to Edges; some cost Refresh</li>
-          <li><strong>Aspects</strong> (especially Trouble) &mdash; flaws that <strong>earn Fate Points</strong> when compelled</li>
+          <li><strong>Aspects</strong> (especially Disadvantage) &mdash; flaws that <strong>earn Fate Points</strong> when compelled</li>
           <li>Aspects are <strong>double-edged</strong> &mdash; help AND hinder</li>
-          <li>Your Trouble is a <strong>live wire every session</strong></li>
+          <li>Your Disadvantage is a <strong>live wire every session</strong></li>
         </ul>
       </div>
     </div>
     <div class="callout trap" style="margin-top:1em;">
       <div class="label">Muscle Memory Trap</div>
-      In SWADE, you took Hindrances at creation and mostly forgot them. In FATE, your Trouble Aspect fires every session. The GM <em>will</em> compel it. You <em>want</em> this &mdash; it is how you get Fate Points.
+      In SWADE, you took Hindrances at creation and mostly forgot them. In FATE, your Disadvantage Aspect fires every session. The GM <em>will</em> compel it. You <em>want</em> this &mdash; it is how you get Fate Points.
     </div>
   </div>
 </div>
@@ -680,14 +815,16 @@
 <div class="slide" id="s9">
   <div class="slide-inner">
     <h2><span class="num">7</span>Aspects &amp; the Fate Point Economy</h2>
-    <p style="margin-bottom:0.8em;">Aspects replace most of what Edges, Hindrances, and situational modifiers did in SWADE. Every character has five:</p>
+    <p style="margin-bottom:0.8em;">Aspects replace most of what Edges, Hindrances, and situational modifiers did in SWADE. Every character has 6&ndash;7 using the <strong>ABCDE method</strong>:</p>
     <table>
-      <tr><th style="width:25%">Aspect</th><th>Purpose</th></tr>
-      <tr><td><strong>High Concept</strong></td><td>Who you are in one phrase</td></tr>
-      <tr><td><strong>Trouble</strong></td><td>Your recurring problem</td></tr>
-      <tr><td><strong>Background</strong></td><td>Where you came from</td></tr>
-      <tr><td><strong>State Aspect</strong></td><td>Tied to Pure / SIM / Sleeved</td></tr>
-      <tr><td><strong>Free Aspect</strong></td><td>Anything else important</td></tr>
+      <tr><th style="width:25%">Aspect</th><th>Type</th><th>Purpose</th></tr>
+      <tr><td><strong>High Concept</strong></td><td>HC</td><td>Who you are in one phrase</td></tr>
+      <tr><td><strong>Ambition</strong></td><td>A</td><td>Your goals and drives</td></tr>
+      <tr><td><strong>Belief</strong></td><td>B</td><td>Your philosophies and values</td></tr>
+      <tr><td><strong>Connection</strong></td><td>C</td><td>Important people, places, events</td></tr>
+      <tr><td><strong>Disadvantage</strong></td><td>D</td><td>Your weaknesses and obstacles</td></tr>
+      <tr><td><strong>Expertise</strong></td><td>E</td><td>Your skills and methods</td></tr>
+      <tr><td><strong>7th Aspect</strong></td><td>&mdash;</td><td>Physical Trait (Pure) or Savant Disadvantage (Savants)</td></tr>
     </table>
     <table style="margin-top:0.6em;">
       <tr><th style="width:25%">Action</th><th>Cost</th><th>Effect</th></tr>
@@ -705,7 +842,7 @@
     <h2><span class="num">8</span>The Compel Loop</h2>
     <p>This is the engine SWADE does not have. Compels are not punishment &mdash; they are <strong>fuel</strong>.</p>
     <div class="flow" style="margin: 1.5em 0;">
-      <div class="flow-step earn">GM compels<br>your Trouble</div>
+      <div class="flow-step earn">GM compels<br>your Disadvantage</div>
       <div class="flow-arrow">&rarr;</div>
       <div class="flow-step earn">You accept<br><strong>+1 FP</strong></div>
       <div class="flow-arrow">&rarr;</div>
@@ -909,6 +1046,91 @@
     const dx = e.changedTouches[0].screenX - touchX;
     if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1));
   });
+
+  // Particle system — floating data motes
+  (function() {
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    let w, h;
+    const particles = [];
+    const PARTICLE_COUNT = 60;
+    const CONNECTION_DIST = 120;
+
+    function resize() {
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    // Initialize particles
+    for (let i = 0; i < PARTICLE_COUNT; i++) {
+      particles.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: (Math.random() - 0.5) * 0.3 - 0.1, // slight upward drift
+        r: Math.random() * 2 + 0.5,
+        color: ['rgba(6,182,212,', 'rgba(59,130,246,', 'rgba(168,85,247,'][Math.floor(Math.random() * 3)],
+        alpha: Math.random() * 0.5 + 0.2,
+        pulseSpeed: Math.random() * 0.02 + 0.005,
+        pulsePhase: Math.random() * Math.PI * 2
+      });
+    }
+
+    function draw(t) {
+      ctx.clearRect(0, 0, w, h);
+
+      // Update and draw particles
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+
+        // Wrap around edges
+        if (p.x < -10) p.x = w + 10;
+        if (p.x > w + 10) p.x = -10;
+        if (p.y < -10) p.y = h + 10;
+        if (p.y > h + 10) p.y = -10;
+
+        // Pulsing alpha
+        const pulse = Math.sin(t * p.pulseSpeed + p.pulsePhase) * 0.3 + 0.7;
+        const a = p.alpha * pulse;
+
+        // Draw glow
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r * 3, 0, Math.PI * 2);
+        ctx.fillStyle = p.color + (a * 0.15) + ')';
+        ctx.fill();
+
+        // Draw core
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = p.color + a + ')';
+        ctx.fill();
+
+        // Draw connections to nearby particles
+        for (let j = i + 1; j < particles.length; j++) {
+          const q = particles[j];
+          const dx = p.x - q.x;
+          const dy = p.y - q.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < CONNECTION_DIST) {
+            const lineAlpha = (1 - dist / CONNECTION_DIST) * 0.12;
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(q.x, q.y);
+            ctx.strokeStyle = 'rgba(6,182,212,' + lineAlpha + ')';
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+      }
+
+      requestAnimationFrame(draw);
+    }
+    requestAnimationFrame(draw);
+  })();
 </script>
 </body>
 </html>

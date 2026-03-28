@@ -96,9 +96,10 @@ Rules source priority (highest to lowest):
 
 1. `_Assets/Extracts/Nova Praxis Rulebook (Cleaned).txt`
 2. `_Assets/Extracts/pdf_full_extract.txt`
-3. `Rules and Mechanics/*.md` (active rules only)
-4. `Data/*.ts` (structured mirrors)
-5. Glossary/templates/reference notes
+3. `_Assets/Extracts/strands_of_fate_full_extract.txt` (base FATE variant — consult for core mechanics Nova Praxis inherits)
+4. `Rules and Mechanics/*.md` (active rules only)
+5. `Data/*.ts` (structured mirrors)
+6. Glossary/templates/reference notes
 
 Adjudication constraints:
 

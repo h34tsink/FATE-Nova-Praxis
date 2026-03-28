@@ -30,7 +30,7 @@ In SWADE, you pick an action from a menu and describe what happens. In FATE, you
 
 ### 2. Characters Are Defined by Story, Not Stats
 
-SWADE characters are built from Attributes, Skills, Edges, and Hindrances — mechanical building blocks that imply a story. FATE characters are built from [[Glossary/Aspects|Aspects]] — story statements that imply mechanics. Your High Concept and Trouble do more to define your character than any skill rank.
+SWADE characters are built from Attributes, Skills, Edges, and Hindrances — mechanical building blocks that imply a story. FATE characters are built from [[Glossary/Aspects|Aspects]] — story statements that imply mechanics, using the **ABCDE method** (Ambition, Belief, Connection, Disadvantage, Expertise) plus a High Concept. Your Aspects do more to define your character than any skill rank.
 
 ### 3. Failure Is Interesting, Not Punishing
 
@@ -72,10 +72,10 @@ FATE skills are broader. SWADE's Fighting + Shooting collapse into [[Rules and M
 | SWADE | FATE |
 |-------|------|
 | **Edges** — specific mechanical bonuses | **[[Rules and Mechanics/Stunts\|Stunts]]** — similar but narrower; some cost Refresh |
-| **Hindrances** — flaws that gave you build points | **Aspects** (especially Trouble) — flaws that earn you Fate Points when compelled |
+| **Hindrances** — flaws that gave you build points | **Aspects** (especially Disadvantage) — flaws that earn you Fate Points when compelled |
 | Hindrances are "always on" negatives | Aspects are double-edged — they help AND hinder depending on context |
 
-**Key difference:** In SWADE, you took Hindrances at character creation and mostly forgot about them. In FATE, your Trouble Aspect is a live wire every session. The GM will compel it. You *want* this — it's how you get Fate Points.
+**Key difference:** In SWADE, you took Hindrances at character creation and mostly forgot about them. In FATE, your Disadvantage Aspect is a live wire every session. The GM will compel it. You *want* this — it's how you get Fate Points.
 
 ### Bennies vs. Fate Points
 

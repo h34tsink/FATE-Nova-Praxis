@@ -134,12 +134,17 @@ Absorb with stress boxes (left to right) or take a Consequence.
 
 Short phrases that describe something true about a character, scene, or situation. They are the core engine of FATE — they replace most of what Edges, Hindrances, and situational modifiers did in SWADE.
 
-**Every character has 5 Aspects:**
-1. **High Concept** — who you are ("Disgraced Coalition Intelligence Analyst")
-2. **Trouble** — your recurring problem ("Can't Leave Well Enough Done")
-3. **Background** — where you came from
-4. **State Aspect** — tied to Pure/SIM/Sleeved
-5. **Free Aspect** — anything else important
+**Every character has 6-7 Aspects using the ABCDE method:**
+
+| # | Type | What It Covers |
+|---|------|---------------|
+| **HC** | **High Concept** | Who you are in one phrase |
+| **A** | **Ambition** | Your goals and drives |
+| **B** | **Belief** | Your philosophies and values |
+| **C** | **Connection** | Important people, places, events |
+| **D** | **Disadvantage** | Your weaknesses and obstacles |
+| **E** | **Expertise** | Your skills and methods |
+| **7** | **Physical Trait** / **Savant Disadvantage** | State-specific (Pure or Savant only) |
 
 ### Using Aspects
 
@@ -184,7 +189,7 @@ Persistent Aspects (P) are **exempt** from the scope limit.
 This is the engine SWADE doesn't have:
 
 ```
-GM compels your Trouble → you accept → earn 1 FP →
+GM compels your Disadvantage → you accept → earn 1 FP →
   later, invoke an Aspect → spend 1 FP → get +2 →
     succeed with Spin → create free Effect Aspect →
       ally invokes it free → chain of narrative advantage

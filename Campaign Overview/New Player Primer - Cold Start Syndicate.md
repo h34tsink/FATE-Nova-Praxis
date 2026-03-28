@@ -163,12 +163,19 @@ Stunts give you special abilities or bonuses. You get a few for free based on yo
 - **Refreshed** — +1 Refresh (can take up to 3 times)
 - **Transhumanist** — More augmentation capacity on sleeves
 
-### Step 5: Write Your Aspects (5 Total)
-1. **High Concept** — Who you are in one phrase (*"Disgraced Coalition Intelligence Analyst"*)
-2. **Trouble** — What keeps getting you into problems (*"Can't Leave Well Enough Alone"*)
-3. **Background** — Where you came from (*"Grew Up Running Cargo on the Belt"*)
-4. **State Aspect** — Related to Pure/SIM/Sleeved (*"This Body Still Feels Wrong"*)
-5. **Free Aspect** — Anything else important (*"I Know People Who Know People"*)
+### Step 5: Write Your Aspects (ABCDE Method)
+
+You get 6-7 Aspects using the **Aspect Alphabet**:
+
+| # | Type | What It Covers | Example |
+|---|------|---------------|---------|
+| **HC** | **High Concept** | Who you are in one phrase | *"Aesthetic Aristocrat"* |
+| **A** | **Ambition** | Your goals and drives | *"Ruthless Pragmatist in a Noble's Clothing"* |
+| **B** | **Belief** | Your philosophies and values | *"Purity Is Strength, Not Sentiment"* |
+| **C** | **Connection** | Important people, places, events | *"Newly Minted Lord with Old Debts"* |
+| **D** | **Disadvantage** | Your weaknesses and obstacles | *"The Habit Behind the Composure"* |
+| **E** | **Expertise** | Your skills and methods | *"Always Challenges the Strongest Foe"* |
+| **7** | **Physical Trait** (Pure) / **Savant Disadvantage** (Savants) | State-specific | *"Ludwig Speaks for Me When Diplomacy Fails"* |
 
 Good Aspects are **double-edged** — useful when invoked, interesting when compelled.
 
@@ -223,7 +230,7 @@ The crew woke up from cryo owing their existence to a mysterious patron. Since t
 - [ ] Read this primer (you're almost done)
 - [ ] Think about what kind of character sounds fun — combat? social? hacking? weird?
 - [ ] Pick a State (Pure / SIM / Sleeved) — or come with 2-3 ideas and we'll narrow it down
-- [ ] Think about a High Concept and Trouble aspect — even rough drafts help
+- [ ] Think about a High Concept and Disadvantage aspect — even rough drafts help
 - [ ] We'll build the rest together at the table
 
 Don't stress about getting everything perfect. Session 0 is for exactly this — we'll walk through it together and make sure your character fits the world and the crew.
