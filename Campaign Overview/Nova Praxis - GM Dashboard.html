@@ -211,6 +211,159 @@
   .ha { color: var(--amber); font-weight: 600; }
   .hr { color: var(--red); font-weight: 600; }
   .hg { color: var(--green); font-weight: 600; }
+
+  /* Clickable terms */
+  .term {
+    color: var(--accent);
+    cursor: pointer;
+    border-bottom: 1px dotted rgba(0,188,212,0.4);
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .term:hover {
+    color: #5ce0f0;
+    border-bottom-color: #5ce0f0;
+  }
+
+  /* Clickable panel titles */
+  .p h2 {
+    cursor: pointer;
+    transition: text-shadow 0.15s;
+  }
+  .p h2:hover {
+    text-shadow: 0 0 16px rgba(0,188,212,0.4);
+  }
+  .p h2::after {
+    content: ' \25B8';
+    font-size: 0.7em;
+    opacity: 0;
+    transition: opacity 0.15s;
+    color: var(--text-dim);
+  }
+  .p h2:hover::after {
+    opacity: 0.6;
+  }
+
+  /* Modal overlay */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(5,8,14,0.85);
+    backdrop-filter: blur(6px);
+    z-index: 500;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-overlay.open {
+    display: flex;
+  }
+
+  .modal {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 20px 24px;
+    max-width: 520px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.6), 0 0 1px rgba(0,188,212,0.15) inset;
+    position: relative;
+    animation: modalIn 0.2s ease-out;
+  }
+  @keyframes modalIn {
+    from { opacity: 0; transform: translateY(10px) scale(0.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    font-size: 16pt;
+    cursor: pointer;
+    line-height: 1;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: color 0.15s, background 0.15s;
+  }
+  .modal-close:hover {
+    color: var(--text);
+    background: rgba(255,255,255,0.05);
+  }
+
+  .modal h3 {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+    text-shadow: 0 0 12px rgba(0,188,212,0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .modal .modal-cat {
+    font-size: 0.75em;
+    color: var(--text-dim);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 2px;
+  }
+  .modal p {
+    font-size: 10pt;
+    line-height: 1.55;
+    margin-bottom: 8px;
+    font-weight: 400;
+    color: var(--text);
+  }
+  .modal ul {
+    font-size: 10pt;
+    padding-left: 18px;
+    margin-bottom: 8px;
+  }
+  .modal li {
+    margin-bottom: 4px;
+    line-height: 1.5;
+  }
+  .modal .term {
+    color: var(--accent);
+    cursor: pointer;
+    border-bottom: 1px dotted rgba(0,188,212,0.4);
+  }
+  .modal .term:hover {
+    color: #5ce0f0;
+    border-bottom-color: #5ce0f0;
+  }
+  .modal .modal-section {
+    margin-top: 12px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border-light);
+  }
+  .modal .modal-section h4 {
+    font-size: 0.9em;
+    font-weight: 700;
+    color: var(--amber);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+  }
+  .modal table {
+    font-size: 9.5pt;
+    margin: 6px 0;
+  }
+  .modal td { padding: 3px 6px; }
+  .modal th { padding: 3px 6px; }
+
+  /* Scrollbar styling for modal */
+  .modal::-webkit-scrollbar { width: 6px; }
+  .modal::-webkit-scrollbar-track { background: transparent; }
+  .modal::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 </style>
 </head>
 <body>
@@ -542,6 +695,233 @@
   window.addEventListener('load', layout);
   window.addEventListener('resize', layout);
 })();
+
+// ===== MODAL SYSTEM =====
+const TERMS = {
+  // Skills
+  'Athletics':     {cat:'Skill (Physical)',desc:'Movement, coordination, lifting, dodging. Contributes to Physical Stress track. Ranks come from State/Sleeve, not skill distribution.'},
+  'Endurance':     {cat:'Skill (Physical)',desc:'Toughness, stamina, resisting toxins and disease. Contributes to Physical Stress track. Ranks come from State/Sleeve. Also determines Augmentation Limit (Endurance x2).'},
+  'Perception':    {cat:'Skill (Physical)',desc:'Awareness, noticing details, senses. Ranks come from State/Sleeve. Used for Assessment actions to discover hidden Aspects.'},
+  'Assets':        {cat:'Skill',desc:'Wealth and black market purchasing power. Used to acquire items outside the Coalition Rep system. Test vs. item Cost.'},
+  'Cohesion':      {cat:'Skill',desc:'Mental stability, sense of self, resisting psychological trauma and identity fragmentation. Contributes to Mental Stress track. Used to defend against resleeving trauma (Edge 8 mental attack vs. Cohesion).'},
+  'Demolitions':   {cat:'Skill',desc:'Explosives expertise for both combat and structural applications. Explosive Rating (ExR) adds to the attack roll directly, not to stress after a hit.'},
+  'Diplomacy':     {cat:'Skill',desc:'Friendly persuasion, negotiation, making good impressions. Used in mental attacks for manipulation (vs. Cohesion/Resolve). Starting Rep bump value equals your Diplomacy rank.'},
+  'Education':     {cat:'Skill',desc:'Book learning \u2014 science, history, academic knowledge. Used for Assessment actions and providing field expertise. Can be combined with other skills.'},
+  'Firearms':      {cat:'Skill',desc:'Ranged weapons \u2014 railguns, coil guns, heavy weapons. Primary attack skill for ranged combat. Stress = Shifts + Weapon Rating (WR) \u2013 Armor Rating (AR).'},
+  'Guile':         {cat:'Skill',desc:'Lying, conning, seduction, bluffing, haggling. Used in mental attacks for deception (Guile vs. Insight). Also used for social engineering and disguise.'},
+  'Insight':       {cat:'Skill',desc:'Mental reflexes, gut feelings, reading emotions and intentions. Used to defend against lies (vs. Guile) and for Assessment actions to read people.'},
+  'Intimidation':  {cat:'Skill',desc:'Threats, coercion, interrogation. Used in mental attacks (Intimidation vs. Resolve). Edge rating reflects how well the threat plays on the target\'s fears.'},
+  'Melee':         {cat:'Skill',desc:'Hand-to-hand and melee weapons combat. Attack skill for close range. Stress = Shifts + Weapon Rating (WR) \u2013 Armor Rating (AR).'},
+  'Mnemonics':     {cat:'Skill',desc:'Mind editing, resleeving, forking, AI interaction. Used for mnemonic core extraction, memory manipulation, and ego transfers.'},
+  'Pilot':         {cat:'Skill',desc:'Vehicles \u2014 ground, air, space. Used for vehicular combat, chases, and maneuvering.'},
+  'Research':      {cat:'Skill',desc:'Finding information on the Extranet. Used for Assessment actions in digital contexts and investigating records.'},
+  'Resolve':       {cat:'Skill',desc:'Willpower, courage, resisting temptation. Contributes to Mental Stress track. Used to defend against intimidation and manipulation.'},
+  'Strategy':      {cat:'Skill',desc:'Tactical planning, reading enemy plans. Determines initiative order in conflicts. GM may adjust based on fiction.'},
+  'Stealth':       {cat:'Skill',desc:'Hiding, pickpocketing, moving unseen. Used for infiltration and avoiding detection. SIMs with System Slip get +2 on Stealth tests to avoid detection on a host system.'},
+  'SINC':          {cat:'Skill (Special)',desc:'Savant Interface Neural Control. Required for executing Savant Programs. Unlocked by the Savant stunt (starts at rank 1). Can only be improved via the Skilled stunt during creation, or like any other skill after creation. Failed SINC tests cause System Stress.'},
+  'S. Engineering':{cat:'Skill',desc:'Software engineering \u2014 code, operate CISTs, digital systems. Contributes to System Stress track (Savants). SIMs get +1 S. Engineering as a house rule.'},
+  'H. Engineering':{cat:'Skill',desc:'Hardware engineering \u2014 build, repair, operate machines. Used for mechanical repairs, device fabrication, and hardware-based solutions.'},
+  'House Networking':{cat:'Skill',desc:'Contacts among the Houses. Determines starting Rep-Rating (House Networking + 2). Not available to Apostates.'},
+  'Apostate Networking':{cat:'Skill',desc:'Underground and black market contacts. Available only to Apostates. Replaces House Networking.'},
+
+  // States
+  'Pure':          {cat:'Character State',desc:'Inhabits their original, un-Apotheosized body. Has not undergone Apotheosis.\n\n<b>Benefits:</b> 8 Physical Skill ranks (max 5 per skill), Refresh +2 (total 7), free Carpe Diem stunt, +1 to one non-physical skill (max 5), Physical Trait Aspect.\n\n<b>Drawback:</b> Loses ALL State Benefits permanently if Apotheosis augmentation is taken.'},
+  'SIM':           {cat:'Character State',desc:'Substrate-independent mind existing as pure software in a host computer. Has undergone Apotheosis but elected not to inhabit a sleeve.\n\n<b>Benefits:</b> 7 Physical Skill ranks (virtual only, max 5), free SIM State stunt + one choice stunt (Digital Spider, Digitally Evolved, Drone Jock, Infusion, Skilled SINC, or System Slip), +1 SINC, +1 S. Engineering (house rule).\n\n<b>Drawbacks:</b> No physical body \u2014 needs drones for physical interaction. Lag penalties at distance (\u22121000km: none, same system: \u20132, out-of-system: \u20134). Must appear as semi-transparent ARO per Humanity Preservation Act.'},
+  'Sleeved':       {cat:'Character State',desc:'Has undergone Apotheosis and inhabits a sleeve (biosleeve or cybersleeve).\n\n<b>Benefits:</b> Physical skills set by sleeve, augmentation points from sleeve, can swap bodies.\n\n<b>Starting Sleeve:</b> Cost no greater than MAX(Assets, Rep-Rating) + 4.\n\n<b>Drawback:</b> Resleeving is a mental attack (Edge 8) vs. Cohesion. +2 Edge if first time resleeving or if you remember dying. +2 defense if resleeving into clone or same-model.'},
+
+  // Core Mechanics
+  'Effort':        {cat:'Core Mechanic',desc:'The result of a skill roll: 4dF + Skill Rank + Modifiers = Effort. Compare Effort to Difficulty to determine success. The difference is measured in Shifts.'},
+  'Shifts':        {cat:'Core Mechanic',desc:'The difference between your Effort and the Difficulty. Shifts = Effort \u2013 Difficulty. More shifts = greater degree of success. 3+ Shifts = Spin. Failing by 3+ = Stall.'},
+  'Difficulty':    {cat:'Core Mechanic',desc:'The target number set by the GM for a Test, or the opposing Effort in a Contest. Measured on the Ladder (+0 Mediocre to +8 Legendary).'},
+  'Spin':          {cat:'Core Mechanic',desc:'Generating 3 or more Shifts on a roll. Significant success \u2014 you may elect to create an Effect Aspect (a short-lived Temporary Aspect that disappears once invoked or compelled). On attack tests, creating an Effect Aspect costs 1 Shift. Limit: one Effect Aspect per round.'},
+  'Stall':         {cat:'Core Mechanic',desc:'Failing a roll by 3 or more. Spectacular failure. The GM may create an Effect Aspect against you. In Extended Actions, a Stall means catastrophic failure \u2014 you cannot continue.'},
+  'Fate Points':   {cat:'Core Mechanic',desc:'The currency of narrative control. Spend to invoke Aspects (+2 or reroll), power certain Stunts, create Blocks, make Declarations, or refuse compels. Earn by accepting compels, having Aspects invoked against you, or conceding conflicts.\n\nRefresh to your Refresh Rating at the start of each session. FP do NOT carry over between sessions.'},
+  'Refresh':       {cat:'Core Mechanic',desc:'Your Fate Point budget \u2014 the number of FP you start each session with. Default: 5. Pure characters: 7 (+2 bonus). Can be increased by the Refreshed stunt (+1 per take, up to 3 times). Stunts do NOT reduce Refresh in Nova Praxis.'},
+  'Fate Point':    {cat:'Core Mechanic',desc:'See Fate Points.'},
+  'FP':            {cat:'Core Mechanic',desc:'Abbreviation for Fate Point. See Fate Points.'},
+
+  // Actions
+  'Test':          {cat:'Action',desc:'A roll against a fixed difficulty set by the GM. The most basic action type. Roll 4dF + Skill, compare to Difficulty. Used for any task where the world pushes back: picking a lock, recalling knowledge, resisting a hazard.'},
+  'Contest':       {cat:'Action',desc:'An opposed roll. Both sides roll appropriate Skills and compare Effort. Highest wins. A tie means both succeed, but the GM adjudicates whether the outcome changes anything or calls for another test.'},
+  'Maneuver':      {cat:'Action',desc:'A Simple Action used to place a Temporary Aspect on a target or the scene. The first invocation of this Aspect is free. Key teamwork mechanic \u2014 one character Maneuvers to place an Aspect, another invokes it for +2 on their roll.\n\nOn Spin (3+): the Aspect gets 2 free invokes instead of 1.'},
+  'Assessment':    {cat:'Action',desc:'Using Skills (like Perception, Insight, or Research) to discover an existing hidden Aspect on a person, place, or thing. Unlike a Maneuver, you\'re not creating something new \u2014 you\'re revealing what\'s already there.'},
+  'Declaration':   {cat:'Action',desc:'Using a Fate Point or succeeding on a Skill test to introduce a new fact or element into the story. Must be approved by the GM. Example: spending an FP to declare "There\'s a fire escape on this building" \u2014 and now there is.\n\nCan also be triggered by invoking an Aspect.'},
+  'Attack':        {cat:'Action',desc:'Deal stress to a target. The defender rolls reactively (defense does not cost their action). Stress dealt = Shifts + Weapon Rating (WR) \u2013 Armor Rating (AR). On Spin, you may reduce Shifts by 1 to create an Effect Aspect.'},
+  'Block':         {cat:'Action',desc:'An action taken to prevent a specific result. You set a Potency via a Skill test. Any opponent who wants to perform the blocked action must first beat the Block Potency as a Simple Action. If they fail, their action is wasted. If they succeed, the Block is overcome but they suffer a \u20131 penalty on the resulting action.\n\nExamples: Suppression Fire (Firearms), Restraining (Melee), Bodyguarding (Athletics).'},
+
+  // Aspects
+  'Aspect':        {cat:'Game Concept',desc:'A short phrase that describes something true about a character, scene, or situation. Aspects are the core engine of the FATE/Strands system.\n\n<b>Invoke:</b> Spend 1 FP for +2 to a roll, a reroll, to create a Block, or to make a Declaration.\n<b>Compel:</b> Accept a complication for +1 FP, or pay 1 FP to refuse.\n\n<b>Types:</b> Character (permanent), Situation (scene-length), Temporary (from Maneuvers), Effect (from Spin), Consequences (until recovered), Persistent (free to invoke/compel for +2/reroll, scope exempt).'},
+  'Aspects':       {cat:'Game Concept',desc:'See Aspect.'},
+  'Invoke':        {cat:'Aspect Mechanic',desc:'Spending 1 FP (or using a free invoke) to make an Aspect relevant to the current roll. Choose one effect: +2 to your Skill test, reroll all dice, create a Block (usually Potency 2), or make a Declaration.\n\nThe Aspect must be narratively relevant \u2014 use the "Therefore Test": "I have [Aspect], therefore it helps me [do this]." Two logical leaps = stretch.\n\n<b>Free invokes:</b> First use of Aspects from Maneuvers, Spin, or inflicted Consequences.\n<b>Persistent Aspects:</b> +2 bonus and reroll are always free. Blocks/Declarations still cost 1 FP.'},
+  'Compel':        {cat:'Aspect Mechanic',desc:'The GM (or another player) uses an Aspect to create a complication. Accept = earn 1 FP. Refuse = pay 1 FP.\n\nEffects: \u20132 penalty, forced reroll, suffer a Block or Declaration, or narrative complication.\n\n<b>Persistent Aspect compels:</b> Declining ALWAYS costs 1 FP (never a soft compel). You do NOT gain FP from compels on Persistent Aspects.'},
+  'Persistent':    {cat:'Aspect Type',desc:'Persistent Aspects are marked with (P). They represent major, lasting facts \u2014 Severe and Extreme Consequences, significant environmental truths.\n\n<b>Key rules:</b> Invoking/compelling for +2 bonus or reroll is always FREE (no FP cost). Creating Blocks and Declarations still costs 1 FP. You do NOT gain FP from compels on Persistent Aspects. Declining a P compel always costs 1 FP. Persistent Aspects are EXEMPT from the scope rule.'},
+  'Effect Aspect': {cat:'Aspect Type',desc:'A short-lived Temporary Aspect created when you generate Spin (3+ Shifts). Disappears once invoked or compelled. On attack tests, creating an Effect Aspect costs 1 Shift. Limit: one Effect Aspect per round.'},
+  'Temporary Aspect':{cat:'Aspect Type',desc:'An Aspect created by performing a Maneuver. Disappears once invoked or compelled (first use is free). The primary teamwork mechanic in combat.'},
+  'Scope':         {cat:'Aspect Rule',desc:'A character may invoke or compel only ONE Aspect per scope per test. Scopes: Character, Scene, Zone, Equipment, Consequence, Stunt, Augmentation, Another Character\'s. Persistent Aspects are EXEMPT from scope limits.'},
+
+  // Damage
+  'Stress':        {cat:'Damage Mechanic',desc:'Damage taken from attacks. Stress = Shifts + Weapon Rating (WR) \u2013 Armor Rating (AR). Mark stress boxes left to right on the appropriate track. When all boxes are filled, you must take a Consequence or be Taken Out.\n\n<b>Three tracks:</b> Physical (Athletics + Endurance), Mental (Cohesion + Resolve), System (SINC + S.Eng, Savants only).\n<b>Box calculation:</b> 2 base + per skill: rank 1-2 = +1, rank 3-4 = +2, rank 5+ = +3.'},
+  'Consequence':   {cat:'Damage Mechanic',desc:'A negative Aspect taken to absorb stress from an attack. Reduces stress by its value (Mild \u20132, Moderate \u20134, Severe \u20136, Extreme \u20138). You may only take ONE Consequence per attack.\n\nConsequences are Aspects \u2014 first invoke/compel is free. Severe(P) and Extreme(P) are Persistent.\n\n<b>Per-track:</b> One of each type (Mild/Moderate/Severe/Extreme) per stress track. Max 8 slots (12 for Savants).\n<b>Recovery:</b> Consequences downgrade over time (Severe \u2192 Moderate \u2192 Mild \u2192 gone).'},
+  'Consequences':  {cat:'Damage Mechanic',desc:'See Consequence.'},
+  'Taken Out':     {cat:'Damage Mechanic',desc:'When you cannot absorb incoming stress (all boxes filled, no Consequence slots left), you are Taken Out. The attacker narrates what happens to you. This is why Concessions exist \u2014 surrender on your terms before being Taken Out.'},
+  'Concession':    {cat:'Damage Mechanic',desc:'Offered any time you take a Consequence. Absorbs ALL stress from the triggering attack. You narrate the outcome \u2014 not the attacker.\n\nYou do NOT automatically gain an FP for conceding. You gain 1 FP only if the opponent REFUSES a reasonable concession (and they lose 1 FP).\n\n<b>Distress Concession:</b> Take an Extreme Consequence on a different stress track (e.g., Extreme Mental from a physical attack = shock/PTSD).'},
+  'Concede':       {cat:'Damage Mechanic',desc:'See Concession.'},
+  'Weapon Rating': {cat:'Equipment Stat',desc:'WR \u2014 added to the stress inflicted after a successful physical attack. Stress = Shifts + WR \u2013 AR. Higher WR = more lethal weapons.'},
+  'WR':            {cat:'Equipment Stat',desc:'See Weapon Rating.'},
+  'Armor Rating':  {cat:'Equipment Stat',desc:'AR \u2014 subtracted from incoming physical stress. Stress = Shifts + WR \u2013 AR. Higher AR = better protection.'},
+  'AR':            {cat:'Equipment Stat',desc:'See Armor Rating.'},
+  'Edge':          {cat:'Mental Combat',desc:'The "weapon" for mental conflicts. Edge rating (0-5+) is added directly to the mental attack ROLL (not to stress after a hit, unlike WR). Rating reflects the quality of the argument/threat/manipulation:\n\n0 = half-hearted, 1-2 = competent, 3-4 = well-crafted playing on known weaknesses, 5 = exceptionally targeted, can exceed 5 for extreme scenarios.'},
+  'Determination': {cat:'Mental Combat',desc:'The "armor" for mental conflicts. Determination rating (0-5) is added to the defender\'s defense roll. Derived from motivation and morale.\n\nExamples: Guard who hates their job = Determination 0. Guard whose employer will kill them for failure = Determination 4-5.'},
+  'ExR':           {cat:'Equipment Stat',desc:'Explosive Rating \u2014 added to the attack ROLL itself (not to stress after a hit). Mechanically different from Weapon Rating.'},
+
+  // Conflict
+  'Simple Action':     {cat:'Conflict',desc:'Your primary action each turn. Attack, Maneuver, Assessment, Declaration, Block, etc. You get exactly one Simple Action per turn.'},
+  'Free Action':       {cat:'Conflict',desc:'A quick action taken on your turn in addition to your Simple Action. Moving to an adjacent zone, drawing a weapon, or short speech. One Free Action per turn.'},
+  'Instant Action':    {cat:'Conflict',desc:'Can be taken at any time, even when it\'s not your turn. Defense rolls are a special Instant Action that doesn\'t count toward the limit. You get 1 other Instant Action per turn.'},
+  'Supplemental Action':{cat:'Conflict',desc:'Doing a second thing alongside your Simple Action. Imposes a \u20131 penalty on your primary test. Additive with movement penalties (Hustle \u20132, Run \u20133). Examples: drawing a weapon while attacking, moving while performing an Assessment.'},
+  'Potency':       {cat:'Conflict',desc:'The difficulty rating of a Block. Set by the blocker\'s Skill test. Any opponent who wants to perform the blocked action must beat the Block Potency as a Simple Action before they can proceed.'},
+
+  // Stunts
+  'Stunt':         {cat:'Game Concept',desc:'Special abilities or special uses of Skills. You start with 3 Stunts at character creation, plus any free stunts from your State. Stunts do NOT cost Refresh in Nova Praxis. Gain more at Major Milestones.\n\nSavant Programs count as Stunt slots. The Savant stunt = 1 slot + 1 free program. Each additional program costs another stunt slot.'},
+  'Stunts':        {cat:'Game Concept',desc:'See Stunt.'},
+  'Savant':        {cat:'Stunt',desc:'Requires SIM State or Apotheosis augmentation. Unlocks the SINC Skill (starts at rank 1) and grants 1 free Savant Program. Also adds a Savant Disadvantage Aspect representing side effects of hacking the mindset. Additional Savant Programs can be purchased as stunt slots.'},
+  'Carpe Diem':    {cat:'Stunt (Pure)',desc:'Free stunt for Pure characters. Once per scene, as a Free Action, declare that an Aspect exists on the current scene or a zone. Must make sense in context and may be vetoed by the GM. You (and only you) may invoke or compel this Aspect for free the first time.'},
+  'Licensed':      {cat:'Stunt',desc:'Allows you to acquire restricted equipment using your Rep-Rating. Without this stunt, restricted items can only be purchased with Assets.'},
+  'Refreshed':     {cat:'Stunt',desc:'Increases your Refresh Rating by +1. Can be taken up to 3 times.'},
+  'Skilled':       {cat:'Stunt',desc:'Increase the rank of one non-Physical Skill by +1 (max 5). Pure characters may apply this to a Physical Skill. At Major Milestones, you may change which Skill this applies to.'},
+  'Battlefield Command':{cat:'Stunt',desc:'Once per scene as a Simple or Supplemental Action, allow all allies who can hear you to move to an adjacent zone or take cover as an Instant Action on your turn. Additional uses per scene cost 1 FP each.'},
+
+  // Nova Praxis specific
+  'Apotheosis':    {cat:'Nova Praxis',desc:'The procedure that digitizes your mind. After Apotheosis, your consciousness can be backed up, transferred, and copied. Required for Sleeved and SIM states, and for the Savant stunt. Pure characters lose ALL State Benefits if they undergo Apotheosis.'},
+  'Sleeve':        {cat:'Nova Praxis',desc:'A synthetic or biological body that a digitized mind can download into. Sleeves set your Physical Skill ranks and provide Augmentation Points. Available in biosleeve and cybersleeve variants at different cost tiers.\n\nStarting sleeve cost: MAX(Assets, Rep-Rating) + 4.'},
+  'Resleeving':    {cat:'Nova Praxis',desc:'Moving your ego to a new body. Mechanically a mental attack with Edge 8 vs. Cohesion. +2 Edge if first time resleeving, +2 Edge if you remember dying, +2 defense if resleeving into clone or same-model sleeve.'},
+  'Rep-Rating':    {cat:'Nova Praxis',desc:'Your standing in the Coalition\'s Interplanetary Reputation Database (IRD). Used to acquire items in Coalition space (Test vs. item Cost). Failure = Rep Hit. Starting Rep = House Networking + 2. Apostates have no Rep-Rating.'},
+  'Mnemonic Core': {cat:'Nova Praxis',desc:'Your mind\'s backup drive. If your body dies but your core survives, you can be restored. If the core doesn\'t survive, you\'re gone permanently.'},
+  'Forking':       {cat:'Nova Praxis',desc:'Copying a mind. The copy is a "fork" \u2014 a separate person with your memories up to the split point. Legally and ethically complicated.'},
+  'Augmentation':  {cat:'Nova Praxis',desc:'Bioware or cyberware modifications to a sleeve. Each has an Augmentation Value (AV) cost. Your Augmentation Limit = Endurance rank x 2.'},
+  'Rep Hit':       {cat:'Nova Praxis',desc:'A reduction to your Rep-Rating caused by failing an acquisition test or other social consequences. Your reputation in Coalition society takes a hit.'},
+  'Savant Program':{cat:'Nova Praxis',desc:'Special programs compiled from SINC code. Each program is a Stunt slot. Execute by rolling SINC vs. Program Difficulty. Failure = System Stress (by shifts missed). Stall = catastrophic system failure.\n\nRequires the Savant stunt. The Savant stunt grants 1 free program; additional programs cost stunt slots.'},
+  'Extended Action':{cat:'Core Mechanic',desc:'A multi-roll task. Set Difficulty as normal, then Mark = Difficulty x 3. Make repeated Skill tests and accumulate Shifts until total \u2265 Mark. Spin on a test reduces the Mark by 1. Stall = catastrophic failure, cannot continue.'},
+  'Mark':          {cat:'Core Mechanic',desc:'The total number of Shifts needed to complete an Extended Action. Mark = Difficulty x 3. Reduced by 1 on each Spin.'}
+};
+
+// Panel expanded descriptions
+const PANELS = {
+  'Skill Roll':     'The core mechanic of Nova Praxis (Strands of Fate). Roll four Fudge dice (each showing +1, 0, or \u20131), add your Skill Rank and any modifiers. The total is your Effort. Compare Effort to the Difficulty to determine success.\n\nThe dice range is narrow (\u20134 to +4), so skill ranks matter enormously. A +4 skill is dominant.\n\nSpin (3+ Shifts) lets you create a free Effect Aspect. Stall (fail by 3+) means spectacular failure.',
+  'The Ladder':     'The universal scale for measuring everything in the game \u2014 skill ranks, difficulties, quality, and outcomes. When the GM sets a difficulty, they pick a rank on the Ladder.\n\nCommon difficulty benchmarks:\n\u2022 Mediocre (+0): Trivial task\n\u2022 Fair (+2): Average challenge\n\u2022 Great (+4): Requires expertise\n\u2022 Fantastic (+6): Extraordinary difficulty\n\u2022 Legendary (+8): Near-impossible',
+  'Seven Actions':  'Every action in Nova Praxis falls into one of seven categories. This is the Strands of Fate action set \u2014 NOT FATE Core\'s OCAD (Overcome/Create Advantage/Attack/Defend).\n\nThe key distinction: Defense is reactive, not an action. You roll to defend when attacked \u2014 it does not cost your turn.\n\nManeuvers are the primary teamwork mechanic: one character places an Aspect, another invokes it for +2.',
+  'Invoking Aspects':'Spending Fate Points to make Aspects matter mechanically. The "Therefore Test" is your guide: "I have [Aspect], therefore it helps me [do this]." If you need two logical leaps, it\'s a stretch.\n\nFree invokes come from Aspects you created via Maneuvers, generated via Spin, or inflicted as Consequences. The first person to invoke or compel gets the free use, regardless of who created it.\n\nPersistent Aspects get free +2/reroll forever, but Blocks and Declarations still cost 1 FP.',
+  'Compelling Aspects':'The engine that fuels the Fate Point economy. The GM uses your Aspects against you to create drama \u2014 and you get paid for it.\n\nLean into compels. They\'re not punishment; they\'re fuel. The loop: Accept compel \u2192 earn FP \u2192 later invoke an Aspect \u2192 spend FP for +2 \u2192 succeed with Spin \u2192 create free Effect Aspect \u2192 ally invokes it free.',
+  'Aspect Types':   'Aspects come in several types with different lifespans and rules. The Scope Rule prevents stacking: one Aspect per scope per test (Character, Scene, Zone, Equipment, etc.).\n\nPersistent Aspects (P) are the exception \u2014 they\'re exempt from scope limits and can be invoked/compelled for +2 or reroll for free. However, you don\'t gain FP from P compels, and declining a P compel always costs 1 FP.',
+  'Fate Points':    'Your narrative currency. The economy is simple: spend FP to invoke Aspects for bonuses, earn FP by accepting compels that make your life harder.\n\nCritical rule: FP do NOT carry over between sessions. Reset to Refresh at the start of each session. Use them or lose them.\n\nRefresh is 5 (Pure = 7). The Refreshed stunt adds +1 (up to 3 times). Stunts do NOT reduce Refresh in Nova Praxis.',
+  'Damage & Stress':'Physical combat stress: Shifts + Weapon Rating (WR) \u2013 Armor Rating (AR). Mental combat stress uses Edge (added to attack roll, not stress) and Determination (added to defense roll).\n\nThree independent stress tracks: Physical, Mental, and System (Savants only). Each track has its own set of Consequence slots.\n\nStress box calculation: 2 base boxes + per contributing skill: rank 1-2 = +1, rank 3-4 = +2, rank 5+ = +3.',
+  'Consequences':   'Negative Aspects taken to absorb stress. Each track (Physical, Mental, System) gets its own set of four slots: Mild (\u20132), Moderate (\u20134), Severe (\u20136), Extreme (\u20138).\n\nConsequences are Aspects \u2014 enemies can invoke them against you (first use free). Severe and Extreme are Persistent.\n\nRecovery: Consequences downgrade over time. Mild = 1hr/1day, Moderate = 1day/1wk, Severe = 1wk/1mo, Extreme = special/permanent.\n\nDistress Concession: Take Extreme on a different track (shock/PTSD from physical attack).',
+  'Concessions':    'Your escape valve from being Taken Out. When you concede, YOU narrate what happens \u2014 not the attacker. You lose the fight but keep narrative control.\n\nImportant: You do NOT automatically gain FP for conceding. You gain 1 FP only if the opponent refuses a reasonable concession (and they lose 1 FP).\n\nSWADE has nothing like this. It\'s one of FATE\'s most important tools.',
+  'Conflict':       'Structured action scenes divided into rounds. Each round, every character gets 1 Simple Action + 1 Free Action. Defense is reactive and doesn\'t cost your action.\n\nSupplemental Actions let you do a second thing at \u20131 penalty (additive). Combined Skills: roll primary, modified by secondary (higher = +1, lower = \u20131, same = +0).\n\nInitiative order: Strategy skill. The GM may adjust based on fiction.',
+  'Movement':       'Zones are abstract areas, not grid squares. Moving to an adjacent zone is a Free Action. Hustle (2 zones) costs a Supplemental Action with \u20132 penalty. Run (3+ zones) costs a Supplemental + Athletics test (Diff 2), \u20133 penalty, +1 zone per Shift.\n\nRough terrain: adjacent zone movement costs a Supplemental Action instead of Free.',
+  'Mental Conflict':'Social and psychological combat. Edge (0-5+) replaces WR but adds to the attack ROLL, not to stress after a hit. Determination (0-5) replaces AR but adds to the defense ROLL.\n\nCommon matchups: Guile vs. Insight (lies), Diplomacy vs. Cohesion/Resolve (manipulation), Intimidation vs. Resolve (threats).\n\nMental stress goes on the Mental Stress track. Mental Consequences must describe psychological effects.',
+  'Extended Actions':'Multi-roll tasks for complex operations. Set Difficulty normally, then Mark = Difficulty \u00d7 3. Make repeated Skill tests and accumulate Shifts until total \u2265 Mark.\n\nSpin on any test reduces the remaining Mark by 1 (bonus progress). Stall on any test = catastrophic failure, the Extended Action cannot continue.\n\nExamples: Building a bridge (1hr between rolls, Diff 3, Mark 9). Bringing a reactor online (10min, Diff 4, Mark 12).',
+  'Resleeving':     'Moving your ego to a new body. Mechanically a mental attack with Edge 8 vs. Cohesion. This means even routine resleeving can cause significant Mental Stress.\n\nModifiers: +2 Edge if first time (harder), +2 Edge if you remember dying (harder), +2 defense if resleeving into a clone or same-model sleeve (easier).\n\nFailed resleeving can cause Mental Consequences \u2014 identity crises, dissociation, body dysmorphia.',
+  'Economy':        'Two parallel acquisition systems:\n\n<b>Rep-Rating:</b> Coalition space. Test your Rep vs. item Cost. Failure = Rep Hit (reputation damage). Higher Rep = more access to goods and services.\n\n<b>Assets:</b> Black market and apostate trading. Direct Skill test vs. item Cost.\n\nRestricted items require the Licensed stunt or must be acquired via Assets.\n\nStarting Rep = House Networking + 2. First Rep bump value = your Diplomacy rank.',
+  'States':         'The biggest character choice. Determines your relationship with your body.\n\n<b>Pure:</b> Original body, highest Refresh (7), Carpe Diem stunt, but loses everything if Apotheosized.\n\n<b>SIM:</b> Pure software, great hacker, but no body \u2014 needs drones, suffers lag.\n\n<b>Sleeved:</b> Most flexible. Swappable bodies, augmentations, but resleeving is traumatic.\n\nYou can change states during play (except you can never go back to Pure).',
+  'Stunts':         'Special abilities that distinguish your character. 3 at creation + free State stunts. Gain more at Major Milestones.\n\nCritical rule: Stunts do NOT cost Refresh in Nova Praxis. This is different from FATE Core.\n\nSavant Programs count as stunt slots. The Savant stunt costs 1 slot and gives you SINC 1 + 1 free program. Each additional program costs another slot.',
+  'ABCDE Aspects':  'The Aspect Alphabet for building well-rounded characters:\n\n<b>HC:</b> High Concept \u2014 who you are in one phrase\n<b>A:</b> Ambition \u2014 what drives you\n<b>B:</b> Belief \u2014 what you believe\n<b>C:</b> Connection \u2014 who or what matters to you\n<b>D:</b> Disadvantage \u2014 what holds you back\n<b>E:</b> Expertise \u2014 what you\'re best at\n<b>7:</b> Physical Trait (Pure) or Savant Disadvantage\n\nGood Aspects are double-edged: useful when invoked, interesting when compelled.',
+  'Skill Distributions':'Three build archetypes that determine how many skill ranks you get and how high they go:\n\n<b>Specialist (14 skills):</b> One skill at +5, focused. Best for characters with one standout talent.\n\n<b>Expert (16 skills):</b> Three skills at +4, well-rounded. Most common choice.\n\n<b>Generalist (18 skills):</b> Seven skills at +3, broad. No weaknesses but no peaks.\n\nPhysical skills (Athletics, Endurance, Perception) use separate ranks from your State or Sleeve.',
+  'Starting Equipment':'Free items at character creation by descending Cost. First item = MAX(Assets, Rep) + 2, second = +1, continuing down to Cost 1. Unlimited items at Cost 0-1.\n\nRestricted items: limited to Assets + 1 items (unless you have the Licensed stunt).\n\nSleeved characters start with a sleeve at MAX(Assets, Rep-Rating) + 4.',
+  'Savant Programs':'Digital abilities compiled from SINC code. Execute by rolling SINC vs. Program Difficulty. Failure = System Stress (by shifts missed). Stall = catastrophic system failure.\n\nEach program is a stunt slot. The Savant stunt gives 1 slot + 1 free program. Each additional program costs another slot from your 3.\n\nPrograms range from hacking (Delve, System Invasion) to mind reading (Stream of Consciousness) to drone control (Puppeteer) to battlefield control (Blackout, Overload).',
+  'GM Quick Moves': 'Pacing tools for keeping the action moving:\n\n<b>Twist the Aspect:</b> Take an existing scene or character Aspect and flip it into a source of danger.\n\n<b>Split the Scene:</b> When the party splits or multiple things happen simultaneously, run them in parallel.\n\n<b>Flashback Invocation:</b> A player spends an FP to retroactively justify preparation they didn\'t explicitly do.\n\n<b>Compel the Clock:</b> Use time pressure as a scene Aspect that can be compelled.\n\n<b>NPC Invokes:</b> Remember that enemies have FP too and can invoke Aspects.'
+};
+
+function showModal(title, cat, html) {
+  let overlay = document.getElementById('modal-overlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'modal-overlay';
+    overlay.className = 'modal-overlay';
+    overlay.innerHTML = '<div class="modal"><button class="modal-close">&times;</button><div class="modal-cat"></div><h3></h3><div class="modal-body"></div></div>';
+    document.body.appendChild(overlay);
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+    overlay.querySelector('.modal-close').addEventListener('click', closeModal);
+  }
+  overlay.querySelector('.modal-cat').textContent = cat || '';
+  overlay.querySelector('h3').textContent = title;
+  overlay.querySelector('.modal-body').innerHTML = html;
+  overlay.classList.add('open');
+
+  // Make terms in modal clickable too
+  linkifyTerms(overlay.querySelector('.modal-body'));
+}
+
+function closeModal() {
+  const overlay = document.getElementById('modal-overlay');
+  if (overlay) overlay.classList.remove('open');
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// Convert term description text to HTML
+function termToHtml(desc) {
+  return desc.replace(/\n/g, '<br>').replace(/\u2022/g, '&bull;');
+}
+
+// Find and wrap recognized terms in clickable spans
+function linkifyTerms(container) {
+  const termKeys = Object.keys(TERMS).sort((a, b) => b.length - a.length); // longest first
+  const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, null, false);
+  const textNodes = [];
+  while (walker.nextNode()) textNodes.push(walker.currentNode);
+
+  textNodes.forEach(node => {
+    if (node.parentElement.closest('.term, h2, h3, .fm, .modal-cat')) return;
+    let html = node.textContent;
+    let changed = false;
+
+    termKeys.forEach(term => {
+      // Word boundary match, case sensitive
+      const re = new RegExp('\\b(' + term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')\\b', 'g');
+      if (re.test(html)) {
+        html = html.replace(re, '<span class="term" data-term="$1">$1</span>');
+        changed = true;
+      }
+    });
+
+    if (changed) {
+      const span = document.createElement('span');
+      span.innerHTML = html;
+      node.replaceWith(span);
+    }
+  });
+}
+
+// Click handler for terms
+document.addEventListener('click', e => {
+  const term = e.target.closest('.term');
+  if (term) {
+    const key = term.dataset.term;
+    const data = TERMS[key];
+    if (data) {
+      showModal(key, data.cat, termToHtml(data.desc));
+    }
+    return;
+  }
+
+  // Panel title clicks
+  const h2 = e.target.closest('.p h2');
+  if (h2) {
+    const title = h2.textContent.replace(/\s*\u25B8\s*$/, '').trim();
+    const panelDesc = PANELS[title];
+    if (panelDesc) {
+      showModal(title, 'Rules Reference', termToHtml(panelDesc));
+    }
+  }
+});
+
+// Linkify all panels after layout
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.querySelectorAll('.p').forEach(p => linkifyTerms(p));
+  }, 200);
+});
 
 // Circuit board background
 (function() {
