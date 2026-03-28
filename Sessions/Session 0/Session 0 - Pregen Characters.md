@@ -206,11 +206,13 @@ Each character has a **role tag** so you know what they're good at, and a **"Pla
 
 - **SIM State** (free) -- Exists as software; Persistent Aspect *SIM State (P)*
 - **Digital Spider** (SIM choice stunt) -- +2 on Research Assessments via Extranet
-- **Savant** -- Unlocks SINC skill; gains Savant Disadvantage Aspect
-- **Savant Programs:** Blackout, Delve, Security Skim
+- **Savant** -- Unlocks SINC skill; gains 1 free program + Savant Disadvantage Aspect (stunt 1)
+- **Savant Program:** Blackout (stunt 2)
+- **Savant Program:** Delve (stunt 3)
 
 ### Combat Stats
 
+**Refresh:** 5
 **Stress:** Physical 4 (virtual) | Mental 4 | System 6
 **AR:** N/A (no body)
 **Gear:** Custom home virtuality, 2 surveillance drones (Perception 3, Stealth 2, Athletics 2)
@@ -265,7 +267,7 @@ Each character has a **role tag** so you know what they're good at, and a **"Pla
 > **Play this if you like:** getting inside people's heads (literally), lying convincingly, and knowing everyone's secrets.
 
 **State:** Sleeved (Gamma Biosleeve) | **House:** [[Factions/Houses/House Kimura|Kimura]]
-**Refresh:** 4 | **Rep Rating:** 5
+**Refresh:** 5 | **Rep Rating:** 5
 
 ### Aspects
 
@@ -285,6 +287,8 @@ Each character has a **role tag** so you know what they're good at, and a **"Pla
 |------|--------|
 | +4 | Guile, Mnemonics, SINC |
 | +3 | Diplomacy, Insight, S. Engineering |
+
+> SINC starts at 1 (from Savant stunt), raised to 4 via skill distribution.
 | +2 | Research, Education, Stealth, Cohesion |
 | +1 | Assets, Resolve, Firearms, Strategy, Intimidation, H. Engineering |
 
@@ -292,10 +296,9 @@ Each character has a **role tag** so you know what they're good at, and a **"Pla
 
 ### Stunts
 
-- **Savant** -- Unlocks SINC; gains Savant Disadvantage
-- **Skilled (Guile)** -- +1 Guile (included above)
-- **Savant Programs:** Stream of Consciousness, Augmented Unreality, Overload
-- *(Refresh reduced to 4 due to extra stunt)*
+- **Savant** -- Unlocks SINC; gains 1 free program + Savant Disadvantage (stunt 1)
+- **Savant Program:** Stream of Consciousness (stunt 2)
+- **Savant Program:** Augmented Unreality (stunt 3)
 
 ### Combat Stats
 
@@ -475,8 +478,9 @@ Each character has a **role tag** so you know what they're good at, and a **"Pla
 
 - **SIM State** (free) -- Exists as software; Persistent Aspect *SIM State (P)*
 - **Drone-Jock** (SIM choice stunt) -- -1 Cost on drones, +1 to two drone skills, +1 drone Aug Point
-- **Savant** -- Unlocks SINC; gains Savant Disadvantage
-- **Savant Programs:** Puppeteer, Esper Lord, Security Skim
+- **Savant** -- Unlocks SINC; gains 1 free program + Savant Disadvantage (stunt 1)
+- **Savant Program:** Puppeteer (stunt 2)
+- **Savant Program:** Esper Lord (stunt 3)
 
 ### Combat Stats
 

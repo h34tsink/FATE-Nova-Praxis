@@ -71,7 +71,7 @@ FATE skills are broader. SWADE's Fighting + Shooting collapse into [[Rules and M
 
 | SWADE | FATE |
 |-------|------|
-| **Edges** — specific mechanical bonuses | **[[Rules and Mechanics/Stunts\|Stunts]]** — similar but narrower; some cost Refresh |
+| **Edges** — specific mechanical bonuses | **[[Rules and Mechanics/Stunts\|Stunts]]** — similar; you start with 3, gain more at Milestones |
 | **Hindrances** — flaws that gave you build points | **Aspects** (especially Disadvantage) — flaws that earn you Fate Points when compelled |
 | Hindrances are "always on" negatives | Aspects are double-edged — they help AND hinder depending on context |
 

@@ -151,7 +151,7 @@ Here's the full list with one-line descriptions:
 | Apostate Networking | Underground/black market contacts |
 
 ### Step 4: Pick Stunts
-Stunts give you special abilities or bonuses. You get a few for free based on your State, then pick more. Each non-free stunt costs 1 Refresh (lowering your Fate Point budget). Key options:
+Stunts give you special abilities or bonuses. You start with **3 Stunts** plus any free ones from your State. You gain more at Major Milestones. Key options:
 
 - **Savant** — Unlocks SINC skill and hacking programs (requires Apotheosis)
 - **Drone-Jock** — Cheaper, better drones

@@ -35,7 +35,7 @@ cssclasses:
 |-------|------|
 | 5 Attributes (Agility, Smarts, etc.) | **No attributes** — skills stand alone |
 | Skills linked to Attributes | Skills ranked +1 to +5 independently |
-| Edges (mechanical bonuses) | **Stunts** (similar; some cost Refresh) |
+| Edges (mechanical bonuses) | **Stunts** (similar; start with 3, gain more at Milestones) |
 | Hindrances (flaws for build points) | **Aspects** — double-edged, compelled for FP |
 | Untrained = -2 penalty | Untrained = roll at +0 (Mediocre) |
 
@@ -174,7 +174,7 @@ Persistent Aspects (P) are **exempt** from the scope limit.
 
 | Rule | Detail |
 |------|--------|
-| Start each session at **Refresh** | Default 5; Pure = 7; reduced by non-free Stunts |
+| Start each session at **Refresh** | Default 5; Pure = 7; Refreshed stunt adds +1 (up to 3x) |
 | **Never carry over** | Use them or lose them |
 | Spend to invoke | +2 or reroll, tied to a relevant Aspect |
 | Spend to declare | Introduce a story fact ("There's a service tunnel here") |
