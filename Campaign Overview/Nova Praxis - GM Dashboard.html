@@ -384,11 +384,9 @@
     padding: 2px 8px;
     border-radius: 4px;
     transition: color 0.15s, border-color 0.15s;
-    position: absolute;
-    top: 12px;
-    left: 14px;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
+    flex-shrink: 0;
   }
   .modal-back:hover {
     color: var(--accent);
@@ -950,9 +948,8 @@ function showModal(title, cat, html, pushToStack) {
     overlay.id = 'modal-overlay';
     overlay.className = 'modal-overlay';
     overlay.innerHTML = '<div class="modal">' +
-      '<button class="modal-back hidden" id="modalBack">&larr; Back</button>' +
       '<button class="modal-close">&times;</button>' +
-      '<div class="modal-breadcrumb" id="modalBread"></div>' +
+      '<div class="modal-breadcrumb" id="modalBread"><button class="modal-back hidden" id="modalBack">&larr; Back</button></div>' +
       '<div class="modal-cat"></div>' +
       '<h3></h3>' +
       '<div class="modal-body"></div>' +
@@ -960,7 +957,7 @@ function showModal(title, cat, html, pushToStack) {
     document.body.appendChild(overlay);
     overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
     overlay.querySelector('.modal-close').addEventListener('click', closeModal);
-    document.getElementById('modalBack').addEventListener('click', modalGoBack);
+    reattachBack();
   }
 
   overlay.querySelector('.modal-cat').textContent = cat || '';
@@ -971,9 +968,7 @@ function showModal(title, cat, html, pushToStack) {
   // Update breadcrumbs
   updateBreadcrumbs();
 
-  // Update back button
-  const backBtn = document.getElementById('modalBack');
-  backBtn.classList.toggle('hidden', modalStack.length <= 1);
+  // Back button visibility handled by updateBreadcrumbs
 
   // Make terms in modal clickable
   linkifyTerms(overlay.querySelector('.modal-body'), true);
@@ -982,9 +977,12 @@ function showModal(title, cat, html, pushToStack) {
 function updateBreadcrumbs() {
   const bread = document.getElementById('modalBread');
   if (!bread) return;
-  if (modalStack.length <= 1) { bread.innerHTML = ''; return; }
 
-  let html = '';
+  const backHtml = '<button class="modal-back' + (modalStack.length <= 1 ? ' hidden' : '') + '" id="modalBack">&larr; Back</button>';
+
+  if (modalStack.length <= 1) { bread.innerHTML = backHtml; reattachBack(); return; }
+
+  let html = backHtml;
   modalStack.forEach((item, i) => {
     if (i > 0) html += '<span class="crumb-sep">\u25B8</span>';
     if (i < modalStack.length - 1) {
@@ -994,6 +992,7 @@ function updateBreadcrumbs() {
     }
   });
   bread.innerHTML = html;
+  reattachBack();
 
   // Breadcrumb click handlers
   bread.querySelectorAll('.crumb').forEach(c => {
@@ -1011,6 +1010,11 @@ function modalGoBack() {
   modalStack.pop();
   const prev = modalStack[modalStack.length - 1];
   showModal(prev.title, prev.cat, prev.html, false);
+}
+
+function reattachBack() {
+  const b = document.getElementById('modalBack');
+  if (b) b.addEventListener('click', modalGoBack);
 }
 
 function closeModal() {
