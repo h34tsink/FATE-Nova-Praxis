@@ -47,10 +47,10 @@ All 10 pregens are in [[Session 0 - Pregen Characters]]. Print them out, lay the
 | Scene | Primary Mechanic Taught | Secondary Mechanics |
 |-------|------------------------|-------------------|
 | 1: The Briefing | Aspects, Declarations | Fate Points, Invoke |
-| 2: Station Arrival | Overcome, Create Advantage | Skill rolls, Difficulty |
+| 2: Station Arrival | Test, Maneuver | Skill rolls, Difficulty |
 | 3: The Morgue | Maneuver, Assessment | Combined actions, Supplemental |
 | 4: The Chase | Compels, Concession | Movement, Zones, Stress |
-| 5: Docking Bay 7 | Full Combat | Attack, Defend, Consequences, Blocks |
+| 5: Docking Bay 7 | Full Combat | Attack, Defense, Consequences, Blocks |
 
 ---
 
@@ -97,7 +97,7 @@ The crew heads for Ansari. Everyone should understand: Aspects are true things, 
 ## Scene 2: Station Arrival
 
 **Location:** Ansari Station — Commercial Level
-**Mechanic Focus:** Overcome actions, Create Advantage, Difficulty numbers
+**Mechanic Focus:** Tests, Maneuvers, Difficulty numbers
 
 ### Setup
 
@@ -105,7 +105,7 @@ The crew docks and moves through Ansari's busy commercial concourse toward Locke
 
 **Scene Aspects:** *"Bustling Crowd"* (P), *"ARIS Surveillance Everywhere"*
 
-### Teaching Moment: Overcome (Basic Test)
+### Teaching Moment: Test (Basic Roll)
 
 The locker bay requires a transit pass. The crew doesn't have one.
 
@@ -117,7 +117,7 @@ Let the players choose. Walk through the roll: 4dF + Skill = Effort. Beat the Di
 
 **If they fail:** Don't block progress. The attendant lets them through but gives them a suspicious look — place the Aspect *"That Attendant Remembers Your Face"* on the scene. This teaches **failure as complication, not dead end**.
 
-### Teaching Moment: Create Advantage
+### Teaching Moment: Maneuver
 
 They reach Locker 1138. It's empty. Daro Voss never made the drop.
 
@@ -125,7 +125,7 @@ They reach Locker 1138. It's empty. Daro Voss never made the drop.
 
 They roll Research or SINC (Diff 3). On success, they create the Aspect: *"Voss Checked Into Station Medical 6 Hours Ago"* with one free invoke. On Spin, two free invokes.
 
-This teaches **Create Advantage** -- rolling to place an Aspect that helps later.
+This teaches **Maneuvers** -- rolling to place an Aspect that helps later.
 
 **Prompt a second tech-capable character:** "Can you check the security feeds?"
 
@@ -264,7 +264,7 @@ The crew reaches the Docking Ring. But the Tsarya team has called reinforcements
 ## Scene 5: Docking Bay 7
 
 **Location:** Ansari Station — Docking Bay 7
-**Mechanic Focus:** Full Combat (Attack, Defend, Consequences, Blocks)
+**Mechanic Focus:** Full Combat (Attack, Defense, Consequences, Blocks)
 
 ### Setup
 
@@ -301,11 +301,11 @@ Programs: Blackout, Security Skim, Stream of Consciousness
 **Round 1 — Initiative and Actions:**
 Roll Strategy for turn order. Walk through: each character gets 1 Simple Action + 1 Free Action. Defense does not cost your action.
 
-**Prompt someone to Create Advantage first** rather than attack. Example: "The crates are full of industrial solvents. Anyone want to do something with that?" If someone Maneuvers to place *"Toxic Fumes Flooding the Bay"* -- everyone understands the flow: create Aspect, invoke it on an attack next round.
+**Prompt someone to Maneuver first** rather than attack. Example: "The crates are full of industrial solvents. Anyone want to do something with that?" If someone Maneuvers to place *"Toxic Fumes Flooding the Bay"* -- everyone understands the flow: place Aspect, invoke it on an attack next round.
 
-> **GM targeting:** Kael-9 will leap at the solvents. Inara will want to Battlefield Command. Dex or Nyx will want to hack. Let them. The point is demonstrating Create Advantage before Attack.
+> **GM targeting:** Kael-9 will leap at the solvents. Inara will want to Battlefield Command. Dex or Nyx will want to hack. Let them. The point is demonstrating Maneuvers before Attack.
 
-**Round 2 — Attack and Defend:**
+**Round 2 — Attack and Defense:**
 Walk through a full attack exchange:
 1. Attacker rolls Firearms + mods
 2. Defender rolls Athletics (or relevant defense)

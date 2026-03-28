@@ -71,28 +71,24 @@ cssclasses:
 
 ## Page 2: FATE Actions Reference
 
-### The Four Core Actions
+### Actions
 
 | Action | Purpose | Roll Against | On Spin (3+ Shifts) |
 |--------|---------|-------------|-------------------|
-| **Overcome** | Remove obstacle, resist effect | GM Difficulty | Extra narrative benefit |
-| **Create Advantage** | Place or discover an Aspect | GM Diff or Opposed | 2 free invokes instead of 1 |
+| **Test** | Roll vs. a fixed difficulty | GM Difficulty | Extra narrative benefit |
+| **Contest** | Opposed roll, single moment | Other character's Effort | Clear winner |
+| **Maneuver** | Place a temporary Aspect on target/scene | GM Diff or Opposed | 2 free invokes instead of 1 |
+| **Assessment** | Discover a hidden existing Aspect | GM Difficulty | Learn additional detail |
+| **Declaration** | Introduce a new story fact | Spend FP or skill test | — |
 | **Attack** | Deal stress to target | Defender's roll | Reduce Shifts by 1 to create Effect Aspect |
-| **Defend** | Block an attack or advantage | Attacker's roll | — (reactive) |
+| **Block** | Prevent a specific action; set potency | Opponent must beat potency | — |
 
-### Other Actions
-
-| Action | What It Does |
-|--------|-------------|
-| **Maneuver** | Place a temporary Aspect on scene or target (= Create Advantage) |
-| **Assessment** | Discover a hidden existing Aspect (Perception, Insight, Research) |
-| **Declaration** | Introduce a new story fact (spend FP or succeed on skill test) |
-| **Block** | Set a potency — opponent must beat it to take a specific action |
+Defense is **reactive** — you roll when attacked, it doesn't cost your action.
 
 ### Turn Structure
 
 **Each turn you get:**
-- **1 Simple Action** (Attack, Overcome, Maneuver, etc.)
+- **1 Simple Action** (Attack, Maneuver, Test, etc.)
 - **1 Free Action** (move to adjacent zone, draw weapon, short speech)
 - **Instant Actions** (defend against attacks — doesn't count against your limit)
 - **Supplemental Action** (do a second small thing at -1 to your primary roll)

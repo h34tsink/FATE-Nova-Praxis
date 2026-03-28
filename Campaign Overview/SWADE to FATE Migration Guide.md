@@ -123,7 +123,7 @@ This is the biggest mechanical shift.
 | SWADE | FATE |
 |-------|------|
 | 3 actions with Multi-Action Penalty (-2 per extra) | **1 Simple Action + 1 Free Action** per turn |
-| Test (opposed Skill vs. Smarts/Spirit) | **Maneuver** or **Create Advantage** (place an Aspect) |
+| Test (opposed Skill vs. Smarts/Spirit) | **Maneuver** (place a temporary Aspect) |
 | Support (+1 to ally's next roll) | No direct equivalent — Maneuver to create an Aspect, ally invokes it |
 
 **Muscle memory trap:** You can't multi-action. Instead of doing three mediocre things, you do one thing well. The FATE equivalent of "support + attack" is: one character Maneuvers to place an Aspect ("*Flanked*"), then another character invokes it for +2 on their Attack. It takes two turns but is more reliable.
@@ -169,7 +169,7 @@ These are new tools. Learn to use them:
 
 - **[[Glossary/Aspects\|Aspects]]** — Story-true phrases that you invoke (+2) or get compelled against (+1 FP). The entire economy runs on these.
 - **Declarations** — Spend a FP to introduce a fact into the scene ("There's a fire escape on this building").
-- **Maneuvers / Create Advantage** — Place a temporary Aspect on a target or scene that anyone can invoke.
+- **Maneuvers** — Place a temporary Aspect on a target or scene that anyone can invoke.
 - **Concession** — Surrender on your terms before getting Taken Out. You lose the fight but keep narrative control.
 - **Persistent Aspects (P)** — Major facts (Severe/Extreme Consequences, environmental truths) that can be invoked or compelled for free. They don't cost FP to use.
 - **The Scope Rule** — You can only invoke one Aspect per "scope" per roll (one Character Aspect, one Scene Aspect, one Equipment Aspect, etc.). This prevents stacking.

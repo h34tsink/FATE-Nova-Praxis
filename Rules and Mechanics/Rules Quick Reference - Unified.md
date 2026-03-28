@@ -29,16 +29,19 @@ tags:
 
 ---
 
-## Actions (OCAD)
+## Actions
 
 | Action | When | Roll Against |
 |--------|------|-------------|
-| **Overcome** | Remove obstacle, resist | GM difficulty |
-| **Create Advantage** | Place/discover Aspect | GM difficulty or opposed |
-| **Attack** | Deal stress | Defender's Effort |
-| **Defend** | Block attack/advantage | Attacker's Effort |
+| **Test** | Roll vs. a fixed difficulty | GM difficulty |
+| **Contest** | Opposed roll, single moment | Other character's Effort |
+| **Maneuver** | Place a temporary Aspect on target/scene | GM difficulty or opposed |
+| **Assessment** | Discover a hidden existing Aspect | GM difficulty |
+| **Declaration** | Introduce a new story fact (costs FP or skill test) | GM approval |
+| **Attack** | Deal stress to a target | Defender's Effort |
+| **Block** | Prevent a specific action; set potency | Opponent must beat potency |
 
-**Create Advantage Results:**
+**Maneuver Results:**
 - Success: New Aspect + 1 free invoke
 - Spin: New Aspect + 2 free invokes
 - Failure: Complication or cost
