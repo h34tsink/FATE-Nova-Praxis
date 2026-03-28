@@ -243,6 +243,55 @@
     opacity: 0.6;
   }
 
+  /* Search box */
+  .search-wrap {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .search-wrap input {
+    font-family: 'Inter', sans-serif;
+    font-size: 8pt;
+    padding: 3px 8px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--surface);
+    color: var(--text);
+    width: 140px;
+    outline: none;
+    transition: border-color 0.15s, width 0.2s;
+  }
+  .search-wrap input:focus {
+    border-color: var(--accent);
+    width: 180px;
+  }
+  .search-wrap input::placeholder { color: var(--text-dim); }
+  .search-wrap .search-clear {
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    cursor: pointer;
+    font-size: 11pt;
+    padding: 0 4px;
+    display: none;
+  }
+  .search-wrap .search-clear.vis { display: block; }
+
+  /* Dimmed panels during search */
+  .p.dimmed {
+    opacity: 0.12;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+  .p.matched {
+    opacity: 1;
+    transition: opacity 0.2s;
+  }
+
   /* Modal overlay */
   .modal-overlay {
     position: fixed;
@@ -295,6 +344,57 @@
     color: var(--text);
     background: rgba(255,255,255,0.05);
   }
+
+  .modal-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+  }
+  .modal-breadcrumb .crumb {
+    font-size: 8pt;
+    color: var(--text-dim);
+    cursor: pointer;
+    padding: 1px 6px;
+    border-radius: 3px;
+    transition: color 0.15s, background 0.15s;
+    font-weight: 500;
+  }
+  .modal-breadcrumb .crumb:hover {
+    color: var(--accent);
+    background: rgba(0,188,212,0.08);
+  }
+  .modal-breadcrumb .crumb-sep {
+    color: var(--border);
+    font-size: 8pt;
+    user-select: none;
+  }
+  .modal-breadcrumb .crumb-current {
+    font-size: 8pt;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .modal-back {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 8pt;
+    cursor: pointer;
+    padding: 2px 8px;
+    border-radius: 4px;
+    transition: color 0.15s, border-color 0.15s;
+    position: absolute;
+    top: 12px;
+    left: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+  }
+  .modal-back:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+  .modal-back.hidden { display: none; }
 
   .modal h3 {
     font-size: 1.3em;
@@ -373,6 +473,10 @@
 <div class="hdr">
   <h1>Nova Praxis</h1>
   <span class="sub">GM Dashboard</span>
+  <div class="search-wrap">
+    <input type="text" id="searchBox" placeholder="Search panels..." oninput="filterPanels(this.value)">
+    <button class="search-clear" id="searchClear" onclick="clearSearch()">&times;</button>
+  </div>
 </div>
 
 <div id="dashboard">
@@ -832,55 +936,131 @@ const PANELS = {
   'GM Quick Moves': 'Pacing tools for keeping the action moving:\n\n<b>Twist the Aspect:</b> Take an existing scene or character Aspect and flip it into a source of danger.\n\n<b>Split the Scene:</b> When the party splits or multiple things happen simultaneously, run them in parallel.\n\n<b>Flashback Invocation:</b> A player spends an FP to retroactively justify preparation they didn\'t explicitly do.\n\n<b>Compel the Clock:</b> Use time pressure as a scene Aspect that can be compelled.\n\n<b>NPC Invokes:</b> Remember that enemies have FP too and can invoke Aspects.'
 };
 
-function showModal(title, cat, html) {
+// Modal history stack for breadcrumbs
+const modalStack = [];
+
+function showModal(title, cat, html, pushToStack) {
+  if (pushToStack !== false) {
+    modalStack.push({ title, cat, html });
+  }
+
   let overlay = document.getElementById('modal-overlay');
   if (!overlay) {
     overlay = document.createElement('div');
     overlay.id = 'modal-overlay';
     overlay.className = 'modal-overlay';
-    overlay.innerHTML = '<div class="modal"><button class="modal-close">&times;</button><div class="modal-cat"></div><h3></h3><div class="modal-body"></div></div>';
+    overlay.innerHTML = '<div class="modal">' +
+      '<button class="modal-back hidden" id="modalBack">&larr; Back</button>' +
+      '<button class="modal-close">&times;</button>' +
+      '<div class="modal-breadcrumb" id="modalBread"></div>' +
+      '<div class="modal-cat"></div>' +
+      '<h3></h3>' +
+      '<div class="modal-body"></div>' +
+      '</div>';
     document.body.appendChild(overlay);
     overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
     overlay.querySelector('.modal-close').addEventListener('click', closeModal);
+    document.getElementById('modalBack').addEventListener('click', modalGoBack);
   }
+
   overlay.querySelector('.modal-cat').textContent = cat || '';
   overlay.querySelector('h3').textContent = title;
   overlay.querySelector('.modal-body').innerHTML = html;
   overlay.classList.add('open');
 
-  // Make terms in modal clickable too
-  linkifyTerms(overlay.querySelector('.modal-body'));
+  // Update breadcrumbs
+  updateBreadcrumbs();
+
+  // Update back button
+  const backBtn = document.getElementById('modalBack');
+  backBtn.classList.toggle('hidden', modalStack.length <= 1);
+
+  // Make terms in modal clickable
+  linkifyTerms(overlay.querySelector('.modal-body'), true);
+}
+
+function updateBreadcrumbs() {
+  const bread = document.getElementById('modalBread');
+  if (!bread) return;
+  if (modalStack.length <= 1) { bread.innerHTML = ''; return; }
+
+  let html = '';
+  modalStack.forEach((item, i) => {
+    if (i > 0) html += '<span class="crumb-sep">\u25B8</span>';
+    if (i < modalStack.length - 1) {
+      html += '<span class="crumb" data-idx="' + i + '">' + item.title + '</span>';
+    } else {
+      html += '<span class="crumb-current">' + item.title + '</span>';
+    }
+  });
+  bread.innerHTML = html;
+
+  // Breadcrumb click handlers
+  bread.querySelectorAll('.crumb').forEach(c => {
+    c.addEventListener('click', () => {
+      const idx = parseInt(c.dataset.idx);
+      const target = modalStack[idx];
+      modalStack.length = idx + 1;
+      showModal(target.title, target.cat, target.html, false);
+    });
+  });
+}
+
+function modalGoBack() {
+  if (modalStack.length <= 1) return;
+  modalStack.pop();
+  const prev = modalStack[modalStack.length - 1];
+  showModal(prev.title, prev.cat, prev.html, false);
 }
 
 function closeModal() {
   const overlay = document.getElementById('modal-overlay');
   if (overlay) overlay.classList.remove('open');
+  modalStack.length = 0;
 }
 
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
 
-// Convert term description text to HTML
+// Convert description text to HTML
 function termToHtml(desc) {
   return desc.replace(/\n/g, '<br>').replace(/\u2022/g, '&bull;');
 }
 
 // Find and wrap recognized terms in clickable spans
-function linkifyTerms(container) {
-  const termKeys = Object.keys(TERMS).sort((a, b) => b.length - a.length); // longest first
+// firstOnly=false for modals (link all), firstOnly=true for panels (link first only)
+function linkifyTerms(container, isModal) {
+  const termKeys = Object.keys(TERMS).sort((a, b) => b.length - a.length);
+  const seen = new Set(); // track first occurrence per container
+
   const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, null, false);
   const textNodes = [];
   while (walker.nextNode()) textNodes.push(walker.currentNode);
 
   textNodes.forEach(node => {
-    if (node.parentElement.closest('.term, h2, h3, .fm, .modal-cat')) return;
+    // Skip terms inside other terms, headings, formulas, labels
+    if (node.parentElement.closest('.term, h2, h3, .fm, .modal-cat, .modal-breadcrumb, th, strong')) return;
+
     let html = node.textContent;
     let changed = false;
 
     termKeys.forEach(term => {
-      // Word boundary match, case sensitive
-      const re = new RegExp('\\b(' + term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')\\b', 'g');
+      // In panels: skip if already seen this term in this panel
+      if (!isModal && seen.has(term)) return;
+
+      const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const re = new RegExp('\\b(' + escaped + ')\\b');
       if (re.test(html)) {
-        html = html.replace(re, '<span class="term" data-term="$1">$1</span>');
+        if (!isModal) {
+          // First occurrence only in panels
+          html = html.replace(re, '<span class="term" data-term="$1">$1</span>');
+          seen.add(term);
+        } else {
+          // All occurrences in modals
+          const reG = new RegExp('\\b(' + escaped + ')\\b', 'g');
+          html = html.replace(reG, '<span class="term" data-term="$1">$1</span>');
+        }
         changed = true;
       }
     });
@@ -893,7 +1073,7 @@ function linkifyTerms(container) {
   });
 }
 
-// Click handler for terms
+// Click handler for terms and panel titles
 document.addEventListener('click', e => {
   const term = e.target.closest('.term');
   if (term) {
@@ -905,7 +1085,6 @@ document.addEventListener('click', e => {
     return;
   }
 
-  // Panel title clicks
   const h2 = e.target.closest('.p h2');
   if (h2) {
     const title = h2.textContent.replace(/\s*\u25B8\s*$/, '').trim();
@@ -916,10 +1095,37 @@ document.addEventListener('click', e => {
   }
 });
 
-// Linkify all panels after layout
+// Search / filter panels
+window.filterPanels = function(query) {
+  const clearBtn = document.getElementById('searchClear');
+  clearBtn.classList.toggle('vis', query.length > 0);
+
+  const panels = document.querySelectorAll('.p');
+  if (!query.trim()) {
+    panels.forEach(p => { p.classList.remove('dimmed', 'matched'); });
+    return;
+  }
+
+  const q = query.toLowerCase();
+  panels.forEach(p => {
+    const text = p.textContent.toLowerCase();
+    const match = text.includes(q);
+    p.classList.toggle('dimmed', !match);
+    p.classList.toggle('matched', match);
+  });
+};
+
+window.clearSearch = function() {
+  const box = document.getElementById('searchBox');
+  box.value = '';
+  filterPanels('');
+  box.focus();
+};
+
+// Linkify all panels after layout (first occurrence only per panel)
 window.addEventListener('load', () => {
   setTimeout(() => {
-    document.querySelectorAll('.p').forEach(p => linkifyTerms(p));
+    document.querySelectorAll('.p').forEach(p => linkifyTerms(p, false));
   }, 200);
 });
 
