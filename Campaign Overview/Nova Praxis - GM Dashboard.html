@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nova Praxis — GM Dashboard</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #0c1018;
+    --surface: #141c28;
+    --surface-2: #1a2438;
+    --border: #2a3a52;
+    --border-light: #1e2e44;
+    --text: #d8e2ef;
+    --text-dim: #7e92aa;
+    --accent: #00bcd4;
+    --accent-dim: rgba(0,188,212,0.15);
+    --amber: #f59e0b;
+    --red: #ef4444;
+    --green: #22c55e;
+    --purple: #a78bfa;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 8pt;
+    line-height: 1.35;
+    color: var(--text);
+    background: var(--bg);
+  }
+
+  @page {
+    size: letter;
+    margin: 6mm;
+  }
+  @media print {
+    body { background: var(--bg); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+
+  /* Page container */
+  .page {
+    width: 8.5in;
+    min-height: 11in;
+    margin: 0 auto;
+    padding: 10mm 8mm;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  /* Subtle grid background */
+  .page::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(rgba(0,188,212,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,188,212,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+  }
+
+  /* Top accent line */
+  .page::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 5%; right: 5%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  }
+
+  /* Column layout */
+  .cols {
+    columns: 3;
+    column-gap: 12px;
+    column-rule: 1px solid var(--border-light);
+    position: relative;
+    z-index: 1;
+  }
+
+  .section {
+    break-inside: avoid;
+    margin-bottom: 8px;
+    padding: 6px 7px;
+    background: var(--surface);
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+  }
+
+  /* Title */
+  .page-title {
+    text-align: center;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 1;
+  }
+  .page-title h1 {
+    font-size: 13pt;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-shadow: 0 0 20px rgba(0,188,212,0.3);
+  }
+  .page-title .sub {
+    font-size: 7pt;
+    color: var(--text-dim);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 1px;
+  }
+  .page-num {
+    position: absolute;
+    bottom: 6mm;
+    right: 8mm;
+    font-size: 7pt;
+    color: var(--text-dim);
+    letter-spacing: 0.1em;
+    z-index: 1;
+  }
+  .page-label {
+    position: absolute;
+    bottom: 6mm;
+    left: 8mm;
+    font-size: 6pt;
+    color: rgba(0,188,212,0.25);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    z-index: 1;
+  }
+
+  /* Section headers */
+  h2 {
+    font-size: 8.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin-bottom: 4px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  h3 {
+    font-size: 7.5pt;
+    font-weight: 700;
+    color: var(--amber);
+    margin-top: 4px;
+    margin-bottom: 1px;
+    letter-spacing: 0.03em;
+  }
+
+  p { margin-bottom: 2px; }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 3px 0;
+    font-size: 7.5pt;
+  }
+  th {
+    text-align: left;
+    font-weight: 600;
+    font-size: 6.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding: 2px 3px;
+  }
+  td {
+    padding: 1.5px 3px;
+    border-bottom: 1px solid var(--border-light);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  td strong { color: var(--text); font-weight: 600; }
+
+  /* Lists */
+  ul { padding-left: 11px; margin: 2px 0; }
+  li { margin-bottom: 1px; }
+  li strong { font-weight: 600; color: var(--text); }
+
+  /* Formula boxes */
+  .formula {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 3px;
+    padding: 3px 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    font-size: 8pt;
+    text-align: center;
+    margin: 3px 0;
+    color: var(--accent);
+  }
+
+  /* Ladder */
+  .ladder {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0 6px;
+    font-size: 7pt;
+  }
+  .ladder .rank {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    text-align: right;
+    color: var(--accent);
+  }
+
+  /* Notes */
+  .note {
+    font-size: 6.5pt;
+    color: var(--text-dim);
+    font-style: italic;
+    margin-top: 2px;
+  }
+
+  /* Callout */
+  .callout {
+    background: var(--surface-2);
+    border-left: 3px solid var(--amber);
+    border-radius: 0 3px 3px 0;
+    padding: 3px 6px;
+    margin: 3px 0;
+    font-size: 7pt;
+  }
+  .callout.danger { border-left-color: var(--red); }
+  .callout.info { border-left-color: var(--accent); }
+
+  /* Inline highlight */
+  .hl { color: var(--accent); font-weight: 600; }
+  .hl-amber { color: var(--amber); font-weight: 600; }
+  .hl-red { color: var(--red); font-weight: 600; }
+  .hl-green { color: var(--green); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<!-- ==================== PAGE 1 ==================== -->
+<div class="page">
+  <div class="page-title">
+    <h1>Nova Praxis</h1>
+    <div class="sub">GM Dashboard &mdash; Based on Strands of Fate</div>
+  </div>
+
+  <div class="cols">
+
+    <!-- SKILL ROLL -->
+    <div class="section">
+      <h2>Skill Roll</h2>
+      <div class="formula">4dF + Skill Rank + Modifiers = Effort</div>
+      <div class="formula">Shifts = Effort &minus; Difficulty</div>
+      <table>
+        <tr><th>Result</th><th>Meaning</th></tr>
+        <tr><td><strong class="hl-green">Spin</strong> (3+ Shifts)</td><td>May create an Effect Aspect (costs 1 Shift on attacks). Limit 1 per round.</td></tr>
+        <tr><td><strong class="hl-red">Stall</strong> (fail by 3+)</td><td>Spectacular failure. GM may create an Effect Aspect against you.</td></tr>
+      </table>
+    </div>
+
+    <!-- LADDER -->
+    <div class="section">
+      <h2>The Ladder</h2>
+      <div class="ladder">
+        <span class="rank">+8</span><span>Legendary</span>
+        <span class="rank">+7</span><span>Epic</span>
+        <span class="rank">+6</span><span>Fantastic</span>
+        <span class="rank">+5</span><span>Superb</span>
+        <span class="rank">+4</span><span>Great</span>
+        <span class="rank">+3</span><span>Good</span>
+        <span class="rank">+2</span><span>Fair</span>
+        <span class="rank">+1</span><span>Average</span>
+        <span class="rank">+0</span><span>Mediocre</span>
+        <span class="rank">&minus;1</span><span>Poor</span>
+        <span class="rank">&minus;2</span><span>Terrible</span>
+      </div>
+    </div>
+
+    <!-- SEVEN ACTIONS -->
+    <div class="section">
+      <h2>Seven Actions</h2>
+      <table>
+        <tr><th>Action</th><th>What It Does</th></tr>
+        <tr><td><strong>Test</strong></td><td>Roll Skill vs. GM-set difficulty</td></tr>
+        <tr><td><strong>Contest</strong></td><td>Opposed roll; highest Effort wins. Tie = both succeed</td></tr>
+        <tr><td><strong>Maneuver</strong></td><td>Place a Temporary Aspect on target or scene. First invoke free</td></tr>
+        <tr><td><strong>Assessment</strong></td><td>Discover a hidden existing Aspect</td></tr>
+        <tr><td><strong>Declaration</strong></td><td>Spend 1 FP or skill test to introduce a new story fact. GM approves</td></tr>
+        <tr><td><strong>Attack</strong></td><td>Deal stress. Defender rolls reactively</td></tr>
+        <tr><td><strong>Block</strong></td><td>Set a Potency. Opponent must beat it before performing the blocked action</td></tr>
+      </table>
+      <div class="callout info">Defense is <strong>reactive</strong> &mdash; you roll when attacked, it does not cost your action.</div>
+    </div>
+
+    <!-- ASPECTS -->
+    <div class="section">
+      <h2>Aspects</h2>
+      <h3>Types</h3>
+      <ul>
+        <li><strong>Character:</strong> permanent (HC + ABCDE + state)</li>
+        <li><strong>Situation:</strong> last for a scene or until removed</li>
+        <li><strong>Temporary:</strong> from Maneuvers; gone once invoked/compelled</li>
+        <li><strong>Effect:</strong> from Spin; gone once used</li>
+        <li><strong>Consequences:</strong> last until recovered</li>
+        <li><strong>Persistent (P):</strong> invoke/compel for +2 or reroll <span class="hl-green">free</span></li>
+      </ul>
+      <h3>Scope Rule</h3>
+      <p>One Aspect per scope per test. Scopes: Character, Scene, Zone, Equipment, Consequence, Stunt, Augmentation, Another Character's. <strong>Persistent Aspects are exempt.</strong></p>
+      <h3>"Therefore" Test</h3>
+      <p><em>"I have [Aspect], <span class="hl">therefore</span> it helps me [do this]."</em> Two logical leaps = stretch.</p>
+    </div>
+
+    <!-- INVOKING -->
+    <div class="section">
+      <h2>Invoking Aspects</h2>
+      <p>Spend <span class="hl-amber">1 FP</span> or use a free invoke. Choose one:</p>
+      <ul>
+        <li><strong>+2</strong> to your Skill test</li>
+        <li><strong>Reroll</strong> all your dice</li>
+        <li>Create a <strong>Block</strong> (usually Potency 2)</li>
+        <li>Make a <strong>Declaration</strong></li>
+      </ul>
+      <p class="note">Free invokes: first use of Aspects from Maneuvers, Spin, or inflicted Consequences.</p>
+      <div class="callout info">Persistent Aspects: +2 bonus and reroll are always free. Blocks/Declarations still cost 1 FP.</div>
+    </div>
+
+    <!-- COMPELLING -->
+    <div class="section">
+      <h2>Compelling Aspects</h2>
+      <p>Accept a complication = <span class="hl-green">earn 1 FP</span>. Effects:</p>
+      <ul>
+        <li>&minus;2 penalty on your test</li>
+        <li>Forced reroll</li>
+        <li>Suffer a Block or Declaration</li>
+        <li>Narrative complication</li>
+      </ul>
+      <p><strong>Refuse a compel:</strong> <span class="hl-red">pay 1 FP</span>.</p>
+      <div class="callout danger">Persistent Aspect compels: declining <em>always</em> costs 1 FP. You do NOT gain FP from P-Aspect compels.</div>
+    </div>
+
+    <!-- FATE POINTS -->
+    <div class="section">
+      <h2>Fate Points &amp; Refresh</h2>
+      <table>
+        <tr><th>Rule</th><th>Detail</th></tr>
+        <tr><td>Refresh</td><td><span class="hl">5</span> (Pure = <span class="hl">7</span>). Refreshed stunt: +1 (up to 3x)</td></tr>
+        <tr><td>Session start</td><td>Reset to Refresh. <span class="hl-red">FP do NOT carry over</span></td></tr>
+        <tr><td>Spend to</td><td>Invoke Aspect, power Stunt, refuse compel</td></tr>
+        <tr><td>Earn from</td><td>Accept compels, Aspects invoked against you, concede conflict</td></tr>
+      </table>
+    </div>
+
+    <!-- DAMAGE -->
+    <div class="section">
+      <h2>Damage &amp; Stress</h2>
+      <div class="formula">Stress = Shifts + WR &minus; AR</div>
+      <p class="note">ExR (Explosive Rating) adds to the attack <em>roll</em>, not stress after a hit. Edge (mental) adds to attack roll. Determination adds to defense roll.</p>
+      <h3>Stress Tracks</h3>
+      <table>
+        <tr><th>Track</th><th>Base</th><th>Contributing Skills</th></tr>
+        <tr><td><strong>Physical</strong></td><td>2</td><td>Athletics + Endurance</td></tr>
+        <tr><td><strong>Mental</strong></td><td>2</td><td>Cohesion + Resolve</td></tr>
+        <tr><td><strong>System</strong></td><td>2</td><td>SINC + S. Eng (Savants only)</td></tr>
+      </table>
+      <p class="note">Per skill: rank 1-2 = +1 box, rank 3-4 = +2, rank 5+ = +3.</p>
+    </div>
+
+    <!-- CONSEQUENCES -->
+    <div class="section">
+      <h2>Consequences</h2>
+      <table>
+        <tr><th>Type</th><th>Absorbs</th><th>Physical</th><th>Mental</th></tr>
+        <tr><td><strong>Mild</strong></td><td>2</td><td>1 hour</td><td>1 day</td></tr>
+        <tr><td><strong>Moderate</strong></td><td>4</td><td>1 day</td><td>1 week</td></tr>
+        <tr><td><strong>Severe (P)</strong></td><td>6</td><td>1 week</td><td>1 month</td></tr>
+        <tr><td><strong>Extreme (P)</strong></td><td>8</td><td>Special</td><td>Permanent</td></tr>
+      </table>
+      <ul>
+        <li>One of each type (Mild/Mod/Sev/Ext) <strong>per stress track</strong></li>
+        <li>Type must match the attack (physical consequence for physical damage, etc.)</li>
+        <li>First invoke/compel of a consequence is <span class="hl-green">free</span></li>
+        <li>Consequences <strong>downgrade</strong> on recovery: Severe &rarr; Mod &rarr; Mild &rarr; gone</li>
+        <li><strong>Emergency aid:</strong> Diff 2 test, 10 min = remove Mild in field</li>
+      </ul>
+      <div class="callout">
+        <strong>Distress Concession:</strong> Take an Extreme Consequence on a <em>different</em> track (e.g., Extreme Mental from a physical attack = shock/PTSD).
+      </div>
+    </div>
+
+  </div><!-- end cols -->
+
+  <div class="page-label">NOVA PRAXIS</div>
+  <div class="page-num">Page 1 of 2</div>
+</div>
+
+<!-- ==================== PAGE 2 ==================== -->
+<div class="page">
+  <div class="page-title">
+    <h1>Nova Praxis</h1>
+    <div class="sub">GM Dashboard &mdash; Page 2</div>
+  </div>
+
+  <div class="cols">
+
+    <!-- CONCESSIONS -->
+    <div class="section">
+      <h2>Concessions</h2>
+      <ul>
+        <li>Offered any time you take a Consequence</li>
+        <li>Absorbs <strong>all stress</strong> from the triggering attack</li>
+        <li>You do <span class="hl-red">NOT</span> auto-gain FP for conceding</li>
+        <li>Gain 1 FP only if opponent <strong>refuses</strong> a reasonable concession (they lose 1 FP)</li>
+        <li>You narrate the outcome &mdash; not the attacker</li>
+      </ul>
+    </div>
+
+    <!-- CONFLICT -->
+    <div class="section">
+      <h2>Conflict</h2>
+      <h3>Per Turn</h3>
+      <ul>
+        <li><strong>1 Simple Action</strong> (Attack, Maneuver, Block, etc.)</li>
+        <li><strong>1 Free Action</strong> (move to adjacent zone, draw weapon, short speech)</li>
+        <li><strong>Instant Actions</strong> (defense doesn't count; limit 1 other per turn)</li>
+      </ul>
+      <h3>Supplemental Action</h3>
+      <p>Do a second thing alongside your Simple Action: <span class="hl-red">&minus;1 penalty</span> to primary test. Additive with other penalties (e.g., Hustle = &minus;2).</p>
+      <h3>Combined Skills</h3>
+      <p>Roll primary, modified by secondary: higher = <span class="hl-green">+1</span>, lower = <span class="hl-red">&minus;1</span>, same = +0.</p>
+      <h3>Turn Order</h3>
+      <p>Strategy Skill determines initiative. GM may shift order based on fiction.</p>
+    </div>
+
+    <!-- MOVEMENT -->
+    <div class="section">
+      <h2>Movement</h2>
+      <table>
+        <tr><th>Move</th><th>Cost</th><th>Penalty</th></tr>
+        <tr><td><strong>Adjacent zone</strong></td><td>Free Action</td><td>None</td></tr>
+        <tr><td><strong>Hustle</strong> (2 zones)</td><td>Supplemental</td><td>&minus;2 to action</td></tr>
+        <tr><td><strong>Run</strong> (3+ zones)</td><td>Supplemental + Athletics (Diff 2)</td><td>&minus;3, +1 zone/Shift</td></tr>
+      </table>
+      <p class="note">Rough terrain: adjacent zone move becomes a Supplemental Action.</p>
+    </div>
+
+    <!-- MENTAL CONFLICT -->
+    <div class="section">
+      <h2>Mental Conflict</h2>
+      <table>
+        <tr><th>Concept</th><th>Mechanic</th></tr>
+        <tr><td><strong>Edge</strong> (0-5+)</td><td>Added to <span class="hl">attack roll</span> directly (not to stress after hit)</td></tr>
+        <tr><td><strong>Determination</strong> (0-5)</td><td>Added to <span class="hl">defense roll</span></td></tr>
+      </table>
+      <h3>Common Mental Attacks</h3>
+      <ul>
+        <li><strong>Lies:</strong> Guile vs. Insight</li>
+        <li><strong>Manipulation:</strong> Diplomacy vs. Cohesion/Resolve</li>
+        <li><strong>Threats:</strong> Intimidation vs. Resolve</li>
+        <li><strong>Seduction:</strong> Diplomacy/Guile vs. Resolve/Insight</li>
+      </ul>
+      <p class="note">Edge 0 = half-hearted. Edge 5 = playing on target's fears/weaknesses. Can exceed 5 for extreme scenarios.</p>
+    </div>
+
+    <!-- EXTENDED ACTIONS -->
+    <div class="section">
+      <h2>Extended Actions</h2>
+      <div class="formula">Mark = Difficulty &times; 3</div>
+      <p>Make repeated Skill tests. Accumulate Shifts until total &ge; Mark.</p>
+      <ul>
+        <li><span class="hl-green">Spin:</span> reduces remaining Mark by 1</li>
+        <li><span class="hl-red">Stall:</span> catastrophic failure, cannot continue</li>
+      </ul>
+    </div>
+
+    <!-- RESLEEVING -->
+    <div class="section">
+      <h2>Resleeving</h2>
+      <div class="formula">Mental attack (Edge 8) vs. Cohesion</div>
+      <table>
+        <tr><th>Condition</th><th>Modifier</th></tr>
+        <tr><td>First time resleeving</td><td><span class="hl-red">+2 Edge</span></td></tr>
+        <tr><td>You remember dying</td><td><span class="hl-red">+2 Edge</span></td></tr>
+        <tr><td>Clone or same-model sleeve</td><td><span class="hl-green">+2 defense</span></td></tr>
+      </table>
+    </div>
+
+    <!-- ECONOMY -->
+    <div class="section">
+      <h2>Economy</h2>
+      <table>
+        <tr><th>System</th><th>How It Works</th></tr>
+        <tr><td><strong>Rep-Rating</strong></td><td>Coalition space. Test vs. item Cost. Failure = Rep Hit</td></tr>
+        <tr><td><strong>Assets</strong></td><td>Black market / apostate. Direct test vs. Cost</td></tr>
+      </table>
+      <ul>
+        <li><strong>Restricted items:</strong> need Licensed stunt or use Assets</li>
+        <li><strong>Starting Rep:</strong> House Networking + 2</li>
+        <li>First Rep bump value = your Diplomacy</li>
+      </ul>
+    </div>
+
+    <!-- STATES -->
+    <div class="section">
+      <h2>Character States</h2>
+      <table>
+        <tr><th>State</th><th>Phys</th><th>Ref</th><th>Key Benefit</th></tr>
+        <tr><td><strong>Pure</strong></td><td>8 ranks</td><td>7</td><td>Carpe Diem, +1 skill, Physical Trait Aspect</td></tr>
+        <tr><td><strong>SIM</strong></td><td>7 ranks</td><td>5</td><td>+1 SINC, +1 S.Eng, choice stunt, no body</td></tr>
+        <tr><td><strong>Sleeved</strong></td><td>By sleeve</td><td>5</td><td>Sleeve augmentations, swappable bodies</td></tr>
+      </table>
+      <p class="note">Pure: loses all benefits if Apotheosized. SIM: lag penalties at distance, needs drones for physical world.</p>
+    </div>
+
+    <!-- STUNTS -->
+    <div class="section">
+      <h2>Stunts</h2>
+      <ul>
+        <li><strong>3 Stunts</strong> at character creation (+ free State stunts)</li>
+        <li>Stunts do <span class="hl-green">NOT</span> cost Refresh</li>
+        <li>Gain more at <strong>Major Milestones</strong></li>
+        <li>Savant Programs count as stunt slots</li>
+        <li>Savant stunt = 1 slot + 1 free program; extra programs = extra slots</li>
+      </ul>
+    </div>
+
+    <!-- ASPECTS ABCDE -->
+    <div class="section">
+      <h2>Aspect Alphabet (ABCDE)</h2>
+      <table>
+        <tr><th>#</th><th>Type</th><th>Prompt</th></tr>
+        <tr><td class="hl-amber">HC</td><td>High Concept</td><td>Who are you?</td></tr>
+        <tr><td class="hl-amber">A</td><td>Ambition</td><td>What drives you?</td></tr>
+        <tr><td class="hl-amber">B</td><td>Belief</td><td>What do you believe?</td></tr>
+        <tr><td class="hl-amber">C</td><td>Connection</td><td>Who/what matters?</td></tr>
+        <tr><td class="hl-amber">D</td><td>Disadvantage</td><td>What holds you back?</td></tr>
+        <tr><td class="hl-amber">E</td><td>Expertise</td><td>What are you best at?</td></tr>
+        <tr><td class="hl-amber">7</td><td>Physical Trait / Savant</td><td>State-specific</td></tr>
+      </table>
+      <p class="note">Good Aspects are double-edged: useful when invoked, interesting when compelled.</p>
+    </div>
+
+    <!-- SKILL DISTRIBUTIONS -->
+    <div class="section">
+      <h2>Skill Distributions</h2>
+      <table>
+        <tr><th>Rank</th><th>Specialist</th><th>Expert</th><th>Generalist</th></tr>
+        <tr><td>+5</td><td>1</td><td>&mdash;</td><td>&mdash;</td></tr>
+        <tr><td>+4</td><td>2</td><td>3</td><td>&mdash;</td></tr>
+        <tr><td>+3</td><td>2</td><td>3</td><td>7</td></tr>
+        <tr><td>+2</td><td>3</td><td>4</td><td>8</td></tr>
+        <tr><td>+1</td><td>6</td><td>6</td><td>3</td></tr>
+        <tr style="border-top:1px solid var(--border);"><td><strong>Total</strong></td><td><strong>14</strong></td><td><strong>16</strong></td><td><strong>18</strong></td></tr>
+      </table>
+      <p class="note">Physical skills (Athletics, Endurance, Perception) use separate ranks from State/Sleeve.</p>
+    </div>
+
+    <!-- STARTING EQUIPMENT -->
+    <div class="section">
+      <h2>Starting Equipment</h2>
+      <ul>
+        <li>1st item: MAX(Assets, Rep) + 2</li>
+        <li>2nd item: MAX(Assets, Rep) + 1</li>
+        <li>Continue: +0, &minus;1, etc. down to Cost 1</li>
+        <li>Unlimited items at Cost 0-1</li>
+        <li>Restricted limit: Assets + 1 (unless Licensed)</li>
+        <li>Starting sleeve (Sleeved): MAX(Assets, Rep) + 4</li>
+      </ul>
+    </div>
+
+    <!-- SAVANT PROGRAMS QUICK REF -->
+    <div class="section">
+      <h2>Savant Programs</h2>
+      <p>Roll <span class="hl">SINC vs. Program Difficulty</span>. Fail = System Stress (shifts missed). Stall = catastrophic failure.</p>
+      <table>
+        <tr><th>Program</th><th>Diff</th><th>Effect</th></tr>
+        <tr><td>Blackout</td><td>3+SINC</td><td>Blind target</td></tr>
+        <tr><td>Delve</td><td>2+SINC</td><td>Crack CID, access records</td></tr>
+        <tr><td>Overload</td><td>3+SINC</td><td>Knock target unconscious</td></tr>
+        <tr><td>Puppeteer</td><td>2/Res+1</td><td>Possess drone</td></tr>
+        <tr><td>Security Skim</td><td>2+intel</td><td>View security feeds</td></tr>
+        <tr><td>Stream of C.</td><td>2+SINC</td><td>Read surface thoughts</td></tr>
+        <tr><td>System Error</td><td>SINC</td><td>Sys/HW/Ego attack</td></tr>
+        <tr><td>System Invasion</td><td>4/3+SINC</td><td>Seize control</td></tr>
+      </table>
+      <p class="note">Full program list in Rules and Mechanics/Savant Programs - Game Reference.</p>
+    </div>
+
+    <!-- GM QUICK MOVES -->
+    <div class="section">
+      <h2>GM Quick Moves</h2>
+      <table>
+        <tr><th>Move</th><th>When</th></tr>
+        <tr><td><strong>Twist the Aspect</strong></td><td>Flip existing Aspect into danger</td></tr>
+        <tr><td><strong>Split the Scene</strong></td><td>Parallelize simultaneous actions</td></tr>
+        <tr><td><strong>Flashback Invocation</strong></td><td>Player spends FP to retroactively justify prep</td></tr>
+        <tr><td><strong>Compel the Clock</strong></td><td>Use time as pressure Aspect</td></tr>
+        <tr><td><strong>Let NPCs Invoke</strong></td><td>Enemies spend FP too</td></tr>
+      </table>
+    </div>
+
+  </div><!-- end cols -->
+
+  <div class="page-label">NOVA PRAXIS</div>
+  <div class="page-num">Page 2 of 2</div>
+</div>
+
+</body>
+</html>

@@ -4,611 +4,673 @@
 <meta charset="UTF-8">
 <title>Nova Praxis — Rules Cheat Sheet</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  :root {
-    --bg: #0c1018;
-    --surface: #141c28;
-    --surface-2: #1a2438;
-    --border: #2a3a52;
-    --border-light: #1e2e44;
-    --text: #d8e2ef;
-    --text-dim: #7e92aa;
-    --accent: #00bcd4;
-    --accent-dim: rgba(0,188,212,0.15);
-    --amber: #f59e0b;
-    --red: #ef4444;
-    --green: #22c55e;
-    --purple: #a78bfa;
-  }
 
   body {
     font-family: 'Inter', system-ui, sans-serif;
     font-size: 8pt;
     line-height: 1.35;
-    color: var(--text);
-    background: var(--bg);
+    color: #1a1a1a;
+    background: #f0f0f0;
   }
 
-  @page {
-    size: letter;
-    margin: 6mm;
-  }
+  @page { size: letter landscape; margin: 5mm; }
   @media print {
-    body { background: var(--bg); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; }
+    .toolbar { display: none !important; }
+    .page { box-shadow: none; margin: 0; }
   }
 
-  /* Page container */
   .page {
-    width: 8.5in;
-    min-height: 11in;
-    margin: 0 auto;
-    padding: 10mm 8mm;
+    width: 11in;
+    min-height: 8.5in;
+    padding: 4mm 5mm;
+    margin: 8px auto;
+    background: #fff;
     position: relative;
-    overflow: hidden;
     page-break-after: always;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
   }
   .page:last-child { page-break-after: auto; }
 
-  /* Subtle grid background */
-  .page::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      linear-gradient(rgba(0,188,212,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,188,212,0.04) 1px, transparent 1px);
-    background-size: 40px 40px;
-    pointer-events: none;
-  }
-
-  /* Top accent line */
-  .page::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 5%; right: 5%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--accent), transparent);
-  }
-
-  /* Column layout */
-  .cols {
-    columns: 3;
-    column-gap: 12px;
-    column-rule: 1px solid var(--border-light);
-    position: relative;
-    z-index: 1;
-  }
-
-  .section {
-    break-inside: avoid;
-    margin-bottom: 8px;
-    padding: 6px 7px;
-    background: var(--surface);
-    border: 1px solid var(--border-light);
-    border-radius: 4px;
-  }
-
-  /* Title */
-  .page-title {
-    text-align: center;
-    margin-bottom: 8px;
-    position: relative;
-    z-index: 1;
-  }
-  .page-title h1 {
-    font-size: 13pt;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--accent);
-    text-shadow: 0 0 20px rgba(0,188,212,0.3);
-  }
-  .page-title .sub {
-    font-size: 7pt;
-    color: var(--text-dim);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    margin-top: 1px;
-  }
-  .page-num {
-    position: absolute;
-    bottom: 6mm;
-    right: 8mm;
-    font-size: 7pt;
-    color: var(--text-dim);
-    letter-spacing: 0.1em;
-    z-index: 1;
-  }
-  .page-label {
-    position: absolute;
-    bottom: 6mm;
-    left: 8mm;
-    font-size: 6pt;
-    color: rgba(0,188,212,0.25);
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    z-index: 1;
-  }
-
-  /* Section headers */
-  h2 {
-    font-size: 8.5pt;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--accent);
+  .hdr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 4px;
     padding-bottom: 2px;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 3px solid #0e7490;
   }
+  .hdr h1 { font-size: 12pt; font-weight: 800; color: #0e7490; }
+  .hdr span { font-size: 7pt; color: #999; }
 
-  h3 {
-    font-size: 7.5pt;
-    font-weight: 700;
-    color: var(--amber);
-    margin-top: 4px;
-    margin-bottom: 1px;
-    letter-spacing: 0.03em;
-  }
-
-  p { margin-bottom: 2px; }
-
-  /* Tables */
-  table {
+  /* Masonry container */
+  .masonry {
+    position: relative;
     width: 100%;
-    border-collapse: collapse;
-    margin: 3px 0;
-    font-size: 7.5pt;
   }
-  th {
-    text-align: left;
-    font-weight: 600;
-    font-size: 6.5pt;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--accent);
-    border-bottom: 1px solid var(--border);
-    padding: 2px 3px;
-  }
-  td {
-    padding: 1.5px 3px;
-    border-bottom: 1px solid var(--border-light);
-    vertical-align: top;
-  }
-  tr:last-child td { border-bottom: none; }
-  td strong { color: var(--text); font-weight: 600; }
 
-  /* Lists */
-  ul { padding-left: 11px; margin: 2px 0; }
-  li { margin-bottom: 1px; }
-  li strong { font-weight: 600; color: var(--text); }
-
-  /* Formula boxes */
-  .formula {
-    background: var(--surface-2);
-    border: 1px solid var(--border);
-    border-left: 3px solid var(--accent);
+  /* Panels */
+  .s {
+    position: absolute;
+    padding: 4px 5px;
     border-radius: 3px;
-    padding: 3px 8px;
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: 500;
+    border: 1px solid #e0e0e0;
+    transition: box-shadow 0.15s;
+  }
+  .s.drag-mode { cursor: grab; }
+  .s.drag-mode:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.12); outline: 2px solid #0e7490; outline-offset: -2px; }
+  .s.dragging { opacity: 0.25; pointer-events: none; }
+  .s .drag-handle { display: none; position: absolute; top: 2px; right: 4px; font-size: 9pt; color: #bbb; cursor: grab; z-index: 5; }
+  .s.drag-mode .drag-handle { display: block; }
+
+  /* Drop indicator */
+  .drop-indicator {
+    position: absolute;
+    height: 3px;
+    background: #0e7490;
+    border-radius: 2px;
+    z-index: 50;
+    display: none;
+    pointer-events: none;
+    box-shadow: 0 0 6px rgba(14,116,144,0.4);
+  }
+
+  /* Tile colors */
+  .c1 { background: #eff6ff; border-color: #bfdbfe; }
+  .c2 { background: #f0fdf4; border-color: #bbf7d0; }
+  .c3 { background: #fefce8; border-color: #fde68a; }
+  .c4 { background: #fdf4ff; border-color: #f0abfc; }
+  .c5 { background: #fef2f2; border-color: #fecaca; }
+  .c6 { background: #ecfdf5; border-color: #a7f3d0; }
+  .c7 { background: #fff7ed; border-color: #fed7aa; }
+  .c8 { background: #f5f5f5; border-color: #d4d4d4; }
+  .c9 { background: #faf5ff; border-color: #e9d5ff; }
+
+  h2 {
     font-size: 8pt;
-    text-align: center;
-    margin: 3px 0;
-    color: var(--accent);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 2px;
+    padding-bottom: 1px;
+    border-bottom: 1.5px solid currentColor;
+  }
+  .c1 h2{color:#1d4ed8} .c2 h2{color:#15803d} .c3 h2{color:#a16207}
+  .c4 h2{color:#9333ea} .c5 h2{color:#dc2626} .c6 h2{color:#047857}
+  .c7 h2{color:#c2410c} .c8 h2{color:#525252} .c9 h2{color:#7e22ce}
+
+  h3 { font-size: 7pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: #555; margin-top: 3px; margin-bottom: 1px; }
+  p { margin-bottom: 1px; }
+
+  table { width: 100%; border-collapse: collapse; margin: 2px 0; font-size: 7.5pt; }
+  th { text-align: left; font-weight: 700; font-size: 6.5pt; text-transform: uppercase; letter-spacing: 0.04em; color: #555; border-bottom: 1px solid rgba(0,0,0,0.15); padding: 1px 2px; }
+  td { padding: 1px 2px; border-bottom: 1px solid rgba(0,0,0,0.06); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  td strong { font-weight: 700; }
+
+  ul { padding-left: 10px; margin: 1px 0; }
+  li { margin-bottom: 0.5px; }
+
+  .f { background: rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.1); border-radius: 2px; padding: 2px 6px; font-weight: 700; font-size: 8pt; text-align: center; margin: 2px 0; color: #0e7490; }
+  .ladder { display: grid; grid-template-columns: auto 1fr auto 1fr; gap: 0 5px; font-size: 7pt; }
+  .ladder .r { font-weight: 700; text-align: right; color: #0e7490; }
+  .n { font-size: 6.5pt; color: #777; font-style: italic; margin-top: 1px; }
+  .cb { background: rgba(0,0,0,0.04); border-left: 2px solid #d97706; padding: 1px 4px; margin: 2px 0; font-size: 6.5pt; border-radius: 0 2px 2px 0; }
+  .cb.i { border-left-color: #0891b2; }
+  .cb.d { border-left-color: #dc2626; background: rgba(220,38,38,0.04); }
+  .cb.g { border-left-color: #16a34a; }
+
+  /* Toolbar */
+  .toolbar {
+    position: fixed; top: 8px; right: 8px; z-index: 200;
+    background: #fff; padding: 8px 12px; border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18); border: 1px solid #ddd;
+    display: flex; flex-direction: column; gap: 6px; min-width: 210px;
+  }
+  .toolbar .row {
+    display: flex; gap: 6px; align-items: center;
+  }
+  .toolbar button {
+    font-family: 'Inter', sans-serif; font-size: 8pt; font-weight: 600;
+    padding: 4px 10px; border: 1px solid #ccc; border-radius: 4px;
+    cursor: pointer; background: #fff; color: #333; white-space: nowrap;
+  }
+  .toolbar button:hover { background: #f0f0f0; }
+  .toolbar button.on { background: #0e7490; color: #fff; border-color: #0e7490; }
+  .toolbar label {
+    font-size: 7pt; font-weight: 600; color: #555; white-space: nowrap;
+    text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .toolbar input[type=range] {
+    width: 80px; height: 14px; cursor: pointer;
+  }
+  .toolbar .val {
+    font-size: 7.5pt; font-weight: 700; color: #0e7490;
+    min-width: 22px; text-align: right;
+    font-family: 'Inter', monospace;
+  }
+  .toolbar select {
+    font-family: 'Inter', sans-serif; font-size: 8pt; font-weight: 600;
+    padding: 2px 4px; border: 1px solid #ccc; border-radius: 3px;
+    background: #fff; cursor: pointer;
   }
 
-  /* Ladder */
-  .ladder {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0 6px;
-    font-size: 7pt;
+  /* Print: use CSS columns fallback */
+  @media print {
+    .masonry { position: static !important; height: auto !important; }
+    .s { position: static !important; width: auto !important; transform: none !important; }
+    .masonry { columns: 3; column-gap: 6px; }
+    .s { break-inside: avoid; margin-bottom: 4px; }
+    .drag-handle { display: none !important; }
+    .drop-indicator { display: none !important; }
   }
-  .ladder .rank {
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: 700;
-    text-align: right;
-    color: var(--accent);
-  }
-
-  /* Notes */
-  .note {
-    font-size: 6.5pt;
-    color: var(--text-dim);
-    font-style: italic;
-    margin-top: 2px;
-  }
-
-  /* Callout */
-  .callout {
-    background: var(--surface-2);
-    border-left: 3px solid var(--amber);
-    border-radius: 0 3px 3px 0;
-    padding: 3px 6px;
-    margin: 3px 0;
-    font-size: 7pt;
-  }
-  .callout.danger { border-left-color: var(--red); }
-  .callout.info { border-left-color: var(--accent); }
-
-  /* Inline highlight */
-  .hl { color: var(--accent); font-weight: 600; }
-  .hl-amber { color: var(--amber); font-weight: 600; }
-  .hl-red { color: var(--red); font-weight: 600; }
-  .hl-green { color: var(--green); font-weight: 600; }
 </style>
 </head>
 <body>
 
-<!-- ==================== PAGE 1 ==================== -->
-<div class="page">
-  <div class="page-title">
-    <h1>Nova Praxis</h1>
-    <div class="sub">Rules Cheat Sheet &mdash; Based on Strands of Fate</div>
+<div class="toolbar">
+  <div class="row">
+    <button id="dragBtn" onclick="toggleDrag()">Rearrange</button>
+    <label>Columns</label>
+    <select id="colSelect" onchange="setCols(this.value)">
+      <option value="3" selected>3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
   </div>
+  <div class="row">
+    <label>Font</label>
+    <input type="range" id="fontSlider" min="6" max="12" step="0.5" value="8" oninput="setFont(this.value)">
+    <span class="val" id="fontVal">8pt</span>
+  </div>
+  <div class="row">
+    <label>Gap</label>
+    <input type="range" id="gapSlider" min="2" max="10" step="1" value="4" oninput="setGap(this.value)">
+    <span class="val" id="gapVal">4px</span>
+  </div>
+  <div class="row">
+    <label>Padding</label>
+    <input type="range" id="padSlider" min="2" max="8" step="1" value="4" oninput="setPad(this.value)">
+    <span class="val" id="padVal">4px</span>
+  </div>
+  <div class="row">
+    <label>Line-H</label>
+    <input type="range" id="lhSlider" min="1.1" max="1.6" step="0.05" value="1.35" oninput="setLh(this.value)">
+    <span class="val" id="lhVal">1.35</span>
+  </div>
+</div>
 
-  <div class="cols">
+<!-- ===== PAGE 1 ===== -->
+<div class="page" id="page1">
+  <div class="hdr">
+    <h1>NOVA PRAXIS &mdash; Rules Cheat Sheet</h1>
+    <span>Based on Strands of Fate &bull; Page 1 of 2</span>
+  </div>
+  <div class="masonry" id="m1">
 
-    <!-- SKILL ROLL -->
-    <div class="section">
+    <div class="s c1"><span class="drag-handle">&#x2630;</span>
       <h2>Skill Roll</h2>
-      <div class="formula">4dF + Skill Rank + Modifiers = Effort</div>
-      <div class="formula">Shifts = Effort &minus; Difficulty</div>
+      <div class="f">4dF + Skill + Modifiers = Effort</div>
+      <div class="f">Shifts = Effort &minus; Difficulty</div>
       <table>
-        <tr><th>Result</th><th>Meaning</th></tr>
-        <tr><td><strong class="hl-green">Spin</strong> (3+ Shifts)</td><td>May create an Effect Aspect (costs 1 Shift on attacks). Limit 1 per round.</td></tr>
-        <tr><td><strong class="hl-red">Stall</strong> (fail by 3+)</td><td>Spectacular failure. GM may create an Effect Aspect against you.</td></tr>
+        <tr><td><strong>Spin</strong> (3+ Shifts)</td><td>May create Effect Aspect (costs 1 Shift on attacks). Limit 1/round.</td></tr>
+        <tr><td><strong>Stall</strong> (fail by 3+)</td><td>Spectacular failure. GM may create Effect Aspect against you.</td></tr>
       </table>
     </div>
 
-    <!-- LADDER -->
-    <div class="section">
+    <div class="s c1"><span class="drag-handle">&#x2630;</span>
       <h2>The Ladder</h2>
       <div class="ladder">
-        <span class="rank">+8</span><span>Legendary</span>
-        <span class="rank">+7</span><span>Epic</span>
-        <span class="rank">+6</span><span>Fantastic</span>
-        <span class="rank">+5</span><span>Superb</span>
-        <span class="rank">+4</span><span>Great</span>
-        <span class="rank">+3</span><span>Good</span>
-        <span class="rank">+2</span><span>Fair</span>
-        <span class="rank">+1</span><span>Average</span>
-        <span class="rank">+0</span><span>Mediocre</span>
-        <span class="rank">&minus;1</span><span>Poor</span>
-        <span class="rank">&minus;2</span><span>Terrible</span>
+        <span class="r">+8</span><span>Legendary</span><span class="r">+3</span><span>Good</span>
+        <span class="r">+7</span><span>Epic</span><span class="r">+2</span><span>Fair</span>
+        <span class="r">+6</span><span>Fantastic</span><span class="r">+1</span><span>Average</span>
+        <span class="r">+5</span><span>Superb</span><span class="r">+0</span><span>Mediocre</span>
+        <span class="r">+4</span><span>Great</span><span class="r">&minus;1/&minus;2</span><span>Poor / Terrible</span>
       </div>
     </div>
 
-    <!-- SEVEN ACTIONS -->
-    <div class="section">
+    <div class="s c2"><span class="drag-handle">&#x2630;</span>
       <h2>Seven Actions</h2>
       <table>
         <tr><th>Action</th><th>What It Does</th></tr>
-        <tr><td><strong>Test</strong></td><td>Roll Skill vs. GM-set difficulty</td></tr>
-        <tr><td><strong>Contest</strong></td><td>Opposed roll; highest Effort wins. Tie = both succeed</td></tr>
-        <tr><td><strong>Maneuver</strong></td><td>Place a Temporary Aspect on target or scene. First invoke free</td></tr>
+        <tr><td><strong>Test</strong></td><td>Roll Skill vs. GM difficulty</td></tr>
+        <tr><td><strong>Contest</strong></td><td>Opposed roll; highest Effort wins</td></tr>
+        <tr><td><strong>Maneuver</strong></td><td>Place Temporary Aspect on target/scene. 1st invoke free</td></tr>
         <tr><td><strong>Assessment</strong></td><td>Discover a hidden existing Aspect</td></tr>
-        <tr><td><strong>Declaration</strong></td><td>Spend 1 FP or skill test to introduce a new story fact. GM approves</td></tr>
+        <tr><td><strong>Declaration</strong></td><td>Spend 1 FP or skill test to add a story fact. GM approves</td></tr>
         <tr><td><strong>Attack</strong></td><td>Deal stress. Defender rolls reactively</td></tr>
-        <tr><td><strong>Block</strong></td><td>Set a Potency. Opponent must beat it before performing the blocked action</td></tr>
+        <tr><td><strong>Block</strong></td><td>Set Potency. Opponent must beat it as Simple Action first</td></tr>
       </table>
-      <div class="callout info">Defense is <strong>reactive</strong> &mdash; you roll when attacked, it does not cost your action.</div>
+      <div class="cb i">Defense is <strong>reactive</strong> &mdash; roll when attacked, does not cost your action.</div>
     </div>
 
-    <!-- ASPECTS -->
-    <div class="section">
-      <h2>Aspects</h2>
-      <h3>Types</h3>
-      <ul>
-        <li><strong>Character:</strong> permanent (HC + ABCDE + state)</li>
-        <li><strong>Situation:</strong> last for a scene or until removed</li>
-        <li><strong>Temporary:</strong> from Maneuvers; gone once invoked/compelled</li>
-        <li><strong>Effect:</strong> from Spin; gone once used</li>
-        <li><strong>Consequences:</strong> last until recovered</li>
-        <li><strong>Persistent (P):</strong> invoke/compel for +2 or reroll <span class="hl-green">free</span></li>
-      </ul>
+    <div class="s c3"><span class="drag-handle">&#x2630;</span>
+      <h2>Aspect Types &amp; Scope</h2>
+      <table>
+        <tr><th>Type</th><th>Duration</th></tr>
+        <tr><td><strong>Character</strong></td><td>Permanent (HC + ABCDE + state)</td></tr>
+        <tr><td><strong>Situation</strong></td><td>Scene-length or until removed</td></tr>
+        <tr><td><strong>Temporary</strong></td><td>From Maneuvers; gone once invoked/compelled</td></tr>
+        <tr><td><strong>Effect</strong></td><td>From Spin; gone once used</td></tr>
+        <tr><td><strong>Consequences</strong></td><td>Until recovered</td></tr>
+        <tr><td><strong>Persistent (P)</strong></td><td>Invoke/compel for +2/reroll <strong>free</strong>. Scope exempt</td></tr>
+      </table>
       <h3>Scope Rule</h3>
-      <p>One Aspect per scope per test. Scopes: Character, Scene, Zone, Equipment, Consequence, Stunt, Augmentation, Another Character's. <strong>Persistent Aspects are exempt.</strong></p>
-      <h3>"Therefore" Test</h3>
-      <p><em>"I have [Aspect], <span class="hl">therefore</span> it helps me [do this]."</em> Two logical leaps = stretch.</p>
+      <p>One Aspect per scope per test: Character, Scene, Zone, Equipment, Consequence, Stunt, Augmentation. <strong>Persistent exempt.</strong></p>
+      <p class="n"><em>"I have [Aspect], therefore it helps me [do this]."</em> Two leaps = stretch.</p>
     </div>
 
-    <!-- INVOKING -->
-    <div class="section">
+    <div class="s c3"><span class="drag-handle">&#x2630;</span>
       <h2>Invoking Aspects</h2>
-      <p>Spend <span class="hl-amber">1 FP</span> or use a free invoke. Choose one:</p>
+      <p>Spend <strong>1 FP</strong> or free invoke. Choose one:</p>
       <ul>
         <li><strong>+2</strong> to your Skill test</li>
         <li><strong>Reroll</strong> all your dice</li>
         <li>Create a <strong>Block</strong> (usually Potency 2)</li>
         <li>Make a <strong>Declaration</strong></li>
       </ul>
-      <p class="note">Free invokes: first use of Aspects from Maneuvers, Spin, or inflicted Consequences.</p>
-      <div class="callout info">Persistent Aspects: +2 bonus and reroll are always free. Blocks/Declarations still cost 1 FP.</div>
+      <p class="n">Free invokes: first use of Aspects from Maneuvers, Spin, or Consequences. Persistent: +2/reroll always free; Blocks/Declarations still cost 1 FP.</p>
     </div>
 
-    <!-- COMPELLING -->
-    <div class="section">
+    <div class="s c3"><span class="drag-handle">&#x2630;</span>
       <h2>Compelling Aspects</h2>
-      <p>Accept a complication = <span class="hl-green">earn 1 FP</span>. Effects:</p>
-      <ul>
-        <li>&minus;2 penalty on your test</li>
-        <li>Forced reroll</li>
-        <li>Suffer a Block or Declaration</li>
-        <li>Narrative complication</li>
-      </ul>
-      <p><strong>Refuse a compel:</strong> <span class="hl-red">pay 1 FP</span>.</p>
-      <div class="callout danger">Persistent Aspect compels: declining <em>always</em> costs 1 FP. You do NOT gain FP from P-Aspect compels.</div>
+      <p>Accept complication = <strong>earn 1 FP</strong>. Refuse = <strong>pay 1 FP</strong>.</p>
+      <ul><li>&minus;2 penalty, forced reroll, Block/Declaration against you, or narrative complication</li></ul>
+      <div class="cb d">Persistent compels: declining <em>always</em> costs 1 FP. No FP earned from P-Aspect compels.</div>
     </div>
 
-    <!-- FATE POINTS -->
-    <div class="section">
+    <div class="s c4"><span class="drag-handle">&#x2630;</span>
       <h2>Fate Points &amp; Refresh</h2>
-      <table>
-        <tr><th>Rule</th><th>Detail</th></tr>
-        <tr><td>Refresh</td><td><span class="hl">5</span> (Pure = <span class="hl">7</span>). Refreshed stunt: +1 (up to 3x)</td></tr>
-        <tr><td>Session start</td><td>Reset to Refresh. <span class="hl-red">FP do NOT carry over</span></td></tr>
-        <tr><td>Spend to</td><td>Invoke Aspect, power Stunt, refuse compel</td></tr>
-        <tr><td>Earn from</td><td>Accept compels, Aspects invoked against you, concede conflict</td></tr>
-      </table>
+      <ul>
+        <li><strong>Refresh:</strong> 5 (Pure = 7). Refreshed stunt: +1 (up to 3x)</li>
+        <li>Reset to Refresh each session. <strong>FP do NOT carry over</strong></li>
+        <li><strong>Spend:</strong> invoke Aspect, power Stunt, refuse compel</li>
+        <li><strong>Earn:</strong> accept compels, Aspects invoked against you, concede</li>
+      </ul>
     </div>
 
-    <!-- DAMAGE -->
-    <div class="section">
+    <div class="s c5"><span class="drag-handle">&#x2630;</span>
       <h2>Damage &amp; Stress</h2>
-      <div class="formula">Stress = Shifts + WR &minus; AR</div>
-      <p class="note">ExR (Explosive Rating) adds to the attack <em>roll</em>, not stress after a hit. Edge (mental) adds to attack roll. Determination adds to defense roll.</p>
-      <h3>Stress Tracks</h3>
+      <div class="f">Stress = Shifts + WR &minus; AR</div>
       <table>
         <tr><th>Track</th><th>Base</th><th>Contributing Skills</th></tr>
         <tr><td><strong>Physical</strong></td><td>2</td><td>Athletics + Endurance</td></tr>
         <tr><td><strong>Mental</strong></td><td>2</td><td>Cohesion + Resolve</td></tr>
         <tr><td><strong>System</strong></td><td>2</td><td>SINC + S. Eng (Savants only)</td></tr>
       </table>
-      <p class="note">Per skill: rank 1-2 = +1 box, rank 3-4 = +2, rank 5+ = +3.</p>
+      <p class="n">Per skill: rank 1-2 = +1 box, rank 3-4 = +2, rank 5+ = +3. ExR adds to attack roll, not stress. Edge (mental) adds to attack roll. Determination adds to defense.</p>
     </div>
 
-    <!-- CONSEQUENCES -->
-    <div class="section">
+    <div class="s c5"><span class="drag-handle">&#x2630;</span>
       <h2>Consequences</h2>
       <table>
-        <tr><th>Type</th><th>Absorbs</th><th>Physical</th><th>Mental</th></tr>
+        <tr><th>Type</th><th>Absorbs</th><th>Phys</th><th>Mental</th></tr>
         <tr><td><strong>Mild</strong></td><td>2</td><td>1 hour</td><td>1 day</td></tr>
         <tr><td><strong>Moderate</strong></td><td>4</td><td>1 day</td><td>1 week</td></tr>
         <tr><td><strong>Severe (P)</strong></td><td>6</td><td>1 week</td><td>1 month</td></tr>
         <tr><td><strong>Extreme (P)</strong></td><td>8</td><td>Special</td><td>Permanent</td></tr>
       </table>
       <ul>
-        <li>One of each type (Mild/Mod/Sev/Ext) <strong>per stress track</strong></li>
-        <li>Type must match the attack (physical consequence for physical damage, etc.)</li>
-        <li>First invoke/compel of a consequence is <span class="hl-green">free</span></li>
-        <li>Consequences <strong>downgrade</strong> on recovery: Severe &rarr; Mod &rarr; Mild &rarr; gone</li>
-        <li><strong>Emergency aid:</strong> Diff 2 test, 10 min = remove Mild in field</li>
+        <li>One Mild/Mod/Sev/Ext <strong>per stress track</strong> (up to 12 for Savants, 8 otherwise)</li>
+        <li>Type must match attack. First invoke/compel is <strong>free</strong></li>
+        <li>Downgrade on recovery: Sev &rarr; Mod &rarr; Mild &rarr; gone</li>
+        <li>Emergency aid: Diff 2, 10 min = remove Mild in field</li>
       </ul>
-      <div class="callout">
-        <strong>Distress Concession:</strong> Take an Extreme Consequence on a <em>different</em> track (e.g., Extreme Mental from a physical attack = shock/PTSD).
-      </div>
+      <div class="cb"><strong>Distress Concession:</strong> Take Extreme on a <em>different</em> track (e.g., Extreme Mental from physical = shock).</div>
     </div>
 
-  </div><!-- end cols -->
-
-  <div class="page-label">NOVA PRAXIS</div>
-  <div class="page-num">Page 1 of 2</div>
-</div>
-
-<!-- ==================== PAGE 2 ==================== -->
-<div class="page">
-  <div class="page-title">
-    <h1>Nova Praxis</h1>
-    <div class="sub">Rules Cheat Sheet &mdash; Page 2</div>
-  </div>
-
-  <div class="cols">
-
-    <!-- CONCESSIONS -->
-    <div class="section">
+    <div class="s c5"><span class="drag-handle">&#x2630;</span>
       <h2>Concessions</h2>
       <ul>
-        <li>Offered any time you take a Consequence</li>
-        <li>Absorbs <strong>all stress</strong> from the triggering attack</li>
-        <li>You do <span class="hl-red">NOT</span> auto-gain FP for conceding</li>
-        <li>Gain 1 FP only if opponent <strong>refuses</strong> a reasonable concession (they lose 1 FP)</li>
+        <li>Offered when you take a Consequence. Absorbs <strong>all stress</strong> from that attack</li>
+        <li>You do <strong>NOT</strong> auto-gain FP. Gain 1 FP only if opponent <strong>refuses</strong> (they lose 1 FP)</li>
         <li>You narrate the outcome &mdash; not the attacker</li>
       </ul>
     </div>
 
-    <!-- CONFLICT -->
-    <div class="section">
+    <div class="drop-indicator" id="drop1"></div>
+  </div>
+</div>
+
+<!-- ===== PAGE 2 ===== -->
+<div class="page" id="page2">
+  <div class="hdr">
+    <h1>NOVA PRAXIS &mdash; Rules Cheat Sheet</h1>
+    <span>Page 2 of 2</span>
+  </div>
+  <div class="masonry" id="m2">
+
+    <div class="s c1"><span class="drag-handle">&#x2630;</span>
       <h2>Conflict</h2>
       <h3>Per Turn</h3>
       <ul>
         <li><strong>1 Simple Action</strong> (Attack, Maneuver, Block, etc.)</li>
-        <li><strong>1 Free Action</strong> (move to adjacent zone, draw weapon, short speech)</li>
-        <li><strong>Instant Actions</strong> (defense doesn't count; limit 1 other per turn)</li>
+        <li><strong>1 Free Action</strong> (move adjacent, draw weapon, short speech)</li>
+        <li><strong>Instant Actions</strong> (defense free; 1 other per turn)</li>
       </ul>
       <h3>Supplemental Action</h3>
-      <p>Do a second thing alongside your Simple Action: <span class="hl-red">&minus;1 penalty</span> to primary test. Additive with other penalties (e.g., Hustle = &minus;2).</p>
+      <p>Second thing alongside Simple: <strong>&minus;1</strong> to primary. Additive with other penalties.</p>
       <h3>Combined Skills</h3>
-      <p>Roll primary, modified by secondary: higher = <span class="hl-green">+1</span>, lower = <span class="hl-red">&minus;1</span>, same = +0.</p>
+      <p>Primary + secondary: higher = +1, lower = &minus;1, same = +0.</p>
       <h3>Turn Order</h3>
-      <p>Strategy Skill determines initiative. GM may shift order based on fiction.</p>
+      <p>Strategy Skill. GM may adjust for fiction.</p>
     </div>
 
-    <!-- MOVEMENT -->
-    <div class="section">
+    <div class="s c1"><span class="drag-handle">&#x2630;</span>
       <h2>Movement</h2>
       <table>
-        <tr><th>Move</th><th>Cost</th><th>Penalty</th></tr>
+        <tr><th>Type</th><th>Cost</th><th>Penalty</th></tr>
         <tr><td><strong>Adjacent zone</strong></td><td>Free Action</td><td>None</td></tr>
         <tr><td><strong>Hustle</strong> (2 zones)</td><td>Supplemental</td><td>&minus;2 to action</td></tr>
-        <tr><td><strong>Run</strong> (3+ zones)</td><td>Supplemental + Athletics (Diff 2)</td><td>&minus;3, +1 zone/Shift</td></tr>
+        <tr><td><strong>Run</strong> (3+ zones)</td><td>Suppl. + Athletics Diff 2</td><td>&minus;3, +1 zone/Shift</td></tr>
       </table>
-      <p class="note">Rough terrain: adjacent zone move becomes a Supplemental Action.</p>
+      <p class="n">Rough terrain: adjacent zone costs Supplemental instead of Free.</p>
     </div>
 
-    <!-- MENTAL CONFLICT -->
-    <div class="section">
+    <div class="s c9"><span class="drag-handle">&#x2630;</span>
       <h2>Mental Conflict</h2>
       <table>
-        <tr><th>Concept</th><th>Mechanic</th></tr>
-        <tr><td><strong>Edge</strong> (0-5+)</td><td>Added to <span class="hl">attack roll</span> directly (not to stress after hit)</td></tr>
-        <tr><td><strong>Determination</strong> (0-5)</td><td>Added to <span class="hl">defense roll</span></td></tr>
+        <tr><td><strong>Edge</strong> (0&ndash;5+)</td><td>Added to <strong>attack roll</strong> directly (not to stress)</td></tr>
+        <tr><td><strong>Determination</strong> (0&ndash;5)</td><td>Added to <strong>defense roll</strong></td></tr>
       </table>
       <h3>Common Mental Attacks</h3>
-      <ul>
-        <li><strong>Lies:</strong> Guile vs. Insight</li>
-        <li><strong>Manipulation:</strong> Diplomacy vs. Cohesion/Resolve</li>
-        <li><strong>Threats:</strong> Intimidation vs. Resolve</li>
-        <li><strong>Seduction:</strong> Diplomacy/Guile vs. Resolve/Insight</li>
-      </ul>
-      <p class="note">Edge 0 = half-hearted. Edge 5 = playing on target's fears/weaknesses. Can exceed 5 for extreme scenarios.</p>
-    </div>
-
-    <!-- EXTENDED ACTIONS -->
-    <div class="section">
-      <h2>Extended Actions</h2>
-      <div class="formula">Mark = Difficulty &times; 3</div>
-      <p>Make repeated Skill tests. Accumulate Shifts until total &ge; Mark.</p>
-      <ul>
-        <li><span class="hl-green">Spin:</span> reduces remaining Mark by 1</li>
-        <li><span class="hl-red">Stall:</span> catastrophic failure, cannot continue</li>
-      </ul>
-    </div>
-
-    <!-- RESLEEVING -->
-    <div class="section">
-      <h2>Resleeving</h2>
-      <div class="formula">Mental attack (Edge 8) vs. Cohesion</div>
       <table>
-        <tr><th>Condition</th><th>Modifier</th></tr>
-        <tr><td>First time resleeving</td><td><span class="hl-red">+2 Edge</span></td></tr>
-        <tr><td>You remember dying</td><td><span class="hl-red">+2 Edge</span></td></tr>
-        <tr><td>Clone or same-model sleeve</td><td><span class="hl-green">+2 defense</span></td></tr>
+        <tr><td><strong>Lies</strong></td><td>Guile vs. Insight</td></tr>
+        <tr><td><strong>Manipulation</strong></td><td>Diplomacy vs. Cohesion/Resolve</td></tr>
+        <tr><td><strong>Threats</strong></td><td>Intimidation vs. Resolve</td></tr>
+        <tr><td><strong>Seduction</strong></td><td>Diplomacy/Guile vs. Resolve/Insight</td></tr>
+      </table>
+      <p class="n">Edge 0 = half-hearted. 5 = exploiting fears. Can exceed 5.</p>
+    </div>
+
+    <div class="s c1"><span class="drag-handle">&#x2630;</span>
+      <h2>Extended Actions</h2>
+      <div class="f">Mark = Difficulty &times; 3</div>
+      <p>Repeated tests. Accumulate Shifts &ge; Mark. <strong>Spin:</strong> Mark &minus;1. <strong>Stall:</strong> catastrophic, cannot continue.</p>
+    </div>
+
+    <div class="s c6"><span class="drag-handle">&#x2630;</span>
+      <h2>Resleeving</h2>
+      <div class="f">Mental attack (Edge 8) vs. Cohesion</div>
+      <table>
+        <tr><td>First time resleeving</td><td>+2 Edge (harder)</td></tr>
+        <tr><td>Remember dying</td><td>+2 Edge (harder)</td></tr>
+        <tr><td>Clone or same-model sleeve</td><td>+2 defense (easier)</td></tr>
       </table>
     </div>
 
-    <!-- ECONOMY -->
-    <div class="section">
+    <div class="s c6"><span class="drag-handle">&#x2630;</span>
       <h2>Economy</h2>
       <table>
-        <tr><th>System</th><th>How It Works</th></tr>
-        <tr><td><strong>Rep-Rating</strong></td><td>Coalition space. Test vs. item Cost. Failure = Rep Hit</td></tr>
-        <tr><td><strong>Assets</strong></td><td>Black market / apostate. Direct test vs. Cost</td></tr>
+        <tr><td><strong>Rep-Rating</strong></td><td>Coalition. Test vs. Cost. Fail = Rep Hit</td></tr>
+        <tr><td><strong>Assets</strong></td><td>Black market / apostate. Test vs. Cost</td></tr>
       </table>
       <ul>
-        <li><strong>Restricted items:</strong> need Licensed stunt or use Assets</li>
-        <li><strong>Starting Rep:</strong> House Networking + 2</li>
-        <li>First Rep bump value = your Diplomacy</li>
+        <li><strong>Restricted:</strong> Licensed stunt or use Assets</li>
+        <li><strong>Starting Rep:</strong> House Networking + 2. First bump = Diplomacy</li>
       </ul>
     </div>
 
-    <!-- STATES -->
-    <div class="section">
+    <div class="s c7"><span class="drag-handle">&#x2630;</span>
       <h2>Character States</h2>
       <table>
-        <tr><th>State</th><th>Phys</th><th>Ref</th><th>Key Benefit</th></tr>
-        <tr><td><strong>Pure</strong></td><td>8 ranks</td><td>7</td><td>Carpe Diem, +1 skill, Physical Trait Aspect</td></tr>
-        <tr><td><strong>SIM</strong></td><td>7 ranks</td><td>5</td><td>+1 SINC, +1 S.Eng, choice stunt, no body</td></tr>
-        <tr><td><strong>Sleeved</strong></td><td>By sleeve</td><td>5</td><td>Sleeve augmentations, swappable bodies</td></tr>
+        <tr><th>State</th><th>Phys Ranks</th><th>Ref</th><th>Key Benefits</th></tr>
+        <tr><td><strong>Pure</strong></td><td>8 (max 5)</td><td>7</td><td>Carpe Diem, +1 skill, Phys Trait Aspect</td></tr>
+        <tr><td><strong>SIM</strong></td><td>7 (virtual)</td><td>5</td><td>+1 SINC, +1 S.Eng, choice stunt, no body</td></tr>
+        <tr><td><strong>Sleeved</strong></td><td>By sleeve</td><td>5</td><td>Augmentations, swappable bodies</td></tr>
       </table>
-      <p class="note">Pure: loses all benefits if Apotheosized. SIM: lag penalties at distance, needs drones for physical world.</p>
+      <p class="n">Pure: loses benefits if Apotheosized. SIM: lag at distance, needs drones, ARO per HPA.</p>
     </div>
 
-    <!-- STUNTS -->
-    <div class="section">
+    <div class="s c7"><span class="drag-handle">&#x2630;</span>
       <h2>Stunts</h2>
       <ul>
-        <li><strong>3 Stunts</strong> at character creation (+ free State stunts)</li>
-        <li>Stunts do <span class="hl-green">NOT</span> cost Refresh</li>
+        <li><strong>3 at creation</strong> + free State stunts. Do <strong>NOT</strong> cost Refresh</li>
         <li>Gain more at <strong>Major Milestones</strong></li>
-        <li>Savant Programs count as stunt slots</li>
-        <li>Savant stunt = 1 slot + 1 free program; extra programs = extra slots</li>
+        <li>Savant stunt = 1 slot + 1 free program. Extra programs = extra slots</li>
       </ul>
     </div>
 
-    <!-- ASPECTS ABCDE -->
-    <div class="section">
+    <div class="s c7"><span class="drag-handle">&#x2630;</span>
       <h2>Aspect Alphabet (ABCDE)</h2>
       <table>
         <tr><th>#</th><th>Type</th><th>Prompt</th></tr>
-        <tr><td class="hl-amber">HC</td><td>High Concept</td><td>Who are you?</td></tr>
-        <tr><td class="hl-amber">A</td><td>Ambition</td><td>What drives you?</td></tr>
-        <tr><td class="hl-amber">B</td><td>Belief</td><td>What do you believe?</td></tr>
-        <tr><td class="hl-amber">C</td><td>Connection</td><td>Who/what matters?</td></tr>
-        <tr><td class="hl-amber">D</td><td>Disadvantage</td><td>What holds you back?</td></tr>
-        <tr><td class="hl-amber">E</td><td>Expertise</td><td>What are you best at?</td></tr>
-        <tr><td class="hl-amber">7</td><td>Physical Trait / Savant</td><td>State-specific</td></tr>
+        <tr><td><strong>HC</strong></td><td>High Concept</td><td>Who are you in one phrase?</td></tr>
+        <tr><td><strong>A</strong></td><td>Ambition</td><td>What drives you?</td></tr>
+        <tr><td><strong>B</strong></td><td>Belief</td><td>What do you believe?</td></tr>
+        <tr><td><strong>C</strong></td><td>Connection</td><td>Who or what matters to you?</td></tr>
+        <tr><td><strong>D</strong></td><td>Disadvantage</td><td>What holds you back?</td></tr>
+        <tr><td><strong>E</strong></td><td>Expertise</td><td>What are you best at?</td></tr>
+        <tr><td><strong>7</strong></td><td>Phys Trait / Savant</td><td>State-specific (Pure or Savant only)</td></tr>
       </table>
-      <p class="note">Good Aspects are double-edged: useful when invoked, interesting when compelled.</p>
+      <div class="cb g">Good Aspects are <strong>double-edged</strong>: useful when invoked, interesting when compelled.</div>
     </div>
 
-    <!-- SKILL DISTRIBUTIONS -->
-    <div class="section">
+    <div class="s c7"><span class="drag-handle">&#x2630;</span>
       <h2>Skill Distributions</h2>
       <table>
         <tr><th>Rank</th><th>Specialist</th><th>Expert</th><th>Generalist</th></tr>
-        <tr><td>+5</td><td>1</td><td>&mdash;</td><td>&mdash;</td></tr>
-        <tr><td>+4</td><td>2</td><td>3</td><td>&mdash;</td></tr>
-        <tr><td>+3</td><td>2</td><td>3</td><td>7</td></tr>
-        <tr><td>+2</td><td>3</td><td>4</td><td>8</td></tr>
-        <tr><td>+1</td><td>6</td><td>6</td><td>3</td></tr>
-        <tr style="border-top:1px solid var(--border);"><td><strong>Total</strong></td><td><strong>14</strong></td><td><strong>16</strong></td><td><strong>18</strong></td></tr>
+        <tr><td><strong>+5</strong></td><td>1</td><td>&mdash;</td><td>&mdash;</td></tr>
+        <tr><td><strong>+4</strong></td><td>2</td><td>3</td><td>&mdash;</td></tr>
+        <tr><td><strong>+3</strong></td><td>2</td><td>3</td><td>7</td></tr>
+        <tr><td><strong>+2</strong></td><td>3</td><td>4</td><td>8</td></tr>
+        <tr><td><strong>+1</strong></td><td>6</td><td>6</td><td>3</td></tr>
+        <tr style="border-top:1.5px solid #999;"><td><strong>Total</strong></td><td><strong>14</strong></td><td><strong>16</strong></td><td><strong>18</strong></td></tr>
       </table>
-      <p class="note">Physical skills (Athletics, Endurance, Perception) use separate ranks from State/Sleeve.</p>
+      <p class="n">Physical skills (Athletics, Endurance, Perception) use separate ranks from State/Sleeve.</p>
     </div>
 
-    <!-- STARTING EQUIPMENT -->
-    <div class="section">
+    <div class="s c7"><span class="drag-handle">&#x2630;</span>
       <h2>Starting Equipment</h2>
       <ul>
         <li>1st item: MAX(Assets, Rep) + 2</li>
-        <li>2nd item: MAX(Assets, Rep) + 1</li>
-        <li>Continue: +0, &minus;1, etc. down to Cost 1</li>
-        <li>Unlimited items at Cost 0-1</li>
+        <li>2nd: +1, then +0, &minus;1... down to Cost 1. Unlimited at Cost 0&ndash;1</li>
         <li>Restricted limit: Assets + 1 (unless Licensed)</li>
         <li>Starting sleeve (Sleeved): MAX(Assets, Rep) + 4</li>
       </ul>
     </div>
 
-    <!-- SAVANT PROGRAMS QUICK REF -->
-    <div class="section">
+    <div class="s c1"><span class="drag-handle">&#x2630;</span>
       <h2>Savant Programs</h2>
-      <p>Roll <span class="hl">SINC vs. Program Difficulty</span>. Fail = System Stress (shifts missed). Stall = catastrophic failure.</p>
+      <p>Roll SINC vs. Diff. Fail = System Stress. Stall = catastrophic.</p>
       <table>
         <tr><th>Program</th><th>Diff</th><th>Effect</th></tr>
-        <tr><td>Blackout</td><td>3+SINC</td><td>Blind target</td></tr>
+        <tr><td>Access Memory</td><td>3+SINC</td><td>Extract memories from core</td></tr>
+        <tr><td>Aug. Unreality</td><td>1+SINC</td><td>Create AR illusions</td></tr>
+        <tr><td>Blackout</td><td>3+SINC</td><td>Blind target (+deaf, +frozen)</td></tr>
         <tr><td>Delve</td><td>2+SINC</td><td>Crack CID, access records</td></tr>
+        <tr><td>Eminent Domain</td><td>3+</td><td>Seize computer systems briefly</td></tr>
+        <tr><td>Esper Lord</td><td>Varies</td><td>Control nanomachine swarm</td></tr>
+        <tr><td>Memory Hack</td><td>3+SINC</td><td>Edit stored memories (Extended)</td></tr>
+        <tr><td>Oracle Pattern</td><td>4&plusmn;mesh</td><td>Predict future events</td></tr>
         <tr><td>Overload</td><td>3+SINC</td><td>Knock target unconscious</td></tr>
-        <tr><td>Puppeteer</td><td>2/Res+1</td><td>Possess drone</td></tr>
-        <tr><td>Security Skim</td><td>2+intel</td><td>View security feeds</td></tr>
+        <tr><td>Pattern Scan</td><td>4+intel</td><td>Reconstruct past events</td></tr>
+        <tr><td>Puppeteer</td><td>2/Res+1</td><td>Possess and control drone</td></tr>
+        <tr><td>Security Skim</td><td>2+intel</td><td>View through security feeds</td></tr>
         <tr><td>Stream of C.</td><td>2+SINC</td><td>Read surface thoughts</td></tr>
-        <tr><td>System Error</td><td>SINC</td><td>Sys/HW/Ego attack</td></tr>
-        <tr><td>System Invasion</td><td>4/3+SINC</td><td>Seize control</td></tr>
+        <tr><td>System Error</td><td>SINC</td><td>System / Hardware / Ego attack</td></tr>
+        <tr><td>System Invasion</td><td>4/3+SINC</td><td>Seize control of systems/drones</td></tr>
       </table>
-      <p class="note">Full program list in Rules and Mechanics/Savant Programs - Game Reference.</p>
     </div>
 
-    <!-- GM QUICK MOVES -->
-    <div class="section">
+    <div class="s c8"><span class="drag-handle">&#x2630;</span>
       <h2>GM Quick Moves</h2>
       <table>
-        <tr><th>Move</th><th>When</th></tr>
         <tr><td><strong>Twist the Aspect</strong></td><td>Flip existing Aspect into danger</td></tr>
         <tr><td><strong>Split the Scene</strong></td><td>Parallelize simultaneous actions</td></tr>
-        <tr><td><strong>Flashback Invocation</strong></td><td>Player spends FP to retroactively justify prep</td></tr>
-        <tr><td><strong>Compel the Clock</strong></td><td>Use time as pressure Aspect</td></tr>
-        <tr><td><strong>Let NPCs Invoke</strong></td><td>Enemies spend FP too</td></tr>
+        <tr><td><strong>Flashback Invoke</strong></td><td>Player spends FP for retroactive prep</td></tr>
+        <tr><td><strong>Compel the Clock</strong></td><td>Use time pressure as an Aspect</td></tr>
+        <tr><td><strong>NPC Invokes</strong></td><td>Enemies spend FP too</td></tr>
       </table>
     </div>
 
-  </div><!-- end cols -->
-
-  <div class="page-label">NOVA PRAXIS</div>
-  <div class="page-num">Page 2 of 2</div>
+    <div class="drop-indicator" id="drop2"></div>
+  </div>
 </div>
+
+<script>
+(function() {
+  let GAP = 4;
+  let COLS = 3;
+
+  // Masonry layout
+  function layout(container) {
+    const panels = [...container.querySelectorAll('.s')];
+    if (!panels.length) return;
+    const containerW = container.offsetWidth;
+    const colW = (containerW - GAP * (COLS - 1)) / COLS;
+    const colHeights = new Array(COLS).fill(0);
+
+    panels.forEach(p => {
+      // Temporarily make visible at correct width to measure
+      p.style.width = colW + 'px';
+      p.style.position = 'absolute';
+    });
+
+    // Need a frame to let browser calculate heights
+    requestAnimationFrame(() => {
+      panels.forEach(p => {
+        // Find shortest column
+        const col = colHeights.indexOf(Math.min(...colHeights));
+        const x = col * (colW + GAP);
+        const y = colHeights[col];
+        p.style.left = x + 'px';
+        p.style.top = y + 'px';
+        colHeights[col] += p.offsetHeight + GAP;
+      });
+      container.style.height = Math.max(...colHeights) + 'px';
+    });
+  }
+
+  function layoutAll() {
+    document.querySelectorAll('.masonry').forEach(m => layout(m));
+  }
+
+  // Control functions
+  window.setCols = function(v) {
+    COLS = parseInt(v);
+    layoutAll();
+  };
+  window.setFont = function(v) {
+    document.body.style.fontSize = v + 'pt';
+    document.getElementById('fontVal').textContent = v + 'pt';
+    // Scale sub-elements proportionally
+    document.querySelectorAll('h2').forEach(h => h.style.fontSize = (parseFloat(v) * 1.06) + 'pt');
+    document.querySelectorAll('table').forEach(t => t.style.fontSize = (parseFloat(v) * 0.94) + 'pt');
+    document.querySelectorAll('.f').forEach(f => f.style.fontSize = (parseFloat(v) * 1.06) + 'pt');
+    setTimeout(layoutAll, 50);
+  };
+  window.setGap = function(v) {
+    GAP = parseInt(v);
+    document.getElementById('gapVal').textContent = v + 'px';
+    layoutAll();
+  };
+  window.setPad = function(v) {
+    document.querySelectorAll('.s').forEach(s => s.style.padding = v + 'px ' + (parseInt(v)+1) + 'px');
+    document.getElementById('padVal').textContent = v + 'px';
+    setTimeout(layoutAll, 50);
+  };
+  window.setLh = function(v) {
+    document.body.style.lineHeight = v;
+    document.getElementById('lhVal').textContent = v;
+    setTimeout(layoutAll, 50);
+  };
+
+  // Initial layout
+  window.addEventListener('load', layoutAll);
+  window.addEventListener('resize', layoutAll);
+
+  // Drag and drop
+  let dragMode = false;
+  let dragEl = null;
+  let dragContainer = null;
+
+  window.toggleDrag = function() {
+    dragMode = !dragMode;
+    const btn = document.getElementById('dragBtn');
+    const hint = document.getElementById('dragHint');
+    btn.classList.toggle('on', dragMode);
+    btn.textContent = dragMode ? 'Done' : 'Rearrange Panels';
+    hint.style.display = dragMode ? 'inline' : 'none';
+    document.querySelectorAll('.s').forEach(s => {
+      s.classList.toggle('drag-mode', dragMode);
+      s.draggable = dragMode;
+    });
+  };
+
+  document.addEventListener('dragstart', e => {
+    const panel = e.target.closest('.s');
+    if (!panel || !dragMode) return;
+    dragEl = panel;
+    dragContainer = panel.closest('.masonry');
+    panel.classList.add('dragging');
+    e.dataTransfer.effectAllowed = 'move';
+    // Need to set data for Firefox
+    e.dataTransfer.setData('text/plain', '');
+  });
+
+  document.addEventListener('dragend', () => {
+    if (dragEl) dragEl.classList.remove('dragging');
+    document.querySelectorAll('.drop-indicator').forEach(d => d.style.display = 'none');
+    dragEl = null;
+    dragContainer = null;
+  });
+
+  document.addEventListener('dragover', e => {
+    if (!dragEl) return;
+    e.preventDefault();
+    e.dataTransfer.dropEffect = 'move';
+
+    const target = e.target.closest('.s');
+    if (!target || target === dragEl) {
+      document.querySelectorAll('.drop-indicator').forEach(d => d.style.display = 'none');
+      return;
+    }
+    if (target.closest('.masonry') !== dragContainer) return;
+
+    // Show drop indicator
+    const rect = target.getBoundingClientRect();
+    const containerRect = dragContainer.getBoundingClientRect();
+    const indicator = dragContainer.querySelector('.drop-indicator');
+    const midY = rect.top + rect.height / 2;
+    const before = e.clientY < midY;
+
+    indicator.style.display = 'block';
+    indicator.style.width = rect.width + 'px';
+    indicator.style.left = (rect.left - containerRect.left) + 'px';
+    indicator.style.top = (before ? rect.top - containerRect.top - 2 : rect.bottom - containerRect.top + 1) + 'px';
+    indicator.dataset.target = '';
+    indicator.dataset.before = before;
+    indicator._target = target;
+  });
+
+  document.addEventListener('drop', e => {
+    if (!dragEl) return;
+    e.preventDefault();
+
+    const indicator = dragContainer.querySelector('.drop-indicator');
+    const target = indicator._target;
+    if (!target || target === dragEl) return;
+
+    const before = indicator.dataset.before === 'true';
+    if (before) {
+      target.before(dragEl);
+    } else {
+      target.after(dragEl);
+    }
+
+    indicator.style.display = 'none';
+    dragEl.classList.remove('dragging');
+
+    // Re-layout
+    layout(dragContainer);
+    dragEl = null;
+    dragContainer = null;
+  });
+})();
+</script>
 
 </body>
 </html>
