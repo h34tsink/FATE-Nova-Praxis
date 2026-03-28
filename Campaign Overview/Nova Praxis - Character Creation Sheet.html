@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nova Praxis — Character Creation Sheet</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 9pt;
+    line-height: 1.4;
+    color: #1a1a1a;
+    background: #fff;
+  }
+  @page { size: A4 portrait; margin: 10mm; }
+  @media print {
+    .page-break { page-break-after: always; }
+    body { padding: 0; }
+  }
+  @media screen {
+    body { padding: 15mm; max-width: 210mm; margin: 0 auto; }
+    .page-break { margin: 20px 0; border-bottom: 2px dashed #ccc; padding-bottom: 20px; }
+  }
+
+  h1 {
+    font-size: 16pt;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 2px;
+    letter-spacing: -0.02em;
+  }
+  .subtitle {
+    text-align: center;
+    font-size: 8pt;
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 10pt;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    padding-bottom: 2px;
+    border-bottom: 2px solid #333;
+  }
+  h2 .step {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    font-size: 7pt;
+    font-weight: 700;
+    padding: 1px 5px;
+    border-radius: 3px;
+    margin-right: 4px;
+    vertical-align: middle;
+  }
+
+  h3 {
+    font-size: 8.5pt;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 2px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 3px 0;
+    font-size: 8.5pt;
+  }
+  th {
+    text-align: left;
+    font-weight: 700;
+    font-size: 7.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid #999;
+    padding: 2px 4px;
+    background: #f5f5f5;
+  }
+  td {
+    padding: 2px 4px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+
+  ul { padding-left: 14px; margin: 2px 0; }
+  li { margin-bottom: 1px; }
+
+  .field {
+    border-bottom: 1px solid #999;
+    min-height: 18px;
+    margin: 2px 0;
+    padding: 1px 4px;
+  }
+  .field-label {
+    font-size: 7pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #666;
+    margin-top: 4px;
+  }
+  .field-wide {
+    border-bottom: 1px solid #999;
+    min-height: 28px;
+    margin: 2px 0;
+    padding: 1px 4px;
+  }
+
+  .row {
+    display: grid;
+    gap: 8px;
+    margin: 4px 0;
+  }
+  .row-2 { grid-template-columns: 1fr 1fr; }
+  .row-3 { grid-template-columns: 1fr 1fr 1fr; }
+  .row-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+  .row-2-1 { grid-template-columns: 2fr 1fr; }
+  .row-1-2 { grid-template-columns: 1fr 2fr; }
+
+  .box {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px 6px;
+  }
+  .box h3 { margin-top: 0; }
+
+  .stress-boxes {
+    display: flex;
+    gap: 3px;
+    margin: 2px 0;
+  }
+  .stress-box {
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid #333;
+    border-radius: 2px;
+  }
+
+  .consequence-line {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 6px;
+    align-items: end;
+    margin: 3px 0;
+  }
+  .consequence-label {
+    font-size: 8pt;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .consequence-field {
+    border-bottom: 1px solid #999;
+    min-height: 16px;
+  }
+
+  .note {
+    font-size: 7pt;
+    color: #555;
+    font-style: italic;
+    margin-top: 2px;
+  }
+
+  .aspect-row {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 4px;
+    align-items: center;
+    margin: 2px 0;
+  }
+  .aspect-letter {
+    font-weight: 800;
+    font-size: 11pt;
+    text-align: center;
+    background: #f0f0f0;
+    border-radius: 3px;
+    padding: 1px 0;
+  }
+  .aspect-field {
+    border-bottom: 1px solid #999;
+    min-height: 20px;
+    padding: 1px 4px;
+  }
+  .aspect-type {
+    font-size: 6.5pt;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .skill-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px 12px;
+  }
+  .skill-line {
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    gap: 4px;
+    align-items: center;
+    border-bottom: 1px dotted #ddd;
+    padding: 1px 0;
+    font-size: 8pt;
+  }
+  .skill-rank {
+    border: 1px solid #999;
+    text-align: center;
+    border-radius: 2px;
+    min-height: 14px;
+    font-size: 8pt;
+  }
+
+  .fp-tracker {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  }
+  .fp-circle {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #333;
+    border-radius: 50%;
+  }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1: CHARACTER SHEET -->
+<h1>NOVA PRAXIS &mdash; Character Sheet</h1>
+<div class="subtitle">Strands of Fate &bull; Cold Start Syndicate</div>
+
+<!-- Header Info -->
+<div class="row row-2">
+  <div>
+    <div class="field-label">Character Name</div>
+    <div class="field"></div>
+  </div>
+  <div class="row row-3" style="margin:0;">
+    <div>
+      <div class="field-label">Player</div>
+      <div class="field"></div>
+    </div>
+    <div>
+      <div class="field-label">State</div>
+      <div class="field"></div>
+    </div>
+    <div>
+      <div class="field-label">House / Apostate</div>
+      <div class="field"></div>
+    </div>
+  </div>
+</div>
+
+<div class="row row-4">
+  <div>
+    <div class="field-label">Skill Distribution</div>
+    <div class="field"></div>
+  </div>
+  <div>
+    <div class="field-label">Refresh</div>
+    <div class="field"></div>
+  </div>
+  <div>
+    <div class="field-label">Rep-Rating</div>
+    <div class="field"></div>
+  </div>
+  <div>
+    <div class="field-label">Rep Bumps</div>
+    <div class="field"></div>
+  </div>
+</div>
+
+<!-- Aspects -->
+<h2>Aspects (ABCDE Method)</h2>
+
+<div class="aspect-row">
+  <div class="aspect-letter">HC</div>
+  <div><div class="aspect-type">High Concept</div><div class="aspect-field"></div></div>
+</div>
+<div class="aspect-row">
+  <div class="aspect-letter">A</div>
+  <div><div class="aspect-type">Ambition &mdash; your goals and drives</div><div class="aspect-field"></div></div>
+</div>
+<div class="aspect-row">
+  <div class="aspect-letter">B</div>
+  <div><div class="aspect-type">Belief &mdash; your philosophies and values</div><div class="aspect-field"></div></div>
+</div>
+<div class="aspect-row">
+  <div class="aspect-letter">C</div>
+  <div><div class="aspect-type">Connection &mdash; important people, places, events</div><div class="aspect-field"></div></div>
+</div>
+<div class="aspect-row">
+  <div class="aspect-letter">D</div>
+  <div><div class="aspect-type">Disadvantage &mdash; your weaknesses and obstacles</div><div class="aspect-field"></div></div>
+</div>
+<div class="aspect-row">
+  <div class="aspect-letter">E</div>
+  <div><div class="aspect-type">Expertise &mdash; your skills and methods</div><div class="aspect-field"></div></div>
+</div>
+<div class="aspect-row">
+  <div class="aspect-letter">7</div>
+  <div><div class="aspect-type">Physical Trait (Pure) / Savant Disadvantage (Savants) / &mdash;</div><div class="aspect-field"></div></div>
+</div>
+
+<!-- Skills -->
+<h2>Skills</h2>
+
+<div class="row row-2">
+  <div>
+    <h3>Physical Skills (from State/Sleeve)</h3>
+    <div class="skill-line"><span>Athletics</span><div class="skill-rank"></div></div>
+    <div class="skill-line"><span>Endurance</span><div class="skill-rank"></div></div>
+    <div class="skill-line"><span>Perception</span><div class="skill-rank"></div></div>
+
+    <h3 style="margin-top:6px;">Standard Skills</h3>
+    <div class="skill-grid">
+      <div class="skill-line"><span>Assets</span><div class="skill-rank"></div></div>
+      <div class="skill-line"><span>Melee</span><div class="skill-rank"></div></div>
+      <div class="skill-line"><span>Cohesion</span><div class="skill-rank"></div></div>
+      <div class="skill-line"><span>Mnemonics</span><div class="skill-rank"></div></div>
+      <div class="skill-line"><span>Demolitions</span><div class="skill-rank"></div></div>
+      <div class="skill-line"><span>Networking (House)</span><div class="skill-rank"></div></div>
+      <div class="skill-line"><span>Diplomacy</span><div class="skill-rank"></div></div>
+      <div class="skill-line"><span>Networking (Apostate)</span><div class="skill-rank"></div></div>
+      <div class="skill-line"><span>Education</span><div class="skill-rank"></div></div>
+      <div class="skill-line"><span>Pilot</span><div class="skill-rank"></div></div>
+      <div class="skill-line"><span>H. Engineering</span><div class="skill-rank"></div></div>
+      <div class="skill-line"><span>Research</span><div class="skill-rank"></div></div>
+      <div class="skill-line"><span>S. Engineering</span><div class="skill-rank"></div></div>
+      <div class="skill-line"><span>Resolve</span><div class="skill-rank"></div></div>
+      <div class="skill-line"><span>Firearms</span><div class="skill-rank"></div></div>
+      <div class="skill-line"><span>Strategy</span><div class="skill-rank"></div></div>
+      <div class="skill-line"><span>Guile</span><div class="skill-rank"></div></div>
+      <div class="skill-line"><span>Stealth</span><div class="skill-rank"></div></div>
+      <div class="skill-line"><span>Insight</span><div class="skill-rank"></div></div>
+      <div class="skill-line"><span>Intimidation</span><div class="skill-rank"></div></div>
+    </div>
+
+    <h3 style="margin-top:6px;">Special Skills</h3>
+    <div class="skill-line"><span>SINC (Savant only)</span><div class="skill-rank"></div></div>
+  </div>
+
+  <div>
+    <!-- Skill Distributions Reference -->
+    <div class="box">
+      <h3>Skill Distributions</h3>
+      <table>
+        <tr><th>Rank</th><th>Specialist</th><th>Expert</th><th>Generalist</th></tr>
+        <tr><td>+5</td><td>1</td><td>&mdash;</td><td>&mdash;</td></tr>
+        <tr><td>+4</td><td>2</td><td>3</td><td>&mdash;</td></tr>
+        <tr><td>+3</td><td>2</td><td>3</td><td>7</td></tr>
+        <tr><td>+2</td><td>3</td><td>4</td><td>8</td></tr>
+        <tr><td>+1</td><td>6</td><td>6</td><td>3</td></tr>
+        <tr style="font-weight:600;border-top:1px solid #999;"><td>Total</td><td>14</td><td>16</td><td>18</td></tr>
+      </table>
+      <p class="note">Physical skills (Athletics, Endurance, Perception) have separate ranks from your State or Sleeve.</p>
+    </div>
+
+    <!-- Stunts -->
+    <div class="box" style="margin-top:6px;">
+      <h3>Stunts (3 at creation + free State stunts)</h3>
+      <div class="field-wide" style="min-height:22px;"></div>
+      <div class="field-wide" style="min-height:22px;"></div>
+      <div class="field-wide" style="min-height:22px;"></div>
+
+      <h3 style="margin-top:4px;">Free State Stunts</h3>
+      <div class="field-wide" style="min-height:22px;"></div>
+      <div class="field-wide" style="min-height:22px;"></div>
+
+      <h3 style="margin-top:4px;">Savant Programs (if applicable)</h3>
+      <div class="field-wide" style="min-height:22px;"></div>
+      <div class="field-wide" style="min-height:22px;"></div>
+      <p class="note">Savant stunt = 1 stunt slot + 1 free program. Each extra program = 1 stunt slot.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Stress and Consequences -->
+<h2>Stress &amp; Consequences</h2>
+
+<div class="row row-3">
+  <div class="box">
+    <h3>Physical Stress</h3>
+    <p class="note">2 base + Athletics + Endurance (scaled)</p>
+    <div class="stress-boxes">
+      <div class="stress-box"></div><div class="stress-box"></div><div class="stress-box"></div>
+      <div class="stress-box"></div><div class="stress-box"></div><div class="stress-box"></div>
+      <div class="stress-box"></div><div class="stress-box"></div><div class="stress-box"></div>
+      <div class="stress-box"></div>
+    </div>
+  </div>
+  <div class="box">
+    <h3>Mental Stress</h3>
+    <p class="note">2 base + Cohesion + Resolve (scaled)</p>
+    <div class="stress-boxes">
+      <div class="stress-box"></div><div class="stress-box"></div><div class="stress-box"></div>
+      <div class="stress-box"></div><div class="stress-box"></div><div class="stress-box"></div>
+      <div class="stress-box"></div><div class="stress-box"></div><div class="stress-box"></div>
+      <div class="stress-box"></div>
+    </div>
+  </div>
+  <div class="box">
+    <h3>System Stress <span style="font-weight:400;font-size:7pt;">(Savants)</span></h3>
+    <p class="note">2 base + SINC + S. Engineering (scaled)</p>
+    <div class="stress-boxes">
+      <div class="stress-box"></div><div class="stress-box"></div><div class="stress-box"></div>
+      <div class="stress-box"></div><div class="stress-box"></div><div class="stress-box"></div>
+      <div class="stress-box"></div><div class="stress-box"></div><div class="stress-box"></div>
+      <div class="stress-box"></div>
+    </div>
+  </div>
+</div>
+
+<p class="note" style="margin-top:2px;">Stress box scaling: rank 1-2 = +1 box, rank 3-4 = +2 boxes, rank 5+ = +3 boxes per contributing skill.</p>
+
+<div style="margin-top:4px;">
+  <div class="consequence-line">
+    <span class="consequence-label">Mild (&minus;2):</span>
+    <div class="consequence-field"></div>
+  </div>
+  <div class="consequence-line">
+    <span class="consequence-label">Moderate (&minus;4):</span>
+    <div class="consequence-field"></div>
+  </div>
+  <div class="consequence-line">
+    <span class="consequence-label">Severe (&minus;6) (P):</span>
+    <div class="consequence-field"></div>
+  </div>
+  <div class="consequence-line">
+    <span class="consequence-label">Extreme (&minus;8) (P):</span>
+    <div class="consequence-field"></div>
+  </div>
+</div>
+
+<!-- Fate Points -->
+<h2>Fate Points</h2>
+<div class="row row-2-1">
+  <div class="fp-tracker">
+    <span style="font-size:8pt;font-weight:600;margin-right:4px;">Current FP:</span>
+    <div class="fp-circle"></div>
+    <div class="fp-circle"></div>
+    <div class="fp-circle"></div>
+    <div class="fp-circle"></div>
+    <div class="fp-circle"></div>
+    <div class="fp-circle"></div>
+    <div class="fp-circle"></div>
+    <div class="fp-circle"></div>
+    <div class="fp-circle"></div>
+    <div class="fp-circle"></div>
+  </div>
+  <div style="font-size:8pt;">
+    <strong>Refresh:</strong> _____ <span class="note">(Default 5, Pure = 7)</span>
+  </div>
+</div>
+
+<!-- Equipment and Gear -->
+<h2>Equipment &amp; Gear</h2>
+
+<div class="row row-2">
+  <div>
+    <h3>Weapons</h3>
+    <table>
+      <tr><th>Weapon</th><th>WR</th><th>Cost</th><th>Notes</th></tr>
+      <tr><td><div class="field" style="min-height:14px;border:none;border-bottom:1px solid #ddd;"></div></td><td></td><td></td><td></td></tr>
+      <tr><td><div class="field" style="min-height:14px;border:none;border-bottom:1px solid #ddd;"></div></td><td></td><td></td><td></td></tr>
+      <tr><td><div class="field" style="min-height:14px;border:none;border-bottom:1px solid #ddd;"></div></td><td></td><td></td><td></td></tr>
+    </table>
+  </div>
+  <div>
+    <h3>Armor</h3>
+    <table>
+      <tr><th>Armor</th><th>AR</th><th>Cost</th><th>Features</th></tr>
+      <tr><td><div class="field" style="min-height:14px;border:none;border-bottom:1px solid #ddd;"></div></td><td></td><td></td><td></td></tr>
+      <tr><td><div class="field" style="min-height:14px;border:none;border-bottom:1px solid #ddd;"></div></td><td></td><td></td><td></td></tr>
+    </table>
+  </div>
+</div>
+
+<h3>Other Equipment</h3>
+<div class="field-wide"></div>
+<div class="field-wide"></div>
+
+<!-- Sleeve / Augmentations -->
+<h2>Sleeve &amp; Augmentations <span style="font-weight:400;font-size:7pt;">(Sleeved characters)</span></h2>
+<div class="row row-3">
+  <div>
+    <div class="field-label">Sleeve Model</div>
+    <div class="field"></div>
+  </div>
+  <div>
+    <div class="field-label">Sleeve Cost</div>
+    <div class="field"></div>
+  </div>
+  <div>
+    <div class="field-label">Aug. Points (used / max)</div>
+    <div class="field"></div>
+  </div>
+</div>
+<p class="note">Starting sleeve: MAX(Assets, Rep-Rating) + 4. Aug limit: Endurance &times; 2.</p>
+
+<table>
+  <tr><th>Augmentation</th><th>AV</th><th>Effect</th></tr>
+  <tr><td><div class="field" style="min-height:14px;border:none;border-bottom:1px solid #ddd;"></div></td><td></td><td></td></tr>
+  <tr><td><div class="field" style="min-height:14px;border:none;border-bottom:1px solid #ddd;"></div></td><td></td><td></td></tr>
+  <tr><td><div class="field" style="min-height:14px;border:none;border-bottom:1px solid #ddd;"></div></td><td></td><td></td></tr>
+  <tr><td><div class="field" style="min-height:14px;border:none;border-bottom:1px solid #ddd;"></div></td><td></td><td></td></tr>
+</table>
+
+<!-- PAGE BREAK -->
+<div class="page-break"></div>
+
+<!-- PAGE 2: CHARACTER CREATION GUIDE -->
+<h1>NOVA PRAXIS &mdash; Character Creation Guide</h1>
+<div class="subtitle">Follow steps 0-8 in order</div>
+
+<div class="row row-2">
+<div>
+
+<h2><span class="step">0</span> Concept</h2>
+<p>Who is this person? What do they want? Why are they running deniable ops? Don't overthink it &mdash; a sentence or two is enough to start.</p>
+
+<h2><span class="step">1</span> Aspects (ABCDE)</h2>
+<p>Write 6-7 Aspects. Each should be <strong>double-edged</strong> &mdash; useful when invoked, interesting when compelled.</p>
+<table>
+  <tr><th>#</th><th>Type</th><th>Prompt</th></tr>
+  <tr><td><strong>HC</strong></td><td>High Concept</td><td>Who are you in one phrase?</td></tr>
+  <tr><td><strong>A</strong></td><td>Ambition</td><td>What drives you?</td></tr>
+  <tr><td><strong>B</strong></td><td>Belief</td><td>What do you believe?</td></tr>
+  <tr><td><strong>C</strong></td><td>Connection</td><td>Who or what matters to you?</td></tr>
+  <tr><td><strong>D</strong></td><td>Disadvantage</td><td>What holds you back?</td></tr>
+  <tr><td><strong>E</strong></td><td>Expertise</td><td>What are you good at?</td></tr>
+  <tr><td><strong>7</strong></td><td>Physical Trait / Savant</td><td>State-specific (Pure or Savant only)</td></tr>
+</table>
+
+<h2><span class="step">2</span> Choose State</h2>
+<table>
+  <tr><th>State</th><th>Physical Ranks</th><th>Refresh</th><th>Key Benefit</th></tr>
+  <tr><td><strong>Pure</strong></td><td>8 (max 5 each)</td><td>7</td><td>Carpe Diem, +1 skill, Physical Trait Aspect</td></tr>
+  <tr><td><strong>SIM</strong></td><td>7 (virtual)</td><td>5</td><td>+1 SINC, +1 S.Eng, choice stunt</td></tr>
+  <tr><td><strong>Sleeved</strong></td><td>Set by sleeve</td><td>5</td><td>Sleeve augmentations</td></tr>
+</table>
+<p class="note">Pure: loses all benefits if Apotheosized. SIM: no body, needs drones, lag penalties.</p>
+
+<h2><span class="step">3</span> Pick Skills</h2>
+<p>Choose a distribution, assign ranks to non-physical skills. Physical skills (Athletics, Endurance, Perception) come from your State or Sleeve.</p>
+<table>
+  <tr><th>Rank</th><th>Specialist</th><th>Expert</th><th>Generalist</th></tr>
+  <tr><td>+5</td><td>1</td><td>&mdash;</td><td>&mdash;</td></tr>
+  <tr><td>+4</td><td>2</td><td>3</td><td>&mdash;</td></tr>
+  <tr><td>+3</td><td>2</td><td>3</td><td>7</td></tr>
+  <tr><td>+2</td><td>3</td><td>4</td><td>8</td></tr>
+  <tr><td>+1</td><td>6</td><td>6</td><td>3</td></tr>
+</table>
+
+<h2><span class="step">4</span> Select Stunts</h2>
+<p><strong>3 Stunts</strong> at creation (+ free State stunts). Stunts do NOT reduce Refresh. Gain more at Major Milestones.</p>
+<p>Key stunts to consider:</p>
+<ul>
+  <li><strong>Savant:</strong> unlocks SINC + 1 free program (requires Apotheosis)</li>
+  <li><strong>Licensed:</strong> buy restricted gear with Rep-Rating</li>
+  <li><strong>Skilled:</strong> +1 to one non-physical skill (max 5)</li>
+  <li><strong>Drone-Jock:</strong> cheaper, better drones</li>
+  <li><strong>Specialty Aspect:</strong> free invoke once/scene on a specific skill</li>
+  <li><strong>Refreshed:</strong> +1 Refresh (up to 3 times)</li>
+  <li><strong>Battlefield Command:</strong> move allies as Instant Action</li>
+  <li><strong>Reputable:</strong> +2 Rep-Rating</li>
+  <li><strong>Transhumanist:</strong> +2 Aug Points, +1 max augmentations</li>
+</ul>
+
+</div>
+<div>
+
+<h2><span class="step">5</span> Determine Allegiance</h2>
+<table>
+  <tr><th>House</th><th>Focus</th><th>Discount</th></tr>
+  <tr><td><strong>Cipriani</strong></td><td>Trade, diplomacy</td><td>Social gear</td></tr>
+  <tr><td><strong>Dalianis</strong></td><td>Military, purity</td><td>Weapons, armor</td></tr>
+  <tr><td><strong>Jinzhan</strong></td><td>Science, research</td><td>Tech, sensors</td></tr>
+  <tr><td><strong>Kimura</strong></td><td>Intelligence, espionage</td><td>Stealth, hacking</td></tr>
+  <tr><td><strong>Silva</strong></td><td>Biotech, media</td><td>Biosleeves, augs</td></tr>
+  <tr><td><strong>Tsarya</strong></td><td>Heavy industry, space</td><td>Vehicles, drones</td></tr>
+  <tr><td><strong>Apostate</strong></td><td>Outside the system</td><td>Free Non-Citizen stunt</td></tr>
+</table>
+<p class="note">House members get -1 Cost on House-specific items. Apostates can't use Rep-Rating.</p>
+
+<h2><span class="step">6</span> Starting Rep-Rating</h2>
+<div class="box">
+  <p><strong>Rep-Rating = House Networking + 2</strong></p>
+  <p>Immediately gain a bump with Value = your Diplomacy.</p>
+  <p class="note">Apostates: no Rep-Rating. Use Assets for all purchases.</p>
+</div>
+
+<h2><span class="step">7</span> Starting Equipment</h2>
+<div class="box">
+  <p>Free items by descending Cost:</p>
+  <ul>
+    <li>1st item: MAX(Assets, Rep-Rating) + 2</li>
+    <li>2nd item: MAX(Assets, Rep-Rating) + 1</li>
+    <li>3rd item: +0, then &minus;1, etc. until Cost = 1</li>
+    <li>Unlimited items at Cost 0-1</li>
+  </ul>
+  <p><strong>Restricted items limit:</strong> Assets + 1 (unless Licensed stunt).</p>
+  <p class="note">Starting sleeve (Sleeved characters): MAX(Assets, Rep-Rating) + 4.</p>
+</div>
+
+<h2><span class="step">8</span> Calculate Stress Boxes</h2>
+<div class="box">
+  <p>Start with <strong>2 base boxes</strong> per track. Add per contributing skill:</p>
+  <table>
+    <tr><th>Skill Rank</th><th>Boxes Added</th></tr>
+    <tr><td>1-2</td><td>+1</td></tr>
+    <tr><td>3-4</td><td>+2</td></tr>
+    <tr><td>5+</td><td>+3</td></tr>
+  </table>
+  <table style="margin-top:4px;">
+    <tr><th>Track</th><th>Contributing Skills</th></tr>
+    <tr><td>Physical</td><td>Athletics + Endurance</td></tr>
+    <tr><td>Mental</td><td>Cohesion + Resolve</td></tr>
+    <tr><td>System</td><td>SINC + S. Engineering (Savants only)</td></tr>
+  </table>
+  <p class="note">Example: Athletics 3 (+2) + Endurance 2 (+1) + 2 base = 5 Physical boxes.</p>
+</div>
+
+<h2>Notes &amp; Background</h2>
+<div class="field-wide" style="min-height:40px;"></div>
+<div class="field-wide" style="min-height:40px;"></div>
+
+</div>
+</div>
+
+</body>
+</html>
