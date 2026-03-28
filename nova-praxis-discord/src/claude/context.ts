@@ -1,4 +1,4 @@
-import { getEntityCard, getEntityCardByName, searchRules, searchGameData, searchGlossary, getLatestSessionNum, getSessionSections } from '../db/queries.js';
+import { getEntityCard, getEntityCardByName, searchRules, searchGameData, searchGlossary, getLatestSessionNum, getSessionSections, listEntityCards } from '../db/queries.js';
 import { getActiveAspects } from '../db/aspect-queries.js';
 
 export async function buildNpcContext(token: string, situation: string): Promise<string> {
@@ -96,9 +96,66 @@ export async function buildAspectsContext(subject: string): Promise<string> {
 }
 
 export async function buildGmStartContext(sessionNum?: number): Promise<string> {
-  let prompt = `Bootstrap the session using the /gm-start command from the nova-praxis-gm plugin.`;
-  if (sessionNum) {
-    prompt += ` Session number: ${sessionNum}`;
+  const num = sessionNum ?? (await getLatestSessionNum());
+  if (!num) return 'No session data found in the database. Has the vault been synced?';
+
+  // Load guide, scenes, state, and aspects in parallel
+  const [guideSections, sceneSections, stateSections, aspects, entityCards] = await Promise.all([
+    getSessionSections(num, 'guide'),
+    getSessionSections(num, 'scenes'),
+    getSessionSections(num, 'state'),
+    getActiveAspects(num),
+    listEntityCards(),
+  ]);
+
+  const sections: string[] = [];
+
+  // Session guide (core runbook content)
+  if (guideSections.length > 0) {
+    sections.push(`## Session ${num} — Guide\n\n${guideSections.map((s) => `### ${s.heading}\n${s.content}`).join('\n\n')}`);
   }
-  return prompt;
+
+  // Scene lineup
+  if (sceneSections.length > 0) {
+    sections.push(`## Scenes\n\n${sceneSections.map((s) => `### ${s.heading}\n${s.content}`).join('\n\n')}`);
+  }
+
+  // Live state (command board, dashboard)
+  if (stateSections.length > 0) {
+    sections.push(`## Live State\n\n${stateSections.map((s) => `### ${s.heading}\n${s.content}`).join('\n\n')}`);
+  }
+
+  // Active aspects
+  if (aspects.length > 0) {
+    const aspectLines = aspects.map((a) => {
+      let line = `- [${a.type}] ${a.text}`;
+      if (a.severity) line += ` — ${a.severity}`;
+      if (a.source) line += ` (${a.source})`;
+      return line;
+    });
+    sections.push(`## Active Aspects\n\n${aspectLines.join('\n')}`);
+  }
+
+  // NPC roster (names + ranks for quick reference)
+  if (entityCards.length > 0) {
+    const roster = entityCards.map((e) => `- **${e.name}** (R${e.rank} ${e.class || 'NPC'}) — \`${e.token}\`${e.faction ? ` [${e.faction}]` : ''}`);
+    sections.push(`## NPC Roster\n\n${roster.join('\n')}`);
+  }
+
+  const context = sections.join('\n\n---\n\n');
+
+  return `You are bootstrapping Session ${num} for a Nova Praxis FATE campaign. Using the session data below, produce a GM-ready briefing.
+
+Format:
+1. **Session Intent** — 2-3 sentence summary of what this session is about
+2. **Scene Lineup** — numbered list of scenes with one-line summaries
+3. **Key NPCs** — who matters this session, their stance, and command tokens
+4. **Active Aspects** — any aspects already in play
+5. **Exposure Clock** — current state and tick triggers
+6. **Pre-Session Checklist** — decisions the GM needs to make before play starts
+7. **Opening Line** — a suggested first narration line to kick off the session
+
+Keep it scannable. Format for Discord: **bold**, *italic*, \`code\`, > blockquotes.
+
+${context}`;
 }

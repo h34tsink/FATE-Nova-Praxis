@@ -1,7 +1,7 @@
 import { SlashCommandBuilder, ChatInputCommandInteraction, MessageFlags } from 'discord.js';
 import { requireGM } from '../middleware/permissions.js';
-import { callApi } from '../claude/api.js';
-import { searchGameData, searchGlossary, searchRules, getEntityCard, getEntityCardByName } from '../db/queries.js';
+import { callApi, extractSearchTerms } from '../claude/api.js';
+import { searchGameData, searchGlossary, searchRules, getEntityCard, getEntityCardByName, type GlossaryRow } from '../db/queries.js';
 import { gmResponseEmbed } from '../embeds/gm-response.js';
 
 export const data = new SlashCommandBuilder()
@@ -22,8 +22,17 @@ async function gatherContext(question: string): Promise<string> {
   const sections: string[] = [];
   const lowerQ = question.toLowerCase();
 
-  // Search game data (gear, augmentations, etc.)
-  const gameResults = await searchGameData(question);
+  // Use Haiku to expand the question into better search terms
+  const searchTerms = await extractSearchTerms(question);
+  const allQueries = [question, ...searchTerms];
+
+  // Run all searches in parallel across all expanded terms
+  const [gameResults, glossaryResults, rulesResults] = await Promise.all([
+    dedupeSearches(allQueries, (q) => searchGameData(q)),
+    dedupeGlossary(allQueries),
+    dedupeSearches(allQueries, (q) => searchRules(q)),
+  ]);
+
   if (gameResults.length > 0) {
     const items = gameResults.slice(0, 3).map((r) => {
       const meta = r.metadata ? JSON.stringify(r.metadata) : '';
@@ -32,8 +41,6 @@ async function gatherContext(question: string): Promise<string> {
     sections.push(`## Game Data\n${items.join('\n\n')}`);
   }
 
-  // Search glossary
-  const glossaryResults = await searchGlossary(question);
   if (glossaryResults.length > 0) {
     const terms = glossaryResults.slice(0, 3).map((r) =>
       `**${r.term}**: ${r.short_def || r.long_def || ''}`
@@ -41,10 +48,8 @@ async function gatherContext(question: string): Promise<string> {
     sections.push(`## Glossary\n${terms.join('\n\n')}`);
   }
 
-  // Search rules
-  const rulesResults = await searchRules(question);
   if (rulesResults.length > 0) {
-    const rules = rulesResults.slice(0, 3).map((r) =>
+    const rules = rulesResults.slice(0, 5).map((r) =>
       `**${r.heading}** (${r.file_path}):\n${r.content.slice(0, 500)}`
     );
     sections.push(`## Rules\n${rules.join('\n\n')}`);
@@ -56,12 +61,40 @@ async function gatherContext(question: string): Promise<string> {
       const card = await getEntityCard(token) || await getEntityCardByName(token);
       if (card) {
         sections.push(`## Entity Card: ${card.name}\n${card.full_card}`);
-        break; // one card is usually enough
+        break;
       }
     }
   }
 
   return sections.join('\n\n---\n\n');
+}
+
+/** Run a ranked search across multiple query terms, deduplicate by id. */
+async function dedupeSearches<T extends { id: number; rank: number }>(
+  queries: string[],
+  searchFn: (q: string) => Promise<T[]>
+): Promise<T[]> {
+  const results = await Promise.all(queries.map(searchFn));
+  const seen = new Map<number, T>();
+  for (const batch of results) {
+    for (const r of batch) {
+      const existing = seen.get(r.id);
+      if (!existing || r.rank > existing.rank) seen.set(r.id, r);
+    }
+  }
+  return [...seen.values()].sort((a, b) => b.rank - a.rank);
+}
+
+/** Glossary doesn't have rank in its base type — dedupe by id only. */
+async function dedupeGlossary(queries: string[]): Promise<GlossaryRow[]> {
+  const results = await Promise.all(queries.map((q) => searchGlossary(q)));
+  const seen = new Map<number, GlossaryRow>();
+  for (const batch of results) {
+    for (const r of batch) {
+      if (!seen.has(r.id)) seen.set(r.id, r);
+    }
+  }
+  return [...seen.values()];
 }
 
 export async function execute(interaction: ChatInputCommandInteraction) {

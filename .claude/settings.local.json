@@ -100,7 +100,26 @@
       "Bash(find . -name \"*_*\" -path \"*/Locations/*\" -o -name \"*_*\" -path \"*/Glossary/*\" -o -name \"*_*\" -path \"*/Factions/*\" -o -name \"*_*\" -path \"*/Characters/*\" -o -name \"* \\(1\\)*\" -o -name \"*_v1 \\(1\\)*\")",
       "Bash(find . -name \"* \\(1\\)*\" -not -path \"./.git/*\" -not -path \"./.obsidian/*\" -not -path \"*/node_modules/*\")",
       "Bash(wc -l *.md Notes/*.md)",
-      "WebFetch(domain:ai.santiyounger.com)"
+      "WebFetch(domain:ai.santiyounger.com)",
+      "Read(//d/ObsidianVaults/Nova Praxis/nova-praxis-discord/**)",
+      "Bash(npm run:*)",
+      "Bash(xxd 'D:\\\\ObsidianVaults\\\\Nova Praxis\\\\nova-praxis-discord\\\\scripts\\\\start.sh')",
+      "Bash(PYTHONIOENCODING=utf-8 notebooklm auth check --json)",
+      "Bash(notebooklm login:*)",
+      "Bash(PYTHONIOENCODING=utf-8 notebooklm create \"Cold Start Syndicate - New Player Primer\" --json)",
+      "Bash(PYTHONIOENCODING=utf-8 notebooklm use bec54dfd-5fde-4ca5-90f5-653f0cd67092 --json)",
+      "Bash(PYTHONIOENCODING=utf-8 notebooklm use bec54dfd-5fde-4ca5-90f5-653f0cd67092)",
+      "Bash(PYTHONIOENCODING=utf-8 notebooklm source add \"d:/ObsidianVaults/Nova Praxis/Campaign Overview/New Player Primer - Cold Start Syndicate.md\" --json)",
+      "Bash(PYTHONIOENCODING=utf-8 notebooklm generate slide-deck --json)",
+      "Bash(PYTHONIOENCODING=utf-8 notebooklm generate infographic --orientation landscape --detail high --json)",
+      "Bash(PYTHONIOENCODING=utf-8 notebooklm generate infographic --orientation landscape --detail detailed --json)",
+      "Bash(PYTHONIOENCODING=utf-8 notebooklm download slide-deck \"d:/ObsidianVaults/Nova Praxis/Campaign Overview/New Player Primer - Slides.pdf\" --json)",
+      "Bash(PYTHONIOENCODING=utf-8 notebooklm download infographic \"d:/ObsidianVaults/Nova Praxis/Campaign Overview/New Player Primer - Infographic.png\" --json)",
+      "Bash(PYTHONIOENCODING=utf-8 notebooklm generate slide-deck --wait --json)",
+      "Bash(PYTHONIOENCODING=utf-8 notebooklm status --json)",
+      "Bash(PYTHONIOENCODING=utf-8 notebooklm source list --json)",
+      "Bash(PYTHONIOENCODING=utf-8 notebooklm ask \"Summarize this document in 2 sentences\" --json)",
+      "Bash(PYTHONIOENCODING=utf-8 notebooklm generate slide-deck --wait --timeout 900 --json)"
     ]
   }
 }

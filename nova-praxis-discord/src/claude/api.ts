@@ -45,3 +45,25 @@ export async function callApi(
     outputTokens: response.usage.output_tokens,
   };
 }
+
+/**
+ * Use Haiku to expand a user question into multiple search terms.
+ * Returns an array of short phrases optimized for tsvector matching.
+ */
+export async function extractSearchTerms(question: string): Promise<string[]> {
+  const response = await client.messages.create({
+    model: MODELS.fast,
+    max_tokens: 150,
+    system: `You expand TTRPG questions into search keywords for a PostgreSQL full-text index. The index contains Nova Praxis (FATE-based) rules sections with headings like: Conflict and Health, Extended Actions, Skills, Augmentations, Sleeves, Stunts, Stress, Consequences, Movement, Blocks, Resleeving, Economy, Savant Programs, Drones, Mnemonic Editing, Gameplay, Armor, Firearms, Melee, Explosives, Equipment.
+
+Return 3-5 short search phrases, one per line, no bullets or numbering. Include the original term plus related FATE/Nova Praxis mechanical terms.`,
+    messages: [{ role: 'user', content: question }],
+  });
+
+  const text = response.content
+    .filter((block) => block.type === 'text')
+    .map((block) => block.text)
+    .join('\n');
+
+  return text.split('\n').map((s) => s.trim()).filter(Boolean);
+}
