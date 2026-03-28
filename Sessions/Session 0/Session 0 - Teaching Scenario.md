@@ -18,9 +18,9 @@ aliases:
 
 **Setting:** [[Locations/Sol System/Ansari Station]] — a mid-tier Coalition transit hub orbiting Mars. Neutral ground, busy, lots of cameras.
 
-**Crew:** 5 existing PCs (minus Doc) + 2 new players (pregens provided below)
+**Crew:** All players use pregens from [[Session 0 - Pregen Characters]]. Lay all 10 on the table and let everyone grab whoever catches their eye. No one plays their real character -- this is a sandbox.
 
-**When:** This job takes place **before** the current arc. A flashback to the crew's early days running contracts together. Nothing here affects the live campaign.
+**When:** A standalone job. No connection to the live campaign. Think of it as a one-shot tutorial that happens to be set in the Nova Praxis universe.
 
 ---
 
@@ -36,63 +36,9 @@ aliases:
 
 ---
 
-## Pregens for New Players
+## Pregens
 
-> These are loaners. Players will build their real characters after the scenario. Pick whichever sounds fun.
-
-### Pregen A: Rhys Okafor
-
-**State:** Sleeved (Gamma Biosleeve)
-**House:** [[Factions/Houses/House Dalianis|House Dalianis]]
-**Skill Distribution:** Expert
-**Refresh:** 5 | **Rep Rating:** 5
-
-**Aspects:**
-
-| # | Aspect | Type |
-|---|--------|------|
-| HC | **Dalianis Field Medic Who Saw Too Much** | High Concept |
-| A | I Will Not Lose Another Patient | Ambition |
-| B | The Body Is Sacred — Even a Sleeve | Belief |
-| C | Owes Aeddarius a Life Debt | Connection |
-| D | Flashbacks from the Elysium Outbreak | Disadvantage |
-| E | Trauma Surgeon Under Fire | Expertise |
-
-**Key Skills:** Education +4, Insight +4, Resolve +3, Diplomacy +3, Melee +2, Stealth +2
-**Physical Skills:** Athletics 3, Endurance 4, Perception 3
-**Stunts:** Licensed, Skilled (Education), Specialty Aspect (Education — "Trauma Surgeon Under Fire")
-**Stress:** Physical 7 | Mental 5
-**Gear:** Med-kit (AR surgical tools, Cost 5), Reinforced Clothing (AR +1), PPC with Beta Agent
-
-**Why this pregen works for teaching:** Has medical skills for the morgue scene. High Resolve and Insight let them resist compels and read NPCs. Connection to Aeddarius gives the GM an easy compel target. Flashback Disadvantage provides dramatic moments.
-
----
-
-### Pregen B: Sable Wren
-
-**State:** Sleeved (Beta Cybersleeve)
-**House:** [[Factions/Houses/House Kimura|House Kimura]] (barely)
-**Skill Distribution:** Specialist
-**Refresh:** 5 | **Rep Rating:** 4
-
-**Aspects:**
-
-| # | Aspect | Type |
-|---|--------|------|
-| HC | **Kimura Dropout Running from Her Own Résumé** | High Concept |
-| A | Prove I'm More Than My File Says | Ambition |
-| B | Rules Are for People Who Can't Improvise | Belief |
-| C | Grace Pulled Me Out of a Bad Situation Once | Connection |
-| D | Impulsive — Acts First, Thinks During | Disadvantage |
-| E | Parkour Through Any Space, Digital or Physical | Expertise |
-
-**Key Skills:** Athletics +3 (sleeve), Stealth +5, Firearms +4, Pilot +4, H. Engineering +3, Perception +3
-**Physical Skills:** Athletics 3, Endurance 3, Perception 3
-**Stunts:** Drone-Jock, Skilled (Stealth), Specialty Aspect (Stealth — "Parkour Through Any Space")
-**Stress:** Physical 6 | Mental 4
-**Gear:** Whisper Coil Pistol (WR 2, Cost 6), Stealth Suit (AR +1, +2 to Stealth in low light), Recon Drone "Pip" (Perception 3, Stealth 3, Athletics 2)
-
-**Why this pregen works for teaching:** Physical infiltration specialist. Stealth and Athletics give her clear action scenes. Impulsive Disadvantage is an easy, fun compel. Connection to Grace creates party cohesion. The drone teaches supplemental/combined actions.
+All 10 pregens are in [[Session 0 - Pregen Characters]]. Print them out, lay them on the table, let players grab whoever looks fun. The scenes below reference characters by **role** rather than name, so they work regardless of who picks what.
 
 ---
 
@@ -124,19 +70,23 @@ Lester Lucas briefs the crew via a flickering holo from an undisclosed location.
 
 Before they leave, ask each player to **read their Aspects aloud** and explain what each one means in one sentence. This gets everyone familiar with their own sheet and each other's.
 
-Then — Lester mentions the Tsarya security team is on station.
+Then -- Lester mentions the Tsarya security team is on station.
 
-**Prompt Aeddarius (Dan):** "You're House Dalianis. Tsarya is a rival House. Do any of your Aspects help you understand their security protocols?"
+**Prompt whoever has a House affiliation or military background:** "Tsarya is running security on station. Do any of your Aspects help you understand their protocols?"
 
-If Dan invokes **Aesthetic Aristocrat** or **Newly Minted Lord with Old Debts** to claim knowledge of Tsarya ops, give him +2 on an Education test (Diff 2) to recall details. This teaches **invoking an Aspect for a bonus**.
+If they invoke a relevant Aspect (High Concept, Connection, Expertise -- whatever fits), give them +2 on an Education or Strategy test (Diff 2) to recall details. This teaches **invoking an Aspect for a bonus**.
+
+> **GM targeting:** Inara (*Retired Tetragon Analyst*), Orin (*Dalianis Black Ops*), and Thessa (*Tsarya Test Pilot* -- she'd know them from the inside) are ideal targets. But anyone with a plausible Aspect can invoke.
 
 ### Teaching Moment: Declarations
 
-**Prompt Azaria (Christa):** "You're a celebrity. Have you ever been to Ansari Station?"
+**Prompt whoever has a social or celebrity-type character:** "Have you ever been to Ansari Station before?"
 
-If Christa spends a Fate Point, she can **Declare** that she did a media appearance there last year and still has a backstage access pass. This is now true. Place the scene Aspect: *"Azaria's Old Backstage Pass"* — anyone can invoke it later.
+If they spend a Fate Point, they can **Declare** a useful fact -- an old contact on station, a backstage pass, a maintenance tunnel they know about. This is now true. Place it as a scene Aspect anyone can invoke later.
 
-This teaches **Declarations** — spending FP to introduce facts.
+This teaches **Declarations** -- spending FP to introduce facts.
+
+> **GM targeting:** Dex (*social engineer*), Rhys (*Dalianis field medic who's been stationed everywhere*), or any character whose backstory plausibly connects to Ansari.
 
 ### End Scene
 
@@ -171,15 +121,17 @@ Let the players choose. Walk through the roll: 4dF + Skill = Effort. Beat the Di
 
 They reach Locker 1138. It's empty. Daro Voss never made the drop.
 
-**Prompt Grace (Sara):** "You're a SIM. Can you search the station's mesh for Daro Voss?"
+**Prompt whoever has hacking or research skills:** "Can you search the station's mesh for Daro Voss?"
 
-Grace rolls Research or SINC (Diff 3). On success, she creates the Aspect: *"Voss Checked Into Station Medical 6 Hours Ago"* with one free invoke. On Spin, two free invokes.
+They roll Research or SINC (Diff 3). On success, they create the Aspect: *"Voss Checked Into Station Medical 6 Hours Ago"* with one free invoke. On Spin, two free invokes.
 
-This teaches **Create Advantage** — rolling to place an Aspect that helps later.
+This teaches **Create Advantage** -- rolling to place an Aspect that helps later.
 
-**Prompt Grift (Rob):** "You're a systems infiltrator. Can you check the security feeds?"
+**Prompt a second tech-capable character:** "Can you check the security feeds?"
 
-Grift rolls S. Engineering or SINC (Diff 3). On success, he discovers Voss was carried to the morgue. He didn't check out of Medical — he died there.
+They roll S. Engineering or SINC (Diff 3). On success, they discover Voss was carried to the morgue. He didn't check out of Medical -- he died there.
+
+> **GM targeting:** Nyx, Echo, and Dex are ideal for these prompts (SINC/S.Eng are their top skills). But Sable, Thessa, or anyone with S. Engineering or Research can contribute.
 
 ### Revelation
 
@@ -203,21 +155,27 @@ The station morgue is restricted access. Voss's body is in cold storage. A bored
 
 The crew needs to get past the desk and extract the core before Tsarya does.
 
-**Prompt Azaria (Christa):** "Can you distract the Tsarya operatives?"
+**Prompt whoever has social skills:** "Can you distract the Tsarya operatives in the lobby?"
 
-Azaria rolls Diplomacy or Guile vs. the operatives' Insight (they roll +3). On success, she places the Aspect *"Tsarya Distracted by Celebrity Encounter"* on them. First invoke is free.
+They roll Diplomacy or Guile vs. the operatives' Insight (+3). On success, they place the Aspect *"Tsarya Operatives Distracted"* on them. First invoke is free.
 
-**Prompt Kallius (James):** "You're a mnemonic specialist. What do you need to extract a data core from a mnemonic implant?"
+> **GM targeting:** Dex (*Guile +4*), Rhys (*Diplomacy +3*), or Inara (*Diplomacy +2 but could use Intimidation +2 instead*).
 
-Kallius rolls Education (Diff 2) as an **Assessment** — he's discovering what's true about the implant. On success, reveal: the implant is a standard Kimura model. He knows exactly how to extract it. Place *"Kallius Knows This Implant Model"* — free invoke.
+**Prompt whoever has Education or tech skills:** "What do you know about mnemonic implant extraction?"
+
+They roll Education (Diff 2) as an **Assessment** -- discovering what's true. On success, reveal: the implant is a standard Kimura model. Place *"We Know This Implant Model"* -- free invoke.
+
+> **GM targeting:** Rhys (*Education +4*), Nyx (*Education +2, S.Eng +4*), Dex (*Mnemonics +4*), Inara (*Education +4*).
 
 ### Teaching Moment: Combined Actions
 
-Extracting the core requires a Mnemonics test (Diff 4). It's delicate work.
+Extracting the core requires an Education or S. Engineering test (Diff 4). It's delicate work.
 
-**If Rhys (Pregen A) assists:** Rhys rolls Education. If Rhys's Education (+4) is higher than Kallius's Mnemonics (+5), Kallius gets +1 on his roll. If lower, -1. If equal, +0. Walk through the **Combining Skills** rule.
+**If a second character assists:** They roll their relevant skill. If higher than the primary roller's skill, primary gets +1. If lower, -1. If equal, +0. Walk through the **Combining Skills** rule.
 
-**If Sable (Pregen B) stands guard:** Sable can take a **Supplemental Action** — watch the corridor while doing something else, at -1 to her primary roll. Teach Supplemental Actions here.
+**If someone stands guard:** They can take a **Supplemental Action** -- watch the corridor while doing something else, at -1 to their primary roll. Teach Supplemental Actions here.
+
+> **GM targeting:** Rhys + Nyx or Dex make a great extraction team. Maro, Orin, or Sable are natural guards.
 
 ### Complication: The Clock
 
@@ -254,20 +212,27 @@ The Tsarya team spots the crew leaving Medical. Two operatives give chase throug
 
 As the chase begins, **compel specific players:**
 
-**Compel Grift (Rob) — "Curiosity Kills More Than Cats":**
-> "You pass a Tsarya operative's dropped datapad on the concourse floor. It's clearly got intel on it. Your instinct is to grab it — but stopping means the pursuers gain ground. Do you stop?"
+**Compel every player at least once during this scene.** Pick the Disadvantage Aspect that fits the moment. Here are examples keyed to each pregen:
 
-If Rob accepts: he gets 1 FP but falls one zone behind. If he refuses: he pays 1 FP and keeps running. **Either way, the table learns how compels work.**
+| Character | Compel | Trigger |
+|-----------|--------|---------|
+| **Rhys** | *Flashbacks from Elysium* | A wounded bystander in the crowd -- stop to help? |
+| **Sable** | *Impulsive -- Acts First, Thinks During* | Maintenance hatch to the left -- duck in alone to flank? |
+| **Maro** | *Won't Back Down Even When He Should* | Lead pursuer is armored and gaining -- turn and fight? |
+| **Nyx** | *Paranoid -- Trusts Code More Than People* | Mesh signal spike nearby -- stop to investigate a possible trap? |
+| **Thessa** | *Reckless When the Adrenaline Hits* | A parked cargo loader -- hijack it for a dramatic getaway? |
+| **Dex** | *Can't Stop Reading People Even When It Hurts* | Read the lead operative's surface thoughts mid-chase? (System risk) |
+| **Inara** | *Sees Threats Everywhere* | Is that bystander a spotter? Freeze to analyze? |
+| **Kael-9** | *"Proportional Response" Not in My Vocabulary* | Explosive canisters on a loading dock -- blow them for cover? |
+| **Orin** | *Freezes in Close Quarters* | Corridor narrows -- panic rising? |
+| **Echo** | *Forgetting What It Feels Like to Touch Things* | A child stumbles in the crowd -- drones can't catch her |
 
-**Compel Sable (Pregen B) — "Impulsive — Acts First, Thinks During":**
-> "There's a maintenance hatch to your left. You could duck in and flank them — but you'd be alone and you don't know what's down there."
+Walk through the full compel flow with the first one:
+1. "I'm compelling your Disadvantage. Here's what happens..."
+2. "Accept: earn 1 FP, but [consequence]. Refuse: pay 1 FP, keep running."
+3. **Either way, the table learns how compels work.**
 
-If they accept: they split from the group into an unknown zone. Adventure and 1 FP. If they refuse: 1 FP spent, they stay with the group.
-
-**Compel Aeddarius (Dan) — "Always Challenges the Strongest Foe":**
-> "The lead Tsarya operative is bigger than you, armored, and gaining. Everything in you says turn and face him."
-
-If Dan accepts: Aeddarius stops and confronts the operative, buying the team time (and earning 1 FP). This naturally leads to the first real physical exchange — a brief Contest or Block. If he refuses: costs 1 FP.
+After the first, compel 2-3 more players in quick succession so everyone sees the pattern.
 
 ### Teaching Moment: Zones and Movement
 
@@ -276,11 +241,11 @@ Walk through movement rules as the chase progresses:
 - **Hustle (2 zones) = Supplemental Action** (-2 to other actions)
 - **Sprint = Athletics test** (Diff 2, each Shift = 1 more zone)
 
-Let Grace use drones to scout ahead. Let Sable use Stealth to find shortcuts. Let Azaria use the *"Backstage Pass"* aspect from Scene 1 to bypass a security checkpoint (free invoke from earlier).
+Let SIM characters use drones to scout ahead. Let stealth-focused characters find shortcuts. Remind the table that any Aspect created in Scene 1 (via Declaration) can be invoked here if it makes sense -- free invoke from earlier.
 
 ### Teaching Moment: Stress (Light)
 
-If Aeddarius confronted the operative, resolve it as a quick Contest. The operative attacks (Firearms +3, WR 2). Aeddarius defends. If he takes a hit, walk through **Stress boxes** — mark them, explain they clear after the scene.
+If anyone confronted a pursuer (from a compel), resolve it as a quick Contest. The operative attacks (Firearms +3, WR 2). The PC defends. If they take a hit, walk through **Stress boxes** -- mark them, explain they clear after the scene.
 
 **Don't take Consequences here.** Save that for Scene 5.
 
@@ -336,7 +301,9 @@ Programs: Blackout, Security Skim, Stream of Consciousness
 **Round 1 — Initiative and Actions:**
 Roll Strategy for turn order. Walk through: each character gets 1 Simple Action + 1 Free Action. Defense does not cost your action.
 
-**Prompt someone to Create Advantage first** rather than attack. Example: "The crates are full of industrial solvents. Anyone want to do something with that?" If someone Maneuvers to place *"Toxic Fumes Flooding the Bay"* — everyone understands the flow: create Aspect, invoke it on an attack next round.
+**Prompt someone to Create Advantage first** rather than attack. Example: "The crates are full of industrial solvents. Anyone want to do something with that?" If someone Maneuvers to place *"Toxic Fumes Flooding the Bay"* -- everyone understands the flow: create Aspect, invoke it on an attack next round.
+
+> **GM targeting:** Kael-9 will leap at the solvents. Inara will want to Battlefield Command. Dex or Nyx will want to hack. Let them. The point is demonstrating Create Advantage before Attack.
 
 **Round 2 — Attack and Defend:**
 Walk through a full attack exchange:
@@ -349,15 +316,17 @@ Walk through a full attack exchange:
 Walk through **Consequences**. "You can take a Mild Consequence to absorb 2 of that stress. What does it look like? Give it a name — *'Grazed Shoulder'*, *'Ringing Ears'*, *'Cracked Visor'*. That's now an Aspect. The enemy can invoke it against you — first time free."
 
 **Round 3+ — Blocks and Savant:**
-The Tsarya Savant tries to Blackout Grace's drone feed. This teaches **System Stress** and the Savant mechanic. Grace defends with SINC.
+The Tsarya Savant tries to Blackout a SIM's drone feed or Stream of Consciousness a non-Savant. This teaches **System Stress** and the Savant mechanic. The target defends with SINC (if Savant) or Resolve (if not).
 
-If Aeddarius or another PC wants to prevent the Savant from acting, they can set up a **Block**: "I'm laying suppressive fire — Firearms test to set a Block potency. If the Savant wants to use a program, she has to beat my potency first."
+If a combat-focused PC wants to prevent the Savant from acting, they can set up a **Block**: "I'm laying suppressive fire -- Firearms test to set a Block potency. If the Savant wants to use a program, she has to beat my potency first."
+
+> **GM targeting:** If Nyx or Echo is in play, Blackout their drones. If Dex is in play, have a Savant-vs-Savant duel. If no Savants are in play, the Tsarya Savant uses Stream of Consciousness on whoever looks most suspicious -- Resolve defense.
 
 ### Resolution Options
 
 **Fight:** Take out the operatives, reach the shuttle.
-**Talk:** Azaria or Aeddarius could try to negotiate — the Savant handler might accept a deal if the crew can convince her Tsarya is better off letting this go.
-**Creative:** Blow the solvent crates (Demolitions or Firearms, Diff 3) to create cover chaos. Trigger the docking clamps to seal the bay behind them. Grace hacks the bay systems.
+**Talk:** Any face character could try to negotiate -- the Savant handler might accept a deal if the crew can convince her Tsarya is better off letting this go.
+**Creative:** Blow the solvent crates (Demolitions or Firearms, Diff 3) to create cover chaos. Trigger the docking clamps to seal the bay behind them. Hack the bay systems. Use drones as distractions.
 
 ### Teaching Moment: Taken Out vs. Concede
 
@@ -411,15 +380,18 @@ If a player rolls badly, use it as a teaching moment for interesting failure rat
 
 ### Compel Targets (Cheat Sheet)
 
-| PC | Best Compel Target | When |
-|----|-------------------|------|
-| Aeddarius (Dan) | Always Challenges the Strongest Foe | Chase scene — confront the lead pursuer |
-| Grace (Sara) | Thin Skinned and Trauma-Triggered | Morgue scene — the corpse, the clinical setting |
-| Grift (Rob) | Curiosity Kills More Than Cats | Chase scene — the dropped datapad |
-| Azaria (Christa) | The Real Me Isn't Camera-Ready | Distraction scene — what if the act almost fails? |
-| Kallius (James) | I Know a Truth the Coalition Would Kill to Bury | Morgue scene — what if he recognizes Tsarya's bioweapons work? |
-| Rhys (Pregen A) | Flashbacks from the Elysium Outbreak | Morgue scene — medical setting triggers PTSD |
-| Sable (Pregen B) | Impulsive — Acts First, Thinks During | Chase scene — the maintenance hatch |
+| Character | Disadvantage | Best Scene | Trigger |
+|-----------|-------------|------------|---------|
+| **Rhys** | Flashbacks from the Elysium Outbreak | Morgue | Clinical setting, the corpse, sterile smell |
+| **Sable** | Impulsive -- Acts First, Thinks During | Chase | Maintenance hatch, shortcut, any bad idea |
+| **Maro** | Won't Back Down Even When He Should | Chase / Combat | Bigger opponent, losing fight, tactical retreat |
+| **Nyx** | Paranoid -- Trusts Code More Than People | Station Arrival | Mesh anomaly, trusting an NPC's word |
+| **Thessa** | Reckless When the Adrenaline Hits | Chase / Combat | Vehicle nearby, high-risk stunt opportunity |
+| **Dex** | Can't Stop Reading People Even When It Hurts | Morgue / Combat | Temptation to read the Savant handler's thoughts |
+| **Inara** | Sees Threats Everywhere | Station Arrival | Innocent bystander who looks suspicious |
+| **Kael-9** | "Proportional Response" Not in My Vocabulary | Combat | Explosives within reach, overkill solution |
+| **Orin** | Freezes in Close Quarters | Combat | Corridor narrows, enemy closes distance |
+| **Echo** | Forgetting What It Feels Like to Touch Things | Chase | Physical crisis drones can't solve |
 
 ### What If They Skip a Scene?
 
