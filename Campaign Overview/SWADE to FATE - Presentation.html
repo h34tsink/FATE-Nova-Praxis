@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SWADE to FATE — Migration Guide</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg: #0a0e17;
+    --surface: #111827;
+    --surface-2: #1a2234;
+    --border: #2a3548;
+    --text: #e2e8f0;
+    --text-dim: #94a3b8;
+    --accent: #f59e0b;
+    --accent-dim: #d97706;
+    --blue: #3b82f6;
+    --blue-dim: #1e40af;
+    --red: #ef4444;
+    --green: #22c55e;
+    --purple: #a855f7;
+    --cyan: #06b6d4;
+    --glow-cyan: rgba(6, 182, 212, 0.15);
+    --glow-blue: rgba(59, 130, 246, 0.1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  /* Animated grid background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      linear-gradient(rgba(6,182,212,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(6,182,212,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 30%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 30%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+    animation: gridPulse 8s ease-in-out infinite;
+  }
+
+  @keyframes gridPulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+  }
+
+  /* Subtle scanline overlay */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.03) 2px,
+      rgba(0,0,0,0.03) 4px
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Floating orb ambient light */
+  .ambient-orb {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+  }
+  .ambient-orb.orb1 {
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, var(--glow-cyan), transparent 70%);
+    top: -10%; right: -5%;
+    animation: orbDrift1 20s ease-in-out infinite;
+  }
+  .ambient-orb.orb2 {
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, var(--glow-blue), transparent 70%);
+    bottom: -10%; left: -5%;
+    animation: orbDrift2 25s ease-in-out infinite;
+  }
+  .ambient-orb.orb3 {
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(168,85,247,0.08), transparent 70%);
+    top: 40%; left: 50%;
+    animation: orbDrift3 18s ease-in-out infinite;
+  }
+
+  @keyframes orbDrift1 {
+    0%, 100% { transform: translate(0, 0); }
+    33% { transform: translate(-40px, 30px); }
+    66% { transform: translate(20px, -20px); }
+  }
+  @keyframes orbDrift2 {
+    0%, 100% { transform: translate(0, 0); }
+    33% { transform: translate(30px, -25px); }
+    66% { transform: translate(-20px, 15px); }
+  }
+  @keyframes orbDrift3 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-30px, 20px) scale(1.1); }
+  }
+
+  .slide {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 4vh 6vw;
+    position: relative;
+    z-index: 2;
+  }
+
+  .slide.active { display: flex; }
+
+  /* Slide transition */
+  .slide.active .slide-inner {
+    animation: slideIn 0.4s ease-out;
+  }
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Top edge accent line on each slide */
+  .slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(6,182,212,0.2), rgba(59,130,246,0.15), transparent);
+  }
+
+  /* Corner decoration */
+  .slide::after {
+    content: 'NOVA PRAXIS';
+    position: absolute;
+    top: 1.5vh;
+    right: 3vw;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    color: rgba(6,182,212,0.2);
+    text-transform: uppercase;
+  }
+
+  .slide-inner {
+    max-width: 1100px;
+    width: 100%;
+  }
+
+  /* Title slide */
+  .title-slide {
+    text-align: center;
+  }
+  .title-slide h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 0.5em;
+  }
+  .title-slide h1 .swade { color: var(--red); text-shadow: 0 0 30px rgba(239,68,68,0.3); }
+  .title-slide h1 .fate { color: var(--blue); text-shadow: 0 0 30px rgba(59,130,246,0.3); }
+  .title-slide h1 .arrow { color: var(--text-dim); font-weight: 300; }
+  .title-slide .subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.6rem);
+    color: var(--text-dim);
+    font-weight: 300;
+    margin-bottom: 2em;
+  }
+  .title-slide .campaign {
+    display: inline-block;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.6em 1.4em;
+    font-size: 1rem;
+    color: var(--accent);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    box-shadow: 0 0 20px rgba(245,158,11,0.08);
+  }
+
+  /* Nova Praxis decorative line */
+  .title-slide::before {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+    margin: 0 auto 2em;
+    box-shadow: 0 0 10px var(--glow-cyan);
+  }
+  .title-slide::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+    margin: 2em auto 0;
+    box-shadow: 0 0 10px var(--glow-cyan);
+  }
+
+  /* Section slides */
+  h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 700;
+    margin-bottom: 0.8em;
+    letter-spacing: -0.02em;
+  }
+  h2 .num {
+    color: var(--accent);
+    font-weight: 800;
+    margin-right: 0.3em;
+    text-shadow: 0 0 15px rgba(245,158,11,0.3);
+  }
+
+  /* Decorative line under headings */
+  h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+    margin-top: 0.3em;
+    box-shadow: 0 0 8px rgba(245,158,11,0.2);
+  }
+
+  h3 {
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5em 0 1em 0;
+    font-size: clamp(0.8rem, 1.3vw, 1rem);
+  }
+  th {
+    text-align: left;
+    padding: 0.6em 1em;
+    font-weight: 600;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-bottom: 2px solid var(--border);
+  }
+  th.swade { color: var(--red); }
+  th.fate { color: var(--blue); }
+  td {
+    padding: 0.5em 1em;
+    border-bottom: 1px solid var(--border);
+    line-height: 1.4;
+  }
+  tr:last-child td { border-bottom: none; }
+  td:first-child { color: var(--text-dim); }
+  td:last-child { color: var(--text); }
+  tr:hover td { background: rgba(6,182,212,0.03); transition: background 0.2s; }
+
+  /* Callout boxes */
+  .callout {
+    background: var(--surface-2);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 1em 1.4em;
+    margin: 0.8em 0;
+    font-size: clamp(0.85rem, 1.3vw, 1rem);
+    box-shadow: -4px 0 15px rgba(245,158,11,0.08), 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .callout.trap {
+    border-left-color: var(--red);
+    box-shadow: -4px 0 15px rgba(239,68,68,0.1), 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .callout .label {
+    font-weight: 700;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.3em;
+  }
+  .callout.trap .label { color: var(--red); }
+  .callout:not(.trap) .label { color: var(--accent); }
+
+  /* Bullet lists */
+  ul, ol {
+    padding-left: 1.5em;
+    margin: 0.4em 0;
+    font-size: clamp(0.85rem, 1.3vw, 1.05rem);
+    line-height: 1.6;
+  }
+  li { margin-bottom: 0.3em; }
+  li strong { color: var(--text); }
+
+  /* Two-column layout */
+  .cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    align-items: start;
+  }
+  .col {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.2em 1.4em;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    backdrop-filter: blur(4px);
+  }
+
+  /* Paragraph text */
+  p {
+    font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+    line-height: 1.6;
+    color: var(--text-dim);
+    margin-bottom: 0.6em;
+  }
+  p strong { color: var(--text); font-weight: 600; }
+
+  /* Code / formula */
+  code {
+    font-family: 'JetBrains Mono', monospace;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.15em 0.4em;
+    font-size: 0.9em;
+    color: var(--cyan);
+  }
+
+  .formula-box {
+    background: var(--surface);
+    border: 1px solid rgba(6,182,212,0.3);
+    border-radius: 10px;
+    padding: 1em 1.5em;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: clamp(1rem, 1.8vw, 1.4rem);
+    color: var(--cyan);
+    margin: 0.8em 0;
+    box-shadow: 0 0 20px rgba(6,182,212,0.08), inset 0 0 20px rgba(6,182,212,0.03);
+    text-shadow: 0 0 10px rgba(6,182,212,0.3);
+  }
+
+  /* Flow diagram */
+  .flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    margin: 1em 0;
+    font-size: clamp(0.8rem, 1.2vw, 0.95rem);
+  }
+  .flow-step {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.5em 1em;
+    text-align: center;
+    line-height: 1.3;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  }
+  .flow-arrow {
+    color: var(--accent);
+    font-size: 1.4em;
+    font-weight: 300;
+    text-shadow: 0 0 8px rgba(245,158,11,0.4);
+    animation: arrowPulse 2s ease-in-out infinite;
+  }
+  @keyframes arrowPulse {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+  }
+  .flow-step.earn { border-color: var(--green); color: var(--green); box-shadow: 0 0 12px rgba(34,197,94,0.1); }
+  .flow-step.spend { border-color: var(--blue); color: var(--blue); box-shadow: 0 0 12px rgba(59,130,246,0.1); }
+
+  /* Grid of cards */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1em;
+    margin: 0.5em 0;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1em 1.2em;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .card h4 {
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 0.3em;
+  }
+  .card p {
+    font-size: 0.9em;
+    margin: 0;
+  }
+  .card.pure { border-top: 3px solid var(--green); box-shadow: 0 -4px 20px rgba(34,197,94,0.1), 0 4px 20px rgba(0,0,0,0.3); }
+  .card.pure h4 { color: var(--green); text-shadow: 0 0 10px rgba(34,197,94,0.3); }
+  .card.sim { border-top: 3px solid var(--purple); box-shadow: 0 -4px 20px rgba(168,85,247,0.1), 0 4px 20px rgba(0,0,0,0.3); }
+  .card.sim h4 { color: var(--purple); text-shadow: 0 0 10px rgba(168,85,247,0.3); }
+  .card.sleeved { border-top: 3px solid var(--cyan); box-shadow: 0 -4px 20px rgba(6,182,212,0.1), 0 4px 20px rgba(0,0,0,0.3); }
+  .card.sleeved h4 { color: var(--cyan); text-shadow: 0 0 10px rgba(6,182,212,0.3); }
+
+  /* Bottom nav */
+  .nav {
+    position: fixed;
+    bottom: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    background: rgba(17,24,39,0.9);
+    border: 1px solid var(--border);
+    border-radius: 99px;
+    padding: 0.4em 1.2em;
+    z-index: 100;
+    font-size: 0.85rem;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4), 0 0 1px rgba(6,182,212,0.2);
+  }
+  .nav button {
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.2em 0.5em;
+    border-radius: 4px;
+    transition: color 0.15s;
+  }
+  .nav button:hover { color: var(--accent); }
+  .nav .counter { color: var(--text-dim); font-variant-numeric: tabular-nums; }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .cols { grid-template-columns: 1fr; }
+    .slide { padding: 3vh 4vw; }
+  }
+
+  /* Print */
+  @media print {
+    .slide { display: flex !important; page-break-after: always; height: auto; min-height: 100vh; }
+    .nav { display: none; }
+    body { overflow: visible; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Ambient light orbs -->
+<div class="ambient-orb orb1"></div>
+<div class="ambient-orb orb2"></div>
+<div class="ambient-orb orb3"></div>
+
+<!-- SLIDE 1: TITLE -->
+<div class="slide active" id="s1">
+  <div class="slide-inner title-slide">
+    <h1><span class="swade">SWADE</span> <span class="arrow">&rarr;</span> <span class="fate">FATE</span></h1>
+    <div class="subtitle">Migration Guide &amp; Table Reference</div>
+    <div class="campaign">NOVA PRAXIS &mdash; COLD START SYNDICATE</div>
+  </div>
+</div>
+
+<!-- SLIDE 2: WHY WE SWITCHED -->
+<div class="slide" id="s2">
+  <div class="slide-inner">
+    <h2>Why We Switched</h2>
+    <p>FATE handles Nova Praxis's core themes better than SWADE. Identity, reputation, social manipulation, and narrative consequences are <strong>first-class mechanical citizens</strong> in FATE, not bolted-on subsystems.</p>
+    <div class="cols" style="margin-top:1em;">
+      <div class="col">
+        <h3>SWADE Approach</h3>
+        <ul>
+          <li>Pick action from menu, then describe it</li>
+          <li>Characters built from mechanical blocks that imply story</li>
+          <li>Failure = nothing happens or take damage</li>
+          <li>GM describes the world, players react</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>FATE Approach</h3>
+        <ul>
+          <li>Describe what you do, table determines the mechanic</li>
+          <li>Characters built from <strong>story statements</strong> that imply mechanics</li>
+          <li>Failure = story goes somewhere unexpected</li>
+          <li>Players <strong>co-author the scene</strong> via Declarations and Maneuvers</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:1em;">
+      <div class="label">Bottom Line</div>
+      Less time counting modifiers. More time describing what your character actually does.
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 3: DICE & ROLLING -->
+<div class="slide" id="s3">
+  <div class="slide-inner">
+    <h2><span class="num">1</span>Dice &amp; Rolling</h2>
+    <table>
+      <tr><th class="swade" style="width:45%">SWADE</th><th class="fate">FATE</th></tr>
+      <tr><td>Trait die (d4&ndash;d12) + Wild Die (d6), take highest</td><td><strong>4dF + Skill rank</strong> (dice range: &minus;4 to +4)</td></tr>
+      <tr><td>Acing (exploding dice)</td><td>No equivalent &mdash; range is capped</td></tr>
+      <tr><td>Raise = beat TN by 4+</td><td><strong>Spin</strong> = beat Difficulty by 3+ (creates a free Effect Aspect)</td></tr>
+      <tr><td>Critical Failure (snake eyes)</td><td><strong>Stall</strong> = fail by 3+ (spectacular failure)</td></tr>
+    </table>
+    <div class="callout trap">
+      <div class="label">Muscle Memory Trap</div>
+      You will instinctively expect bigger swings. FATE's dice range is narrow (&minus;4 to +4). A +4 skill is <em>dominant</em> &mdash; do not underestimate it.
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 4: SKILLS & ATTRIBUTES -->
+<div class="slide" id="s4">
+  <div class="slide-inner">
+    <h2><span class="num">2</span>Attributes &amp; Skills</h2>
+    <table>
+      <tr><th class="swade" style="width:45%">SWADE</th><th class="fate">FATE</th></tr>
+      <tr><td>5 Attributes (Agility, Smarts, Spirit, Strength, Vigor)</td><td><strong>No attributes.</strong> Skills stand alone</td></tr>
+      <tr><td>Skills linked to Attributes</td><td>Skills ranked +1 to +5 independently</td></tr>
+      <tr><td>Untrained = &minus;2 penalty</td><td>Untrained = roll at +0 (Mediocre)</td></tr>
+      <tr><td>Fighting + Shooting</td><td>Melee + Firearms</td></tr>
+      <tr><td>Notice</td><td>Perception (senses) + Insight (gut feeling)</td></tr>
+      <tr><td>Spirit</td><td>Resolve (willpower) + Cohesion (sense of self)</td></tr>
+    </table>
+    <div class="callout">
+      <div class="label">Key Difference</div>
+      <strong>Physical skills</strong> (Athletics, Endurance, Perception) get their ranks from your State or Sleeve, not from your skill distribution.
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 5: EDGES/HINDRANCES vs STUNTS/ASPECTS -->
+<div class="slide" id="s5">
+  <div class="slide-inner">
+    <h2><span class="num">3</span>Edges &amp; Hindrances <span style="color:var(--text-dim);font-weight:300">&rarr;</span> Stunts &amp; Aspects</h2>
+    <div class="cols">
+      <div class="col">
+        <h3>SWADE</h3>
+        <ul>
+          <li><strong>Edges</strong> &mdash; specific mechanical bonuses</li>
+          <li><strong>Hindrances</strong> &mdash; flaws that gave build points at creation</li>
+          <li>Hindrances are "always on" negatives</li>
+          <li>Took them once, mostly forgot about them</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>FATE</h3>
+        <ul>
+          <li><strong>Stunts</strong> &mdash; similar to Edges; some cost Refresh</li>
+          <li><strong>Aspects</strong> (especially Trouble) &mdash; flaws that <strong>earn Fate Points</strong> when compelled</li>
+          <li>Aspects are <strong>double-edged</strong> &mdash; help AND hinder</li>
+          <li>Your Trouble is a <strong>live wire every session</strong></li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout trap" style="margin-top:1em;">
+      <div class="label">Muscle Memory Trap</div>
+      In SWADE, you took Hindrances at creation and mostly forgot them. In FATE, your Trouble Aspect fires every session. The GM <em>will</em> compel it. You <em>want</em> this &mdash; it is how you get Fate Points.
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 6: BENNIES vs FATE POINTS -->
+<div class="slide" id="s6">
+  <div class="slide-inner">
+    <h2><span class="num">4</span>Bennies <span style="color:var(--text-dim);font-weight:300">&rarr;</span> Fate Points</h2>
+    <table>
+      <tr><th class="swade" style="width:45%">SWADE Bennies</th><th class="fate">FATE Points</th></tr>
+      <tr><td>Soak damage</td><td>No Soak &mdash; use Consequences instead</td></tr>
+      <tr><td>Reroll any Trait</td><td>Invoke an Aspect: +2 or reroll (<strong>must be narratively relevant</strong>)</td></tr>
+      <tr><td>Recover from Shaken</td><td>No Shaken state exists</td></tr>
+      <tr><td>Earned from Jokers, GM reward</td><td>Earned from <strong>compels</strong> on your Aspects</td></tr>
+      <tr><td>May carry over between sessions</td><td><strong>Never carry over.</strong> Reset to Refresh each session</td></tr>
+    </table>
+    <div class="callout trap">
+      <div class="label">Muscle Memory Trap</div>
+      You cannot spend a Fate Point for a generic reroll. You must name an Aspect and explain why it helps.<br>
+      <em>"I invoke Cryo-Survivor With Trust Issues because I have learned to read when someone is lying"</em> &mdash; valid.<br>
+      <em>"I spend a point to reroll"</em> &mdash; not valid.
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 7: DAMAGE MODEL -->
+<div class="slide" id="s7">
+  <div class="slide-inner">
+    <h2><span class="num">5</span>Damage: Wounds <span style="color:var(--text-dim);font-weight:300">&rarr;</span> Stress &amp; Consequences</h2>
+    <table>
+      <tr><th class="swade" style="width:45%">SWADE</th><th class="fate">FATE</th></tr>
+      <tr><td>Toughness (passive defense)</td><td><strong>Armor Rating (AR)</strong> subtracts from stress</td></tr>
+      <tr><td>Shaken &rarr; must recover to act</td><td>No stunned state</td></tr>
+      <tr><td>3 Wounds &rarr; Incapacitated</td><td>Stress boxes + Consequences absorb hits</td></tr>
+      <tr><td>Soak roll (Bennie + Vigor)</td><td>No Soak &mdash; Consequences absorb automatically</td></tr>
+      <tr><td>Incapacitated &rarr; Vigor roll</td><td><strong>Taken Out</strong> &rarr; attacker narrates outcome</td></tr>
+      <tr><td>No equivalent</td><td><strong>Concede</strong> &mdash; surrender early, keep narrative control</td></tr>
+    </table>
+    <div class="formula-box">Stress = Attack Shifts + Weapon Rating (WR) &minus; Armor Rating (AR)</div>
+    <table style="margin-top:0.5em;">
+      <tr><th>Consequence</th><th>Absorbs</th><th>Recovery</th><th>Notes</th></tr>
+      <tr><td><strong>Mild</strong></td><td>2 stress</td><td>1 hour / 1 day</td><td>Clears fast</td></tr>
+      <tr><td><strong>Moderate</strong></td><td>4 stress</td><td>1 day / 1 week</td><td></td></tr>
+      <tr><td><strong>Severe</strong></td><td>6 stress</td><td>1 week / 1 month</td><td>Becomes Persistent Aspect</td></tr>
+      <tr><td><strong>Extreme</strong></td><td>8 stress</td><td>Permanent</td><td>Replaces a character Aspect</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- SLIDE 8: ACTION ECONOMY -->
+<div class="slide" id="s8">
+  <div class="slide-inner">
+    <h2><span class="num">6</span>Action Economy</h2>
+    <div class="cols">
+      <div class="col">
+        <h3>SWADE</h3>
+        <ul>
+          <li>3 actions with Multi-Action Penalty (&minus;2 per extra)</li>
+          <li>Support = +1 to ally's next roll</li>
+          <li>Draw cards for initiative</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>FATE</h3>
+        <ul>
+          <li><strong>1 Simple Action + 1 Free Action</strong> per turn</li>
+          <li>Maneuver &rarr; place Aspect &rarr; ally invokes for +2</li>
+          <li><strong>Strategy</strong> skill sets turn order</li>
+        </ul>
+      </div>
+    </div>
+    <h3 style="margin-top:1.2em;">FATE Actions</h3>
+    <table>
+      <tr><th>Action</th><th>Purpose</th><th>On Spin (3+ Shifts)</th></tr>
+      <tr><td><strong>Overcome</strong></td><td>Remove obstacle, resist effect</td><td>Extra narrative benefit</td></tr>
+      <tr><td><strong>Create Advantage</strong></td><td>Place or discover an Aspect</td><td>2 free invokes instead of 1</td></tr>
+      <tr><td><strong>Attack</strong></td><td>Deal stress to target</td><td>Reduce Shifts by 1 to create Effect Aspect</td></tr>
+      <tr><td><strong>Defend</strong></td><td>Block attack or advantage</td><td>&mdash; (reactive, does not cost your action)</td></tr>
+    </table>
+    <div class="callout trap">
+      <div class="label">Muscle Memory Trap</div>
+      There is no Multi-Action Penalty because there are no multi-actions. The FATE way to "do more" is to set up Aspects that allies invoke. Teamwork happens <em>across</em> turns, not within one.
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 9: ASPECTS DEEP DIVE -->
+<div class="slide" id="s9">
+  <div class="slide-inner">
+    <h2><span class="num">7</span>Aspects &amp; the Fate Point Economy</h2>
+    <p style="margin-bottom:0.8em;">Aspects replace most of what Edges, Hindrances, and situational modifiers did in SWADE. Every character has five:</p>
+    <table>
+      <tr><th style="width:25%">Aspect</th><th>Purpose</th></tr>
+      <tr><td><strong>High Concept</strong></td><td>Who you are in one phrase</td></tr>
+      <tr><td><strong>Trouble</strong></td><td>Your recurring problem</td></tr>
+      <tr><td><strong>Background</strong></td><td>Where you came from</td></tr>
+      <tr><td><strong>State Aspect</strong></td><td>Tied to Pure / SIM / Sleeved</td></tr>
+      <tr><td><strong>Free Aspect</strong></td><td>Anything else important</td></tr>
+    </table>
+    <table style="margin-top:0.6em;">
+      <tr><th style="width:25%">Action</th><th>Cost</th><th>Effect</th></tr>
+      <tr><td><strong>Invoke</strong></td><td>1 FP</td><td>+2 to roll or reroll (explain why the Aspect helps)</td></tr>
+      <tr><td><strong>Get Compelled</strong></td><td>Earn 1 FP</td><td>GM uses your Aspect to complicate your life</td></tr>
+      <tr><td><strong>Free Invoke</strong></td><td>Free</td><td>First use of an Aspect you created via Maneuver or Spin</td></tr>
+      <tr><td><strong>Refuse Compel</strong></td><td>Pay 1 FP</td><td>"Not this time" &mdash; but it costs you</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- SLIDE 10: THE COMPEL LOOP -->
+<div class="slide" id="s10">
+  <div class="slide-inner">
+    <h2><span class="num">8</span>The Compel Loop</h2>
+    <p>This is the engine SWADE does not have. Compels are not punishment &mdash; they are <strong>fuel</strong>.</p>
+    <div class="flow" style="margin: 1.5em 0;">
+      <div class="flow-step earn">GM compels<br>your Trouble</div>
+      <div class="flow-arrow">&rarr;</div>
+      <div class="flow-step earn">You accept<br><strong>+1 FP</strong></div>
+      <div class="flow-arrow">&rarr;</div>
+      <div class="flow-step spend">Later, invoke<br>an Aspect</div>
+      <div class="flow-arrow">&rarr;</div>
+      <div class="flow-step spend">Spend 1 FP<br><strong>+2 to roll</strong></div>
+      <div class="flow-arrow">&rarr;</div>
+      <div class="flow-step" style="border-color:var(--accent);color:var(--accent);">Spin!<br>Free Effect Aspect</div>
+      <div class="flow-arrow">&rarr;</div>
+      <div class="flow-step" style="border-color:var(--accent);color:var(--accent);">Ally invokes<br>it for free</div>
+    </div>
+    <div class="cols" style="margin-top:1em;">
+      <div class="col">
+        <h3>Scope Rule</h3>
+        <p>One Aspect per scope per roll: one Character, one Scene, one Zone, one Equipment, one Consequence. <strong>Persistent Aspects are exempt.</strong></p>
+      </div>
+      <div class="col">
+        <h3>The "Therefore" Test</h3>
+        <p><em>"I have [Aspect], <strong>therefore</strong> it helps me [do this]."</em><br>If you need two logical leaps, it is a stretch.</p>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:1em;">
+      <div class="label">Refresh</div>
+      Start each session at your Refresh rating (default 5, Pure = 7). Fate Points <strong>never carry over</strong>. Use them.
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 11: NOVA PRAXIS CHARACTER STATES -->
+<div class="slide" id="s11">
+  <div class="slide-inner">
+    <h2><span class="num">9</span>Nova Praxis: Character States</h2>
+    <div class="card-grid">
+      <div class="card pure">
+        <h4>Pure</h4>
+        <p><strong>Physical:</strong> 8 ranks (you assign)</p>
+        <p><strong>Refresh:</strong> 7 (+2 bonus)</p>
+        <p><strong>Perk:</strong> Carpe Diem stunt (free scene Aspect), +1 to one skill</p>
+        <p><strong>Cost:</strong> Lose all benefits if you ever Apothesize</p>
+      </div>
+      <div class="card sim">
+        <h4>SIM</h4>
+        <p><strong>Physical:</strong> 7 ranks (virtual only)</p>
+        <p><strong>Refresh:</strong> 5 (standard)</p>
+        <p><strong>Perk:</strong> +1 SINC, +1 S.Eng, choice stunt</p>
+        <p><strong>Cost:</strong> No body &mdash; needs drones, suffers lag penalties</p>
+      </div>
+      <div class="card sleeved">
+        <h4>Sleeved</h4>
+        <p><strong>Physical:</strong> Set by sleeve</p>
+        <p><strong>Refresh:</strong> 5 (standard)</p>
+        <p><strong>Perk:</strong> Augmentations, swappable bodies</p>
+        <p><strong>Cost:</strong> Resleeving = mental attack (Edge 8)</p>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:1em;">
+      <div class="label">Three Stress Tracks</div>
+      Unlike SWADE's single Wound track: <strong>Physical</strong> (Athletics + Endurance), <strong>Mental</strong> (Cohesion + Resolve), <strong>System</strong> (SINC + S. Engineering, Savants only).
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 12: NOVA PRAXIS SPECIFICS -->
+<div class="slide" id="s12">
+  <div class="slide-inner">
+    <h2><span class="num">10</span>Nova Praxis: Economy &amp; Savants</h2>
+    <div class="cols">
+      <div class="col">
+        <h3>Rep-Rating &amp; Assets</h3>
+        <table>
+          <tr><th class="swade">SWADE</th><th class="fate">FATE</th></tr>
+          <tr><td>Credits / buy from price list</td><td><strong>Rep-Rating</strong> test vs. Cost (Coalition)</td></tr>
+          <tr><td>Black market purchases</td><td><strong>Assets</strong> skill test vs. Cost</td></tr>
+          <tr><td>Failure = lost money</td><td>Failure = <strong>Rep Hit</strong></td></tr>
+          <tr><td>Restricted items need Edge</td><td>Restricted needs <strong>Licensed</strong> stunt or Assets</td></tr>
+        </table>
+      </div>
+      <div class="col">
+        <h3>Savant Programs</h3>
+        <table>
+          <tr><th class="swade">SWADE</th><th class="fate">FATE</th></tr>
+          <tr><td>Arcane Background</td><td><strong>Savant</strong> stunt (unlocks SINC)</td></tr>
+          <tr><td>Power Points</td><td>None &mdash; SINC test vs. Difficulty</td></tr>
+          <tr><td>Spell failure</td><td>Fail = <strong>System Stress</strong></td></tr>
+          <tr><td>Backlash</td><td><strong>Stall</strong> = catastrophic failure</td></tr>
+        </table>
+      </div>
+    </div>
+    <h3 style="margin-top:1.2em;">Sleeves &amp; Augmentations</h3>
+    <ul>
+      <li>Sleeves set Physical skill ranks and provide <strong>Augmentation Points</strong></li>
+      <li>Starting sleeve cost: MAX(Assets, Rep-Rating) + 4</li>
+      <li>Augmentation Limit = Endurance rank &times; 2</li>
+      <li>More expensive sleeve = better physical stats + more augmentation capacity</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 13: QUICK MINDSET RESETS -->
+<div class="slide" id="s13">
+  <div class="slide-inner">
+    <h2><span class="num">11</span>Quick Mindset Resets</h2>
+    <table>
+      <tr><th class="swade" style="width:45%">When you instinctively want to...</th><th class="fate">In FATE, instead...</th></tr>
+      <tr><td>"I attack twice with Multi-Action"</td><td>Attack once, or Maneuver first &rarr; invoke the Aspect next turn</td></tr>
+      <tr><td>"I spend a Bennie to Soak"</td><td>Take a Consequence (it becomes an Aspect enemies can invoke)</td></tr>
+      <tr><td>"I roll Vigor to stay up"</td><td>Absorb with stress boxes + Consequences, or Concede</td></tr>
+      <tr><td>"What is my Toughness?"</td><td>Your AR subtracts from incoming stress. That is it</td></tr>
+      <tr><td>"I roll Notice"</td><td>Perception (senses) or Insight (gut / reading people)</td></tr>
+      <tr><td>"What is my Parry?"</td><td>You roll a defense when attacked &mdash; no passive number</td></tr>
+      <tr><td>"I roll Spirit to resist"</td><td>Resolve (willpower) or Cohesion (sense of self)</td></tr>
+      <tr><td>"Can I Aid my ally?"</td><td>Maneuver &rarr; place Aspect &rarr; ally invokes for +2</td></tr>
+      <tr><td>"I use my Edge for a bonus"</td><td>Check Stunts, or invoke a relevant Aspect</td></tr>
+    </table>
+    <div class="callout" style="margin-top:1em;">
+      <div class="label">Remember</div>
+      Good Aspects are <strong>double-edged</strong>: useful when invoked, interesting when compelled. Lean into compels &mdash; they are fuel, not punishment.
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 14: THINGS THAT DON'T EXIST -->
+<div class="slide" id="s14">
+  <div class="slide-inner">
+    <h2><span class="num">12</span>Gone &amp; New</h2>
+    <div class="cols">
+      <div class="col">
+        <h3 style="color:var(--red);">Does Not Exist in FATE</h3>
+        <ul>
+          <li>Attribute rolls</li>
+          <li>Shaken / Unshaken</li>
+          <li>Soak rolls</li>
+          <li>Bennies for damage reduction</li>
+          <li>Multi-Action Penalty</li>
+          <li>Wild Die</li>
+          <li>Exploding dice</li>
+          <li>Incapacitation table</li>
+          <li>Healing rolls (Consequences heal on a timer)</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3 style="color:var(--green);">New Tools to Learn</h3>
+        <ul>
+          <li><strong>Aspects</strong> &mdash; invoke for +2, get compelled for +1 FP</li>
+          <li><strong>Declarations</strong> &mdash; spend FP to add a fact to the scene</li>
+          <li><strong>Create Advantage</strong> &mdash; place a temporary Aspect anyone can invoke</li>
+          <li><strong>Concession</strong> &mdash; surrender on your terms</li>
+          <li><strong>Persistent Aspects</strong> &mdash; free to invoke/compel</li>
+          <li><strong>Scope Rule</strong> &mdash; one Aspect per category per roll</li>
+          <li><strong>Spin</strong> &mdash; 3+ Shifts = bonus Effect Aspect</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 15: CLOSING -->
+<div class="slide" id="s15">
+  <div class="slide-inner title-slide">
+    <h1 style="font-size:clamp(2rem,4vw,3.5rem);margin-bottom:0.8em;">Welcome to <span class="fate">FATE</span></h1>
+    <div class="subtitle" style="max-width:700px;margin:0 auto 1.5em;">Describe what your character does. The mechanics follow the fiction. Lean into compels. Spend your Fate Points. Co-author the story.</div>
+    <div style="display:flex;gap:1em;justify-content:center;flex-wrap:wrap;">
+      <div class="campaign">New Player Primer &mdash; for character creation</div>
+      <div class="campaign">Rules Quick Reference &mdash; for at-table mechanics</div>
+    </div>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<div class="nav">
+  <button id="prev" aria-label="Previous slide">&larr;</button>
+  <span class="counter"><span id="current">1</span> / <span id="total">15</span></span>
+  <button id="next" aria-label="Next slide">&rarr;</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let idx = 0;
+
+  function show(i) {
+    slides[idx].classList.remove('active');
+    idx = Math.max(0, Math.min(i, slides.length - 1));
+    slides[idx].classList.add('active');
+    document.getElementById('current').textContent = idx + 1;
+  }
+
+  document.getElementById('prev').addEventListener('click', () => show(idx - 1));
+  document.getElementById('next').addEventListener('click', () => show(idx + 1));
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); show(idx + 1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); show(idx - 1); }
+    if (e.key === 'Home') { e.preventDefault(); show(0); }
+    if (e.key === 'End') { e.preventDefault(); show(slides.length - 1); }
+  });
+
+  // Touch/swipe support
+  let touchX = 0;
+  document.addEventListener('touchstart', e => touchX = e.changedTouches[0].screenX);
+  document.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].screenX - touchX;
+    if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1));
+  });
+</script>
+</body>
+</html>
