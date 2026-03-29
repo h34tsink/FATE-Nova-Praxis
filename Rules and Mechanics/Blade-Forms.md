@@ -9,7 +9,7 @@ A character's Blade Form is a **High Concept-adjacent Aspect** taken at characte
 
 ### Naming Convention
 
-Every form carries a two-part name: a **cultural name** rooted in its origin, and a formal **essence** — a single keyword that classifies its combat philosophy. The full designation is written as *[Name] of [Essence]*: Bulkhead of Stillness, Cascade of Entropy.
+Every form carries a two-part name: a **cultural name** rooted in its origin, and a formal **essence** — a single keyword that classifies its combat philosophy. The full designation is written as *[Name] of [Essence]*: Threshold of Stillness, Cascade of Entropy.
 
 The essence keywords encode the matchup system. Each form's **mantra** names the two essences it defeats:
 
@@ -29,14 +29,14 @@ Coalition forms are institutional — taught in House military academies, tourna
 
 Each form carries a formal House designation and a history that its practitioners are expected to know. In Coalition culture, naming your form is a statement of lineage — who trained you, which academy, which doctrine. Refusing to name your form in a formal duel is considered either an insult or an admission that you learned it outside sanctioned channels.
 
-### Bulkhead of Stillness
+### Threshold of Stillness
 *"I will be here when you are tired."*
 
-Named for the sealed compartments that saved ships during the [[Glossary/Exodus|Exodus]]. When the technophage consumed Earth and humanity fled in whatever vessels could carry them, the corridors became killing fields — breached hulls, venting atmosphere, desperate boarding actions. The people who survived those corridors weren't the fastest or the strongest. They were the ones who sealed every opening and refused to move.
+A threshold is the crossbar at the base of a doorway — the line that holds the boundary between inside and outside, safety and breach. During the [[Glossary/Exodus|Exodus]], when the technophage consumed Earth and humanity fled in whatever vessels could carry them, the corridors became killing fields — breached hulls, venting atmosphere, desperate boarding actions. The people who survived those corridors weren't the fastest or the strongest. They were the ones who became the threshold — the point nothing crossed.
 
-[[Factions/Houses/House Tsarya|House Tsarya]] formalized the doctrine within a decade of the Exodus, drawing on after-action reports from the evacuation fleet's security details. Commander Yelena Maro — a Tsarya shipboard security chief who held a breached corridor on the *Konstantine* for eleven hours with a mono-edged short sword and a hull panel — is credited as the form's first named practitioner, though she insisted she was just "doing what the ship taught her." Tsarya military academies now teach Bulkhead as baseline competency for any operative expected to hold a position.
+[[Factions/Houses/House Tsarya|House Tsarya]] formalized the doctrine within a decade of the Exodus, drawing on after-action reports from the evacuation fleet's security details. Commander Yelena Maro — a Tsarya shipboard security chief who held a breached corridor on the *Konstantine* for eleven hours with a mono-edged short sword and a hull panel — is credited as the form's first named practitioner. Tsarya after-action reports described her position as "the threshold" — the line the boarders could not cross. The name stuck. Tsarya military academies now teach Threshold as baseline competency for any operative expected to hold a position.
 
-The philosophy is engineering, not martial: seal every opening, contain the breach, survive. Practitioners minimize their profile, conserve energy, and wait — every motion tight to the body, every gap closed. A Bulkhead master is functionally untouchable for as long as they choose to be. The problem is choosing when to stop defending.
+The philosophy is architectural, not martial: become the boundary, hold the line, survive. Practitioners minimize their profile, conserve energy, and wait — every motion tight to the body, every gap closed. A Threshold master is functionally untouchable for as long as they choose to be. The problem is choosing when to stop defending.
 
 **Invoke when:**
 
@@ -82,14 +82,16 @@ Practitioners advance and retreat along a single axis — precise, economical, o
 
 ---
 
-### Torque of Force
+### Resonance of Force
 *"I don't dodge your strike. I end it."*
 
-Named for the physics it exploits — rotational force amplified through augmented muscle and reinforced bone. Torque emerged in the first generation after [[Glossary/Augmentations|augmentation]] became widespread, when combat instructors realized that a fighter with [[Glossary/Augmentations|Fibro-Muscle Weave]] and a [[Glossary/Augmentations|Reinforced Skeleton]] didn't just hit harder — they could turn *defense itself* into a weapon. A standard parry, executed with three times baseline human strength, becomes a counter-strike. A block becomes a battering ram.
+In physics, resonance is what happens when a system absorbs energy at its natural frequency and amplifies it — a small input, matched precisely, builds to a devastating output. The form is named for what an augmented body does to incoming force: absorbs the strike, matches its frequency, and sends it back amplified. Your opponent's power becomes yours.
 
-The doctrine was co-developed by [[Factions/Houses/House Tsarya|Tsarya]] combat engineers and [[Factions/Houses/House Kimura|Kimura]] cybersleeve designers, who recognized that augmented bodies needed augmented technique. The first formal curriculum was written by Dr. Kaspar Yun, a Kimura biomechanics researcher who'd never held a blade in his life — he modeled optimal force transfer through augmented joints and published the results as a kinesthetics paper. Tsarya shock troops turned his math into a fighting style within a year.
+Resonance emerged in the first generation after [[Glossary/Augmentations|augmentation]] became widespread, when combat instructors realized that a fighter with [[Glossary/Augmentations|Fibro-Muscle Weave]] and a [[Glossary/Augmentations|Reinforced Skeleton]] didn't just hit harder — they could turn *defense itself* into a weapon. A standard parry, executed with three times baseline human strength, becomes a counter-strike. A block becomes a battering ram. The harder you hit a Resonance practitioner, the harder you get hit back.
 
-Every block becomes a counter, every parry a riposte, every clash a chance to overpower. Tsarya shock troops and Kimura enforcers favor Torque because it rewards the hardware investment. Unaugmented practitioners can learn it, but they burn out fast — the form assumes a body that can absorb punishment baseline humans cannot.
+The doctrine was co-developed by [[Factions/Houses/House Tsarya|Tsarya]] combat engineers and [[Factions/Houses/House Kimura|Kimura]] cybersleeve designers, who recognized that augmented bodies needed augmented technique. The first formal curriculum was written by Dr. Kaspar Yun, a Kimura biomechanics researcher who'd never held a blade in his life — he modeled resonant force transfer through augmented joints, demonstrating that an augmented skeleton could absorb kinetic energy and redirect it with minimal loss. Tsarya shock troops turned his paper into a fighting style within a year.
+
+Tsarya shock troops and Kimura enforcers favor Resonance because it rewards the hardware investment. Unaugmented practitioners can learn it, but they burn out fast — the form assumes a body that can absorb punishment baseline humans cannot.
 
 **Invoke when:**
 
@@ -105,7 +107,7 @@ Every block becomes a counter, every parry a riposte, every clash a chance to ov
 - Open spaces against a fast opponent who refuses to trade blows
 - Your power is predictable — a chaotic opponent disrupts your rhythm before you can set it
 - An evasive fighter hits from angles you can't counter because they never commit
-- The situation requires restraint and Torque's philosophy is *dominance*
+- The situation requires restraint and Resonance's philosophy is *dominance*
 
 ---
 
@@ -203,36 +205,40 @@ Every form beats exactly two others and loses to exactly two others — a balanc
 These encode the entire matchup web. Each mantra names the essence of the form and the two essences it defeats:
 
 > *Stillness outlasts Entropy and Shift.*
+
 > *Precision pierces Stillness and Entropy.*
+
 > *Force breaks Stillness and Precision.*
+
 > *Entropy overwhelms Force and Shift.*
+
 > *Shift evades Force and Precision.*
 
-To find what beats a form, look for the mantras that name its essence. Cascade is Entropy — *"Stillness outlasts Entropy"* (Bulkhead wins) and *"Precision pierces Entropy"* (Meridian wins).
+To find what beats a form, look for the mantras that name its essence. Cascade is Entropy — *"Stillness outlasts Entropy"* (Threshold wins) and *"Precision pierces Entropy"* (Meridian wins).
 
 ### Matchup Table
 
 | Form | Essence | Beats | Loses To |
 |---|---|---|---|
-| Bulkhead | Stillness | Cascade, Parallax | Meridian, Torque |
-| Meridian | Precision | Bulkhead, Cascade | Torque, Parallax |
-| Torque | Force | Bulkhead, Meridian | Cascade, Parallax |
-| Cascade | Entropy | Torque, Parallax | Bulkhead, Meridian |
-| Parallax | Shift | Torque, Meridian | Bulkhead, Cascade |
+| Threshold | Stillness | Cascade, Parallax | Meridian, Resonance |
+| Meridian | Precision | Threshold, Cascade | Resonance, Parallax |
+| Resonance | Force | Threshold, Meridian | Cascade, Parallax |
+| Cascade | Entropy | Resonance, Parallax | Threshold, Meridian |
+| Parallax | Shift | Resonance, Meridian | Threshold, Cascade |
 
 ### Why Each Matchup Works
 
 | Winner | Loser | Reason |
 |---|---|---|
-| Meridian | Bulkhead | Precision probes what patience leaves open |
-| Torque | Bulkhead | Overwhelming force batters through static defense |
-| Torque | Meridian | Brute power breaks fencing discipline before it finds rhythm |
+| Meridian | Threshold | Precision probes what patience leaves open |
+| Resonance | Threshold | Overwhelming force batters through static defense |
+| Resonance | Meridian | Amplified power breaks fencing discipline before it finds rhythm |
 | Parallax | Meridian | Attacks from outside the duel axis — can't fence what won't face you |
-| Cascade | Torque | Chaos disrupts the telegraphed rhythm power requires |
-| Parallax | Torque | Evasion denies the power exchange — hits from angles that can't be countered |
-| Bulkhead | Cascade | Patience denies emotional fuel; chaos exhausts against stillness |
+| Cascade | Resonance | Chaos disrupts the rhythm resonance requires to build |
+| Parallax | Resonance | Evasion denies the power exchange — hits from angles that can't be countered |
+| Threshold | Cascade | Patience denies emotional fuel; chaos exhausts against stillness |
 | Meridian | Cascade | Disciplined precision dismantles what emotion can't sustain |
-| Bulkhead | Parallax | Defense outlasts evasion; patience waits for the commit |
+| Threshold | Parallax | Defense outlasts evasion; patience waits for the commit |
 | Cascade | Parallax | Environmental chaos denies escape routes — can't vanish when everything is hostile |
 
 > These are *doctrinal tendencies*, not guaranteed outcomes. The matchup creates mechanical pressure — a free invoke — not a predetermined result.
@@ -245,15 +251,15 @@ The GM should tag these as **situation aspects** when relevant. They are legitim
 
 | Condition | Benefits | Penalties |
 |---|---|---|
-| *Tight Corridors* | Bulkhead, Torque | Parallax, Cascade |
-| *Open Ground / Vertical Space* | Meridian, Parallax | Bulkhead (can't turtle effectively) |
-| *Low / Zero Gravity* | Parallax (briefly), Cascade | Meridian (footwork), Torque (telegraphed) |
-| *Multiple Opponents* | Cascade, Bulkhead | Meridian, Parallax |
-| *Ranged Fire Present* | Bulkhead, Torque | Meridian, Parallax |
-| *High Emotional Stakes* | Cascade | Bulkhead (patience becomes paralysis) |
-| *Extended Fight (3+ exchanges)* | Bulkhead, Torque | Parallax, Cascade |
+| *Tight Corridors* | Threshold, Resonance | Parallax, Cascade |
+| *Open Ground / Vertical Space* | Meridian, Parallax | Threshold (can't turtle effectively) |
+| *Low / Zero Gravity* | Parallax (briefly), Cascade | Meridian (footwork), Resonance (telegraphed) |
+| *Multiple Opponents* | Cascade, Threshold | Meridian, Parallax |
+| *Ranged Fire Present* | Threshold, Resonance | Meridian, Parallax |
+| *High Emotional Stakes* | Cascade | Threshold (patience becomes paralysis) |
+| *Extended Fight (3+ exchanges)* | Threshold, Resonance | Parallax, Cascade |
 | *Darkness / Sensory Disruption* | Cascade | Meridian |
-| *Augmentation Advantage* | Torque, Meridian | Cascade (if outmatched in hardware) |
+| *Augmentation Advantage* | Resonance, Meridian | Cascade (if outmatched in hardware) |
 
 ---
 
