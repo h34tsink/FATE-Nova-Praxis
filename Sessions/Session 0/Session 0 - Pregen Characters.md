@@ -52,7 +52,6 @@ Each character has a **role tag** so you know what they're good at, and a **"Pla
 | C | Owes a Life Debt to the Wrong People | Connection |
 | D | Flashbacks from the Elysium Outbreak | Disadvantage |
 | E | Trauma Surgeon Under Fire | Expertise |
-| 7 | Hands That Heal Can Also Hurt | Physical Trait |
 
 ### Skills
 
@@ -73,7 +72,7 @@ Each character has a **role tag** so you know what they're good at, and a **"Pla
 
 ### Combat Stats
 
-**Stress:** Physical 7 | Mental 5
+**Stress:** Physical 6 | Mental 5
 **AR:** +1 (Reinforced Clothing)
 **Gear:** Med-kit (surgical tools, Cost 5), Mono-blade scalpel (WR 1, Melee), Reinforced Clothing (AR +1), PPC with Beta Agent
 
@@ -107,7 +106,7 @@ Each character has a **role tag** so you know what they're good at, and a **"Pla
 | +2 | Guile, Insight, Research |
 | +1 | Assets, Cohesion, Diplomacy, Education, Melee, S. Engineering |
 
-**Physical:** Athletics 3, Endurance 3, Perception 3
+**Physical:** Athletics 3, Endurance 2, Perception 3
 
 ### Stunts
 
@@ -117,7 +116,7 @@ Each character has a **role tag** so you know what they're good at, and a **"Pla
 
 ### Combat Stats
 
-**Stress:** Physical 6 | Mental 4
+**Stress:** Physical 6 | Mental 3
 **AR:** +1 (Stealth Suit, +2 Stealth in low light)
 **Gear:** Whisper Coil Pistol (WR 2, Cost 6), Stealth Suit (AR +1), Recon Drone "Pip" (Perception 3, Stealth 3, Athletics 2)
 
@@ -151,13 +150,14 @@ Each character has a **role tag** so you know what they're good at, and a **"Pla
 | +2 | Firearms, H. Engineering, Demolitions, Strategy |
 | +1 | Assets, Cohesion, Education, Guile, Pilot, Research |
 
-**Physical:** Athletics 4, Endurance 4, Perception 2 (Pure: 8 ranks, max 5)
+**Physical:** Athletics 3, Endurance 4, Perception 1 (Pure: 8 ranks, max 5)
 
 ### Stunts
 
 - **Carpe Diem** (free Pure stunt) -- Once per scene, declare an Aspect exists on the scene. Free first invoke
 - **Skilled (Melee)** -- +1 Melee (included above; Pure can apply Skilled to physical)
 - **Specialty Aspect (Melee)** -- *"Hit First, Hit Hard, Don't Stop"* free invoke once/scene on Melee tests
+- **Tough** -- +2 Physical Stress
 
 ### Combat Stats
 
@@ -165,7 +165,7 @@ Each character has a **role tag** so you know what they're good at, and a **"Pla
 **AR:** +2 (Armored Jacket)
 **Gear:** Armored Jacket (AR +2), Stun Baton (WR 2, Melee), Ballistic Knife (WR 1, thrown or Melee), Belt tool kit
 
-**Pure Bonus:** +1 to Melee (via Skilled), +2 Refresh (= 7 base)
+**Pure Bonus:** +1 to Melee (via Skilled), +2 Refresh (= 7 base), +2 Physical Stress (via Tough = 8 total)
 
 ---
 
@@ -192,15 +192,15 @@ Each character has a **role tag** so you know what they're good at, and a **"Pla
 
 | Rank | Skills |
 |------|--------|
-| +5 | SINC |
-| +4 | S. Engineering, Research |
-| +3 | Stealth, Insight |
-| +2 | Education, Strategy, Guile |
-| +1 | Assets, Cohesion, Resolve, Diplomacy, H. Engineering, Networking (Apostate) |
+| +5 | S. Engineering |
+| +4 | Research, Stealth |
+| +3 | Strategy, Insight |
+| +2 | Education, Guile, H. Engineering |
+| +1 | Assets, Cohesion, Resolve, Diplomacy, Networking (Apostate), Pilot |
 
 **Physical:** Athletics 2, Endurance 2, Perception 3 (SIM: 7 ranks, virtual only)
 
-**SIM Bonuses (House Rule):** +1 SINC, +1 S. Engineering (included above)
+*SINC = 1 (from Savant stunt — cannot be raised via skill distribution; requires Skilled stunt or Milestone)*
 
 ### Stunts
 
@@ -216,6 +216,8 @@ Each character has a **role tag** so you know what they're good at, and a **"Pla
 **Stress:** Physical 4 (virtual) | Mental 4 | System 6
 **AR:** N/A (no body)
 **Gear:** Custom home virtuality, 2 surveillance drones (Perception 3, Stealth 2, Athletics 2)
+
+*System Stress: 2 + S.Engineering (5→+3) + SINC (1→+1) = 6*
 
 ---
 
@@ -242,9 +244,9 @@ Each character has a **role tag** so you know what they're good at, and a **"Pla
 | Rank | Skills |
 |------|--------|
 | +4 | Pilot, Firearms, Strategy |
-| +3 | Athletics, Insight, Resolve |
-| +2 | Education, H. Engineering, Stealth, Perception |
-| +1 | Assets, Cohesion, Diplomacy, Guile, Intimidation, Melee |
+| +3 | Insight, Resolve, Intimidation |
+| +2 | Education, H. Engineering, Stealth, Melee |
+| +1 | Assets, Cohesion, Diplomacy, Guile, Networking, Research |
 
 **Physical:** Athletics 3, Endurance 3, Perception 3
 
@@ -285,12 +287,12 @@ Each character has a **role tag** so you know what they're good at, and a **"Pla
 
 | Rank | Skills |
 |------|--------|
-| +4 | Guile, Mnemonics, SINC |
-| +3 | Diplomacy, Insight, S. Engineering |
+| +4 | Guile, Mnemonics, Diplomacy |
+| +3 | Insight, S. Engineering, Stealth |
+| +2 | Research, Education, Cohesion, Intimidation |
+| +1 | Assets, Resolve, Firearms, Strategy, H. Engineering, Networking |
 
-> SINC starts at 1 (from Savant stunt), raised to 4 via skill distribution.
-| +2 | Research, Education, Stealth, Cohesion |
-| +1 | Assets, Resolve, Firearms, Strategy, Intimidation, H. Engineering |
+*SINC = 1 (from Savant stunt — cannot be raised via skill distribution; requires Skilled stunt or Milestone)*
 
 **Physical:** Athletics 3, Endurance 3, Perception 4
 
@@ -333,16 +335,17 @@ Each character has a **role tag** so you know what they're good at, and a **"Pla
 |------|--------|
 | +4 | Strategy, Education, Networking (House) |
 | +3 | Insight, Research, Resolve |
-| +2 | Diplomacy, Firearms, Intimidation, Perception |
-| +1 | Assets, Cohesion, Guile, H. Engineering, Stealth, Pilot |
+| +2 | Diplomacy, Firearms, Intimidation, Guile |
+| +1 | Assets, Cohesion, H. Engineering, Stealth, Pilot, Melee |
 
-**Physical:** Athletics 2, Endurance 3, Perception 5 (Pure: 8 ranks, max 5)
+**Physical:** Athletics 1, Endurance 3, Perception 4 (Pure: 8 ranks, max 5)
 
 ### Stunts
 
 - **Carpe Diem** (free Pure stunt) -- Once per scene, declare a scene Aspect. Free first invoke
 - **Battlefield Command** -- Once/scene, all allies who hear you can move to adjacent zone or take cover as Instant Action. Extra uses cost 1 FP
 - **Skilled (Strategy)** -- +1 Strategy (included; Pure can apply to non-physical)
+- **Specialty Aspect (Strategy)** -- *"Three Steps Ahead in Any Conflict"* free invoke once/scene on Strategy tests
 
 ### Combat Stats
 
@@ -377,11 +380,11 @@ Each character has a **role tag** so you know what they're good at, and a **"Pla
 | Rank | Skills |
 |------|--------|
 | +4 | Demolitions, H. Engineering, Firearms |
-| +3 | Education, Strategy, Athletics |
-| +2 | Pilot, Stealth, Perception, Resolve |
-| +1 | Assets, Cohesion, Insight, Intimidation, S. Engineering, Melee |
+| +3 | Education, Strategy, Insight |
+| +2 | Pilot, Stealth, Resolve, Intimidation |
+| +1 | Assets, Cohesion, S. Engineering, Melee, Networking, Research |
 
-**Physical:** Athletics 3, Endurance 4, Perception 3
+**Physical:** Athletics 3, Endurance 4, Perception 2
 
 ### Stunts
 
@@ -391,7 +394,7 @@ Each character has a **role tag** so you know what they're good at, and a **"Pla
 
 ### Combat Stats
 
-**Stress:** Physical 7 | Mental 4
+**Stress:** Physical 6 | Mental 4
 **AR:** +3 (Tactical Armor)
 **Gear:** Coil Assault Rifle (WR 3, Restricted), Breaching Charges (ExR 4, 3 charges), Tactical Armor (AR +3), Engineering toolkit, PPC with Beta Agent
 
@@ -420,10 +423,10 @@ Each character has a **role tag** so you know what they're good at, and a **"Pla
 | Rank | Skills |
 |------|--------|
 | +5 | Firearms |
-| +4 | Stealth, Perception |
-| +3 | Strategy, Athletics |
-| +2 | Resolve, Pilot, Insight |
-| +1 | Assets, Cohesion, Education, H. Engineering, Melee, Research |
+| +4 | Stealth, Resolve |
+| +3 | Strategy, Insight |
+| +2 | Pilot, H. Engineering, Education |
+| +1 | Assets, Cohesion, Melee, Research, Intimidation, Guile |
 
 **Physical:** Athletics 3, Endurance 4, Perception 4
 
@@ -435,7 +438,7 @@ Each character has a **role tag** so you know what they're good at, and a **"Pla
 
 ### Combat Stats
 
-**Stress:** Physical 7 | Mental 4
+**Stress:** Physical 6 | Mental 4
 **AR:** +1 (Ghillie/Stealth Suit)
 **Gear:** Precision Coil Rifle (WR 4, Restricted, +1 at long range), Sidearm (WR 1), Ghillie Suit (AR +1, +2 Stealth when stationary), Spotter drone (Perception 4, Stealth 3)
 
@@ -464,15 +467,15 @@ Each character has a **role tag** so you know what they're good at, and a **"Pla
 
 | Rank | Skills |
 |------|--------|
-| +5 | SINC |
-| +4 | S. Engineering, Pilot |
-| +3 | Stealth, Research, Strategy |
-| +2 | H. Engineering, Insight, Education, Perception |
+| +5 | S. Engineering |
+| +4 | Pilot, Strategy |
+| +3 | Stealth, Research |
+| +2 | H. Engineering, Insight, Education |
 | +1 | Assets, Cohesion, Resolve, Networking (Apostate), Firearms, Guile |
 
 **Physical:** Athletics 2, Endurance 2, Perception 3 (SIM: 7 ranks, virtual only)
 
-**SIM Bonuses (House Rule):** +1 SINC, +1 S. Engineering (included above)
+*SINC = 1 (from Savant stunt — cannot be raised via skill distribution; requires Skilled stunt or Milestone)*
 
 ### Stunts
 
