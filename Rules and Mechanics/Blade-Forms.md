@@ -19,15 +19,17 @@ Coalition forms are institutional — taught in House military academies, tourna
 The defensive standard. [[Factions/Houses/House Tsarya|Tsarya]] military doctrine treats The Wall as baseline competency for any operative expected to hold a position. Practitioners minimize their profile, conserve energy, and wait — every motion tight to the body, every opening sealed. A Wall master behind a mono-edged short sword is functionally untouchable for as long as they choose to be. The problem is choosing when to stop defending.
 
 **Invoke when:**
-- Holding a position against superior numbers
+- Holding a position against superior numbers or sustained assault
 - Outlasting a physically superior or more heavily augmented opponent
 - Fighting in confined spaces (tight geometry suits tight defense)
 - Deflecting ranged fire at close quarters
+- Your opponent relies on aggression or evasion — you deny both the fuel and the opening
 
 **Compel when:**
 - The situation demands advance — rescuing someone, reaching an objective, escaping
 - Time pressure makes passive defense a loss condition
-- Your opponent reads your patience and exploits what it leaves open
+- A precise opponent methodically probes what your patience leaves open
+- Overwhelming force batters through your guard faster than you can reset
 - You survived the fight but failed the mission
 
 ---
@@ -41,13 +43,14 @@ The duelist's art. Rooted in the tournament circuits of [[Factions/Houses/House 
 - Formal or semi-formal one-on-one engagement on open ground
 - Using precise counter-strikes to disarm, disable, or embarrass
 - Your opponent relies on patience — your precision finds the gaps they never close
-- Exploiting predictable attack patterns with surgical counters
+- Your opponent relies on emotion — your discipline dismantles what chaos can't sustain
 
 **Compel when:**
 - Multiple attackers collapse your line of engagement
 - Zero-gravity or unstable footing disrupts your footwork
 - Ranged fire enters the fight (The Line offers almost nothing against projectiles)
-- Your elegance becomes arrogance — you underestimate a brawler
+- Overwhelming force breaks your fencing discipline before precision can matter
+- Attacks come from angles outside your axis — you can't duel what won't face you
 
 ---
 
@@ -60,12 +63,14 @@ The powerhouse doctrine. Developed for augmented combatants — [[Glossary/Augme
 - Countering a melee strike (triggers on a successful defend — the counter is built in)
 - Confined corridors, heavy gravity, structured environments that limit evasion
 - Leveraging augmentation advantages (Fibro-Muscle, Massive Size, combat sleeves)
-- Mixed ranged and melee — using a blade to close distance aggressively
+- Battering through static defense — every exchange costs a patient fighter more than it costs you
+- Overpowering a precision fighter before their technique can find its rhythm
 
 **Compel when:**
 - Zero or low gravity (powerful swings telegraph without gravity to anchor you)
 - Open spaces against a fast opponent who refuses to trade blows
-- Your power is predictable — a chaotic or evasive opponent reads the rhythm
+- Your power is predictable — a chaotic opponent disrupts your rhythm before you can set it
+- An evasive fighter hits from angles you can't counter because they never commit
 - The situation requires restraint and The Hammer's philosophy is *dominance*
 
 ---
@@ -85,13 +90,14 @@ The oldest and most desperate form. The Storm treats the entire environment as a
 - Fighting multiple opponents simultaneously
 - Using the environment as a weapon (debris, venting atmosphere, unstable gravity)
 - High emotional stakes — cornered, protecting someone, enraged
-- Your opponent expects precision and gets chaos
+- Your opponent relies on rhythm or telegraphed power — chaos disrupts what predictability requires
 - Sensory-disrupted environments (darkness, smoke, electronic jamming)
+- Denying escape routes by making the whole space hostile
 
 **Compel when:**
-- A calm, disciplined opponent refuses to engage emotionally
+- A patient defender refuses to engage emotionally — your chaos exhausts against stillness
+- A disciplined precision fighter reads your patterns faster than you can generate new ones
 - Precision or restraint is required (hostages, allies in the crossfire)
-- Confined spaces where sweeping strikes endanger you as much as the enemy
 - The fight extends past three exchanges and adrenaline becomes exhaustion
 
 ---
@@ -105,13 +111,15 @@ Hit-and-run doctrine. Developed by resistance fighters — the [[Glossary/Talons
 - Open spaces, vertical terrain, low gravity, cluttered environments with cover
 - Ending a fight quickly before stamina or equipment becomes an issue
 - Creating Advantages through repositioning and ambush
-- Fighting a stronger or more heavily augmented opponent who can't catch you
+- Attacking from angles a power fighter can't counter — they need you to stand still, and you won't
+- Breaking a precision fighter's axis — you refuse the structured duel they need
 
 **Compel when:**
 - Tight corridors eliminate your movement options
 - The fight extends past three exchanges (stamina collapse — Ghost practitioners burn hot)
+- A patient defender simply waits for you to commit — evasion can't outlast stillness
+- Environmental chaos denies your escape routes — you can't vanish when the whole space is hostile
 - Multiple ranged opponents with overlapping fields of fire pin you down
-- A patient defender simply waits for you to commit
 
 ---
 
@@ -136,18 +144,32 @@ A known Form can be invoked by anyone at the table — the player, the GM, or an
 
 ## Form Matchups
 
-Each form has a natural counter — a historical relationship that trained practitioners recognize and exploit. When a Form faces its documented counter, the opposing player may invoke the counter's Form aspect **for free on the first exchange** after the Form is Read.
+Every form beats exactly two others and loses to exactly two others — a balanced cycle with no dominant or trap picks. When a Form faces its documented counter, the opposing player may invoke the counter's Form aspect **for free on the first exchange** after the Form is Read.
 
-| Form | Countered By | Why |
+| Form | Beats | Loses To |
 |---|---|---|
-| The Wall | The Line | Precision finds what patience leaves open |
-| The Line | The Hammer | Brute force breaks fencing discipline |
-| The Hammer | The Storm | Chaos disrupts telegraphed power |
-| The Storm | The Wall | Patience denies emotional fuel; chaos exhausts against stillness |
-| The Ghost | The Wall | Defense outlasts evasion; patience waits for the commit |
-| The Ghost | The Hammer | Aerial gaps and strike windows are punished by power |
+| The Wall | Storm, Ghost | Line, Hammer |
+| The Line | Wall, Storm | Hammer, Ghost |
+| The Hammer | Wall, Line | Storm, Ghost |
+| The Storm | Hammer, Ghost | Wall, Line |
+| The Ghost | Hammer, Line | Wall, Storm |
 
-> The cycle runs **Wall < Line < Hammer < Storm < Wall**, with The Ghost countered by both defensive patience and overwhelming power. These are *doctrinal tendencies*, not guaranteed outcomes. The matchup creates mechanical pressure — a free invoke — not a predetermined result.
+**Why each matchup works:**
+
+| Winner | Loser | Reason |
+|---|---|---|
+| Line | Wall | Precision probes what patience leaves open |
+| Hammer | Wall | Overwhelming force batters through static defense |
+| Hammer | Line | Brute power breaks fencing discipline before it finds rhythm |
+| Ghost | Line | Attacks from outside the duel axis — can't fence what won't face you |
+| Storm | Hammer | Chaos disrupts the telegraphed rhythm power requires |
+| Ghost | Hammer | Evasion denies the power exchange — hits from angles that can't be countered |
+| Wall | Storm | Patience denies emotional fuel; chaos exhausts against stillness |
+| Line | Storm | Disciplined precision dismantles what emotion can't sustain |
+| Wall | Ghost | Defense outlasts evasion; patience waits for the commit |
+| Storm | Ghost | Environmental chaos denies escape routes — can't vanish when everything is hostile |
+
+> These are *doctrinal tendencies*, not guaranteed outcomes. The matchup creates mechanical pressure — a free invoke — not a predetermined result.
 
 ---
 
