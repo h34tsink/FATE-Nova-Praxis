@@ -11,14 +11,21 @@ A character's Blade Form is a **High Concept-adjacent Aspect** taken at characte
 
 ## Coalition Forms
 
-Coalition forms are institutional — taught in House military academies, tournament circuits, and Protectorate training programs. They assume access to quality equipment, augmented sleeves, and structured environments. Coalition practitioners tend to be specialists who've drilled thousands of hours in controlled conditions.
+Coalition forms are institutional — taught in House military academies, tournament circuits, and [[Glossary/Protectorate|Protectorate]] training programs. They assume access to quality equipment, augmented sleeves, and structured environments. Coalition practitioners tend to be specialists who've drilled thousands of hours in controlled conditions.
 
-### The Wall
+Each form carries a formal House designation and a history that its practitioners are expected to know. In Coalition culture, naming your form is a statement of lineage — who trained you, which academy, which doctrine. Refusing to name your form in a formal duel is considered either an insult or an admission that you learned it outside sanctioned channels.
+
+### Bulkhead
 *"I will be here when you are tired."*
 
-The defensive standard. [[Factions/Houses/House Tsarya|Tsarya]] military doctrine treats The Wall as baseline competency for any operative expected to hold a position. Practitioners minimize their profile, conserve energy, and wait — every motion tight to the body, every opening sealed. A Wall master behind a mono-edged short sword is functionally untouchable for as long as they choose to be. The problem is choosing when to stop defending.
+Named for the sealed compartments that saved ships during the [[Glossary/Exodus|Exodus]]. When the technophage consumed Earth and humanity fled in whatever vessels could carry them, the corridors became killing fields — breached hulls, venting atmosphere, desperate boarding actions. The people who survived those corridors weren't the fastest or the strongest. They were the ones who sealed every opening and refused to move.
+
+[[Factions/Houses/House Tsarya|House Tsarya]] formalized the doctrine within a decade of the Exodus, drawing on after-action reports from the evacuation fleet's security details. Commander Yelena Maro — a Tsarya shipboard security chief who held a breached corridor on the *Konstantine* for eleven hours with a mono-edged short sword and a hull panel — is credited as the form's first named practitioner, though she insisted she was just "doing what the ship taught her." Tsarya military academies now teach Bulkhead as baseline competency for any operative expected to hold a position.
+
+The philosophy is engineering, not martial: seal every opening, contain the breach, survive. Practitioners minimize their profile, conserve energy, and wait — every motion tight to the body, every gap closed. A Bulkhead master is functionally untouchable for as long as they choose to be. The problem is choosing when to stop defending.
 
 **Invoke when:**
+
 - Holding a position against superior numbers or sustained assault
 - Outlasting a physically superior or more heavily augmented opponent
 - Fighting in confined spaces (tight geometry suits tight defense)
@@ -26,6 +33,7 @@ The defensive standard. [[Factions/Houses/House Tsarya|Tsarya]] military doctrin
 - Your opponent relies on aggression or evasion — you deny both the fuel and the opening
 
 **Compel when:**
+
 - The situation demands advance — rescuing someone, reaching an objective, escaping
 - Time pressure makes passive defense a loss condition
 - A precise opponent methodically probes what your patience leaves open
@@ -34,32 +42,43 @@ The defensive standard. [[Factions/Houses/House Tsarya|Tsarya]] military doctrin
 
 ---
 
-### The Line
+### Meridian
 *"The blade is an argument. I intend to win it."*
 
-The duelist's art. Rooted in the tournament circuits of [[Factions/Houses/House Dalianis|House Dalianis]], where mono-edged fencing is both sport and social currency. Practitioners advance and retreat along a single axis — precise, economical, one-handed. Every defense becomes a measured counter. Often perceived as arrogant. Often justified.
+A meridian is a line of longitude — a precise, singular path from pole to pole. The name was coined by Sera Achille, the first Grand Arbiter of the [[Factions/Houses/House Dalianis|Dalianis]] Formal Circuit, who described mono-edged fencing as "navigation, not combat — you find the single true line through your opponent's geometry, and you walk it." The metaphor stuck. Three centuries later, Dalianis tournament culture still calls a clean victory "finding the meridian."
+
+The form predates the Exodus — its roots are in pre-Collapse competitive fencing, adapted for mono-edged blades that never dull and can sever limbs with a touch. Dalianis adopted it as cultural currency. In House space, fencing proficiency signals breeding, education, and political sharpness. The tournament circuits are half sport, half social negotiation. A duel well-fought opens doors that reputation alone cannot.
+
+Practitioners advance and retreat along a single axis — precise, economical, one-handed. Every defense becomes a measured counter. The blade moves in arcs measured in millimeters. Often perceived as arrogant. Often justified.
 
 **Invoke when:**
+
 - Formal or semi-formal one-on-one engagement on open ground
 - Using precise counter-strikes to disarm, disable, or embarrass
 - Your opponent relies on patience — your precision finds the gaps they never close
 - Your opponent relies on emotion — your discipline dismantles what chaos can't sustain
 
 **Compel when:**
+
 - Multiple attackers collapse your line of engagement
 - Zero-gravity or unstable footing disrupts your footwork
-- Ranged fire enters the fight (The Line offers almost nothing against projectiles)
+- Ranged fire enters the fight (Meridian offers almost nothing against projectiles)
 - Overwhelming force breaks your fencing discipline before precision can matter
 - Attacks come from angles outside your axis — you can't duel what won't face you
 
 ---
 
-### The Hammer
+### Torque
 *"I don't dodge your strike. I end it."*
 
-The powerhouse doctrine. Developed for augmented combatants — [[Glossary/Augmentations|Fibro-Muscle Weave]], [[Glossary/Augmentations|Reinforced Skeleton]], combat-optimized [[Glossary/Cybersleeve|cybersleeves]] — who can turn defense into devastation. Every block becomes a counter, every parry a riposte, every clash a chance to overpower. Tsarya shock troops and [[Factions/Houses/House Kimura|Kimura]] enforcers favor this form because it rewards the hardware investment. Unaugmented practitioners can learn The Hammer, but they burn out fast.
+Named for the physics it exploits — rotational force amplified through augmented muscle and reinforced bone. Torque emerged in the first generation after [[Glossary/Augmentations|augmentation]] became widespread, when combat instructors realized that a fighter with [[Glossary/Augmentations|Fibro-Muscle Weave]] and a [[Glossary/Augmentations|Reinforced Skeleton]] didn't just hit harder — they could turn *defense itself* into a weapon. A standard parry, executed with three times baseline human strength, becomes a counter-strike. A block becomes a battering ram.
+
+The doctrine was co-developed by [[Factions/Houses/House Tsarya|Tsarya]] combat engineers and [[Factions/Houses/House Kimura|Kimura]] cybersleeve designers, who recognized that augmented bodies needed augmented technique. The first formal curriculum was written by Dr. Kaspar Yun, a Kimura biomechanics researcher who'd never held a blade in his life — he modeled optimal force transfer through augmented joints and published the results as a kinesthetics paper. Tsarya shock troops turned his math into a fighting style within a year.
+
+Every block becomes a counter, every parry a riposte, every clash a chance to overpower. Tsarya shock troops and Kimura enforcers favor Torque because it rewards the hardware investment. Unaugmented practitioners can learn it, but they burn out fast — the form assumes a body that can absorb punishment baseline humans cannot.
 
 **Invoke when:**
+
 - Countering a melee strike (triggers on a successful defend — the counter is built in)
 - Confined corridors, heavy gravity, structured environments that limit evasion
 - Leveraging augmentation advantages (Fibro-Muscle, Massive Size, combat sleeves)
@@ -67,11 +86,12 @@ The powerhouse doctrine. Developed for augmented combatants — [[Glossary/Augme
 - Overpowering a precision fighter before their technique can find its rhythm
 
 **Compel when:**
+
 - Zero or low gravity (powerful swings telegraph without gravity to anchor you)
 - Open spaces against a fast opponent who refuses to trade blows
 - Your power is predictable — a chaotic opponent disrupts your rhythm before you can set it
 - An evasive fighter hits from angles you can't counter because they never commit
-- The situation requires restraint and The Hammer's philosophy is *dominance*
+- The situation requires restraint and Torque's philosophy is *dominance*
 
 ---
 
@@ -79,14 +99,23 @@ The powerhouse doctrine. Developed for augmented combatants — [[Glossary/Augme
 
 Apostate forms are survival doctrine — passed through resistance cells, station gangs, and the fighting pits of [[Locations/New Montreal|New Montreal]]. They assume inferior equipment, no augmentation safety net, and environments that are already trying to kill you. Where Coalition forms are refined through simulation and drilling, apostate forms are refined through attrition. The practitioners who survive teach. The rest don't.
 
+Apostate forms have no formal academies, no certification, no lineage tracking. A practitioner's "credential" is that they're still alive. The names are colloquial — coined by the communities that developed them, spread through repetition rather than publication. Coalition intelligence analysts assigned formal designations decades ago, but no apostate uses them.
+
 Some Coalition operatives cross-train in apostate forms. Some apostates steal Coalition doctrine. The cultural origin is lore, not a mechanical restriction — any character can learn any form if the fiction supports it.
 
-### The Storm
+### Cascade
 *"Everything is a weapon. Including me."*
 
-The oldest and most desperate form. The Storm treats the entire environment as an extension of the fight — debris, unstable terrain, crowds, hull breaches, the opponent's own momentum. Wide, sweeping, unpredictable. Where Coalition forms assume a controlled arena, The Storm assumes the arena is on fire. Practitioners fight with whatever they have, from mono-edged machetes to hull plating torn off a wall. Emotionally fueled — the form intensifies with desperation and rage.
+Named for cascade failure — the engineering term for when one system's collapse triggers the next, and the next, until everything is debris. That's both the environment Cascade was born in and the environment it creates.
+
+The form has no single origin point. It emerged independently in every apostate enclave that survived long enough to develop one — [[Locations/New Montreal|New Montreal]] pit fighters, [[Locations/Santa Maria|Santa Maria]] hull breach boarding teams, station gangs defending territory in corridors where the atmosphere recyclers were already failing. The common thread was desperation: people fighting with whatever they had, in spaces that were already falling apart, against opponents who were better equipped and often augmented. The survivors compared notes. Patterns emerged.
+
+The name is attributed to Mala Voss, a New Montreal pit fighter who allegedly described her style as "I don't start the cascade. I just make sure it lands on them first." Whether Voss was a real person or a composite folk hero depends on who you ask. The form doesn't care.
+
+Cascade treats the entire environment as an extension of the fight — debris, unstable terrain, crowds, hull breaches, the opponent's own momentum. Wide, sweeping, unpredictable. Where Coalition forms assume a controlled arena, Cascade assumes the arena is on fire. Emotionally fueled — the form intensifies with desperation and rage.
 
 **Invoke when:**
+
 - Fighting multiple opponents simultaneously
 - Using the environment as a weapon (debris, venting atmosphere, unstable gravity)
 - High emotional stakes — cornered, protecting someone, enraged
@@ -95,6 +124,7 @@ The oldest and most desperate form. The Storm treats the entire environment as a
 - Denying escape routes by making the whole space hostile
 
 **Compel when:**
+
 - A patient defender refuses to engage emotionally — your chaos exhausts against stillness
 - A disciplined precision fighter reads your patterns faster than you can generate new ones
 - Precision or restraint is required (hostages, allies in the crossfire)
@@ -102,12 +132,19 @@ The oldest and most desperate form. The Storm treats the entire environment as a
 
 ---
 
-### The Ghost
+### Parallax
 *"You can't parry what you can't find."*
 
-Hit-and-run doctrine. Developed by resistance fighters — the [[Glossary/Talons of Freedom|Talons of Freedom]], [[Locations/Santa Maria|Santa Maria]] boarding crews, station rats who learned that standing toe-to-toe with an augmented enforcer is suicide. The Ghost turns the fighter into a moving target — wall-runs, zero-g tumbles, strike-and-vanish. Opponents struggle to track a Ghost practitioner because the attacks come from angles they weren't defending. Devastating in ambush. Unsustainable in a prolonged engagement.
+A parallax is the apparent shift in an object's position when viewed from different angles — the reason a star seems to move against the background when observed from opposite sides of an orbit. The form is named for what it does to the opponent's perception: you're never where they think you are.
+
+Parallax was developed by the [[Glossary/Talons of Freedom|Talons of Freedom]] during their early campaigns against Coalition security forces. The tactical problem was straightforward — unaugmented or lightly augmented fighters against [[Glossary/Cybersleeve|cybersleeve]] enforcers with superior armor, strength, and reaction time. Standing toe-to-toe was suicide. The Talons needed a doctrine built around never being where the counter-strike lands.
+
+The form's codification is credited to Dren Akabo, a Talon cell leader and former [[Locations/Santa Maria|Santa Maria]] zero-g cargo handler whose boarding actions against Coalition patrol vessels had a survival rate roughly triple the Talon average. When pressed for his method, Akabo reportedly said: "They train to fight someone standing in front of them. So don't." His tactical notes, circulated through Talon cells and eventually into the broader apostate underground, became the closest thing Parallax has to a training manual.
+
+The Ghost turns the fighter into a moving target — wall-runs, zero-g tumbles, strike-and-vanish. Opponents struggle to track a Parallax practitioner because the attacks come from angles they weren't defending. Devastating in ambush. Unsustainable in a prolonged engagement.
 
 **Invoke when:**
+
 - Open spaces, vertical terrain, low gravity, cluttered environments with cover
 - Ending a fight quickly before stamina or equipment becomes an issue
 - Creating Advantages through repositioning and ambush
@@ -115,8 +152,9 @@ Hit-and-run doctrine. Developed by resistance fighters — the [[Glossary/Talons
 - Breaking a precision fighter's axis — you refuse the structured duel they need
 
 **Compel when:**
+
 - Tight corridors eliminate your movement options
-- The fight extends past three exchanges (stamina collapse — Ghost practitioners burn hot)
+- The fight extends past three exchanges (stamina collapse — Parallax practitioners burn hot)
 - A patient defender simply waits for you to commit — evasion can't outlast stillness
 - Environmental chaos denies your escape routes — you can't vanish when the whole space is hostile
 - Multiple ranged opponents with overlapping fields of fire pin you down
@@ -148,26 +186,26 @@ Every form beats exactly two others and loses to exactly two others — a balanc
 
 | Form | Beats | Loses To |
 |---|---|---|
-| The Wall | Storm, Ghost | Line, Hammer |
-| The Line | Wall, Storm | Hammer, Ghost |
-| The Hammer | Wall, Line | Storm, Ghost |
-| The Storm | Hammer, Ghost | Wall, Line |
-| The Ghost | Hammer, Line | Wall, Storm |
+| Bulkhead | Cascade, Parallax | Meridian, Torque |
+| Meridian | Bulkhead, Cascade | Torque, Parallax |
+| Torque | Bulkhead, Meridian | Cascade, Parallax |
+| Cascade | Torque, Parallax | Bulkhead, Meridian |
+| Parallax | Torque, Meridian | Bulkhead, Cascade |
 
 **Why each matchup works:**
 
 | Winner | Loser | Reason |
 |---|---|---|
-| Line | Wall | Precision probes what patience leaves open |
-| Hammer | Wall | Overwhelming force batters through static defense |
-| Hammer | Line | Brute power breaks fencing discipline before it finds rhythm |
-| Ghost | Line | Attacks from outside the duel axis — can't fence what won't face you |
-| Storm | Hammer | Chaos disrupts the telegraphed rhythm power requires |
-| Ghost | Hammer | Evasion denies the power exchange — hits from angles that can't be countered |
-| Wall | Storm | Patience denies emotional fuel; chaos exhausts against stillness |
-| Line | Storm | Disciplined precision dismantles what emotion can't sustain |
-| Wall | Ghost | Defense outlasts evasion; patience waits for the commit |
-| Storm | Ghost | Environmental chaos denies escape routes — can't vanish when everything is hostile |
+| Meridian | Bulkhead | Precision probes what patience leaves open |
+| Torque | Bulkhead | Overwhelming force batters through static defense |
+| Torque | Meridian | Brute power breaks fencing discipline before it finds rhythm |
+| Parallax | Meridian | Attacks from outside the duel axis — can't fence what won't face you |
+| Cascade | Torque | Chaos disrupts the telegraphed rhythm power requires |
+| Parallax | Torque | Evasion denies the power exchange — hits from angles that can't be countered |
+| Bulkhead | Cascade | Patience denies emotional fuel; chaos exhausts against stillness |
+| Meridian | Cascade | Disciplined precision dismantles what emotion can't sustain |
+| Bulkhead | Parallax | Defense outlasts evasion; patience waits for the commit |
+| Cascade | Parallax | Environmental chaos denies escape routes — can't vanish when everything is hostile |
 
 > These are *doctrinal tendencies*, not guaranteed outcomes. The matchup creates mechanical pressure — a free invoke — not a predetermined result.
 
@@ -179,15 +217,15 @@ The GM should tag these as **situation aspects** when relevant. They are legitim
 
 | Condition | Benefits | Penalties |
 |---|---|---|
-| *Tight Corridors* | Wall, Hammer | Ghost, Storm |
-| *Open Ground / Vertical Space* | Line, Ghost | Wall (can't turtle effectively) |
-| *Low / Zero Gravity* | Ghost (briefly), Storm | Line (footwork), Hammer (telegraphed) |
-| *Multiple Opponents* | Storm, Wall | Line, Ghost |
-| *Ranged Fire Present* | Wall, Hammer | Line, Ghost |
-| *High Emotional Stakes* | Storm | Wall (patience becomes paralysis) |
-| *Extended Fight (3+ exchanges)* | Wall, Hammer | Ghost, Storm |
-| *Darkness / Sensory Disruption* | Storm | Line |
-| *Augmentation Advantage* | Hammer, Line | Storm (if outmatched in hardware) |
+| *Tight Corridors* | Bulkhead, Torque | Parallax, Cascade |
+| *Open Ground / Vertical Space* | Meridian, Parallax | Bulkhead (can't turtle effectively) |
+| *Low / Zero Gravity* | Parallax (briefly), Cascade | Meridian (footwork), Torque (telegraphed) |
+| *Multiple Opponents* | Cascade, Bulkhead | Meridian, Parallax |
+| *Ranged Fire Present* | Bulkhead, Torque | Meridian, Parallax |
+| *High Emotional Stakes* | Cascade | Bulkhead (patience becomes paralysis) |
+| *Extended Fight (3+ exchanges)* | Bulkhead, Torque | Parallax, Cascade |
+| *Darkness / Sensory Disruption* | Cascade | Meridian |
+| *Augmentation Advantage* | Torque, Meridian | Cascade (if outmatched in hardware) |
 
 ---
 
@@ -195,7 +233,7 @@ The GM should tag these as **situation aspects** when relevant. They are legitim
 
 Blade Forms are Aspects. They obey all normal Aspect rules. The matchup table and environment tags are tools for justifying invokes and compels — not a separate resolution mechanic.
 
-The Coalition/Apostate split is cultural flavor, not a hard restriction. A Dalianis-trained fencer can learn The Storm from an apostate mentor. A Talon of Freedom operative can study The Line from stolen training archives. The origin story matters for the character; the mechanics work the same.
+The Coalition/Apostate split is cultural flavor, not a hard restriction. A Dalianis-trained fencer can learn Cascade from an apostate mentor. A Talon of Freedom operative can study Meridian from stolen training archives. The origin story matters for the character; the mechanics work the same.
 
 Five forms keeps the system tight enough that every practitioner at the table has meaningful matchup awareness without requiring a reference card. Read, invoke, narrate. That's the whole loop.
 
