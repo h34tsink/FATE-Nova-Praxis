@@ -30,13 +30,13 @@ Institutional doctrine — taught in House military academies, tournament circui
 
 ## Form Summary
 
-| Form | Essence | Doctrine | Beats | Loses To |
-|---|---|---|---|---|
-| **Threshold** | Stillness | *Binds Entropy. Anchors Shift.* | Cascade, Parallax | Meridian, Resonance |
-| **Meridian** | Precision | *Threads Stillness. Collapses Entropy.* | Threshold, Cascade | Resonance, Parallax |
-| **Resonance** | Force | *Shatters Stillness. Blunts Precision.* | Threshold, Meridian | Cascade, Parallax |
-| **Cascade** | Entropy | *Dissolves Force. Engulfs Shift.* | Resonance, Parallax | Threshold, Meridian |
-| **Parallax** | Shift | *Evades Force. Displaces Precision.* | Resonance, Meridian | Threshold, Cascade |
+| Form          | Essence   | Doctrine                                | Beats               | Loses To            |
+| ------------- | --------- | --------------------------------------- | ------------------- | ------------------- |
+| **Threshold** | Stillness | *Binds Entropy. Anchors Shift.*         | Cascade, Parallax   | Meridian, Resonance |
+| **Meridian**  | Precision | *Threads Stillness. Collapses Entropy.* | Threshold, Cascade  | Resonance, Parallax |
+| **Resonance** | Force     | *Shatters Stillness. Blunts Precision.* | Threshold, Meridian | Cascade, Parallax   |
+| **Cascade**   | Entropy   | *Dissolves Force. Engulfs Shift.*       | Resonance, Parallax | Threshold, Meridian |
+| **Parallax**  | Shift     | *Evades Force. Displaces Precision.*    | Resonance, Meridian | Threshold, Cascade  |
 
 ### Stat Blocks
 
