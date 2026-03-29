@@ -1,274 +1,274 @@
 # Blade Forms
+
 *A Nova Praxis Supplement — Structured Melee Combat for the Synth Age*
 
 ---
 
-Blade Forms are codified combat philosophies — systematic approaches to melee violence developed across centuries of human conflict and refined in the decades since the [[Glossary/Exodus|Exodus]]. Some trace lineage to pre-Collapse martial traditions; others were born in the desperate close-quarters fighting of apostate survival. In an age of mono-edged weapons, augmented sleeves, and [[Glossary/Savant|Savant]] programs, a trained form practitioner turns philosophy into mechanical advantage.
+Blade Forms are codified combat philosophies developed across centuries of human conflict and refined since the [[Glossary/Exodus|Exodus]]. In an age of mono-edged weapons, augmented sleeves, and [[Glossary/Savant|Savant]] programs, a trained form practitioner turns philosophy into mechanical advantage.
 
 A character's Blade Form is a **High Concept-adjacent Aspect** taken at character creation or earned through a significant milestone. It reflects not just technique but *doctrine* — how you think about violence, defense, and the body you're wearing.
 
-### Naming Convention
+## Naming Convention
 
-Every form carries a two-part name: a **cultural name** rooted in its origin, and a formal **essence** — a single keyword that classifies its combat philosophy. The full designation is written as *[Name] of [Essence]*: Threshold of Stillness, Cascade of Entropy.
+Every form carries a **cultural name** and a formal **essence** keyword: *[Name] of [Essence]*. The essence keywords encode the matchup system through five mantras — each names the two essences that form defeats:
 
-The essence keywords encode the matchup system. Each form's **mantra** names the two essences it defeats:
+> *Stillness binds Entropy. Anchors Shift.*
+> *Precision threads Stillness. Collapses Entropy.*
+> *Force shatters Stillness. Blunts Precision.*
+> *Entropy dissolves Force. Engulfs Shift.*
+> *Shift evades Force. Displaces Precision.*
 
-> *Stillness outlasts Entropy and Shift.*
-> *Precision pierces Stillness and Entropy.*
-> *Force breaks Stillness and Precision.*
-> *Entropy overwhelms Force and Shift.*
-> *Shift evades Force and Precision.*
-
-To find what beats you, look for who names your keyword. A practitioner who knows the five mantras knows the entire matchup web. Coalition academies drill them as rote memorization. Apostates learn them the hard way.
+To find what beats a form, look for the mantras that name its essence. Coalition academies drill these as rote memorization. Apostates learn them the hard way.
 
 ---
 
 ## Coalition Forms
 
-Coalition forms are institutional — taught in House military academies, tournament circuits, and [[Glossary/Protectorate|Protectorate]] training programs. They assume access to quality equipment, augmented sleeves, and structured environments. Coalition practitioners tend to be specialists who've drilled thousands of hours in controlled conditions.
+Institutional doctrine — taught in House military academies, tournament circuits, and [[Glossary/Protectorate|Protectorate]] training programs. They assume quality equipment, augmented sleeves, and structured environments. In Coalition culture, naming your form is a statement of lineage — who trained you, which academy, which doctrine. Refusing to name your form in a formal duel is considered an insult.
 
-Each form carries a formal House designation and a history that its practitioners are expected to know. In Coalition culture, naming your form is a statement of lineage — who trained you, which academy, which doctrine. Refusing to name your form in a formal duel is considered either an insult or an admission that you learned it outside sanctioned channels.
+---
+
+## Form Summary
+
+| Form | Essence | Doctrine | Beats | Loses To |
+|---|---|---|---|---|
+| **Threshold** | Stillness | *Binds Entropy. Anchors Shift.* | Cascade, Parallax | Meridian, Resonance |
+| **Meridian** | Precision | *Threads Stillness. Collapses Entropy.* | Threshold, Cascade | Resonance, Parallax |
+| **Resonance** | Force | *Shatters Stillness. Blunts Precision.* | Threshold, Meridian | Cascade, Parallax |
+| **Cascade** | Entropy | *Dissolves Force. Engulfs Shift.* | Resonance, Parallax | Threshold, Meridian |
+| **Parallax** | Shift | *Evades Force. Displaces Precision.* | Resonance, Meridian | Threshold, Cascade |
+
+### Stat Blocks
+
+---
+
+> [!info] Threshold of Stillness
+> *"Stillness binds Entropy. Anchors Shift."*
+>
+> | | |
+> |---|---|
+> | **Essence** | Stillness |
+> | **Origin** | Coalition — [[Factions/Houses/House Tsarya\|House Tsarya]] |
+> | **Countered by** | [[#Meridian of Precision\|Meridian]] (Precision) · [[#Resonance of Force\|Resonance]] (Force) |
+> | **Counters** | [[#Cascade of Entropy\|Cascade]] (Entropy) · [[#Parallax of Shift\|Parallax]] (Shift) |
+>
+> **Environment**
+> - 🟢 **Favored:** Tight corridors · Multiple opponents · Ranged fire present · Extended fights
+> - 🔴 **Penalized:** Open ground / vertical space · High emotional stakes
+>
+> **Invoke when:** Holding position · Outlasting opponents · Confined spaces · Deflecting ranged fire
+> **Compel when:** Must advance · Time pressure · Survived the fight but failed the mission
+
+---
+
+> [!info] Meridian of Precision
+> *"Precision threads Stillness. Collapses Entropy."*
+>
+> | | |
+> |---|---|
+> | **Essence** | Precision |
+> | **Origin** | Coalition — [[Factions/Houses/House Dalianis\|House Dalianis]] |
+> | **Countered by** | [[#Resonance of Force\|Resonance]] (Force) · [[#Parallax of Shift\|Parallax]] (Shift) |
+> | **Counters** | [[#Threshold of Stillness\|Threshold]] (Stillness) · [[#Cascade of Entropy\|Cascade]] (Entropy) |
+>
+> **Environment**
+> - 🟢 **Favored:** Open ground / clear sightlines · Augmentation advantage · 1v1 engagement
+> - 🔴 **Penalized:** Multiple opponents · Ranged fire present · Low / zero gravity
+>
+> **Invoke when:** Single opponent on open ground · Disarming over injuring · Probing passive defense · Dismantling emotional chaos
+> **Compel when:** Multiple attackers · Zero-g disrupts footwork · Overwhelmed by brute force · Flanked outside the axis
+
+---
+
+> [!info] Resonance of Force
+> *"Force shatters Stillness. Blunts Precision."*
+>
+> | | |
+> |---|---|
+> | **Essence** | Force |
+> | **Origin** | Coalition — [[Factions/Houses/House Tsarya\|House Tsarya]] / [[Factions/Houses/House Kimura\|House Kimura]] |
+> | **Countered by** | [[#Cascade of Entropy\|Cascade]] (Entropy) · [[#Parallax of Shift\|Parallax]] (Shift) |
+> | **Counters** | [[#Threshold of Stillness\|Threshold]] (Stillness) · [[#Meridian of Precision\|Meridian]] (Precision) |
+>
+> **Environment**
+> - 🟢 **Favored:** Tight corridors · Heavy gravity · Augmentation advantage · Extended fights
+> - 🔴 **Penalized:** Low / zero gravity · Open ground against fast opponents
+>
+> **Invoke when:** Countering a melee strike · Leveraging augmentation · Battering through static defense · Overpowering precision
+> **Compel when:** Zero-g telegraphs swings · Chaotic opponents disrupt rhythm · Situation demands restraint
+
+---
+
+> [!warning] Cascade of Entropy
+> *"Entropy dissolves Force. Engulfs Shift."*
+>
+> | | |
+> |---|---|
+> | **Essence** | Entropy |
+> | **Origin** | Apostate — [[Locations/New Montreal\|New Montreal]] / [[Locations/Santa Maria\|Santa Maria]] |
+> | **Countered by** | [[#Threshold of Stillness\|Threshold]] (Stillness) · [[#Meridian of Precision\|Meridian]] (Precision) |
+> | **Counters** | [[#Resonance of Force\|Resonance]] (Force) · [[#Parallax of Shift\|Parallax]] (Shift) |
+>
+> **Environment**
+> - 🟢 **Favored:** Low / zero gravity · Multiple opponents · High emotional stakes · Sensory disruption
+> - 🔴 **Penalized:** Tight corridors · Extended fights · Augmentation disadvantage
+>
+> **Invoke when:** Using environment as weapon · High emotional stakes · Disrupting rhythm · Denying escape routes
+> **Compel when:** Patient defenders deny engagement · Precision reads your patterns · Restraint required · Adrenaline collapse in extended fights
+
+---
+
+> [!warning] Parallax of Shift
+> *"Shift evades Force. Displaces Precision."*
+>
+> | | |
+> |---|---|
+> | **Essence** | Shift |
+> | **Origin** | Apostate — [[Factions/Apostates/Talons of Freedom\|Talons of Freedom]] |
+> | **Countered by** | [[#Threshold of Stillness\|Threshold]] (Stillness) · [[#Cascade of Entropy\|Cascade]] (Entropy) |
+> | **Counters** | [[#Resonance of Force\|Resonance]] (Force) · [[#Meridian of Precision\|Meridian]] (Precision) |
+>
+> **Environment**
+> - 🟢 **Favored:** Open ground / vertical space · Low / zero gravity · Cluttered cover
+> - 🔴 **Penalized:** Tight corridors · Multiple opponents · Ranged fire present · Extended fights
+>
+> **Invoke when:** Repositioning and ambush · Attacking from uncommitted angles · Refusing the structured duel · Ending fights quickly
+> **Compel when:** Corridors eliminate movement · Patient defenders wait for the commit · Environmental chaos traps you · Stamina collapse
+
+---
 
 ### Threshold of Stillness
+
 *"I will be here when you are tired."*
 
-A threshold is the crossbar at the base of a doorway — the line that holds the boundary between inside and outside, safety and breach. During the [[Glossary/Exodus|Exodus]], when the technophage consumed Earth and humanity fled in whatever vessels could carry them, the corridors became killing fields — breached hulls, venting atmosphere, desperate boarding actions. The people who survived those corridors weren't the fastest or the strongest. They were the ones who became the threshold — the point nothing crossed.
+Named for the crossbar of a doorway — the boundary between safety and breach. During the [[Glossary/Exodus|Exodus]], the corridors of the evacuation fleet became killing fields. The survivors weren't the fastest or strongest — they became the threshold, the point nothing crossed. [[Factions/Houses/House Tsarya|House Tsarya]] formalized the doctrine within a decade, crediting Commander Yelena Maro, who held a breached corridor on the *Konstantine* for eleven hours with a mono-edged short sword and a hull panel. Tsarya after-action reports described her position as "the threshold." The name stuck.
 
-[[Factions/Houses/House Tsarya|House Tsarya]] formalized the doctrine within a decade of the Exodus, drawing on after-action reports from the evacuation fleet's security details. Commander Yelena Maro — a Tsarya shipboard security chief who held a breached corridor on the *Konstantine* for eleven hours with a mono-edged short sword and a hull panel — is credited as the form's first named practitioner. Tsarya after-action reports described her position as "the threshold" — the line the boarders could not cross. The name stuck. Tsarya military academies now teach Threshold as baseline competency for any operative expected to hold a position.
+The philosophy is architectural, not martial: become the boundary, hold the line, survive. Every motion tight to the body, every gap closed. A Threshold master is functionally untouchable for as long as they choose to be. The problem is choosing when to stop defending.
 
-The philosophy is architectural, not martial: become the boundary, hold the line, survive. Practitioners minimize their profile, conserve energy, and wait — every motion tight to the body, every gap closed. A Threshold master is functionally untouchable for as long as they choose to be. The problem is choosing when to stop defending.
-
-**Invoke when:**
-
-- Holding a position against superior numbers or sustained assault
-- Outlasting a physically superior or more heavily augmented opponent
-- Fighting in confined spaces (tight geometry suits tight defense)
-- Deflecting ranged fire at close quarters
-- Your opponent relies on aggression or evasion — you deny both the fuel and the opening
-
-**Compel when:**
-
-- The situation demands advance — rescuing someone, reaching an objective, escaping
-- Time pressure makes passive defense a loss condition
-- A precise opponent methodically probes what your patience leaves open
-- Overwhelming force batters through your guard faster than you can reset
-- You survived the fight but failed the mission
+| | |
+|---|---|
+| **Invoke** | Holding position against superior numbers; outlasting augmented opponents; confined spaces; deflecting ranged fire; denying aggression and evasion alike |
+| **Compel** | Must advance (rescue, objective, escape); time pressure; precise probing finds gaps; overwhelming force batters through; survived the fight but failed the mission |
+| **Beats** | **Cascade** — stillness binds chaos; entropy exhausts against what won't move |
+| | **Parallax** — defense anchors against evasion; patience waits for the commit |
+| **Loses to** | **Meridian** — precision threads through what patience leaves open |
+| | **Resonance** — amplified force shatters static defense |
+| **Favored** | Tight corridors, multiple opponents, ranged fire present, extended fights |
+| **Penalized** | Open ground / vertical space, high emotional stakes |
 
 ---
 
 ### Meridian of Precision
+
 *"The blade is an argument. I intend to win it."*
 
-A meridian is a line of longitude — a precise, singular path from pole to pole. The name was coined by Sera Achille, the first Grand Arbiter of the [[Factions/Houses/House Dalianis|Dalianis]] Formal Circuit, who described mono-edged fencing as "navigation, not combat — you find the single true line through your opponent's geometry, and you walk it." The metaphor stuck. Three centuries later, Dalianis tournament culture still calls a clean victory "finding the meridian."
+A meridian is a line of longitude — a precise, singular path from pole to pole. Named by Sera Achille, the first Grand Arbiter of the [[Factions/Houses/House Dalianis|Dalianis]] Formal Circuit, who described mono-edged fencing as "navigation, not combat — you find the single true line through your opponent's geometry, and you walk it." Three centuries later, Dalianis tournament culture still calls a clean victory "finding the meridian."
 
-The form predates the Exodus — its roots are in pre-Collapse competitive fencing, adapted for mono-edged blades that never dull and can sever limbs with a touch. Dalianis adopted it as cultural currency. In House space, fencing proficiency signals breeding, education, and political sharpness. The tournament circuits are half sport, half social negotiation. A duel well-fought opens doors that reputation alone cannot.
+The form predates the Exodus — pre-Collapse competitive fencing adapted for mono-edged blades that never dull. Dalianis adopted it as cultural currency: fencing proficiency signals breeding, education, and political sharpness. The tournament circuits are half sport, half social negotiation. Practitioners advance and retreat along a single axis — precise, economical, one-handed. Often perceived as arrogant. Often justified.
 
-Practitioners advance and retreat along a single axis — precise, economical, one-handed. Every defense becomes a measured counter. The blade moves in arcs measured in millimeters. Often perceived as arrogant. Often justified.
-
-**Invoke when:**
-
-- Formal or semi-formal one-on-one engagement on open ground
-- Using precise counter-strikes to disarm, disable, or embarrass
-- Your opponent relies on patience — your precision finds the gaps they never close
-- Your opponent relies on emotion — your discipline dismantles what chaos can't sustain
-
-**Compel when:**
-
-- Multiple attackers collapse your line of engagement
-- Zero-gravity or unstable footing disrupts your footwork
-- Ranged fire enters the fight (Meridian offers almost nothing against projectiles)
-- Overwhelming force breaks your fencing discipline before precision can matter
-- Attacks come from angles outside your axis — you can't duel what won't face you
+| | |
+|---|---|
+| **Invoke** | One-on-one engagement on open ground; precise counter-strikes to disarm or embarrass; precision finds what patience leaves open; discipline dismantles emotional chaos |
+| **Compel** | Multiple attackers collapse the line; zero-g disrupts footwork; ranged fire (Meridian offers nothing against projectiles); overwhelming force breaks discipline; attacks from outside your axis |
+| **Beats** | **Threshold** — precision threads through what patience leaves open |
+| | **Cascade** — disciplined precision collapses what emotion can't sustain |
+| **Loses to** | **Resonance** — overwhelming power blunts precision before it finds rhythm |
+| | **Parallax** — attacks displace from outside the duel axis |
+| **Favored** | Open ground / vertical space, augmentation advantage, darkness / sensory disruption (penalizes opponents) |
+| **Penalized** | Multiple opponents, ranged fire present, low / zero gravity |
 
 ---
 
 ### Resonance of Force
+
 *"I don't dodge your strike. I end it."*
 
-In physics, resonance is what happens when a system absorbs energy at its natural frequency and amplifies it — a small input, matched precisely, builds to a devastating output. The form is named for what an augmented body does to incoming force: absorbs the strike, matches its frequency, and sends it back amplified. Your opponent's power becomes yours.
+In physics, resonance is what happens when a system absorbs energy at its natural frequency and amplifies it. The form is named for what an augmented body does to incoming force: absorbs the strike, matches its frequency, sends it back amplified. Your opponent's power becomes yours.
 
-Resonance emerged in the first generation after [[Glossary/Augmentations|augmentation]] became widespread, when combat instructors realized that a fighter with [[Glossary/Augmentations|Fibro-Muscle Weave]] and a [[Glossary/Augmentations|Reinforced Skeleton]] didn't just hit harder — they could turn *defense itself* into a weapon. A standard parry, executed with three times baseline human strength, becomes a counter-strike. A block becomes a battering ram. The harder you hit a Resonance practitioner, the harder you get hit back.
+Resonance emerged when [[Glossary/Augmentations|augmentation]] became widespread — a fighter with [[Glossary/Augmentations|Fibro-Muscle Weave]] and a [[Glossary/Augmentations|Reinforced Skeleton]] could turn defense into a weapon. Co-developed by [[Factions/Houses/House Tsarya|Tsarya]] combat engineers and [[Factions/Houses/House Kimura|Kimura]] cybersleeve designers. The first curriculum was written by Dr. Kaspar Yun, a Kimura biomechanics researcher who modeled resonant force transfer through augmented joints. Tsarya shock troops turned his paper into a fighting style within a year. Unaugmented practitioners can learn it, but they burn out fast.
 
-The doctrine was co-developed by [[Factions/Houses/House Tsarya|Tsarya]] combat engineers and [[Factions/Houses/House Kimura|Kimura]] cybersleeve designers, who recognized that augmented bodies needed augmented technique. The first formal curriculum was written by Dr. Kaspar Yun, a Kimura biomechanics researcher who'd never held a blade in his life — he modeled resonant force transfer through augmented joints, demonstrating that an augmented skeleton could absorb kinetic energy and redirect it with minimal loss. Tsarya shock troops turned his paper into a fighting style within a year.
-
-Tsarya shock troops and Kimura enforcers favor Resonance because it rewards the hardware investment. Unaugmented practitioners can learn it, but they burn out fast — the form assumes a body that can absorb punishment baseline humans cannot.
-
-**Invoke when:**
-
-- Countering a melee strike (triggers on a successful defend — the counter is built in)
-- Confined corridors, heavy gravity, structured environments that limit evasion
-- Leveraging augmentation advantages (Fibro-Muscle, Massive Size, combat sleeves)
-- Battering through static defense — every exchange costs a patient fighter more than it costs you
-- Overpowering a precision fighter before their technique can find its rhythm
-
-**Compel when:**
-
-- Zero or low gravity (powerful swings telegraph without gravity to anchor you)
-- Open spaces against a fast opponent who refuses to trade blows
-- Your power is predictable — a chaotic opponent disrupts your rhythm before you can set it
-- An evasive fighter hits from angles you can't counter because they never commit
-- The situation requires restraint and Resonance's philosophy is *dominance*
+| | |
+|---|---|
+| **Invoke** | Countering a melee strike (triggers on successful defend); confined corridors and heavy gravity; leveraging augmentation (Fibro-Muscle, Massive Size, combat sleeves); battering through static defense; overpowering precision before it finds rhythm |
+| **Compel** | Zero / low gravity (swings telegraph); open spaces against a fast opponent; chaotic opponents disrupt rhythm; evasive fighters hit from uncommitted angles; situation requires restraint and Resonance is *dominance* |
+| **Beats** | **Threshold** — amplified force shatters static defense |
+| | **Meridian** — overwhelming power blunts precision before it finds rhythm |
+| **Loses to** | **Cascade** — entropy dissolves the rhythm resonance requires to build |
+| | **Parallax** — evasion denies the power exchange from angles that can't be countered |
+| **Favored** | Tight corridors, ranged fire present, extended fights, augmentation advantage |
+| **Penalized** | Low / zero gravity, open ground / vertical space |
 
 ---
 
 ## Apostate Forms
 
-Apostate forms are survival doctrine — passed through resistance cells, station gangs, and the fighting pits of [[Locations/New Montreal|New Montreal]]. They assume inferior equipment, no augmentation safety net, and environments that are already trying to kill you. Where Coalition forms are refined through simulation and drilling, apostate forms are refined through attrition. The practitioners who survive teach. The rest don't.
+Survival doctrine — passed through resistance cells, station gangs, and the fighting pits of [[Locations/New Montreal|New Montreal]]. They assume inferior equipment, no augmentation safety net, and environments that are already trying to kill you. Refined through attrition: the practitioners who survive teach. The rest don't. No academies, no certification. A practitioner's credential is that they're still alive.
 
-Apostate forms have no formal academies, no certification, no lineage tracking. A practitioner's "credential" is that they're still alive. The names are colloquial — coined by the communities that developed them, spread through repetition rather than publication. Coalition intelligence analysts assigned the formal essence classifications decades ago, borrowing the apostate street names into their own taxonomy. No apostate cares.
+The cultural origin is lore, not a mechanical restriction — any character can learn any form if the fiction supports it. Some Coalition operatives cross-train in apostate forms. Some apostates steal Coalition doctrine.
 
-Some Coalition operatives cross-train in apostate forms. Some apostates steal Coalition doctrine. The cultural origin is lore, not a mechanical restriction — any character can learn any form if the fiction supports it.
+---
 
 ### Cascade of Entropy
+
 *"Everything is a weapon. Including me."*
 
-Named for cascade failure — the engineering term for when one system's collapse triggers the next, and the next, until everything is debris. That's both the environment Cascade was born in and the environment it creates.
+Named for cascade failure — when one system's collapse triggers the next until everything is debris. That's both the environment Cascade was born in and the environment it creates. The form has no single origin point — it emerged independently in every apostate enclave that survived long enough: [[Locations/New Montreal|New Montreal]] pit fighters, [[Locations/Santa Maria|Santa Maria]] boarding teams, station gangs in corridors where the recyclers were already failing. The survivors compared notes. Patterns emerged.
 
-The form has no single origin point. It emerged independently in every apostate enclave that survived long enough to develop one — [[Locations/New Montreal|New Montreal]] pit fighters, [[Locations/Santa Maria|Santa Maria]] hull breach boarding teams, station gangs defending territory in corridors where the atmosphere recyclers were already failing. The common thread was desperation: people fighting with whatever they had, in spaces that were already falling apart, against opponents who were better equipped and often augmented. The survivors compared notes. Patterns emerged.
+The name is attributed to Mala Voss, a New Montreal pit fighter: "I don't start the cascade. I just make sure it lands on them first." Whether Voss was real or folk hero depends on who you ask. The form doesn't care. Cascade treats the entire environment as an extension of the fight. Wide, sweeping, unpredictable. Emotionally fueled — the form intensifies with desperation and rage.
 
-The name is attributed to Mala Voss, a New Montreal pit fighter who allegedly described her style as "I don't start the cascade. I just make sure it lands on them first." Whether Voss was a real person or a composite folk hero depends on who you ask. The form doesn't care.
-
-Cascade treats the entire environment as an extension of the fight — debris, unstable terrain, crowds, hull breaches, the opponent's own momentum. Wide, sweeping, unpredictable. Where Coalition forms assume a controlled arena, Cascade assumes the arena is on fire. Emotionally fueled — the form intensifies with desperation and rage.
-
-**Invoke when:**
-
-- Fighting multiple opponents simultaneously
-- Using the environment as a weapon (debris, venting atmosphere, unstable gravity)
-- High emotional stakes — cornered, protecting someone, enraged
-- Your opponent relies on rhythm or telegraphed power — chaos disrupts what predictability requires
-- Sensory-disrupted environments (darkness, smoke, electronic jamming)
-- Denying escape routes by making the whole space hostile
-
-**Compel when:**
-
-- A patient defender refuses to engage emotionally — your chaos exhausts against stillness
-- A disciplined precision fighter reads your patterns faster than you can generate new ones
-- Precision or restraint is required (hostages, allies in the crossfire)
-- The fight extends past three exchanges and adrenaline becomes exhaustion
+| | |
+|---|---|
+| **Invoke** | Multiple opponents; environment as weapon (debris, venting atmosphere, unstable gravity); high emotional stakes; disrupting rhythm and telegraphed power; sensory disruption (darkness, smoke, jamming); denying escape by making the whole space hostile |
+| **Compel** | Patient defenders refuse to engage emotionally; disciplined precision reads your patterns; restraint required (hostages, allies in crossfire); extended fights collapse adrenaline into exhaustion |
+| **Beats** | **Resonance** — entropy dissolves the rhythm resonance requires to build |
+| | **Parallax** — environmental chaos engulfs escape routes; can't vanish when everything is hostile |
+| **Loses to** | **Threshold** — stillness binds chaos; entropy exhausts against what won't move |
+| | **Meridian** — disciplined precision collapses what emotion can't sustain |
+| **Favored** | Low / zero gravity, multiple opponents, high emotional stakes, darkness / sensory disruption |
+| **Penalized** | Tight corridors, extended fights, augmentation disadvantage |
 
 ---
 
 ### Parallax of Shift
+
 *"You can't parry what you can't find."*
 
 A parallax is the apparent displacement of an object when viewed from different positions — the reason a star seems to move against the background when observed from opposite sides of an orbit. The form is named for what it does to the opponent's perception: you're never where they calculated you'd be.
 
-Parallax was developed by the [[Glossary/Talons of Freedom|Talons of Freedom]] during their early campaigns against Coalition security forces. The tactical problem was straightforward — unaugmented or lightly augmented fighters against [[Glossary/Cybersleeve|cybersleeve]] enforcers with superior armor, strength, and reaction time. Standing toe-to-toe was suicide. The Talons needed a doctrine built around never being where the counter-strike lands.
+Developed by the [[Glossary/Talons of Freedom|Talons of Freedom]] against Coalition enforcers. The tactical problem was straightforward — unaugmented fighters against [[Glossary/Cybersleeve|cybersleeve]] enforcers with superior everything. Standing toe-to-toe was suicide. Codified by Dren Akabo, a Talon cell leader and former [[Locations/Santa Maria|Santa Maria]] zero-g cargo handler whose boarding actions had triple the survival rate: "They train to fight someone standing in front of them. So don't." Wall-runs, zero-g tumbles, strike-and-vanish. Devastating in ambush. Unsustainable in a prolonged engagement.
 
-The form's codification is credited to Dren Akabo, a Talon cell leader and former [[Locations/Santa Maria|Santa Maria]] zero-g cargo handler whose boarding actions against Coalition patrol vessels had a survival rate roughly triple the Talon average. When pressed for his method, Akabo reportedly said: "They train to fight someone standing in front of them. So don't." His tactical notes, circulated through Talon cells and eventually into the broader apostate underground, became the closest thing Parallax has to a training manual.
-
-Parallax turns the fighter into a moving target — wall-runs, zero-g tumbles, strike-and-vanish. Opponents struggle to track a Parallax practitioner because the attacks come from angles they weren't defending. Devastating in ambush. Unsustainable in a prolonged engagement.
-
-**Invoke when:**
-
-- Open spaces, vertical terrain, low gravity, cluttered environments with cover
-- Ending a fight quickly before stamina or equipment becomes an issue
-- Creating Advantages through repositioning and ambush
-- Attacking from angles a power fighter can't counter — they need you to stand still, and you won't
-- Breaking a precision fighter's axis — you refuse the structured duel they need
-
-**Compel when:**
-
-- Tight corridors eliminate your movement options
-- The fight extends past three exchanges (stamina collapse — Parallax practitioners burn hot)
-- A patient defender simply waits for you to commit — evasion can't outlast stillness
-- Environmental chaos denies your escape routes — you can't vanish when the whole space is hostile
-- Multiple ranged opponents with overlapping fields of fire pin you down
+| | |
+|---|---|
+| **Invoke** | Open spaces, vertical terrain, low gravity, cluttered cover; ending fights quickly; repositioning and ambush advantages; attacking from angles power fighters can't counter; refusing the structured duel precision needs |
+| **Compel** | Tight corridors eliminate movement; extended fights collapse stamina; patient defenders wait for the commit; environmental chaos denies escape routes; overlapping fields of ranged fire pin you down |
+| **Beats** | **Resonance** — evasion denies the power exchange from angles that can't be countered |
+| | **Meridian** — attacks displace from outside the duel axis; can't fence what won't face you |
+| **Loses to** | **Threshold** — defense anchors against evasion; patience waits for the commit |
+| | **Cascade** — environmental chaos engulfs escape routes |
+| **Favored** | Open ground / vertical space, low / zero gravity |
+| **Penalized** | Tight corridors, multiple opponents, ranged fire present, extended fights |
 
 ---
 
 ## Reading a Form
 
-*Knowing what your opponent is doing is half the fight.*
-
-**Reading** an opponent's Blade Form is a **Create an Advantage** action using **Notice** (out of combat) or **Combat** (during a fight), against passive opposition equal to the opponent's **Combat** skill (or **Deceive** if they're actively concealing their style).
+**Reading** an opponent's Blade Form is a **Create an Advantage** action using **Notice** (out of combat) or **Combat** (during a fight), against passive opposition equal to the opponent's **Combat** skill (or **Deceive** if actively concealing their style).
 
 | Outcome | Result |
 |---|---|
-| **Fail** | Misread. GM may place *"Overconfident Read"* on you as a situation aspect. |
-| **Tie** | You sense training but can't name the form. You know they have one; it stays hidden. |
-| **Succeed** | Their Form aspect is revealed. You may invoke or compel it normally. |
+| **Fail** | Misread. GM may place *"Overconfident Read"* as a situation aspect. |
+| **Tie** | You sense training but can't name the form. It stays hidden. |
+| **Succeed** | Their Form aspect is revealed. Invoke or compel normally. |
 | **Succeed with Style** | Revealed + 2 free invokes on their Form aspect. |
 
-An unknown Form can still be compelled by the GM — the environment pressures you whether or not you've identified your opponent's style.
-
-A known Form can be invoked by anyone at the table — the player, the GM, or an ally who witnessed the Read.
-
----
-
-## Form Matchups
-
-Every form beats exactly two others and loses to exactly two others — a balanced cycle with no dominant or trap picks. When a Form faces its documented counter, the opposing player may invoke the counter's Form aspect **for free on the first exchange** after the Form is Read.
-
-### The Five Mantras
-
-These encode the entire matchup web. Each mantra names the essence of the form and the two essences it defeats:
-
-> *Stillness outlasts Entropy and Shift.*
-
-> *Precision pierces Stillness and Entropy.*
-
-> *Force breaks Stillness and Precision.*
-
-> *Entropy overwhelms Force and Shift.*
-
-> *Shift evades Force and Precision.*
-
-To find what beats a form, look for the mantras that name its essence. Cascade is Entropy — *"Stillness outlasts Entropy"* (Threshold wins) and *"Precision pierces Entropy"* (Meridian wins).
-
-### Matchup Table
-
-| Form | Essence | Beats | Loses To |
-|---|---|---|---|
-| Threshold | Stillness | Cascade, Parallax | Meridian, Resonance |
-| Meridian | Precision | Threshold, Cascade | Resonance, Parallax |
-| Resonance | Force | Threshold, Meridian | Cascade, Parallax |
-| Cascade | Entropy | Resonance, Parallax | Threshold, Meridian |
-| Parallax | Shift | Resonance, Meridian | Threshold, Cascade |
-
-### Why Each Matchup Works
-
-| Winner | Loser | Reason |
-|---|---|---|
-| Meridian | Threshold | Precision probes what patience leaves open |
-| Resonance | Threshold | Overwhelming force batters through static defense |
-| Resonance | Meridian | Amplified power breaks fencing discipline before it finds rhythm |
-| Parallax | Meridian | Attacks from outside the duel axis — can't fence what won't face you |
-| Cascade | Resonance | Chaos disrupts the rhythm resonance requires to build |
-| Parallax | Resonance | Evasion denies the power exchange — hits from angles that can't be countered |
-| Threshold | Cascade | Patience denies emotional fuel; chaos exhausts against stillness |
-| Meridian | Cascade | Disciplined precision dismantles what emotion can't sustain |
-| Threshold | Parallax | Defense outlasts evasion; patience waits for the commit |
-| Cascade | Parallax | Environmental chaos denies escape routes — can't vanish when everything is hostile |
-
-> These are *doctrinal tendencies*, not guaranteed outcomes. The matchup creates mechanical pressure — a free invoke — not a predetermined result.
-
----
-
-## Environment Tags
-
-The GM should tag these as **situation aspects** when relevant. They are legitimate invoke/compel triggers alongside the Form aspect itself.
-
-| Condition | Benefits | Penalties |
-|---|---|---|
-| *Tight Corridors* | Threshold, Resonance | Parallax, Cascade |
-| *Open Ground / Vertical Space* | Meridian, Parallax | Threshold (can't turtle effectively) |
-| *Low / Zero Gravity* | Parallax (briefly), Cascade | Meridian (footwork), Resonance (telegraphed) |
-| *Multiple Opponents* | Cascade, Threshold | Meridian, Parallax |
-| *Ranged Fire Present* | Threshold, Resonance | Meridian, Parallax |
-| *High Emotional Stakes* | Cascade | Threshold (patience becomes paralysis) |
-| *Extended Fight (3+ exchanges)* | Threshold, Resonance | Parallax, Cascade |
-| *Darkness / Sensory Disruption* | Cascade | Meridian |
-| *Augmentation Advantage* | Resonance, Meridian | Cascade (if outmatched in hardware) |
+An unknown Form can still be compelled by the GM. A known Form can be invoked by anyone at the table who witnessed the Read.
 
 ---
 
 ## Designer Notes
 
-Blade Forms are Aspects. They obey all normal Aspect rules. The matchup table, mantras, and environment tags are tools for justifying invokes and compels — not a separate resolution mechanic.
+Blade Forms are Aspects — they obey all normal Aspect rules. The mantras, matchups, and environment tags are tools for justifying invokes and compels, not a separate resolution mechanic. The Coalition/Apostate split is cultural flavor, not a hard restriction.
 
-The Coalition/Apostate split is cultural flavor, not a hard restriction. A Dalianis-trained fencer can learn Cascade from an apostate mentor. A Talon of Freedom operative can study Meridian from stolen training archives. The origin story matters for the character; the mechanics work the same.
-
-Five forms, five essences, five mantras. A practitioner who knows the mantras knows the entire system. Read the form, recall the mantra, invoke or compel. That's the whole loop.
+Five forms, five essences, five mantras. Read the form, recall the mantra, invoke or compel. That's the whole loop.
 
 > *"The forms are not techniques. They are arguments about the nature of violence — refined in academies or forged in desperation, but arguments all the same."*
