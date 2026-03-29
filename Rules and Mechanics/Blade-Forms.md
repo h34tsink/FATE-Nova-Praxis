@@ -7,6 +7,20 @@ Blade Forms are codified combat philosophies — systematic approaches to melee 
 
 A character's Blade Form is a **High Concept-adjacent Aspect** taken at character creation or earned through a significant milestone. It reflects not just technique but *doctrine* — how you think about violence, defense, and the body you're wearing.
 
+### Naming Convention
+
+Every form carries a two-part name: a **cultural name** rooted in its origin, and a formal **essence** — a single keyword that classifies its combat philosophy. The full designation is written as *[Name] of [Essence]*: Bulkhead of Stillness, Cascade of Entropy.
+
+The essence keywords encode the matchup system. Each form's **mantra** names the two essences it defeats:
+
+> *Stillness outlasts Entropy and Shift.*
+> *Precision pierces Stillness and Entropy.*
+> *Force breaks Stillness and Precision.*
+> *Entropy overwhelms Force and Shift.*
+> *Shift evades Force and Precision.*
+
+To find what beats you, look for who names your keyword. A practitioner who knows the five mantras knows the entire matchup web. Coalition academies drill them as rote memorization. Apostates learn them the hard way.
+
 ---
 
 ## Coalition Forms
@@ -15,7 +29,7 @@ Coalition forms are institutional — taught in House military academies, tourna
 
 Each form carries a formal House designation and a history that its practitioners are expected to know. In Coalition culture, naming your form is a statement of lineage — who trained you, which academy, which doctrine. Refusing to name your form in a formal duel is considered either an insult or an admission that you learned it outside sanctioned channels.
 
-### Bulkhead
+### Bulkhead of Stillness
 *"I will be here when you are tired."*
 
 Named for the sealed compartments that saved ships during the [[Glossary/Exodus|Exodus]]. When the technophage consumed Earth and humanity fled in whatever vessels could carry them, the corridors became killing fields — breached hulls, venting atmosphere, desperate boarding actions. The people who survived those corridors weren't the fastest or the strongest. They were the ones who sealed every opening and refused to move.
@@ -42,7 +56,7 @@ The philosophy is engineering, not martial: seal every opening, contain the brea
 
 ---
 
-### Meridian
+### Meridian of Precision
 *"The blade is an argument. I intend to win it."*
 
 A meridian is a line of longitude — a precise, singular path from pole to pole. The name was coined by Sera Achille, the first Grand Arbiter of the [[Factions/Houses/House Dalianis|Dalianis]] Formal Circuit, who described mono-edged fencing as "navigation, not combat — you find the single true line through your opponent's geometry, and you walk it." The metaphor stuck. Three centuries later, Dalianis tournament culture still calls a clean victory "finding the meridian."
@@ -68,7 +82,7 @@ Practitioners advance and retreat along a single axis — precise, economical, o
 
 ---
 
-### Torque
+### Torque of Force
 *"I don't dodge your strike. I end it."*
 
 Named for the physics it exploits — rotational force amplified through augmented muscle and reinforced bone. Torque emerged in the first generation after [[Glossary/Augmentations|augmentation]] became widespread, when combat instructors realized that a fighter with [[Glossary/Augmentations|Fibro-Muscle Weave]] and a [[Glossary/Augmentations|Reinforced Skeleton]] didn't just hit harder — they could turn *defense itself* into a weapon. A standard parry, executed with three times baseline human strength, becomes a counter-strike. A block becomes a battering ram.
@@ -99,11 +113,11 @@ Every block becomes a counter, every parry a riposte, every clash a chance to ov
 
 Apostate forms are survival doctrine — passed through resistance cells, station gangs, and the fighting pits of [[Locations/New Montreal|New Montreal]]. They assume inferior equipment, no augmentation safety net, and environments that are already trying to kill you. Where Coalition forms are refined through simulation and drilling, apostate forms are refined through attrition. The practitioners who survive teach. The rest don't.
 
-Apostate forms have no formal academies, no certification, no lineage tracking. A practitioner's "credential" is that they're still alive. The names are colloquial — coined by the communities that developed them, spread through repetition rather than publication. Coalition intelligence analysts assigned formal designations decades ago, but no apostate uses them.
+Apostate forms have no formal academies, no certification, no lineage tracking. A practitioner's "credential" is that they're still alive. The names are colloquial — coined by the communities that developed them, spread through repetition rather than publication. Coalition intelligence analysts assigned the formal essence classifications decades ago, borrowing the apostate street names into their own taxonomy. No apostate cares.
 
 Some Coalition operatives cross-train in apostate forms. Some apostates steal Coalition doctrine. The cultural origin is lore, not a mechanical restriction — any character can learn any form if the fiction supports it.
 
-### Cascade
+### Cascade of Entropy
 *"Everything is a weapon. Including me."*
 
 Named for cascade failure — the engineering term for when one system's collapse triggers the next, and the next, until everything is debris. That's both the environment Cascade was born in and the environment it creates.
@@ -132,16 +146,16 @@ Cascade treats the entire environment as an extension of the fight — debris, u
 
 ---
 
-### Parallax
+### Parallax of Shift
 *"You can't parry what you can't find."*
 
-A parallax is the apparent shift in an object's position when viewed from different angles — the reason a star seems to move against the background when observed from opposite sides of an orbit. The form is named for what it does to the opponent's perception: you're never where they think you are.
+A parallax is the apparent displacement of an object when viewed from different positions — the reason a star seems to move against the background when observed from opposite sides of an orbit. The form is named for what it does to the opponent's perception: you're never where they calculated you'd be.
 
 Parallax was developed by the [[Glossary/Talons of Freedom|Talons of Freedom]] during their early campaigns against Coalition security forces. The tactical problem was straightforward — unaugmented or lightly augmented fighters against [[Glossary/Cybersleeve|cybersleeve]] enforcers with superior armor, strength, and reaction time. Standing toe-to-toe was suicide. The Talons needed a doctrine built around never being where the counter-strike lands.
 
 The form's codification is credited to Dren Akabo, a Talon cell leader and former [[Locations/Santa Maria|Santa Maria]] zero-g cargo handler whose boarding actions against Coalition patrol vessels had a survival rate roughly triple the Talon average. When pressed for his method, Akabo reportedly said: "They train to fight someone standing in front of them. So don't." His tactical notes, circulated through Talon cells and eventually into the broader apostate underground, became the closest thing Parallax has to a training manual.
 
-The Ghost turns the fighter into a moving target — wall-runs, zero-g tumbles, strike-and-vanish. Opponents struggle to track a Parallax practitioner because the attacks come from angles they weren't defending. Devastating in ambush. Unsustainable in a prolonged engagement.
+Parallax turns the fighter into a moving target — wall-runs, zero-g tumbles, strike-and-vanish. Opponents struggle to track a Parallax practitioner because the attacks come from angles they weren't defending. Devastating in ambush. Unsustainable in a prolonged engagement.
 
 **Invoke when:**
 
@@ -184,15 +198,29 @@ A known Form can be invoked by anyone at the table — the player, the GM, or an
 
 Every form beats exactly two others and loses to exactly two others — a balanced cycle with no dominant or trap picks. When a Form faces its documented counter, the opposing player may invoke the counter's Form aspect **for free on the first exchange** after the Form is Read.
 
-| Form | Beats | Loses To |
-|---|---|---|
-| Bulkhead | Cascade, Parallax | Meridian, Torque |
-| Meridian | Bulkhead, Cascade | Torque, Parallax |
-| Torque | Bulkhead, Meridian | Cascade, Parallax |
-| Cascade | Torque, Parallax | Bulkhead, Meridian |
-| Parallax | Torque, Meridian | Bulkhead, Cascade |
+### The Five Mantras
 
-**Why each matchup works:**
+These encode the entire matchup web. Each mantra names the essence of the form and the two essences it defeats:
+
+> *Stillness outlasts Entropy and Shift.*
+> *Precision pierces Stillness and Entropy.*
+> *Force breaks Stillness and Precision.*
+> *Entropy overwhelms Force and Shift.*
+> *Shift evades Force and Precision.*
+
+To find what beats a form, look for the mantras that name its essence. Cascade is Entropy — *"Stillness outlasts Entropy"* (Bulkhead wins) and *"Precision pierces Entropy"* (Meridian wins).
+
+### Matchup Table
+
+| Form | Essence | Beats | Loses To |
+|---|---|---|---|
+| Bulkhead | Stillness | Cascade, Parallax | Meridian, Torque |
+| Meridian | Precision | Bulkhead, Cascade | Torque, Parallax |
+| Torque | Force | Bulkhead, Meridian | Cascade, Parallax |
+| Cascade | Entropy | Torque, Parallax | Bulkhead, Meridian |
+| Parallax | Shift | Torque, Meridian | Bulkhead, Cascade |
+
+### Why Each Matchup Works
 
 | Winner | Loser | Reason |
 |---|---|---|
@@ -231,10 +259,10 @@ The GM should tag these as **situation aspects** when relevant. They are legitim
 
 ## Designer Notes
 
-Blade Forms are Aspects. They obey all normal Aspect rules. The matchup table and environment tags are tools for justifying invokes and compels — not a separate resolution mechanic.
+Blade Forms are Aspects. They obey all normal Aspect rules. The matchup table, mantras, and environment tags are tools for justifying invokes and compels — not a separate resolution mechanic.
 
 The Coalition/Apostate split is cultural flavor, not a hard restriction. A Dalianis-trained fencer can learn Cascade from an apostate mentor. A Talon of Freedom operative can study Meridian from stolen training archives. The origin story matters for the character; the mechanics work the same.
 
-Five forms keeps the system tight enough that every practitioner at the table has meaningful matchup awareness without requiring a reference card. Read, invoke, narrate. That's the whole loop.
+Five forms, five essences, five mantras. A practitioner who knows the mantras knows the entire system. Read the form, recall the mantra, invoke or compel. That's the whole loop.
 
 > *"The forms are not techniques. They are arguments about the nature of violence — refined in academies or forged in desperation, but arguments all the same."*
