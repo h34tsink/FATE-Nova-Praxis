@@ -22,26 +22,39 @@ To find what beats a form, look for the mantras that name its essence. Coalition
 
 ---
 
-## Coalition Forms
-
-Institutional doctrine — taught in House military academies, tournament circuits, and [[Glossary/Protectorate|Protectorate]] training programs. They assume quality equipment, augmented sleeves, and structured environments. In Coalition culture, naming your form is a statement of lineage — who trained you, which academy, which doctrine. Refusing to name your form in a formal duel is considered an insult.
-
----
-
 ## Form Summary
 
 | Form          | Essence   | Doctrine                                | Beats               | Loses To            |
-| ------------- | --------- | --------------------------------------- | ------------------- | ------------------- |
+| ------------- | --------- | --------------------------------------- | -------------------- | -------------------- |
 | **Threshold** | Stillness | *Binds Entropy. Anchors Shift.*         | Cascade, Parallax   | Meridian, Resonance |
 | **Meridian**  | Precision | *Threads Stillness. Collapses Entropy.* | Threshold, Cascade  | Resonance, Parallax |
 | **Resonance** | Force     | *Shatters Stillness. Blunts Precision.* | Threshold, Meridian | Cascade, Parallax   |
 | **Cascade**   | Entropy   | *Dissolves Force. Engulfs Shift.*       | Resonance, Parallax | Threshold, Meridian |
 | **Parallax**  | Shift     | *Evades Force. Displaces Precision.*    | Resonance, Meridian | Threshold, Cascade  |
 
-### Stat Blocks
 ---
 
-### Threshold of Stillness
+## Coalition Forms
+
+Institutional doctrine — taught in House military academies, tournament circuits, and [[Glossary/Protectorate|Protectorate]] training programs. They assume quality equipment, augmented sleeves, and structured environments. In Coalition culture, naming your form is a statement of lineage — who trained you, which academy, which doctrine. Refusing to name your form in a formal duel is considered an insult.
+
+---
+## Threshold of Stillness
+>#### *"Stillness binds Entropy. Anchors [[Shift]]."*
+
+| **Essence**      | Stillness                                                                                     |
+| ---------------- | --------------------------------------------------------------------------------------------- |
+| **Origin**       | Coalition — [[Factions/Houses/House Tsarya\|House Tsarya]]                                    |
+| **Countered by** | [[#Meridian of Precision\|Meridian]] (Precision) · [[#Resonance of Force\|Resonance]] (Force) |
+| **Counters**     | [[#Cascade of Entropy\|Cascade]] (Entropy) · [[#Parallax of Shift\|Parallax]] (Shift)         |
+
+**Environment**
+- **Favored:** Tight corridors · Multiple opponents · Ranged fire present · Extended fights
+- **Penalized:** Open ground / vertical space · High emotional stakes
+
+**[[Aspect]] Use**
+- **[[Invoke]]:** Holding position · Outlasting opponents · Confined spaces · Deflecting ranged fire
+- **[[Compel]]:** Must advance · Time pressure · Survived the [[Fight|fight]] but failed the mission
 
 *"I will be here when you are tired."*
 
@@ -49,20 +62,24 @@ Named for the crossbar of a doorway — the boundary between safety and breach. 
 
 The philosophy is architectural, not martial: become the boundary, hold the line, survive. Every motion tight to the body, every gap closed. A Threshold master is functionally untouchable for as long as they choose to be. The problem is choosing when to stop defending.
 
-| | |
-|---|---|
-| **Invoke** | Holding position against superior numbers; outlasting augmented opponents; confined spaces; deflecting ranged fire; denying aggression and evasion alike |
-| **Compel** | Must advance (rescue, objective, escape); time pressure; precise probing finds gaps; overwhelming force batters through; survived the fight but failed the mission |
-| **Beats** | **Cascade** — stillness binds chaos; entropy exhausts against what won't move |
-| | **Parallax** — defense anchors against evasion; patience waits for the commit |
-| **Loses to** | **Meridian** — precision threads through what patience leaves open |
-| | **Resonance** — amplified force shatters static defense |
-| **Favored** | Tight corridors, multiple opponents, ranged fire present, extended fights |
-| **Penalized** | Open ground / vertical space, high emotional stakes |
-
 ---
 
-### Meridian of Precision
+## Meridian of Precision
+>#### *"Precision threads Stillness. Collapses Entropy."*
+
+| **Essence**      | Precision                                                                                            |
+| ---------------- | ---------------------------------------------------------------------------------------------------- |
+| **Origin**       | Coalition — [[Factions/Houses/House Dalianis\|House Dalianis]]                                       |
+| **Countered by** | [[#Resonance of Force\|Resonance]] (Force) · [[#Parallax of Shift\|Parallax]] (Shift)               |
+| **Counters**     | [[#Threshold of Stillness\|Threshold]] (Stillness) · [[#Cascade of Entropy\|Cascade]] (Entropy)     |
+
+**Environment**
+- **Favored:** Open ground / clear sightlines · Augmentation advantage · 1v1 engagement
+- **Penalized:** Multiple opponents · Ranged fire present · Low / zero gravity
+
+**[[Aspect]] Use**
+- **[[Invoke]]:** Single opponent on open ground · Disarming over injuring · Probing passive defense · Dismantling emotional chaos
+- **[[Compel]]:** Multiple attackers · Zero-g disrupts footwork · Overwhelmed by brute force · Flanked outside the axis
 
 *"The blade is an argument. I intend to win it."*
 
@@ -70,37 +87,30 @@ A meridian is a line of longitude — a precise, singular path from pole to pole
 
 The form predates the Exodus — pre-Collapse competitive fencing adapted for mono-edged blades that never dull. Dalianis adopted it as cultural currency: fencing proficiency signals breeding, education, and political sharpness. The tournament circuits are half sport, half social negotiation. Practitioners advance and retreat along a single axis — precise, economical, one-handed. Often perceived as arrogant. Often justified.
 
-| | |
-|---|---|
-| **Invoke** | One-on-one engagement on open ground; precise counter-strikes to disarm or embarrass; precision finds what patience leaves open; discipline dismantles emotional chaos |
-| **Compel** | Multiple attackers collapse the line; zero-g disrupts footwork; ranged fire (Meridian offers nothing against projectiles); overwhelming force breaks discipline; attacks from outside your axis |
-| **Beats** | **Threshold** — precision threads through what patience leaves open |
-| | **Cascade** — disciplined precision collapses what emotion can't sustain |
-| **Loses to** | **Resonance** — overwhelming power blunts precision before it finds rhythm |
-| | **Parallax** — attacks displace from outside the duel axis |
-| **Favored** | Open ground / vertical space, augmentation advantage, darkness / sensory disruption (penalizes opponents) |
-| **Penalized** | Multiple opponents, ranged fire present, low / zero gravity |
-
 ---
 
-### Resonance of Force
+## Resonance of Force
+>#### *"Force shatters Stillness. Blunts Precision."*
+
+| **Essence**      | Force                                                                                                                          |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| **Origin**       | Coalition — [[Factions/Houses/House Tsarya\|House Tsarya]] / [[Factions/Houses/House Kimura\|House Kimura]]                    |
+| **Countered by** | [[#Cascade of Entropy\|Cascade]] (Entropy) · [[#Parallax of Shift\|Parallax]] (Shift)                                         |
+| **Counters**     | [[#Threshold of Stillness\|Threshold]] (Stillness) · [[#Meridian of Precision\|Meridian]] (Precision)                         |
+
+**Environment**
+- **Favored:** Tight corridors · Heavy gravity · Augmentation advantage · Extended fights
+- **Penalized:** Low / zero gravity · Open ground against fast opponents
+
+**[[Aspect]] Use**
+- **[[Invoke]]:** Countering a melee strike · Leveraging augmentation · Battering through static defense · Overpowering precision
+- **[[Compel]]:** Zero-g telegraphs swings · Chaotic opponents disrupt rhythm · Situation demands restraint
 
 *"I don't dodge your strike. I end it."*
 
 In physics, resonance is what happens when a system absorbs energy at its natural frequency and amplifies it. The form is named for what an augmented body does to incoming force: absorbs the strike, matches its frequency, sends it back amplified. Your opponent's power becomes yours.
 
 Resonance emerged when [[Glossary/Augmentations|augmentation]] became widespread — a fighter with [[Glossary/Augmentations|Fibro-Muscle Weave]] and a [[Glossary/Augmentations|Reinforced Skeleton]] could turn defense into a weapon. Co-developed by [[Factions/Houses/House Tsarya|Tsarya]] combat engineers and [[Factions/Houses/House Kimura|Kimura]] cybersleeve designers. The first curriculum was written by Dr. Kaspar Yun, a Kimura biomechanics researcher who modeled resonant force transfer through augmented joints. Tsarya shock troops turned his paper into a fighting style within a year. Unaugmented practitioners can learn it, but they burn out fast.
-
-| | |
-|---|---|
-| **Invoke** | Countering a melee strike (triggers on successful defend); confined corridors and heavy gravity; leveraging augmentation (Fibro-Muscle, Massive Size, combat sleeves); battering through static defense; overpowering precision before it finds rhythm |
-| **Compel** | Zero / low gravity (swings telegraph); open spaces against a fast opponent; chaotic opponents disrupt rhythm; evasive fighters hit from uncommitted angles; situation requires restraint and Resonance is *dominance* |
-| **Beats** | **Threshold** — amplified force shatters static defense |
-| | **Meridian** — overwhelming power blunts precision before it finds rhythm |
-| **Loses to** | **Cascade** — entropy dissolves the rhythm resonance requires to build |
-| | **Parallax** — evasion denies the power exchange from angles that can't be countered |
-| **Favored** | Tight corridors, ranged fire present, extended fights, augmentation advantage |
-| **Penalized** | Low / zero gravity, open ground / vertical space |
 
 ---
 
@@ -112,7 +122,22 @@ The cultural origin is lore, not a mechanical restriction — any character can 
 
 ---
 
-### Cascade of Entropy
+## Cascade of Entropy
+>#### *"Entropy dissolves Force. Engulfs Shift."*
+
+| **Essence**      | Entropy                                                                                              |
+| ---------------- | ---------------------------------------------------------------------------------------------------- |
+| **Origin**       | Apostate — [[Locations/New Montreal\|New Montreal]] / [[Locations/Santa Maria\|Santa Maria]]         |
+| **Countered by** | [[#Threshold of Stillness\|Threshold]] (Stillness) · [[#Meridian of Precision\|Meridian]] (Precision) |
+| **Counters**     | [[#Resonance of Force\|Resonance]] (Force) · [[#Parallax of Shift\|Parallax]] (Shift)               |
+
+**Environment**
+- **Favored:** Low / zero gravity · Multiple opponents · High emotional stakes · Sensory disruption
+- **Penalized:** Tight corridors · Extended fights · Augmentation disadvantage
+
+**[[Aspect]] Use**
+- **[[Invoke]]:** Using environment as weapon · High emotional stakes · Disrupting rhythm · Denying escape routes
+- **[[Compel]]:** Patient defenders deny engagement · Precision reads your patterns · Restraint required · Adrenaline collapse in extended fights
 
 *"Everything is a weapon. Including me."*
 
@@ -120,37 +145,30 @@ Named for cascade failure — when one system's collapse triggers the next until
 
 The name is attributed to Mala Voss, a New Montreal pit fighter: "I don't start the cascade. I just make sure it lands on them first." Whether Voss was real or folk hero depends on who you ask. The form doesn't care. Cascade treats the entire environment as an extension of the fight. Wide, sweeping, unpredictable. Emotionally fueled — the form intensifies with desperation and rage.
 
-| | |
-|---|---|
-| **Invoke** | Multiple opponents; environment as weapon (debris, venting atmosphere, unstable gravity); high emotional stakes; disrupting rhythm and telegraphed power; sensory disruption (darkness, smoke, jamming); denying escape by making the whole space hostile |
-| **Compel** | Patient defenders refuse to engage emotionally; disciplined precision reads your patterns; restraint required (hostages, allies in crossfire); extended fights collapse adrenaline into exhaustion |
-| **Beats** | **Resonance** — entropy dissolves the rhythm resonance requires to build |
-| | **Parallax** — environmental chaos engulfs escape routes; can't vanish when everything is hostile |
-| **Loses to** | **Threshold** — stillness binds chaos; entropy exhausts against what won't move |
-| | **Meridian** — disciplined precision collapses what emotion can't sustain |
-| **Favored** | Low / zero gravity, multiple opponents, high emotional stakes, darkness / sensory disruption |
-| **Penalized** | Tight corridors, extended fights, augmentation disadvantage |
-
 ---
 
-### Parallax of Shift
+## Parallax of Shift
+>#### *"Shift evades Force. Displaces Precision."*
+
+| **Essence**      | Shift                                                                                              |
+| ---------------- | -------------------------------------------------------------------------------------------------- |
+| **Origin**       | Apostate — [[Glossary/Talons of Freedom\|Talons of Freedom]]                                       |
+| **Countered by** | [[#Threshold of Stillness\|Threshold]] (Stillness) · [[#Cascade of Entropy\|Cascade]] (Entropy)   |
+| **Counters**     | [[#Resonance of Force\|Resonance]] (Force) · [[#Meridian of Precision\|Meridian]] (Precision)     |
+
+**Environment**
+- **Favored:** Open ground / vertical space · Low / zero gravity · Cluttered cover
+- **Penalized:** Tight corridors · Multiple opponents · Ranged fire present · Extended fights
+
+**[[Aspect]] Use**
+- **[[Invoke]]:** Repositioning and ambush · Attacking from uncommitted angles · Refusing the structured duel · Ending fights quickly
+- **[[Compel]]:** Corridors eliminate movement · Patient defenders wait for the commit · Environmental chaos traps you · Stamina collapse
 
 *"You can't parry what you can't find."*
 
 A parallax is the apparent displacement of an object when viewed from different positions — the reason a star seems to move against the background when observed from opposite sides of an orbit. The form is named for what it does to the opponent's perception: you're never where they calculated you'd be.
 
 Developed by the [[Glossary/Talons of Freedom|Talons of Freedom]] against Coalition enforcers. The tactical problem was straightforward — unaugmented fighters against [[Glossary/Cybersleeve|cybersleeve]] enforcers with superior everything. Standing toe-to-toe was suicide. Codified by Dren Akabo, a Talon cell leader and former [[Locations/Santa Maria|Santa Maria]] zero-g cargo handler whose boarding actions had triple the survival rate: "They train to fight someone standing in front of them. So don't." Wall-runs, zero-g tumbles, strike-and-vanish. Devastating in ambush. Unsustainable in a prolonged engagement.
-
-| | |
-|---|---|
-| **Invoke** | Open spaces, vertical terrain, low gravity, cluttered cover; ending fights quickly; repositioning and ambush advantages; attacking from angles power fighters can't counter; refusing the structured duel precision needs |
-| **Compel** | Tight corridors eliminate movement; extended fights collapse stamina; patient defenders wait for the commit; environmental chaos denies escape routes; overlapping fields of ranged fire pin you down |
-| **Beats** | **Resonance** — evasion denies the power exchange from angles that can't be countered |
-| | **Meridian** — attacks displace from outside the duel axis; can't fence what won't face you |
-| **Loses to** | **Threshold** — defense anchors against evasion; patience waits for the commit |
-| | **Cascade** — environmental chaos engulfs escape routes |
-| **Favored** | Open ground / vertical space, low / zero gravity |
-| **Penalized** | Tight corridors, multiple opponents, ranged fire present, extended fights |
 
 ---
 

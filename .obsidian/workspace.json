@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mechanics/Armor.md",
+                "file": "Rules and Mechanics/Blade-Forms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Armor"
+              "title": "Backlinks for Blade-Forms"
             }
           },
           {
@@ -203,13 +203,11 @@
               "title": "3D Dice"
             }
           }
-        ],
-        "currentTab": 7
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 443.5,
-    "collapsed": true
+    "width": 337.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -240,19 +238,20 @@
   },
   "active": "8cc94c71b16ef3f5",
   "lastOpenFiles": [
+    "Rules and Mechanics/Blade-Forms.md.tmp.62120.1774815548083",
+    "Rules and Mechanics/Blade-Forms.md.tmp.62120.1774815530718",
+    "Rules and Mechanics/Blade-Forms.md.tmp.62120.1774815510329",
+    "Rules and Mechanics/Blade-Forms.md.tmp.62120.1774815489252",
     "Sessions/Session 0/Session 0 - Pregen Characters.md",
     "Rules and Mechanics/Blade-Forms.md",
+    "Rules and Mechanics/Blade-Forms.md.tmp.51848.1774814224697",
+    "Rules and Mechanics/Blade-Forms.md.tmp.51848.1774814211104",
+    "Rules and Mechanics/Blade-Forms.md.tmp.51848.1774814187074",
+    "Rules and Mechanics/Blade-Forms.md.tmp.51848.1774814174716",
+    "Rules and Mechanics/Blade-Forms.md.tmp.51848.1774814009723",
     "Characters/Players/Azaria Dawson/Azaria Dawson - FATE Character.md",
     "Rules and Mechanics/Blade-Forms.md.tmp.51848.1774806270338",
     "Rules and Mechanics/Blade-Forms.md.tmp.51848.1774806265396",
-    "Rules and Mechanics/Blade-Forms.md.tmp.51848.1774806260480",
-    "Rules and Mechanics/Blade-Forms.md.tmp.51848.1774806249830",
-    "Rules and Mechanics/Blade-Forms.md.tmp.51848.1774806241987",
-    "Rules and Mechanics/Blade-Forms.md.tmp.51848.1774806235785",
-    "Rules and Mechanics/Blade-Forms.md.tmp.51848.1774806229215",
-    "Rules and Mechanics/Blade-Forms.md.tmp.51848.1774806206712",
-    "Rules and Mechanics/Blade-Forms.md.tmp.51848.1774806187400",
-    "Rules and Mechanics/Blade-Forms.md.tmp.51848.1774804407657",
     "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md",
     "Characters/Players/Kallius/Kallius - FATE Character.md",
     "Characters/Players/PC Overview.md",
@@ -276,7 +275,6 @@
     "docs/superpowers/plans/2026-03-15-aspect-manager.md",
     "docs/superpowers/specs/2026-03-15-aspect-manager-design.md",
     "docs/superpowers/plans/2026-03-15-share-with-players.md",
-    "Sessions/Session 9/00 - Ops Index.md",
     "nova-praxis-character-creator/static/portraits/Kallius.png",
     "nova-praxis-character-creator/static/portraits/Dustin.png",
     "nova-praxis-character-creator/static/portraits/Azaria-Dawson.png",
