@@ -1,152 +1,117 @@
 # Blade Forms
-*A Nova Praxis Supplement — Structured Combat for Synth-Age Duelists*
+*A Nova Praxis Supplement — Structured Melee Combat for the Synth Age*
 
 ---
 
-Blade Forms are a relic of the old wars — codified combat philosophies developed when Force-sensitive duelists fought often enough that patterns emerged, were studied, and were systematized. In the current age they are rare knowledge, passed through lineages of masters and recovered from pre-Collapse archives.
+Blade Forms are codified combat philosophies — systematic approaches to melee violence developed across centuries of human conflict and refined in the decades since the [[Glossary/Exodus|Exodus]]. Some trace lineage to pre-Collapse martial traditions; others were born in the desperate close-quarters fighting of apostate survival. In an age of mono-edged weapons, augmented sleeves, and [[Glossary/Savant|Savant]] programs, a trained form practitioner turns philosophy into mechanical advantage.
 
-A character's Blade Form is a **High Concept-adjacent Aspect** taken at character creation or earned through a significant milestone. It reflects not just technique but *philosophy* — how you think about violence, defense, and the Force.
-
----
-
-## The Seven Forms
-
-### Form I — *The Open Hand* (Shii-Cho)
-*"Every weapon is the same weapon. Every fight is the same fight."*
-
-The oldest form. Broad, sweeping, unpredictable. Developed before lightsaber combat was fully distinct from sword-fighting. Masters of Form I treat the blade as an extension of the whole body — wide arcs, improvised angles, no wasted elegance.
-
-**Invoke when:**
-- Fighting multiple opponents simultaneously
-- Using the environment as a weapon (debris, unstable terrain, crowds)
-- Pressing forward to disarm rather than injure
-- Your opponent expects precision and gets chaos
-
-**Compel when:**
-- Facing a single skilled duelist (your chaos is readable)
-- Precision or restraint is required (hostages, allies nearby)
-- In confined spaces where sweeping strikes are dangerous
-- Your opponent has Read your form and is exploiting its openness
+A character's Blade Form is a **High Concept-adjacent Aspect** taken at character creation or earned through a significant milestone. It reflects not just technique but *doctrine* — how you think about violence, defense, and the body you're wearing.
 
 ---
 
-### Form II — *The Fencer's Art* (Makashi)
-*"The blade is an argument. I intend to win it."*
+## Coalition Forms
 
-The duelist's form. Precise, economical, one-handed. Makashi was developed specifically to counter Form I — it answers chaos with elegance. Practitioners advance and retreat in a single line, like fencing, turning every defense into a measured counter. Often perceived as arrogant. Often correct to be.
+Coalition forms are institutional — taught in House military academies, tournament circuits, and Protectorate training programs. They assume access to quality equipment, augmented sleeves, and structured environments. Coalition practitioners tend to be specialists who've drilled thousands of hours in controlled conditions.
 
-**Invoke when:**
-- In a formal 1v1 duel on open ground
-- Using precise counter-strikes to disarm or embarrass rather than destroy
-- Your opponent uses Form I (sweeps meet a needle)
-- Your opponent uses Form III (patience meets precision — you find the gaps they never close)
-
-**Compel when:**
-- Blaster fire enters the fight (Makashi offers almost nothing against ranged)
-- Multiple attackers flank you (the line collapses)
-- Zero-gravity or unstable footing disrupts your footwork
-- Your elegance becomes arrogance — you underestimate a brute
-
----
-
-### Form III — *The Unbroken Wall* (Soresu)
+### The Wall
 *"I will be here when you are tired."*
 
-The defensive apex. Soresu practitioners minimize their profile, conserve energy, and wait. Every motion is close to the body, every opening is closed. A master of Soresu is functionally invincible for as long as they choose to be. The problem is choosing when to stop defending.
+The defensive standard. [[Factions/Houses/House Tsarya|Tsarya]] military doctrine treats The Wall as baseline competency for any operative expected to hold a position. Practitioners minimize their profile, conserve energy, and wait — every motion tight to the body, every opening sealed. A Wall master behind a mono-edged short sword is functionally untouchable for as long as they choose to be. The problem is choosing when to stop defending.
 
 **Invoke when:**
-- Deflecting blaster fire from multiple sources
-- Outlasting a physically superior opponent
-- Fighting in confined corridors (tight geometry suits tight defense)
-- Your opponent uses Form IV (you wait out the acrobatics)
+- Holding a position against superior numbers
+- Outlasting a physically superior or more heavily augmented opponent
+- Fighting in confined spaces (tight geometry suits tight defense)
+- Deflecting ranged fire at close quarters
 
 **Compel when:**
-- The situation requires you to *advance* — objectives, protecting others, escaping
+- The situation demands advance — rescuing someone, reaching an objective, escaping
 - Time pressure makes passive defense a loss condition
-- Facing Form II (precision finds what patience leaves open)
+- Your opponent reads your patience and exploits what it leaves open
 - You survived the fight but failed the mission
 
 ---
 
-### Form IV — *The Hawk-Bat's Dive* (Ataru)
-*"You can't parry what you can't predict."*
+### The Line
+*"The blade is an argument. I intend to win it."*
 
-Acrobatic, Force-fueled, relentless. Ataru turns the duelist into a projectile — somersaults, wall-runs, aerial strikes, constant motion. Opponents struggle to track an Ataru practitioner because the attacks come from impossible angles. Brutally effective in short bursts. Physically catastrophic over time.
+The duelist's art. Rooted in the tournament circuits of [[Factions/Houses/House Dalianis|House Dalianis]], where mono-edged fencing is both sport and social currency. Practitioners advance and retreat along a single axis — precise, economical, one-handed. Every defense becomes a measured counter. Often perceived as arrogant. Often justified.
 
 **Invoke when:**
-- Open outdoor spaces, high ceilings, low gravity, vertical terrain
-- Ending a fight quickly before stamina becomes an issue
-- Your opponent uses Form VI (aggression overwhelms the generalist)
-- Creating an Advantage using acrobatic positioning (this is always on)
+- Formal or semi-formal one-on-one engagement on open ground
+- Using precise counter-strikes to disarm, disable, or embarrass
+- Your opponent relies on patience — your precision finds the gaps they never close
+- Exploiting predictable attack patterns with surgical counters
+
+**Compel when:**
+- Multiple attackers collapse your line of engagement
+- Zero-gravity or unstable footing disrupts your footwork
+- Ranged fire enters the fight (The Line offers almost nothing against projectiles)
+- Your elegance becomes arrogance — you underestimate a brawler
+
+---
+
+### The Hammer
+*"I don't dodge your strike. I end it."*
+
+The powerhouse doctrine. Developed for augmented combatants — [[Glossary/Augmentations|Fibro-Muscle Weave]], [[Glossary/Augmentations|Reinforced Skeleton]], combat-optimized [[Glossary/Cybersleeve|cybersleeves]] — who can turn defense into devastation. Every block becomes a counter, every parry a riposte, every clash a chance to overpower. Tsarya shock troops and [[Factions/Houses/House Kimura|Kimura]] enforcers favor this form because it rewards the hardware investment. Unaugmented practitioners can learn The Hammer, but they burn out fast.
+
+**Invoke when:**
+- Countering a melee strike (triggers on a successful defend — the counter is built in)
+- Confined corridors, heavy gravity, structured environments that limit evasion
+- Leveraging augmentation advantages (Fibro-Muscle, Massive Size, combat sleeves)
+- Mixed ranged and melee — using a blade to close distance aggressively
+
+**Compel when:**
+- Zero or low gravity (powerful swings telegraph without gravity to anchor you)
+- Open spaces against a fast opponent who refuses to trade blows
+- Your power is predictable — a chaotic or evasive opponent reads the rhythm
+- The situation requires restraint and The Hammer's philosophy is *dominance*
+
+---
+
+## Apostate Forms
+
+Apostate forms are survival doctrine — passed through resistance cells, station gangs, and the fighting pits of [[Locations/New Montreal|New Montreal]]. They assume inferior equipment, no augmentation safety net, and environments that are already trying to kill you. Where Coalition forms are refined through simulation and drilling, apostate forms are refined through attrition. The practitioners who survive teach. The rest don't.
+
+Some Coalition operatives cross-train in apostate forms. Some apostates steal Coalition doctrine. The cultural origin is lore, not a mechanical restriction — any character can learn any form if the fiction supports it.
+
+### The Storm
+*"Everything is a weapon. Including me."*
+
+The oldest and most desperate form. The Storm treats the entire environment as an extension of the fight — debris, unstable terrain, crowds, hull breaches, the opponent's own momentum. Wide, sweeping, unpredictable. Where Coalition forms assume a controlled arena, The Storm assumes the arena is on fire. Practitioners fight with whatever they have, from mono-edged machetes to hull plating torn off a wall. Emotionally fueled — the form intensifies with desperation and rage.
+
+**Invoke when:**
+- Fighting multiple opponents simultaneously
+- Using the environment as a weapon (debris, venting atmosphere, unstable gravity)
+- High emotional stakes — cornered, protecting someone, enraged
+- Your opponent expects precision and gets chaos
+- Sensory-disrupted environments (darkness, smoke, electronic jamming)
+
+**Compel when:**
+- A calm, disciplined opponent refuses to engage emotionally
+- Precision or restraint is required (hostages, allies in the crossfire)
+- Confined spaces where sweeping strikes endanger you as much as the enemy
+- The fight extends past three exchanges and adrenaline becomes exhaustion
+
+---
+
+### The Ghost
+*"You can't parry what you can't find."*
+
+Hit-and-run doctrine. Developed by resistance fighters — the [[Glossary/Talons of Freedom|Talons of Freedom]], [[Locations/Santa Maria|Santa Maria]] boarding crews, station rats who learned that standing toe-to-toe with an augmented enforcer is suicide. The Ghost turns the fighter into a moving target — wall-runs, zero-g tumbles, strike-and-vanish. Opponents struggle to track a Ghost practitioner because the attacks come from angles they weren't defending. Devastating in ambush. Unsustainable in a prolonged engagement.
+
+**Invoke when:**
+- Open spaces, vertical terrain, low gravity, cluttered environments with cover
+- Ending a fight quickly before stamina or equipment becomes an issue
+- Creating Advantages through repositioning and ambush
+- Fighting a stronger or more heavily augmented opponent who can't catch you
 
 **Compel when:**
 - Tight corridors eliminate your movement options
-- The fight extends past three exchanges (stamina track: −1 to attacks after the third exchange)
-- Multiple ranged opponents pin you down — you can't somersault through a crossfire
-- Your opponent uses Form III (they just... wait for you to land)
-- Facing Form V (your openings in the air are readable, and punished)
-
----
-
-### Form V — *Strength Answered with Strength* (Djem So)
-*"I don't dodge your strike. I end it."*
-
-The powerhouse. Djem So takes the defensive instincts of Form III and weaponizes them — every block becomes a counter, every parry a riposte, every clash a chance to knock an opponent off-balance. Wide, powerful, physically demanding. The Skywalker form. The form that wins most fights.
-
-**Invoke when:**
-- Tight corridors, heavy gravity, structured environments
-- Countering a blade-strike (this triggers automatically on a successful defend)
-- Facing Form II (brute force breaks fencing precision)
-- Facing Form IV (you read the landing and punish the gap)
-- Mixed ranged and melee — Shien variant deflects blasters back
-
-**Compel when:**
-- Zero-gravity (powerful swings telegraph; opponents can invoke *"Telegraphed Power"*)
-- Very large open spaces with fast opponents who refuse to trade blows
-- Facing Form VII (your power is predictable; chaos is not)
-- The situation requires restraint — Djem So's philosophy is *dominance*, which can be a problem
-
----
-
-### Form VI — *The Middle Path* (Niman)
-*"I have no weaknesses. I also have no edges."*
-
-The diplomat's compromise. Niman synthesizes elements of all previous forms into a style without sharp peaks or valleys. What it lacks in specialization it makes up for in adaptability — and critically, it integrates Force use into every action, making it the form of choice for practitioners who think of the blade and the Force as one continuous tool.
-
-**Invoke when:**
-- Force abilities are available and relevant (Niman lets you blend them freely)
-- Variable threats — mixed enemy types, unpredictable situations
-- Team combat where flexibility matters more than dominance
-- Moderate environments where no form has a clear edge
-
-**Compel when:**
-- Force is suppressed (Ysalamiri, certain Synth environments, some tech) — Niman loses almost everything
-- Facing any specialist in their ideal environment (the generalist loses to the expert)
-- When a decisive edge is needed and Niman simply doesn't provide one
-
----
-
-### Form VII — *The Edge of the Abyss* (Juyo) / *The Dark Current* (Vaapad)
-*"I don't fight with my blade. I fight with everything I am."*
-
-The forbidden apex. Juyo is raw, chaotic, emotionally fueled — it channels fury and aggression into unpredictable, overwhelming offense. It is also a vector for the dark side. Vaapad, its refinement, channels not just the user's darkness but *absorbs* the opponent's — turning their aggression into fuel. Both forms are dangerous. Only Vaapad is arguably safe, and only barely.
-
-**Invoke when:**
-- High emotional stakes — protecting someone, cornered, enraged
-- Sensory-disrupted environments (darkness, jamming, chaos of battle)
-- Your opponent is using Dun Möch (psychological taunts feed you)
-- Your opponent uses Form V (your chaos breaks their telegraph-and-counter rhythm)
-- Already injured or under pressure (the form intensifies with desperation)
-
-**Compel when (Juyo):**
-- A calm, patient opponent refuses to engage emotionally
-- The situation demands restraint (hostages, precision objectives)
-- Dark side temptation is present — when bloodied, roll Will or be compelled toward darkness
-- You win the fight and lose the person you were protecting
-
-**Compel when (Vaapad only):**
-- Your opponent is *not* emotionally engaged — Vaapad needs fuel to burn
-- You absorb so much of your opponent's darkness that you risk crossing the line yourself
+- The fight extends past three exchanges (stamina collapse — Ghost practitioners burn hot)
+- Multiple ranged opponents with overlapping fields of fire pin you down
+- A patient defender simply waits for you to commit
 
 ---
 
@@ -154,62 +119,62 @@ The forbidden apex. Juyo is raw, chaotic, emotionally fueled — it channels fur
 
 *Knowing what your opponent is doing is half the fight.*
 
-**Reading** an opponent's Blade Form is a **Create an Advantage** action. It uses **Notice** out of combat or **Combat** during a fight, against passive opposition equal to the opponent's **Combat** (or **Deceive** if they're actively concealing their style).
+**Reading** an opponent's Blade Form is a **Create an Advantage** action using **Notice** (out of combat) or **Combat** (during a fight), against passive opposition equal to the opponent's **Combat** skill (or **Deceive** if they're actively concealing their style).
 
 | Outcome | Result |
 |---|---|
-| **Fail** | You misread them. GM may place *"Overconfident Read"* on you as a situation aspect. |
-| **Tie** | You sense *something* but can't name it. You know they have a Form; it remains hidden. |
-| **Succeed** | Their Form aspect is *known*. You may now invoke or compel it normally. |
-| **Succeed with Style** | Known + 2 free invokes on their Form aspect immediately. |
+| **Fail** | Misread. GM may place *"Overconfident Read"* on you as a situation aspect. |
+| **Tie** | You sense training but can't name the form. You know they have one; it stays hidden. |
+| **Succeed** | Their Form aspect is revealed. You may invoke or compel it normally. |
+| **Succeed with Style** | Revealed + 2 free invokes on their Form aspect. |
 
-**An unknown Form aspect can still be compelled by the GM.** The environment presses on you whether or not you've identified your opponent's style.
+An unknown Form can still be compelled by the GM — the environment pressures you whether or not you've identified your opponent's style.
 
-**A known Form can be invoked by anyone at the table** — the player, the GM, or an ally who witnessed the Read.
+A known Form can be invoked by anyone at the table — the player, the GM, or an ally who witnessed the Read.
 
 ---
 
 ## Form Matchups
 
-The forms have documented counters — historical relationships that practitioners know and train against. When a Form faces its documented counter, the opposing player may invoke the *counter's* Form aspect for free on the first exchange after the form is Read.
+Each form has a natural counter — a historical relationship that trained practitioners recognize and exploit. When a Form faces its documented counter, the opposing player may invoke the counter's Form aspect **for free on the first exchange** after the Form is Read.
 
-| Form | Hard Counter | Why |
+| Form | Countered By | Why |
 |---|---|---|
-| Form I — Open Hand | Form II — Fencer's Art | Precision answers chaos |
-| Form II — Fencer's Art | Form V — Strength Answers Strength | Brute force breaks fencing precision |
-| Form III — Unbroken Wall | Form II — Fencer's Art | Quick precise strikes drain patience without expending stamina |
-| Form IV — Hawk-Bat's Dive | Form III — Unbroken Wall | Defense outlasts acrobatics |
-| Form IV — Hawk-Bat's Dive | Form V — Strength Answers Strength | Aerial gaps are punished by power |
-| Form V — Strength Answers Strength | Form VII — Edge of the Abyss | Unpredictability breaks telegraphed power |
-| Form VI — Middle Path | Any specialist in ideal conditions | The generalist loses to the expert |
-| Form VII — Edge of the Abyss | Form III — Unbroken Wall (partial) | Patience denies the emotional fuel |
+| The Wall | The Line | Precision finds what patience leaves open |
+| The Line | The Hammer | Brute force breaks fencing discipline |
+| The Hammer | The Storm | Chaos disrupts telegraphed power |
+| The Storm | The Wall | Patience denies emotional fuel; chaos exhausts against stillness |
+| The Ghost | The Wall | Defense outlasts evasion; patience waits for the commit |
+| The Ghost | The Hammer | Aerial gaps and strike windows are punished by power |
 
-> **Note:** These counters represent *historical doctrine*, not guaranteed outcomes. A master of a countered form can still win — but the counter creates legitimate mechanical pressure. The matchup gives the counter's user a free invoke; it doesn't end the fight.
+> The cycle runs **Wall < Line < Hammer < Storm < Wall**, with The Ghost countered by both defensive patience and overwhelming power. These are *doctrinal tendencies*, not guaranteed outcomes. The matchup creates mechanical pressure — a free invoke — not a predetermined result.
 
 ---
 
 ## Environment Tags
 
-Each Form has environmental conditions that the GM should tag as **situation aspects** when relevant. These are legitimate invoke/compel triggers in addition to the Form aspect itself.
+The GM should tag these as **situation aspects** when relevant. They are legitimate invoke/compel triggers alongside the Form aspect itself.
 
 | Condition | Benefits | Penalties |
 |---|---|---|
-| *Tight Corridors* | III, V | IV, I |
-| *Open Ground / High Ceilings* | II, IV | III (can't turtle effectively) |
-| *Low / Zero Gravity* | IV (briefly), I | II (footwork), V (telegraphed) |
-| *Multiple Opponents* | I, III | II, IV |
-| *Blaster Fire Present* | III, V (Shien) | II, IV |
-| *Force Suppressed* | — | VI (critical), VII (partial) |
-| *High Emotional Stakes* | VII | III (patience becomes paralysis) |
-| *Extended Fight (3+ exchanges)* | III, V | IV, VII |
-| *Darkness / Sensory Disruption* | VII | II |
+| *Tight Corridors* | Wall, Hammer | Ghost, Storm |
+| *Open Ground / Vertical Space* | Line, Ghost | Wall (can't turtle effectively) |
+| *Low / Zero Gravity* | Ghost (briefly), Storm | Line (footwork), Hammer (telegraphed) |
+| *Multiple Opponents* | Storm, Wall | Line, Ghost |
+| *Ranged Fire Present* | Wall, Hammer | Line, Ghost |
+| *High Emotional Stakes* | Storm | Wall (patience becomes paralysis) |
+| *Extended Fight (3+ exchanges)* | Wall, Hammer | Ghost, Storm |
+| *Darkness / Sensory Disruption* | Storm | Line |
+| *Augmentation Advantage* | Hammer, Line | Storm (if outmatched in hardware) |
 
 ---
 
 ## Designer Notes
 
-These rules are designed to make **blade duels feel meaningful without becoming a subsystem.** The Forms are Aspects — they obey all normal Aspect rules. The matchup table and environment tags are *tools for the GM and players to justify invokes*, not a separate resolution mechanic.
+Blade Forms are Aspects. They obey all normal Aspect rules. The matchup table and environment tags are tools for justifying invokes and compels — not a separate resolution mechanic.
 
-The goal is that two players with blade forms should feel like they're playing chess while everyone else at the table is playing checkers — but it should never slow the scene down. Read, invoke, narrate. That's it.
+The Coalition/Apostate split is cultural flavor, not a hard restriction. A Dalianis-trained fencer can learn The Storm from an apostate mentor. A Talon of Freedom operative can study The Line from stolen training archives. The origin story matters for the character; the mechanics work the same.
 
-> *"The forms are not techniques. They are arguments about the nature of violence. When two masters meet, what you're watching is a philosophical debate carried out in steel and light."*
+Five forms keeps the system tight enough that every practitioner at the table has meaningful matchup awareness without requiring a reference card. Read, invoke, narrate. That's the whole loop.
+
+> *"The forms are not techniques. They are arguments about the nature of violence — refined in academies or forged in desperation, but arguments all the same."*

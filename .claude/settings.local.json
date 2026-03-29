@@ -121,7 +121,10 @@
       "Bash(PYTHONIOENCODING=utf-8 notebooklm ask \"Summarize this document in 2 sentences\" --json)",
       "Bash(PYTHONIOENCODING=utf-8 notebooklm generate slide-deck --wait --timeout 900 --json)",
       "Bash(PYTHONIOENCODING=utf-8 PYTHONUTF8=1 notebooklm auth check)",
-      "Bash(PYTHONIOENCODING=utf-8 PYTHONUTF8=1 notebooklm create \"SWADE to FATE Migration - Nova Praxis\")"
+      "Bash(PYTHONIOENCODING=utf-8 PYTHONUTF8=1 notebooklm create \"SWADE to FATE Migration - Nova Praxis\")",
+      "Read(//d/ObsidianVaults/Nova Praxis/_Assets/Extracts/**)",
+      "Read(//d/ObsidianVaults/Nova Praxis/Characters/**)",
+      "Read(//d/ObsidianVaults/**)"
     ]
   }
 }
