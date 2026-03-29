@@ -58,12 +58,12 @@ Grace found empowerment as a [[Glossary/SIM|SIM]], discarding the body that caus
 
 ## Skills
 
-| Rank | Skills |
-| --- | --- |
-| +5 Superb | [[Rules and Mechanics/Skills#SINC\|SINC]] |
-| +4 Great | [[Rules and Mechanics/Skills#Engineering, Software (S.Eng)\|Engineering Software]], [[Rules and Mechanics/Skills#Engineering, Hardware (H.Eng)\|Engineering Hardware]] |
-| +3 Good | [[Rules and Mechanics/Skills#Research\|Research]] (+1 Agent), [[Rules and Mechanics/Skills#Stealth\|Stealth]] |
-| +2 Fair | [[Rules and Mechanics/Skills#Education\|Education]] (+1 Agent), [[Rules and Mechanics/Skills#Insight\|Insight]], [[Rules and Mechanics/Skills#Mnemonics\|Mnemonics]] |
+| Rank       | Skills                                                                                                                                                                                                                                                                                                                                |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| +5 Superb  | [[Rules and Mechanics/Skills#SINC\|SINC]]                                                                                                                                                                                                                                                                                             |
+| +4 Great   | [[Rules and Mechanics/Skills#Engineering, Software (S.Eng)\|Engineering Software]], [[Rules and Mechanics/Skills#Engineering, Hardware (H.Eng)\|Engineering Hardware]]                                                                                                                                                                |
+| +3 Good    | [[Rules and Mechanics/Skills#Research\|Research]] (+1 Agent), [[Rules and Mechanics/Skills#Stealth\|Stealth]]                                                                                                                                                                                                                         |
+| +2 Fair    | [[Rules and Mechanics/Skills#Education\|Education]] (+1 Agent), [[Rules and Mechanics/Skills#Insight\|Insight]], [[Rules and Mechanics/Skills#Mnemonics\|Mnemonics]]                                                                                                                                                                  |
 | +1 Average | [[Rules and Mechanics/Skills#Guile\|Guile]], [[Rules and Mechanics/Skills#Diplomacy\|Diplomacy]], [[Rules and Mechanics/Skills#Intimidation\|Intimidation]], [[Rules and Mechanics/Skills#Pilot\|Pilot]], [[Rules and Mechanics/Skills#Resolve\|Resolve]], [[Rules and Mechanics/Skills#Networking, House (H.Net)\|House Networking]] |
 
 > Specialist column shape: 1/2/2/3/6. SINC demoted +4→+3 at chargen, then swapped back to +4 (Major Milestone 2); Research dropped to +3. Mnemonics promoted from +1→+2 at chargen. SINC/Hardware Eng swapped at Minor Milestone 3: SINC now +5, Hardware Eng now +4.
