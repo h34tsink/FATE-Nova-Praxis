@@ -34,13 +34,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Characters/Players/PC Overview.md",
+                "file": "Characters/Players/Kallius/Kallius - FATE Character.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "PC Overview"
+              "title": "Kallius - FATE Character"
             }
           }
         ]
@@ -261,6 +261,7 @@
   },
   "active": "12ca9bdbc5b839a5",
   "lastOpenFiles": [
+    "Characters/Players/PC Overview.md",
     "Campaign Overview/Nova Praxis - GM Dashboard.html.tmp.53068.1774731515493",
     "Campaign Overview/Nova Praxis - GM Dashboard.html.tmp.53068.1774731497493",
     "Campaign Overview/Nova Praxis - GM Dashboard.html.tmp.53068.1774731485386",
@@ -271,10 +272,8 @@
     "Campaign Overview/Nova Praxis - GM Dashboard.html.tmp.53068.1774730985052",
     "Campaign Overview/Nova Praxis - GM Dashboard.html.tmp.53068.1774730539393",
     "Campaign Overview/Nova Praxis - GM Dashboard.html.tmp.53068.1774730297861",
-    "Campaign Overview/Nova Praxis - GM Dashboard.html.tmp.53068.1774729638738",
     "Sessions/Session 0/Session 0 - Pregen Characters.md",
     "Sessions/Session 0/Session 0 - Teaching Scenario.md",
-    "Characters/Players/PC Overview.md",
     "Characters/Players/Aeddarius Crucial/Aeddarius Crucial - FATE Character.md",
     "Campaign Overview/SWADE to FATE - Table Reference.md",
     "Campaign Overview/SWADE to FATE Migration Guide.md",
