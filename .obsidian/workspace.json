@@ -23,6 +23,27 @@
             }
           }
         ]
+      },
+      {
+        "id": "65f06824d2e3894b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6330179318661a0d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Rules and Mechanics/Blade-Forms.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Blade-Forms"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sessions/Session 0/Session 0 - Teaching Scenario.md",
+                "file": "Rules and Mechanics/Blade-Forms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +137,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Session 0 - Teaching Scenario"
+              "title": "Backlinks for Blade-Forms"
             }
           },
           {
@@ -237,19 +258,21 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "8cc94c71b16ef3f5",
+  "active": "6330179318661a0d",
   "lastOpenFiles": [
-    "Sessions/Session 0/Session 0 - Pregen Characters.md.tmp.62120.1774823204910",
-    "Sessions/Session 0/Session 0 - Pregen Characters.md.tmp.62120.1774823189876",
-    "Sessions/Session 0/Session 0 - Pregen Characters.md.tmp.62120.1774823185379",
-    "Sessions/Session 0/Session 0 - Pregen Characters.md.tmp.62120.1774823174197",
-    "Sessions/Session 0/Session 0 - Pregen Characters.md.tmp.62120.1774823167230",
-    "Sessions/Session 0/Session 0 - Pregen Characters.md.tmp.62120.1774823154352",
-    "Sessions/Session 0/Session 0 - Pregen Characters.md.tmp.62120.1774823144370",
-    "Sessions/Session 0/Session 0 - Pregen Characters.md.tmp.62120.1774823121203",
-    "Sessions/Session 0/Session 0 - Pregen Characters.md.tmp.62120.1774823106695",
-    "Sessions/Session 0/Session 0 - Pregen Characters.md.tmp.62120.1774823091074",
-    "Sessions/Session 0/Session 0 - Pregen Characters.md.tmp.62120.1774823082085",
+    "Nova_Praxis_[Augmented_PDF]_[Fate]/Augmented PDF functionality Demo.url",
+    "Nova_Praxis_[Augmented_PDF]_[Fate]/Errata Reporting and Change Log.url",
+    "Nova_Praxis_[Augmented_PDF]_[Fate]/Thumbs.db",
+    "Nova_Praxis_[Augmented_PDF]_[Fate]",
+    "Characters/Players/Dustin_Grift_Halloway.pdf",
+    "Characters/Players/Dustin_Grift_Halloway.pdf.digest",
+    "Characters/Players/Dustin_Grift_Halloway.pdf.download",
+    "Characters/Players/Grace_Pryzbylski.pdf",
+    "Characters/Players/Grace_Pryzbylski.pdf.digest",
+    "Characters/Players/Grace_Pryzbylski.pdf.download",
+    "Characters/Players/Kallius.pdf",
+    "Sessions/Session 0/Session 0 - Pregen Characters.md",
+    "Sessions/Session 0/Session 0 - Teaching Scenario.md",
     "Sessions/Session 0/Pregen Portraits/Rhys Okafor.png",
     "Sessions/Session 0/Pregen Portraits/Maro Costigan.png",
     "Sessions/Session 0/Pregen Portraits/Nyx.png",
@@ -261,7 +284,6 @@
     "Sessions/Session 0/Pregen Portraits/Orin Hale.png",
     "Sessions/Session 0/Pregen Portraits/Echo.png",
     "Sessions/Session 0/Pregen Portrait Prompts.md",
-    "Sessions/Session 0/Session 0 - Pregen Characters.md",
     "Rules and Mechanics/Blade-Forms.md",
     "Rules and Mechanics/Character Aesthetic Options.md",
     "Rules and Mechanics/Augmentations.md",
@@ -269,7 +291,6 @@
     "Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character.md",
     "Characters/Players/Kallius/Kallius - FATE Character.md",
     "Characters/Players/PC Overview.md",
-    "Sessions/Session 0/Session 0 - Teaching Scenario.md",
     "Characters/Players/Aeddarius Crucial/Aeddarius Crucial - FATE Character.md",
     "Campaign Overview/SWADE to FATE - Table Reference.md",
     "Campaign Overview/SWADE to FATE Migration Guide.md",
