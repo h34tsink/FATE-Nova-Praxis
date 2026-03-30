@@ -15,22 +15,30 @@
       "propertyKeys": [],
       "navRainbow": {
         "mode": "none",
+        "balanceHueLuminance": true,
+        "separateThemeColors": false,
         "shortcuts": {
           "enabled": false,
           "firstColor": "#ef4444",
           "lastColor": "#8b5cf6",
+          "darkFirstColor": "#ef4444",
+          "darkLastColor": "#8b5cf6",
           "transitionStyle": "rgb"
         },
         "recent": {
           "enabled": false,
           "firstColor": "#ef4444",
           "lastColor": "#8b5cf6",
+          "darkFirstColor": "#ef4444",
+          "darkLastColor": "#8b5cf6",
           "transitionStyle": "rgb"
         },
         "folders": {
           "enabled": true,
           "firstColor": "#ef4444",
           "lastColor": "#8b5cf6",
+          "darkFirstColor": "#fb7185",
+          "darkLastColor": "#c084fc",
           "transitionStyle": "hue",
           "scope": "root"
         },
@@ -38,6 +46,8 @@
           "enabled": false,
           "firstColor": "#ef4444",
           "lastColor": "#8b5cf6",
+          "darkFirstColor": "#fb7185",
+          "darkLastColor": "#c084fc",
           "transitionStyle": "hue",
           "scope": "root"
         },
@@ -45,6 +55,8 @@
           "enabled": false,
           "firstColor": "#ef4444",
           "lastColor": "#8b5cf6",
+          "darkFirstColor": "#fb7185",
+          "darkLastColor": "#c084fc",
           "transitionStyle": "hue",
           "scope": "root"
         }
