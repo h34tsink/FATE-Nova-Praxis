@@ -326,7 +326,68 @@ Format: two or three clinical Q&A exchanges per drop. A question answered out of
 > *Q: "What do you believe makes you human?"*
 > *A: "The fact that I can answer that question without checking."*
 
-These should feel wrong in ways the players can't quite articulate yet. Drop them one or two at a time across sessions — never all at once, never explained.
+These should feel wrong in ways the players can't quite articulate yet.
+
+### Fragment Drop Schedule
+
+Each drop is 3 fragments from different subjects. Never give a player their own interview until the Grace reveal (Drop 3). After that, individual discoveries in Phase 2.
+
+**Drop 1 — Session 10**
+*Delivery: Corrupted data recovered from a Kimura storage node during a routine job. Looks like junk at first.*
+
+| # | Subject | Fragment |
+|---|---------|----------|
+| 1 | BANK — Callum Voss (09-F) | "If your memories were altered without your knowledge, how would you know?" / "I wouldn't. That's the point, isn't it?" |
+| 2 | FACE — Sarah Donnelly (14-C) | "How do you respond to environments where social hierarchy is unstable?" / "I find the person everyone's watching and I stand next to them." |
+| 3 | SHIELD — Adrian Cruz (07-B) | "Under what circumstances would you accept cognitive augmentation?" / "None." / "Even to save your life?" / "Especially then." |
+
+*GM notes: No one should recognize themselves yet. James might twitch at the memory question but won't connect it. The interview numbers and subject codes are visible but meaningless at this point. Let the players note them or ignore them — either is fine.*
+
+---
+
+**Drop 2 — Session 12**
+*Delivery: Grift cracks an encrypted partition on a different Kimura system. Same clinical format, different subjects. Now there's a pattern.*
+
+| # | Subject | Fragment |
+|---|---------|----------|
+| 1 | GHOST — Marcus Vaughn (22-A) | "How many close relationships do you maintain?" / "Define close." / "Someone who would notice if you disappeared." / "Then none." |
+| 2 | BANK — Callum Voss (09-F) | "Would you trust a perfect copy of yourself?" / "No. And neither should you." |
+| 3 | FACE — Sarah Donnelly (14-C) | "What would you do if no one was watching?" / [pause] "I don't understand the question." |
+
+*GM notes: Same format as Drop 1 — someone at the table will say "these are connected." Callum Voss appears for the second time. If James is paying attention, he may start tracking the names. Rob should notice that Marcus Vaughn's answers sound uncomfortably familiar, but the name is wrong. Don't confirm anything.*
+
+---
+
+**Drop 3 — Session 14 (THE KEYSTONE)**
+*Delivery: Grace's drone intercepts a corrupted Extranet packet that Chimera's cleanup missed. This one has audio, not just text.*
+
+| # | Subject | Fragment |
+|---|---------|----------|
+| 1 | LENS — **Grace Pryzbylski** (31-D) | "Describe your relationship with your physical body." / "Adversarial." |
+| 2 | GHOST — Marcus Vaughn (22-A) | "If you could be anyone else, would you?" / "I already am. That's the problem." |
+| 3 | SHIELD — Adrian Cruz (07-B) | "What do you believe makes you human?" / "The fact that I can answer that question without checking." |
+
+*GM notes: This is the detonation. Sara hears her own name in a clinical interview she doesn't remember giving. Every previous fragment gets re-examined. The table should erupt. Let them talk. Don't explain. Don't rush. If they start matching names to people — "wait, is Sarah Donnelly...?" — let them work it out. Do NOT confirm. Just move the session forward and let it burn.*
+
+---
+
+**Drop 4 — Session 15-16**
+*Delivery: Now the PCs are actively hunting. They find the remaining fragments through deliberate investigation, not accidents.*
+
+| # | Subject | Fragment |
+|---|---------|----------|
+| 1 | LENS — Grace Pryzbylski (31-D) | "If you could exist without a body, would you choose that?" / "You're asking that like it's hypothetical." |
+| 2 | FACE — Sarah Donnelly (14-C) | "When you look in the mirror, who do you see?" / "Whoever needs to be there." |
+| 3 | GHOST — Marcus Vaughn (22-A) | "Describe a situation where you felt you didn't exist." / "Every morning." |
+| 4 | BANK — Callum Voss (09-F) | "What is the most valuable thing you own?" / "Something I remember that someone else forgot." |
+| 5 | SHIELD — Adrian Cruz (07-B) | "How do you respond when someone has authority over you?" / "Temporarily." |
+| 6 | LENS — Grace Pryzbylski (31-D) | "What frightens you most about being seen?" / [long silence] "That they'll see the version I can't fix." |
+
+*GM notes: This is a bigger dump because they're looking for it now. Give them everything that remains. The tone shifts from mystery to personal horror. Grace's third fragment is the hardest one — save it for last in the handout.*
+
+---
+
+**After Drop 4:** Transition to Phase 2 — individual PC discoveries of their full interviews, delivered through character-specific paths (see below).
 
 ### Phase 2 — Chimera's Insurance (Revised)
 
