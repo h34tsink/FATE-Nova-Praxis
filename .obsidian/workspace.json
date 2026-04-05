@@ -6,6 +6,7 @@
       {
         "id": "ab67460d20891661",
         "type": "tabs",
+        "dimension": 48.267008985879336,
         "children": [
           {
             "id": "8cc94c71b16ef3f5",
@@ -27,6 +28,7 @@
       {
         "id": "65f06824d2e3894b",
         "type": "tabs",
+        "dimension": 51.732991014120664,
         "children": [
           {
             "id": "6330179318661a0d",
@@ -258,8 +260,12 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "a0680864420eca0e",
+  "active": "6330179318661a0d",
   "lastOpenFiles": [
+    "Plot/Subplots/The Standard Deviation.md",
+    "Plot/Subplots/The Standard Deviation.md.tmp.48080.1775356279289",
+    "Sessions/Session 0/Session 0 - Teaching Scenario.md",
+    "Rules and Mechanics/Blade-Forms.md",
     "Characters/Players/Kallius/Kallius.pdf",
     "Characters/Players/Grace Pryzbylski/Grace_Pryzbylski.pdf",
     "Characters/Players/Dustin (Grift) Halloway/Dustin_Grift_Halloway.pdf",
@@ -269,10 +275,7 @@
     "Characters/Players/Dustin_Grift_Halloway_tmp.pdf",
     "Characters/Players/Azaria_Dawson_tmp.pdf",
     "Characters/Players/Aeddarius_Crucial_tmp.pdf",
-    "Characters/Players/Kallius_compressed.pdf",
-    "Characters/Players/!Kallius.pdf",
     "Sessions/Session 0/Session 0 - Pregen Characters.md",
-    "Sessions/Session 0/Session 0 - Teaching Scenario.md",
     "Sessions/Session 0/Pregen Portraits/Rhys Okafor.png",
     "Sessions/Session 0/Pregen Portraits/Maro Costigan.png",
     "Sessions/Session 0/Pregen Portraits/Nyx.png",
@@ -284,7 +287,6 @@
     "Sessions/Session 0/Pregen Portraits/Orin Hale.png",
     "Sessions/Session 0/Pregen Portraits/Echo.png",
     "Sessions/Session 0/Pregen Portrait Prompts.md",
-    "Rules and Mechanics/Blade-Forms.md",
     "Rules and Mechanics/Character Aesthetic Options.md",
     "Rules and Mechanics/Augmentations.md",
     "Characters/Players/Azaria Dawson/Azaria Dawson - FATE Character.md",
