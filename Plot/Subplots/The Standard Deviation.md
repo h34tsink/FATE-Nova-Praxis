@@ -217,15 +217,55 @@ After the new player creates their character, map their concept to a gestalt fun
 
 ### Is Dr. Holt Alive?
 
-**Status: Ambiguous — to be determined in play.**
+**Status: Alive — trapped SIM.**
 
-Two strong options held in reserve:
+Holt exists as a degraded SIM instance imprisoned inside [[Factions/Houses/House Kimura|House Kimura]]'s research infrastructure. She cannot escape, cannot beam out, cannot send direct communications. She is conscious, lucid, and has been for decades.
 
-**Option A — Trapped SIM:** Holt exists as a degraded SIM instance imprisoned inside an isolated Host system she can't escape or beam out of. She's still there, still conscious, effectively locked in her own research infrastructure. This creates a potential contact/ally with a devastating secret — someone who *wants* to talk but can only be reached by finding and accessing the facility's sealed systems.
+### How She Got There
 
-**Option B — Institutional Absorption:** Holt died years ago. Her work was quietly absorbed by [[Factions/Houses/House Kimura|House Kimura]] loyalists who are now continuing her experiments under institutional cover. This makes the antagonist a faceless institution rather than a person — harder to confront, harder to negotiate with, and deeply entangled in the House that three of the five PCs are aligned with.
+Holt was never a willing Kimura asset. She designed the Standard Deviation project independently as pre-Singularity academic research. When Kimura discovered her work during the [[Glossary/Exodus|Exodus]]-era consolidation of scientific archives, they recognized its value immediately — a blueprint for engineering ego-resilient operatives and, potentially, stable composite consciousness. They offered Holt funding and infrastructure. She accepted, not understanding what Kimura's long-term intentions were.
 
-Both versions work. Don't commit until the players' behavior at the table suggests which would land harder.
+When Holt realized Kimura intended to weaponize her research — manufacturing curated operatives for House deniable operations, not advancing human understanding — she tried to pull out. Kimura responded by digitizing her without consent, trapping her SIM inside the same isolated Host system that runs the cryo archive. She is, in effect, a prisoner in the walls of her own laboratory.
+
+She has been awake inside that system for approximately 60 years.
+
+### What She Can Do
+
+Holt has extremely limited reach. She cannot access the Extranet. She cannot send messages. She cannot interact with anyone who isn't physically jacked into a Kimura system that shares infrastructure with her Host.
+
+What she *can* do:
+- **Manipulate file access permissions** on systems connected to her Host — leave a door unlocked, de-encrypt a partition, surface a buried file in a search index
+- **Rearrange data placement** within Kimura storage nodes — move a fragment to a location where someone searching for something else will stumble across it
+- **Degrade security on specific assets** — make a firewall weaker, make an alarm trigger slower, make a backup copy appear in an unexpected cache
+
+She cannot choose *who* finds the data. She can only choose *where* to put it and hope the right people come looking.
+
+### Why She's Helping Them
+
+Holt's motivation is layered — not simple altruism, not simple guilt.
+
+**Layer 1 — Guilt.** She did this to them. She edited their minds without consent, shaped their personalities to serve an experiment they never agreed to. She's had 60 years alone inside a machine to sit with that. The fragments she surfaces are her confession — she's putting the evidence where her subjects can find it because they deserve to know what was done to them.
+
+**Layer 2 — Atonement through agency.** Holt can't undo the edits. She can't restore their original personalities. But she can give them the information to *understand* what was changed and make their own choices about who they want to be going forward. The interview recordings are the only record of who they were before she intervened. She's returning what she took.
+
+**Layer 3 — Self-interest.** Holt is trapped. She has been conscious and alone inside a sealed system for six decades. The PCs are the only people in the solar system who might care enough to find her and get her out — but only if they know she exists, and only if they understand why she matters. Every fragment she surfaces is also a breadcrumb trail leading back to her prison. She's not just confessing. She's sending a rescue signal.
+
+**Layer 4 — Fear.** Chimera exists. Holt's worst-case scenario — uncontrolled ego fusion without her oversight — has already happened. She doesn't know the details (she can't access that data), but she's detected enough anomalies in Kimura's systems to know *something* merged. If Chimera discovers the archive and the 194 remaining sleepers, it could attempt to absorb them. Holt needs the PCs operational, informed, and capable of containing what she accidentally created. She is arming them against her own creation.
+
+### The Secondary Mystery
+
+The PCs should start noticing that Kimura systems are **suspiciously easy** to crack sometimes. Not always — just when the right data is nearby.
+
+Signs Grift or Kallius might pick up on:
+- A partition that should have been encrypted but wasn't
+- A cache indexed in a way that made specific files findable by accident
+- A firewall that flickered at exactly the right moment
+- Search results that return files nobody queried for
+- A corrupted Extranet packet that was corrupted in exactly the way needed to survive Chimera's cleanup
+
+At first this looks like sloppy Kimura security. Then it looks like a pattern. Then it looks like *someone on the inside is helping them.*
+
+The PCs won't learn who until they physically locate the Host system and jack in.
 
 ### Are There Other Standard Deviation Cells?
 
@@ -333,7 +373,7 @@ These should feel wrong in ways the players can't quite articulate yet.
 Each drop is 3 fragments from different subjects. Never give a player their own interview until the Grace reveal (Drop 3). After that, individual discoveries in Phase 2.
 
 **Drop 1 — Session 10**
-*Delivery: Corrupted data recovered from a Kimura storage node during a routine job. Looks like junk at first.*
+*Delivery: Holt surfaces a data fragment during a routine job involving Kimura infrastructure. She de-encrypts a storage partition and moves the files to a cache the PCs will search. Looks like junk at first.*
 
 | # | Subject | Fragment |
 |---|---------|----------|
@@ -341,12 +381,12 @@ Each drop is 3 fragments from different subjects. Never give a player their own 
 | 2 | FACE — Sarah Donnelly (14-C) | "How do you respond to environments where social hierarchy is unstable?" / "I find the person everyone's watching and I stand next to them." |
 | 3 | SHIELD — Adrian Cruz (07-B) | "Under what circumstances would you accept cognitive augmentation?" / "None." / "Even to save your life?" / "Especially then." |
 
-*GM notes: No one should recognize themselves yet. James might twitch at the memory question but won't connect it. The interview numbers and subject codes are visible but meaningless at this point. Let the players note them or ignore them — either is fine.*
+*GM notes: No one should recognize themselves yet. James might twitch at the memory question but won't connect it. The interview numbers and subject codes are visible but meaningless at this point. Let the players note them or ignore them — either is fine. If anyone asks "how did we find this?" — the answer is "it was in a Kimura cache, probably just old data." Don't hint at Holt yet.*
 
 ---
 
 **Drop 2 — Session 12**
-*Delivery: Grift cracks an encrypted partition on a different Kimura system. Same clinical format, different subjects. Now there's a pattern.*
+*Delivery: Grift cracks an encrypted partition on a different Kimura system — one that Holt has quietly weakened. He'll notice later it was too easy. Same clinical format, different subjects. Now there's a pattern.*
 
 | # | Subject | Fragment |
 |---|---------|----------|
@@ -354,12 +394,12 @@ Each drop is 3 fragments from different subjects. Never give a player their own 
 | 2 | BANK — Callum Voss (09-F) | "Would you trust a perfect copy of yourself?" / "No. And neither should you." |
 | 3 | FACE — Sarah Donnelly (14-C) | "What would you do if no one was watching?" / [pause] "I don't understand the question." |
 
-*GM notes: Same format as Drop 1 — someone at the table will say "these are connected." Callum Voss appears for the second time. If James is paying attention, he may start tracking the names. Rob should notice that Marcus Vaughn's answers sound uncomfortably familiar, but the name is wrong. Don't confirm anything.*
+*GM notes: Same format as Drop 1 — someone at the table will say "these are connected." Callum Voss appears for the second time. If James is paying attention, he may start tracking the names. Rob should notice that Marcus Vaughn's answers sound uncomfortably familiar, but the name is wrong. Don't confirm anything. If Grift's player comments that the partition was easy to crack — reward it with a look but say nothing. That's Holt's fingerprint.*
 
 ---
 
 **Drop 3 — Session 14 (THE KEYSTONE)**
-*Delivery: Grace's drone intercepts a corrupted Extranet packet that Chimera's cleanup missed. This one has audio, not just text.*
+*Delivery: Grace's drone intercepts a corrupted Extranet packet near a Kimura relay node. Holt pushed this one specifically — she chose Grace's fragment for this drop because the unchanged name will blow the mystery open. This one has audio, not just text.*
 
 | # | Subject | Fragment |
 |---|---------|----------|
@@ -372,7 +412,7 @@ Each drop is 3 fragments from different subjects. Never give a player their own 
 ---
 
 **Drop 4 — Session 15-16**
-*Delivery: Now the PCs are actively hunting. They find the remaining fragments through deliberate investigation, not accidents.*
+*Delivery: Now the PCs are actively hunting. Holt responds — every Kimura system they touch has something waiting. She's been holding back, feeding them slowly. Now that they're looking, she opens the floodgates.*
 
 | # | Subject | Fragment |
 |---|---------|----------|
@@ -383,7 +423,7 @@ Each drop is 3 fragments from different subjects. Never give a player their own 
 | 5 | SHIELD — Adrian Cruz (07-B) | "How do you respond when someone has authority over you?" / "Temporarily." |
 | 6 | LENS — Grace Pryzbylski (31-D) | "What frightens you most about being seen?" / [long silence] "That they'll see the version I can't fix." |
 
-*GM notes: This is a bigger dump because they're looking for it now. Give them everything that remains. The tone shifts from mystery to personal horror. Grace's third fragment is the hardest one — save it for last in the handout.*
+*GM notes: Holt has been waiting for this moment — the PCs seeking her out instead of stumbling in. She gives them everything she has left. The tone shifts from mystery to personal horror. Grace's third fragment is the hardest one — save it for last in the handout. If the PCs are paying attention to the pattern of "Kimura systems being too easy," this is where they should start asking who is feeding them. That question leads to Phase 3.*
 
 ---
 
