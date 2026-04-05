@@ -445,6 +445,328 @@ This is the natural discovery path: as the campaign progresses, the PCs start st
 - **Azaria:** A Sensi recording surfaces on a grey-market feed — footage of a younger version of herself, *confident and grounded*, in a clinical setting. Her Silva contacts flag it as a deepfake. It isn't.
 - **Aeddarius:** A Dalianis intelligence briefing lands on his desk — a routine background check on a cryo-revival subject that matches his file. The psychological profile lists no Purist ideology. His convictions appear *after* intake, not before.
 
+### Full Intake Interviews
+
+These are the complete recordings each PC discovers individually during Phase 2. Each interview includes the fragments already scattered during Phase 1 drops — the player should recognize lines they've already seen and realize they were hearing pieces of *this*.
+
+GM guidance: Read these aloud or hand them to the player privately. Don't rush. Let the player sit with the dissonance between who the subject *was* and who the PC *is now*. The clinical tone is intentional — Holt is evaluating raw material, not talking to a person.
+
+Each interview is formatted as a clinical transcript. Interviewer is Dr. Maren Holt unless noted. Annotations in brackets are Holt's contemporaneous notes — the PC would see these only if they access the full research file, not just the recording.
+
+---
+
+#### FACE — Sarah Donnelly (Intake Interview 14-C)
+
+*Subject: Sarah Donnelly, age 29. Occupation: Communications director, Meridian Applied Sciences. Referred by internal screening protocol. Date: [REDACTED — pre-Exodus calendar]*
+
+> **Holt:** State your full name for the record.
+> **Donnelly:** Sarah Anne Donnelly.
+
+> **Holt:** How do you respond to environments where social hierarchy is unstable?
+> **Donnelly:** I find the person everyone's watching and I stand next to them.
+> [*Note: Instinctive status-mapping. Fast. No hesitation.*]
+
+> **Holt:** Why next to them? Why not *be* the person they're watching?
+> **Donnelly:** Because you learn more standing beside power than sitting in it. People forget you're there.
+> [*Note: Strategic, not submissive. Distinction matters.*]
+
+> **Holt:** When you look in the mirror, who do you see?
+> **Donnelly:** Whoever needs to be there.
+> [*Note: Adaptive self-image. Low ego rigidity. Promising.*]
+
+> **Holt:** Does that bother you?
+> **Donnelly:** Why would it? Flexibility is an asset. I know who I am underneath the presentation.
+
+> **Holt:** Tell me about a time you failed socially.
+> **Donnelly:** I gave a keynote at Meridian's Q3 summit. Twelve hundred people. Nailed the content, nailed the delivery. Afterward, my director told me the CFO thought I'd upstaged him. I got reassigned to internal comms for six months.
+> **Holt:** How did you feel?
+> **Donnelly:** Angry. Not at the CFO — at myself for not reading the room. I should have dimmed it. I knew the dynamics.
+
+> **Holt:** You're describing a very controlled person. What happens when that control breaks?
+> **Donnelly:** It doesn't.
+> **Holt:** Everyone has a breaking point.
+> **Donnelly:** Then I haven't found mine. Ask me something harder.
+> [*Note: Confident. Grounded. Knows her own capabilities without inflation. Current baseline shows no impostor syndrome — if anything, slightly overconfident in social calibration. Ideal substrate for FACE if we amplify self-doubt around authenticity.*]
+
+> **Holt:** What would you do if no one was watching?
+> **Donnelly:** [pause] I don't understand the question.
+> **Holt:** If there were no audience. No one to perform for. What would you do with yourself?
+> **Donnelly:** I'd still do the same things. I don't perform *for* people. I perform because I'm good at it.
+> [*Note: She genuinely doesn't separate identity from presentation — but not because she's hollow. Because the performance IS the identity and she's at peace with that. Post-edit, we need to fracture that peace. Introduce the suspicion that the real self might be different from the performed self. She'll compensate by performing harder.*]
+
+> **Holt:** One last question. If I told you that your personality was perfectly suited for a specific purpose — that you were selected because of who you are, not what you can do — how would that make you feel?
+> **Donnelly:** Depends on the purpose.
+> **Holt:** Assume you'd never know the details.
+> **Donnelly:** Then I'd assume you were manipulating me, and I'd start figuring out why.
+> [*Note: Smart. Will need deep-layer editing to bypass this instinct.*]
+
+> **Holt:** Thank you, Ms. Donnelly. That concludes the intake.
+> **Donnelly:** That's it? I expected something harder.
+> **Holt:** You did fine.
+> **Donnelly:** I know.
+
+*[Holt's post-interview assessment: FACE confirmed. Subject's social architecture is robust, adaptive, and self-aware. Edit protocol: introduce persistent low-grade impostor syndrome targeting the gap between presented self and "true" self. Subject's natural response will be to increase performative behavior — exactly the mechanism the gestalt requires for external coherence. Risk: moderate. Subject is perceptive. Edits must be integrated at a level below conscious introspection.]*
+
+---
+
+#### GHOST — Marcus Vaughn (Intake Interview 22-A)
+
+*Subject: Marcus Vaughn, age 33. Occupation: Systems analyst, Vanguard Infrastructure Group. Referred by internal screening protocol. Date: [REDACTED — pre-Exodus calendar]*
+
+> **Holt:** State your full name for the record.
+> **Vaughn:** Marcus James Vaughn.
+
+> **Holt:** How many close relationships do you maintain?
+> **Vaughn:** Define close.
+> **Holt:** Someone who would notice if you disappeared.
+> **Vaughn:** Then none.
+> [*Note: Immediate and flat. No distress in the admission.*]
+
+> **Holt:** That doesn't seem to upset you.
+> **Vaughn:** It's not a value judgment. I move around a lot. People come and go.
+> **Holt:** By your choice or theirs?
+> **Vaughn:** Both. I don't hold on and neither do they. It works.
+
+> **Holt:** Tell me about your work at Vanguard.
+> **Vaughn:** Infrastructure monitoring. Network topology, data flow analysis, anomaly detection. I'm good at seeing how systems connect.
+> **Holt:** You've been there four years. That's a long time for someone who "moves around."
+> **Vaughn:** The work is interesting. And they don't care if I work remotely. I haven't been to the office in nine months.
+> [*Note: Stable employment. Functional. Not the rootless drifter his profile might suggest — he simply doesn't form attachments to people or places. The infrastructure is there. It just doesn't bind him.*]
+
+> **Holt:** Describe a situation where you felt you didn't exist.
+> **Vaughn:** Every morning.
+> **Holt:** Elaborate.
+> **Vaughn:** I wake up and there's about three seconds where I don't have a name. Not amnesia — I know the facts. I just don't feel connected to them yet. Like booting up. By the time I'm in the shower, I'm Marcus again. But those three seconds are honest.
+
+> **Holt:** If you could be anyone else, would you?
+> **Vaughn:** I already am. That's the problem.
+> **Holt:** What do you mean?
+> **Vaughn:** I mean I'm already performing "Marcus Vaughn" the same way I'd perform anyone else. It doesn't feel more real than any other option. It's just the one I've been doing longest.
+> [*Note: Extraordinary. Natural ego fluidity without dissociative pathology. He's not fragmented — he's genuinely low-attachment to any single identity. This is the connective tissue the gestalt needs.*]
+
+> **Holt:** Does that frighten you?
+> **Vaughn:** No. Should it?
+> **Holt:** Most people would find it disturbing.
+> **Vaughn:** Most people are performing the same trick and pretending they aren't.
+
+> **Holt:** I'd like to try a word association. I'll say a word, you say the first thing that comes to mind. Home.
+> **Vaughn:** Temporary.
+> **Holt:** Family.
+> **Vaughn:** Concept.
+> **Holt:** Self.
+> **Vaughn:** Negotiable.
+> **Holt:** Future.
+> **Vaughn:** Open.
+> [*Note: No anchors. No rigidity. Perfect substrate.*]
+
+> **Holt:** One last area. You said people come and go and it "works." Has anyone ever stayed?
+> **Vaughn:** [long pause] There was someone. Years ago. She said I was the easiest person to be around and the hardest person to find. I thought that was a compliment. She didn't mean it as one.
+> **Holt:** Do you miss her?
+> **Vaughn:** I miss that she noticed. Nobody else has bothered.
+> [*Note: There it is. The fluidity is real but it's not painless — he just buries the cost. Post-edit amplification target: deepen the disconnection, remove the residual attachment capacity that lets him miss people. He needs to be unable to form roots at all. The gestalt requires a substrate that merges without resistance. Any remaining attachment to a singular identity is friction we can't afford.*]
+
+> **Holt:** Thank you, Mr. Vaughn. That's everything.
+> **Vaughn:** You didn't ask what I'm afraid of.
+> **Holt:** I didn't think you'd answer honestly.
+> **Vaughn:** [smiles] Fair.
+
+*[Holt's post-interview assessment: GHOST confirmed. Subject displays natural ego fluidity without pathological dissociation — rarest profile in the cohort. Edit protocol: sever residual attachment capacity and deepen identity rootlessness. Subject's natural adaptability will do the rest. He will drift through post-revival life unable to land on a fixed identity, which is precisely the state the gestalt requires for inter-ego connectivity. Risk: low. Subject is unlikely to notice the difference between his natural state and the edited one. The gap is narrow.]*
+
+---
+
+#### LENS — Grace Pryzbylski (Intake Interview 31-D)
+
+*Subject: Grace Pryzbylski, age 26. Occupation: Data systems architect, freelance. Referred by internal screening protocol. Date: [REDACTED — pre-Exodus calendar]*
+
+> **Holt:** State your full name for the record.
+> **Pryzbylski:** Grace Pryzbylski. No middle name.
+
+> **Holt:** Describe your relationship with your physical body.
+> **Pryzbylski:** Adversarial.
+> **Holt:** Can you expand on that?
+> **Pryzbylski:** It does what I need it to do most of the time. I just don't enjoy the process. It's a system I didn't design and can't optimize.
+> [*Note: Clinical framing. She talks about her body the way an engineer talks about legacy code.*]
+
+> **Holt:** When did that start?
+> **Pryzbylski:** I don't think it started. I think it's always been there. I just got better at articulating it.
+> **Holt:** Some people in your situation describe trauma.
+> **Pryzbylski:** I'm not avoiding a trauma narrative. There's just nothing dramatic to point to. It's more like... persistent low-grade incompatibility. The hardware doesn't match the software.
+
+> **Holt:** You work in data architecture. Tell me about your best project.
+> **Pryzbylski:** I built a self-organizing storage topology for a medical research lab. The system could restructure itself based on access patterns — data that got used together migrated closer together. It was like watching something think.
+> **Holt:** You sound proud.
+> **Pryzbylski:** I am. That system is the best version of me. Everything I'm good at, expressed in something that actually works the way it should.
+> [*Note: She's already externalizing her sense of self into digital systems. Doesn't need much of a push to go further.*]
+
+> **Holt:** If you could exist without a body, would you choose that?
+> **Pryzbylski:** You're asking that like it's hypothetical.
+> **Holt:** It is hypothetical.
+> **Pryzbylski:** For now.
+> [*Note: She's already thinking about it. Not as fantasy — as engineering problem.*]
+
+> **Holt:** Let's talk about social situations. How do you handle crowds?
+> **Pryzbylski:** I don't, if I can help it. I can manage them. I just don't like the sensory load. Too many signals, too much noise.
+> **Holt:** Do you have strategies for managing that?
+> **Pryzbylski:** I build buffers. Physical distance, headphones, a screen between me and the room. The screen is the best one. When I'm working through an interface, the noise drops to zero. I can focus.
+> [*Note: Functional anxiety management. She copes. She adapts. Current baseline is uncomfortable but capable — not debilitated.*]
+
+> **Holt:** What frightens you most about being seen?
+> **Pryzbylski:** [long silence] That they'll see the version I can't fix.
+> **Holt:** Which version is that?
+> **Pryzbylski:** The one that's still in this body, trying to pass for normal, and not quite making it. I can fix systems. I can fix code. I can't fix *this.* [gestures at herself]
+> **Holt:** You gestured at your entire body just now.
+> **Pryzbylski:** I know.
+
+> **Holt:** Do you have close friends?
+> **Pryzbylski:** I have people I talk to online. We collaborate on projects, share work, check in on each other. Some of them I've known for years.
+> **Holt:** Have you met any of them in person?
+> **Pryzbylski:** Two. It was fine. Just... different. Louder.
+> **Holt:** Did you prefer the online versions of those relationships?
+> **Pryzbylski:** I preferred the version where I could be the version of me that works.
+> [*Note: She's already living a dual existence — physical self she tolerates, digital self she prefers. The gap between them is where the edit needs to land. Widen it. Make the physical self feel intolerable rather than merely inconvenient. She'll do the rest — the trajectory toward [[Glossary/SIM|SIM]] state is already in her, it just needs to become the only path she can see.*]
+
+> **Holt:** Last question. If a technology existed that could transfer your consciousness into a purely digital environment — permanently — would you do it?
+> **Pryzbylski:** How stable is the environment?
+> **Holt:** Assume it's permanent and you'd never have a body again.
+> **Pryzbylski:** [without hesitation] When do I sign up?
+> **Holt:** You didn't ask about the risks.
+> **Pryzbylski:** I heard "never have a body again." That *is* the benefit.
+
+*[Holt's post-interview assessment: LENS confirmed. Subject is the most natural SIM-state candidate in the entire cohort. Current anxiety levels are manageable — she has coping mechanisms, social connections, and professional success. Edit protocol: amplify social anxiety and body dissociation to the point where digital existence becomes the only viable option rather than a preference. The gestalt requires a consciousness that has already transitioned to pure software as its foundation layer. She needs to not just want SIM — she needs to be unable to function any other way. Risk: high. Subject is perceptive and self-aware. Edits to anxiety architecture may trigger cascading effects on coping mechanisms. Acceptable — the cascade itself drives the trajectory we need.]*
+
+---
+
+#### BANK — Callum Voss (Intake Interview 09-F)
+
+*Subject: Callum Voss, age 31. Occupation: Cognitive data consultant, independent contractor. Referred by internal screening protocol. Date: [REDACTED — pre-Exodus calendar]*
+
+> **Holt:** State your full name for the record.
+> **Voss:** Callum Voss. Middle name's classified. [laughs] Kidding. Callum Thomas Voss.
+
+> **Holt:** If your memories were altered without your knowledge, how would you know?
+> **Voss:** [long pause] I wouldn't. That's the point, isn't it?
+> **Holt:** What do you mean, "the point"?
+> **Voss:** Memory is the only evidence we have that we're continuous people. If you change the evidence, you change the person. And they'd never know because the "knowing" apparatus is the thing you changed. It's a perfect crime.
+> [*Note: He arrives at the epistemological problem immediately. No prompting. No academic framing. He just *thinks* this way.*]
+
+> **Holt:** Does that concern you?
+> **Voss:** Concern, no. Interest, absolutely. Memory is the most poorly secured system in the human body. No checksums, no version control, no audit trail. Every recall is a rewrite. We're already editing ourselves constantly — we just pretend we aren't.
+
+> **Holt:** You work with cognitive data. What does that involve?
+> **Voss:** Clients hire me to organize, archive, and optimize their digital memory systems. Personal data, professional records, sometimes legal evidence. I build structures that make retrieval reliable.
+> **Holt:** Do your clients trust you?
+> **Voss:** Completely. I've seen the inside of more people's lives than any therapist. Financial records, love letters, medical files, corporate secrets. They hand it over because I'm good at what I do and I don't talk.
+> [*Note: He has total access to sensitive information and hasn't abused it. Trustworthy. Ethical. Current baseline shows no paranoia — he's cautious by professional habit, not psychological compulsion.*]
+
+> **Holt:** What is the most valuable thing you own?
+> **Voss:** Something I remember that someone else forgot.
+> **Holt:** What is it?
+> **Voss:** Nice try. [smiles] It's not sinister. A client accidentally included a personal file in a data dump. A letter they'd written to someone and never sent. They don't know I saw it. I archived it properly and moved on. But I remember it.
+> **Holt:** Why is that valuable?
+> **Voss:** Because it was honest. People are never more honest than in the things they write and don't send. That letter is who they really are. The fact that I remember it and they've forgotten it — that's the kind of asymmetry that makes memory interesting.
+
+> **Holt:** Would you trust a perfect copy of yourself?
+> **Voss:** No. And neither should you.
+> **Holt:** Why not?
+> **Voss:** Because a perfect copy would know everything I know, including how easy it is to manipulate data architecture. A copy of me would be exactly as dangerous as I am. Two of me doubles the risk.
+> **Holt:** You just described yourself as dangerous.
+> **Voss:** Everyone who understands systems is dangerous. I'm just honest about it.
+> [*Note: Self-aware about his own capabilities but not aggressive about them. Treats his skills as tools, not weapons. This is the profile we need — someone who will independently develop mnemonic editing expertise because the intellectual problem fascinates him, not because he's driven by paranoia or greed.*]
+
+> **Holt:** Let's try something different. I'm going to describe a scenario and I want your gut reaction. You discover that a powerful institution has been subtly editing public memory records — not erasing them, just adjusting details. Making inconvenient truths slightly less vivid. You're the only one who's noticed. What do you do?
+> **Voss:** How did I notice?
+> **Holt:** You found discrepancies in archived data. Timestamps don't match. Version histories have gaps.
+> **Voss:** Then I document everything, make redundant copies in systems they can't reach, and sit on it until I understand the full scope. You don't blow a whistle until you know exactly what you're blowing it on.
+> **Holt:** You wouldn't go public immediately?
+> **Voss:** Going public with incomplete evidence is how you get discredited. I'd build the case first. Alone.
+> [*Note: Perfect. This is the behavior pattern we need. Post-edit, plant a mnemonic fragment — a "truth" significant enough to trigger exactly this response. He'll protect it, obsess over it, build increasingly sophisticated tools to verify and safeguard it. The paranoia doesn't need to be manufactured from scratch — we just need to give him something to be paranoid about. He'll build the rest himself. And in building it, he'll teach himself every technique the gestalt will eventually need.*]
+
+> **Holt:** One more question. Do you believe you're a good person?
+> **Voss:** I believe I'm a careful person. "Good" is a memory people construct after the fact. I'd rather be accurate.
+> **Holt:** Thank you, Mr. Voss.
+> **Voss:** You know, most of your questions were about memory and trust. That's a strange intake protocol.
+> **Holt:** It's tailored to each subject.
+> **Voss:** So I'm a subject now?
+> **Holt:** A figure of speech.
+> **Voss:** [pause] Sure it is.
+
+*[Holt's post-interview assessment: BANK confirmed. Subject possesses ideal cognitive architecture for the gestalt's mnemonic function — systematic, meticulous, intellectually driven, ethically grounded. Edit protocol: implant a high-value mnemonic fragment ("the truth") designed to trigger protective-obsessive behavior. The fragment must be significant enough to justify years of escalating security measures. Subject will respond by developing increasingly advanced memory manipulation and protection techniques — the exact skill set required for ego fusion. Secondary effect: isolation. The secret will make him trust fewer people, collaborate less, work alone. This serves the project — we need him arriving at cryo already primed to be the kind of person who edits memories for a living. Risk: moderate. Subject is observant — his last question suggests he already suspects the intake is non-standard. Edits must be deep enough that he attributes his post-edit behavior to personal choice rather than external manipulation.]*
+
+---
+
+#### SHIELD — Adrian Cruz (Intake Interview 07-B)
+
+*Subject: Adrian Cruz, age 35. Occupation: Emergency services coordinator, Metro District 14. Referred by internal screening protocol. Date: [REDACTED — pre-Exodus calendar]*
+
+> **Holt:** State your full name for the record.
+> **Cruz:** Adrian Miguel Cruz.
+
+> **Holt:** Under what circumstances would you accept cognitive augmentation?
+> **Cruz:** None.
+> **Holt:** Even to save your life?
+> **Cruz:** Especially then.
+> **Holt:** That's an unusual answer. Most people hedge.
+> **Cruz:** Most people haven't thought about it. I have. The answer's the same every time.
+
+> **Holt:** Walk me through your reasoning.
+> **Cruz:** If you change how I think, you change who I am. If you change who I am to save my life, you haven't saved *me*. You've saved a body with someone else's decision-making process. That's not survival. That's replacement.
+> [*Note: Articulate. Principled. But listen to the framing — "if you change how I think." This isn't spiritual or political. It's architectural. He's describing ego integrity in engineering terms. He doesn't know that's what he's doing.*]
+
+> **Holt:** You work in emergency services. High-pressure decisions, lives at stake. Have you ever wished you could think faster? Process more?
+> **Cruz:** Every shift. People die because humans are slow. I've watched it happen.
+> **Holt:** And you still wouldn't augment?
+> **Cruz:** Wishing I were faster doesn't mean I'm willing to stop being me to get there. I'd rather be slow and mine than fast and someone else's.
+> [*Note: He feels the pull. He's not indifferent to augmentation — he's actively resisting a genuine temptation. That's a much more useful baseline than ideological indifference.*]
+
+> **Holt:** How do you respond when someone has authority over you?
+> **Cruz:** Temporarily.
+> **Holt:** Meaning?
+> **Cruz:** Meaning authority is a structure, not a fact. Someone has authority because a system gave it to them. Systems change. The authority goes with it. I respect the role while the structure holds. I don't confuse it with the person.
+
+> **Holt:** Have you ever broken a rule you considered unjust?
+> **Cruz:** Three times. Twice in the field — I overrode dispatch protocol because the protocol would have killed people. Once personally. I don't want to talk about that one.
+> **Holt:** Were you disciplined for the field incidents?
+> **Cruz:** Commended for one. Written up for the other. Same outcome both times — people lived who wouldn't have.
+> **Holt:** And the personal one?
+> **Cruz:** I said I don't want to talk about it.
+> **Holt:** Noted.
+> [*Note: Moral framework is internal, not institutional. He follows rules when they align with his values and breaks them when they don't. The consistency is in the values, not the compliance. This is essential for SHIELD — we need someone whose ego can't be overwritten by external systems.*]
+
+> **Holt:** What do you believe makes you human?
+> **Cruz:** The fact that I can answer that question without checking.
+> **Holt:** What if someone else answered it differently?
+> **Cruz:** Then they'd be answering a different question. "What makes *you* human" isn't "what makes humans human." I'm not interested in the species definition. I'm interested in the fact that I know I'm me without having to run a diagnostic.
+> [*Note: Phenomenal. He's describing ego continuity — the unbroken sense of "I am this person" — as the core of identity. And he does it natively, without philosophical training. This is exactly the trait the gestalt needs to NOT absorb. He's the control variable. The one who stays himself no matter what.*]
+
+> **Holt:** Let's try a hypothetical. A technology exists that could connect your mind to five other people — a shared consciousness. You'd retain your individual awareness but also experience theirs. Thoughts, memories, perspectives. Would you participate?
+> **Cruz:** Voluntarily?
+> **Holt:** Voluntarily.
+> **Cruz:** No.
+> **Holt:** Why not?
+> **Cruz:** Because five other perspectives inside my head isn't "sharing." It's dilution. I'd spend the rest of my life wondering which thoughts were mine. That uncertainty would be worse than anything the connection could give me.
+> **Holt:** What if the others needed you? What if your participation was the difference between the connection working and failing?
+> **Cruz:** [long pause] That's a harder question.
+> **Holt:** Take your time.
+> **Cruz:** If people needed me, I'd show up. I always show up. But I'd need to know that I could leave. The moment you can't leave, it's not participation. It's absorption.
+> [*Note: Even in a hypothetical, his instinct is protection of self-sovereignty AND responsibility to others. This tension — "I will not be absorbed but I will not abandon people who need me" — is the exact dynamic that makes him the failsafe. He'll resist Chimera. But he won't walk away from the people inside it.*]
+
+> **Holt:** You mentioned your work involves watching people die. How do you process that?
+> **Cruz:** I don't process it. I carry it. Every one. I remember their faces, their names when I know them, the moment it went wrong. I don't put it down.
+> **Holt:** That sounds unsustainable.
+> **Cruz:** It's not a strategy. It's a fact. I can't forget them, so I carry them. And it means I try harder next time.
+> **Holt:** Does it ever make you consider a different line of work?
+> **Cruz:** Every week. But I'm good at it, and people live because I'm good at it. Quitting because it hurts would be selfish.
+> [*Note: Resilient. Stubborn. Moral weight distributed across the entire ego rather than compartmentalized. This man's identity doesn't flex. It doesn't adapt. It just endures. Post-edit, we need to install the Purist ideology as an immovable conviction — something that feels like it was always there. His natural ego rigidity will do most of the work. We just need to give it a specific shape.*]
+
+> **Holt:** Final question. If you discovered that one of your core beliefs — something fundamental to who you are — had been placed there by someone else without your knowledge... what would you do?
+> **Cruz:** [immediately] I'd tear it out.
+> **Holt:** Even if it was serving you well? Even if removing it would make your life harder?
+> **Cruz:** A belief I didn't choose isn't mine. I don't care if it's useful. I care if it's *mine.*
+> **Holt:** And if you couldn't tell the difference?
+> **Cruz:** [long silence] Then I'd burn everything down and start over. I'd rather have nothing and know it's real than have everything and wonder.
+
+*[Holt's post-interview assessment: SHIELD confirmed. Subject displays the highest ego rigidity in the cohort — identity is experienced as non-negotiable and self-sovereign. Paradoxically, this makes him the ideal failsafe precisely because the gestalt cannot predict, simulate, or absorb him. Edit protocol: install Purist ideological framework as a deep-layer conviction. Subject's existing resistance to cognitive modification provides the perfect scaffold — we're not creating a new belief, we're giving a name and structure to an instinct that already exists. The edit should feel native. He should never question where it came from. Risk: the edit is self-reinforcing. Once installed, his own ego rigidity will protect it. If he ever discovers the manipulation, his stated response — "tear it out" — means he'll reject the ideology entirely. This is acceptable. By that point, his function in the project will already be served. The failsafe only needs to work once.]*
+
 ---
 
 ## Links
