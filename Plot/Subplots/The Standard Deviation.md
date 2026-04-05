@@ -47,15 +47,27 @@ The subjects were not informed. Consent was not obtained.
 
 The Standard Deviation archive contains approximately 200 cryo-sleepers. Only five were initially revived. Each was flagged with a classification code *before cryo entry*:
 
-| Code | Subject | Archetype | Function in Gestalt |
-|------|---------|-----------|---------------------|
-| FACE | [[Characters/Players/Azaria Dawson/Azaria Dawson - FATE Character\|Azaria Dawson]] | Adaptive social interface | External coherence — the gestalt's ability to present as unified to the outside world |
-| GHOST | [[Characters/Players/Dustin (Grift) Halloway/Dustin (Grift) Halloway - FATE Character\|Dustin "Grift" Halloway]] | Fluid identity substrate | Connective tissue — ego flexibility that allows disparate personalities to merge without rejection |
-| LENS | [[Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character\|Grace Pryzbylski]] | Digital-native consciousness | Foundation layer — SIM-state stability that allows the gestalt to persist in software |
-| BANK | [[Characters/Players/Kallius/Kallius - FATE Character\|Kallius]] | Mnemonic architect | Mechanism — the skill set required to actually perform ego fusion. Holt needed someone who would teach himself |
-| SHIELD | [[Characters/Players/Aeddarius Crucial/Aeddarius Crucial - FATE Character\|Aeddarius Crucial]] | Ego-resistant anchor | Failsafe — a Pure consciousness that Chimera cannot absorb, predict, or manipulate |
-| ??? | *Reserved — New Player 1* | TBD after character creation | See [[#Integrating New Subjects]] |
-| ??? | *Reserved — New Player 2* | TBD after character creation | See [[#Integrating New Subjects]] |
+### Pre-Cryo ↔ Current Name Key
+
+| Pre-Cryo Name | → | Current Name | Player |
+|---|---|---|---|
+| Sarah Donnelly | → | Azaria Dawson | Christa |
+| Marcus Vaughn | → | Dustin "Grift" Halloway | Rob |
+| Grace Pryzbylski | → | Grace Pryzbylski *(unchanged)* | Sara |
+| Callum Voss | → | Kallius | James |
+| Adrian Cruz | → | Aeddarius Crucial | Dan |
+
+### Full Manifest
+
+| Code | Pre-Cryo Name | Current Identity | Archetype | Function in Gestalt |
+|------|---------------|------------------|-----------|---------------------|
+| FACE | Sarah Donnelly | [[Characters/Players/Azaria Dawson/Azaria Dawson - FATE Character\|Azaria Dawson]] | Adaptive social interface | External coherence — the gestalt's ability to present as unified to the outside world |
+| GHOST | Marcus Vaughn | [[Characters/Players/Dustin (Grift) Halloway/Dustin (Grift) Halloway - FATE Character\|Dustin "Grift" Halloway]] | Fluid identity substrate | Connective tissue — ego flexibility that allows disparate personalities to merge without rejection |
+| LENS | Grace Pryzbylski | [[Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character\|Grace Pryzbylski]] | Digital-native consciousness | Foundation layer — SIM-state stability that allows the gestalt to persist in software |
+| BANK | Callum Voss | [[Characters/Players/Kallius/Kallius - FATE Character\|Kallius]] | Mnemonic architect | Mechanism — the skill set required to actually perform ego fusion. Holt needed someone who would teach himself |
+| SHIELD | Adrian Cruz | [[Characters/Players/Aeddarius Crucial/Aeddarius Crucial - FATE Character\|Aeddarius Crucial]] | Ego-resistant anchor | Failsafe — a Pure consciousness that Chimera cannot absorb, predict, or manipulate |
+| ??? | TBD | *Reserved — New Player 1* | TBD after character creation | See [[#Integrating New Subjects]] |
+| ??? | TBD | *Reserved — New Player 2* | TBD after character creation | See [[#Integrating New Subjects]] |
 
 ---
 
@@ -201,13 +213,136 @@ After the new player creates their character, map their concept to a gestalt fun
 
 ---
 
-## Open Questions for GM
+## Design Decisions
 
-- **Is Holt alive?** If yes, she becomes a major NPC. If no, her legacy (the paper, the facility, other sleepers) is the antagonist.
-- **Are there other Standard Deviation cells?** Other groups of curated subjects revived by other patrons? Rival Chimeras?
-- **Does Chimera know?** If the gestalt discovers its own engineered origin, does it embrace the design or rebel against it?
-- **What do the remaining 194 sleepers represent?** Leverage? Threat? Potential allies? A House that finds the archive has an army of curated egos to weaponize.
-- **Is the "truth" Kallius carries real or fabricated?** Both answers are devastating in different ways.
+### Is Dr. Holt Alive?
+
+**Status: Ambiguous — to be determined in play.**
+
+Two strong options held in reserve:
+
+**Option A — Trapped SIM:** Holt exists as a degraded SIM instance imprisoned inside an isolated Host system she can't escape or beam out of. She's still there, still conscious, effectively locked in her own research infrastructure. This creates a potential contact/ally with a devastating secret — someone who *wants* to talk but can only be reached by finding and accessing the facility's sealed systems.
+
+**Option B — Institutional Absorption:** Holt died years ago. Her work was quietly absorbed by [[Factions/Houses/House Kimura|House Kimura]] loyalists who are now continuing her experiments under institutional cover. This makes the antagonist a faceless institution rather than a person — harder to confront, harder to negotiate with, and deeply entangled in the House that three of the five PCs are aligned with.
+
+Both versions work. Don't commit until the players' behavior at the table suggests which would land harder.
+
+### Are There Other Standard Deviation Cells?
+
+**Yes, but not rival Chimeras.** That would undercut what makes Chimera unique.
+
+Other cells function as **self-contained scenario hooks** — "weird of the week" in the vein of X-Files monster-of-the-week episodes. Each cell carries its own MacGuffin and can be dropped into the campaign when pacing needs a breather from the main arc or when a one-shot scenario is needed.
+
+This is also the natural entry point for introducing the [[Rules and Mechanics/Blade-Forms|Blade Forms]] and [[Rules and Mechanics/Pneuma Rules/Index|Pneuma]] systems — they don't need to be rivals to the PCs. They can be consequences of the same program running in parallel, with different patrons and different outcomes. A cell of curated melee specialists who developed Blade Forms as a coping mechanism. A cell where ego fusion went partially right and produced Pneuma resonance instead of full Chimera. These aren't enemies — they're mirrors.
+
+### Does Chimera Know What He Is?
+
+**No.** Chimera has no knowledge of his engineered origin. He is as much a victim of the Standard Deviation program as the PCs are — he's just further along the damage curve.
+
+His behavior isn't calculated villainy. It's a damaged consciousness trying to survive and stay hidden. That's what makes him tragic rather than simply antagonistic. When the PCs eventually discover the truth, the realization that Chimera didn't *choose* this either should reframe everything.
+
+### What Do the 194 Remaining Sleepers Represent?
+
+**Flexible leverage.** They can be potential allies, enemies, or bargaining chips depending on who finds the archive and when.
+
+The key dramatic value: any House that locates the archive gains access to a curated library of engineered egos ready for sleeving — effectively a private army of specialists. Use this as a **pressure valve** — the sleepers become more important as factions start sniffing around, and the PCs will eventually have to decide what to do with them. Protect them? Wake them? Destroy the archive? Sell access?
+
+### Is the Truth Kallius Carries Real or Fabricated?
+
+**It's real.** And it has implications big enough to matter at a faction level — not just personal stakes, but something that could reshape how certain parties understand the history or legitimacy of what happened.
+
+The devastation isn't whether it's true. It's what happens when it gets out.
+
+---
+
+## Phase Design Notes
+
+### Phase 1 — Breadcrumbs (Revised)
+
+Rather than front-loading exposition, **scatter interview fragments** across early sessions — just enough to produce a "huh, wait" reaction from James (Kallius) and the other players.
+
+Format: two or three clinical Q&A exchanges per drop. A question answered out of context. A response that implies something the character shouldn't know. A phrasing that's too precise. Don't explain them. Let them sit.
+
+**Goal:** Low-grade unease, not revelation.
+
+**Example fragments by subject:**
+
+**FACE — Sarah Donnelly (Intake Interview 14-C)**
+
+> *Q: "How do you respond to environments where social hierarchy is unstable?"*
+> *A: "I find the person everyone's watching and I stand next to them."*
+
+> *Q: "When you look in the mirror, who do you see?"*
+> *A: "Whoever needs to be there."*
+
+> *Q: "What would you do if no one was watching?"*
+> *A: [pause] "I don't understand the question."*
+
+**GHOST — Marcus Vaughn (Intake Interview 22-A)**
+
+> *Q: "Describe a situation where you felt you didn't exist."*
+> *A: "Every morning."*
+
+> *Q: "How many close relationships do you maintain?"*
+> *A: "Define close."*
+> *Q: "Someone who would notice if you disappeared."*
+> *A: "Then none."*
+
+> *Q: "If you could be anyone else, would you?"*
+> *A: "I already am. That's the problem."*
+
+**LENS — Grace Pryzbylski (Intake Interview 31-D)**
+
+> *Q: "Describe your relationship with your physical body."*
+> *A: "Adversarial."*
+
+> *Q: "If you could exist without a body, would you choose that?"*
+> *A: "You're asking that like it's hypothetical."*
+
+> *Q: "What frightens you most about being seen?"*
+> *A: [long silence] "That they'll see the version I can't fix."*
+
+**BANK — Callum Voss (Intake Interview 09-F)**
+
+> *Q: "If your memories were altered without your knowledge, how would you know?"*
+> *A: [long pause] "I wouldn't. That's the point, isn't it?"*
+
+> *Q: "What is the most valuable thing you own?"*
+> *A: "Something I remember that someone else forgot."*
+
+> *Q: "Would you trust a perfect copy of yourself?"*
+> *A: "No. And neither should you."*
+
+**SHIELD — Adrian Cruz (Intake Interview 07-B)**
+
+> *Q: "Under what circumstances would you accept cognitive augmentation?"*
+> *A: "None."*
+> *Q: "Even to save your life?"*
+> *A: "Especially then."*
+
+> *Q: "How do you respond when someone has authority over you?"*
+> *A: "Temporarily."*
+
+> *Q: "What do you believe makes you human?"*
+> *A: "The fact that I can answer that question without checking."*
+
+These should feel wrong in ways the players can't quite articulate yet. Drop them one or two at a time across sessions — never all at once, never explained.
+
+### Phase 2 — Chimera's Insurance (Revised)
+
+**Delivery mechanism:** [[Glossary/Chimera|Chimera]] erased traces of the player characters from the Extranet as part of covering his own disappearance — he didn't want loose threads that could be traced back to him. But he's careful and paranoid, so he **kept encrypted backups** of everything he deleted, including the PC interview recordings, as leverage.
+
+This is the natural discovery path: as the campaign progresses, the PCs start stumbling across their own erased data. The justification is already in the fiction — Chimera was a [[Factions/Houses/House Kimura|House Kimura]] illegal experiment, which means Kimura infrastructure, Kimura data handling, Kimura cover-up. The trail leads back there whether anyone intends it to or not.
+
+**Critical:** Each PC should discover their own interview **individually**, through a path that fits their background and the fiction. These are personal moments, not group reveals. The individual discovery lands harder.
+
+**Suggested entry points:**
+
+- **Kallius:** Finds his own intake interview while editing someone else's memories — a corrupted fragment mixed into a client's mindset. His own voice, answering questions he doesn't remember being asked.
+- **Grift:** Cracks a Kimura data cache during a routine infiltration. Buried in the junk data: a video file tagged with his pre-cryo name. He watches himself sit in a clinical chair, calm, employed, *stable* — nothing like the person he is now.
+- **Grace:** A drone intercepts a corrupted Extranet packet that Chimera's cleanup missed. Inside: audio of a woman answering questions about anxiety, isolation, embodiment. The voice is hers. The answers describe someone more functional than she remembers being.
+- **Azaria:** A Sensi recording surfaces on a grey-market feed — footage of a younger version of herself, *confident and grounded*, in a clinical setting. Her Silva contacts flag it as a deepfake. It isn't.
+- **Aeddarius:** A Dalianis intelligence briefing lands on his desk — a routine background check on a cryo-revival subject that matches his file. The psychological profile lists no Purist ideology. His convictions appear *after* intake, not before.
 
 ---
 
