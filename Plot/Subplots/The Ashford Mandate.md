@@ -34,7 +34,7 @@ She is either a prophet, a genius, or a brain-damaged woman chasing a coma hallu
 
 Build auto-replicating nano swarms capable of constructing von Neumann self-replicating probes. This requires reverse-engineering [[Glossary/Technophage|Technophage]] technology — the same grey goo catastrophe that nearly destroyed Earth and forced the [[Glossary/Exodus|Exodus]].
 
-**The problem:** Self-replicating nanomachines are the most illegal technology in known space. The Technophage is humanity's deepest trauma. Anyone caught developing replicating nanotech faces summary execution by the [[Glossary/Protectorate|Protectorate]]. Carmen needs a live Technophage sample to reverse-engineer, and she needs to do it without anyone knowing.
+**The problem:** Self-replicating nanomachines are the most illegal technology in known space. The Technophage is humanity's deepest trauma. Anyone caught developing replicating nanotech faces summary execution by the [[Glossary/Protectorate|Protectorate]]. Carmen needs a live Technophage sample to reverse-engineer — and the only source is quarantined Earth, defended by [[Factions/Houses/House Jinzhan|Jinzhan]] ships and kill-satellites. To reach the surface, she first needs to acquire Jinzhan quarantine override codes — the subject of [[Plot/Subplots/Wolf in Sheeps Clothing|Wolf in Sheep's Clothing]].
 
 ### Phase 2 — The Ring
 
@@ -128,17 +128,25 @@ The PCs hear about someone trying to acquire a Technophage sample on the black m
 
 **Tone:** Conspiracy thriller. Something bad is being built. Nobody knows what yet.
 
-### Tier 2 — The Sample
+### Tier 2 — The Override Codes (Wolf in Sheep's Clothing)
 
-The PCs are hired (or stumble into a job) involving a Technophage sample in transit. They don't know who wants it or why — just that someone is paying a fortune to move the most dangerous substance in existence through a black-market supply chain.
+Before Carmen can acquire a Technophage sample, she needs to get past the [[Glossary/Technophage|Earth quarantine]] — [[Factions/Houses/House Jinzhan|Jinzhan]] ships and kill-satellites that will destroy anything approaching the surface. Her procurement cell on [[Locations/Sol System/Ansari Station|Ansari Station]] has been killing Jinzhan personnel to steal fragments of override codes that Jinzhan publicly denies exist.
 
-**Decision point:** Do they deliver it, destroy it, or investigate the buyer?
+This is the full [[Plot/Subplots/Wolf in Sheeps Clothing|Wolf in Sheep's Clothing]] subplot — a murder mystery that feeds directly into Carmen's plan. The PCs can encounter it through Briar's network, Dalianis intelligence, a missing-person job, or Grift's curiosity. See that document for full details.
 
-If they investigate, the trail leads to shell companies, dead drops, and eventually a research facility hidden in the asteroid belt. Inside: Carmen's research cell, working on replicator prototypes. The work is elegant, controlled, and horrifying.
+**Decision point:** Do the PCs stop the procurement, expose Jinzhan's cover-up, or let the codes reach Carmen?
+
+### Tier 3 — The Sample
+
+If Carmen acquires the override codes (or already has them by the time the PCs get involved), she uses them to temporarily disable the quarantine grid and land a ship on Earth's surface. She retrieves live Technophage samples and returns to her hidden research facility in the asteroid belt.
+
+The PCs may intercept the Earth run, investigate the facility after the fact, or be hired to track the source of a Technophage sample that has appeared on the black market (Carmen's research cell acquiring additional material).
+
+If they investigate, the trail leads to shell companies, dead drops, and eventually the research facility itself. Inside: Carmen's research cell, working on replicator prototypes. The work is elegant, controlled, and horrifying.
 
 **Tone:** Horror. The Technophage is alive in a lab, being studied by people who think they can control it. The PCs have seen what happens when someone thinks they can control the Technophage.
 
-### Tier 3 — The Revelation
+### Tier 4 — The Revelation
 
 The PCs meet Carmen. She explains everything — calmly, rationally, with supporting data. She shows them the projections. She shows them the timeline. She shows them what happens if she doesn't act: the slow death of every star, every civilization, every possibility. She's not asking for permission. She's offering them a chance to be part of the solution.
 
@@ -148,7 +156,7 @@ And then she shows them Mercury.
 
 **Tone:** Moral reckoning. Carmen is not wrong about the science. She may not be wrong about the necessity. But she's asking them to accept the destruction of a world to save a species that won't benefit for centuries. Is that trade worth making? Who gets to decide?
 
-### Tier 4 — The Clock
+### Tier 5 — The Clock
 
 If the PCs don't stop Carmen, the swarm launches. If they do stop her, the question lingers: was she right? Was the vision real? Did they just doom humanity to save Mercury?
 
@@ -184,8 +192,11 @@ The campaign doesn't need to answer that. The players do.
 
 ## Links
 
+- [[Plot/Subplots/Wolf in Sheeps Clothing|Wolf in Sheep's Clothing]]
 - [[Glossary/Technophage]]
 - [[Locations/Mercurian Tunnel System]]
 - [[Characters/Named NPCs/Briar Blackwood]]
+- [[Characters/Named NPCs/Carmen Ashford]] *(to be created)*
 - [[Plot/Subplots/The Standard Deviation]]
+- [[Factions/Houses/House Jinzhan]]
 - [[Glossary/Exodus]]
