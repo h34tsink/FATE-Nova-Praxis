@@ -80,7 +80,7 @@ Briar Blackwood briefs the crew — casual as always, like she's asking a favour
 
 Before they leave, ask each player to **read their Aspects aloud** and explain what each one means in one sentence. This gets everyone reacquainted with their sheets in the new system.
 
-Then — Lester mentions the facility has automated Kimura security still running on backup power.
+Then — Briar mentions the facility has automated Kimura security still running on backup power.
 
 **Prompt [[Characters/Players/Dustin (Grift) Halloway/Dustin (Grift) Halloway - FATE Character|Grift]]:** "You've cracked Kimura systems before. Do any of your Aspects help you understand their security architecture?"
 
