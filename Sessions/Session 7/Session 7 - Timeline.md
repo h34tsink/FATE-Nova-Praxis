@@ -2,7 +2,7 @@
 
 ## Several Months Ago
 
-- **The Incident on Vantage:** A mesh blackout occurs on Vantage Station, hiding a deal gone wrong between smuggler [[Characters/NPCs/Named NPCs/Lester Lucas]] and the Talons of Freedom. Several people die, including Savant Valare. The Talons take possession of Valare's mnemonic core and her ship, the Chickenhawk.
+- **The Incident on Vantage:** A mesh blackout occurs on Vantage Station, hiding a deal gone wrong between smuggler [[Lester Lucas]] and the Talons of Freedom. Several people die, including Savant Valare. The Talons take possession of Valare's mnemonic core and her ship, the Chickenhawk.
 
 ## Recent Past
 
@@ -13,7 +13,7 @@
 ## Present
 
 - **Seeking Answers:** The PCs, guided by Kestrel, travel to Vantage Station to investigate the recent mesh blackout, hoping for clues about their own Situation.
-- **Meeting Lester:** The PCs find [[Characters/NPCs/Named NPCs/Lester Lucas]], who provides information about the blackout and the Talons' involvement. He reveals Valare's ability to black out the mesh and the location of her core on the Chickenhawk.
+- **Meeting Lester:** The PCs find [[Lester Lucas]], who provides information about the blackout and the Talons' involvement. He reveals Valare's ability to black out the mesh and the location of her core on the Chickenhawk.
 - **Retrieving the Core:** The PCs brave station security and the Talons to reach the Chickenhawk and acquire Valare's core. They learn about the Talons' planned attack on the Proch Icarus Hub.
 - **The Mutiny:** Arriving at the Icarus Hub, the PCs witness the beginning of the Talon's attack. They encounter Isabella Nowak, who reveals the truth about their mission and Chimera's creation.
 - **Confrontation on Opportunity Four:** Returning to the outpost, the PCs confront Chimera and Dr. Nakamura. Depending on their choices, they may kill Chimera, strike a deal, or allow his escape.
@@ -28,7 +28,7 @@
 ### Allies
 
 - **Kestrel:** A Red Sun operative and [[Groups/Apostate]] sympathizer who initially hires the PCs. He provides information and resources but prioritizes his loyalty to House Kimura.
-- **[[Characters/NPCs/Named NPCs/Lester Lucas]]:** A down-on-his-luck smuggler who provides crucial information about the Vantage blackout and the Talons' activities.
+- **[[Lester Lucas]]:** A down-on-his-luck smuggler who provides crucial information about the Vantage blackout and the Talons' activities.
 - **Valare (Deceased):** A Savant smuggler working for House Tsarya, capable of creating mesh blackouts. Her core holds crucial information about the PCs' Situation.
 
 ### Antagonists

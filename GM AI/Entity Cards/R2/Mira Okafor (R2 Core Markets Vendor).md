@@ -53,5 +53,5 @@ status: "active"
 - `/npc mira`
 
 ## Linked Notes
-- [[Characters/NPCs/Named NPCs/Mira Okafor]]
+- [[Mira Okafor]]
 - [[Locations/Asteroid Belts/Asteroids/Cere]]

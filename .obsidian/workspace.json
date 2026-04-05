@@ -14,13 +14,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Characters/Conversion Progress.md",
+                "file": "Characters/Named NPCs/Briar Blackwood.md",
                 "mode": "preview",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Conversion Progress"
+              "title": "Briar Blackwood"
             }
           }
         ]
@@ -64,7 +64,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "silvermist",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -108,7 +108,8 @@
               "title": "Notebook Navigator"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -128,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Characters/Conversion Progress.md",
+                "file": "Plot/Subplots/The Standard Deviation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +139,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Conversion Progress"
+              "title": "Backlinks for The Standard Deviation"
             }
           },
           {
@@ -259,13 +260,18 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "8cc94c71b16ef3f5",
+  "active": "6330179318661a0d",
   "lastOpenFiles": [
+    "Characters/Named NPCs/Briar Blackwood.md",
+    "Characters/Named NPCs/Admiral Drivas.md",
+    "Characters/Named NPCs/Aaron Blackburn.md",
+    "Characters/Conversion Progress.md",
+    "Plot/Subplots/The Standard Deviation.md",
+    "Characters/Named NPCs",
     "_Assets/Reports/VAULT_CLEANUP_REVIEW.md",
     "Sessions/Session 5/Contracts/Mission Brief - The Compiler Heist.md",
     "Characters/Players/PC Overview.md",
     "Sessions/Session 0/Session 0 - Teaching Scenario (FATE Migration).md",
-    "Plot/Subplots/The Standard Deviation.md",
     "Plot/Subplots/The Standard Deviation.md.tmp.62452.1775362300965",
     "Sessions/Session 0/Session 0 - Teaching Scenario (FATE Migration).md.tmp.48080.1775362220537",
     "Sessions/Session 0/Session 0 - Teaching Scenario (FATE Migration).md.tmp.48080.1775362208203",
@@ -276,7 +282,6 @@
     "Plot/Subplots/The Standard Deviation.md.tmp.48080.1775360767956",
     "Plot/Subplots/The Standard Deviation.md.tmp.48080.1775360748427",
     "Plot/Subplots/The Standard Deviation.md.tmp.48080.1775360733410",
-    "Plot/Subplots/The Standard Deviation.md.tmp.48080.1775360725951",
     "Rules and Mechanics/Blade-Forms.md",
     "Sessions/Session 0/Session 0 - Pregen Characters.md",
     "Sessions/Session 0/Pregen Portraits/Rhys Okafor.png",
@@ -303,10 +308,6 @@
     "Sessions/Index.md",
     "Glossary/Compel.md",
     "Sessions/Session 9/Live/Guide.md",
-    "nova-praxis-discord/node_modules/@anthropic-ai/sdk/src/_vendor/partial-json-parser/README.md",
-    "nova-praxis-discord/node_modules/@anthropic-ai/sdk/src/internal/README.md",
-    "nova-praxis-discord/node_modules/@anthropic-ai/sdk/src/core/README.md",
-    "nova-praxis-discord/node_modules/@babel/runtime/README.md",
     "Locations/Colonized Universe.canvas",
     "Untitled.canvas",
     "Sessions/Session 6/Untitled.canvas",

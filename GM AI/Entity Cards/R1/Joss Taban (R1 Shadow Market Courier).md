@@ -53,6 +53,6 @@ status: "active"
 - `/npc joss`
 
 ## Linked Notes
-- [[Characters/NPCs/Named NPCs/Joss Taban]]
+- [[Joss Taban]]
 - [[Locations/Asteroid Belts/Asteroids/Cere]]
 - [[Locations/Shadow Market]]

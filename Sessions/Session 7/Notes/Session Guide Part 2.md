@@ -4,9 +4,9 @@ This guide expands on the outline provided in the sources for "PART 2 - A DIFFER
 
 ### Part 2: A Different Vantage Point
 
-**Context:** The players, having recently resurrected on [[Locations/Asola|Asola]], are seeking answers about a mission that went wrong and resulted in their deaths. Their investigation into missing mesh data leads them to Vantage station, the site of a recent mesh blackout similar to the one that wiped their own records. They don't yet know the connection, but their search will lead them to [[Characters/NPCs/Named NPCs/Lester Lucas|Lester Lucas]], a smuggler with a dangerous secret.
+**Context:** The players, having recently resurrected on [[Locations/Asola|Asola]], are seeking answers about a mission that went wrong and resulted in their deaths. Their investigation into missing mesh data leads them to Vantage station, the site of a recent mesh blackout similar to the one that wiped their own records. They don't yet know the connection, but their search will lead them to [[Lester Lucas|Lester Lucas]], a smuggler with a dangerous secret.
 
-**Goal:** Guide the players through the investigation of the mesh blackout on Vantage, ultimately leading them to [[Characters/NPCs/Named NPCs/Lester Lucas|Lester Lucas]] and the information he possesses.
+**Goal:** Guide the players through the investigation of the mesh blackout on Vantage, ultimately leading them to [[Lester Lucas|Lester Lucas]] and the information he possesses.
 
 ### Step 1: Arrival on Vantage and Initial Investigation
 
@@ -26,7 +26,7 @@ This guide expands on the outline provided in the sources for "PART 2 - A DIFFER
 ### Step 2: Finding Lester Lucas
 
 - **Following the Clues:** Based on the information gathered, players should be able to trace the blackout to docking bay 117 and the ship that was docked there – the _Chickenhawk_.
-- **[[Characters/NPCs/Named NPCs/Lester Lucas|Lester Lucas]]:** Introduce [[Characters/NPCs/Named NPCs/Lester Lucas|Lester Lucas]] as a wary and secretive smuggler, living in fear on Vantage. He's aware that the [[Factions/Hidden Agendas/Talons of Freedom|Talons of Freedom]] are watching him and wants to leave the station as soon as possible.
+- **[[Lester Lucas|Lester Lucas]]:** Introduce [[Lester Lucas|Lester Lucas]] as a wary and secretive smuggler, living in fear on Vantage. He's aware that the [[Factions/Hidden Agendas/Talons of Freedom|Talons of Freedom]] are watching him and wants to leave the station as soon as possible.
 - **Potential Interactions:**
   - **Direct Approach:** Players could try to contact Lester directly, but he'll be suspicious and reluctant to talk. He might demand proof that they can be trusted or offer a trade for information.
   - **Indirect Approach:** Players could gather information about Lester from Other NPCs. This might involve bribing contacts, using Networking skills, or employing a Savant Program like **Pattern Scan** to uncover his past.
@@ -49,7 +49,7 @@ For each method, have the players make a skill roll. Each success unlocks a piec
 - **Secret: 3** – The blackout happened in docking bay 117 while the _Chickenhawk_ was docked there.
 - **Secret: 4** – The blackout was used to hide a transfer of goods. Witnesses heard an explosion during this time.
 - **Secret: 5** – Multiple bodies were carried out of the dock after the explosion. A deal likely went sour. The captain of the _Chickenhawk_ was smuggling weapons to the Talons of Freedom in exchange for food. He is missing.
-- **Secret: 6** – The _Chickenhawk_ belongs to [[Characters/NPCs/Named NPCs/Lester Lucas]], a member of House Silva. The ship has been moved to quarantine. Lester is usually found in the Waypoint Bar.
+- **Secret: 6** – The _Chickenhawk_ belongs to [[Lester Lucas]], a member of House Silva. The ship has been moved to quarantine. Lester is usually found in the Waypoint Bar.
 - **Secret: 7** – Lucas never left Vantage. He changed his ship's ID and docked in a secure repair bay, located at the end of an arm protruding from the station. To reach the ship, one must travel down a heavily secured passageway or exit the station and traverse the arm externally.
 
 ### Meeting Lester

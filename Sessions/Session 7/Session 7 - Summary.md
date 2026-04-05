@@ -54,7 +54,7 @@ This scenario is divided into four parts: **In the Dark**, **A Different Vantage
 - Sessions
 - Kestrel
 - Isabella Nowak
-- [[Characters/NPCs/Named NPCs/Lester Lucas]]
+- [[Lester Lucas]]
 - Talons of Freedom
 - Chimera
 

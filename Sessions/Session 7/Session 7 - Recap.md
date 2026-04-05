@@ -11,7 +11,7 @@ aliases:
 
 ## Escape from Vantage Station
 
-The party narrowly escaped Vantage Station aboard the _Chickenhawk_, aided by [[Characters/NPCs/Named NPCs/Lester Lucas]], a desperate smuggler entangled in the schemes of the Talons of Freedom.
+The party narrowly escaped Vantage Station aboard the _Chickenhawk_, aided by [[Lester Lucas]], a desperate smuggler entangled in the schemes of the Talons of Freedom.
 
 ## Key Events
 
@@ -27,7 +27,7 @@ At the end of the session, the group was left deciding what to do next with Vala
 
 - Sessions
 - Talons of Freedom
-- [[Characters/NPCs/Named NPCs/Lester Lucas]]
+- [[Lester Lucas]]
 - Valare
 
 <!-- conni: eof -->

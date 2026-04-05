@@ -53,5 +53,5 @@ status: "active"
 - `/npc udo`
 
 ## Linked Notes
-- [[Characters/NPCs/Named NPCs/Udo Grein]]
+- [[Udo Grein]]
 - [[Locations/Asteroid Belts/Asteroids/Cere]]

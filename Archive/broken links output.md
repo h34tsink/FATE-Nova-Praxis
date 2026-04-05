@@ -22,8 +22,8 @@ Don't forget that creating the file from here may create the file in the wrong d
 - [[Rules and Mechanics/Sleeves]] in [[Glossary/Sleeves]]
 - [[Rules and Mechanics/Firearms]] in [[Glossary/Firearms]]
 - Chimera in [[Characters/NPCs/NPC Organization Guide]], [[Index]]
-- [[Groups/Apostate]] in [[Characters/NPCs/The Ebon Jackal Crew]], [[Characters/NPCs/Named NPCs/Greyton]], Jace Welder, Durian Konrad, Xavier Wilhelm, Kestrel, Isabella Nowak, Valare, Chimera, [[Index]]
-- [[Groups/The Houses]] in [[Characters/NPCs/The Ebon Jackal Crew]], [[Characters/NPCs/Named NPCs/Gabriel Adams]], Durian Konrad, Xavier Wilhelm, Tiver Andlat, Christov Draiku, Kestrel, Isabella Nowak, Valare, Chimera, [[Index]]
+- [[Groups/Apostate]] in [[Characters/NPCs/The Ebon Jackal Crew]], [[Greyton]], Jace Welder, Durian Konrad, Xavier Wilhelm, Kestrel, Isabella Nowak, Valare, Chimera, [[Index]]
+- [[Groups/The Houses]] in [[Characters/NPCs/The Ebon Jackal Crew]], [[Gabriel Adams]], Durian Konrad, Xavier Wilhelm, Tiver Andlat, Christov Draiku, Kestrel, Isabella Nowak, Valare, Chimera, [[Index]]
 - [[Groups/Apostate]] in [[Plot/Situations/Missions & Intel]], [[Sessions/Session 5/Session 5 - Recap]], [[Sessions/Session 2/Session 2 - Game Summary]], [[Sessions/Session 6/Session 6 - Scenario Overview]], [[Sessions/Session 6/Session 6 - Part 1]], [[Sessions/Session 6/Part 01]], [[Sessions/Session 6/Game Scenario Overview]], [[Sessions/Session 7/Session 7 - Timeline]], [[Sessions/Session 7/Timeline]], [[Sessions/Session 7/Notes/Session Guide Part 2]], [[Sessions/Session 7/Notes/Locations and NPCs on Vantage Station]], [[Archive/Old Locations/Planets/Summary]], [[Locations/Sol System/Cities/Asola]], [[Locations/Sol System/Stations/Europa Station]], [[Locations/Sol System/Stations/Naesock Processing Hub]]
 - [[Sessions/Session 5/Session 5 - Index]] in [[Sessions/Session 5/Session 5 - Situation - Ansari Station]]
 - [[Groups/Apostate]] in [[Sessions/Session 5/Last Game Recap]], [[Archive/Old Locations/Planets/Luna]], [[Archive/Old Locations/Planets/Mars]], [[Archive/Old Locations/Planets/Neptune]], [[Archive/Old Locations/Planets/Uranus]], [[Archive/Old Locations/Planets/Venus]]
@@ -32,7 +32,7 @@ Don't forget that creating the file from here may create the file in the wrong d
 - Valare in [[Sessions/Session 6/Game Scenario Overview]], [[Sessions/Session 8/Session Guide/1.4 - Valare - Initial Meeting]], [[Sessions/Session 8/Session Guide/1.6 - Finding & Convincing Valare's Fork]]
 - Kestrel in [[Sessions/Session 6/NPC Analysis and Gameplay Insights]], [[Sessions/Session 7/Session 7 - Timeline]], [[Sessions/Session 7/Timeline]]
 - Valare in [[Sessions/Session 6/NPC Analysis and Gameplay Insights]], [[Sessions/Session 7/Session 7 - Timeline]], [[Sessions/Session 7/Session 7 - Guide]], [[Sessions/Session 7/Guide for Running the Scenario]], [[Sessions/Session 7/Timeline]], [[Sessions/Session 8/Session Guide/1.0 - The Valare Situation]]
-- [[Characters/NPCs/Named NPCs/Lester Lucas]] in [[Sessions/Session 7/Session 7 - Guide]], [[Sessions/Session 7/Guide for Running the Scenario]], [[Sessions/Session 7/Notes/Session Guide Part 2]]
+- [[Lester Lucas]] in [[Sessions/Session 7/Session 7 - Guide]], [[Sessions/Session 7/Guide for Running the Scenario]], [[Sessions/Session 7/Notes/Session Guide Part 2]]
 - Talons of Freedom in [[Sessions/Session 7/Session 7 - Guide]], [[Sessions/Session 7/Guide for Running the Scenario]], [[Sessions/Session 7/Notes/Session Guide Part 2]]
 - Isabella Nowak in [[Sessions/Session 7/Session 7 - Guide]], [[Sessions/Session 7/Guide for Running the Scenario]]
 - House Tsarya in [[Sessions/Session 7/Session 7 - Guide]], [[Sessions/Session 7/Guide for Running the Scenario]]
@@ -45,10 +45,10 @@ Don't forget that creating the file from here may create the file in the wrong d
 - Coalition in [[Sessions/Session 9/Session 9 - Scenes and Zones]], [[Sessions/Session 9/Session 9 - Guide]], [[Sessions/Session 9/Session 9 - Beats (GM Runtime)]]
 - [[Locations/Asola]] in Kestrel, [[Sessions/Session 7/Notes/Session Guide Part 2]], [[Index]]
 - [[Locations/Exo Planets/Proch]] in Isabella Nowak, Valare
-- [[Groups/Talons of Freedom]] in Valare, Chimera, [[Characters/NPCs/Named NPCs/Lester Lucas]], Seren, [[Sessions/Session 7/Notes/Session Guide Part 2]], [[Index]]
+- [[Groups/Talons of Freedom]] in Valare, Chimera, [[Lester Lucas]], Seren, [[Sessions/Session 7/Notes/Session Guide Part 2]], [[Index]]
 - [[Glossary/SINC]] in Valare, Chimera
-- House Silva in [[Characters/NPCs/Named NPCs/Lester Lucas]], Doc Holiday, [[Characters/Players/Azaria Dawson/Christa - FATE Character]], [[Characters/Players/Dr. Lorem (Doc) Ipsum/Matt - FATE Character]]
-- [[Locations/Naesock Processing Hub]] in [[Characters/NPCs/Named NPCs/Lester Lucas]], [[Index]]
+- House Silva in [[Lester Lucas]], Doc Holiday, [[Characters/Players/Azaria Dawson/Christa - FATE Character]], [[Characters/Players/Dr. Lorem (Doc) Ipsum/Matt - FATE Character]]
+- [[Locations/Naesock Processing Hub]] in [[Lester Lucas]], [[Index]]
 - [[Glossary/Technophage]] in Carmen Ashford, [[Locations/Sol System/Earth]]
 - Mercury in Carmen Ashford
 - Earth in Carmen Ashford
@@ -62,7 +62,7 @@ Don't forget that creating the file from here may create the file in the wrong d
 - House Kimura in [[Characters/Players/Dustin (Grift) Halloway/Rob - FATE Character]], [[Characters/Players/Kallius/James - FATE Character]], [[Characters/Players/Grace Pryzbylski/Sara - FATE Character]]
 - Kallius in [[Characters/Players/Grace Pryzbylski/Background]]
 - 1. Possible NPCs in [[Plot/Subplots/Arc 1/The Setup]]
-- [[Characters/NPCs/Named NPCs/Lester Lucas]] in [[Sessions/Session 7/Notes/Session Guide Part 2]]
+- [[Lester Lucas]] in [[Sessions/Session 7/Notes/Session Guide Part 2]]
 - Seren – Talon-Friendly Contact in [[Sessions/Session 8/Session Guide/1.6 - Finding & Convincing Valare's Fork]]
 - [[Rules and Mechanics/Mnemonic Editing]] in Session 9 - Finding Valare's Fork, Session 9 - Finding Valare's Fork 1, Finding Valare's Fork
 - Extended Actions in Session 9 - Finding Valare's Fork, Session 9 - Finding Valare's Fork 1, Finding Valare's Fork

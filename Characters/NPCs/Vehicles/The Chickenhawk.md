@@ -10,7 +10,7 @@ aliases:
 
 # The Chickenhawk
 
-**Summary:** Size 4 cargo ship repurposed for smuggling. Originally owned by [[Characters/NPCs/Named NPCs/Lester Lucas|Lester Lucas]].
+**Summary:** Size 4 cargo ship repurposed for smuggling. Originally owned by [[Lester Lucas|Lester Lucas]].
 
 ## Lore
 
@@ -83,7 +83,7 @@ Registered to a false CID by Lester Lucas. Seized by the Talons of Freedom. The 
 
 ## Links
 
-- [[Characters/NPCs/Named NPCs/Lester Lucas]]
+- [[Lester Lucas]]
 - Talons of Freedom
 - Vehicles Index
 - [[Glossary/Index]]

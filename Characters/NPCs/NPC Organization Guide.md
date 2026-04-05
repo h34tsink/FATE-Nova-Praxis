@@ -44,37 +44,37 @@ These are unique individuals with:
 - Story hooks and adventure seeds
 
 **Patrons & Contacts:**
-- [[Characters/NPCs/Named NPCs/Gabriel Adams]] — Casino manager, transhumanist patron/antagonist (House Silva)
-- [[Characters/NPCs/Named NPCs/Catalyst]] — Enigmatic Cipriani representative, hires Auxiliaries
+- [[Gabriel Adams]] — Casino manager, transhumanist patron/antagonist (House Silva)
+- [[Catalyst]] — Enigmatic Cipriani representative, hires Auxiliaries
 - Kestrel — Fixer and apostate information broker (House Kimura)
 - Isabella Nowak — Desperate House Tsarya executive
-- [[Characters/NPCs/Named NPCs/Horizon]] — Phalanx Formation handler (House Silva / Oversight)
-- [[Characters/NPCs/Named NPCs/Wei Tsou]] — House Jinzhan patron for the Enceladus mission
-- [[Characters/NPCs/Named NPCs/Lian Sung]] — House Jinzhan logistics coordinator
-- [[Characters/NPCs/Named NPCs/Concetta Allegro]] — House Cipriani intel operative
-- [[Characters/NPCs/Named NPCs/Salvadore Bendry]] — Second Chances mnemonics engineer
+- [[Horizon]] — Phalanx Formation handler (House Silva / Oversight)
+- [[Wei Tsou]] — House Jinzhan patron for the Enceladus mission
+- [[Lian Sung]] — House Jinzhan logistics coordinator
+- [[Concetta Allegro]] — House Cipriani intel operative
+- [[Salvadore Bendry]] — Second Chances mnemonics engineer
 
 **Antagonists & Threats:**
 - Chimera — Major campaign villain, gestalt ego entity
-- [[Characters/NPCs/Named NPCs/General Stanislaw Markov]] — House Tsarya traitor, campaign-arc antagonist
-- [[Characters/NPCs/Named NPCs/Traeger]] — "The Viking," Knight of House Dalianis, celebrity warrior
-- [[Characters/NPCs/Named NPCs/Greyton]] — Legendary ancient assassin (Apostate)
-- [[Characters/NPCs/Named NPCs/Aaron Blackburn]] — True leader of the Talons of Freedom under deep cover
-- [[Characters/NPCs/Named NPCs/Dr. Javier Schulz]] — Creator of the Progenesis virus (House Silva)
-- [[Characters/NPCs/Named NPCs/Dr. Haruto Nakamura]] — Illegal ego-merging researcher, Chimera's creator
-- [[Characters/NPCs/Named NPCs/Rusila Alvid]] — Pirate leader operating from New Turin
+- [[General Stanislaw Markov]] — House Tsarya traitor, campaign-arc antagonist
+- [[Traeger]] — "The Viking," Knight of House Dalianis, celebrity warrior
+- [[Greyton]] — Legendary ancient assassin (Apostate)
+- [[Aaron Blackburn]] — True leader of the Talons of Freedom under deep cover
+- [[Dr. Javier Schulz]] — Creator of the Progenesis virus (House Silva)
+- [[Dr. Haruto Nakamura]] — Illegal ego-merging researcher, Chimera's creator
+- [[Rusila Alvid]] — Pirate leader operating from New Turin
 
 **Supporting Cast:**
-- [[Characters/NPCs/Named NPCs/Rin Sakamoto]] — Pacifist biologist, antiphage discoverer (House Kimura)
-- [[Characters/NPCs/Named NPCs/Lester Lucas]] — Smuggler, captain of The Chickenhawk (House Silva)
-- [[Characters/NPCs/Named NPCs/Castor]] — The Viking's partner and handler (House Dalianis)
-- [[Characters/NPCs/Named NPCs/Mogi]] — House Jinzhan informant, murdered by the Viking
-- [[Characters/NPCs/Named NPCs/Geist]] — Seraphim field agent on Sanctuary
-- [[Characters/NPCs/Named NPCs/Admiral Drivas]] — Tetragon admiral, Scholae Palatinae commander
-- [[Characters/NPCs/Named NPCs/Tejun]] — SIM advisor to the Scholae (House Kimura)
-- [[Characters/NPCs/Named NPCs/Malachite]] — Grigori crew, Tsarya manipulator in the Scholae
-- [[Characters/NPCs/Named NPCs/Camber Roche]] — Mayor of Gondolin apostate enclave
-- [[Characters/NPCs/Named NPCs/Tarj McClaren]] — Centurion pressuring apostates on Asola
+- [[Rin Sakamoto]] — Pacifist biologist, antiphage discoverer (House Kimura)
+- [[Lester Lucas]] — Smuggler, captain of The Chickenhawk (House Silva)
+- [[Castor]] — The Viking's partner and handler (House Dalianis)
+- [[Mogi]] — House Jinzhan informant, murdered by the Viking
+- [[Geist]] — Seraphim field agent on Sanctuary
+- [[Admiral Drivas]] — Tetragon admiral, Scholae Palatinae commander
+- [[Tejun]] — SIM advisor to the Scholae (House Kimura)
+- [[Malachite]] — Grigori crew, Tsarya manipulator in the Scholae
+- [[Camber Roche]] — Mayor of Gondolin apostate enclave
+- [[Tarj McClaren]] — Centurion pressuring apostates on Asola
 
 **Ebon Jackal Crew** *(see [[The Ebon Jackal Crew]])*:
 - Jace Welder — Captain and pilot

@@ -53,5 +53,5 @@ status: "active"
 - `/npc patch`
 
 ## Linked Notes
-- [[Characters/NPCs/Named NPCs/Declan Yuen]]
+- [[Declan Yuen]]
 - [[Locations/Asteroid Belts/Asteroids/Cere]]

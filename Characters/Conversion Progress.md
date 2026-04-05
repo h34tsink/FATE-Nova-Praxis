@@ -18,8 +18,8 @@ tags:
 
 ### Sample NPCs (Provided by User)
 
-1. **[[Characters/NPCs/Named NPCs/Gabriel Adams]]** - House Silva casino manager
-2. **[[Characters/NPCs/Named NPCs/Greyton]]** - Legendary assassin
+1. **[[Gabriel Adams]]** - House Silva casino manager
+2. **[[Greyton]]** - Legendary assassin
 3. **Jace Welder** - Ship captain and pilot
 4. **Durian Konrad** - Political operative
 5. **Xavier Wilhelm** - Idealist warrior
@@ -32,7 +32,7 @@ tags:
 9. **Isabella Nowak** - House Tsarya executive
 10. **Valare** - Defector savant (deceased)
 11. **Chimera** - Major gestalt antagonist
-12. **[[Characters/NPCs/Named NPCs/Lester Lucas]]** - House Silva smuggler
+12. **[[Lester Lucas]]** - House Silva smuggler
 13. **Carmen Ashford** - Technophage researcher with messianic complex
 14. **Silvermist** - Notorious fixer and information broker
 15. **Whisper** - Black market dealer on Vantage Station

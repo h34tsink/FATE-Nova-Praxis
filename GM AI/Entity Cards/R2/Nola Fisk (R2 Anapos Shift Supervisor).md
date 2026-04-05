@@ -53,5 +53,5 @@ status: "active"
 - `/npc nola`
 
 ## Linked Notes
-- [[Characters/NPCs/Named NPCs/Nola Fisk]]
+- [[Nola Fisk]]
 - [[Locations/Asteroid Belts/Asteroids/Cere]]

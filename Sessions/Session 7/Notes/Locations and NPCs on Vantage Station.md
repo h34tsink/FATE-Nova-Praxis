@@ -22,7 +22,7 @@ A bustling area with constant activity as ships arrive and depart. Dockworkers, 
 
 One of several observation decks offering a breathtaking view of Earth. Popular with tourists and those seeking a moment of solitude.
 
-- **[[Characters/NPCs/Named NPCs/Lester Lucas]]** (House Silva, Sleeved). Hiding out on the observation deck after a deal with the Talons of Freedom went sour. Desperate to escape their clutches and willing to hire the PCs for help.
+- **[[Lester Lucas]]** (House Silva, Sleeved). Hiding out on the observation deck after a deal with the Talons of Freedom went sour. Desperate to escape their clutches and willing to hire the PCs for help.
 
 ### Black Market Dealer's Stall (Not in Sources)
 

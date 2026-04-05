@@ -1,6 +1,6 @@
 ### **Overview**
 
-In this adventure, the players investigate a mesh blackout on **Vantage Station** that mirrors a similar incident affecting them. Their investigation leads them through a web of intrigue involving **[[Characters/NPCs/Named NPCs/Lester Lucas|Lester Lucas]]**, the **Talons of Freedom**, and ultimately points them toward **Isabella Nowak** of **House Tsarya** on the **Icarus Hub** orbiting **Proch**. Along the way, they encounter **Chimera**, a gestalt entity intent on self-preservation at any cost.
+In this adventure, the players investigate a mesh blackout on **Vantage Station** that mirrors a similar incident affecting them. Their investigation leads them through a web of intrigue involving **[[Lester Lucas|Lester Lucas]]**, the **Talons of Freedom**, and ultimately points them toward **Isabella Nowak** of **House Tsarya** on the **Icarus Hub** orbiting **Proch**. Along the way, they encounter **Chimera**, a gestalt entity intent on self-preservation at any cost.
 
 ---
 
@@ -9,7 +9,7 @@ In this adventure, the players investigate a mesh blackout on **Vantage Station*
 ### **Preparation**
 
 - **Review Key NPCs:**
-  - **[[Characters/NPCs/Named NPCs/Lester Lucas]]**: Smuggler entangled with the Talons, desperate to escape.
+  - **[[Lester Lucas]]**: Smuggler entangled with the Talons, desperate to escape.
   - **Valare**: Savant whose mnemonic core holds vital information.
   - **Talons of Freedom Members**: Antagonists with their own agenda.
   - **Additional NPCs**: Dockworkers, security officers, merchants, and informants on Vantage.
