@@ -1,7 +1,7 @@
 import { SlashCommandBuilder, ChatInputCommandInteraction, MessageFlags } from 'discord.js';
 import { requireGM } from '../middleware/permissions.js';
 import { callApi, extractSearchTerms } from '../claude/api.js';
-import { searchGameData, searchGlossary, searchRules, searchSessions, getEntityCard, getEntityCardByName, listEntityCards, type GlossaryRow } from '../db/queries.js';
+import { searchGameData, searchGlossary, searchRules, searchSessions, searchVaultNotes, getEntityCard, getEntityCardByName, listEntityCards, type GlossaryRow } from '../db/queries.js';
 import { gmResponseEmbed } from '../embeds/gm-response.js';
 
 export const data = new SlashCommandBuilder()
@@ -33,11 +33,12 @@ async function gatherContext(question: string): Promise<string> {
   const allQueries = [question, ...searchTerms];
 
   // Run all searches in parallel across all expanded terms
-  const [gameResults, glossaryResults, rulesResults, sessionResults] = await Promise.all([
+  const [gameResults, glossaryResults, rulesResults, sessionResults, vaultResults] = await Promise.all([
     dedupeSearches(allQueries, (q) => searchGameData(q)),
     dedupeGlossary(allQueries),
     dedupeSearches(allQueries, (q) => searchRules(q)),
     dedupeSearches(allQueries, (q) => searchSessions(q)),
+    dedupeSearches(allQueries, (q) => searchVaultNotes(q)),
   ]);
 
   if (gameResults.length > 0) {
@@ -67,6 +68,13 @@ async function gatherContext(question: string): Promise<string> {
       `**${r.heading}** [Session ${r.session_num}, ${r.file_type ?? 'notes'}]:\n${r.content.slice(0, 800)}`
     );
     sections.push(`## Session Notes\n${sessions.join('\n\n')}`);
+  }
+
+  if (vaultResults.length > 0) {
+    const notes = vaultResults.slice(0, 4).map((r) =>
+      `**${r.title}** [${r.folder ?? 'vault'}] (${r.file_path}):\n${r.content.slice(0, 800)}`
+    );
+    sections.push(`## Vault Notes\n${notes.join('\n\n')}`);
   }
 
   // Dynamically detect NPC mentions and load entity card
@@ -130,7 +138,7 @@ ${context || 'No relevant context found in the database.'}
 ## Question
 ${question}
 
-Answer concisely and directly. If this is about an NPC, stay in-world. If about rules or gear, cite specifics. If about a session or scenario, use the session notes above.
+Answer concisely and directly. If this is about an NPC, use whatever context is available — entity card, session notes, or general Nova Praxis knowledge — and flag which source you're drawing from. Never say "no data found" if session notes or general knowledge can fill the gap. If about rules or gear, cite specifics.
 
 Format for Discord: use **bold**, *italic*, \`code\`, and > blockquotes. Use markdown tables for structured data. Keep it scannable.`;
 

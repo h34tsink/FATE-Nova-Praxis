@@ -244,6 +244,35 @@ export async function searchSessions(searchQuery: string, sessionNum?: number) {
 export { getActiveAspects } from './aspect-queries.js';
 export type { AspectWithUsage } from './aspect-queries.js';
 
+// --- Vault Notes ---
+
+export interface VaultNoteRow {
+  id: number;
+  file_path: string;
+  title: string;
+  folder: string | null;
+  tags: string[];
+  content: string;
+  rank: number;
+}
+
+export async function searchVaultNotes(searchQuery: string, folder?: string) {
+  const params: unknown[] = [searchQuery];
+  let sql = `
+    SELECT id, file_path, title, folder, tags, content,
+           ts_rank(search_vec, plainto_tsquery('english', $1)) AS rank
+    FROM vault_notes
+    WHERE search_vec @@ plainto_tsquery('english', $1)
+  `;
+  if (folder) {
+    sql += ` AND folder = $2`;
+    params.push(folder);
+  }
+  sql += ` ORDER BY rank DESC LIMIT 5`;
+  const result = await query<VaultNoteRow>(sql, params);
+  return result.rows;
+}
+
 // --- Utility ---
 
 export async function getTableCounts() {

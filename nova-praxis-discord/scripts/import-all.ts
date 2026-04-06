@@ -7,6 +7,7 @@ const scripts = [
   'import-entities.ts',
   'import-characters.ts',
   'import-sessions.ts',
+  'import-vault.ts',
 ];
 
 for (const script of scripts) {
