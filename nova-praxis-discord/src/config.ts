@@ -17,4 +17,8 @@ export const config = {
   anthropic: {
     apiKey: process.env.ANTHROPIC_API_KEY || '',
   },
+  ollama: {
+    baseUrl: process.env.OLLAMA_BASE_URL || 'http://host.docker.internal:11434',
+    model: process.env.OLLAMA_MODEL || 'gemma4:31b',
+  },
 };

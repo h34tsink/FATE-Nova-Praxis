@@ -1,6 +1,32 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { config } from '../config.js';
 
+async function callOllama(
+  system: string,
+  prompt: string,
+  maxTokens = 2048
+): Promise<ApiResult> {
+  const { baseUrl, model } = config.ollama;
+  const response = await fetch(`${baseUrl}/api/chat`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      model,
+      stream: false,
+      messages: [
+        { role: 'system', content: system },
+        { role: 'user', content: prompt },
+      ],
+      options: { num_predict: maxTokens, temperature: 0.7 },
+    }),
+  });
+
+  if (!response.ok) throw new Error(`Ollama error: ${response.status}`);
+  const data = await response.json();
+  const output = data.message?.content ?? '';
+  return { output, model, inputTokens: 0, outputTokens: 0 };
+}
+
 const client = new Anthropic({ apiKey: config.anthropic.apiKey });
 
 export type ModelTier = 'fast' | 'quality';
@@ -24,6 +50,10 @@ export async function callApi(
   tier: ModelTier = 'quality',
   maxTokens = 2048
 ): Promise<ApiResult> {
+  if (!config.anthropic.apiKey) {
+    return callOllama(SYSTEM_PROMPT, prompt, maxTokens);
+  }
+
   const model = MODELS[tier];
 
   const response = await client.messages.create({
@@ -51,6 +81,16 @@ export async function callApi(
  * Returns an array of short phrases optimized for tsvector matching.
  */
 export async function extractSearchTerms(question: string): Promise<string[]> {
+  if (!config.anthropic.apiKey) {
+    // Simple fallback: split on common words and return meaningful tokens
+    return question
+      .toLowerCase()
+      .replace(/[^a-z0-9 ]/g, ' ')
+      .split(/\s+/)
+      .filter((w) => w.length > 3 && !['what', 'does', 'when', 'how', 'the', 'and', 'for'].includes(w))
+      .slice(0, 5);
+  }
+
   const response = await client.messages.create({
     model: MODELS.fast,
     max_tokens: 150,

@@ -1,7 +1,7 @@
 import { SlashCommandBuilder, ChatInputCommandInteraction, MessageFlags } from 'discord.js';
 import { requireGM } from '../middleware/permissions.js';
 import { callApi, extractSearchTerms } from '../claude/api.js';
-import { searchGameData, searchGlossary, searchRules, getEntityCard, getEntityCardByName, type GlossaryRow } from '../db/queries.js';
+import { searchGameData, searchGlossary, searchRules, searchSessions, getEntityCard, getEntityCardByName, type GlossaryRow } from '../db/queries.js';
 import { gmResponseEmbed } from '../embeds/gm-response.js';
 
 export const data = new SlashCommandBuilder()
@@ -27,10 +27,11 @@ async function gatherContext(question: string): Promise<string> {
   const allQueries = [question, ...searchTerms];
 
   // Run all searches in parallel across all expanded terms
-  const [gameResults, glossaryResults, rulesResults] = await Promise.all([
+  const [gameResults, glossaryResults, rulesResults, sessionResults] = await Promise.all([
     dedupeSearches(allQueries, (q) => searchGameData(q)),
     dedupeGlossary(allQueries),
     dedupeSearches(allQueries, (q) => searchRules(q)),
+    dedupeSearches(allQueries, (q) => searchSessions(q)),
   ]);
 
   if (gameResults.length > 0) {
@@ -50,9 +51,16 @@ async function gatherContext(question: string): Promise<string> {
 
   if (rulesResults.length > 0) {
     const rules = rulesResults.slice(0, 5).map((r) =>
-      `**${r.heading}** (${r.file_path}):\n${r.content.slice(0, 500)}`
+      `**${r.heading}** (${r.file_path}):\n${r.content.slice(0, 800)}`
     );
     sections.push(`## Rules\n${rules.join('\n\n')}`);
+  }
+
+  if (sessionResults.length > 0) {
+    const sessions = sessionResults.slice(0, 4).map((r) =>
+      `**${r.heading}** [Session ${r.session_num}, ${r.file_type ?? 'notes'}]:\n${r.content.slice(0, 800)}`
+    );
+    sections.push(`## Session Notes\n${sessions.join('\n\n')}`);
   }
 
   // Check for NPC mentions and load entity cards
@@ -106,7 +114,7 @@ export async function execute(interaction: ChatInputCommandInteraction) {
   try {
     const context = await gatherContext(question);
 
-    const prompt = `You are a Nova Praxis TTRPG assistant. Answer the following question using ONLY the provided context. If the context doesn't contain enough information, say so. Be concise and direct.
+    const prompt = `You are a Nova Praxis TTRPG assistant with deep knowledge of the setting, rules, and this campaign's ongoing story. Answer the question using the provided context as your primary source. If the context is thin, draw on your Nova Praxis and FATE system knowledge — but flag it as general knowledge rather than campaign-specific.
 
 ## Context from Database
 ${context || 'No relevant context found in the database.'}
@@ -114,7 +122,7 @@ ${context || 'No relevant context found in the database.'}
 ## Question
 ${question}
 
-Answer concisely. If this is about an NPC, stay in-world. If about rules or gear, cite specifics.
+Answer concisely and directly. If this is about an NPC, stay in-world. If about rules or gear, cite specifics. If about a session or scenario, use the session notes above.
 
 Format for Discord: use **bold**, *italic*, \`code\`, and > blockquotes. Use markdown tables for structured data. Keep it scannable.`;
 
