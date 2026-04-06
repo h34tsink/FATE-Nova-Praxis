@@ -70,12 +70,16 @@ async function gatherContext(question: string): Promise<string> {
   }
 
   // Dynamically detect NPC mentions and load entity card
-  const npcToken = await findMentionedNPC(question);
-  if (npcToken) {
-    const card = await getEntityCard(npcToken) || await getEntityCardByName(npcToken);
-    if (card) {
-      sections.push(`## Entity Card: ${card.name}\n${card.full_card}`);
+  try {
+    const npcToken = await findMentionedNPC(question);
+    if (npcToken) {
+      const card = await getEntityCard(npcToken) || await getEntityCardByName(npcToken);
+      if (card) {
+        sections.push(`## Entity Card: ${card.name}\n${card.full_card}`);
+      }
     }
+  } catch {
+    // Non-fatal — proceed without entity card
   }
 
   return sections.join('\n\n---\n\n');

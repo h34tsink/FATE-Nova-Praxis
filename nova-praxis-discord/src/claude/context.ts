@@ -1,44 +1,115 @@
-import { getEntityCard, getEntityCardByName, searchRules, searchGameData, searchGlossary, getLatestSessionNum, getSessionSections, listEntityCards } from '../db/queries.js';
+import { getEntityCard, getEntityCardByName, searchRules, getLatestSessionNum, getSessionSections, listEntityCards } from '../db/queries.js';
 import { getActiveAspects } from '../db/aspect-queries.js';
 
+function formatAspects(aspects: Awaited<ReturnType<typeof getActiveAspects>>): string {
+  return aspects.map((a) => {
+    let line = `- [${a.type}] ${a.text}`;
+    if (a.severity) line += ` — ${a.severity}`;
+    if (a.source) line += ` (${a.source})`;
+    return line;
+  }).join('\n');
+}
+
 export async function buildNpcContext(token: string, situation: string): Promise<string> {
-  const card = await getEntityCard(token) || await getEntityCardByName(token);
+  const sessionNum = await getLatestSessionNum();
 
-  let context = '';
+  const [card, stateSections, aspects] = await Promise.all([
+    getEntityCard(token).then((c) => c ?? getEntityCardByName(token)),
+    sessionNum ? getSessionSections(sessionNum, 'state') : Promise.resolve([]),
+    sessionNum ? getActiveAspects(sessionNum) : Promise.resolve([]),
+  ]);
+
+  const sections: string[] = [];
+
   if (card) {
-    context += `## Entity Card for ${card.name}\n\n${card.full_card}\n\n`;
+    sections.push(`## Entity Card: ${card.name}\n\n${card.full_card}`);
   }
 
-  context += `## Dialogue Request\n\n`;
-  context += `Generate in-character dialogue for ${card?.name || token}.\n`;
-  if (situation) {
-    context += `Situation: ${situation}\n`;
+  if (stateSections.length > 0) {
+    sections.push(`## Current Session State\n\n${stateSections.slice(0, 2).map((s) => `### ${s.heading}\n${s.content}`).join('\n\n')}`);
   }
-  context += `\nRespond using the /npc command format from the nova-praxis-gm plugin.`;
 
-  return context;
+  if (aspects.length > 0) {
+    sections.push(`## Active Aspects in Play\n\n${formatAspects(aspects)}`);
+  }
+
+  const context = sections.join('\n\n---\n\n');
+
+  return `You are a Nova Praxis TTRPG assistant generating in-character NPC dialogue.
+
+${context}
+
+## Dialogue Request
+
+Generate in-character dialogue for **${card?.name || token}** responding to this situation: ${situation || 'a general encounter with the party'}
+
+Respond in this format:
+1. **In-character line(s)** (1-4 lines, voice-accurate — use > blockquote format)
+2. **Intent:** one line — what the NPC is trying to achieve
+3. **Hidden truth (GM only):** one short line
+
+Keep voice consistent with the entity card. Ground the response in the active session state and aspects if relevant.`;
 }
 
 export async function buildSceneContext(description: string): Promise<string> {
-  let context = `## Scene Framing Request\n\n`;
-  context += `Frame a scene: ${description}\n\n`;
-  context += `Respond using the /scene command format from the nova-praxis-gm plugin.`;
-  return context;
+  const sessionNum = await getLatestSessionNum();
+
+  const [guideSections, stateSections, aspects, entityCards] = await Promise.all([
+    sessionNum ? getSessionSections(sessionNum, 'guide') : Promise.resolve([]),
+    sessionNum ? getSessionSections(sessionNum, 'state') : Promise.resolve([]),
+    sessionNum ? getActiveAspects(sessionNum) : Promise.resolve([]),
+    listEntityCards(),
+  ]);
+
+  const sections: string[] = [];
+
+  if (guideSections.length > 0) {
+    sections.push(`## Session Guide\n\n${guideSections.slice(0, 3).map((s) => `### ${s.heading}\n${s.content}`).join('\n\n')}`);
+  }
+
+  if (stateSections.length > 0) {
+    sections.push(`## Live Session State\n\n${stateSections.slice(0, 2).map((s) => `### ${s.heading}\n${s.content}`).join('\n\n')}`);
+  }
+
+  if (aspects.length > 0) {
+    sections.push(`## Active Aspects\n\n${formatAspects(aspects)}`);
+  }
+
+  if (entityCards.length > 0) {
+    const roster = entityCards.map((e) => `- **${e.name}** (R${e.rank}) \`${e.token}\`${e.faction ? ` [${e.faction}]` : ''}`);
+    sections.push(`## NPC Roster\n\n${roster.join('\n')}`);
+  }
+
+  const context = sections.join('\n\n---\n\n');
+
+  return `You are a Nova Praxis TTRPG GM assistant framing a scene.
+
+${context || 'No session data loaded.'}
+
+## Scene to Frame
+
+${description}
+
+Respond with:
+1. **Scene:** 2-3 sentence atmospheric opener
+2. **Zones:** relevant zones with one trait each
+3. **Aspects:** 2-3 scene aspects (double-edged FATE aspects)
+4. **NPCs Present:** which NPCs are here and their initial stance
+5. **Compel opportunity:** one immediate compel hook
+
+Format for Discord. Keep it punchy and table-ready.`;
 }
 
 export async function buildRulesContext(question: string): Promise<{ fastAnswer: string | null; fullPrompt: string }> {
-  // Try fast path — pg tsvector search
   const results = await searchRules(question);
 
   if (results.length > 0 && results[0].rank > 0.1) {
-    // High confidence — return pg result directly
     const top = results[0];
     const answer = `**${top.heading}**\n\n${top.content}`;
     const source = `${top.file_path} (${top.subsystem || 'general'})`;
     return { fastAnswer: `${answer}\n\n**Source:** ${source}`, fullPrompt: '' };
   }
 
-  // Low confidence — escalate to Claude CLI
   let context = `## Rules Question\n\n${question}\n\n`;
   if (results.length > 0) {
     context += `## Possibly Relevant Rules Sections\n\n`;
@@ -46,53 +117,76 @@ export async function buildRulesContext(question: string): Promise<{ fastAnswer:
       context += `### ${r.heading} (${r.file_path})\n${r.content}\n\n`;
     }
   }
-  context += `Respond using the /rules command format from the nova-praxis-gm plugin.`;
+  context += `Answer using the /rules command format: **Answer**, **Exceptions/Modifiers**, **Source**, **Confidence**.`;
 
   return { fastAnswer: null, fullPrompt: context };
 }
 
 export async function buildRecapContext(): Promise<string> {
   const sessionNum = await getLatestSessionNum();
-  if (!sessionNum) return `Generate a session recap using the /recap command format from the nova-praxis-gm plugin.`;
+  if (!sessionNum) return `Generate a session recap. No session data found — has the vault been synced?`;
+
+  // Parallel queries — was sequential before
+  const [stateSections, guideSections, sceneSections, aspects] = await Promise.all([
+    getSessionSections(sessionNum, 'state'),
+    getSessionSections(sessionNum, 'guide'),
+    getSessionSections(sessionNum, 'scenes'),
+    getActiveAspects(sessionNum),
+  ]);
 
   const sections: string[] = [];
 
-  // Get state files first (GM Command Board, Live Dashboard)
-  const stateSections = await getSessionSections(sessionNum, 'state');
   if (stateSections.length > 0) {
     sections.push(`## Session ${sessionNum} — Live State\n\n${stateSections.map((s) => `### ${s.heading}\n${s.content}`).join('\n\n')}`);
   }
-
-  // Get guide/index
-  const guideSections = await getSessionSections(sessionNum, 'guide');
   if (guideSections.length > 0) {
     sections.push(`## Session Guide\n\n${guideSections.slice(0, 5).map((s) => `### ${s.heading}\n${s.content}`).join('\n\n')}`);
   }
-
-  // Get scenes
-  const sceneSections = await getSessionSections(sessionNum, 'scenes');
   if (sceneSections.length > 0) {
     sections.push(`## Scenes\n\n${sceneSections.slice(0, 5).map((s) => `### ${s.heading}\n${s.content}`).join('\n\n')}`);
   }
-
-  // Get active aspects
-  const aspects = await getActiveAspects(sessionNum);
   if (aspects.length > 0) {
-    const aspectLines = aspects.map((a) => {
-      let line = `- [${a.type}] ${a.text}`;
-      if (a.severity) line += ` — ${a.severity}`;
-      if (a.source) line += ` (${a.source})`;
-      return line;
-    });
-    sections.push(`## Active Aspects\n\n${aspectLines.join('\n')}`);
+    sections.push(`## Active Aspects\n\n${formatAspects(aspects)}`);
   }
 
   const context = sections.join('\n\n---\n\n');
-  return `Using the following session ${sessionNum} data from the database, generate a recap using the /recap command format from the nova-praxis-gm plugin.\n\n${context}`;
+  return `Using session ${sessionNum} data below, generate a concise GM recap. Cover: what happened, where things stand, active aspects, and what's next. Under 20 lines. Format for Discord.\n\n${context}`;
 }
 
 export async function buildAspectsContext(subject: string): Promise<string> {
-  return `Generate FATE Aspects for: ${subject}\n\nRespond using the /aspects command format from the nova-praxis-gm plugin.`;
+  const sessionNum = await getLatestSessionNum();
+
+  const [stateSections, aspects] = await Promise.all([
+    sessionNum ? getSessionSections(sessionNum, 'state') : Promise.resolve([]),
+    sessionNum ? getActiveAspects(sessionNum) : Promise.resolve([]),
+  ]);
+
+  const sections: string[] = [];
+
+  if (stateSections.length > 0) {
+    sections.push(`## Current Session State\n\n${stateSections.slice(0, 2).map((s) => `### ${s.heading}\n${s.content}`).join('\n\n')}`);
+  }
+  if (aspects.length > 0) {
+    sections.push(`## Already Active Aspects\n\n${formatAspects(aspects)}`);
+  }
+
+  const context = sections.join('\n\n---\n\n');
+
+  return `You are generating FATE Aspects for a Nova Praxis campaign.
+
+${context || ''}
+
+## Request
+
+Generate 3-5 double-edged FATE Aspects for: **${subject}**
+
+Each aspect should:
+- Be 3-8 words, punchy phrasing
+- Work as both an invoke (benefit) AND a compel (complication)
+- Fit the Nova Praxis transhuman sci-fi setting
+- Not duplicate the already-active aspects listed above
+
+Format as a numbered list with a brief note on how each can be invoked and compelled.`;
 }
 
 export async function buildGmStartContext(sessionNum?: number): Promise<string> {
