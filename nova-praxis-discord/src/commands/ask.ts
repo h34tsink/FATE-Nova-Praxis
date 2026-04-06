@@ -1,7 +1,7 @@
 import { SlashCommandBuilder, ChatInputCommandInteraction, MessageFlags } from 'discord.js';
 import { requireGM } from '../middleware/permissions.js';
 import { callApi, extractSearchTerms } from '../claude/api.js';
-import { searchGameData, searchGlossary, searchRules, searchSessions, getEntityCard, getEntityCardByName, type GlossaryRow } from '../db/queries.js';
+import { searchGameData, searchGlossary, searchRules, searchSessions, getEntityCard, getEntityCardByName, listEntityCards, type GlossaryRow } from '../db/queries.js';
 import { gmResponseEmbed } from '../embeds/gm-response.js';
 
 export const data = new SlashCommandBuilder()
@@ -11,12 +11,18 @@ export const data = new SlashCommandBuilder()
     opt.setName('question').setDescription('Your question in natural language').setRequired(true)
   );
 
-// Known NPC tokens/names for context detection
-const NPC_TOKENS = [
-  'kestrel', 'nowak', 'isabella', 'chimera', 'valare', 'valare_fork',
-  'valare_integrated', 'seren', 'kal', 'paddock', 'lighthouse', 'royce',
-  'patch', 'yuen', 'mira', 'nola', 'sera', 'udo', 'declan', 'joss', 'taban',
-];
+// Dynamically loaded from DB — refreshed per request
+async function findMentionedNPC(question: string) {
+  const lowerQ = question.toLowerCase();
+  const cards = await listEntityCards();
+  for (const card of cards) {
+    const nameParts = card.name.toLowerCase().split(/\s+/);
+    if (nameParts.some((part) => part.length > 3 && lowerQ.includes(part))) {
+      return card.token;
+    }
+  }
+  return null;
+}
 
 async function gatherContext(question: string): Promise<string> {
   const sections: string[] = [];
@@ -63,14 +69,12 @@ async function gatherContext(question: string): Promise<string> {
     sections.push(`## Session Notes\n${sessions.join('\n\n')}`);
   }
 
-  // Check for NPC mentions and load entity cards
-  for (const token of NPC_TOKENS) {
-    if (lowerQ.includes(token)) {
-      const card = await getEntityCard(token) || await getEntityCardByName(token);
-      if (card) {
-        sections.push(`## Entity Card: ${card.name}\n${card.full_card}`);
-        break;
-      }
+  // Dynamically detect NPC mentions and load entity card
+  const npcToken = await findMentionedNPC(question);
+  if (npcToken) {
+    const card = await getEntityCard(npcToken) || await getEntityCardByName(npcToken);
+    if (card) {
+      sections.push(`## Entity Card: ${card.name}\n${card.full_card}`);
     }
   }
 

@@ -84,41 +84,50 @@ function parseEntityCard(filepath: string, rankFolder: string): EntityCard | nul
   };
 }
 
+async function upsertCard(card: EntityCard, label: string) {
+  await query(
+    `INSERT INTO entity_cards (token, name, rank, class, faction, voice_profile, full_card)
+     VALUES ($1, $2, $3, $4, $5, $6, $7)
+     ON CONFLICT (token) DO UPDATE SET
+       name = $2, rank = $3, class = $4, faction = $5, voice_profile = $6, full_card = $7`,
+    [card.token, card.name, card.rank, card.class, card.faction, JSON.stringify(card.voice_profile), card.full_card]
+  );
+  console.log(`  ${label}: ${card.token} (R${card.rank})`);
+}
+
 async function main() {
   console.log('Importing entity cards...');
   await query('TRUNCATE entity_cards RESTART IDENTITY');
 
   let count = 0;
 
-  // Walk R1-R5 folders
+  // Walk GM AI/Entity Cards/R1-R5 folders
   const rankFolders = readdirSync(ENTITY_DIR).filter((f) => f.startsWith('R'));
-
   for (const rankFolder of rankFolders) {
     const folderPath = join(ENTITY_DIR, rankFolder);
     const files = readdirSync(folderPath).filter((f) => f.endsWith('.md'));
-
     for (const file of files) {
       const card = parseEntityCard(join(folderPath, file), rankFolder);
       if (!card) continue;
-
-      await query(
-        `INSERT INTO entity_cards (token, name, rank, class, faction, voice_profile, full_card)
-         VALUES ($1, $2, $3, $4, $5, $6, $7)
-         ON CONFLICT (token) DO UPDATE SET
-           name = $2, rank = $3, class = $4, faction = $5, voice_profile = $6, full_card = $7`,
-        [
-          card.token,
-          card.name,
-          card.rank,
-          card.class,
-          card.faction,
-          JSON.stringify(card.voice_profile),
-          card.full_card,
-        ]
-      );
-      console.log(`  ${rankFolder}/${file}: ${card.token} (R${card.rank})`);
+      await upsertCard(card, `${rankFolder}/${file}`);
       count++;
     }
+  }
+
+  // Also import Characters/Named NPCs/ as entity cards
+  const namedNpcDir = join(VAULT, 'Characters', 'Named NPCs');
+  try {
+    const npcFiles = readdirSync(namedNpcDir).filter((f) => f.endsWith('.md'));
+    for (const file of npcFiles) {
+      const card = parseEntityCard(join(namedNpcDir, file), '');
+      if (!card) continue;
+      // Default to R2 if rank not specified in frontmatter
+      if (!card.rank) card.rank = 2;
+      await upsertCard(card, `Named NPCs/${file}`);
+      count++;
+    }
+  } catch {
+    console.log('  (No Named NPCs folder found, skipping)');
   }
 
   console.log(`Total: ${count} entity cards imported`);
