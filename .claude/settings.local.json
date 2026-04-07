@@ -124,7 +124,11 @@
       "Bash(PYTHONIOENCODING=utf-8 PYTHONUTF8=1 notebooklm create \"SWADE to FATE Migration - Nova Praxis\")",
       "Read(//d/ObsidianVaults/Nova Praxis/_Assets/Extracts/**)",
       "Read(//d/ObsidianVaults/Nova Praxis/Characters/**)",
-      "Read(//d/ObsidianVaults/**)"
+      "Read(//d/ObsidianVaults/**)",
+      "Bash(ipconfig)",
+      "Bash(grep -l \"aspects\" \"d:/ObsidianVaults/Nova Praxis/nova-praxis-gm/commands/\"*.md \"d:/ObsidianVaults/Nova Praxis/nova-praxis-gm/skills/\"*/SKILL.md)",
+      "Bash(grep -l \"thinking\\\\|think\" \"d:/ObsidianVaults/Nova Praxis/nova-praxis-gm/commands/\"*.md)",
+      "Bash(PYTHONIOENCODING=utf-8 notebooklm create \"Cold Start Syndicate - New Player Onboarding\" --json)"
     ]
   }
 }
