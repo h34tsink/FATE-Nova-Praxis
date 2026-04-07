@@ -58,9 +58,12 @@ function parseEntityCard(filepath: string, rankFolder: string): EntityCard | nul
 
   const filename = basename(filepath, '.md');
 
-  // Extract rank from folder name (R1, R2, etc.) or frontmatter
+  // Extract rank — try frontmatter (handles "R3" or "3"), then folder name, then 0
   const rankMatch = rankFolder.match(/R(\d)/);
-  const rank = fm.rank ? parseInt(fm.rank) : rankMatch ? parseInt(rankMatch[1]) : 0;
+  const fmRankNum = fm.rank ? parseInt(fm.rank.replace(/[^0-9]/g, '')) : NaN;
+  const rank = !isNaN(fmRankNum) && fmRankNum > 0
+    ? fmRankNum
+    : rankMatch ? parseInt(rankMatch[1]) : 0;
 
   // Extract token from frontmatter or generate from name
   const token = fm.token || filename.split('(')[0].trim().toLowerCase().replace(/\s+/g, '_');

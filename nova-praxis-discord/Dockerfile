@@ -10,4 +10,5 @@ COPY init.sql ./
 RUN npx tsc
 COPY scripts/start.sh ./
 RUN chmod +x start.sh
+# Cache bust — increment when scripts change: v3
 CMD ["./start.sh"]
