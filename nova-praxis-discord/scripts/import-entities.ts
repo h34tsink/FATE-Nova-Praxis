@@ -16,8 +16,10 @@ interface EntityCard {
 }
 
 function parseFrontmatter(content: string): { fm: Record<string, string>; body: string } {
-  const match = content.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
-  if (!match) return { fm: {}, body: content };
+  // Normalize Windows line endings before parsing
+  const normalized = content.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+  const match = normalized.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+  if (!match) return { fm: {}, body: normalized };
 
   const fm: Record<string, string> = {};
   for (const line of match[1].split('\n')) {
@@ -115,19 +117,27 @@ async function main() {
   }
 
   // Also import Characters/Named NPCs/ as entity cards
+  // Skip any token that was already imported from GM AI/Entity Cards/ (don't overwrite richer cards)
+  const existingTokens = new Set(
+    (await query<{ token: string }>('SELECT token FROM entity_cards')).rows.map((r) => r.token)
+  );
+
   const namedNpcDir = join(VAULT, 'Characters', 'Named NPCs');
   try {
     const npcFiles = readdirSync(namedNpcDir).filter((f) => f.endsWith('.md'));
     for (const file of npcFiles) {
       const card = parseEntityCard(join(namedNpcDir, file), '');
       if (!card) continue;
-      // Default to R2 if rank not specified in frontmatter
       if (!card.rank) card.rank = 2;
+      if (existingTokens.has(card.token)) {
+        console.log(`  Named NPCs/${file}: skipped (entity card exists)`);
+        continue;
+      }
       await upsertCard(card, `Named NPCs/${file}`);
       count++;
     }
-  } catch {
-    console.log('  (No Named NPCs folder found, skipping)');
+  } catch (err) {
+    console.error('  Named NPCs import error:', err);
   }
 
   console.log(`Total: ${count} entity cards imported`);

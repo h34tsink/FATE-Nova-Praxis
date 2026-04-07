@@ -43,11 +43,12 @@ function shouldSkip(relPath: string): boolean {
 }
 
 function parseFrontmatter(content: string): { title: string; tags: string[]; body: string } {
-  const match = content.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
+  const content2 = content.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+  const match = content2.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
   if (!match) {
     // No frontmatter — extract title from first H1
-    const h1 = content.match(/^#\s+(.+)$/m);
-    return { title: h1?.[1]?.trim() ?? '', tags: [], body: content };
+    const h1 = content2.match(/^#\s+(.+)$/m);
+    return { title: h1?.[1]?.trim() ?? '', tags: [], body: content2 };
   }
 
   const fm = match[1];
