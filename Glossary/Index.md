@@ -11,10 +11,11 @@ aliases:
 
 # Glossary Index
 
-The canonical terminology index for the Nova Praxis campaign vault. 95 entries across mechanics, character states, technology, factions, and Pneuma quantum-consciousness theory.
+The canonical terminology index for the Nova Praxis campaign vault. 109 entries across mechanics, character states, technology, factions, and Pneuma quantum-consciousness theory.
 
 ## FATE / Strands of Fate Mechanics
 - [[Glossary/Aspect]]
+- [[Glossary/Assets]]
 - [[Glossary/Compel]]
 - [[Glossary/Consequences]]
 - [[Glossary/Declaration]]
@@ -22,6 +23,7 @@ The canonical terminology index for the Nova Praxis campaign vault. 95 entries a
 - [[Glossary/Effect Aspect]]
 - [[Glossary/Effort]]
 - [[Glossary/Fate Point]]
+- [[Glossary/FATE Ladder]]
 - [[Glossary/Free Spin]]
 - [[Glossary/Invoke]]
 - [[Glossary/Refresh]]
@@ -58,6 +60,9 @@ The canonical terminology index for the Nova Praxis campaign vault. 95 entries a
 - [[Glossary/Fork]]
 - [[Glossary/CID]]
 - [[Glossary/Apotheosis]]
+- [[Glossary/Synthesis]]
+- [[Glossary/Mindset]]
+- [[Glossary/Chimera]]
 - [[Glossary/Resleeve]]
 - [[Glossary/Resurrection Chamber]]
 - [[Glossary/Consciousness Upload]]
@@ -82,6 +87,7 @@ The canonical terminology index for the Nova Praxis campaign vault. 95 entries a
 - [[Glossary/Armor]]
 - [[Glossary/Augmentations]]
 - [[Glossary/Firearms]]
+- [[Glossary/Heavy Assault Rail-Rifle]]
 - [[Glossary/Melee Weapons]]
 - [[Glossary/Explosives]]
 - [[Glossary/Hostware]]
@@ -89,8 +95,10 @@ The canonical terminology index for the Nova Praxis campaign vault. 95 entries a
 - [[Glossary/Monitor Spyder]]
 - [[Glossary/Portable Personal Computer]]
 - [[Glossary/Cyber-Intrusion and Security Terminal]]
+- [[Glossary/APEX Reactor]]
 
 ## Virtuality & Network
+- [[Glossary/Augmented Reality]]
 - [[Glossary/Virtuality]]
 - [[Glossary/Extranet]]
 - [[Glossary/Mesh Web]]
@@ -116,12 +124,18 @@ The canonical terminology index for the Nova Praxis campaign vault. 95 entries a
 
 ## Setting, Law & Factions
 - [[Glossary/Aberrants]]
+- [[Glossary/Centurion]]
 - [[Glossary/Coalition Houses]]
+- [[Glossary/Compilers]]
+- [[Glossary/Exodus]]
+- [[Glossary/Gold]]
 - [[Glossary/Human Personhood Accord]]
 - [[Glossary/Jump Gate]]
 - [[Glossary/Monitors]]
 - [[Glossary/Oversight]]
 - [[Glossary/Randallite]]
+- [[Glossary/Rep-Rating]]
+- [[Glossary/Standard Deviation Project]]
 - [[Glossary/Technophage]]
 
 ## Related

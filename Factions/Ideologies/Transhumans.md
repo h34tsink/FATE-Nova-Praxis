@@ -81,7 +81,7 @@ Transhumans and apostates often intersect:
 ### Notable Organizations
 - House Kimura - Primary institutional support
 - [[Factions/Hidden Agendas/Red Sun]] - Employs many transhuman operatives
-- [[Factions/The Seraphim]] - Represent ultimate transhuman evolution ideal
+- [[Factions/Hidden Agendas/Seraphim]] - Represent ultimate transhuman evolution ideal
 
 ## Related Factions
 
@@ -92,5 +92,5 @@ Transhumans and apostates often intersect:
 - [[Purists]]
 - Astralists
 - Mimirians
-- [[Factions/The Seraphim]]
+- [[Factions/Hidden Agendas/Seraphim]]
 - [[Glossary/Aberrants]]

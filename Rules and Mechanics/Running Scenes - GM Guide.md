@@ -166,7 +166,7 @@ No roll solves it. The crew faces a decision with no clean answer, and the scene
 
 | Example | What Makes It Hard |
 |---------|--------------------|
-| [[Characters/Named NPCs/Valare Lun\|Valare's]] fork doesn't want to merge. Do you force it? | Her autonomy vs. your mission. Merging means she relives her death. |
+| [[GM AI/Entity Cards/R4/Valare Integrated (R4 Personal Agent Ally)\|Valare's]] fork doesn't want to merge. Do you force it? | Her autonomy vs. your mission. Merging means she relives her death. |
 | The data you recovered implicates an ally. Do you share it? | Loyalty vs. truth. The ally has helped you before. |
 | You can escape clean or save the stranger -- not both. | Self-preservation vs. conscience. The stranger might not even be worth saving. |
 | A House offers the crew a contract that would betray apostate contacts. | Money and Rep vs. relationships and principles. |

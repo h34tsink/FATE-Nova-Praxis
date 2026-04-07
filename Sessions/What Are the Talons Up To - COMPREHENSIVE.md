@@ -20,7 +20,7 @@ aliases:
 # The Rumors Become Reality: Icarus Hub Mutiny
 
 **Campaign Arc:** Civil Unrest Part 3  
-**Session(s):** Session 10+ (or triggered when PCs finish [[Sessions/Valare's Situation|Valare situation]])  
+**Session(s):** Session 10+ (or triggered when PCs finish [[Sessions/Session 9/Valare Reference/Resource Hub (Index)|Valare situation]])
 **Primary Focus:** Background chaos while PCs pursue Nowak's location  
 **Status:** Ready to activate  
 **Scope:** Regional destabilization, Nowak's Talon connection revealed, hub destruction, 400-600 Talon recruitment
@@ -180,7 +180,7 @@ This Savant's role is absolutely essential to the operation's success.
 
 The civil unrest arc consists of multiple cascading crises:
 
-1. **[[Sessions/Valare's Situation|Valare's Situation]]** — Immediate PC crisis (resolves first)
+1. **[[Sessions/Session 9/Valare Reference/Resource Hub (Index)|Valare's Situation]]** — Immediate PC crisis (resolves first)
 2. **Icarus Hub Mutiny** — Larger backdrop chaos (unfolds during next phase)
 3. **Additional cascading events** — Triggered by mutiny's success
 

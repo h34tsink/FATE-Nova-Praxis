@@ -99,7 +99,7 @@ The world before [[Glossary/Mimir\|Mimir]] — nation-states, conventional techn
 ## 71 PS (2113 AD) — The Exodus
 
 - End of the war due to the technophage threat.
-- Rise of corporations as protective entities, forming the [[Factions/The Coalition\|Coalition of Free States]].
+- Rise of corporations as protective entities, forming the [[Factions/The Coalition/_Coalition Overview\|Coalition of Free States]].
 
 ## 72-77 PS (2114-2119 AD) — Coalition Formation
 

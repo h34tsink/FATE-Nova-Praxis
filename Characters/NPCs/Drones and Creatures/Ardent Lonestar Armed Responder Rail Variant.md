@@ -65,6 +65,5 @@ The LS-7R designation is unofficial — a loadout swap, not a separate model. [[
 
 ## Links
 - [[Ardent]]
-- [[Glossary/Drones]]
 - [[Rules and Mechanics/Drones Overview]]
 - [[Characters/NPCs/Drones and Creatures/Ardent Lonestar Armed Responder]]

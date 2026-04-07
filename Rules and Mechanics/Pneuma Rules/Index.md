@@ -18,7 +18,7 @@ Pneuma should feel like rare, dangerous, traceable access to reality’s interfa
 - [[Rules and Mechanics/Pneuma Rules/Pneuma GM Adjudication Matrix]]
 
 ### Quick-Run Aids
-- [[Rules and Mechanics/Pneuma Rules/gm_data_cache_encounter]]
+- `_Assets/Source Material/gm_data_cache_encounter.md`
 - [[Rules and Mechanics/Pneuma Rules/Pneuma Backlash Consequences]]
 
 ### Optional/Variant Modules
@@ -26,9 +26,9 @@ Pneuma should feel like rare, dangerous, traceable access to reality’s interfa
 - [[Rules and Mechanics/Pneuma Rules/The Physics of Pneuma]] (lore/terminology support)
 
 ### Legacy Compatibility Stubs
-- [[Archive/Old Rules/Pneuma Variants/Pneuma Compendium for Storyteller]]
-- [[Archive/Old Rules/Pneuma Variants/Pneuma_MD_Compendium]]
-- [[Archive/Old Rules/Mechanics/FATE/Pneuma Compendium]]
+- `Archive/Old Rules/Pneuma Variants/Pneuma Compendium for Storyteller.md`
+- `Archive/Old Rules/Pneuma Variants/Pneuma_MD_Compendium.md`
+- `Archive/Old Rules/Mechanics/FATE/Pneuma Compendium.md`
 
 ### Data Asset
 - mimir_advanced_engineering_logs.jsonl

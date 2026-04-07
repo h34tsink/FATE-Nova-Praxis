@@ -393,6 +393,6 @@ A Focused-mode character and a Full-mode character can coexist. The Focused char
 - [[Rules and Mechanics/Pneuma Rules/Pneuma Backlash Consequences]]
 - [[Rules and Mechanics/Pneuma Rules/The Physics of Pneuma]]
 - [[Rules and Mechanics/Pneuma Rules/Pneuma GM Adjudication Matrix]]
-- [[Rules and Mechanics/Pneuma Rules/gm_data_cache_encounter]]
+- `_Assets/Source Material/gm_data_cache_encounter.md`
 
 #ttrpg #nova-praxis #mechanics #pneuma

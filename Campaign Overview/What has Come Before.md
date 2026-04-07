@@ -40,7 +40,7 @@ Six megacorporations reorganized as governing [[Factions/The Coalition/Houses Re
 | [[Factions/Houses/House Silva\|Silva]] | Biotech, medicine, resleeving | Transhumanist |
 | [[Factions/Houses/House Tsarya\|Tsarya]] | Mining, materials, heavy industry | Pragmatic |
 
-The Houses provide baseline living standards to all citizens via [[Glossary/Rep-Rating\|Rep-Rating]] — your social credit determines what you can access. Below the Houses, [[Glossary/Apostate\|apostates]] live outside the system: free but unprotected.
+The Houses provide baseline living standards to all citizens via [[Glossary/Rep-Rating\|Rep-Rating]] — your social credit determines what you can access. Below the Houses, [[Factions/Ideologies/Apostates\|apostates]] live outside the system: free but unprotected.
 
 ## The Humanity Preservation Act (HPA)
 

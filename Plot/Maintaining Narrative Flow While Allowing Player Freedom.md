@@ -34,7 +34,7 @@ Let's break down practical techniques, drawing from the sources and our conversa
     - **Example:** An unexpected attack by the Talons of Freedom could create a sense of urgency and remind players of the importance of completing their objectives.
     - Resource shortages (like the dwindling ammo mechanic suggested in the sources) or time-sensitive events could also serve as compelling complications.
 
-**5. Utilizing "[[Mission Frameworks]]":**
+**5. Utilizing "Mission Frameworks":**
 
 - Employ the **Mission Framework** rules from the sources to structure complex tasks or events in "PART 2."
     - Frameworks break down actions into segments and utilize skill checks to track progress, providing players with agency while maintaining a clear objective.

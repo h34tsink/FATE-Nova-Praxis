@@ -9,6 +9,8 @@ tags:
   - fate
 aliases:
   - Nakamura
+  - Dr Haruto Nakamura
+  - Dr. Nakamura
 ---
 
 # Dr. Haruto Nakamura

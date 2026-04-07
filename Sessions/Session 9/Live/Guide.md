@@ -25,7 +25,7 @@ aliases:
 | [[Negotiation Quick Reference]] | Valare stance tracking + response matrix |
 | [[What She Knows]] | Information reveal tiers |
 | [[GM Command Board]] | Live Kanban checklist |
-| [[Session 9 - Print Sheet]] | Laminated dry-erase reference |
+| Session 9 - Print Sheet | Laminated dry-erase reference |
 
 ---
 

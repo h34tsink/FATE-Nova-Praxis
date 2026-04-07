@@ -35,7 +35,7 @@ You woke up 100 years late in the Nova Praxis future, owing your survival to an 
 | 4 | Dragon Spider | Fallout and isolation; the rogue SIM "Death" cuts comms and turns survival into psychological siege |
 | 5 | Dragon Spider | Crew contains "Death" inside station hostware after possession/near-suicide spiral; earns Scholae Palatinae attention |
 | 6 | Chimera Origin | Salvage job from [[Kestrel]] goes bad: illegal mnemonics research, erasure, and creation of [[Chimera]]; crew declared dead and restored |
-| 7 | Vantage Escape | Escape from Vantage Station with [[Lester Lucas]]; crew recovers [[Valare]]'s mnemonic core — biosleeve dead, core survives |
+| 7 | Vantage Escape | Escape from Vantage Station with [[Lester Lucas]]; crew recovers [[GM AI/Entity Cards/R4/Valare Integrated (R4 Personal Agent Ally)]]'s mnemonic core — biosleeve dead, core survives |
 | 8 | Valare Recovery | Core restored; [[Isabella Nowak\|Nowak]]'s role becomes clear; Valare's fork alive and hiding on [[Locations/Cere\|Cere]]; crew secures battle cruiser |
 | 9 | Fork Dilemma | Hunt for Valare's fork becomes a consent-and-coercion crucible; factions close in; will PCs secure the merge or protect her agency? |
 

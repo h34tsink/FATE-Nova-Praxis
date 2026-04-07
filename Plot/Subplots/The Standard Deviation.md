@@ -773,6 +773,6 @@ Each interview is formatted as a clinical transcript. Interviewer is Dr. Maren H
 
 - [[Campaign Overview/Active Threads]]
 - [[Campaign Overview/Cold Start Syndicate - Campaign Summary]]
-- [[Plot/Situations/Chimera Crisis]]
+- Chimera Crisis
 - [[Characters/Named NPCs/Dr. Maren Holt]] *(to be created)*
 - [[Glossary/Standard Deviation Project]] *(to be created)*

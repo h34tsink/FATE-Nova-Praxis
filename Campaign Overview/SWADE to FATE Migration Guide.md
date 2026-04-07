@@ -30,11 +30,11 @@ In SWADE, you pick an action from a menu and describe what happens. In FATE, you
 
 ### 2. Characters Are Defined by Story, Not Stats
 
-SWADE characters are built from Attributes, Skills, Edges, and Hindrances — mechanical building blocks that imply a story. FATE characters are built from [[Glossary/Aspects|Aspects]] — story statements that imply mechanics, using the **ABCDE method** (Ambition, Belief, Connection, Disadvantage, Expertise) plus a High Concept. Your Aspects do more to define your character than any skill rank.
+SWADE characters are built from Attributes, Skills, Edges, and Hindrances — mechanical building blocks that imply a story. FATE characters are built from [[Glossary/Aspect|Aspects]] — story statements that imply mechanics, using the **ABCDE method** (Ambition, Belief, Connection, Disadvantage, Expertise) plus a High Concept. Your Aspects do more to define your character than any skill rank.
 
 ### 3. Failure Is Interesting, Not Punishing
 
-In SWADE, failure usually means "nothing happens" or "you take damage." In FATE, failure means the story goes somewhere you didn't plan. The GM might offer you success at a cost, or a compel that makes things dramatically worse but earns you a [[Glossary/Fate Points|Fate Point]]. Failure fuels the economy that makes you powerful later.
+In SWADE, failure usually means "nothing happens" or "you take damage." In FATE, failure means the story goes somewhere you didn't plan. The GM might offer you success at a cost, or a compel that makes things dramatically worse but earns you a [[Glossary/Fate Point|Fate Point]]. Failure fuels the economy that makes you powerful later.
 
 ### 4. You Shape the World
 
@@ -167,7 +167,7 @@ These SWADE mechanics have no equivalent. Stop looking for them:
 
 These are new tools. Learn to use them:
 
-- **[[Glossary/Aspects\|Aspects]]** — Story-true phrases that you invoke (+2) or get compelled against (+1 FP). The entire economy runs on these.
+- **[[Glossary/Aspect\|Aspects]]** — Story-true phrases that you invoke (+2) or get compelled against (+1 FP). The entire economy runs on these.
 - **Declarations** — Spend a FP to introduce a fact into the scene ("There's a fire escape on this building").
 - **Maneuvers** — Place a temporary Aspect on a target or scene that anyone can invoke.
 - **Concession** — Surrender on your terms before getting Taken Out. You lose the fight but keep narrative control.

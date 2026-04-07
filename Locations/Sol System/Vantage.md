@@ -26,7 +26,7 @@ Jointly operated by [[Factions/Houses/House Jinzhan|Jinzhan]] (security, ordinan
 
 ## Campaign Relevance
 
-The crew escaped Vantage in Session 7 with [[Lester Lucas]] aboard the *Chickenhawk*. [[Valare]]'s biosleeve was killed here during a grenade exchange — her mnemonic core survived and was hidden aboard the ship.
+The crew escaped Vantage in Session 7 with [[Lester Lucas]] aboard the *Chickenhawk*. [[GM AI/Entity Cards/R4/Valare Integrated (R4 Personal Agent Ally)]]'s biosleeve was killed here during a grenade exchange — her mnemonic core survived and was hidden aboard the ship.
 
 ## Related
 

@@ -314,7 +314,7 @@ Each character has a **role tag** so you know what they're good at, and a **"Pla
 
 > **Play this if you like:** being in charge, reading the battlefield, and noticing the thing no one else caught.
 
-**State:** Pure | **House:** [[Factions/The Coalition|Coalition]] (Tetragon Intelligence, retired)
+**State:** Pure | **House:** [[Factions/The Coalition/_Coalition Overview|Coalition]] (Tetragon Intelligence, retired)
 **Refresh:** 7 | **Rep Rating:** 7
 
 ### Aspects

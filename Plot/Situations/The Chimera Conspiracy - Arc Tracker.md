@@ -25,7 +25,7 @@ A gestalt consciousness created from illegally merged PC egos at [[Opportunity F
 
 ### Phase 2: Digital Erasure (Sessions 7-8) — COMPLETE
 - [x] Chimera begins wiping PCs' digital footprints
-- [x] Nowak independently hires [[Valare]] to scrub evidence (not knowing Chimera already doing it)
+- [x] Nowak independently hires [[GM AI/Entity Cards/R4/Valare Integrated (R4 Personal Agent Ally)]] to scrub evidence (not knowing Chimera already doing it)
 - [x] Valare killed during mission (spaced on Vantage); mnemonic core recovered, hidden in Chickenhawk
 - [x] PCs recover Valare's core
 
@@ -89,7 +89,7 @@ A gestalt consciousness created from illegally merged PC egos at [[Opportunity F
 | [[Chimera]] | Antagonist — orchestrator, tragic monster | `chimera` |
 | [[Kestrel]] | Antagonist — Kimura cleanup, institutional threat, final boss | `kestrel` |
 | [[Isabella Nowak]] | Victim/informant — has outpost coordinates, being hunted | `isabella_nowak` |
-| [[Valare]] | Intel gate — fork outcome determines PC preparation | `valare_fork` / `valare_integrated` |
+| [[GM AI/Entity Cards/R4/Valare Integrated (R4 Personal Agent Ally)]] | Intel gate — fork outcome determines PC preparation | `valare_fork` / `valare_integrated` |
 | [[Dr Haruto Nakamura]] | Creator — present at outpost, morally bankrupt scientist | `nakamura` |
 | [[Lester Lucas]] | Smuggler — Chickenhawk captain, knows Talon supply chain | `lucas` |
 | [[Seren]] | Contact — may provide background intel on Talon movements | `seren` |

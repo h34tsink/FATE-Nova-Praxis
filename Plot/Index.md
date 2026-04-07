@@ -9,8 +9,8 @@ Use this as the campaign thread map.
 - [[Plot/Situations/Missions & Intel]]
 
 ## Subplots
-- [[Plot/Subplots/Background Arch]]
-- [[Plot/Subplots/Wolf in Sheep’s Clothing]]
+- Background Arch
+- [[Plot/Subplots/Wolf in Sheeps Clothing]]
 - [[Plot/Subplots/Arc 1/The Setup]]
 
 ## Runtime Links

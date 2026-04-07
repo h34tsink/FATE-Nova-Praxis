@@ -36,7 +36,7 @@ Single launch point for prep and live play.
 ## Prep
 
 - [[Prep/Obsidian Optimization Plan|Obsidian Optimization Plan]]
-- [[Prep/GM Reference Sheet.html|GM Reference Sheet]]
+- GM Reference Sheet
 
 ## Arc Reference
 

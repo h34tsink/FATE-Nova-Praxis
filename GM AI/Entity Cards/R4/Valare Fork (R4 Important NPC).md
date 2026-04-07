@@ -54,5 +54,5 @@ status: "active"
 
 ## Linked Notes
 - Valare
-- [[Sessions/Session 9/Valare - Character Profile]]
+- [[Sessions/Session 9/Valare Reference/Character Profile]]
 - [[Sessions/Session 9/Valare Reference/Negotiation Quick Reference]]

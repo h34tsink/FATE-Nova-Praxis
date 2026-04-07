@@ -9,6 +9,8 @@ tags:
   - fate
 aliases:
   - The Legate
+  - Legate Aaron Blackburn
+  - Legate Blackburn
 ---
 
 # Aaron Blackburn

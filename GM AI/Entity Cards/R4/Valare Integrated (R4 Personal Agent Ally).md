@@ -3,6 +3,8 @@ aliases:
   - "npc valare-integrated"
   - "/npc valare-integrated"
   - "npc valare integrated"
+  - "Valare"
+  - "Valare Lun"
 tags:
   - "gm-ai"
   - "entity-card"

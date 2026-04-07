@@ -72,4 +72,4 @@ Apostates span wide range of motivations:
 - [[Factions/Hidden Agendas/Rings of Olympus]]
 - [[Purists]]
 - [[Transhumans]]
-- [[Apostates in the Seraphim's Vision]]
+- Apostates in the Seraphim's Vision

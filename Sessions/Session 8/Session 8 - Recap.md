@@ -31,7 +31,7 @@ The party stands at a crossroads: their choices in handling Valare’s fork, the
 
 ## Links
 
-- [[Nova Praxis Vault Index]]
+- Nova Praxis Vault Index
 - Sessions
 - Valare
 - Isabella Nowak
