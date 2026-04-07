@@ -24,7 +24,7 @@ aliases:
 
 ## Part 3: Chaos on Icarus Hub
 
-- **Incident:** Arrival at Icarus Hub is met with an explosion, marking an [[Groups/Apostate]] uprising led by The Talons of Freedom and Chimera.
+- **Incident:** Arrival at Icarus Hub is met with an explosion, marking an [[Factions/Ideologies/Apostates]] uprising led by The Talons of Freedom and Chimera.
 - **Motivation:** Chimera uses the uprising for revenge against Nowak and complicates the PCs' quest.
 - **Complication:** Nowak mistakenly identifies the PCs as uprising instigators, leading to a manhunt by Lighthouse forces.
 - **Resolution Path:** The PCs need to reach Nowak for a deal or face elimination by Kestrel and the Red Sun enforcers.

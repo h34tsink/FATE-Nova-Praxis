@@ -29,7 +29,7 @@ The Federation released a [[Glossary/Technophage\|technophage]] — a self-repli
 
 ## The Coalition of Free States
 
-Six megacorporations reorganized as governing [[Groups/The Houses\|Houses]], forming the Coalition:
+Six megacorporations reorganized as governing [[Factions/The Coalition/Houses Reference\|Houses]], forming the Coalition:
 
 | House | Domain | Ideology |
 | --- | --- | --- |

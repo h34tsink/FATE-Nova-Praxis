@@ -21,7 +21,7 @@ Seasoned acquisitions specialist and grey-market fixer. Sharp wit, ruthless nego
 
 5'9", short jet-black hair, piercing green eyes, lean muscular build. Usual attire: sleek black jumpsuit with various pockets and compartments. Moves like someone who expects to need an exit in a hurry.
 
-Primary contact for [[Characters/Players/Dustin (Grift) Halloway/Dustin (Grift) Halloway - FATE Character|Grift]]. Their relationship is transactional — she brings jobs, he delivers, and her favors always come with strings attached.
+Primary contact for [[Characters/Players/Dustin (Grift) Halloway/Dustin Halloway - FATE Character|Grift]]. Their relationship is transactional — she brings jobs, he delivers, and her favors always come with strings attached.
 
 ## Aspects
 
@@ -76,6 +76,6 @@ Briar pulled Grift out of a bad situation early in his post-cryo life and has be
 
 ## Links
 
-- [[Characters/Players/Dustin (Grift) Halloway/Dustin (Grift) Halloway - FATE Character|Grift]]
+- [[Characters/Players/Dustin (Grift) Halloway/Dustin Halloway - FATE Character|Grift]]
 - [[Sessions/Session 0/Session 0 - Teaching Scenario (FATE Migration)]]
 - [[Plot/Subplots/The Standard Deviation]]

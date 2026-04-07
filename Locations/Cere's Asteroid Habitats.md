@@ -63,7 +63,7 @@ Moving through the habitats requires local knowledge or time. Without a guide:
 
 ## Continuity
 
-- [[Sessions/Session 9/Session 9 - Guide|Session 9]]: Valare's fork uses the hidden infrastructure to stay ahead of pursuit. Her savant programs monitor the accessible network while she physically occupies dead zones.
+- [[Sessions/Session 9/Live/Guide|Session 9]]: Valare's fork uses the hidden infrastructure to stay ahead of pursuit. Her savant programs monitor the accessible network while she physically occupies dead zones.
 
 ## Links
 

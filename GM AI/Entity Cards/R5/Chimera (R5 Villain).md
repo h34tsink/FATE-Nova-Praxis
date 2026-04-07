@@ -154,7 +154,7 @@ When PCs encounter his digital traces, the tone should be *haunted*, not *menaci
 ## Linked Notes
 
 - [[The Chimera Conspiracy - Arc Tracker]]
-- [[Sessions/Session 9/Session 9 - Beats (GM Runtime)]]
+- [[Sessions/Session 9/Live/Beats]]
 - [[Dr Haruto Nakamura (R3 Kimura Scientist)]]
 - [[Kestrel (R4 Important NPC)]]
 - [[Isabella Nowak (R4 Important NPC)]]

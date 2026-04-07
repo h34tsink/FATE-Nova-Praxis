@@ -27,7 +27,7 @@
 
 ### Allies
 
-- **Kestrel:** A Red Sun operative and [[Groups/Apostate]] sympathizer who initially hires the PCs. He provides information and resources but prioritizes his loyalty to House Kimura.
+- **Kestrel:** A Red Sun operative and [[Factions/Ideologies/Apostates]] sympathizer who initially hires the PCs. He provides information and resources but prioritizes his loyalty to House Kimura.
 - **[[Lester Lucas]]:** A down-on-his-luck smuggler who provides crucial information about the Vantage blackout and the Talons' activities.
 - **Valare (Deceased):** A Savant smuggler working for House Tsarya, capable of creating mesh blackouts. Her core holds crucial information about the PCs' Situation.
 
@@ -35,7 +35,7 @@
 
 - **Dr. Haruto Nakamura:** The lead scientist at the Mindscapes research outpost. He is responsible for creating Chimera and seeks to protect his research at all costs.
 - **Isabella Nowak:** A high-ranking member of House Tsarya involved in the Shadow War. She orchestrated the PCs' original mission and seeks to cover up the illegal research.
-- **The Talons of Freedom:** A radical [[Groups/Apostate]] group planning a major attack on the Proch Icarus Hub. They possess Valare's core and unwittingly benefit from Chimera's actions.
+- **The Talons of Freedom:** A radical [[Factions/Ideologies/Apostates]] group planning a major attack on the Proch Icarus Hub. They possess Valare's core and unwittingly benefit from Chimera's actions.
 
 ### Organizations
 

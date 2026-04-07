@@ -55,4 +55,4 @@ aliases:
 - Sessions
 - Europa Station
 - Zephyr Solis
-- [[Groups/Apostate]]
+- [[Factions/Ideologies/Apostates]]

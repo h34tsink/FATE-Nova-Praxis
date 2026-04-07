@@ -82,7 +82,7 @@ Before they leave, ask each player to **read their Aspects aloud** and explain w
 
 Then — Briar mentions the facility has automated Kimura security still running on backup power.
 
-**Prompt [[Characters/Players/Dustin (Grift) Halloway/Dustin (Grift) Halloway - FATE Character|Grift]]:** "You've cracked Kimura systems before. Do any of your Aspects help you understand their security architecture?"
+**Prompt [[Characters/Players/Dustin (Grift) Halloway/Dustin Halloway - FATE Character|Grift]]:** "You've cracked Kimura systems before. Do any of your Aspects help you understand their security architecture?"
 
 If he invokes a relevant Aspect (*Digital Locks Are Just Suggestions*, *Ghost in the System*), give him +2 on an S. Engineering or Research test (Diff 2) to recall Kimura security protocols. This teaches **invoking an Aspect for a bonus**.
 
@@ -133,7 +133,7 @@ Let the players choose. Walk through the roll: 4dF + Skill = Effort. Beat the Di
 
 Inside, the main server room is on the ground floor. The data core is accessible but encrypted.
 
-**Prompt [[Characters/Players/Dustin (Grift) Halloway/Dustin (Grift) Halloway - FATE Character|Grift]] or [[Characters/Players/Kallius/Kallius - FATE Character|Kallius]]:** "Can you crack the encryption on the server?"
+**Prompt [[Characters/Players/Dustin (Grift) Halloway/Dustin Halloway - FATE Character|Grift]] or [[Characters/Players/Kallius/Kallius - FATE Character|Kallius]]:** "Can you crack the encryption on the server?"
 
 They roll S. Engineering or SINC (Diff 3). On success, they create the Aspect: *"Kimura Encryption Bypassed"* with one free invoke. On Spin, two free invokes.
 
@@ -208,7 +208,7 @@ The new PCs need medical attention — cryo revival is rough. One person examine
 
 While the crew is dealing with the new arrivals, Holt acts.
 
-**Prompt [[Characters/Players/Dustin (Grift) Halloway/Dustin (Grift) Halloway - FATE Character|Grift]] or [[Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character|Grace]]:** "The terminal flickers. New files are appearing in the intake log — data that wasn't there a moment ago. Like something just... unlocked."
+**Prompt [[Characters/Players/Dustin (Grift) Halloway/Dustin Halloway - FATE Character|Grift]] or [[Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character|Grace]]:** "The terminal flickers. New files are appearing in the intake log — data that wasn't there a moment ago. Like something just... unlocked."
 
 The terminal now displays three corrupted interview fragments:
 

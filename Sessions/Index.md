@@ -15,7 +15,7 @@ Use this note as the table-time launchpad for prep, runtime tracking, and post-s
 - [[Sessions/Session 6/Session 6 - Summary]]
 - [[Sessions/Session 7/Session 7 - Recap]]
 - [[Sessions/Session 8/Session 8 - Recap]]
-- [[Sessions/Session 9/Session 9 - Guide]]
+- [[Sessions/Session 9/Live/Guide]]
 
 ## Scenario / Arc Support
 - [[Sessions/Data Wipes - Valare vs Chimera]]

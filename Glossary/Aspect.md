@@ -4,6 +4,7 @@ tags:
   - fate-core
   - narrative
 aliases:
+  - Aspects
   - Character Trait
   - Descriptive Element
 ---

@@ -109,7 +109,7 @@ Dr. Ren Aubrey (victim #5) had a family member or colleague who reaches out to t
 
 ### Hook D — Grift Stumbles Into It
 
-[[Characters/Players/Dustin (Grift) Halloway/Dustin (Grift) Halloway - FATE Character|Grift]] is on Ansari for an unrelated job and notices anomalies in station security logs — records that have been altered, surveillance gaps that are too clean to be accidental. His *Curiosity Kills More Than Cats* takes over.
+[[Characters/Players/Dustin (Grift) Halloway/Dustin Halloway - FATE Character|Grift]] is on Ansari for an unrelated job and notices anomalies in station security logs — records that have been altered, surveillance gaps that are too clean to be accidental. His *Curiosity Kills More Than Cats* takes over.
 
 ---
 

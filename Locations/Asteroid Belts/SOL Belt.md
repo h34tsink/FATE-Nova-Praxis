@@ -18,7 +18,7 @@
 - **Key Facilities:** Trident (an ice cutting and shipping facility) and Anapos Station (an orbital shipping hub).
 
 #### Role of the Asteroid Belt in the Coalition
-- **Mining Operations:** Historically a rich source of raw materials for [[Groups/The Houses]], particularly Silva and Dalianis. While mining has declined, many asteroids are still being exploited.
+- **Mining Operations:** Historically a rich source of raw materials for [[Factions/The Coalition/Houses Reference]], particularly Silva and Dalianis. While mining has declined, many asteroids are still being exploited.
 - **Habitats for Outlaws:** The depleted asteroids, with their complex structures, have become havens for pirates, remnants, and groups like the Children of Adam, known for anti-transhuman attacks.
 - **Water Supply for Mars and Luna:** The operations on Ceres, particularly at Trident and Anapos Station, are vital for supplying water to Mars and Luna, highlighting the strategic importance of the asteroid belt.
 

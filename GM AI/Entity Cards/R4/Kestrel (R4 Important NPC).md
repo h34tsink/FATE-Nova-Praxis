@@ -53,4 +53,4 @@ status: "active"
 
 ## Linked Notes
 - Kestrel
-- [[Sessions/Session 9/Session 9 - Part 3 - Civil Unrest - The Nowak Situation]]
+- [[Sessions/Session 9/Part 3 - Civil Unrest/The Nowak Situation]]

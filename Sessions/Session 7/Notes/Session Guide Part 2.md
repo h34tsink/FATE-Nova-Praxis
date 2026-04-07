@@ -38,7 +38,7 @@ This guide expands on the outline provided in the sources for "PART 2 - A DIFFER
 
 The players can choose to gather information using several methods:
 
-- **Networking:** Utilizing either **[[Groups/Apostate]]** or **House Networking** skills. Research is possible but suffers a -1 penalty.
+- **Networking:** Utilizing either **[[Factions/Ideologies/Apostates]]** or **House Networking** skills. Research is possible but suffers a -1 penalty.
 - **Social Skills:** Engaging with friendly NPCs like dockworkers or Centurions. **Intimidation** could also yield results if used against a Talon of Freedom member.
 
 #### Die Rolls & Information

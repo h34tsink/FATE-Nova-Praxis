@@ -2,6 +2,30 @@
 
 A comprehensive reference for all Coalition Houses in Nova Praxis.
 
+## How Houses Work
+
+The "free states" known as the Houses act as a combination of nation, employer, and family.
+
+### Citizenship in a House
+
+- **Birthright** — Every citizen of the Coalition is born into a House.
+- **Contractual relationship** — Citizens receive a comfortable minimum standard of living in exchange for furthering their House's interests.
+- **Rep-Rating** — As citizens contribute to their House, their [[Glossary/Rep-Rating]] increases, granting access to a more luxurious lifestyle.
+
+### Governance & Autonomy
+
+- **Self-governance** — Each House has its own laws and largely governs itself outside of [[Factions/The Coalition/_Coalition Overview|Coalition]] jurisdiction.
+- **Consolidation Concord** — Grants Houses dominion over cultural standards laws, especially areas like morality, religion, and augmentation.
+- **Internal affairs** — The House determines its own rank system and manages internal disputes, unless they break Coalition law.
+
+### Law Enforcement
+
+- **Protectorate's role** — Enforces House laws similarly to how it enforces Coalition laws.
+- **Jurisdiction** — Only House members are subject to House laws, and only a Centurion who is also a House member can enforce them.
+- **Priority** — House law enforcement is always secondary to Coalition law enforcement.
+
+---
+
 ## House Cipriani
 
 **Primary Influence:** Mercury  

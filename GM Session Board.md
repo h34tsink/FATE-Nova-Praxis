@@ -15,10 +15,10 @@ Drag cards between lanes during play. Works as Kanban board or plain checklists.
 
 ## Scene Queue
 
-- [ ] [[Sessions/Session 9/Session 9 - Scenes and Zones|Scene 1: Echoes in Noise]]
-- [ ] [[Sessions/Session 9/Session 9 - Scenes and Zones|Scene 2: The Place She Hid]]
-- [ ] [[Sessions/Session 9/Session 9 - Scenes and Zones|Scene 3: Consent Conversation]]
-- [ ] [[Sessions/Session 9/Session 9 - Scenes and Zones|Scene 4: Fallout]]
+- [ ] [[Sessions/Session 9/Live/Scenes and Zones|Scene 1: Echoes in Noise]]
+- [ ] [[Sessions/Session 9/Live/Scenes and Zones|Scene 2: The Place She Hid]]
+- [ ] [[Sessions/Session 9/Live/Scenes and Zones|Scene 3: Consent Conversation]]
+- [ ] [[Sessions/Session 9/Live/Scenes and Zones|Scene 4: Fallout]]
 
 ## Active NPCs
 

@@ -373,7 +373,7 @@ Drone augmentations: Armored (AV 2, +3 AR), Armed (AV 2, carry weapons), Very Ti
 
 ## Continuity
 
-- [[Sessions/Session 9/Session 9 - Guide|Session 9]]: A Shadow Market runner is competing with the PCs to find Valare's fork. The runner offers a trade — information for an unspecified future favor.
+- [[Sessions/Session 9/Live/Guide|Session 9]]: A Shadow Market runner is competing with the PCs to find Valare's fork. The runner offers a trade — information for an unspecified future favor.
 - Related faction material: [[Factions/Hidden Agendas/Piracy and Insurgency]], [[Factions/Hidden Agendas/Black Market]]
 
 ## Links

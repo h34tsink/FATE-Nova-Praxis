@@ -5,6 +5,7 @@ tags:
   - currency
   - narrative
 aliases:
+  - Fate Points
   - FP
   - Narrative Currency
 ---

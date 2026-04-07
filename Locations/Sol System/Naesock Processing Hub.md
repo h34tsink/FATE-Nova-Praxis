@@ -49,7 +49,7 @@ The **Naesock Processing Hub** stands as a symbol of the changing dynamics betwe
 
 ## Key Points to Consider
 
-- The **Naesock Processing Hub** could serve as a valuable location for the PCs to gather information, acquire illicit goods, or establish contact with [[Groups/Apostate]] factions.
+- The **Naesock Processing Hub** could serve as a valuable location for the PCs to gather information, acquire illicit goods, or establish contact with [[Factions/Ideologies/Apostates]] factions.
 
 - **House Silva’s influence** within the station might present both opportunities and challenges for the PCs, depending on their objectives and allegiances.
 

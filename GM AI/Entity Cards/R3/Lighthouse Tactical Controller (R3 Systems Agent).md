@@ -54,5 +54,5 @@ status: "active"
 - `/agent lighthouse`
 
 ## Linked Notes
-- [[Sessions/Session 9/Session 9 - Part 3 - Civil Unrest - The Nowak Situation]]
-- [[Sessions/Session 9/Session 9 - Beats (GM Runtime)]]
+- [[Sessions/Session 9/Part 3 - Civil Unrest/The Nowak Situation]]
+- [[Sessions/Session 9/Live/Beats]]

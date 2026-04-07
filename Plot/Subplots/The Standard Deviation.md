@@ -62,7 +62,7 @@ The Standard Deviation archive contains approximately 200 cryo-sleepers. Only fi
 | Code | Pre-Cryo Name | Current Identity | Archetype | Function in Gestalt |
 |------|---------------|------------------|-----------|---------------------|
 | FACE | Sarah Donnelly | [[Characters/Players/Azaria Dawson/Azaria Dawson - FATE Character\|Azaria Dawson]] | Adaptive social interface | External coherence — the gestalt's ability to present as unified to the outside world |
-| GHOST | Marcus Vaughn | [[Characters/Players/Dustin (Grift) Halloway/Dustin (Grift) Halloway - FATE Character\|Dustin "Grift" Halloway]] | Fluid identity substrate | Connective tissue — ego flexibility that allows disparate personalities to merge without rejection |
+| GHOST | Marcus Vaughn | [[Characters/Players/Dustin (Grift) Halloway/Dustin Halloway - FATE Character\|Dustin "Grift" Halloway]] | Fluid identity substrate | Connective tissue — ego flexibility that allows disparate personalities to merge without rejection |
 | LENS | Grace Pryzbylski | [[Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character\|Grace Pryzbylski]] | Digital-native consciousness | Foundation layer — SIM-state stability that allows the gestalt to persist in software |
 | BANK | Callum Voss | [[Characters/Players/Kallius/Kallius - FATE Character\|Kallius]] | Mnemonic architect | Mechanism — the skill set required to actually perform ego fusion. Holt needed someone who would teach himself |
 | SHIELD | Adrian Cruz | [[Characters/Players/Aeddarius Crucial/Aeddarius Crucial - FATE Character\|Aeddarius Crucial]] | Ego-resistant anchor | Failsafe — a Pure consciousness that Chimera cannot absorb, predict, or manipulate |

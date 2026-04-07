@@ -6,7 +6,7 @@ The PCs awaken in a resurrection chamber on Asola, three months after being decl
 
 ## Resurrection
 
-The PCs are revived by Second Chances, a backup service, under the care of Salvadore “Sal” Bendry, an [[Groups/Apostate]] mnemonics engineer and a SIM. Recovery treatments begin immediately: biosleeves receive a massage and meal to restore physical comfort, while cybersleeves undergo further diagnostics and recalibration. Sal is calm and reassuring, explaining the process and monitoring their progress.
+The PCs are revived by Second Chances, a backup service, under the care of Salvadore “Sal” Bendry, an [[Factions/Ideologies/Apostates]] mnemonics engineer and a SIM. Recovery treatments begin immediately: biosleeves receive a massage and meal to restore physical comfort, while cybersleeves undergo further diagnostics and recalibration. Sal is calm and reassuring, explaining the process and monitoring their progress.
 
 ## SIM Experience
 

@@ -83,7 +83,7 @@ Cere's mesh network is patchy, old, and compromised. Multiple parties tap the lo
 
 ## Continuity
 
-- [[Sessions/Session 9/Session 9 - Guide|Session 9]]: Valare's fork is hiding in the abandoned shafts, monitored by her savant programs
+- [[Sessions/Session 9/Live/Guide|Session 9]]: Valare's fork is hiding in the abandoned shafts, monitored by her savant programs
 - [[Sessions/Session 8/Session Guide/0.1 Fork on Cere|Session 8]]: Leads first pointed to Cere as Valare's refuge
 
 ## Links

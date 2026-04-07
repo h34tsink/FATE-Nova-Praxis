@@ -11,7 +11,7 @@
   - **Snippet:** "*Every byte of data has a story, but not all are meant to be read.*"
 
 ## 🕵️ **Ambush and Interrogation**
-- **Mission:** Strategically ambush Victor Belmont (Cybersleeved) from House Cipriani during his rendezvous with black-market dealer Xander Kress ([[Groups/Apostate]]). Extract Elysian Enigma intel without alerting others.
+- **Mission:** Strategically ambush Victor Belmont (Cybersleeved) from House Cipriani during his rendezvous with black-market dealer Xander Kress ([[Factions/Ideologies/Apostates]]). Extract Elysian Enigma intel without alerting others.
 - **Intel from Victor Belmont:** 
   - Upon interrogation, Victor discloses that a conflicted employee within House Cipriani's research facility is willing to share more information about the Elysian Enigma. He also provides the date and location of the employee's next communication window.
   - **Snippet:** "*Why all this cloak and dagger? What's the Elysian Enigma to you?*"
@@ -35,7 +35,7 @@
   - **Snippet:** "*If you knew the true nature of Elysian, you'd understand my fear.*"
 
 ## 🚗 **Street Racing for Intel**
-- **Mission:** Engage in a treacherous urban race, competing against Marissa "Speed Daemon" Delgado ([[Groups/Apostate]]) while dodging Officer Helena Chu (Biosleeved).
+- **Mission:** Engage in a treacherous urban race, competing against Marissa "Speed Daemon" Delgado ([[Factions/Ideologies/Apostates]]) while dodging Officer Helena Chu (Biosleeved).
 - **Intel from Marissa "Speed Daemon" Delgado:** 
   - After winning the street race, Marissa provides the players with detailed blueprints of the Elysian Enigma project, including its core architecture, power sources, and potential weak points that could be exploited to sabotage or take control of the AI Invention Machine.
   - **Snippet:** "*In this race, it's not just speed that matters, but the secrets you unlock.*"

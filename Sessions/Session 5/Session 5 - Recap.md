@@ -27,7 +27,7 @@ The party, led by Captain Sam Guinness, overcame the threat of Dragon Spiders ab
 - The party received a recommendation for the Coalition Pilot Program, joining the special operations Task Force: Scholae Palatinae.
 
 > [!note]
-> The Scholae Palatinae are the Coalition’s newest weapon against insurrection and [[Groups/Apostate]] threats. When not on combat missions, they survey new star systems and research deep-space phenomena.
+> The Scholae Palatinae are the Coalition’s newest weapon against insurrection and [[Factions/Ideologies/Apostates]] threats. When not on combat missions, they survey new star systems and research deep-space phenomena.
 
 ## Next Steps
 
@@ -38,6 +38,6 @@ You must be tested before earning full membership, but your foot is in the door.
 - Sessions
 - Europa Station
 - Scholae Palatinae
-- [[Groups/Apostate]]
+- [[Factions/Ideologies/Apostates]]
 
 <!-- conni: eof -->

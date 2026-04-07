@@ -75,7 +75,7 @@ Other regulars also trade information, but on a smaller scale. The corner booths
 
 ## Continuity
 
-- [[Sessions/Session 9/Session 9 - Guide|Session 9]]: First stop for investigating Valare's fork. Kal has seen her and knows which questions trigger attention.
+- [[Sessions/Session 9/Live/Guide|Session 9]]: First stop for investigating Valare's fork. Kal has seen her and knows which questions trigger attention.
 - Kal Paddock is the primary NPC here. His entity card: [[GM AI/Entity Cards/R2/Kal Paddock (R2 Minor Contact)]]
 
 ## Links

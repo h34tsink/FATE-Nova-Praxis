@@ -47,10 +47,10 @@ Single-pane command center. Scan for state, use Claude Code for interactive quer
 > [[Sessions/Session 9/Session 9 - Ops Index|Session 9 - Ops Index]] (master launchpad)
 
 **Quick Links:**
-- [[Sessions/Session 9/Session 9 - Guide|Session 9 Guide]]
-- [[Sessions/Session 9/Session 9 - Scenes and Zones|Scenes & Zones]]
-- [[Sessions/Session 9/Session 9 - GM Command Board|GM Command Board (Kanban)]]
-- [[Sessions/Session 9/Session 9 - Live Dashboard|Live Dashboard]]
+- [[Sessions/Session 9/Live/Guide|Session 9 Guide]]
+- [[Sessions/Session 9/Live/Scenes and Zones|Scenes & Zones]]
+- [[Sessions/Session 9/Live/GM Command Board|GM Command Board (Kanban)]]
+- [[Sessions/Session 9/Live/Live Dashboard|Live Dashboard]]
 
 ---
 
@@ -77,7 +77,7 @@ SORT rank DESC
 |--------|-----------|-------|-------------|
 | Dan | [[Characters/Players/Aeddarius Crucial/Aeddarius Crucial - FATE Character\|Aeddarius Crucial]] | Pure | Aesthetic Aristocrat |
 | Christa | [[Characters/Players/Azaria Dawson/Azaria Dawson - FATE Character\|Azaria Dawson]] | Sleeved | *(Undefined)* |
-| Matt | [[Characters/Players/Dr. Lorem (Doc) Ipsum/Dr. Lorem (Doc) Ipsum - FATE Character\|Dr. Lorem "Doc" Ipsum]] | — | — |
+| Matt | [[Characters/Players/Dr. Lorem (Doc) Ipsum/Dr. Lorem Ipsum - FATE Character\|Dr. Lorem "Doc" Ipsum]] | — | — |
 | Rob | [[Characters/Players/Dustin (Grift) Halloway/Dustin Halloway - FATE Character\|Dustin "Grift" Halloway]] | Sleeved | Ghost in the System Seeks Identity |
 | Sara | [[Characters/Players/Grace Pryzbylski/Grace Pryzbylski - FATE Character\|Grace Pryzbylski]] | SIM | SIM Drone Jock Recluse |
 | James | [[Characters/Players/Kallius/Kallius - FATE Character\|Kallius]] | Sleeved | Black Market Memory Merchant |

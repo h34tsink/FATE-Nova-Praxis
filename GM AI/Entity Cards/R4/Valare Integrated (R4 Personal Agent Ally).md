@@ -58,5 +58,5 @@ status: "active"
 - `/npc valare-integrated`
 
 ## Linked Notes
-- [[Sessions/Session 9/Part 3 Transition - All Valare Outcomes]]
-- [[Sessions/Session 9/Valare - What She Knows (Complete Framework)]]
+- [[Sessions/Session 9/Part 3 - Civil Unrest/Transition - All Valare Outcomes]]
+- [[Sessions/Session 9/Valare Reference/What She Knows]]
