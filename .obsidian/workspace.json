@@ -107,11 +107,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 364.5
+    "width": 282.5
   },
   "right": {
     "id": "2808606aa7204ff9",
@@ -258,8 +258,10 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "e8f98fa1b1179ea2",
+  "active": "fafec43f384d1f53",
   "lastOpenFiles": [
+    "_Assets/terminal-sd-ui-landscape.png",
+    "terminal-sd-ui-landscape.png",
     "_Assets/terminal-standard-deviation-landscape.png",
     "terminal-standard-deviation-landscape.png",
     "_Assets/terminal-standard-deviation.png",
@@ -304,8 +306,6 @@
     "Characters/Pregen Portraits/Nyx.png",
     "Characters/Pregen Portraits/Thessa Liang.png",
     "Characters/Pregen Portraits/Dex Corvo.png",
-    "Characters/Pregen Portraits/Inara Vasquez.png",
-    "Characters/Pregen Portraits/Kael-9.png",
     "Locations/Colonized Universe.canvas",
     "Untitled.canvas",
     "Sessions/Session 6/Untitled.canvas",
