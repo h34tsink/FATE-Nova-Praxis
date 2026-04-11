@@ -27,7 +27,6 @@
   "notebook-navigator",
   "advanced-debug-mode",
   "obsidian-dice-box-plugin",
-  "pdf-printer",
   "system3-relay",
   "obsidian-git",
   "quickadd",
@@ -39,5 +38,6 @@
   "obsidian-tasks-plugin",
   "obsidian-kanban",
   "obsidian-mind-map",
-  "note-toolbar"
+  "note-toolbar",
+  "obsidian-enhancing-export"
 ]

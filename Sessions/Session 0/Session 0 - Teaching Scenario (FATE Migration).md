@@ -456,6 +456,173 @@ Holt controls what the terminal shows. If they try to pull the full database, gi
 
 ---
 
+---
+
+## PC Questions: What to Tell Them
+
+This section covers the most likely questions PCs will ask during Session 0 and how to answer them. The goal is never to shut players down — you want to give them *material to work with* even when the honest answer is "your character doesn't know." Always lean toward opening a door rather than closing one.
+
+---
+
+### The Golden Rule
+
+**"You don't know for certain — but what do *you* think happened?"**
+
+This is your universal redirect. It validates the question, signals that mystery is intentional, and — most importantly — invites the player to propose something. Whatever they suggest becomes a character belief you can later confirm, complicate, or subvert. Write down what they say.
+
+---
+
+### The Standard Deviation Questions
+
+These will come hard and fast in Scene 3. Expect all of them.
+
+**"What is Project: Standard Deviation?"**
+> "The name doesn't mean anything to any of you yet. There's no record of it in public Kimura documentation. Whatever it is, it wasn't published — and someone went to significant effort to keep it off the official facility manifest. Your character knows what you see: a project header, some cryo pods, and intake logs. That's it."
+>
+> *If they push:* "You could spend some time with the terminal. What are you trying to find?"
+
+**"Were we experiments? Were we subjects?"**
+> "You don't know. The intake logs don't say what you were there *for* — only that you were processed in, tagged, and put under. What's your character's read on it? That gut feeling is real even if the data isn't there yet."
+
+**"How long were we in cryo?"**
+> "The facility was decommissioned three years ago. Your pod's status log shows an active date that predates the decommission by at least six months. So at minimum: over three years. Possibly longer — the full intake timestamp is in the corrupted partition."
+>
+> *Let this land.* Three years is a long time. Ask the player: "What's your character's first thought when they hear that number?"
+
+**"Why were these two pods different? Why did they activate now?"**
+> "The pods were flagged for 'delayed activation' in the facility records — but there's no authorization code attached. Someone set this up. You don't know who. You don't know what triggered the activation cycle."
+>
+> *Don't hint at Holt. If someone suggests 'the terminal unlocking the data triggered it' — that's a reasonable in-fiction theory. Let it sit.*
+
+**"Who are Callum Voss, Sarah Donnelly, and Adrian Cruz?"**
+> "You don't recognize the names. The interview dates in the fragments predate your own intake. They could be earlier subjects. They could be researchers. They could be the names on the pods next to yours — you didn't check all of them."
+>
+> *If they want to check the pod labels:* "Most of the pods have plates, but the engravings are worn. You can make out a few partial names. You don't see 'Voss,' 'Donnelly,' or 'Cruz' on the ones you can read — but there are 200 pods and most are dark."
+
+---
+
+### Per-Character Questions
+
+#### Grift (Rob)
+
+**"Why did the encryption feel too easy?"**
+> "It felt practiced. Like the security architecture had a soft spot that had been carefully maintained — not neglected. Systems degrade unevenly. Maybe someone left that door cracked. Maybe you're overthinking it."
+>
+> *Don't confirm Holt. Just let him hold the feeling. Write down that he noticed.*
+
+**"Can I pull anything else off the servers before we leave?"**
+> "You can try. What are you looking for — you want to just pull everything, or dig for something specific?" — Let him define the question. Then give him a roll. If he succeeds, give him the SD-7 partition label and whatever schematics you decide are interesting. Full database pull gets him noise and an encrypted wall.
+
+**"Do I know Kimura's security architecture well enough to predict the response team's timing?"**
+> Roll Networking or Education, Diff 2. On success: "You'd estimate a security contract team deployed from Cere's surface hub takes about 45 minutes from activation. You're maybe 20 minutes in. You've got time — but not a lot." On failure: "You genuinely don't know this specific site's contract arrangement. Your Kimura knowledge is broader than deep."
+
+---
+
+#### Azaria (Kaleigh)
+
+**"Does Silva have any relationship to this facility?"**
+> This is the Declaration hook — if she spends a Fate Point, she gets to decide yes. Give her options: "You could declare that Silva contracted biosleeve work here — or that a Silva competitor used this site for off-book storage. What feels right for Azaria's read on the situation?"
+>
+> If she doesn't spend FP: "You're not certain. Silva's footprint on Cere is limited and this facility predates the contracts you know about. But the Kimura-Silva relationship is complicated — it's possible."
+
+**"Is the security camera still recording? Can Kimura identify us?"**
+> "The security system triggered a lockdown — which means it's actively logging. You're on record. Whether that footage survives facility decommission and asset strip is a different question — someone would have to pull it from the local servers before Kimura's reclamation team wipes everything."
+>
+> *This is a natural compel trigger for Azaria. Use it.*
+
+**"What do I know about Standard Deviation from a Silva intelligence angle?"**
+> "Nothing you can name. But 'Standard Deviation' as a project designation has a specific structure — it's not a Kimura public research naming convention. It looks like an internal ops codename. That's different from a research program. Silva uses similar structures for programs they don't want searchable."
+
+---
+
+#### Grace (Meg)
+
+**"Do my drones pick up any other biosignals in the facility?"**
+> "Your active drones sweep the sublevel: nothing besides the two people coming out of cryo. Ground level: nothing organic. Surface: the reclamation team approaching from the shuttle — you're counting six heat signatures, not three. That's more than a standard reclamation crew."
+>
+> *Escalation signal for Scene 5.*
+
+**"The cryo pods — is this what happened to me? Did I go through this?"**
+> "Your revival was different. You came out of a Standard Deviation pod too — but you remember the intake process, at least partially. These two have nothing. Blank-eyed, cold, no context. It's familiar in a way that turns your stomach."
+>
+> *This is a compel waiting to happen. If Grace reaches out to steady one of the new PCs, offer her a Fate Point for the Thin Skinned and Trauma-Triggered compel.*
+
+**"Can I use my drones to map the rest of the facility during the lockdown?"**
+> "Yes — but your drones are splitting attention. Give me a Pilot roll (Diff 2). On success, you get a zone map for Scene 4 as a free-invoke Aspect: *'Grace Has Eyes on the Corridors.'* On failure, two of your drones get tagged by Kimura's security mesh and go dark."
+
+---
+
+#### Kallius (James)
+
+**"Do I recognize the Standard Deviation project structure from any Coalition intel?"**
+> Roll Networking or Education, Diff 3. On success: "The project designation structure matches a format used by pre-Singularity Coalition experimental programs — the kind that never appeared in official records. Nothing in your Coalition access lists a project by this name, but the format is right. Someone used Coalition naming conventions. That's either a Kimura mimic or a Coalition operation Kimura was hosting."
+>
+> On failure: "Nothing. It's a clean hit — no recognition, no association. Which is itself unusual for something on this scale."
+
+**"What does 'I know a truth the Coalition would kill to bury' mean for what I'm seeing right now?"**
+> "That's the compel trigger, not a question with an answer yet. What does Kallius think he might be looking at? What pattern does he want to deny?" — Let James answer this. It defines what Kallius suspects, and you can use that suspicion as a thread.
+
+**"Can I decrypt the SD-7 partition?"**
+> "Not here, not now. The encryption structure is multi-layer and non-standard — it's not a Kimura protocol you recognize. You could brute-force it given time and a proper system. But in a locked-down facility with a reclamation team incoming? No. What you can do is pull the partition to a local drive and work on it later." — Give him the hook. Kallius will spend sessions on this.
+
+---
+
+#### Aeddarius (Dan)
+
+**"Do I remember my Standard Deviation intake?"**
+> "You remember fragments. Intake processing. Questions. A room that was cold and clean. You don't remember being put under — just being asked questions and then waking up later with the crew. The gap is there if you look for it."
+>
+> *This is the core mystery for Aeddarius. Don't fill it in. Let Dan decide how much Aeddarius wants to know.*
+
+**"Can I assess the situation and give commands? Can I coordinate everyone?"**
+> "Absolutely — that's what Combined Actions are for. If you want to be the primary coordinator for Scene 4's escape, everyone rolls under your direction. Walk me through your plan."
+>
+> Let him frame it. If the plan is coherent, give everyone a flat +1 on their first action. If he rolls Strategy (Diff 2) to assess and plan, give the whole crew the Aspect *"Coordinated Withdrawal"* with one free invoke for Scene 4.
+
+**"The Composure Aspect — when does that matter?"**
+> "When you want to project calm under pressure, it matters. When you're actually unraveling and maintaining the mask anyway, that's the compel side — The Habit Behind the Composure. The Aspect is both the resource and the vulnerability."
+
+---
+
+#### New Player 1 and New Player 2
+
+These characters have *nothing* — no context, no history with the crew, no understanding of where or when they are. That's their power, not a weakness. Here's what to tell them when they ask questions:
+
+**"Where am I?"**
+> "A decommissioned research facility on the dark side of Cere. A dwarf planet in the outer Sol system. You were in cryo storage here. These people just opened your pod."
+
+**"When am I?"**
+> Tell them the in-game year. Let the weight of that number land. "Your last memory is from [however many years ago their backstory implies]. That's how long you were under."
+
+**"Who are these people?"**
+> "Strangers, as far as you know. But they recognized your intake tag — the same way they recognized each other's. Something connects you. You don't know what yet."
+
+**"Do I remember anything from before?"**
+> "What do *you* want to remember?" — This is player-controlled. Whatever they say is true. If they don't know yet, tell them: "You have flashes — impressions. You don't have to decide right now. Let it come to you."
+
+**"Why am I so disoriented?"**
+> "Cryo revival. Your body's been in suspended animation for years. You're running on adrenaline and muscle memory. Your head will clear, but it'll take hours. Right now: you're cold, confused, and there are drones trying to kill everyone in this building. Focus on that."
+
+**"What can I do? How do I help?"**
+> Look at their sheet. Name one Skill they have that's relevant right now. "You've got [Skill X]. There's a sealed door, an unconscious Kimura operative, and a corridor full of drones. Pick one."
+
+---
+
+### General "I Don't Know Yet" Phrases
+
+Use these when you want to give players a real answer that opens rather than closes:
+
+- *"Your character knows what you see. What does that tell you?"*
+- *"You can't verify that — but what do you think is true? That instinct is real."*
+- *"That answer exists. You just don't have access to it yet. What would your character do with it if they did?"*
+- *"Interesting that you're asking that. What made you wonder?"* (When the question reveals a player theory you want to track)
+- *"You've got [Relevant Skill]. Roll and tell me what [Character Name] notices."* (Turn a question into a Test)
+- *"You've seen something like this before — what does this remind you of?"* (Invite a Declaration or character history)
+- *"Yes — but not all of it. Here's the piece you know..."* (Partial reveals feel more real than full ones)
+- *"That's the right question. File it."* (Acknowledges the question is important without answering it)
+
+---
+
 ## Links
 
 - [[Plot/Subplots/The Standard Deviation]]
