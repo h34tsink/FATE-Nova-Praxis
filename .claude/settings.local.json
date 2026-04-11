@@ -139,7 +139,12 @@
       "mcp__plugin_playwright_playwright__browser_take_screenshot",
       "mcp__plugin_playwright_playwright__browser_snapshot",
       "Bash(pip install:*)",
-      "Read(//c/Windows/Fonts/**)"
+      "Read(//c/Windows/Fonts/**)",
+      "Read(//c/Users/satur/AppData/Local/Temp/**)",
+      "Read(//c/Users/satur/AppData/Roaming/**)",
+      "Read(//d/tmp/**)",
+      "Bash(ls -lt /c/Users/satur/AppData/Local/Temp/*.jpg /c/Users/satur/AppData/Local/Temp/*.jpeg)",
+      "Read(//c/Users/satur/**)"
     ]
   }
 }
