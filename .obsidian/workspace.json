@@ -32,12 +32,15 @@
             "id": "fafec43f384d1f53",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "_Assets/terminal-sd-ui-landscape.png"
+                "file": "Sessions/Session 0/Session 0 - Teaching Scenario (FATE Migration).md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
               },
-              "icon": "lucide-image",
-              "title": "terminal-sd-ui-landscape"
+              "icon": "lucide-file",
+              "title": "Session 0 - Teaching Scenario (FATE Migration)"
             }
           }
         ]
@@ -255,11 +258,14 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "a0680864420eca0e",
+  "active": "fafec43f384d1f53",
   "lastOpenFiles": [
-    "_Assets/terminal-standard-deviation.png",
-    "_Assets/terminal-standard-deviation-landscape.png",
     "_Assets/terminal-sd-ui-landscape.png",
+    "_Assets/terminal-standard-deviation.png",
+    "_Assets/yugen-4k.png",
+    "_Assets/Scripts/_yugen_wallpaper.py",
+    "_Assets/Scripts/_yugen_wallpaper.py.tmp.48620.1775932095685",
+    "_Assets/terminal-standard-deviation-landscape.png",
     "Sessions/Session 0/Session 0 - Teaching Scenario (FATE Migration).md",
     "terminal-sd-ui-landscape.png",
     "terminal-standard-deviation-landscape.png",
@@ -281,9 +287,7 @@
     "Glossary/Augmented Reality.md",
     "Glossary/Augmented Reality.md.tmp.33924.1775580235414",
     "Glossary/Gold.md",
-    "Glossary/Gold.md.tmp.33924.1775580218406",
     "Glossary/Compilers.md",
-    "Glossary/Compilers.md.tmp.33924.1775580202050",
     "Locations/Galaxy map.md",
     "Locations/Parallax Station.md",
     "Locations/New Montreal.md",
