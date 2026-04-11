@@ -128,7 +128,11 @@
       "Bash(ipconfig)",
       "Bash(grep -l \"aspects\" \"d:/ObsidianVaults/Nova Praxis/nova-praxis-gm/commands/\"*.md \"d:/ObsidianVaults/Nova Praxis/nova-praxis-gm/skills/\"*/SKILL.md)",
       "Bash(grep -l \"thinking\\\\|think\" \"d:/ObsidianVaults/Nova Praxis/nova-praxis-gm/commands/\"*.md)",
-      "Bash(PYTHONIOENCODING=utf-8 notebooklm create \"Cold Start Syndicate - New Player Onboarding\" --json)"
+      "Bash(PYTHONIOENCODING=utf-8 notebooklm create \"Cold Start Syndicate - New Player Onboarding\" --json)",
+      "Bash(pandoc --version)",
+      "Bash(wkhtmltopdf --version)",
+      "Bash(winget list:*)",
+      "Bash(npx --version)"
     ]
   }
 }

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cold Start Syndicate — New Player Primer</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Share+Tech+Mono&display=swap');
+
+:root {
+  --bg: #0e1117;
+  --surface: #161b27;
+  --surface2: #1e2535;
+  --border: #2a3347;
+  --accent: #4fc3f7;
+  --accent2: #7c4dff;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --danger: #ef4444;
+  --success: #22c55e;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { background: var(--bg); }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  padding: 0;
+  margin: 0;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.page-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 48px 64px;
+}
+
+/* ── PAGE BREAKS ──────────────────────────── */
+h2 {
+  page-break-before: always;
+  break-before: page;
+}
+h2:first-of-type,
+.no-break {
+  page-break-before: avoid;
+  break-before: avoid;
+}
+
+/* ── COVER ────────────────────────────────── */
+.cover {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 48px;
+  background: var(--bg);
+  page-break-after: always;
+  break-after: page;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover::before {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(76,195,247,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cover-label {
+  font-size: 9pt;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.cover-title {
+  font-size: 36pt;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.cover-subtitle {
+  font-size: 15pt;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.cover-rule {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  margin-bottom: 32px;
+  border-radius: 2px;
+}
+
+.cover-tagline {
+  font-size: 11pt;
+  color: var(--text-muted);
+  max-width: 480px;
+  line-height: 1.7;
+  font-style: italic;
+  border-left: 3px solid var(--accent2);
+  padding-left: 20px;
+}
+
+.cover-footer {
+  position: absolute;
+  bottom: 48px;
+  left: 48px;
+  right: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 8pt;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+/* ── TYPOGRAPHY ────────────────────────────── */
+h1 {
+  font-size: 22pt;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 8px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 15pt;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 20px;
+  padding-top: 40px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+  letter-spacing: 0.02em;
+}
+
+h3 {
+  font-size: 11pt;
+  font-weight: 600;
+  color: var(--text);
+  margin: 28px 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+h4 {
+  font-size: 10.5pt;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 24px 0 8px;
+}
+
+p {
+  margin: 0 0 12px;
+  color: var(--text);
+}
+
+strong { color: var(--text); font-weight: 600; }
+em { color: var(--text-muted); font-style: italic; }
+code {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 9pt;
+  color: var(--accent);
+  background: var(--surface2);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+/* ── BLOCKQUOTE ────────────────────────────── */
+blockquote {
+  border-left: 3px solid var(--accent2);
+  background: var(--surface);
+  margin: 16px 0 20px;
+  padding: 14px 20px;
+  border-radius: 0 6px 6px 0;
+}
+
+blockquote p {
+  color: var(--text);
+  font-style: italic;
+  margin: 0;
+  font-size: 10.5pt;
+  line-height: 1.65;
+}
+
+/* ── LISTS ────────────────────────────────── */
+ul {
+  margin: 0 0 14px 0;
+  padding-left: 20px;
+}
+
+ul li {
+  margin: 4px 0;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+ul li::marker { color: var(--accent); }
+
+ul.checklist {
+  list-style: none;
+  padding-left: 4px;
+}
+
+ul.checklist li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+ul.checklist li:last-child { border-bottom: none; }
+
+ul.checklist input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  accent-color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* ── TABLES ────────────────────────────────── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0 20px;
+  font-size: 9.5pt;
+  page-break-inside: avoid;
+}
+
+thead tr {
+  background: var(--surface2);
+}
+
+th {
+  text-align: left;
+  padding: 8px 12px;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 8.5pt;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-bottom: 2px solid var(--border);
+}
+
+td {
+  padding: 7px 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  vertical-align: top;
+}
+
+tr:last-child td { border-bottom: none; }
+
+tbody tr:nth-child(even) td {
+  background: rgba(255,255,255,0.02);
+}
+
+/* ── SUGGESTION CARDS ────────────────────── */
+.suggestion-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent2);
+  border-radius: 6px;
+  padding: 20px 24px;
+  margin: 16px 0 24px;
+  page-break-inside: avoid;
+}
+
+.suggestion-card h4 {
+  margin-top: 0;
+  color: var(--accent2);
+}
+
+/* ── HORIZONTAL RULE ─────────────────────── */
+hr { display: none; }
+
+/* ── PRINT OVERRIDES ─────────────────────── */
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body {
+    background: var(--bg) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .page-wrap {
+    padding: 40px 48px 56px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="cover-label">Player Handout — Session 0+</div>
+  <div class="cover-title">Cold Start<br>Syndicate</div>
+  <div class="cover-subtitle">New Player Primer</div>
+  <div class="cover-rule"></div>
+  <div class="cover-tagline">
+    You woke up 100 years late in the future, pulled from cryo by an unknown patron.
+    Now you run deniable jobs in the House shadow wars while trying to stay human — and stay yourselves.
+  </div>
+  <div class="cover-footer">
+    <span>Nova Praxis — FATE Edition</span>
+    <span>Session 0+ // April 19, 2026</span>
+    <span>Confidential</span>
+  </div>
+</div>
+
+<div class="page-wrap">
+<h1>New Player Primer — Cold Start Syndicate</h1>
+<p>Welcome to the table. This document gives you everything you need to make a character and jump into the campaign. Read the first two sections before Session 0+. Skim the rest at your own pace.</p>
+<h2>The Elevator Pitch</h2>
+<p><strong>Nova Praxis</strong> is a tabletop RPG set in a transhuman, post-scarcity future. Humanity survived the Singularity — barely — and now lives scattered across the solar system under the control of six corporate Houses. Your mind can be backed up, copied, and downloaded into new bodies. Money barely exists; reputation is currency. And underneath the utopian surface, the Houses wage a secret Shadow War for dominance.</p>
+<p><strong>Our campaign — Cold Start Syndicate — is this:</strong></p>
+<blockquote>
+<p>You woke up 100 years late in this future, pulled from cryo by an unknown patron. Now you run deniable jobs in the House shadow wars while trying to stay human — and stay yourselves.</p>
+</blockquote>
+<p>Every job has two layers: the obvious contract and the factional agenda underneath. Your choices about identity, loyalty, and methods have real consequences that carry forward.</p>
+<h2>What You Need to Know About the Setting</h2>
+<h3>The Big Picture</h3>
+<ul>
+<li><strong>Earth is gone.</strong> The Singularity wiped it out. Humanity lives on stations, colonies, and terraformed worlds across the solar system and a handful of exoplanets.</li>
+<li><strong>Six Houses run everything.</strong> They replaced governments. Each controls territory, industry, and ideology. They cooperate publicly and sabotage each other constantly.</li>
+<li><strong>The Coalition</strong> is the thin democratic veneer over the Houses — a United Nations that the Houses mostly ignore when it's inconvenient.</li>
+<li><strong>Apostates</strong> are people who live outside House and Coalition control. Black marketeers, rebels, refugees. Your crew has ties to this world.</li>
+</ul>
+<h3>Transhumanity — The Cool and Terrifying Part</h3>
+<ul>
+<li><strong>Apotheosis:</strong> A procedure that digitizes your mind. After Apotheosis, your consciousness can be backed up, transferred, and even copied.</li>
+<li><strong>Sleeves:</strong> Synthetic or biological bodies you can download into. Hardware for your mind. You can upgrade, swap, or lose them.</li>
+<li><strong>SIMs:</strong> People who exist purely as software — no body at all. They interact with the physical world through drones and mesh networks.</li>
+<li><strong>Pure:</strong> People who never underwent Apotheosis. Still in their original bodies. Increasingly rare and viewed as either principled or stubborn.</li>
+<li><strong>Forking:</strong> Copying a mind. The copy is a "fork" — a separate person with your memories up to the split point. This is legally and ethically complicated.</li>
+<li><strong>Mnemonic Cores:</strong> Your mind's backup drive. If your body dies but your core survives, you can be restored. If it doesn't, you're gone.</li>
+</ul>
+<h3>Why This Matters at the Table</h3>
+<p>Identity isn't abstract here. "Who am I?" is an operational question. Characters deal with memory editing, forks of themselves, dying and being restored in new bodies, and the question of whether a copy of you <em>is</em> you. The campaign leans into this hard.</p>
+<h2>The Game System — FATE Quick Version</h2>
+<p>Nova Praxis runs on a modified version of FATE. If you've never played FATE, here's the core loop.</p>
+<h3>Rolling Dice</h3>
+<ul>
+<li>Roll <strong>4 Fudge dice</strong> (4dF) — each die shows +1, -1, or 0</li>
+<li>Add your <strong>Skill rank</strong> and any modifiers</li>
+<li>That total is your <strong>Effort</strong></li>
+<li>Beat the <strong>Difficulty</strong> set by the GM — the margin is your <strong>Shifts</strong></li>
+<li><strong>Spin</strong> (3+ Shifts): Something extra good happens</li>
+<li><strong>Stall</strong> (fail by 3+): Something extra bad happens</li>
+</ul>
+<h3>Aspects — The Heart of FATE</h3>
+<p>Aspects are short phrases that describe something true about your character, the scene, or the world. Examples: <em>"Cryo-Survivor With Trust Issues"</em>, <em>"This Hallway Is On Fire"</em>, <em>"Owes a Debt to House Kimura"</em>.</p>
+<ul>
+<li><strong>Invoke</strong> an Aspect: Spend 1 Fate Point for +2 to a roll (or a reroll) when the Aspect is relevant</li>
+<li><strong>Get Compelled:</strong> The GM uses your Aspect to make your life harder — you gain 1 Fate Point</li>
+<li>Aspects are the GM's main tool for creating drama and your main tool for bending the odds</li>
+</ul>
+<h3>Fate Points</h3>
+<ul>
+<li>You start each session with your <strong>Refresh</strong> (usually 5, higher for Pure characters)</li>
+<li>Spend them to invoke Aspects or power certain Stunts</li>
+<li>Earn them when your Aspects get compelled against you</li>
+<li>They don't carry between sessions</li>
+</ul>
+<h3>Stress and Consequences</h3>
+<p>When you take a hit — physically, mentally, or digitally:</p>
+<ul>
+<li><strong>Stress boxes</strong> absorb minor hits and clear after the scene</li>
+<li><strong>Consequences</strong> absorb bigger hits by giving you a negative Aspect (Mild -2, Moderate -4, Severe -6, Extreme -8)</li>
+<li>If you can't absorb the hit, you're <strong>Taken Out</strong> — the attacker narrates what happens</li>
+<li>You can <strong>Concede</strong> before that point to keep narrative control over your exit</li>
+</ul>
+<h3>Actions</h3>
+<table>
+<thead><tr><th>Action</th><th>What It Does</th></tr></thead><tbody>
+<tr><td><strong>Test</strong></td><td>Roll vs. a fixed difficulty</td></tr>
+<tr><td><strong>Contest</strong></td><td>Roll vs. another character's roll</td></tr>
+<tr><td><strong>Maneuver</strong></td><td>Place a temporary Aspect on the scene or target</td></tr>
+<tr><td><strong>Assessment</strong></td><td>Discover a hidden Aspect</td></tr>
+<tr><td><strong>Declaration</strong></td><td>Introduce a new fact into the story (costs a Fate Point)</td></tr>
+<tr><td><strong>Attack</strong></td><td>Deal stress to a target</td></tr>
+<tr><td><strong>Block</strong></td><td>Prevent a specific action</td></tr>
+</tbody></table>
+<h2>Building Your Character</h2>
+<h3>Step 1 — Pick Your State</h3>
+<p>This is the biggest choice. It defines your relationship with your own body.</p>
+<table>
+<thead><tr><th>State</th><th>What It Means</th><th>Flavor</th><th>Perks</th></tr></thead><tbody>
+<tr><td><strong>Pure</strong></td><td>Original body, no Apotheosis</td><td>Principled, unpredictable, off the grid</td><td>+2 Refresh, free Carpe Diem stunt, +1 skill, 8 physical skill ranks</td></tr>
+<tr><td><strong>SIM</strong></td><td>No body — pure software</td><td>Digital ghost, drone operator, hacker</td><td>Free SIM stunt, SINC bonus, live in virtualities</td></tr>
+<tr><td><strong>Sleeved</strong></td><td>Digitized mind in a body</td><td>Most common, flexible, upgradeable</td><td>Physical stats from sleeve, augmentation points, sleeve Aspects</td></tr>
+</tbody></table>
+<h3>Step 2 — Choose a Skill Distribution</h3>
+<table>
+<thead><tr><th>Style</th><th>Shape</th><th>Best For</th></tr></thead><tbody>
+<tr><td><strong>Specialist</strong></td><td>1 at +5, 2 at +4, 2 at +3, 3 at +2, 6 at +1</td><td>One standout talent</td></tr>
+<tr><td><strong>Expert</strong></td><td>3 at +4, 3 at +3, 4 at +2, 6 at +1</td><td>Well-rounded competence</td></tr>
+<tr><td><strong>Generalist</strong></td><td>7 at +3, 8 at +2, 3 at +1</td><td>Broad, no weak spots</td></tr>
+</tbody></table>
+<h3>Step 3 — Pick Your Skills</h3>
+<p><strong>Standard Skills:</strong></p>
+<table>
+<thead><tr><th>Skill</th><th>Does</th></tr></thead><tbody>
+<tr><td>Assets</td><td>Wealth and black market purchasing power</td></tr>
+<tr><td>Cohesion</td><td>Mental stability, resisting psychological trauma</td></tr>
+<tr><td>Demolitions</td><td>Explosives — combat and structural</td></tr>
+<tr><td>Diplomacy</td><td>Friendly persuasion, negotiation</td></tr>
+<tr><td>Education</td><td>Book learning — science, history, academic knowledge</td></tr>
+<tr><td>H. Engineering</td><td>Hardware — build, repair, operate machines</td></tr>
+<tr><td>S. Engineering</td><td>Software — code, operate CISTs, digital systems</td></tr>
+<tr><td>Firearms</td><td>Ranged weapons — railguns, coil guns, heavy weapons</td></tr>
+<tr><td>Guile</td><td>Lying, conning, seduction, haggling</td></tr>
+<tr><td>Insight</td><td>Gut feelings, reading emotions, mental reflexes</td></tr>
+<tr><td>Intimidation</td><td>Threats, coercion, interrogation</td></tr>
+<tr><td>Melee</td><td>Hand-to-hand and melee weapons</td></tr>
+<tr><td>Mnemonics</td><td>Mind editing, resleeving, forking, AI interaction</td></tr>
+<tr><td>House Networking</td><td>Contacts among the Houses; starting Rep-Rating</td></tr>
+<tr><td>Apostate Networking</td><td>Underground and black market contacts</td></tr>
+<tr><td>Pilot</td><td>Vehicles — ground, air, space</td></tr>
+<tr><td>Research</td><td>Finding information on the Extranet</td></tr>
+<tr><td>Resolve</td><td>Willpower, courage, resisting temptation</td></tr>
+<tr><td>Strategy</td><td>Tactical planning, initiative, reading enemy plans</td></tr>
+<tr><td>Stealth</td><td>Hiding, pickpocketing, moving unseen</td></tr>
+</tbody></table>
+<p><strong>Physical Skills</strong> (ranks from your State or Sleeve):</p>
+<table>
+<thead><tr><th>Skill</th><th>Does</th></tr></thead><tbody>
+<tr><td>Athletics</td><td>Movement, coordination — adds to Physical Stress</td></tr>
+<tr><td>Endurance</td><td>Toughness, resisting toxins — adds to Physical Stress</td></tr>
+<tr><td>Perception</td><td>Senses, awareness, noticing things</td></tr>
+</tbody></table>
+<p><strong>Special:</strong></p>
+<table>
+<thead><tr><th>Skill</th><th>Does</th></tr></thead><tbody>
+<tr><td>SINC</td><td>Savant hacking — requires Savant stunt</td></tr>
+</tbody></table>
+<h3>Step 4 — Pick Stunts</h3>
+<p>You start with <strong>3 Stunts</strong> plus any free ones from your State.</p>
+<ul>
+<li><strong>Savant</strong> — Unlocks SINC and hacking programs (requires Apotheosis)</li>
+<li><strong>Drone-Jock</strong> — Cheaper, better drones; bonuses when actively piloting</li>
+<li><strong>Licensed</strong> — Buy restricted gear legally</li>
+<li><strong>Battlefield Command</strong> — Move allies tactically</li>
+<li><strong>Fame</strong> — Celebrity leverage and reputation access</li>
+<li><strong>Specialty Aspect</strong> — Free invoke once per scene on a specific skill use</li>
+<li><strong>Skilled</strong> — +1 to any non-physical skill</li>
+<li><strong>Refreshed</strong> — +1 Refresh (stackable up to 3 times)</li>
+<li><strong>Transhumanist</strong> — Extra augmentation capacity</li>
+</ul>
+<h3>Step 5 — Write Your Aspects</h3>
+<p>You get 6-7 Aspects using the <strong>ABCDE method:</strong></p>
+<table>
+<thead><tr><th>Slot</th><th>Type</th><th>What It Covers</th><th>Example</th></tr></thead><tbody>
+<tr><td><strong>HC</strong></td><td>High Concept</td><td>Who you are in one phrase</td><td><em>"Ghost Pilot with a Death Wish"</em></td></tr>
+<tr><td><strong>A</strong></td><td>Ambition</td><td>Your goals and drives</td><td><em>"I Will Know Who Brought Me Back"</em></td></tr>
+<tr><td><strong>B</strong></td><td>Belief</td><td>Your philosophy and values</td><td><em>"The Only Law Is Consequence"</em></td></tr>
+<tr><td><strong>C</strong></td><td>Connection</td><td>Important people, places, debts</td><td><em>"Owes Everything to a Name I Don't Recognize"</em></td></tr>
+<tr><td><strong>D</strong></td><td>Disadvantage</td><td>Your flaw, your obstacle</td><td><em>"Can't Stop Pulling At Loose Threads"</em></td></tr>
+<tr><td><strong>E</strong></td><td>Expertise</td><td>Your methods and approach</td><td><em>"Violence Is the Language I Speak Fluently"</em></td></tr>
+<tr><td><strong>7</strong></td><td>Physical Trait (Pure) or Savant Disadvantage</td><td>State-specific</td><td><em>"This Body Wasn't Built for This Century"</em></td></tr>
+</tbody></table>
+<p>Good Aspects are <strong>double-edged</strong> — genuinely useful when invoked, genuinely interesting when compelled.</p>
+<h3>Step 6 — Sleeves (Sleeved Characters Only)</h3>
+<p>Starting sleeve cost cap: MAX(Assets, Rep-Rating) + 4.</p>
+<table>
+<thead><tr><th>Sleeve</th><th>Cost</th><th>Phys. Ranks</th><th>Aug. Points</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Alpha Bio</td><td>6</td><td>8</td><td>2</td><td>Budget; Unattractive aspect</td></tr>
+<tr><td>Beta Bio</td><td>7</td><td>9</td><td>3</td><td>Standard; neutral appearance</td></tr>
+<tr><td>Gamma Bio</td><td>9</td><td>10</td><td>4</td><td>Enhanced; cosmetic options</td></tr>
+<tr><td>Delta Bio</td><td>11</td><td>11</td><td>6</td><td>Premium; exceptional genegineering</td></tr>
+<tr><td>Epsilon Bio</td><td>14</td><td>12</td><td>8</td><td>Top tier</td></tr>
+</tbody></table>
+<p>Cybersleeves also exist — talk to Sean about options. They trade biological flexibility for raw power and modularity.</p>
+<h2>The Existing Crew</h2>
+<p>You're joining a crew that's been through eight sessions. Here's who's at the table:</p>
+<table>
+<thead><tr><th>Character</th><th>State</th><th>Role</th><th>Signature Skills</th></tr></thead><tbody>
+<tr><td><strong>Aeddarius Crucial</strong></td><td>Pure</td><td>Strategic commander, political operator</td><td>Education +4, House Networking +4, Strategy +4</td></tr>
+<tr><td><strong>Grace Pryzbylski</strong></td><td>SIM</td><td>Digital recon, multi-drone operator</td><td>SINC +5, S. Engineering +4, H. Engineering +4</td></tr>
+<tr><td><strong>Dustin "Grift" Halloway</strong></td><td>Sleeved</td><td>Systems infiltrator, social engineer</td><td>House Networking +4, Mnemonics +4, S. Engineering +4</td></tr>
+<tr><td><strong>Azaria Dawson</strong></td><td>Sleeved</td><td>Celebrity operative, face</td><td>Guile +4, Diplomacy +4, Resolve +4</td></tr>
+<tr><td><strong>Kallius</strong></td><td>Sleeved</td><td>Memory merchant, mnemonic specialist</td><td>Mnemonics +5, S. Engineering +4, H. Engineering +4</td></tr>
+</tbody></table>
+<p><em>Note: A sixth crew member — Doc — went SIM and dropped off the grid after Vantage Station. His status is unknown.</em></p>
+<h3>What the Crew Is Missing</h3>
+<p>The crew has strong coverage for hacking, social engineering, mnemonic work, and command. What they're short on:</p>
+<ul>
+<li><strong>Physical presence.</strong> Nobody leads with Athletics or Endurance. A high-endurance brawler or a Pure bruiser would fill a real gap.</li>
+<li><strong>Stealth.</strong> Infiltration and quiet entry are handled ad-hoc. A dedicated Stealth operator would open new approaches.</li>
+<li><strong>Demolitions / Hardware.</strong> Kallius and Grace handle hardware, but a true demo specialist or combat engineer would round out tactical options.</li>
+<li><strong>Pilot.</strong> Doc covered this. With him gone, nobody flies the battle cruiser with confidence.</li>
+<li><strong>Medical / Biological expertise.</strong> Nobody on the crew has strong Education + Mnemonics for biological scenarios.</li>
+</ul>
+<p>That said — play what sounds fun. The crew adapts. These are gaps, not requirements.</p>
+<h2>Character Suggestions for New Players</h2>
+<p>These aren't prescriptions. They're starting points that fit the current crew and the campaign's themes.</p>
+<h3>Suggestion 1 — The Soldier</h3>
+<p><strong>Concept:</strong> A cryo-survivor who was military before the Singularity. Woke up to find their entire world gone and adapted the only way they knew how.</p>
+<p><strong>State:</strong> Sleeved (combat-grade sleeve, high Endurance/Athletics)</p>
+<p><strong>Key Skills:</strong> Firearms +4, Athletics +4, Strategy +4, Melee +3, Intimidation +3</p>
+<p><strong>Stunts:</strong> Licensed (carry restricted weapons), Battlefield Command, Specialty Aspect (under fire)</p>
+<p><strong>High Concept:</strong> <em>"Last Soldier of a War Nobody Remembers"</em></p>
+<p><strong>Disadvantage:</strong> <em>"Still Fighting Like the Old Rules Apply"</em></p>
+<p><strong>Why it fits:</strong> The crew has intelligence assets and social operators but no reliable frontline fighter. Someone with Firearms +4 and a combat sleeve changes the calculus in every physical confrontation. Strategy overlap with Aeddarius creates natural command tension — who's actually running the op?</p>
+<h3>Suggestion 2 — The Pilot</h3>
+<p><strong>Concept:</strong> Someone who lived and breathed flight before the Singularity and found that skill still translates. They move between the real world and virtual cockpits like most people move between rooms.</p>
+<p><strong>State:</strong> SIM or Sleeved</p>
+<p><strong>Key Skills:</strong> Pilot +5, S. Engineering +4, Perception +4, Stealth +3, H. Engineering +3</p>
+<p><strong>Stunts:</strong> Drone-Jock, Savant (optional — makes them a SIM rival to Grace), Specialty Aspect (in the cockpit)</p>
+<p><strong>High Concept:</strong> <em>"Born to Fly, Forced to Walk"</em></p>
+<p><strong>Disadvantage:</strong> <em>"The Real World Is Just Bad Lag"</em></p>
+<p><strong>Why it fits:</strong> Doc left a vacancy. Someone needs to fly the battle cruiser — a ship that size is a liability without a pilot. A SIM pilot would create interesting dynamic with Grace (two mesh-native crew members navigating the same space). A Sleeved pilot brings a physicality Grace lacks.</p>
+<h3>Suggestion 3 — The Fixer</h3>
+<p><strong>Concept:</strong> Someone who survived the century gap by being useful to people who needed things done quietly. A networker, information broker, or black market operator with roots in the apostate underground.</p>
+<p><strong>State:</strong> Sleeved (low-profile sleeve, nothing flashy)</p>
+<p><strong>Key Skills:</strong> Apostate Networking +5, Guile +4, Research +4, Stealth +4, Assets +3</p>
+<p><strong>Stunts:</strong> Fame (underground version — well-known in the right circles), Specialty Aspect (reading a room), Skilled +1 (Guile)</p>
+<p><strong>High Concept:</strong> <em>"Everyone Owes Me a Favor, I Owe Everyone a Secret"</em></p>
+<p><strong>Disadvantage:</strong> <em>"My Past Has More Reach Than My Future"</em></p>
+<p><strong>Why it fits:</strong> The crew runs jobs in both Coalition and apostate spaces, but their Apostate Networking is thin. This character opens doors Aeddarius and Grift can't reach and creates natural dramatic tension — they have relationships on both sides of the law. Stealth gives the crew a quiet-entry specialist they've been missing.</p>
+<h3>Suggestion 4 — The Ghost</h3>
+<p><strong>Concept:</strong> A Pure who shouldn't logically be alive. Someone the records show as dead — or who never existed in the Coalition's database. A walking blind spot in the surveillance state.</p>
+<p><strong>State:</strong> Pure</p>
+<p><strong>Key Skills:</strong> Stealth +5, Resolve +4, Melee +4, Insight +3, Research +3</p>
+<p><strong>Stunts:</strong> Carpe Diem (free — Pure), Refreshed, Specialty Aspect (operating off-mesh)</p>
+<p><strong>High Concept:</strong> <em>"The Coalition Thinks I'm Dead. Let's Keep It That Way."</em></p>
+<p><strong>Disadvantage:</strong> <em>"Can't Ask for Help Without Exposing Myself"</em></p>
+<p><strong>Why it fits:</strong> The crew operates in a surveillance state where every transaction, face, and movement is logged. A Pure character with no mesh footprint can go places nobody else on the crew can. High Resolve complements the psychological pressure arcs the campaign runs. The independence/isolation tension with a crew that relies heavily on mesh communication is rich dramatic material. Aeddarius is already Pure — two Pure characters creates a natural in-crew dynamic around what "being human" actually means in this century.</p>
+<h2>What's Happened So Far — Spoiler Lite</h2>
+<p>The crew woke up from cryo owing their existence to a mysterious patron. Since then:</p>
+<ul>
+<li>They survived a crisis on Europa Station, a rogue SIM siege, and a corporate cover-up</li>
+<li>They discovered that a faction called <strong>Chimera</strong> is orchestrating events behind the scenes</li>
+<li>A woman named <strong>Valare</strong> holds critical information — her backup fork is alive, traumatized, and refusing to come in</li>
+<li>An operative named <strong>Kestrel</strong> has been deployed to clean up all evidence — including the crew</li>
+<li>The crew has a battle cruiser and a lot of enemies</li>
+</ul>
+<p>Your characters don't need to know any of this. Session 0+ will establish how you connect to the crew. Sean will work with you on that.</p>
+<h2>Session 0+ Checklist</h2>
+<ul class="checklist">
+<li><input type="checkbox"  disabled> Read this primer</li>
+<li><input type="checkbox"  disabled> Think about what sounds fun — combat? social? hacking? weird?</li>
+<li><input type="checkbox"  disabled> Pick a State (Pure / SIM / Sleeved) — or come with 2-3 ideas to narrow down</li>
+<li><input type="checkbox"  disabled> Draft a High Concept and Disadvantage Aspect — rough is fine</li>
+<li><input type="checkbox"  disabled> Look at the character suggestions — steal freely, riff on them, or ignore entirely</li>
+<li><input type="checkbox"  disabled> We'll build the rest together at the table</li>
+</ul>
+<p>Don't stress about getting everything perfect. Session 0+ is exactly for this — we'll walk through it together and make sure your character fits the world and the crew.</p>
+<h2>Quick Reference — The FATE Ladder</h2>
+<table>
+<thead><tr><th>Rank</th><th>Name</th></tr></thead><tbody>
+<tr><td>+8</td><td>Legendary</td></tr>
+<tr><td>+7</td><td>Epic</td></tr>
+<tr><td>+6</td><td>Fantastic</td></tr>
+<tr><td>+5</td><td>Superb</td></tr>
+<tr><td>+4</td><td>Great</td></tr>
+<tr><td>+3</td><td>Good</td></tr>
+<tr><td>+2</td><td>Fair</td></tr>
+<tr><td>+1</td><td>Average</td></tr>
+<tr><td>0</td><td>Mediocre</td></tr>
+<tr><td>-1</td><td>Poor</td></tr>
+<tr><td>-2</td><td>Terrible</td></tr>
+</tbody></table>
+</div>
+
+</body>
+</html>
