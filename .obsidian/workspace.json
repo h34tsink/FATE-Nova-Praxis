@@ -32,15 +32,12 @@
             "id": "fafec43f384d1f53",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Sessions/Session 0/Session 0 - Teaching Scenario (FATE Migration).md",
-                "mode": "preview",
-                "source": false,
-                "backlinks": false
+                "file": "_Assets/terminal-sd-ui-landscape.png"
               },
-              "icon": "lucide-file",
-              "title": "Session 0 - Teaching Scenario (FATE Migration)"
+              "icon": "lucide-image",
+              "title": "terminal-sd-ui-landscape"
             }
           }
         ]
@@ -258,14 +255,14 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "fafec43f384d1f53",
+  "active": "a0680864420eca0e",
   "lastOpenFiles": [
-    "_Assets/terminal-sd-ui-landscape.png",
-    "terminal-sd-ui-landscape.png",
-    "_Assets/terminal-standard-deviation-landscape.png",
-    "terminal-standard-deviation-landscape.png",
     "_Assets/terminal-standard-deviation.png",
+    "_Assets/terminal-standard-deviation-landscape.png",
+    "_Assets/terminal-sd-ui-landscape.png",
     "Sessions/Session 0/Session 0 - Teaching Scenario (FATE Migration).md",
+    "terminal-sd-ui-landscape.png",
+    "terminal-standard-deviation-landscape.png",
     "terminal-standard-deviation.png",
     "Characters/Character Creation Summary.md",
     "_Assets/terminal_scene_temp.html",
@@ -305,7 +302,6 @@
     "Characters/Pregen Portraits/Maro Costigan.png",
     "Characters/Pregen Portraits/Nyx.png",
     "Characters/Pregen Portraits/Thessa Liang.png",
-    "Characters/Pregen Portraits/Dex Corvo.png",
     "Locations/Colonized Universe.canvas",
     "Untitled.canvas",
     "Sessions/Session 6/Untitled.canvas",
