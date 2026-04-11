@@ -132,7 +132,11 @@
       "Bash(pandoc --version)",
       "Bash(wkhtmltopdf --version)",
       "Bash(winget list:*)",
-      "Bash(npx --version)"
+      "Bash(npx --version)",
+      "mcp__plugin_playwright_playwright__browser_resize",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_run_code",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot"
     ]
   }
 }
