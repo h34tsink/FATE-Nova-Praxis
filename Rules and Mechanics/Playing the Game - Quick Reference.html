@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nova Praxis — Playing the Game</title>
+<style>
+  :root {
+    --bg: #090b0f;
+    --bg-card: #0e1117;
+    --bg-card-hover: #13181f;
+    --border: #1e2630;
+    --border-bright: #2a3545;
+    --text: #c8d0db;
+    --text-dim: #6b7a8d;
+    --text-bright: #e8ecf0;
+    --accent-cyan: #00c8e8;
+    --accent-blue: #3b8fd4;
+    --accent-amber: #e09a30;
+    --accent-red: #c0404a;
+    --accent-purple: #8a5fc8;
+    --accent-green: #3aaa72;
+    --accent-teal: #2aaa98;
+    --accent-steel: #5a7a9a;
+    --accent-gold: #c8a830;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+
+  /* ── BACKGROUND GRID ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,200,232,0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,200,232,0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .page {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px 20px 48px;
+  }
+
+  /* ── HEADER ── */
+  header {
+    border-bottom: 1px solid var(--border-bright);
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+  }
+
+  .header-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .title-block {}
+
+  .system-tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-cyan);
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-bright);
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+  }
+
+  h1 span {
+    color: var(--accent-cyan);
+  }
+
+  .flavor {
+    margin-top: 8px;
+    color: var(--text-dim);
+    font-style: italic;
+    font-size: 12px;
+  }
+
+  .header-meta {
+    text-align: right;
+    font-size: 11px;
+    color: var(--text-dim);
+    line-height: 1.8;
+  }
+
+  .header-meta strong { color: var(--accent-cyan); font-weight: 600; }
+
+  /* ── NAV PILLS ── */
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 28px;
+  }
+
+  .nav a {
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    transition: all 0.15s;
+  }
+
+  .nav a:hover { opacity: 1; filter: brightness(1.2); }
+
+  .nav-combat   { background: rgba(0,200,232,0.08); border-color: rgba(0,200,232,0.3); color: var(--accent-cyan); }
+  .nav-ranged   { background: rgba(59,143,212,0.08); border-color: rgba(59,143,212,0.3); color: var(--accent-blue); }
+  .nav-hazards  { background: rgba(224,154,48,0.08); border-color: rgba(224,154,48,0.3); color: var(--accent-amber); }
+  .nav-ego      { background: rgba(138,95,200,0.08); border-color: rgba(138,95,200,0.3); color: var(--accent-purple); }
+  .nav-economy  { background: rgba(200,168,48,0.08); border-color: rgba(200,168,48,0.3); color: var(--accent-gold); }
+  .nav-stealth  { background: rgba(58,170,114,0.08); border-color: rgba(58,170,114,0.3); color: var(--accent-green); }
+  .nav-gear     { background: rgba(90,122,154,0.08); border-color: rgba(90,122,154,0.3); color: var(--accent-steel); }
+  .nav-env      { background: rgba(42,170,152,0.08); border-color: rgba(42,170,152,0.3); color: var(--accent-teal); }
+
+  /* ── SECTION HEADERS ── */
+  .section {
+    margin-bottom: 28px;
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-title h2 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .section-title::before {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 16px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .sec-combat .section-title::before   { background: var(--accent-cyan); }
+  .sec-combat .section-title h2        { color: var(--accent-cyan); }
+  .sec-ranged .section-title::before   { background: var(--accent-blue); }
+  .sec-ranged .section-title h2        { color: var(--accent-blue); }
+  .sec-hazards .section-title::before  { background: var(--accent-amber); }
+  .sec-hazards .section-title h2       { color: var(--accent-amber); }
+  .sec-ego .section-title::before      { background: var(--accent-purple); }
+  .sec-ego .section-title h2           { color: var(--accent-purple); }
+  .sec-economy .section-title::before  { background: var(--accent-gold); }
+  .sec-economy .section-title h2       { color: var(--accent-gold); }
+  .sec-stealth .section-title::before  { background: var(--accent-green); }
+  .sec-stealth .section-title h2       { color: var(--accent-green); }
+  .sec-gear .section-title::before     { background: var(--accent-steel); }
+  .sec-gear .section-title h2          { color: var(--accent-steel); }
+  .sec-env .section-title::before      { background: var(--accent-teal); }
+  .sec-env .section-title h2           { color: var(--accent-teal); }
+
+  /* ── CARD GRID ── */
+  .card-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  .card-grid-wide {
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  }
+
+  .card-grid-full {
+    grid-template-columns: 1fr;
+  }
+
+  /* ── CARD ── */
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 14px 16px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+  }
+
+  .sec-combat .card::before   { background: var(--accent-cyan); }
+  .sec-ranged .card::before   { background: var(--accent-blue); }
+  .sec-hazards .card::before  { background: var(--accent-amber); }
+  .sec-ego .card::before      { background: var(--accent-purple); }
+  .sec-economy .card::before  { background: var(--accent-gold); }
+  .sec-stealth .card::before  { background: var(--accent-green); }
+  .sec-gear .card::before     { background: var(--accent-steel); }
+  .sec-env .card::before      { background: var(--accent-teal); }
+
+  .card h3 {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-bright);
+    margin-bottom: 10px;
+    padding-left: 10px;
+  }
+
+  .card p {
+    padding-left: 10px;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+
+  .card p:last-child { margin-bottom: 0; }
+
+  .card ul {
+    padding-left: 22px;
+    margin-bottom: 6px;
+  }
+
+  .card li {
+    color: var(--text);
+    margin-bottom: 3px;
+  }
+
+  .card li:last-child { margin-bottom: 0; }
+
+  .kw {
+    color: var(--text-bright);
+    font-weight: 600;
+  }
+
+  /* ── TABLES ── */
+  .card table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0 4px;
+    font-size: 12px;
+  }
+
+  .card thead tr {
+    border-bottom: 1px solid var(--border-bright);
+  }
+
+  .card thead th {
+    text-align: left;
+    padding: 4px 8px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+
+  .card tbody tr {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .card tbody tr:last-child { border-bottom: none; }
+
+  .card tbody td {
+    padding: 5px 8px;
+    color: var(--text);
+    vertical-align: top;
+  }
+
+  .card tbody tr:hover td { background: rgba(255,255,255,0.02); }
+
+  .val {
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    color: var(--text-bright);
+  }
+
+  /* ── INLINE RULE BLOCKS ── */
+  .rule-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 4px 10px;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+  }
+
+  .rule-row:last-child { border-bottom: none; }
+
+  .rule-row .label { color: var(--text); }
+  .rule-row .value { color: var(--text-bright); font-weight: 600; text-align: right; }
+
+  /* ── CALLOUT BOXES ── */
+  .note-box {
+    border-radius: 3px;
+    padding: 8px 10px;
+    margin: 8px 0 4px;
+    font-size: 12px;
+  }
+
+  .note-box.warn  { background: rgba(224,154,48,0.08); border-left: 2px solid var(--accent-amber); color: var(--accent-amber); }
+  .note-box.info  { background: rgba(0,200,232,0.06); border-left: 2px solid rgba(0,200,232,0.4); color: var(--text-dim); }
+  .note-box.danger { background: rgba(192,64,74,0.08); border-left: 2px solid var(--accent-red); color: #e06070; }
+
+  /* ── OUTCOME ROWS ── */
+  .outcomes { margin: 8px 0 4px; padding-left: 10px; }
+  .outcome { display: flex; gap: 8px; margin-bottom: 4px; font-size: 12px; align-items: baseline; }
+  .outcome .badge {
+    flex-shrink: 0;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 2px 6px;
+    border-radius: 2px;
+    min-width: 56px;
+    text-align: center;
+  }
+  .badge-success { background: rgba(58,170,114,0.15); color: var(--accent-green); border: 1px solid rgba(58,170,114,0.3); }
+  .badge-fail    { background: rgba(224,154,48,0.12); color: var(--accent-amber); border: 1px solid rgba(224,154,48,0.3); }
+  .badge-stall   { background: rgba(192,64,74,0.12); color: #e06070; border: 1px solid rgba(192,64,74,0.3); }
+
+  /* ── TAG ── */
+  .tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin: 0 2px;
+    vertical-align: middle;
+  }
+
+  .tag-action  { background: rgba(0,200,232,0.12); color: var(--accent-cyan); border: 1px solid rgba(0,200,232,0.25); }
+  .tag-free    { background: rgba(58,170,114,0.12); color: var(--accent-green); border: 1px solid rgba(58,170,114,0.25); }
+  .tag-instant { background: rgba(200,168,48,0.12); color: var(--accent-gold); border: 1px solid rgba(200,168,48,0.25); }
+  .tag-supp    { background: rgba(90,122,154,0.12); color: var(--accent-steel); border: 1px solid rgba(90,122,154,0.25); }
+  .tag-illegal { background: rgba(192,64,74,0.12); color: #e06070; border: 1px solid rgba(192,64,74,0.25); }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 6px 10px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  footer span {
+    font-size: 11px;
+    color: var(--text-dim);
+  }
+
+  footer strong { color: var(--accent-cyan); font-weight: 600; }
+
+  /* ── SCROLL TARGET OFFSET ── */
+  [id] { scroll-margin-top: 16px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-top">
+      <div class="title-block">
+        <span class="system-tag">GM &amp; Player Reference · Strands of Fate</span>
+        <h1>NOVA PRAXIS — <span>Playing the Game</span></h1>
+        <p class="flavor">"The mesh tracks everything. Fortunately, so do we."</p>
+      </div>
+      <div class="header-meta">
+        <strong>Source:</strong> Nova Praxis Rulebook<br>
+        <strong>System:</strong> Strands of Fate<br>
+        <strong>Format:</strong> Quick Reference · All Rules
+      </div>
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav class="nav" aria-label="Jump to section">
+    <a class="nav-combat"  href="#combat">Combat</a>
+    <a class="nav-ranged"  href="#ranged">Ranged Weapons</a>
+    <a class="nav-hazards" href="#hazards">Hazards &amp; Damage</a>
+    <a class="nav-ego"     href="#ego">Ego &amp; Transhumanism</a>
+    <a class="nav-economy" href="#economy">Economy &amp; Rep</a>
+    <a class="nav-stealth" href="#stealth">Stealth &amp; Infiltration</a>
+    <a class="nav-gear"    href="#gear">Gear &amp; Repairs</a>
+    <a class="nav-env"     href="#env">Physical &amp; Environment</a>
+  </nav>
+
+  <!-- ════════════════════════════════════════════
+       COMBAT
+  ═════════════════════════════════════════════ -->
+  <section class="section sec-combat" id="combat">
+    <div class="section-title"><h2>Combat Actions</h2></div>
+    <div class="card-grid">
+
+      <div class="card">
+        <h3>Ambushing</h3>
+        <p>Target <span class="kw">unaware of threat</span> → <span class="kw">no Skill on defense</span>. Dice roll only.</p>
+        <p>Armor Rating still applies.</p>
+        <div class="note-box info">GM should still roll defense for mooks in this case.</div>
+      </div>
+
+      <div class="card">
+        <h3>Full Defense</h3>
+        <p>Spend a <span class="tag tag-action">Simple Action</span> doing nothing but defending.</p>
+        <p>Gain <span class="kw">+2 on all defense tests</span> until your next turn.</p>
+        <div class="note-box info">If you haven't acted yet when first attacked, you may declare Full Defense and forfeit your Simple Action that turn.</div>
+      </div>
+
+      <div class="card">
+        <h3>Hold Your Action</h3>
+        <p>Delay your turn to act after another character.</p>
+        <p>Hold through the <span class="kw">entire round</span> → go <span class="kw">first next round</span>.</p>
+        <div class="note-box info">Multiple held characters: Strategy contest to determine order.</div>
+      </div>
+
+      <div class="card">
+        <h3>Taking Aim</h3>
+        <p><span class="tag tag-action">Simple Action</span> · Perception (Diff: 2)</p>
+        <p>Success → place <span class="kw">In My Sights</span> Aspect on target.</p>
+        <p>Invoke free on your <span class="kw">next attack only</span>. Fragile — GM may require refresh if target moves erratically.</p>
+      </div>
+
+      <div class="card">
+        <h3>Taking Cover</h3>
+        <p><span class="tag tag-free">Free Action</span> to move behind cover in your zone.</p>
+        <table>
+          <thead><tr><th>Type</th><th>Aspect Gained</th></tr></thead>
+          <tbody>
+            <tr><td><span class="kw">Light Cover</span></td><td>Behind Light Cover</td></tr>
+            <tr><td><span class="kw">Hard Cover</span></td><td>Behind Hard Cover(P) — persistent; can declare "can't be hit" for 1 FP</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>Push / Pull / Throw</h3>
+        <p>Contested <span class="kw">Athletics + Size</span> test.</p>
+        <p>Win → target moves to adjacent zone of your choice.</p>
+        <p>If larger: can push extra zones up to <span class="kw">Size difference</span>.</p>
+        <p>Can follow opponent as a <span class="tag tag-free">Free Action</span>.</p>
+      </div>
+
+      <div class="card">
+        <h3>Help from Others</h3>
+        <p>Helper rolls same Skill vs. difficulty = primary's <span class="kw">Skill rank</span>.</p>
+        <div class="outcomes">
+          <div class="outcome"><span class="badge badge-success">Success</span><span>+1 bonus to primary</span></div>
+          <div class="outcome"><span class="badge badge-success">Spin</span><span>+2 bonus to primary</span></div>
+          <div class="outcome"><span class="badge badge-fail">Fail</span><span>No effect</span></div>
+          <div class="outcome"><span class="badge badge-stall">Stall</span><span>−1 penalty to primary</span></div>
+        </div>
+        <div class="note-box info">GM determines maximum number of helpers.</div>
+      </div>
+
+      <div class="card">
+        <h3>Block Actions</h3>
+        <p>Declare what you block + Skill used → roll to set <span class="kw">Block Potency</span>.</p>
+        <p>Anyone attempting the blocked action must beat Potency (<span class="tag tag-action">Simple Action</span>). Success = overcome, but counts as <span class="tag tag-supp">Supplemental</span> (−1 to the follow-up).</p>
+        <table>
+          <thead><tr><th>Sample Block</th><th>Skill</th></tr></thead>
+          <tbody>
+            <tr><td>Suppression Fire</td><td>Firearms</td></tr>
+            <tr><td>Restrain</td><td>Melee or Athletics</td></tr>
+            <tr><td>Distraction</td><td>Guile or Diplomacy</td></tr>
+          </tbody>
+        </table>
+        <div class="note-box info">Ignoring a Block may grant Blocker a free <strong>Instant Action</strong> response.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       RANGED WEAPONS
+  ═════════════════════════════════════════════ -->
+  <section class="section sec-ranged" id="ranged">
+    <div class="section-title"><h2>Ranged Weapons</h2></div>
+    <div class="card-grid">
+
+      <div class="card">
+        <h3>Beam Weapons</h3>
+        <table>
+          <thead><tr><th>Mode</th><th>Effect</th><th>Cost / Risk</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><span class="kw">Beam Sweep</span></td>
+              <td>Attack multiple targets; cumulative −1 per target</td>
+              <td>Firearms (Diff: 2 + targets) or overheat</td>
+            </tr>
+            <tr>
+              <td><span class="kw">Overheat</span></td>
+              <td>WR +3</td>
+              <td>Spend 1 turn cooling after</td>
+            </tr>
+            <tr>
+              <td><span class="kw">Suppression Fire</span></td>
+              <td>Block Action</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>Full-Auto Weapons</h3>
+        <table>
+          <thead><tr><th>Mode</th><th>Effect</th><th>Cost / Risk</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><span class="kw">Burst Fire</span></td>
+              <td>WR +3</td>
+              <td>Firearms (Diff: 2) or spend Simple Action reload/cool</td>
+            </tr>
+            <tr>
+              <td><span class="kw">Empty the Clip</span></td>
+              <td>WR +5</td>
+              <td>Burns entire magazine; must reload before next use</td>
+            </tr>
+            <tr>
+              <td><span class="kw">Suppression Fire</span></td>
+              <td>Block Action</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="note-box info"><strong>High Capacity Aspect:</strong> Invoke for Firearms (Diff: 3) to avoid empty-clip penalty.</div>
+      </div>
+
+      <div class="card">
+        <h3>Out of Ammo / Overheating</h3>
+        <p>GM may call a <span class="kw">Firearms test (Diff: 2)</span> at any time — higher if heavy use.</p>
+        <div class="outcomes">
+          <div class="outcome"><span class="badge badge-fail">Fail</span><span>Spend <span class="tag tag-action">Simple Action</span> reloading or cooling</span></div>
+        </div>
+        <div class="divider"></div>
+        <p><span class="kw">Reload:</span> <span class="tag tag-supp">Supplemental Action</span> if your Simple Action wasn't an attack and you have ammo.</p>
+        <p><span class="kw">Overheat:</span> Must spend a turn not firing to cool.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       HAZARDS & DAMAGE
+  ═════════════════════════════════════════════ -->
+  <section class="section sec-hazards" id="hazards">
+    <div class="section-title"><h2>Hazards &amp; Damage</h2></div>
+    <div class="card-grid">
+
+      <div class="card">
+        <h3>Falling</h3>
+        <p>Dice + bonus (no Skill) vs. <span class="kw">Endurance</span>.</p>
+        <p>Athletics 3+ → +1 defense bonus. Athletics 5+ → +2.</p>
+        <table>
+          <thead><tr><th>Distance</th><th>Attack Bonus</th></tr></thead>
+          <tbody>
+            <tr><td>Up to 3m</td><td class="val">+2</td></tr>
+            <tr><td>Up to 6m</td><td class="val">+4</td></tr>
+            <tr><td>Up to 30m</td><td class="val">+8</td></tr>
+            <tr><td>Up to 150m</td><td class="val">+12</td></tr>
+            <tr><td>300m+ (terminal velocity)</td><td class="val">+18 (cap)</td></tr>
+          </tbody>
+        </table>
+        <div class="note-box warn">Armor does not help unless it has a Hydrostatic Gel Layer.</div>
+      </div>
+
+      <div class="card">
+        <h3>Fire &amp; Environmental Hazards</h3>
+        <p>Attacks everyone in zone each round. Dice + Intensity. Defend with <span class="kw">Endurance</span>. Most armor useless.</p>
+        <table>
+          <thead><tr><th>Intensity</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td class="val">0</td><td>Fire present but avoidable</td></tr>
+            <tr><td class="val">3</td><td>Waves of heat; most things burning</td></tr>
+            <tr><td class="val">6</td><td>Everything ablaze; direct flames</td></tr>
+            <tr><td class="val">9</td><td>Inferno</td></tr>
+          </tbody>
+        </table>
+        <div class="note-box info">Direct ignition (flamethrower, etc.) = Intensity 6. Burning targets gain Aspect: <em>On Fire!</em></div>
+      </div>
+
+      <div class="card">
+        <h3>Vacuum</h3>
+        <p>Environmental hazard. <span class="kw">Intensity 6.</span> Defend with Endurance.</p>
+        <p>Vacuum Suits grant safe exposure. <span class="kw">Cybersleeves are immune.</span></p>
+      </div>
+
+      <div class="card">
+        <h3>Zero Gravity</h3>
+        <p>Zone gains <span class="kw">Persistent Aspect: Zero-G(P)</span>.</p>
+        <p>Can be invoked or compelled for any character in the zone.</p>
+      </div>
+
+      <div class="card">
+        <h3>Diseases &amp; Viruses</h3>
+        <p>Contact → attack: <span class="kw">Potency + dice</span> (no Skill).</p>
+        <table>
+          <thead><tr><th>Type</th><th>Defend With</th></tr></thead>
+          <tbody>
+            <tr><td>Airborne / Contact</td><td>Endurance</td></tr>
+            <tr><td>Digital Virus</td><td>Software Engineering</td></tr>
+          </tbody>
+        </table>
+        <div class="outcomes">
+          <div class="outcome"><span class="badge badge-fail">Lose</span><span>Become a carrier</span></div>
+          <div class="outcome"><span class="badge badge-stall">Consequence</span><span>Carrier <em>and</em> victim</span></div>
+        </div>
+        <p style="padding-left:10px;margin-top:6px;">Attacks repeat each day until cured. Spin on defense may end it.</p>
+      </div>
+
+      <div class="card">
+        <h3>Poisons &amp; Drugs</h3>
+        <p>Both have <span class="kw">Potency</span> (resist with Endurance) and <span class="kw">Subtlety</span> (detect with Perception/Education).</p>
+        <div class="divider"></div>
+        <p><span class="kw">Damaging Poisons:</span> Attack at start of first turn after exposure; repeats each turn until end of scene or cured. Education (Diff: Potency +2) to treat. Spin on defense may stop it.</p>
+        <div class="divider"></div>
+        <p><span class="kw">Drugs:</span> Place Aspects on target (as Maneuver). Endurance vs. Potency.</p>
+        <div class="outcomes">
+          <div class="outcome"><span class="badge badge-fail">Lose</span><span>Gain drug Aspects for listed duration (not Consequences)</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       EGO & TRANSHUMANISM
+  ═════════════════════════════════════════════ -->
+  <section class="section sec-ego" id="ego">
+    <div class="section-title"><h2>Ego &amp; Transhumanism</h2></div>
+    <div class="card-grid card-grid-wide">
+
+      <div class="card">
+        <h3>Resleeving / Becoming SIM</h3>
+        <p><span class="kw">Mental attack, Edge 8.</span> Defend with Cohesion. Mnemonics engineer may aid.</p>
+        <table>
+          <thead><tr><th>Condition</th><th>Edge Modifier</th></tr></thead>
+          <tbody>
+            <tr><td>First resleeve ever</td><td class="val">+2</td></tr>
+            <tr><td>Remember dying before resleeve</td><td class="val">+2</td></tr>
+            <tr><td>Resleeving into clone / same model</td><td class="val">−2 (defense bonus)</td></tr>
+          </tbody>
+        </table>
+        <div class="note-box info"><em>SIM State(P)</em> and <em>Synthetic Biology(P)</em> Aspects should be compelled during resleeving.</div>
+        <div class="divider"></div>
+        <p><strong>Unrecoverable:</strong> Severe Mental Consequence → mnemonics editing required. Extreme Consequence or mentally Taken Out → refusal to resleeve.</p>
+      </div>
+
+      <div class="card">
+        <h3>Forking</h3>
+        <p><span class="tag tag-illegal">Illegal</span> Humanity Preservation Act — punishable by death and erasure.</p>
+        <p>Learning you've been forked: <span class="kw">mental attack, Edge +4.</span></p>
+        <p>Fork copy has all original's skills, memories, relationships. It is <em>not</em> a slave.</p>
+        <div class="note-box warn">Forks may become hostile to the original — desire to preserve their own existence.</div>
+        <div class="divider"></div>
+        <p><span class="kw">GM Options:</span> Player runs all instances simultaneously, or pick one to play and treat others as GM-controlled NPCs. Consider a Lasting Aspect for a hanging copy.</p>
+      </div>
+
+      <div class="card">
+        <h3>Merging</h3>
+        <p>Requires resurrection chamber. Combines multiple ego instances.</p>
+        <p><span class="kw">Mental attack:</span> Edge = <em>total instances merged</em> + <em>trauma bonus</em>.</p>
+        <table>
+          <thead><tr><th>Worst Consequence (any instance)</th><th>Trauma Bonus</th></tr></thead>
+          <tbody>
+            <tr><td>Mild</td><td class="val">+4</td></tr>
+            <tr><td>Moderate</td><td class="val">+6</td></tr>
+            <tr><td>Severe</td><td class="val">+8</td></tr>
+            <tr><td>Extreme</td><td class="val">+10</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>Mnemonic Editing</h3>
+        <p>Patient must be in <span class="kw">deactivated SIM state</span>. System requires hostware. Mnemonics Skill test to downgrade one Consequence.</p>
+        <table>
+          <thead><tr><th>Target Consequence</th><th>Difficulty</th></tr></thead>
+          <tbody>
+            <tr><td>Mild</td><td class="val">4</td></tr>
+            <tr><td>Moderate</td><td class="val">5</td></tr>
+            <tr><td>Severe</td><td class="val">6</td></tr>
+            <tr><td>Extreme</td><td class="val">7</td></tr>
+          </tbody>
+        </table>
+        <div class="outcomes">
+          <div class="outcome"><span class="badge badge-success">Success</span><span>Consequence reduced one step</span></div>
+          <div class="outcome"><span class="badge badge-fail">Fail</span><span>No change</span></div>
+          <div class="outcome"><span class="badge badge-stall">Stall</span><span>Patient suffers mental stress = amount failed by</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       ECONOMY & REP
+  ═════════════════════════════════════════════ -->
+  <section class="section sec-economy" id="economy">
+    <div class="section-title"><h2>Economy &amp; Reputation</h2></div>
+    <div class="card-grid card-grid-wide">
+
+      <div class="card">
+        <h3>Purchasing Options</h3>
+        <table>
+          <thead><tr><th>Method</th><th>Where</th><th>Mechanic</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><span class="kw">Assets</span></td>
+              <td>Outside Coalition / black market</td>
+              <td>Assets test vs. Cost. Fail = can't retry this session. Option: take Lasting Debt Aspect to proceed anyway.</td>
+            </tr>
+            <tr>
+              <td><span class="kw">Reputation</span></td>
+              <td>Coalition society</td>
+              <td>Cost &lt; Rep-Rating: free. Cost ≥ Rep-Rating: roll Rep + dice vs. Cost. Miss = Rep hit = difference. Max: Cost ≤ Rep × 2.</td>
+            </tr>
+            <tr>
+              <td><span class="kw">Trade</span></td>
+              <td>Any</td>
+              <td>Item-for-item. If values differ: Assets test, Diff = cost difference × 2.</td>
+            </tr>
+            <tr>
+              <td><span class="kw">Favors</span></td>
+              <td>Any (via Networking)</td>
+              <td>Networking test, Diff = Favor Value (= ½ item Cost, round up). See Favors card.</td>
+            </tr>
+            <tr>
+              <td><span class="kw">Contracts</span></td>
+              <td>House / apostate deals</td>
+              <td>Formal version of a favor — no additional game mechanic.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>Favors</h3>
+        <p><span class="kw">Favor Value</span> = ½ item Cost (round up) for goods; GM-determined for services.</p>
+        <div class="divider"></div>
+        <p style="padding-left:10px;"><strong>House Networking</strong></p>
+        <div class="outcomes">
+          <div class="outcome"><span class="badge badge-success">Success</span><span>Favor granted + Rep hit Value 1</span></div>
+          <div class="outcome"><span class="badge badge-fail">Fail</span><span>Favor granted + Rep hit = Favor Value, OR withdraw (Rep hit 1)</span></div>
+          <div class="outcome"><span class="badge badge-stall">Stall</span><span>Not granted + Rep hit = Favor Value + Lasting Aspect (~1 week)</span></div>
+        </div>
+        <div class="divider"></div>
+        <p style="padding-left:10px;"><strong>Apostate Networking</strong></p>
+        <div class="outcomes">
+          <div class="outcome"><span class="badge badge-success">Success</span><span>Favor granted + <em>Tapped My Network</em> Aspect (~1 week)</span></div>
+          <div class="outcome"><span class="badge badge-fail">Fail</span><span>Favor granted + <em>Tapped Out My Network(P)</em> (~1 month), OR withdraw (Tapped My Network, ~1 week)</span></div>
+          <div class="outcome"><span class="badge badge-stall">Stall</span><span><em>Tapped Out My Network(P)</em> + <em>Social Pariah</em> (~1 month each)</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Rep-Rating</h3>
+        <p>Circular track of boxes. Fill wheel → <span class="kw">Rep-Rating +1</span>, reset. Max rating: <span class="kw">11</span>.</p>
+        <div class="divider"></div>
+        <p><span class="kw">Giving a Bump/Hit:</span> You suffer Rep hit Value 1. Target gains bump/hit up to your Rep-Rating. Done anonymously.</p>
+        <table>
+          <thead><tr><th>Action</th><th>Effect on Track</th></tr></thead>
+          <tbody>
+            <tr><td>Bump</td><td>Mark boxes clockwise, Value = bumper's Rep-Rating (max)</td></tr>
+            <tr><td>Hit</td><td>Erase boxes counter-clockwise = hit Value. Empty wheel = Rep-Rating −1</td></tr>
+          </tbody>
+        </table>
+        <div class="note-box info">Fame: gain via Fame Stunt or Agenda Celebrity Stunt. Infamy: reflected in Rep hits + Lasting Aspects.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       STEALTH & INFILTRATION
+  ═════════════════════════════════════════════ -->
+  <section class="section sec-stealth" id="stealth">
+    <div class="section-title"><h2>Stealth &amp; Infiltration</h2></div>
+    <div class="card-grid">
+
+      <div class="card">
+        <h3>Hiding</h3>
+        <p><span class="kw">Stealth vs. Perception.</span> Active searcher with reason + time: <span class="kw">+2 bonus</span>.</p>
+        <p>Hiding from Monitor: Stealth (Diff: 3). Area's Mesh Aspect may modify.</p>
+        <div class="note-box info">Aspects (darkness, clutter, cover) are the primary source of bonuses and penalties.</div>
+      </div>
+
+      <div class="card">
+        <h3>Shadowing (Moving Unseen)</h3>
+        <p><span class="kw">Stealth + Guile.</span> Searchers gain bonus based on movement speed:</p>
+        <table>
+          <thead><tr><th>Movement</th><th>Detection Bonus</th></tr></thead>
+          <tbody>
+            <tr><td>Normal</td><td class="val">+4</td></tr>
+            <tr><td>Hustle</td><td class="val">+6</td></tr>
+            <tr><td>Running</td><td class="val">+8</td></tr>
+          </tbody>
+        </table>
+        <div class="note-box info"><strong>Creeping:</strong> Maneuver (no test) → places <em>Creeping</em> Aspect. Requires Supplemental Action each turn to maintain.</div>
+      </div>
+
+      <div class="card">
+        <h3>Camouflage</h3>
+        <p><span class="kw">Hardware Engineering + Stealth</span> (Diff: 2). Shifts generated = bonus to hiding tests while camouflaged.</p>
+        <p>Takes ~1 hour to construct.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       GEAR & REPAIRS
+  ═════════════════════════════════════════════ -->
+  <section class="section sec-gear" id="gear">
+    <div class="section-title"><h2>Gear &amp; Repairs</h2></div>
+    <div class="card-grid">
+
+      <div class="card">
+        <h3>Repairs</h3>
+        <p><span class="kw">Hardware Engineering</span> Extended Action (4 hrs/test). Difficulty = ½ item Cost.</p>
+        <table>
+          <thead><tr><th>Consequence</th><th>Time</th><th>Difficulty</th></tr></thead>
+          <tbody>
+            <tr><td>Mild</td><td>1 day</td><td class="val">2 + Size</td></tr>
+            <tr><td>Moderate</td><td>1 week</td><td class="val">3 + Size</td></tr>
+            <tr><td>Severe</td><td>2 weeks</td><td class="val">4 + Size</td></tr>
+            <tr><td>Extreme</td><td>1 month</td><td class="val">5 + Size</td></tr>
+          </tbody>
+        </table>
+        <div class="note-box info">Miss difficulty? Buy parts/labor at Cost = amount failed by.</div>
+      </div>
+
+      <div class="card">
+        <h3>Programming</h3>
+        <p><span class="kw">Software Engineering</span> test. Describe the program → success places an Aspect (as Maneuver). Only creator benefits unless sent to others.</p>
+        <div class="note-box warn">Hostile programs face CID AI security screening — very hard to deploy offensively.</div>
+        <p style="padding-left:10px;margin-top:6px;"><strong>Template Writing:</strong> Hardware Engineering Extended Action (4 hrs/test). Difficulty = ½ item Cost (min 2).</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       PHYSICAL & ENVIRONMENT
+  ═════════════════════════════════════════════ -->
+  <section class="section sec-env" id="env">
+    <div class="section-title"><h2>Physical &amp; Environment</h2></div>
+    <div class="card-grid">
+
+      <div class="card">
+        <h3>Size &amp; Lifting</h3>
+        <p><span class="kw">Lift capacity</span> = weight at your Size × Athletics. Athletics 0 → half capacity.</p>
+        <table>
+          <thead><tr><th>Load</th><th>Test Difficulty</th></tr></thead>
+          <tbody>
+            <tr><td>Up to 150% of capacity</td><td class="val">Athletics + 2</td></tr>
+            <tr><td>Up to 200% of capacity</td><td class="val">Athletics + 4</td></tr>
+            <tr><td>Over 200%</td><td>Cannot lift</td></tr>
+          </tbody>
+        </table>
+        <div class="divider"></div>
+        <p><span class="kw">Carrying</span> counts as <span class="tag tag-supp">Supplemental Action</span>:</p>
+        <div class="rule-row"><span class="label">≤ 50% of lift cap</span><span class="value">−1</span></div>
+        <div class="rule-row"><span class="label">&gt; 50% of lift cap</span><span class="value">−2</span></div>
+        <div class="rule-row"><span class="label">&gt; 100% (up to 200%)</span><span class="value">−3</span></div>
+      </div>
+
+      <div class="card">
+        <h3>Zones</h3>
+        <p><span class="kw">Same zone</span> = hand-to-hand range. <span class="kw">Adjacent</span> = thrown / short range. <span class="kw">5–10 zones</span> = weapon range limits.</p>
+        <p>Zones represent relationships, not exact measurements. Use rough sketches — not grids — unless area is featureless.</p>
+        <div class="note-box info">Rooms, corridors, open areas = natural zone boundaries. Apply scene Aspects to each zone for flavor and mechanical hooks.</div>
+      </div>
+
+      <div class="card">
+        <h3>Time Increments</h3>
+        <table>
+          <thead><tr><th>Increment</th><th>Duration</th></tr></thead>
+          <tbody>
+            <tr><td>Instant</td><td>Immediate</td></tr>
+            <tr><td>A Round</td><td>~3 seconds</td></tr>
+            <tr><td>A Scene</td><td>~5 minutes</td></tr>
+            <tr><td>An Hour</td><td>60 minutes</td></tr>
+            <tr><td>A Day</td><td>24 hours</td></tr>
+            <tr><td>A Week</td><td>7 days</td></tr>
+            <tr><td>A Month</td><td>30 days</td></tr>
+            <tr><td>Three Months</td><td>~1 quarter</td></tr>
+            <tr><td>A Year</td><td>12 months</td></tr>
+            <tr><td>A Decade</td><td>10 years</td></tr>
+            <tr><td>Forever</td><td>Permanent</td></tr>
+          </tbody>
+        </table>
+        <div class="note-box info">Generating Spin may reduce time by one increment at GM discretion.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span><strong>Nova Praxis</strong> — Playing the Game Quick Reference</span>
+    <span>Strands of Fate · For GM &amp; Player use · Source: Nova Praxis Rulebook</span>
+  </footer>
+
+</div>
+</body>
+</html>

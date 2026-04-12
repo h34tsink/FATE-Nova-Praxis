@@ -144,7 +144,8 @@
       "Read(//c/Users/satur/AppData/Roaming/**)",
       "Read(//d/tmp/**)",
       "Bash(ls -lt /c/Users/satur/AppData/Local/Temp/*.jpg /c/Users/satur/AppData/Local/Temp/*.jpeg)",
-      "Read(//c/Users/satur/**)"
+      "Read(//c/Users/satur/**)",
+      "WebFetch(domain:shadowsynth.treppa.io)"
     ]
   }
 }
