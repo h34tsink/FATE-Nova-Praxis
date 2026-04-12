@@ -345,7 +345,22 @@ Programs: Blackout, Security Skim, Stream of Consciousness
 ### Round-by-Round Teaching
 
 **Round 1 — Initiative and Actions:**
-Roll Strategy for turn order. Walk through: each character gets 1 Simple Action + 1 Free Action. Defense does not cost your action.
+Roll Strategy for turn order. Highest result goes first; ties go simultaneously or in player-preferred order.
+
+Each character's turn has four action types:
+
+- **Simple Action** — the main thing you do. One per turn. This is where your skill roll goes.
+  - *Examples:* Attack, Maneuver (place an Aspect), Block (set a potency to stop an enemy action), Full Defense (+2 to all defense tests until your next turn), use a Savant Program, reload, remove a Temporary Aspect.
+
+- **Free Action** — fast, nearly effortless. One per turn, no roll required.
+  - *Examples:* Move into an adjacent zone, take cover (grants *Behind Light Cover* Aspect — no test), follow an opponent into a zone you pushed them into, activate a Free Action augmentation.
+
+- **Supplemental Action** — doing something secondary *while* doing your Simple Action. Not a separate slot — it costs −1 to your primary roll (Hustle across 2 zones costs −2).
+  - *Examples:* Move through rough terrain while attacking, reload while doing something other than attacking, attempt to remove an Aspect at a lower action cost (Diff 2).
+
+- **Instant Action** — happens any time, even off your turn. Limited to one per turn *except* for defense.
+  - **Defense is always free** — rolling to defend is a special Instant Action that never counts against your limit. Being attacked never costs you your turn.
+  - *Other Instant examples:* Augmentations that interrupt turn order (e.g., Neura-Surge), responding when a Block is ignored.
 
 **Prompt someone to Maneuver first** rather than attack. Examples:
 - Grift hacks the turret (S. Engineering vs Diff 4) to place *"Turret Disabled"*
