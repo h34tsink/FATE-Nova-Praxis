@@ -145,7 +145,8 @@
       "Read(//d/tmp/**)",
       "Bash(ls -lt /c/Users/satur/AppData/Local/Temp/*.jpg /c/Users/satur/AppData/Local/Temp/*.jpeg)",
       "Read(//c/Users/satur/**)",
-      "WebFetch(domain:shadowsynth.treppa.io)"
+      "WebFetch(domain:shadowsynth.treppa.io)",
+      "Bash(wc -l \"d:/ObsidianVaults/Nova Praxis/Locations/Sol System\"/*.md)"
     ]
   }
 }
