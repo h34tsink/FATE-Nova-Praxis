@@ -1,0 +1,2193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nova Praxis — Rules Reference</title>
+<style>
+:root {
+  --bg: #090b0f;
+  --bg-card: #0e1117;
+  --bg-sidebar: #0b0e14;
+  --bg-sidebar-hover: #121820;
+  --border: #1e2630;
+  --border-bright: #2a3545;
+  --text: #c8d0db;
+  --text-dim: #5a6a7d;
+  --text-bright: #e8ecf0;
+  --cyan: #00c8e8;
+  --blue: #3b8fd4;
+  --amber: #e09a30;
+  --red: #c0404a;
+  --purple: #8a5fc8;
+  --green: #3aaa72;
+  --teal: #2aaa98;
+  --steel: #5a7a9a;
+  --gold: #c8a830;
+  --sidebar-w: 240px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; line-height: 1.5; display: flex; min-height: 100vh; }
+body::before { content:''; position:fixed; inset:0; background-image: linear-gradient(rgba(0,200,232,.015) 1px,transparent 1px), linear-gradient(90deg,rgba(0,200,232,.015) 1px,transparent 1px); background-size: 40px 40px; pointer-events:none; z-index:0; }
+
+/* SIDEBAR */
+#sidebar {
+  position: fixed; top: 0; left: 0; bottom: 0; width: var(--sidebar-w);
+  background: var(--bg-sidebar); border-right: 1px solid var(--border);
+  overflow-y: auto; overflow-x: hidden; z-index: 10;
+  scrollbar-width: thin; scrollbar-color: var(--border) transparent;
+}
+#sidebar::-webkit-scrollbar { width: 4px; }
+#sidebar::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 2px; }
+
+.sidebar-header {
+  padding: 16px 14px 12px;
+  border-bottom: 1px solid var(--border);
+}
+.sidebar-logo { font-size: 10px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--cyan); }
+.sidebar-title { font-size: 13px; font-weight: 600; color: var(--text-bright); margin-top: 3px; }
+
+.chapter-block { border-bottom: 1px solid var(--border); }
+
+.chapter-btn {
+  width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+  padding: 10px 14px 10px 12px; display: flex; align-items: center; gap: 8px;
+  color: var(--text-dim); font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+  transition: background .15s, color .15s;
+}
+.chapter-btn:hover { background: var(--bg-sidebar-hover); color: var(--text); }
+.chapter-btn.open { color: var(--text-bright); }
+.chapter-btn .arrow { margin-left: auto; transition: transform .2s; font-size: 9px; }
+.chapter-btn.open .arrow { transform: rotate(90deg); }
+
+.chapter-color-4 { border-left: 2px solid var(--cyan); }
+.chapter-color-5 { border-left: 2px solid var(--purple); }
+.chapter-color-6 { border-left: 2px solid var(--amber); }
+.chapter-color-7 { border-left: 2px solid var(--steel); }
+
+.nav-items { display: none; }
+.nav-items.open { display: block; }
+
+.nav-group-label {
+  padding: 8px 14px 3px 22px;
+  font-size: 9px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.nav-item {
+  display: block; width: 100%; text-align: left; background: none; border: none;
+  cursor: pointer; padding: 5px 14px 5px 22px;
+  color: var(--text-dim); font-size: 12px; transition: background .1s, color .1s;
+}
+.nav-item:hover { background: var(--bg-sidebar-hover); color: var(--text); }
+.nav-item.active { color: var(--text-bright); background: rgba(255,255,255,.04); }
+.ch4 .nav-item.active { color: var(--cyan); }
+.ch5 .nav-item.active { color: var(--purple); }
+.ch6 .nav-item.active { color: var(--amber); }
+.ch7 .nav-item.active { color: var(--steel); }
+
+/* MAIN */
+#main { margin-left: var(--sidebar-w); flex: 1; position: relative; z-index: 1; }
+
+.panel { display: none; padding: 28px 28px 64px; max-width: 1200px; }
+.panel.active { display: block; }
+
+/* PANEL HEADER */
+.panel-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border-bright); }
+.panel-chapter { font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; margin-bottom: 5px; }
+.ch4-hdr .panel-chapter { color: var(--cyan); }
+.ch5-hdr .panel-chapter { color: var(--purple); }
+.ch6-hdr .panel-chapter { color: var(--amber); }
+.ch7-hdr .panel-chapter { color: var(--steel); }
+.panel-header h1 { font-size: 22px; font-weight: 700; color: var(--text-bright); }
+.panel-header p { color: var(--text-dim); font-size: 12px; margin-top: 5px; font-style: italic; }
+
+/* SECTION HEADERS IN PANELS */
+.sec-head {
+  display: flex; align-items: center; gap: 8px;
+  margin: 20px 0 10px; padding-bottom: 7px; border-bottom: 1px solid var(--border);
+}
+.sec-head::before { content:''; display:block; width:3px; height:14px; border-radius:2px; flex-shrink:0; }
+.sec-head h2 { font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.sec-cyan .sec-head::before { background: var(--cyan); }
+.sec-cyan .sec-head h2 { color: var(--cyan); }
+.sec-blue .sec-head::before { background: var(--blue); }
+.sec-blue .sec-head h2 { color: var(--blue); }
+.sec-amber .sec-head::before { background: var(--amber); }
+.sec-amber .sec-head h2 { color: var(--amber); }
+.sec-red .sec-head::before { background: var(--red); }
+.sec-red .sec-head h2 { color: var(--red); }
+.sec-purple .sec-head::before { background: var(--purple); }
+.sec-purple .sec-head h2 { color: var(--purple); }
+.sec-green .sec-head::before { background: var(--green); }
+.sec-green .sec-head h2 { color: var(--green); }
+.sec-steel .sec-head::before { background: var(--steel); }
+.sec-steel .sec-head h2 { color: var(--steel); }
+.sec-gold .sec-head::before { background: var(--gold); }
+.sec-gold .sec-head h2 { color: var(--gold); }
+.sec-teal .sec-head::before { background: var(--teal); }
+.sec-teal .sec-head h2 { color: var(--teal); }
+
+/* CARD GRIDS */
+.grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(270px,1fr)); margin-bottom: 6px; }
+.grid-wide { grid-template-columns: repeat(auto-fill, minmax(380px,1fr)); }
+.grid-full { grid-template-columns: 1fr; }
+
+/* CARDS */
+.card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px;
+  padding: 12px 14px; position: relative; overflow: hidden;
+}
+.card::before { content:''; position:absolute; top:0; left:0; width:3px; height:100%; }
+.sec-cyan .card::before { background: var(--cyan); }
+.sec-blue .card::before { background: var(--blue); }
+.sec-amber .card::before { background: var(--amber); }
+.sec-red .card::before { background: var(--red); }
+.sec-purple .card::before { background: var(--purple); }
+.sec-green .card::before { background: var(--green); }
+.sec-steel .card::before { background: var(--steel); }
+.sec-gold .card::before { background: var(--gold); }
+.sec-teal .card::before { background: var(--teal); }
+.card h3 { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--text-bright); margin-bottom: 8px; padding-left: 10px; }
+.card p { padding-left: 10px; color: var(--text); margin-bottom: 5px; }
+.card p:last-child { margin-bottom: 0; }
+.card ul { padding-left: 24px; margin-bottom: 5px; }
+.card li { color: var(--text); margin-bottom: 2px; }
+.kw { color: var(--text-bright); font-weight: 600; }
+
+/* TABLES */
+.card table { width:100%; border-collapse:collapse; margin: 7px 0 4px; font-size: 12px; }
+.card thead tr { border-bottom: 1px solid var(--border-bright); }
+.card thead th { text-align:left; padding: 3px 8px; font-size: 10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color: var(--text-dim); }
+.card tbody tr { border-bottom: 1px solid var(--border); }
+.card tbody tr:last-child { border-bottom: none; }
+.card tbody td { padding: 4px 8px; color: var(--text); vertical-align: top; }
+.card tbody tr:hover td { background: rgba(255,255,255,.02); }
+.val { font-weight: 600; color: var(--text-bright); }
+
+/* INLINE RULE ROWS */
+.rule-row { display:flex; justify-content:space-between; padding:4px 10px; border-bottom:1px solid var(--border); font-size:12px; }
+.rule-row:last-child { border-bottom:none; }
+.rule-row .lbl { color: var(--text); }
+.rule-row .v { color: var(--text-bright); font-weight:600; text-align:right; }
+
+/* BADGES */
+.badge { display:inline-block; font-size:9px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:2px 6px; border-radius:2px; min-width:52px; text-align:center; }
+.b-ok  { background:rgba(58,170,114,.14); color:var(--green); border:1px solid rgba(58,170,114,.3); }
+.b-fail{ background:rgba(224,154,48,.12); color:var(--amber); border:1px solid rgba(224,154,48,.3); }
+.b-bad { background:rgba(192,64,74,.12); color:#e06070; border:1px solid rgba(192,64,74,.3); }
+
+.outcome { display:flex; gap:8px; margin-bottom:4px; font-size:12px; align-items:baseline; padding-left:10px; }
+
+/* TAGS */
+.tag { display:inline-block; font-size:10px; font-weight:600; padding:1px 6px; border-radius:2px; margin:0 2px; vertical-align:middle; }
+.t-action { background:rgba(0,200,232,.1); color:var(--cyan); border:1px solid rgba(0,200,232,.25); }
+.t-free   { background:rgba(58,170,114,.1); color:var(--green); border:1px solid rgba(58,170,114,.25); }
+.t-supp   { background:rgba(90,122,154,.1); color:var(--steel); border:1px solid rgba(90,122,154,.25); }
+.t-instant{ background:rgba(200,168,48,.1); color:var(--gold); border:1px solid rgba(200,168,48,.25); }
+.t-illegal{ background:rgba(192,64,74,.1); color:#e06070; border:1px solid rgba(192,64,74,.25); }
+.t-persist{ background:rgba(138,95,200,.1); color:var(--purple); border:1px solid rgba(138,95,200,.25); }
+.t-restr  { background:rgba(224,154,48,.1); color:var(--amber); border:1px solid rgba(224,154,48,.25); }
+
+/* NOTE BOXES */
+.note { border-radius:3px; padding:7px 10px; margin:6px 0 3px; font-size:12px; }
+.note-info  { background:rgba(0,200,232,.05); border-left:2px solid rgba(0,200,232,.35); color:var(--text-dim); }
+.note-warn  { background:rgba(224,154,48,.07); border-left:2px solid var(--amber); color:var(--amber); }
+.note-danger{ background:rgba(192,64,74,.07); border-left:2px solid var(--red); color:#e06070; }
+
+.divider { height:1px; background:var(--border); margin: 6px 10px; }
+
+/* FORMULA BOX */
+.formula { background:rgba(0,200,232,.05); border:1px solid rgba(0,200,232,.2); border-radius:4px; padding:10px 14px; font-size:13px; font-weight:600; color:var(--cyan); text-align:center; letter-spacing:.05em; margin-bottom:8px; }
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo">Nova Praxis</div>
+    <div class="sidebar-title">Rules Reference</div>
+  </div>
+
+  <!-- CH4 -->
+  <div class="chapter-block ch4">
+    <button class="chapter-btn chapter-color-4 open" onclick="toggleChapter(this)">
+      Ch. 4 — Gameplay <span class="arrow">▶</span>
+    </button>
+    <div class="nav-items open">
+      <div class="nav-group-label">The Basics</div>
+      <button class="nav-item active" onclick="show('ch4-basics',this)">Rolling & Actions</button>
+      <button class="nav-item" onclick="show('ch4-success',this)">Degrees of Success</button>
+      <div class="nav-group-label">Aspects</div>
+      <button class="nav-item" onclick="show('ch4-aspects',this)">Aspect Types & Scope</button>
+      <button class="nav-item" onclick="show('ch4-fp',this)">Fate Points & Invoking</button>
+      <button class="nav-item" onclick="show('ch4-compel',this)">Compelling</button>
+      <button class="nav-item" onclick="show('ch4-maneuvers',this)">Maneuvers & Declarations</button>
+      <div class="nav-group-label">Conflict</div>
+      <button class="nav-item" onclick="show('ch4-conflict',this)">Stress & Consequences</button>
+      <button class="nav-item" onclick="show('ch4-running',this)">Running Conflicts</button>
+      <button class="nav-item" onclick="show('ch4-physical',this)">Physical Conflict</button>
+      <button class="nav-item" onclick="show('ch4-mental',this)">Mental Conflict</button>
+      <button class="nav-item" onclick="show('ch4-system',this)">System Conflict</button>
+      <button class="nav-item" onclick="show('ch4-virtuality',this)">Virtuality</button>
+      <div class="nav-group-label">Playing the Game</div>
+      <button class="nav-item" onclick="show('ch4-combat',this)">Combat Actions</button>
+      <button class="nav-item" onclick="show('ch4-ranged',this)">Ranged Weapons</button>
+      <button class="nav-item" onclick="show('ch4-hazards',this)">Hazards & Damage</button>
+      <button class="nav-item" onclick="show('ch4-ego',this)">Ego & Transhumanism</button>
+      <button class="nav-item" onclick="show('ch4-economy',this)">Economy & Rep</button>
+      <button class="nav-item" onclick="show('ch4-stealth',this)">Stealth & Infiltration</button>
+      <button class="nav-item" onclick="show('ch4-zones',this)">Zones & Time</button>
+    </div>
+  </div>
+
+  <!-- CH5 -->
+  <div class="chapter-block ch5">
+    <button class="chapter-btn chapter-color-5" onclick="toggleChapter(this)">
+      Ch. 5 — Characters <span class="arrow">▶</span>
+    </button>
+    <div class="nav-items">
+      <button class="nav-item" onclick="show('ch5-creation',this)">Character Creation</button>
+      <button class="nav-item" onclick="show('ch5-aspects',this)">Aspect Alphabet</button>
+      <button class="nav-item" onclick="show('ch5-states',this)">States (Pure/SIM/Sleeved)</button>
+      <button class="nav-item" onclick="show('ch5-skills',this)">Skills Reference</button>
+      <button class="nav-item" onclick="show('ch5-stunts',this)">Stunts</button>
+      <button class="nav-item" onclick="show('ch5-savant',this)">Savant Programs</button>
+      <button class="nav-item" onclick="show('ch5-advancement',this)">Advancement</button>
+    </div>
+  </div>
+
+  <!-- CH6 -->
+  <div class="chapter-block ch6">
+    <button class="chapter-btn chapter-color-6" onclick="toggleChapter(this)">
+      Ch. 6 — Gear <span class="arrow">▶</span>
+    </button>
+    <div class="nav-items">
+      <button class="nav-item" onclick="show('ch6-itemstats',this)">Item Statistics</button>
+      <button class="nav-item" onclick="show('ch6-firearms',this)">Firearms</button>
+      <button class="nav-item" onclick="show('ch6-melee',this)">Melee & Explosives</button>
+      <button class="nav-item" onclick="show('ch6-armor',this)">Armor & Features</button>
+      <button class="nav-item" onclick="show('ch6-ammo',this)">Special Ammunition</button>
+      <button class="nav-item" onclick="show('ch6-equipment',this)">Equipment & Agents</button>
+    </div>
+  </div>
+
+  <!-- CH7 -->
+  <div class="chapter-block ch7">
+    <button class="chapter-btn chapter-color-7" onclick="toggleChapter(this)">
+      Ch. 7 — Appendix <span class="arrow">▶</span>
+    </button>
+    <div class="nav-items">
+      <button class="nav-item" onclick="show('ch7-npcs',this)">NPCs & Mooks</button>
+      <button class="nav-item" onclick="show('ch7-sample',this)">Sample NPCs</button>
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main id="main">
+
+<!-- ═══════════════════════════════════════════
+     CH4: ROLLING & ACTIONS
+════════════════════════════════════════════ -->
+<section id="ch4-basics" class="panel active ch4-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 4 — Gameplay</div>
+    <h1>Rolling Dice &amp; Actions</h1>
+    <p>"The mesh tracks everything. Fortunately, so do we."</p>
+  </div>
+
+  <div class="sec-cyan">
+    <div class="sec-head"><h2>The Core Roll</h2></div>
+    <div class="formula">4 FUDGE Dice + Skill Rank + Modifiers = Effort</div>
+    <div class="grid">
+      <div class="card">
+        <h3>FUDGE Dice</h3>
+        <p>4d6 marked <span class="kw">+1 / 0 / −1</span>. Range: −4 to +4. Average result: 0.</p>
+        <p><span class="kw">Alt:</span> Roll d6 − d6 (range −5 to +5, more random). All players use same method.</p>
+      </div>
+      <div class="card">
+        <h3>Bonuses Stack</h3>
+        <p>Almost everything stacks. +2 from one source + +1 from another = <span class="kw">+3 total</span>. Unless explicitly stated otherwise.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-cyan">
+    <div class="sec-head"><h2>Skill Ranks</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Rank Descriptions</h3>
+        <table>
+          <thead><tr><th>Rank</th><th>Label</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td class="val">0</td><td>Mediocre</td><td>No training or experience</td></tr>
+            <tr><td class="val">1</td><td>Average</td><td>Familiar, little experience</td></tr>
+            <tr><td class="val">2</td><td>Fair</td><td>Some training or education</td></tr>
+            <tr><td class="val">3</td><td>Good</td><td>Sometimes noticed for talent</td></tr>
+            <tr><td class="val">4</td><td>Great</td><td>Expert, widely respected</td></tr>
+            <tr><td class="val">5</td><td>Superb</td><td>Among the truly elite</td></tr>
+            <tr><td class="val">6+</td><td>Super Human</td><td>Impossible without augmentation</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h3>Difficulty Ratings</h3>
+        <table>
+          <thead><tr><th>Diff</th><th>Label</th></tr></thead>
+          <tbody>
+            <tr><td class="val">0</td><td>Trivial — usually auto-success</td></tr>
+            <tr><td class="val">1</td><td>Easy</td></tr>
+            <tr><td class="val">2</td><td>Moderate</td></tr>
+            <tr><td class="val">3</td><td>Tough</td></tr>
+            <tr><td class="val">4</td><td>Hard</td></tr>
+            <tr><td class="val">5</td><td>Very Hard</td></tr>
+            <tr><td class="val">6</td><td>Exceedingly Difficult</td></tr>
+            <tr><td class="val">7</td><td>Seemingly Impossible</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-cyan">
+    <div class="sec-head"><h2>Action Types</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Test</h3>
+        <p>Skill vs. GM-set difficulty. Succeed if Effort ≥ Diff. Excess = <span class="kw">Shifts</span>.</p>
+      </div>
+      <div class="card">
+        <h3>Contest</h3>
+        <p>Both parties roll; highest Effort wins. Tie: both succeed (or re-roll, per situation).</p>
+      </div>
+      <div class="card">
+        <h3>Conflict</h3>
+        <p>Multi-round opposition. Attacker rolls vs. defender's Effort as difficulty. Generates <span class="kw">stress</span>.</p>
+      </div>
+      <div class="card">
+        <h3>Extended Action</h3>
+        <p>Set difficulty. <span class="kw">Mark = Diff × 3.</span> Accumulate Shifts across multiple rolls until Mark reached. Spin: Mark −1. Stall: fail completely.</p>
+      </div>
+      <div class="card">
+        <h3>Supplemental Action</h3>
+        <p>Doing something extra during a Simple Action. Imposes <span class="kw">−1 penalty</span> on the primary test. The supplemental part is the lower-difficulty component.</p>
+      </div>
+      <div class="card">
+        <h3>Combined Skills</h3>
+        <p>Two skills both required simultaneously. Primary skill tested; secondary modifies:</p>
+        <div class="rule-row"><span class="lbl">Secondary higher than primary</span><span class="v">+1</span></div>
+        <div class="rule-row"><span class="lbl">Secondary lower than primary</span><span class="v">−1</span></div>
+        <div class="rule-row"><span class="lbl">Same rank</span><span class="v">±0</span></div>
+        <div class="note note-info">Not the same as Supplemental — both parts would need their own test.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-cyan">
+    <div class="sec-head"><h2>Action Economy (Per Turn in Conflict)</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Actions per Turn</h3>
+        <p><span class="tag t-action">Simple Action</span> × 1 — attacks, skill tests, most actions</p>
+        <p><span class="tag t-free">Free Action</span> × 1 — move adjacent zone, draw weapon, cover</p>
+        <p><span class="tag t-instant">Instant Action</span> × 1 — anytime; defense never counts against this limit</p>
+        <div class="note note-info">Stunts/augmentations may grant additional actions.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH4: DEGREE OF SUCCESS -->
+<section id="ch4-success" class="panel ch4-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 4 — Gameplay</div>
+    <h1>Degrees of Success</h1>
+  </div>
+
+  <div class="sec-cyan">
+    <div class="sec-head"><h2>Shifts &amp; Results</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Success Scale</h3>
+        <table>
+          <thead><tr><th>Shifts</th><th>Result</th></tr></thead>
+          <tbody>
+            <tr><td class="val">0</td><td>Minimal Success — barely, possible minor cost</td></tr>
+            <tr><td class="val">1–2</td><td>Notable Success — solid, gets the job done</td></tr>
+            <tr><td class="val">3–4</td><td><span class="kw">Spin!</span> Significant — generates an Effect Aspect</td></tr>
+            <tr><td class="val">5+</td><td>Potent Success — unexpected secondary benefits</td></tr>
+            <tr><td class="val">−3 or worse</td><td><span class="kw">Stall</span> — significant failure; GM may create Effect Aspect</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h3>Spin</h3>
+        <p>Effort exceeds difficulty by <span class="kw">3+ Shifts</span>.</p>
+        <p>Creates a free <span class="kw">Effect Aspect</span> — very temporary; goes away after first invoke/compel.</p>
+        <p>On attack tests: spend 1 Shift to place the Effect Aspect instead of adding it to stress.</p>
+        <div class="note note-info">Max one Effect Aspect per round. In a contest, Spin overrides Stall.</div>
+      </div>
+      <div class="card">
+        <h3>Stall</h3>
+        <p>Effort misses difficulty by 3+. Opposite of Spin.</p>
+        <p>GM may create an Effect Aspect reflecting the catastrophic failure. Can result in Extended Action failing completely.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH4: ASPECTS -->
+<section id="ch4-aspects" class="panel ch4-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 4 — Gameplay</div>
+    <h1>Aspect Types &amp; Scope</h1>
+  </div>
+
+  <div class="sec-cyan">
+    <div class="sec-head"><h2>What Are Aspects</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Core Rule</h3>
+        <p>Aspects are phrases or quotes describing something important. They can be <span class="kw">invoked</span> for benefits or <span class="kw">compelled</span> for complications.</p>
+        <p>Characters, objects, zones, and scenes can all have Aspects.</p>
+        <div class="note note-info">Aspects should be double-edged — useful AND a source of interesting trouble.</div>
+      </div>
+      <div class="card">
+        <h3>Aspect Scope Rule</h3>
+        <p>You may invoke or compel <span class="kw">only one Aspect per scope per test</span>.</p>
+        <ul>
+          <li>Character Aspects</li>
+          <li>Consequences</li>
+          <li>Stunt Aspects</li>
+          <li>Scene Aspects</li>
+          <li>Augmentation Aspects</li>
+          <li>Zone Aspects</li>
+          <li>Another character's Aspects</li>
+          <li>Equipment Aspects</li>
+          <li>Temporary Aspects</li>
+        </ul>
+        <div class="note note-info">Persistent Aspects do NOT count against scope limits.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-cyan">
+    <div class="sec-head"><h2>Aspect Durations</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Temporary</h3>
+        <p>Created by Maneuvers, Spin, etc. Last until end of scene or until invoked/compelled (if 0-Shift creation). Remove with a <span class="tag t-action">Simple Action</span> or Supplemental Action + Skill test (Diff: 2).</p>
+      </div>
+      <div class="card">
+        <h3>Lasting</h3>
+        <p>Longer-term temporary Aspects (debts, reputations, network status). Recorded on character sheet. Last until situation resolves.</p>
+      </div>
+      <div class="card">
+        <h3><span class="tag t-persist">Persistent (P)</span></h3>
+        <p>Major, hard-to-ignore traits. <span class="kw">Free</span> invoke/compel for bonus/penalty or reroll (no FP cost). Still costs FP for Block or Declaration uses.</p>
+        <p>You do not earn FP when a Persistent Aspect is compelled. Declining costs 1 FP. <span class="kw">Never soft compel a Persistent Aspect.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH4: FATE POINTS -->
+<section id="ch4-fp" class="panel ch4-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 4 — Gameplay</div>
+    <h1>Fate Points &amp; Invoking</h1>
+  </div>
+
+  <div class="sec-cyan">
+    <div class="sec-head"><h2>Fate Point Economy</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Refresh</h3>
+        <p>At start of each session, reset FPs to your <span class="kw">Refresh Rating</span>. FPs do not carry over.</p>
+        <p>Default Refresh Rating: <span class="kw">5</span>. Pure characters: +2. Refreshed Stunt: +1 per purchase (max 3×).</p>
+      </div>
+      <div class="card">
+        <h3>Free Invocations</h3>
+        <p>Any Aspect <span class="kw">intentionally created in play</span> (Maneuver, Consequence, Spin) gets one free invoke/compel — the first person to use it pays no FP.</p>
+        <p>Spin: grants two free invocations instead of one.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-cyan">
+    <div class="sec-head"><h2>Invoking (Spend 1 FP)</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Invoke Benefits — Choose One</h3>
+        <ul>
+          <li><span class="kw">+2 bonus</span> on your test</li>
+          <li><span class="kw">Reroll</span> your dice</li>
+          <li><span class="kw">Create a Block</span> (usually Potency 2)</li>
+          <li><span class="kw">Make a Declaration</span> (narrative control)</li>
+        </ul>
+        <div class="note note-info">The Therefore Rule: you must be able to connect the Aspect to your intent using only one "therefore" — no inferred steps allowed.</div>
+      </div>
+      <div class="card">
+        <h3>Invoking External Aspects</h3>
+        <p>Players can invoke Aspects on enemies, zones, equipment, or the scene itself. Requires slightly more justification than your own Aspects.</p>
+        <p>The same Aspect may only be invoked or compelled <span class="kw">once per turn</span> by the same character.</p>
+        <p>FP paid by the invoker leaves play (goes to no one) unless invoking an enemy's Aspect as a compel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH4: COMPELLING -->
+<section id="ch4-compel" class="panel ch4-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 4 — Gameplay</div>
+    <h1>Compelling Aspects</h1>
+  </div>
+
+  <div class="sec-cyan">
+    <div class="sec-head"><h2>Compel Mechanics</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Compel Effects — One of:</h3>
+        <ul>
+          <li><span class="kw">−2 penalty</span> on a test</li>
+          <li><span class="kw">Forced reroll</span></li>
+          <li><span class="kw">Suffer a Block</span></li>
+          <li><span class="kw">Suffer a Declaration</span></li>
+        </ul>
+        <p style="padding-left:10px;margin-top:6px;"><span class="kw">Accept</span> → earn 1 FP. <span class="kw">Decline</span> → pay 1 FP.</p>
+        <div class="note note-info">GM has an endless FP pool for distributing compels. If another player compels and it's accepted, they give their FP to the recipient.</div>
+      </div>
+      <div class="card">
+        <h3>Active vs. Passive Compels</h3>
+        <p><span class="kw">Active:</span> GM or player explicitly offers compel with an FP token. Player decides.</p>
+        <p><span class="kw">Passive:</span> Aspect causes trouble naturally during play. GM hands over FP retroactively.</p>
+        <div class="divider"></div>
+        <p><span class="kw">Soft Compel:</span> Minor consequence — player can reject for free. Don't use for Persistent Aspects.</p>
+      </div>
+      <div class="card">
+        <h3>No Pain, No Gain</h3>
+        <p>Don't award the FP until the compel actually impacts the character. If it didn't really hurt, it didn't count.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH4: MANEUVERS & DECLARATIONS -->
+<section id="ch4-maneuvers" class="panel ch4-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 4 — Gameplay</div>
+    <h1>Maneuvers, Assessments &amp; Declarations</h1>
+  </div>
+
+  <div class="sec-cyan">
+    <div class="sec-head"><h2>Maneuvers (Creating Aspects)</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>How It Works</h3>
+        <p><span class="tag t-action">Simple Action</span> — test or contest. Success places a <span class="kw">Temporary Aspect</span> on target, scene, or zone.</p>
+        <p>If Diff: 0, GM may allow as Supplemental Action.</p>
+        <div class="divider"></div>
+        <p><span class="kw">0 Shifts:</span> Aspect is weak — goes away on first invoke/compel.</p>
+        <p><span class="kw">1+ Shifts:</span> Lasts scene or until actively removed.</p>
+        <p><span class="kw">Spin:</span> Aspect can be invoked or compelled for free <em>twice</em>.</p>
+        <p>Remove with Simple Action, or Supplemental + Skill test (Diff: 2).</p>
+      </div>
+      <div class="card">
+        <h3>First Use Free</h3>
+        <p>The first person to invoke or compel any Aspect created in play does so for free — even if they didn't create it.</p>
+        <p>This enables teamwork: one character sets up an Aspect, others exploit it.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-cyan">
+    <div class="sec-head"><h2>Assessments (Revealing Aspects)</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>How It Works</h3>
+        <p>Observe a target for at least 1 round, then test a relevant Skill. On success, GM reveals an existing (or invented) Aspect about the target. First use is free.</p>
+        <p><span class="kw">Skills:</span> Perception (most common), Insight, Strategy, Engineering (for relevant subjects).</p>
+        <p>Vs. people: usually <span class="kw">Insight vs. Guile</span> contest.</p>
+        <div class="divider"></div>
+        <p><span class="kw">In conflict:</span> Normally 3 rounds minimum. Accept −1 penalty per round removed (1 round minimum).</p>
+        <p><span class="kw">Outside conflict:</span> +2 bonus for 1 hour; +3 for 4 hours.</p>
+        <p><span class="kw">Spin:</span> May reveal an additional Aspect or more potent detail.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-cyan">
+    <div class="sec-head"><h2>Declarations (Asserting Story Facts)</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>By Invoking an Aspect</h3>
+        <p>Instead of +2 or reroll, spend 1 FP to <span class="kw">declare a fact or place an Aspect</span> on a person, place, or thing. Subject to GM veto.</p>
+        <p>Best used to move the story forward, add drama, or resolve a conflict. Avoid mixing in game mechanics (no "+4 AR" — that's a red flag).</p>
+      </div>
+      <div class="card">
+        <h3>By Skill Test</h3>
+        <p>Use a knowledge Skill to declare a fact about the world. Default Diff: 2. Creative/entertaining Aspects should be easier; boring or disruptive ones harder or vetoed.</p>
+        <div class="note note-warn">Keep Declarations narrative. Any mention of numbers is a red flag that you're doing it wrong.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH4: STRESS & CONSEQUENCES -->
+<section id="ch4-conflict" class="panel ch4-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 4 — Gameplay</div>
+    <h1>Stress &amp; Consequences</h1>
+  </div>
+
+  <div class="sec-cyan">
+    <div class="sec-head"><h2>Stress Tracks</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Track Sizes</h3>
+        <p>Each track starts at <span class="kw">2 boxes</span>, plus bonuses from relevant Skills:</p>
+        <table>
+          <thead><tr><th>Track</th><th>Relevant Skills</th></tr></thead>
+          <tbody>
+            <tr><td>Physical</td><td>Athletics + Endurance + Size</td></tr>
+            <tr><td>Mental</td><td>Cohesion + Resolve</td></tr>
+            <tr><td>System (Savant only)</td><td>Engineering (Software) + SINC</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-info">Skills 1–2: +1 box. Skills 3–4: +2 boxes. Skill 5+: +3 boxes.</div>
+      </div>
+      <div class="card">
+        <h3>Taking Stress</h3>
+        <p>Physical attacks → Physical stress. Mental attacks → Mental stress.</p>
+        <p>Stress = <span class="kw">Shifts generated + WR − AR</span>.</p>
+        <p>Mental stress = <span class="kw">Shifts generated + Edge − Determination</span>.</p>
+        <p>Check boxes left to right. All filled → <span class="kw">Taken Out</span>.</p>
+        <p>All stress clears after a few minutes of rest at scene end.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-cyan">
+    <div class="sec-head"><h2>Consequences</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Consequence Types</h3>
+        <table>
+          <thead><tr><th>Type</th><th>Stress Absorbed</th></tr></thead>
+          <tbody>
+            <tr><td>Mild</td><td class="val">−2</td></tr>
+            <tr><td>Moderate</td><td class="val">−4</td></tr>
+            <tr><td><span class="tag t-persist">Severe(P)</span></td><td class="val">−6</td></tr>
+            <tr><td><span class="tag t-persist">Extreme(P)</span></td><td class="val">−8</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-info">One Consequence per attack. One of each type per Stress Track. Player names it; GM approves. First invoke/compel is free.</div>
+      </div>
+      <div class="card">
+        <h3>Natural Recovery</h3>
+        <table>
+          <thead><tr><th>Consequence</th><th>Physical/System</th><th>Mental</th></tr></thead>
+          <tbody>
+            <tr><td>Mild</td><td>1 hour</td><td>1 day</td></tr>
+            <tr><td>Moderate</td><td>1 day</td><td>1 week</td></tr>
+            <tr><td>Severe(P)</td><td>1 week</td><td>1 month</td></tr>
+            <tr><td>Extreme(P)</td><td colspan="2">Becomes a permanent Aspect (E)</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-info">At recovery time, Consequence downgrades one step. If that slot is occupied, it auto-downgrades too.</div>
+      </div>
+      <div class="card">
+        <h3>Medical Facility Recovery</h3>
+        <table>
+          <thead><tr><th>Consequence</th><th>Phys/Sys</th><th>Mental</th><th>Cost</th></tr></thead>
+          <tbody>
+            <tr><td>Mild</td><td>5 min</td><td>1 hr</td><td class="val">3</td></tr>
+            <tr><td>Moderate</td><td>1 hr</td><td>1 day</td><td class="val">4</td></tr>
+            <tr><td>Severe</td><td>1 day</td><td>1 week</td><td class="val">5</td></tr>
+            <tr><td>Extreme</td><td>1 week</td><td>1 month</td><td class="val">6</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h3>Emergency Aid (Field)</h3>
+        <p>Removes a <span class="kw">Mild Consequence</span> only. Requires 10 minutes + tools + Skill test (Diff: 2).</p>
+        <table>
+          <thead><tr><th>Consequence Type</th><th>Skill</th></tr></thead>
+          <tbody>
+            <tr><td>Physical</td><td>Education (or H.Eng for Cybersleeves)</td></tr>
+            <tr><td>System</td><td>Engineering (either)</td></tr>
+            <tr><td>Mental</td><td>Insight or Mnemonics (Apotheosized only)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h3>Extreme Consequences</h3>
+        <p>Never auto-downgrade. After allotted time, become a permanent <span class="kw">(E) Aspect</span>. Can only be removed after next Milestone, or by replacing an existing character Aspect.</p>
+        <p>Medical technology (resleeve, limb replacement) may remove specific ones narratively.</p>
+      </div>
+      <div class="card">
+        <h3>Taken Out</h3>
+        <p>The person who defeated you describes what happens — death, incapacitation, etc.</p>
+        <p>Cash in all FPs (must have at least 1) to force them to describe it differently. Always results in removal from conflict and some loss.</p>
+        <div class="divider"></div>
+        <p><span class="kw">Concession:</span> Offer before being taken out. Absorbs all stress. Accept or negotiate. If rejected (and GM deems it reasonable), offerer gains 1 FP, refuser loses 1 FP.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH4: RUNNING CONFLICTS -->
+<section id="ch4-running" class="panel ch4-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 4 — Gameplay</div>
+    <h1>Running Conflicts</h1>
+  </div>
+
+  <div class="sec-cyan">
+    <div class="sec-head"><h2>5-Step Setup</h2></div>
+    <div class="grid grid-full">
+      <div class="card">
+        <h3>Steps Before First Exchange</h3>
+        <table>
+          <thead><tr><th>Step</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td class="val">1</td><td><span class="kw">Frame the Scene</span> — describe sights, smells, sounds. Reveal threats last so players absorb the environment first.</td></tr>
+            <tr><td class="val">2</td><td><span class="kw">Reveal Aspects</span> — announce obvious scene/zone Aspects. Call Perception rolls for subtle ones. Anyone can invoke/compel them.</td></tr>
+            <tr><td class="val">3</td><td><span class="kw">Determine Zones</span> — break the area into meaningful components. Draw a map for complex layouts.</td></tr>
+            <tr><td class="val">4</td><td><span class="kw">Establish Initiative</span> — each character rolls Strategy (physical) or Insight (mental) + modifiers. Act highest to lowest. Ties: higher Perception wins; further ties favor player nearest GM's right or the PC over NPC.</td></tr>
+            <tr><td class="val">5</td><td><span class="kw">Begin Exchanges</span> — proceed in initiative order, repeating each round.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH4: PHYSICAL CONFLICT -->
+<section id="ch4-physical" class="panel ch4-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 4 — Gameplay</div>
+    <h1>Physical Conflict</h1>
+  </div>
+
+  <div class="sec-cyan">
+    <div class="sec-head"><h2>Attack &amp; Defense Skills</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Skill Pairings</h3>
+        <table>
+          <thead><tr><th>Intent</th><th>Attack</th><th>Defense</th></tr></thead>
+          <tbody>
+            <tr><td>Touch</td><td>Athletics</td><td>Athletics</td></tr>
+            <tr><td>Unarmed</td><td>Melee</td><td>Athletics or Endurance</td></tr>
+            <tr><td>Ranged</td><td>Firearms</td><td>Perception or Athletics</td></tr>
+            <tr><td>Melee weapon</td><td>Melee</td><td>Athletics or Melee</td></tr>
+            <tr><td>Poison/Disease</td><td>Special</td><td>Endurance</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h3>Stress Calculation</h3>
+        <p>Stress = <span class="kw">Shifts + WR − AR</span></p>
+        <p><span class="kw">WR</span> (Weapon Rating): added only on a hit.</p>
+        <p><span class="kw">AR</span> (Armor Rating): reduces stress taken.</p>
+        <p><span class="kw">ExR</span> (Explosive Rating): added directly to the attack test roll, not just stress.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-cyan">
+    <div class="sec-head"><h2>Movement</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Movement Types</h3>
+        <table>
+          <thead><tr><th>Type</th><th>Distance</th><th>Cost</th><th>Penalty</th></tr></thead>
+          <tbody>
+            <tr><td>Standard Move</td><td>Adjacent zone</td><td><span class="tag t-free">Free</span></td><td>None (rough/hazardous terrain = Supplemental)</td></tr>
+            <tr><td>Hustle</td><td>1 zone + next</td><td><span class="tag t-supp">Supplemental</span></td><td>−2 to other actions this turn</td></tr>
+            <tr><td>Run</td><td>Same + Athletics (Diff 2) → +1 zone/Shift</td><td><span class="tag t-supp">Supplemental</span></td><td>−3 to other actions</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h3>Sample Physical Consequences</h3>
+        <table>
+          <thead><tr><th>Type</th><th>Examples</th></tr></thead>
+          <tbody>
+            <tr><td>Mild</td><td>Fatigued, Dazed, Pulled Muscle</td></tr>
+            <tr><td>Moderate</td><td>Sprained Ankle, Minor Laceration, Wrenched Back</td></tr>
+            <tr><td>Severe(P)</td><td>Broken Arm, Severed Finger, Concussion</td></tr>
+            <tr><td>Extreme(P)</td><td>Broken Back, Severed Arm, Ruptured Organ</td></tr>
+            <tr><td>Taken Out</td><td>Dead, Comatose, Quadriplegic</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH4: MENTAL CONFLICT -->
+<section id="ch4-mental" class="panel ch4-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 4 — Gameplay</div>
+    <h1>Mental Conflict</h1>
+  </div>
+
+  <div class="sec-cyan">
+    <div class="sec-head"><h2>Mental Attacks</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Common Mental Conflicts</h3>
+        <table>
+          <thead><tr><th>Situation</th><th>Attack Skill</th><th>Defense Skill</th></tr></thead>
+          <tbody>
+            <tr><td>Deception</td><td>Guile</td><td>Insight</td></tr>
+            <tr><td>Manipulation</td><td>Diplomacy</td><td>Cohesion or Resolve</td></tr>
+            <tr><td>Seduction</td><td>Diplomacy (+ Guile)</td><td>Resolve (+ Insight)</td></tr>
+            <tr><td>Intimidation</td><td>Intimidation</td><td>Resolve</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-info">Not every social exchange needs a mental conflict. Use for critical moments that matter to the story.</div>
+      </div>
+      <div class="card">
+        <h3>Edge &amp; Determination</h3>
+        <p><span class="kw">Edge</span> = "weapon" for mental attacks. Bonus (0–5+) added to attack roll, not just stress. Based on quality of roleplay, clever arguments, or tactical advantage (e.g., loved ones at gunpoint).</p>
+        <p><span class="kw">Determination</span> = mental armor bonus (0–5) added to defense roll. Reflects commitment to a position or fear of consequences for yielding.</p>
+        <div class="note note-info">Unlike WR, Edge is added to the attack test itself — before checking if the attack hits.</div>
+      </div>
+      <div class="card">
+        <h3>Horror &amp; Trauma</h3>
+        <p>Contact with horrors, resleeving trauma, torture — all cause mental attacks with only an Edge bonus (no attacking Skill).</p>
+        <p>Edge reflects incident severity and character experience. First posthuman encounter: ~+8. Veteran of dozens: possibly 0.</p>
+        <p>Torture: ~Edge 5 per session or per 8 hours.</p>
+      </div>
+      <div class="card">
+        <h3>Sample Mental Consequences</h3>
+        <table>
+          <thead><tr><th>Type</th><th>Examples</th></tr></thead>
+          <tbody>
+            <tr><td>Mild</td><td>Flushed, Shamed, Withdrawn</td></tr>
+            <tr><td>Moderate</td><td>Trembling, Unwilling to Speak, Desire to Lash Out</td></tr>
+            <tr><td>Severe(P)</td><td>Flashbacks, Reclusive, Psychotic Tendencies</td></tr>
+            <tr><td>Extreme(P)</td><td>Mute, Severe Hallucinations, Suicidal</td></tr>
+            <tr><td>Taken Out</td><td>Dead, Catatonic, Crippling Dementia</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH4: SYSTEM CONFLICT -->
+<section id="ch4-system" class="panel ch4-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 4 — Gameplay</div>
+    <h1>System Conflict</h1>
+  </div>
+
+  <div class="sec-cyan">
+    <div class="sec-head"><h2>System Stress</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>When It Occurs</h3>
+        <p>Savant-vs-Savant cyber attacks, or when a Savant <span class="kw">fails an execution test</span> for a Savant Program. Destabilizes the Savant's mindset/sleeve systems.</p>
+        <div class="note note-info">Non-Savant characters can be targeted by Savant Programs but suffer localized effects rather than System Stress.</div>
+      </div>
+      <div class="card">
+        <h3>Savant Program Execution</h3>
+        <p>Each program has an <span class="kw">execution difficulty</span>. Roll SINC vs. difficulty.</p>
+        <p>Fail: suffer system stress equal to amount failed by, but program may still execute.</p>
+        <p>System Stress Track size: 2 + bonuses from Engineering (Software) + SINC.</p>
+      </div>
+      <div class="card">
+        <h3>Sample System Consequences</h3>
+        <table>
+          <thead><tr><th>Type</th><th>Examples</th></tr></thead>
+          <tbody>
+            <tr><td>Mild</td><td>Minor Lag, Memory Access Error, Running Hot</td></tr>
+            <tr><td>Moderate</td><td>Memory Leak, Data Corruption, Damaged Actuator</td></tr>
+            <tr><td>Severe(P)</td><td>Random Reboots, Connections Severed, Hard Locked</td></tr>
+            <tr><td>Extreme(P)</td><td>System Crash, Catastrophic Data Loss, Unresponsive</td></tr>
+            <tr><td>Taken Out</td><td>Scrapped</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-info">System Consequences recover at same rate as Physical. Emergency aid uses Hardware or Software Engineering.</div>
+      </div>
+      <div class="card">
+        <h3>SIMs &amp; Host Systems</h3>
+        <p>SIMs are self-contained software. System stress from attacks or failed programs affects only the SIM — not the host system it's running on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH4: VIRTUALITY -->
+<section id="ch4-virtuality" class="panel ch4-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 4 — Gameplay</div>
+    <h1>Virtuality &amp; Dominion</h1>
+  </div>
+
+  <div class="sec-cyan">
+    <div class="sec-head"><h2>Virtual Environments</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Virtuality Rules</h3>
+        <ul>
+          <li>Physical Skills replicate normally in virtual space</li>
+          <li>Real-world stress/Consequences don't carry into virtuality</li>
+          <li>Physical stress taken in virtuality doesn't affect real body</li>
+          <li>Most virtualities eject you if you suffer a Consequence</li>
+          <li>On forced exit: mental attack with Edge based on worst Consequence suffered inside (+2 Mild / +4 Mod / +6 Severe / +8 Extreme / +10 Taken Out)</li>
+          <li>Characters normally have <span class="kw">Guest access</span> — can interact physically but not alter reality</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Dominion (Admin Access)</h3>
+        <p>The admin of a virtuality is effectively a god. She can reshape the environment at will.</p>
+        <p><span class="tag t-action">Simple Action</span> — Software Engineering or SINC test (Diff: 2) → make a Declaration about the virtual environment.</p>
+        <p>Direct attacks (turning air to acid, ripping avatar code): use Software Engineering or SINC. WR = attacking Skill Rank × 2. Defend with relevant Skill, or <span class="kw">Cohesion</span> for code-based attacks.</p>
+        <div class="note note-info">SIMs have admin access to their personal home environments.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH4: COMBAT ACTIONS -->
+<section id="ch4-combat" class="panel ch4-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 4 — Playing the Game</div>
+    <h1>Combat Actions</h1>
+  </div>
+
+  <div class="sec-cyan">
+    <div class="sec-head"><h2>Combat Rules</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Ambushing</h3>
+        <p>Target <span class="kw">unaware of threat</span> → no Skill on defense. Dice only. Armor Rating still applies.</p>
+        <div class="note note-info">GM should still roll defense for mooks in this case.</div>
+      </div>
+      <div class="card">
+        <h3>Full Defense</h3>
+        <p><span class="tag t-action">Simple Action</span> spent only defending → <span class="kw">+2 on all defense tests</span> until next turn.</p>
+        <p>If you haven't acted when first attacked, declare Full Defense and forfeit your Simple Action that turn.</p>
+      </div>
+      <div class="card">
+        <h3>Hold Your Action</h3>
+        <p>Delay your turn to act after another character. Hold through the entire round → go <span class="kw">first next round</span>. Multiple holders: Strategy contest for order.</p>
+      </div>
+      <div class="card">
+        <h3>Taking Aim</h3>
+        <p><span class="tag t-action">Simple Action</span> + Perception (Diff: 2) → place <span class="kw">In My Sights</span> Aspect on target. Invoke free on next attack. Fragile — may need refresh if target moves erratically.</p>
+      </div>
+      <div class="card">
+        <h3>Taking Cover</h3>
+        <p><span class="tag t-free">Free Action</span> in your zone.</p>
+        <table>
+          <thead><tr><th>Type</th><th>Aspect</th></tr></thead>
+          <tbody>
+            <tr><td>Light Cover</td><td>Behind Light Cover</td></tr>
+            <tr><td>Hard Cover</td><td>Behind Hard Cover(P) — spend FP to declare "can't be hit"</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h3>Push / Pull / Throw</h3>
+        <p>Contested <span class="kw">Athletics + Size</span>. Win → target moves to adjacent zone of your choice. If larger: push extra zones up to Size difference. Can follow as <span class="tag t-free">Free Action</span>.</p>
+      </div>
+      <div class="card">
+        <h3>Help from Others</h3>
+        <p>Helper rolls same Skill vs. difficulty = primary's Skill rank.</p>
+        <div class="outcome"><span class="badge b-ok">Success</span><span>+1 bonus to primary</span></div>
+        <div class="outcome"><span class="badge b-ok">Spin</span><span>+2 bonus to primary</span></div>
+        <div class="outcome"><span class="badge b-fail">Fail</span><span>No effect</span></div>
+        <div class="outcome"><span class="badge b-bad">Stall</span><span>−1 penalty to primary</span></div>
+      </div>
+      <div class="card">
+        <h3>Block Actions</h3>
+        <p>Declare what you block + Skill → roll = <span class="kw">Block Potency</span>. Anyone doing the blocked action must beat Potency (<span class="tag t-action">Simple Action</span>). Overcoming = <span class="tag t-supp">Supplemental</span> penalty on follow-up.</p>
+        <table>
+          <thead><tr><th>Sample Block</th><th>Skill</th></tr></thead>
+          <tbody>
+            <tr><td>Suppression Fire</td><td>Firearms</td></tr>
+            <tr><td>Restrain</td><td>Melee or Athletics</td></tr>
+            <tr><td>Distraction</td><td>Guile or Diplomacy</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-info">Ignoring a Block may grant Blocker a free Instant Action response.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH4: RANGED WEAPONS -->
+<section id="ch4-ranged" class="panel ch4-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 4 — Playing the Game</div>
+    <h1>Ranged Weapon Rules</h1>
+  </div>
+
+  <div class="sec-blue">
+    <div class="sec-head"><h2>Beam Weapons</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Beam Modes</h3>
+        <table>
+          <thead><tr><th>Mode</th><th>Effect</th><th>Cost / Risk</th></tr></thead>
+          <tbody>
+            <tr><td><span class="kw">Beam Sweep</span></td><td>Attack multiple targets; cumulative −1 per target</td><td>Firearms (Diff: 2 + # targets) or overheat</td></tr>
+            <tr><td><span class="kw">Overheat</span></td><td>WR +3</td><td>Spend 1 turn cooling</td></tr>
+            <tr><td><span class="kw">Suppression Fire</span></td><td>Block Action</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-blue">
+    <div class="sec-head"><h2>Full-Auto Weapons</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Auto Modes</h3>
+        <table>
+          <thead><tr><th>Mode</th><th>Effect</th><th>Cost / Risk</th></tr></thead>
+          <tbody>
+            <tr><td><span class="kw">Burst Fire</span></td><td>WR +3</td><td>Firearms (Diff: 2) or spend Simple Action reload/cool</td></tr>
+            <tr><td><span class="kw">Empty the Clip</span></td><td>WR +5</td><td>Burns entire magazine — must reload before next use</td></tr>
+            <tr><td><span class="kw">Suppression Fire</span></td><td>Block Action</td><td>—</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-info">High Capacity Aspect: invoke for Firearms (Diff: 3) to avoid empty-clip penalty.</div>
+      </div>
+      <div class="card">
+        <h3>Out of Ammo / Overheating</h3>
+        <p>GM may call Firearms test (Diff: 2) anytime — higher with heavy use.</p>
+        <div class="outcome"><span class="badge b-fail">Fail</span><span>Spend Simple Action reloading or cooling</span></div>
+        <div class="divider"></div>
+        <p><span class="kw">Reload:</span> Supplemental Action if Simple Action wasn't an attack and ammo is available.</p>
+        <p><span class="kw">Overheat:</span> Must spend a full turn not firing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH4: HAZARDS -->
+<section id="ch4-hazards" class="panel ch4-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 4 — Playing the Game</div>
+    <h1>Hazards &amp; Damage</h1>
+  </div>
+
+  <div class="sec-amber">
+    <div class="sec-head"><h2>Environmental Hazards</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Falling</h3>
+        <p>Dice + bonus (no Skill) vs. <span class="kw">Endurance</span>. Athletics 3+ → +1 defense. Athletics 5+ → +2.</p>
+        <table>
+          <thead><tr><th>Distance</th><th>Bonus</th></tr></thead>
+          <tbody>
+            <tr><td>Up to 3m</td><td class="val">+2</td></tr>
+            <tr><td>Up to 6m</td><td class="val">+4</td></tr>
+            <tr><td>Up to 30m</td><td class="val">+8</td></tr>
+            <tr><td>Up to 150m</td><td class="val">+12</td></tr>
+            <tr><td>300m+ (terminal)</td><td class="val">+18 cap</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-warn">Armor useless unless it has a Hydrostatic Gel Layer.</div>
+      </div>
+      <div class="card">
+        <h3>Fire &amp; Environmental Hazards</h3>
+        <p>Attacks all in zone each round. Dice + Intensity. Defend with <span class="kw">Endurance</span>.</p>
+        <table>
+          <thead><tr><th>Intensity</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td class="val">0</td><td>Fire present but avoidable</td></tr>
+            <tr><td class="val">3</td><td>Waves of heat; most things burning</td></tr>
+            <tr><td class="val">6</td><td>Everything ablaze; direct flames</td></tr>
+            <tr><td class="val">9</td><td>Inferno</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-info">Direct ignition = Intensity 6. Burning targets/zones gain Aspect: On Fire!</div>
+      </div>
+      <div class="card">
+        <h3>Vacuum &amp; Zero-G</h3>
+        <p><span class="kw">Vacuum:</span> Intensity 6 hazard. Defend with Endurance. Vacuum Suits grant safety. Cybersleeves immune.</p>
+        <p><span class="kw">Zero-G:</span> Zone has Persistent Aspect <span class="tag t-persist">Zero-G(P)</span>. Invoke or compel for all characters in zone.</p>
+      </div>
+      <div class="card">
+        <h3>Diseases &amp; Viruses</h3>
+        <p>Contact → Potency + dice vs. Endurance (biological) or Software Engineering (digital).</p>
+        <div class="outcome"><span class="badge b-fail">Lose</span><span>Become carrier</span></div>
+        <div class="outcome"><span class="badge b-bad">Consequence</span><span>Carrier and victim</span></div>
+        <p style="padding-left:10px;margin-top:4px;">Attacks repeat daily until cured. Spin on defense may stop it.</p>
+      </div>
+      <div class="card">
+        <h3>Poisons</h3>
+        <p>Potency + Subtlety ratings. <span class="kw">Damaging:</span> Attacks at start of your first turn after exposure; repeats each turn until scene ends or cured. Education (Diff: Potency +2) to treat. Spin on defense may stop it.</p>
+        <p><span class="kw">Slow-acting:</span> Attack once per day. Consequences can't recover until poison is cured.</p>
+        <p><span class="kw">Special poisons:</span> Plot-driven; violate normal rules. Use sparingly.</p>
+      </div>
+      <div class="card">
+        <h3>Drugs</h3>
+        <p>Place Aspects on target (as Maneuver). Endurance vs. Potency.</p>
+        <div class="outcome"><span class="badge b-fail">Lose</span><span>Gain drug Aspects for listed duration — not Consequences, won't push toward Taken Out</span></div>
+        <div class="outcome"><span class="badge b-ok">Win</span><span>Symptoms passing, disappear at scene end</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH4: EGO & TRANSHUMANISM -->
+<section id="ch4-ego" class="panel ch4-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 4 — Playing the Game</div>
+    <h1>Ego &amp; Transhumanism</h1>
+  </div>
+
+  <div class="sec-purple">
+    <div class="sec-head"><h2>Resleeving &amp; Ego Mechanics</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Resleeving / Becoming SIM</h3>
+        <p><span class="kw">Mental attack, Edge 8.</span> Defend with Cohesion. Mnemonics engineer may aid.</p>
+        <table>
+          <thead><tr><th>Condition</th><th>Edge Mod</th></tr></thead>
+          <tbody>
+            <tr><td>First resleeve ever</td><td class="val">+2</td></tr>
+            <tr><td>Remember dying</td><td class="val">+2</td></tr>
+            <tr><td>Same/clone sleeve</td><td class="val">−2 (defense bonus)</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-info">SIM State(P) and Synthetic Biology(P) Aspects compelled during resleeving. Severe Mental Consequence → mnemonic editing required. Extreme or Taken Out mentally → refused.</div>
+      </div>
+      <div class="card">
+        <h3>Forking <span class="tag t-illegal">Illegal HPA</span></h3>
+        <p>Punishable by death and erasure.</p>
+        <p>Learning you've been forked: <span class="kw">mental attack, Edge +4.</span></p>
+        <p>Fork has all original's skills/memories/relationships. Not a slave. May become hostile.</p>
+        <div class="note note-danger">GM options: player runs all copies, or pick one to play — others become GM NPCs.</div>
+      </div>
+      <div class="card">
+        <h3>Merging</h3>
+        <p>Requires resurrection chamber. <span class="kw">Mental attack:</span> Edge = total instances + trauma bonus.</p>
+        <table>
+          <thead><tr><th>Worst Consequence</th><th>Trauma Bonus</th></tr></thead>
+          <tbody>
+            <tr><td>Mild</td><td class="val">+4</td></tr>
+            <tr><td>Moderate</td><td class="val">+6</td></tr>
+            <tr><td>Severe</td><td class="val">+8</td></tr>
+            <tr><td>Extreme</td><td class="val">+10</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h3>Mnemonic Editing</h3>
+        <p>Patient in deactivated SIM state. System needs hostware. Mnemonics test to downgrade one Consequence.</p>
+        <table>
+          <thead><tr><th>Consequence</th><th>Diff</th></tr></thead>
+          <tbody>
+            <tr><td>Mild</td><td class="val">4</td></tr>
+            <tr><td>Moderate</td><td class="val">5</td></tr>
+            <tr><td>Severe</td><td class="val">6</td></tr>
+            <tr><td>Extreme</td><td class="val">7</td></tr>
+          </tbody>
+        </table>
+        <div class="outcome"><span class="badge b-ok">Success</span><span>Consequence reduced one step</span></div>
+        <div class="outcome"><span class="badge b-fail">Fail</span><span>No change</span></div>
+        <div class="outcome"><span class="badge b-bad">Stall</span><span>Patient takes mental stress = amount failed by</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH4: ECONOMY & REP -->
+<section id="ch4-economy" class="panel ch4-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 4 — Playing the Game</div>
+    <h1>Economy &amp; Reputation</h1>
+  </div>
+
+  <div class="sec-gold">
+    <div class="sec-head"><h2>Purchasing Options</h2></div>
+    <div class="grid grid-wide">
+      <div class="card">
+        <h3>How to Acquire Things</h3>
+        <table>
+          <thead><tr><th>Method</th><th>Where</th><th>Mechanic</th></tr></thead>
+          <tbody>
+            <tr><td><span class="kw">Assets</span></td><td>Outside Coalition / black market</td><td>Assets test vs. Cost. Fail = can't retry this session. Option: take Lasting Debt Aspect to proceed anyway.</td></tr>
+            <tr><td><span class="kw">Reputation</span></td><td>Coalition society</td><td>Cost &lt; Rep: free. Cost ≥ Rep: roll Rep + dice vs. Cost. Miss = Rep hit = difference. Max acquirable: Cost ≤ Rep × 2.</td></tr>
+            <tr><td><span class="kw">Trade</span></td><td>Any</td><td>Item-for-item. If values differ: Assets test, Diff = cost difference × 2.</td></tr>
+            <tr><td><span class="kw">Favors</span></td><td>Any (Networking)</td><td>Networking test, Diff = Favor Value = ½ item Cost (round up).</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h3>Favors</h3>
+        <p><span class="kw">House Networking:</span></p>
+        <div class="outcome"><span class="badge b-ok">Success</span><span>Favor granted + Rep hit Value 1</span></div>
+        <div class="outcome"><span class="badge b-fail">Fail</span><span>Granted (Rep hit = Favor Value) OR withdraw (Rep hit 1)</span></div>
+        <div class="outcome"><span class="badge b-bad">Stall</span><span>Not granted + Rep hit = Favor Value + Lasting Aspect (~1 wk)</span></div>
+        <div class="divider"></div>
+        <p><span class="kw">Apostate Networking:</span></p>
+        <div class="outcome"><span class="badge b-ok">Success</span><span>Granted + Tapped My Network Aspect (~1 wk)</span></div>
+        <div class="outcome"><span class="badge b-fail">Fail</span><span>Granted + Tapped Out My Network(P) (~1 mo) OR withdraw (~1 wk)</span></div>
+        <div class="outcome"><span class="badge b-bad">Stall</span><span>Tapped Out(P) + Social Pariah (~1 mo each)</span></div>
+      </div>
+      <div class="card">
+        <h3>Rep-Rating</h3>
+        <p>Circular track. Fill wheel → Rep +1, reset. Max: <span class="kw">11</span>. Rating someone costs you Rep hit Value 1.</p>
+        <div class="rule-row"><span class="lbl">Bump</span><span class="v">Mark boxes clockwise (up to your Rep value)</span></div>
+        <div class="rule-row"><span class="lbl">Hit</span><span class="v">Erase boxes counter-clockwise; empty wheel = Rep −1</span></div>
+        <div class="rule-row"><span class="lbl">Windfall</span><span class="v">GM awards Lasting Aspect; lasts 2–3 invocations</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH4: STEALTH -->
+<section id="ch4-stealth" class="panel ch4-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 4 — Playing the Game</div>
+    <h1>Stealth &amp; Infiltration</h1>
+  </div>
+
+  <div class="sec-green">
+    <div class="sec-head"><h2>Stealth Rules</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Hiding</h3>
+        <p><span class="kw">Stealth vs. Perception.</span> Active searcher with reason + time: +2 bonus.</p>
+        <p>Hiding from Monitor: Stealth (Diff: 3). Area's Mesh Aspect may modify.</p>
+        <div class="note note-info">Aspects (darkness, cover, crowd) are the primary source of bonuses and penalties.</div>
+      </div>
+      <div class="card">
+        <h3>Shadowing (Moving Unseen)</h3>
+        <p><span class="kw">Stealth + Guile.</span> Searchers gain bonus based on speed:</p>
+        <table>
+          <thead><tr><th>Movement</th><th>Detection Bonus</th></tr></thead>
+          <tbody>
+            <tr><td>Normal</td><td class="val">+4</td></tr>
+            <tr><td>Hustle</td><td class="val">+6</td></tr>
+            <tr><td>Running</td><td class="val">+8</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-info">Creeping: Maneuver (no test) → Creeping Aspect. Requires Supplemental Action each turn to maintain.</div>
+      </div>
+      <div class="card">
+        <h3>Camouflage</h3>
+        <p><span class="kw">Hardware Engineering + Stealth</span> (Diff: 2). Shifts = bonus to hiding tests while camouflaged. Takes ~1 hour to construct.</p>
+      </div>
+      <div class="card">
+        <h3>Size, Lifting &amp; Carrying</h3>
+        <p><span class="kw">Lift capacity</span> = Size weight × Athletics. Athletics 0 → half cap.</p>
+        <table>
+          <thead><tr><th>Load</th><th>Test Diff</th></tr></thead>
+          <tbody>
+            <tr><td>Up to 150% cap</td><td class="val">Athletics + 2</td></tr>
+            <tr><td>Up to 200% cap</td><td class="val">Athletics + 4</td></tr>
+            <tr><td>Over 200%</td><td>Cannot lift</td></tr>
+          </tbody>
+        </table>
+        <p style="padding-left:10px;margin-top:4px;"><span class="kw">Carrying (Supplemental):</span> ≤50% → −1 · >50% → −2 · >100% → −3</p>
+      </div>
+      <div class="card">
+        <h3>Repairs (Gear)</h3>
+        <p><span class="kw">Hardware Engineering</span> Extended Action (4 hrs/test). Diff = ½ item Cost.</p>
+        <table>
+          <thead><tr><th>Consequence</th><th>Time</th><th>Diff</th></tr></thead>
+          <tbody>
+            <tr><td>Mild</td><td>1 day</td><td class="val">2 + Size</td></tr>
+            <tr><td>Moderate</td><td>1 week</td><td class="val">3 + Size</td></tr>
+            <tr><td>Severe</td><td>2 weeks</td><td class="val">4 + Size</td></tr>
+            <tr><td>Extreme</td><td>1 month</td><td class="val">5 + Size</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-info">Miss difficulty? Buy parts/labor at Cost = amount failed by.</div>
+      </div>
+      <div class="card">
+        <h3>Programming</h3>
+        <p><span class="kw">Software Engineering</span> test. Describe the program → success places an Aspect (as Maneuver). Only creator benefits unless sent to others.</p>
+        <div class="note note-warn">Hostile programs face CID security AI screening — very hard to deploy offensively.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH4: ZONES & TIME -->
+<section id="ch4-zones" class="panel ch4-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 4 — Playing the Game</div>
+    <h1>Zones &amp; Time</h1>
+  </div>
+
+  <div class="sec-teal">
+    <div class="sec-head"><h2>Zones</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Zone Rules</h3>
+        <p><span class="kw">Same zone</span> = hand-to-hand range. <span class="kw">Adjacent</span> = thrown/short range. <span class="kw">5–10 zones</span> = weapon range limit.</p>
+        <p>Zones represent spatial relationships, not exact distances. Rooms, corridors, and open areas make natural zone boundaries.</p>
+        <div class="note note-info">Use rough sketches — not grids — unless area is featureless. Assign Aspects to each zone.</div>
+      </div>
+      <div class="card">
+        <h3>Time Increments</h3>
+        <table>
+          <thead><tr><th>Increment</th><th>Duration</th></tr></thead>
+          <tbody>
+            <tr><td>Instant</td><td>Immediate</td></tr>
+            <tr><td>A Round</td><td>~3 seconds</td></tr>
+            <tr><td>A Scene</td><td>~5 minutes</td></tr>
+            <tr><td>An Hour</td><td>60 minutes</td></tr>
+            <tr><td>A Day</td><td>24 hours</td></tr>
+            <tr><td>A Week</td><td>7 days</td></tr>
+            <tr><td>A Month</td><td>30 days</td></tr>
+            <tr><td>Three Months</td><td>~1 quarter</td></tr>
+            <tr><td>A Year</td><td>12 months</td></tr>
+            <tr><td>A Decade</td><td>10 years</td></tr>
+            <tr><td>Forever</td><td>Permanent</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-info">Generating Spin may reduce time required by one increment (GM discretion).</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CH5: CHARACTER CREATION
+════════════════════════════════════════════ -->
+<section id="ch5-creation" class="panel ch5-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 5 — Characters</div>
+    <h1>Character Creation</h1>
+  </div>
+
+  <div class="sec-purple">
+    <div class="sec-head"><h2>8 Steps Overview</h2></div>
+    <div class="grid grid-full">
+      <div class="card">
+        <h3>Creation Steps</h3>
+        <table>
+          <thead><tr><th>Step</th><th>Task</th><th>Key Detail</th></tr></thead>
+          <tbody>
+            <tr><td class="val">1</td><td>Select 5 Aspects</td><td>Use Aspect Alphabet (A–E). Each 3–8 words, double-edged.</td></tr>
+            <tr><td class="val">2</td><td>Starting State</td><td>Pure, Sleeved, or SIM — each has different State Benefits.</td></tr>
+            <tr><td class="val">3</td><td>Distribute Skill Ranks</td><td>Choose Specialist / Expert / Generalist set. Physical Skills depend on State.</td></tr>
+            <tr><td class="val">4</td><td>Select 3 Stunts</td><td>Plus Savant Programs if you have the Savant Stunt.</td></tr>
+            <tr><td class="val">5</td><td>Determine Allegiance</td><td>House membership (−1 Cost on House goods) or Apostate (free Non-Citizen Stunt).</td></tr>
+            <tr><td class="val">6</td><td>Starting Rep-Rating</td><td>House Networking Skill +2, then gain bump = Diplomacy.</td></tr>
+            <tr><td class="val">7</td><td>Select Starting Gear</td><td>First item: Assets or Rep +2. Then +1, +0, −1... down to Cost 1. Restricted items ≤ Assets +1.</td></tr>
+            <tr><td class="val">8</td><td>Calculate Stress Boxes</td><td>2 + bonus boxes from relevant Skills (see Stress Tracks panel).</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="sec-head" style="margin-top:16px;"><h2>Skill Sets</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Specialist</h3>
+        <p>1 × Rank 5 · 2 × Rank 4 · 2 × Rank 3 · 3 × Rank 2 · 6 × Rank 1</p>
+      </div>
+      <div class="card">
+        <h3>Expert</h3>
+        <p>3 × Rank 4 · 3 × Rank 3 · 4 × Rank 2 · 6 × Rank 1</p>
+      </div>
+      <div class="card">
+        <h3>Generalist</h3>
+        <p>7 × Rank 3 · 8 × Rank 2 · 3 × Rank 1</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH5: ASPECT ALPHABET -->
+<section id="ch5-aspects" class="panel ch5-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 5 — Characters</div>
+    <h1>Aspect Alphabet</h1>
+  </div>
+
+  <div class="sec-purple">
+    <div class="sec-head"><h2>The Five Aspect Types</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>A — Ambition</h3>
+        <p>What are your goals? What drives you to put your life, reputation, and sanity on the line?</p>
+        <ul>
+          <li>"I'll make captain one day!"</li>
+          <li>Obsessed with Becoming a Sensie Star</li>
+          <li>Walking the Long Road to Ascension</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>B — Belief</h3>
+        <p>What do you believe in? What philosophies guide your actions and make you who you are?</p>
+        <ul>
+          <li>"A SIM isn't human. It's just delusional software."</li>
+          <li>"I'd lay down my life for the Coalition."</li>
+          <li>Suspicious of Technology and the Horrors it Can Unleash</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>C — Connection</h3>
+        <p>What person, place, or event still plays a large role in your life?</p>
+        <ul>
+          <li>Grew up on the Streets of Olympus</li>
+          <li>Trained by Targe Gamarrol, Praetorian of House Tsarya</li>
+          <li>"I saw the technophage with my own eyes!"</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>D — Disadvantage</h3>
+        <p>Why haven't you achieved your goals? What weaknesses, addictions, or compulsions hold you back?</p>
+        <ul>
+          <li>Soft Spot for the Damsel in Distress</li>
+          <li>"Never mind the apostates. They're expendable."</li>
+          <li>Crippling Fear of Space Travel</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>E — Expertise</h3>
+        <p>What are you good at? How do you go about overcoming obstacles?</p>
+        <ul>
+          <li>Smuggler with a Heart of Gold</li>
+          <li>"I've never met a system I couldn't crack."</li>
+          <li>Silver-Tongued Devil Always Gets His Way</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Aspect Quality</h3>
+        <p>Good Aspects are double-edged. You should be able to name 3 ways it helps AND 3 ways it causes trouble.</p>
+        <p><span class="kw">Cold → Hot → NOVA!</span></p>
+        <ul>
+          <li>Smart → Smart as a Whip → Honored Graduate of Helios Academy</li>
+          <li>Outlaw → Apostate Pirate → Tsarya's Most Wanted</li>
+        </ul>
+        <div class="note note-info">Remember scope limits: don't create multiple Aspects that all do the same thing — you can only invoke one type per test.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH5: STATES -->
+<section id="ch5-states" class="panel ch5-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 5 — Characters</div>
+    <h1>States: Pure, SIM &amp; Sleeved</h1>
+  </div>
+
+  <div class="sec-purple">
+    <div class="sec-head"><h2>Starting States</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Pure</h3>
+        <p>Born body, no Apotheosis. May still have bio/cyberware Augmentations.</p>
+        <ul>
+          <li>8 Skill Ranks for Athletics, Endurance, Perception (max 5 each)</li>
+          <li>Extra Aspect describing a physical trait</li>
+          <li>Refresh Rating +2</li>
+          <li>Free <span class="kw">Carpe Diem</span> Stunt</li>
+          <li>+1 to any one non-Physical Skill (max 5)</li>
+        </ul>
+        <div class="note note-warn">Lose all Pure benefits permanently if you take the Apotheosis Augmentation.</div>
+      </div>
+      <div class="card">
+        <h3>SIM</h3>
+        <p>Apotheosized; exists purely as software on a host system.</p>
+        <ul>
+          <li>7 Skill Ranks for Athletics, Endurance, Perception (virtual interaction)</li>
+          <li>Free <span class="kw">SIM State</span> Stunt + one of: Digitally Evolved, Digital Spider, Drone Jock, Infusion, Skilled (SINC), or System Slip</li>
+          <li>SIM State(P) Aspect</li>
+        </ul>
+        <p style="padding-left:0;"><span class="kw">Lag Penalties:</span> &lt;1000 km = none · same system = −2 · different system = −4</p>
+        <p>Change hosts: 10 min (local) / 1 hr (same system) / 4 hrs (out-of-system).</p>
+      </div>
+      <div class="card">
+        <h3>Sleeved</h3>
+        <p>Apotheosized; inhabits a biosleeve or cybersleeve.</p>
+        <ul>
+          <li>Begin with a sleeve with Cost ≤ higher of Assets or Rep-Rating +4</li>
+          <li>Physical Skills (Athletics, Endurance, Perception) determined by sleeve</li>
+        </ul>
+        <div class="note note-info">Can switch between Sleeved and SIM via resurrection chamber after Apotheosis. Can never return to Pure.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH5: SKILLS -->
+<section id="ch5-skills" class="panel ch5-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 5 — Characters</div>
+    <h1>Skills Reference</h1>
+  </div>
+
+  <div class="sec-purple">
+    <div class="sec-head"><h2>All Skills</h2></div>
+    <div class="grid grid-wide">
+      <div class="card">
+        <h3>Standard Skills</h3>
+        <table>
+          <thead><tr><th>Skill</th><th>Used For</th></tr></thead>
+          <tbody>
+            <tr><td><span class="kw">Assets</span></td><td>Wealth measure; black market purchases; determines restricted item allowance</td></tr>
+            <tr><td><span class="kw">Cohesion</span></td><td>Mental stability, trauma resistance, Apotheosis recovery; adds to Mental Stress Track</td></tr>
+            <tr><td><span class="kw">Demolitions</span></td><td>Explosives use and demolition; attack option for grenades</td></tr>
+            <tr><td><span class="kw">Diplomacy</span></td><td>Friendly persuasion, good impressions, debate</td></tr>
+            <tr><td><span class="kw">Education</span></td><td>History, science, geography, math, academic fields; "book learning"</td></tr>
+            <tr><td><span class="kw">Engineering (Hardware)</span></td><td>Machinery operation, building, repair, salvage; cybersleeve field repairs</td></tr>
+            <tr><td><span class="kw">Engineering (Software)</span></td><td>Writing/manipulating software; running CISTs; creating program Aspects</td></tr>
+            <tr><td><span class="kw">Firearms</span></td><td>Projectile weapons; railguns, coil guns, PAc weapons, artillery</td></tr>
+            <tr><td><span class="kw">Guile</span></td><td>Lying, conning, seducing, bluffing, haggling</td></tr>
+            <tr><td><span class="kw">Insight</span></td><td>Mental reflexes, quick decisions, reading emotions; used for Assessments</td></tr>
+            <tr><td><span class="kw">Intimidation</span></td><td>Threats, coercion, torture for information</td></tr>
+            <tr><td><span class="kw">Melee</span></td><td>Unarmed combat or melee weapons</td></tr>
+            <tr><td><span class="kw">Mnemonics</span></td><td>Understanding egos and AIs; mnemonic editing; aids in resleeving/merging</td></tr>
+            <tr><td><span class="kw">Networking (Apostate)</span></td><td>Contacts and favors among apostates</td></tr>
+            <tr><td><span class="kw">Networking (House)</span></td><td>Contacts and favors among Houses; determines starting Rep-Rating</td></tr>
+            <tr><td><span class="kw">Pilot</span></td><td>Driving and flying vehicles; navigation</td></tr>
+            <tr><td><span class="kw">Research</span></td><td>Finding information on Extranet or closed mesh; locating SIMs</td></tr>
+            <tr><td><span class="kw">Resolve</span></td><td>Courage, willpower, resisting temptation; adds to Mental Stress Track</td></tr>
+            <tr><td><span class="kw">Stealth</span></td><td>Hiding, pickpocketing, moving unnoticed</td></tr>
+            <tr><td><span class="kw">Strategy</span></td><td>Conflict reaction, organization, planning; used for initiative (physical)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h3>Physical Skills (Sleeve-Dependent)</h3>
+        <table>
+          <thead><tr><th>Skill</th><th>Used For</th></tr></thead>
+          <tbody>
+            <tr><td><span class="kw">Athletics</span></td><td>Running, jumping, climbing, lifting, throwing; adds to Physical Stress Track</td></tr>
+            <tr><td><span class="kw">Endurance</span></td><td>Health, pain tolerance, disease/toxin resistance; adds to Physical Stress Track</td></tr>
+            <tr><td><span class="kw">Perception</span></td><td>Five senses, general awareness; Assessment tests; Stealth counter</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-info">Pure: distribute 8 ranks among these (max 5 each). SIM: distribute 7 ranks. Sleeved: set by sleeve.</div>
+        <h3 style="margin-top:12px;">Special Skill</h3>
+        <table>
+          <thead><tr><th>Skill</th><th>Used For</th></tr></thead>
+          <tbody>
+            <tr><td><span class="kw">SINC</span></td><td>Writing and using Savant Programs. Requires Savant Stunt to purchase. Starts at 1; improve via Skilled Stunt or Milestone swaps.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH5: STUNTS -->
+<section id="ch5-stunts" class="panel ch5-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 5 — Characters</div>
+    <h1>Stunts</h1>
+    <p>Characters start with 3 Stunts. Gain 1 more at each Major Milestone.</p>
+  </div>
+
+  <div class="sec-purple">
+    <div class="sec-head"><h2>Combat Stunts</h2></div>
+    <div class="grid">
+      <div class="card"><h3>Assassin Shot</h3><p>Once/scene: +3 on ranged attack vs. ambushed target. Additional uses cost 1 FP.</p></div>
+      <div class="card"><h3>Assassin Strike</h3><p>Once/scene: +3 on melee attack vs. ambushed target. Additional uses cost 1 FP.</p></div>
+      <div class="card"><h3>Concentrated Fire</h3><p>Once/scene: direct an ally in same/adjacent zone to fire on your target as an Instant Action on your turn. Additional uses cost 1 FP.</p></div>
+      <div class="card"><h3>Constant Vigilance</h3><p>+3 to initiative. Spend 1 FP to defend normally when ambushed.</p></div>
+      <div class="card"><h3>Counter Attack</h3><p>When you generate Spin on a defense test vs. melee or close-range attack, make a free melee Instant Action attack.</p></div>
+      <div class="card"><h3>Dodge</h3><p>Once/scene: reduce stress from one physical attack by Athletics +2.</p></div>
+      <div class="card"><h3>Dual Assault</h3><p>Once/scene: attack twice with melee weapons (same or two targets). Additional uses cost 1 FP, max once/turn.</p></div>
+      <div class="card"><h3>Forced Advance</h3><p>On Spin in melee: forgo Effect Aspect to contest Athletics (+Size) as Free Action → push foe into adjacent zone.</p></div>
+      <div class="card"><h3>Grappler</h3><p>+2 on grapple Blocks/Maneuvers and Push/Pull/Throw.</p></div>
+      <div class="card"><h3>Ground and Pound</h3><p>On Spin in grapple Block/Maneuver or push/throw: forego Effect Aspect to make immediate melee Instant Action attack.</p></div>
+      <div class="card"><h3>Gun Slinger</h3><p>Pistol WR +2. With a pistol in each hand: can perform full-auto or beam attacks using best WR. Both guns affected by reload/cooldown.</p></div>
+      <div class="card"><h3>Marksman</h3><p>+2 on Taking Aim tests. Once/scene: reduce target AR by 3 for one ranged attack (no full-auto or beam allowed).</p></div>
+      <div class="card"><h3>Passing Attack</h3><p>While Hustling/Running: make one melee attack as Free Action against any target in zones you move through.</p></div>
+      <div class="card"><h3>Payback</h3><p>When you suffer a Consequence from a physical attack: spend 1 FP to make an immediate melee Instant Action against the attacker (same zone only).</p></div>
+      <div class="card"><h3>Precision Strike</h3><p>Once/scene: reduce target AR by 4 for one melee attack. Additional uses require Strategy (Diff: 2) + 1 FP.</p></div>
+      <div class="card"><h3>Rapid Strike</h3><p>Once/turn: on Spin in unarmed melee, forgo Effect Aspect to make additional unarmed attack vs. same target.</p></div>
+      <div class="card"><h3>Shake It Off</h3><p>On Spin in defense (physical conflict): forgo Effect Aspect to clear all Physical Stress (not Consequences). Additional uses: Endurance (Diff: 2) + 1 FP.</p></div>
+      <div class="card"><h3>Slayer</h3><p>On hit with Huge(P) weapon that fails to force a Consequence: pay 1 FP to add +3 stress. Once/attack.</p></div>
+      <div class="card"><h3>Slippery Combatant</h3><p>On Spin in defense: forgo Effect Aspect to move adjacent zone or take cover as Instant Action.</p></div>
+      <div class="card"><h3>Sniper</h3><p>Rifle Range +3. Once/scene: when foe takes Consequence from your shot, force them to take a more severe type (or no Consequence at all if they can't).</p></div>
+      <div class="card"><h3>Strategist</h3><p>Spend 1 FP: +2 on physical attacks vs. one foe for the scene. Each additional use extends to one more foe (can't apply twice to same foe).</p></div>
+      <div class="card"><h3>Tactical Dive</h3><p>When attacked, take cover as Instant Action (even if you've already acted). Forfeit your next Simple Action.</p></div>
+    </div>
+
+    <div class="sec-head" style="margin-top:16px;"><h2>Social &amp; Skill Stunts</h2></div>
+    <div class="grid">
+      <div class="card"><h3>Academic</h3><p>+2 on Education Declarations about math, science, or history.</p></div>
+      <div class="card"><h3>Agenda Celebrity</h3><p>+2 on Favor calls that support your specific agenda (Purist, Transhumanist, etc.). Doesn't stack with other Favor bonuses.</p></div>
+      <div class="card"><h3>All-Seeing Eye</h3><p>Once/scene: +3 on any Perception test including Assessments.</p></div>
+      <div class="card"><h3>Artist</h3><p>New Aspect for your artistic mastery. +1 on Favors from people who enjoy your work.</p></div>
+      <div class="card"><h3>Digital Spider</h3><p>+2 on Assessments about persons, places, or things findable on the Extranet.</p></div>
+      <div class="card"><h3>Fame</h3><p>+2 on Favor attempts from people who might recognize you. Doesn't stack with other Favor bonuses.</p></div>
+      <div class="card"><h3>Five Minute Friends</h3><p>Diplomacy (Diff: 3) → gain Lasting Aspect for that person. Max = your Diplomacy rank.</p></div>
+      <div class="card"><h3>Geek Speak</h3><p>Use Education instead of Diplomacy or Guile to convince someone of a scientific fact (true or not).</p></div>
+      <div class="card"><h3>Genius at Work</h3><p>Select Education or Insight. Once/scene: use that Skill in place of any other Skill. Additional uses cost 1 FP.</p></div>
+      <div class="card"><h3>Inspire Greatness</h3><p>Once/scene: grant an ally who can hear you +3 on a single Skill test (including attack/defense).</p></div>
+      <div class="card"><h3>Razor Tongue</h3><p>Spend 1 FP: +3 bonus or +3 Edge on next Guile test to anger opponent and force them to attack you.</p></div>
+    </div>
+
+    <div class="sec-head" style="margin-top:16px;"><h2>State &amp; Special Stunts</h2></div>
+    <div class="grid">
+      <div class="card"><h3>Carpe Diem <span style="font-weight:400;font-size:10px;">(Pure — free)</span></h3><p>Once/scene as Free Action: Declare that an Aspect of your choosing exists in current scene or zone. Only you invoke/compel it free the first time.</p></div>
+      <div class="card"><h3>Non-Citizen <span style="font-weight:400;font-size:10px;">(Apostate — free)</span></h3><p>No Rep-Rating. Gain Non-Citizen Aspect. +2 on Assets/Favor tests for acquiring things from apostates.</p></div>
+      <div class="card"><h3>Licensed</h3><p>May purchase and fabricate restricted equipment using Rep-Rating. Excessive use may trigger investigation.</p></div>
+      <div class="card"><h3>Refreshed</h3><p>Refresh Rating +1. May take up to 3 times.</p></div>
+      <div class="card"><h3>Reputable</h3><p>Starting Rep-Rating +2.</p></div>
+      <div class="card"><h3>Right Place, Right Time</h3><p>Spend 1 FP: appear in any scene you weren't previously in (GM may deny if physically impossible).</p></div>
+      <div class="card"><h3>Savant <span style="font-weight:400;font-size:10px;">(requires Apotheosis or SIM State)</span></h3><p>Gain SINC rank 1. Choose 1 free Savant Program. Gain a "Disadvantage" Aspect reflecting mindset hack side effects. At any Milestone: reduce a Skill −1 to remove the Disadvantage Aspect.</p></div>
+      <div class="card"><h3>Signature Item</h3><p>Gain an item + Connection Aspect for it. May invoke Aspect once/scene for free. If item lost, can replace at next Milestone.</p></div>
+      <div class="card"><h3>SIM State <span style="font-weight:400;font-size:10px;">(SIM — free)</span></h3><p>Gain SIM State(P) Aspect. See States panel for full SIM rules.</p></div>
+      <div class="card"><h3>Skilled</h3><p>+1 to one non-Physical Skill (max rank 5). Can take multiple times; change target Skill at Major Milestones.</p></div>
+      <div class="card"><h3>Banner of Hope</h3><p>Once/scene as Free Action: one ally who can hear you clears all stress (not Consequences) on one Stress Track.</p></div>
+      <div class="card"><h3>Battlefield Command</h3><p>Once/scene as Simple/Supplemental: all allies who hear you move to adjacent zone or take cover as Instant Action.</p></div>
+      <div class="card"><h3>Ego Stabilization Software</h3><p>SIM State(P) and Synthetic Biology(P) are not Persistent for you. +1 on Cohesion tests vs. resleeving trauma.</p></div>
+      <div class="card"><h3>Free Runner</h3><p>+3 on Athletics to Hustle or Run. +2 on Athletics defense during any round you Hustled or Ran.</p></div>
+      <div class="card"><h3>Master Tactician</h3><p>Once/scene as Free Action: Strategy (Diff: 2) → one Scene/Zone Aspect becomes Persistent for you. Spin: attempt a free Maneuver; result is Persistent for you.</p></div>
+      <div class="card"><h3>Tenacious</h3><p>Once/scene: when you are Taken Out, you may instead remain in the conflict. You must immediately take an Extreme Consequence.</p></div>
+      <div class="card"><h3>Vicious Comeback</h3><p>When you accept a compel in a conflict scene, gain +2 on your next attack test made before the end of the round.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CH5: SAVANT PROGRAMS -->
+<section id="ch5-savant" class="panel ch5-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 5 — Characters</div>
+    <h1>Savant Programs</h1>
+    <p>Require the Savant Stunt. Each program is purchased as a Stunt slot.</p>
+  </div>
+
+  <div class="sec-purple">
+    <div class="sec-head"><h2>Program List</h2></div>
+    <div class="grid">
+      <div class="card"><h3>Access Memory</h3><p>Access stored memories from a target ego that is hosted on a system you have access to.</p></div>
+      <div class="card"><h3>Augmented Unreality</h3><p>Manipulate AR feeds visible to targets in your zone — show false data or hide real information.</p></div>
+      <div class="card"><h3>Blackout</h3><p>Shut down mesh sensors and connected devices in your zone, creating a local blind spot.</p></div>
+      <div class="card"><h3>Delve</h3><p>Deep scan of a connected system to extract data, find hidden files, or map network topology.</p></div>
+      <div class="card"><h3>Eminent Domain</h3><p>Gain admin/host access to a system that would normally refuse you entry.</p></div>
+      <div class="card"><h3>Esper Lord</h3><p>Control an esper swarm — a cloud of nano-scale sensors/weapons. Attack with SINC; WR ignores armor.</p></div>
+      <div class="card"><h3>Memory Hack</h3><p>Alter or implant false memories in a target ego on an accessible system.</p></div>
+      <div class="card"><h3>Oracle Patterning</h3><p>Analyze mesh data to make reliable short-term predictions. Provides Aspects based on anticipated events.</p></div>
+      <div class="card"><h3>Overload</h3><p>Force a target system to expend resources rapidly, causing system stress.</p></div>
+      <div class="card"><h3>Pattern Scan</h3><p>Analyze behavioral patterns of a target — reveals Aspects about habits, routines, or intentions.</p></div>
+      <div class="card"><h3>Puppeteer</h3><p>Remote control of drones or connected physical systems. SIMs use this for physical-world interaction.</p></div>
+      <div class="card"><h3>Security Skim</h3><p>Rapidly assess security systems in range — reveals Aspects about vulnerabilities and patrol patterns.</p></div>
+      <div class="card"><h3>Stream of Consciousness</h3><p>Broadcast your thoughts/perceptions to allies on the mesh. Enables real-time coordination.</p></div>
+      <div class="card"><h3>System Error</h3><p>Introduce targeted errors into a connected device — can disable, misdirect, or corrupt systems.</p></div>
+      <div class="card"><h3>System Invasion</h3><p>Full takeover attempt on a connected system. On success, gain admin access.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CH5: ADVANCEMENT -->
+<section id="ch5-advancement" class="panel ch5-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 5 — Characters</div>
+    <h1>Character Advancement</h1>
+  </div>
+
+  <div class="sec-purple">
+    <div class="sec-head"><h2>Milestones</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Milestone Cadence</h3>
+        <p>Every ~3 sessions after completing a significant task. Alternates: Minor → Major → Minor → Major...</p>
+      </div>
+      <div class="card">
+        <h3>Minor Milestone — Choose One:</h3>
+        <ul>
+          <li>Swap two Skills within 1 rank of each other</li>
+          <li>Replace one Aspect with another (GM permission, must make narrative sense)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Major Milestone — All of Minor, Plus:</h3>
+        <ul>
+          <li>Select one additional Stunt</li>
+          <li>May swap Skilled Stunt target Skill</li>
+          <li>May remove Savant Disadvantage Aspect by reducing a Skill by −1</li>
+          <li>May remove an Extreme (E) Aspect gained from a prior conflict</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CH6: ITEM STATS
+════════════════════════════════════════════ -->
+<section id="ch6-itemstats" class="panel ch6-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 6 — Gear</div>
+    <h1>Item Statistics</h1>
+  </div>
+
+  <div class="sec-amber">
+    <div class="sec-head"><h2>Core Statistics</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Rating Definitions</h3>
+        <table>
+          <thead><tr><th>Stat</th><th>Meaning</th><th>Applied When</th></tr></thead>
+          <tbody>
+            <tr><td><span class="kw">WR</span></td><td>Weapon Rating — added to stress on a hit</td><td>Attack succeeds</td></tr>
+            <tr><td><span class="kw">AR</span></td><td>Armor Rating — reduces stress taken</td><td>Always when hit</td></tr>
+            <tr><td><span class="kw">ExR</span></td><td>Explosive Rating — added to attack test roll</td><td>Before checking if attack hits</td></tr>
+            <tr><td><span class="kw">ER</span></td><td>Equipment Rating — bonus on relevant Skill test</td><td>When tool used appropriately</td></tr>
+            <tr><td><span class="kw">Range</span></td><td>Max zones without penalty. −1/zone beyond. Max extend = Range ×2.</td><td>Any ranged attack</td></tr>
+            <tr><td><span class="kw">Cost</span></td><td>Abstract value (~4× more expensive per step). Houses grant −1 Cost on their specialty goods.</td><td>Purchasing</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h3>Modifications &amp; Combining</h3>
+        <p><span class="kw">Adding Aspects:</span> +1 Cost per Aspect added. Max 2 added Aspects.</p>
+        <p><span class="kw">Negative Aspects</span> (e.g., Poorly Maintained): −1 Cost.</p>
+        <p><span class="kw">Combining items</span> (e.g., rifle + grenade launcher): Cost = more expensive item +1.</p>
+        <div class="divider"></div>
+        <p><span class="kw">Bulk ammo:</span> Cost +1 = ×4 units · Cost +2 = ×16 units · etc.</p>
+        <p><span class="kw">Restricted items</span> <span class="tag t-restr">R</span>: illegal in Coalition space without Licensed Stunt. Black market purchase = Assets test. Finding a seller = a Favor.</p>
+      </div>
+      <div class="card">
+        <h3>Common Item Aspects</h3>
+        <table>
+          <thead><tr><th>Aspect</th><th>Effect in Play</th></tr></thead>
+          <tbody>
+            <tr><td>Anti-Vehicular</td><td>Invoke to potentially damage vehicles</td></tr>
+            <tr><td>Armor Penetrating</td><td>Invoke for focused kinetic; less splash vs. soft targets</td></tr>
+            <tr><td>Full Auto</td><td>May use full-auto modes (Burst/Empty/Suppression)</td></tr>
+            <tr><td>Beam Weapon</td><td>May use beam modes (Sweep/Overheat/Suppression)</td></tr>
+            <tr><td>High Capacity</td><td>Invoke to avoid empty-clip in full-auto</td></tr>
+            <tr><td>Huge(P)</td><td>Invoke for intimidation; compel for collateral in tight spaces</td></tr>
+            <tr><td>Particle Accelerator</td><td>In vacuum: Range ÷2, −3 attack penalty; limited shots outside broadcast power</td></tr>
+            <tr><td>Shotgun(P)</td><td>Invoke at close range for bonus; compel at range for penalty</td></tr>
+            <tr><td>Small</td><td>Invoke for initiative/concealment; effective in grapple</td></tr>
+            <tr><td>Slow Firing</td><td>Compel: weapon not ready again next turn after firing</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH6: FIREARMS -->
+<section id="ch6-firearms" class="panel ch6-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 6 — Gear</div>
+    <h1>Firearms</h1>
+    <p>All firearms are <span class="tag t-restr">Restricted</span> in Coalition space.</p>
+  </div>
+
+  <div class="sec-amber">
+    <div class="sec-head"><h2>Firearms Tables</h2></div>
+    <div class="grid grid-wide">
+      <div class="card">
+        <h3>Pistols</h3>
+        <table>
+          <thead><tr><th>Weapon</th><th>WR</th><th>Range</th><th>Cost</th><th>Key Aspects</th></tr></thead>
+          <tbody>
+            <tr><td>Light Rail-Pistol</td><td class="val">+3</td><td>2</td><td>3</td><td>Armor Penetrating, Small, Silent −2 WR</td></tr>
+            <tr><td>Heavy Rail-Pistol</td><td class="val">+4</td><td>2</td><td>4</td><td>Armor Penetrating, Small, Silent −2 WR</td></tr>
+            <tr><td>Light PAc Pistol</td><td class="val">+4</td><td>4</td><td>5</td><td>Particle Accelerator, Small</td></tr>
+            <tr><td>Heavy PAc Pistol</td><td class="val">+5</td><td>4</td><td>6</td><td>Particle Accelerator, Small</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h3>PDW (Personal Defense Weapons)</h3>
+        <table>
+          <thead><tr><th>Weapon</th><th>WR</th><th>Range</th><th>Cost</th><th>Key Aspects</th></tr></thead>
+          <tbody>
+            <tr><td>Light Coil PDW</td><td class="val">+3</td><td>3</td><td>4</td><td>Full Auto, Silent −2 WR</td></tr>
+            <tr><td>Heavy Coil PDW</td><td class="val">+4</td><td>3</td><td>5</td><td>Full Auto, Silent −2 WR</td></tr>
+            <tr><td>Light PAc PDW</td><td class="val">+4</td><td>5</td><td>6</td><td>Beam Weapon, Particle Accelerator</td></tr>
+            <tr><td>Heavy PAc PDW</td><td class="val">+5</td><td>5</td><td>7</td><td>Beam Weapon, Particle Accelerator</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h3>Assault Rifles</h3>
+        <table>
+          <thead><tr><th>Weapon</th><th>WR</th><th>Range</th><th>Cost</th><th>Key Aspects</th></tr></thead>
+          <tbody>
+            <tr><td>Coil Carbine</td><td class="val">+4</td><td>4</td><td>6</td><td>Full Auto, Large, Silent −2 WR</td></tr>
+            <tr><td>Heavy Coil Assault</td><td class="val">+5</td><td>4</td><td>7</td><td>Full Auto, Huge(P), Silent −2 WR</td></tr>
+            <tr><td>Rail-Carbine</td><td class="val">+5</td><td>4</td><td>6</td><td>Armor Penetrating, Large, Silent −2 WR</td></tr>
+            <tr><td>Heavy Assault Rail</td><td class="val">+6</td><td>4</td><td>7</td><td>Armor Penetrating, Huge(P), Silent −2 WR</td></tr>
+            <tr><td>PAc Carbine</td><td class="val">+6</td><td>6</td><td>8</td><td>Beam, Particle Accelerator, Large</td></tr>
+            <tr><td>Heavy PAc Assault</td><td class="val">+7</td><td>6</td><td>9</td><td>Beam, Particle Accelerator, Huge(P)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h3>Rifles &amp; Rail-Arrays</h3>
+        <table>
+          <thead><tr><th>Weapon</th><th>WR</th><th>Range</th><th>Cost</th></tr></thead>
+          <tbody>
+            <tr><td>Light Sniper Rail</td><td class="val">+6</td><td>7</td><td>6</td></tr>
+            <tr><td>Heavy Sniper Rail</td><td class="val">+7</td><td>7</td><td>7</td></tr>
+            <tr><td>Light PAc Sniper</td><td class="val">+8</td><td>9</td><td>8</td></tr>
+            <tr><td>Heavy PAc Sniper</td><td class="val">+9</td><td>9</td><td>9</td></tr>
+            <tr><td>Light Rail-Array</td><td class="val">+5</td><td>2</td><td>6</td></tr>
+            <tr><td>Heavy Rail-Array</td><td class="val">+6</td><td>2</td><td>7</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-info">All snipers: Anti-Vehicular, Armor Penetrating, Day/Night Scope, Huge(P). Rail-Arrays: Armor Penetrating, Large, Shotgun(P).</div>
+      </div>
+      <div class="card">
+        <h3>Heavy Weapons</h3>
+        <table>
+          <thead><tr><th>Weapon</th><th>WR/ExR</th><th>Range</th><th>Cost</th></tr></thead>
+          <tbody>
+            <tr><td>Heavy Coil Auto Rifle</td><td class="val">+6</td><td>4</td><td>8</td></tr>
+            <tr><td>Portable Rail-Minigun</td><td class="val">+7</td><td>3</td><td>10</td></tr>
+            <tr><td>Heavy PAc Cannon</td><td class="val">+9</td><td>7</td><td>12</td></tr>
+            <tr><td>Light Plasma Flamer</td><td class="val">+5</td><td>2</td><td>6</td></tr>
+            <tr><td>Heavy Plasma Flamer</td><td class="val">+6</td><td>2</td><td>7</td></tr>
+            <tr><td>Grenade Launcher</td><td>See grenades</td><td>3</td><td>6</td></tr>
+            <tr><td>Rocket Launcher (RPG)</td><td class="val">ExR+9</td><td>4</td><td>10</td></tr>
+            <tr><td>Kinetic Strike Rail-Cannon</td><td class="val">ExR+10</td><td>5</td><td>11</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-info">Flamers: targets and zone attacked gain On Fire! Aspect (Intensity 6). PAc Cannon: 1 round to cool between shots.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH6: MELEE & EXPLOSIVES -->
+<section id="ch6-melee" class="panel ch6-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 6 — Gear</div>
+    <h1>Melee Weapons &amp; Explosives</h1>
+  </div>
+
+  <div class="sec-amber">
+    <div class="sec-head"><h2>Melee Weapons</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Blades</h3>
+        <table>
+          <thead><tr><th>Weapon</th><th>WR</th><th>Cost</th><th>Aspects</th></tr></thead>
+          <tbody>
+            <tr><td>Knife / Dagger</td><td class="val">+1</td><td>0</td><td>Small</td></tr>
+            <tr><td>Machete</td><td class="val">+2</td><td>1</td><td>—</td></tr>
+            <tr><td>Dagger, Mono-Edged</td><td class="val">+2</td><td>2</td><td>Small</td></tr>
+            <tr><td>Short Sword, Mono-Edged</td><td class="val">+3</td><td>3</td><td>—</td></tr>
+            <tr><td>Longsword, Mono-Edged</td><td class="val">+4</td><td>4</td><td>Large</td></tr>
+            <tr><td>Spear, Mono-Edged</td><td class="val">+4</td><td>5</td><td>Large (throwable)</td></tr>
+            <tr><td>Halberd, Mono-Edged</td><td class="val">+5</td><td>6</td><td>Long, Huge(P)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h3>Blunt &amp; Gravitic Weapons</h3>
+        <table>
+          <thead><tr><th>Weapon</th><th>WR</th><th>Cost</th><th>Aspects</th></tr></thead>
+          <tbody>
+            <tr><td>Punch/Kick</td><td class="val">+0</td><td>0</td><td>Unarmed</td></tr>
+            <tr><td>Small Club/Baton</td><td class="val">+1</td><td>0</td><td>Small</td></tr>
+            <tr><td>Tonfa (Police Nightstick)</td><td class="val">+1</td><td>0</td><td>—</td></tr>
+            <tr><td>Club/Baseball Bat</td><td class="val">+2</td><td>0</td><td>Large</td></tr>
+            <tr><td>Gravitic Baton</td><td class="val">+3</td><td>3</td><td>—</td></tr>
+            <tr><td>Gravitic Hammer</td><td class="val">+4</td><td>4</td><td>Huge(P)</td></tr>
+            <tr><td>Hatchet (throwable)</td><td class="val">+1</td><td>0</td><td>Small</td></tr>
+            <tr><td>Battle Axe, Mono-Edged</td><td class="val">+4</td><td>4</td><td>Large</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-warn">Large or Huge melee weapons are Restricted in Coalition space.</div>
+      </div>
+      <div class="card">
+        <h3>Explosives <span class="tag t-restr">Restricted</span></h3>
+        <table>
+          <thead><tr><th>Weapon</th><th>ExR</th><th>Area</th><th>Cost</th><th>Note</th></tr></thead>
+          <tbody>
+            <tr><td>Frag Grenade</td><td class="val">+6</td><td>1</td><td>5</td><td>—</td></tr>
+            <tr><td>Incendiary Grenade</td><td class="val">+6</td><td>1</td><td>5</td><td>Zone On Fire!</td></tr>
+            <tr><td>Stun Grenade</td><td class="val">+1</td><td>1</td><td>2</td><td>Targets Stunned</td></tr>
+            <tr><td>Gooper Grenade</td><td class="val">+4</td><td>1</td><td>4</td><td>No stress; Block on movement = Effort</td></tr>
+            <tr><td>Hell Ball</td><td class="val">+8</td><td>1</td><td>5</td><td>Shockwave + heat</td></tr>
+            <tr><td>Smoke Grenade</td><td>—</td><td>1</td><td>2</td><td>Not Restricted; Smokey Aspect</td></tr>
+            <tr><td>Satchel Charge</td><td class="val">+10</td><td>3</td><td>8</td><td>Demolitions to attack</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-info">Grenades: use Athletics or Demolitions for attack. Gooper: armor has no effect.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH6: ARMOR -->
+<section id="ch6-armor" class="panel ch6-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 6 — Gear</div>
+    <h1>Armor &amp; Features</h1>
+  </div>
+
+  <div class="sec-amber">
+    <div class="sec-head"><h2>Armor Types</h2></div>
+    <div class="grid grid-wide">
+      <div class="card">
+        <h3>Unpowered Armor</h3>
+        <table>
+          <thead><tr><th>Armor</th><th>AR</th><th>Cost</th><th>Add. Features</th></tr></thead>
+          <tbody>
+            <tr><td>Flight Suit</td><td class="val">+0</td><td>2</td><td>0</td></tr>
+            <tr><td>Reinforced Clothing / Vest</td><td class="val">+1</td><td>3</td><td>0</td></tr>
+            <tr><td>Vacuum Suit</td><td class="val">+1</td><td>4</td><td>0 (Bulky)</td></tr>
+            <tr><td>Reinforced Vacuum Suit</td><td class="val">+2</td><td>5</td><td>1</td></tr>
+            <tr><td>Light Battle Armor <span class="tag t-restr">R</span></td><td class="val">+3</td><td>4</td><td>1</td></tr>
+            <tr><td>Heavy Battle Armor <span class="tag t-restr">R</span></td><td class="val">+4</td><td>5</td><td>1</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h3>Powered Armor <span class="tag t-restr">R</span></h3>
+        <table>
+          <thead><tr><th>Armor</th><th>AR</th><th>Cost</th><th>Add. Features</th></tr></thead>
+          <tbody>
+            <tr><td>Powered Recon Armor</td><td class="val">+4</td><td>7</td><td>1</td></tr>
+            <tr><td>Powered Light Assault</td><td class="val">+5</td><td>9</td><td>2</td></tr>
+            <tr><td>Powered Heavy Assault</td><td class="val">+6</td><td>11</td><td>3</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-info">All powered armor includes: Vacuum Sealed, Air Pack, Thermal Regulation. Light/Heavy Assault also include Reinforced Cyber-Musculature.</div>
+      </div>
+      <div class="card">
+        <h3>Armor Features</h3>
+        <table>
+          <thead><tr><th>Feature</th><th>Effect</th></tr></thead>
+          <tbody>
+            <tr><td>Air Pack</td><td>8 hrs of breathable air in sealed helmet</td></tr>
+            <tr><td>Computer Gauntlet</td><td>PPC (Alpha Agent) on arm; voice/holographic interface</td></tr>
+            <tr><td>Enhanced Mobility*</td><td>+2 Athletics for movement (Hustle, climb, etc.)</td></tr>
+            <tr><td>High-Density Plating</td><td>+1 AR</td></tr>
+            <tr><td>Hydrostatic Gel Layer*</td><td>+3 AR vs. explosions; AR absorbs falling stress</td></tr>
+            <tr><td>Integrated Weaponry*</td><td>Arm/shoulder-mounted weapon (−1 Cost on weapon)</td></tr>
+            <tr><td>Interface Surface</td><td>Touch data transmission to/from onboard computer</td></tr>
+            <tr><td>Jump Jets</td><td>~50 ft jumps; Hustle +1 zone, Run +2 zones, +3 chase bonus</td></tr>
+            <tr><td>Light Screen*</td><td>Active: grants Chameleon Aspect (near invisibility)</td></tr>
+            <tr><td>Mag-Traction</td><td>Electromagnetic boots for zero-G traversal</td></tr>
+            <tr><td>Motion Tracker</td><td>Detect motion up to ~20m; grants Motion Tracker Aspect</td></tr>
+            <tr><td>Reinforced Cyber-Musculature*</td><td>+2 Athletics for lifting/grappling; melee/thrown WR +2</td></tr>
+            <tr><td>Thermal Regulation</td><td>Comfortable in −60°C to +140°C</td></tr>
+            <tr><td>Vacuum Sealed</td><td>Protection from vacuum and radiation</td></tr>
+            <tr><td>Zero-G Jets</td><td>Zero-G Maneuverability Aspect</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-info">* Powered Armor only.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH6: SPECIAL AMMO -->
+<section id="ch6-ammo" class="panel ch6-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 6 — Gear</div>
+    <h1>Special Ammunition</h1>
+  </div>
+
+  <div class="sec-amber">
+    <div class="sec-head"><h2>Ammo Types</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Shredder Ammo ("Rippers") — Cost 2</h3>
+        <p>Rounds shatter on impact. <span class="kw">Aspect: Shredder.</span> Devastating to unarmored targets; easily stopped by armor.</p>
+      </div>
+      <div class="card">
+        <h3>Penetrator Ammo ("Diggers") — Cost 2</h3>
+        <p>Hardened tips resist shattering. <span class="kw">Adds Armor Penetrating Aspect</span> to weapon. If weapon already has it, the Aspect becomes Persistent.</p>
+      </div>
+      <div class="card">
+        <h3>Guided Ammo ("Blood-Hounds") — Cost 3</h3>
+        <p>Homing rounds. Requires guidance system mod (+1 Cost to weapon) or Targeting Support System Aug. <span class="kw">Aspect: Guided.</span></p>
+      </div>
+      <div class="card">
+        <h3>Ammo Rules</h3>
+        <p>Each weapon comes with 1 unit of ammo free. Additional units: Cost 1 each.</p>
+        <p>Any time a special ammo Aspect is invoked or compelled: make a Firearms test to check if you've run out.</p>
+        <p>Reload with same type or regular ammo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH6: EQUIPMENT -->
+<section id="ch6-equipment" class="panel ch6-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 6 — Gear</div>
+    <h1>Equipment &amp; Agents</h1>
+  </div>
+
+  <div class="sec-amber">
+    <div class="sec-head"><h2>Agents</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Agent Types</h3>
+        <p>Personal VIs on PPCs or mindsets. Provides Skill bonuses when assisting relevant tests. Can test independently at Rank 1 + bonuses.</p>
+        <p>Enhancement software available for: Diplomacy, Education, Engineering (either), Insight, Mnemonics, Research, Strategy.</p>
+        <table>
+          <thead><tr><th>Type</th><th>Cost</th><th>Bonuses</th><th>PPC Cost</th></tr></thead>
+          <tbody>
+            <tr><td>Alpha</td><td class="val">4</td><td>+1 to one Skill</td><td>5</td></tr>
+            <tr><td>Beta</td><td class="val">7</td><td>+1 to two Skills</td><td>8</td></tr>
+            <tr><td>Gamma</td><td class="val">10</td><td>+2 to one, +1 to two Skills</td><td>11</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="sec-head" style="margin-top:16px;"><h2>Misc Equipment</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Key Items (Cost)</h3>
+        <table>
+          <thead><tr><th>Item</th><th>Cost</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>AR Display Device</td><td class="val">2</td><td>See AR objects; contacts version = 3</td></tr>
+            <tr><td>ARID Cloner <span class="tag t-restr">R</span></td><td class="val">4</td><td>Clone identity tags</td></tr>
+            <tr><td>Cyber-Intrusion &amp; Security Terminal (CIST) <span class="tag t-restr">R</span></td><td class="val">10</td><td>Hack Mimir-tech systems</td></tr>
+            <tr><td>Esper Swarm</td><td class="val">7</td><td>Nano-sensor/weapon swarm for Savants</td></tr>
+            <tr><td>False CID <span class="tag t-restr">R</span></td><td class="val">5–11</td><td>Fake Coalition ID</td></tr>
+            <tr><td>Holomask <span class="tag t-restr">R</span></td><td class="val">6</td><td>Full facial/voice disguise</td></tr>
+            <tr><td>Hostware</td><td class="val">7</td><td>Required for mnemonic editing</td></tr>
+            <tr><td>Medi-Stimulant Injection</td><td class="val">3</td><td>Speeds healing</td></tr>
+            <tr><td>Neural Link</td><td class="val">3</td><td>Direct neural interface</td></tr>
+            <tr><td>Resurrection Chamber <span class="tag t-restr">R</span></td><td class="val">12</td><td>Required for resleeving/merging</td></tr>
+            <tr><td>Resurrection Insurance</td><td class="val">3–11</td><td>Backup and resleeve service</td></tr>
+            <tr><td>Targeting Support Module <span class="tag t-restr">R</span></td><td class="val">4</td><td>Works with guided ammo without separate guidance system</td></tr>
+            <tr><td>Tele-presence Sensor Unit</td><td class="val">3</td><td>Remote viewing sensor package</td></tr>
+            <tr><td>VR Interface (Ego Channel)</td><td class="val">3</td><td>Full virtuality access hardware</td></tr>
+            <tr><td>Ballistic Cartographer</td><td class="val">4</td><td>Fires mapping sensors; creates real-time 3D map</td></tr>
+            <tr><td>Broadcast Screen</td><td class="val">4</td><td>Blocks mesh sensor coverage in an area</td></tr>
+            <tr><td>Compiler</td><td class="val">6+</td><td>Fabricates items from templates; Coalition restricted</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CH7: NPCs
+════════════════════════════════════════════ -->
+<section id="ch7-npcs" class="panel ch7-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 7 — Appendix</div>
+    <h1>NPCs &amp; Mooks</h1>
+  </div>
+
+  <div class="sec-steel">
+    <div class="sec-head"><h2>NPC Rules</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Mook Types</h3>
+        <table>
+          <thead><tr><th>Type</th><th>Consequences</th><th>Role</th></tr></thead>
+          <tbody>
+            <tr><td><span class="kw">Minor Mook</span></td><td>Mild only</td><td>Guards, bartenders, random thugs</td></tr>
+            <tr><td><span class="kw">Major Mook</span></td><td>Mild + Moderate</td><td>More significant obstacles; named roles</td></tr>
+          </tbody>
+        </table>
+        <p style="padding-left:10px;margin-top:6px;">Stress Tracks calculated same as PCs. Start with key Skills + Aspects only; fill in others as situations arise.</p>
+      </div>
+      <div class="card">
+        <h3>GM Fate Point Pool</h3>
+        <p>NPCs don't have a Refresh Rating. GM draws from a shared pool refreshed every scene:</p>
+        <div class="rule-row"><span class="lbl">Per mook in scene</span><span class="v">1 FP</span></div>
+        <div class="rule-row"><span class="lbl">Per Named NPC in scene</span><span class="v">3 FP</span></div>
+        <div class="note note-info">GM has an endless pool for distributing compel payments to players. Scene pool is separate.</div>
+      </div>
+      <div class="card">
+        <h3>Named NPCs</h3>
+        <p>Full PC-equivalent stat blocks: all 5 Aspects, complete Skills, Stunts, Consequences, equipment.</p>
+        <p>Treat with same care as a new PC. Think carefully before putting Signature Items at risk.</p>
+      </div>
+      <div class="card">
+        <h3>Speed Tip: Static Rolls</h3>
+        <p>For faster play: assume all mook dice rolls result in <span class="kw">"0"</span>. Players roll all dice. More predictable but lets GM focus on narrative.</p>
+      </div>
+      <div class="card">
+        <h3>NPC-Only Stunts</h3>
+        <table>
+          <thead><tr><th>Stunt</th><th>Effect</th></tr></thead>
+          <tbody>
+            <tr><td>Combat Training</td><td>+2 on all attack tests</td></tr>
+            <tr><td>Multi-Attacker</td><td>+1 Free Action per turn, attack-only. For creatures with multiple limbs.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CH7: SAMPLE NPCs -->
+<section id="ch7-sample" class="panel ch7-hdr">
+  <div class="panel-header">
+    <div class="panel-chapter">Chapter 7 — Appendix</div>
+    <h1>Sample NPCs</h1>
+  </div>
+
+  <div class="sec-steel">
+    <div class="sec-head"><h2>Ready-to-Use Stat Blocks</h2></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Apostate Street Tough</h3>
+        <p><em>Pure · Size 0 · AR: 1 (Reinforced Clothing)</em></p>
+        <p><span class="kw">Aspects:</span> Walking Promise of Violence · "I take gold."</p>
+        <p><span class="kw">Sleeve Skills:</span> Athletics 3, Endurance 3, Perception 2</p>
+        <p><span class="kw">Notable Skills:</span> Firearms 2, Intimidation 3, Melee 3, Pilot 2, Resolve 2</p>
+        <p><span class="kw">Stunt:</span> Payback (spend FP: Instant Action attack when suffering Consequence)</p>
+        <p><span class="kw">Weapons:</span> Light Rail-Pistol WR+3 · Mono-Edge Dagger WR+2 (Small)</p>
+      </div>
+      <div class="card">
+        <h3>Cyber-Merc</h3>
+        <p><em>Beta Cybersleeve · Size 0 · AR: 4 (Heavy Battle Armor)</em></p>
+        <p><span class="kw">Aspects:</span> Synthetic Biology · Inhuman Appearance</p>
+        <p><span class="kw">Sleeve Skills:</span> Athletics 4, Endurance 3, Perception 1</p>
+        <p><span class="kw">Notable Skills:</span> Firearms 3, Intimidation 4, Melee 2, Resolve 2</p>
+        <p><span class="kw">Stunts:</span> Apotheosis, Fully Synthetic, Bio-Skin Sheath, Counter Attack</p>
+        <p><span class="kw">Weapons:</span> Heavy Coil PDW WR+4 (Full Auto, Silent −2 WR) · Gravitic Baton WR+3</p>
+      </div>
+      <div class="card">
+        <h3>Security Guard</h3>
+        <p><em>Beta Biosleeve · Size 0 · AR: 3 (Light Battle Armor)</em></p>
+        <p><span class="kw">Aspects:</span> Gene-Fixed Biosleeve</p>
+        <p><span class="kw">Sleeve Skills:</span> Athletics 3, Endurance 3, Perception 3</p>
+        <p><span class="kw">Notable Skills:</span> Firearms 3, Intimidation 4, Melee 2, Resolve 2</p>
+        <p><span class="kw">Stunt:</span> Combat Training (+2 all attacks)</p>
+        <p><span class="kw">Weapons:</span> Heavy Rail-Pistol WR+4 · Gravitic Baton WR+3</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script>
+function show(id, btn) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(b => b.classList.remove('active'));
+  const panel = document.getElementById(id);
+  if (panel) panel.classList.add('active');
+  if (btn) btn.classList.add('active');
+}
+
+function toggleChapter(btn) {
+  btn.classList.toggle('open');
+  const items = btn.nextElementSibling;
+  items.classList.toggle('open');
+}
+</script>
+</body>
+</html>
