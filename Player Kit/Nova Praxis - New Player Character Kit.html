@@ -1,0 +1,1748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nova Praxis — New Player Character Kit</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --bg2: #161b22;
+    --bg3: #1f2937;
+    --border: #30363d;
+    --accent: #58a6ff;
+    --accent2: #3d8fe8;
+    --accent-dim: #1f3a5f;
+    --green: #3fb950;
+    --orange: #f0883e;
+    --purple: #a371f7;
+    --red: #f85149;
+    --yellow: #e3b341;
+    --text: #e6edf3;
+    --text-dim: #8b949e;
+    --text-muted: #6e7681;
+    --pure-color: #3fb950;
+    --sleeved-color: #a371f7;
+    --sim-color: #58a6ff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  /* LAYOUT */
+  .app { display: flex; min-height: 100vh; }
+  .sidebar {
+    width: 220px;
+    min-width: 220px;
+    background: var(--bg2);
+    border-right: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .sidebar-title {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 0 1rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 0.5rem;
+  }
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.45rem 1rem;
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    cursor: pointer;
+    border-left: 3px solid transparent;
+    transition: all 0.15s;
+    text-decoration: none;
+  }
+  .nav-item:hover { color: var(--text); background: var(--bg3); }
+  .nav-item.active { color: var(--accent); border-left-color: var(--accent); background: var(--accent-dim); }
+  .nav-step { font-size: 0.65rem; color: var(--text-muted); font-weight: 600; min-width: 14px; }
+
+  .main {
+    flex: 1;
+    padding: 2.5rem 2rem;
+    max-width: 900px;
+    overflow-y: auto;
+  }
+
+  /* SECTIONS */
+  .section { display: none; }
+  .section.active { display: block; }
+
+  /* TYPOGRAPHY */
+  h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 0.3rem; }
+  h2 { font-size: 1.25rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text); }
+  h3 { font-size: 1rem; font-weight: 600; margin: 1.2rem 0 0.4rem; color: var(--text); }
+  p { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 0.6rem; }
+  .subtitle { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 1.5rem; }
+  .page-header { border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 1.5rem; }
+  .section-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+
+  /* CARDS */
+  .card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  .card:hover { border-color: #4a5568; }
+  .card-grid { display: grid; gap: 1rem; }
+  .card-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+  .card-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+
+  /* STATE CARDS */
+  .state-card { border-radius: 8px; padding: 1.25rem; border: 2px solid transparent; cursor: pointer; transition: all 0.2s; }
+  .state-card.pure { background: rgba(63,185,80,0.08); border-color: rgba(63,185,80,0.3); }
+  .state-card.sleeved { background: rgba(163,113,247,0.08); border-color: rgba(163,113,247,0.3); }
+  .state-card.sim { background: rgba(88,166,255,0.08); border-color: rgba(88,166,255,0.3); }
+  .state-card.selected.pure { border-color: var(--pure-color); box-shadow: 0 0 0 3px rgba(63,185,80,0.2); }
+  .state-card.selected.sleeved { border-color: var(--sleeved-color); box-shadow: 0 0 0 3px rgba(163,113,247,0.2); }
+  .state-card.selected.sim { border-color: var(--sim-color); box-shadow: 0 0 0 3px rgba(88,166,255,0.2); }
+  .state-label { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem; }
+  .state-label.pure { color: var(--pure-color); }
+  .state-label.sleeved { color: var(--sleeved-color); }
+  .state-label.sim { color: var(--sim-color); }
+
+  /* BADGES */
+  .badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  .badge-green { background: rgba(63,185,80,0.2); color: var(--green); }
+  .badge-purple { background: rgba(163,113,247,0.2); color: var(--purple); }
+  .badge-blue { background: rgba(88,166,255,0.2); color: var(--accent); }
+  .badge-orange { background: rgba(240,136,62,0.2); color: var(--orange); }
+  .badge-red { background: rgba(248,81,73,0.15); color: var(--red); }
+  .badge-yellow { background: rgba(227,179,65,0.2); color: var(--yellow); }
+
+  /* SKILL SET CARDS */
+  .skillset-card {
+    border-radius: 8px; padding: 1.25rem; border: 2px solid transparent; cursor: pointer; transition: all 0.2s;
+    background: var(--bg2);
+    border-color: var(--border);
+  }
+  .skillset-card.selected {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(88,166,255,0.15);
+    background: var(--accent-dim);
+  }
+  .skillset-title { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text); }
+  .skillset-row { display: flex; justify-content: space-between; font-size: 0.82rem; color: var(--text-dim); padding: 0.15rem 0; }
+  .skillset-rank { font-weight: 600; color: var(--accent); }
+
+  /* SKILLS TABLE */
+  .skills-grid { display: grid; gap: 0.5rem; }
+  .skill-row {
+    display: grid;
+    grid-template-columns: 1fr 180px auto;
+    align-items: start;
+    gap: 0.75rem;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.85rem;
+  }
+  .skill-row:hover { border-color: #4a5568; }
+  .skill-name { font-weight: 600; color: var(--text); }
+  .skill-desc { color: var(--text-dim); font-size: 0.78rem; line-height: 1.4; }
+  .skill-type { font-size: 0.68rem; color: var(--text-muted); margin-top: 2px; }
+  .skill-stress { font-size: 0.72rem; color: var(--yellow); font-weight: 600; }
+  .rank-selector { display: flex; gap: 3px; align-items: center; }
+  .rank-btn {
+    width: 26px; height: 26px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text-dim);
+    cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: 700;
+    transition: all 0.15s;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .rank-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .rank-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+  /* ARCHETYPE PILLS */
+  .archetype-grid { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.5rem; }
+  .archetype-card {
+    flex: 1; min-width: 150px;
+    background: var(--bg2);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+  }
+  .archetype-card:hover { border-color: #4a5568; }
+  .archetype-card.selected { border-color: var(--orange); background: rgba(240,136,62,0.08); }
+  .archetype-icon { font-size: 1.6rem; margin-bottom: 0.3rem; }
+  .archetype-name { font-weight: 700; font-size: 0.85rem; color: var(--text); }
+  .archetype-tagline { font-size: 0.72rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+  /* HOUSES */
+  .house-card {
+    background: var(--bg2);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    padding: 1.1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .house-card:hover { border-color: #4a5568; }
+  .house-card.selected { border-color: var(--accent); background: var(--accent-dim); }
+  .house-name { font-weight: 700; font-size: 0.95rem; color: var(--text); margin-bottom: 0.2rem; }
+  .house-meta { font-size: 0.72rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+  .house-summary { font-size: 0.78rem; color: var(--text-dim); line-height: 1.45; }
+  .house-discounts { margin-top: 0.5rem; }
+  .house-discounts-label { font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; }
+  .discount-tag { display: inline-block; background: rgba(88,166,255,0.1); color: var(--accent); border-radius: 4px; padding: 0.1rem 0.4rem; font-size: 0.7rem; margin: 2px; }
+
+  /* STUNTS */
+  .stunt-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.9rem 1rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    transition: all 0.15s;
+  }
+  .stunt-card:hover { border-color: #4a5568; }
+  .stunt-card.selected { border-color: var(--accent); background: var(--accent-dim); }
+  .stunt-checkbox {
+    width: 18px; height: 18px;
+    border-radius: 4px;
+    border: 2px solid var(--border);
+    min-width: 18px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.7rem;
+    transition: all 0.15s;
+    margin-top: 2px;
+  }
+  .stunt-card.selected .stunt-checkbox { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .stunt-name { font-weight: 600; font-size: 0.88rem; color: var(--text); }
+  .stunt-desc { font-size: 0.78rem; color: var(--text-dim); margin-top: 0.2rem; line-height: 1.4; }
+  .stunt-tag { margin-left: 0.4rem; }
+
+  /* NOTES */
+  .note-field {
+    width: 100%;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.85rem;
+    padding: 0.7rem 0.9rem;
+    resize: vertical;
+    min-height: 70px;
+    transition: border-color 0.15s;
+    line-height: 1.5;
+  }
+  .note-field:focus { outline: none; border-color: var(--accent); }
+  .note-field::placeholder { color: var(--text-muted); }
+  .note-label { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.3rem; font-weight: 600; letter-spacing: 0.04em; }
+
+  /* ASPECT INPUTS */
+  .aspect-row { display: flex; gap: 0.75rem; margin-bottom: 0.75rem; align-items: flex-start; }
+  .aspect-letter {
+    width: 36px; height: 36px;
+    border-radius: 6px;
+    background: var(--accent-dim);
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 1.1rem;
+    display: flex; align-items: center; justify-content: center;
+    min-width: 36px;
+    border: 1px solid var(--accent);
+  }
+  .aspect-input {
+    flex: 1;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.88rem;
+    padding: 0.55rem 0.8rem;
+    transition: border-color 0.15s;
+  }
+  .aspect-input:focus { outline: none; border-color: var(--accent); }
+  .aspect-input::placeholder { color: var(--text-muted); }
+  .aspect-hint { font-size: 0.72rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+  /* SUMMARY */
+  .summary-block {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  .summary-row { display: flex; justify-content: space-between; align-items: center; padding: 0.35rem 0; border-bottom: 1px solid var(--border); font-size: 0.85rem; }
+  .summary-row:last-child { border-bottom: none; }
+  .summary-key { color: var(--text-dim); }
+  .summary-val { color: var(--text); font-weight: 600; }
+  .summary-val.empty { color: var(--text-muted); font-weight: 400; font-style: italic; }
+
+  /* NAV BUTTONS */
+  .nav-buttons { display: flex; gap: 0.75rem; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+  .btn {
+    padding: 0.55rem 1.25rem;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn-primary:hover { background: var(--accent2); }
+  .btn-secondary { background: transparent; color: var(--text-dim); }
+  .btn-secondary:hover { color: var(--text); background: var(--bg3); }
+
+  /* STRESS TRACKER */
+  .stress-track { margin-bottom: 1rem; }
+  .stress-label { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.4rem; font-weight: 600; }
+  .stress-boxes { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+  .stress-box {
+    width: 28px; height: 28px;
+    border-radius: 4px;
+    border: 2px solid var(--border);
+    background: var(--bg3);
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.7rem;
+    color: transparent;
+    transition: all 0.15s;
+  }
+  .stress-box.filled { background: var(--red); border-color: var(--red); color: #fff; }
+
+  /* RULE CALLOUT */
+  .callout {
+    border-left: 3px solid var(--accent);
+    background: var(--accent-dim);
+    border-radius: 0 6px 6px 0;
+    padding: 0.75rem 1rem;
+    margin: 1rem 0;
+    font-size: 0.84rem;
+    color: var(--text-dim);
+  }
+  .callout.warn { border-color: var(--orange); background: rgba(240,136,62,0.08); }
+  .callout.tip { border-color: var(--green); background: rgba(63,185,80,0.07); }
+  .callout strong { color: var(--text); }
+
+  /* SKILL COUNTER */
+  .rank-tracker {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .rank-track-item { text-align: center; }
+  .rank-track-number { font-size: 1.2rem; font-weight: 800; color: var(--accent); }
+  .rank-track-label { font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .rank-track-item.used .rank-track-number { color: var(--green); }
+  .rank-track-item.over .rank-track-number { color: var(--red); }
+
+  /* DIVIDER */
+  .divider { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+
+  /* FATE LADDER */
+  .ladder-row { display: flex; align-items: center; gap: 0.75rem; padding: 0.3rem 0.5rem; font-size: 0.82rem; border-radius: 4px; }
+  .ladder-row:nth-child(even) { background: var(--bg2); }
+  .ladder-val { width: 30px; font-weight: 800; color: var(--accent); text-align: right; }
+  .ladder-name { width: 80px; font-weight: 600; color: var(--text); }
+  .ladder-desc { color: var(--text-dim); font-style: italic; }
+
+  /* SKILL POOL DISPLAY */
+  .skill-pool-display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding: 0.75rem;
+    background: var(--bg3);
+    border-radius: 6px;
+    min-height: 50px;
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--border);
+  }
+  .skill-pill {
+    background: var(--accent-dim);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    padding: 0.15rem 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .skill-pill.r5 { background: rgba(248,81,73,0.15); color: var(--red); border-color: var(--red); }
+  .skill-pill.r4 { background: rgba(240,136,62,0.15); color: var(--orange); border-color: var(--orange); }
+  .skill-pill.r3 { background: rgba(227,179,65,0.15); color: var(--yellow); border-color: var(--yellow); }
+  .skill-pill.r2 { background: rgba(63,185,80,0.12); color: var(--green); border-color: var(--green); }
+  .skill-pill.r1 { background: var(--bg2); color: var(--text-dim); border-color: var(--border); }
+  .skill-pill-empty { color: var(--text-muted); font-size: 0.8rem; font-style: italic; align-self: center; }
+
+  /* TABS */
+  .tabs { display: flex; gap: 0; border-bottom: 1px solid var(--border); margin-bottom: 1.25rem; }
+  .tab {
+    padding: 0.55rem 1rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--text-dim);
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: all 0.15s;
+  }
+  .tab:hover { color: var(--text); }
+  .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* PRINT */
+  @media print {
+    .sidebar, .nav-buttons { display: none; }
+    .section { display: block !important; }
+    .main { max-width: 100%; }
+    .app { display: block; }
+    body { background: #fff; color: #000; }
+    .card, .state-card, .house-card, .stunt-card, .skillset-card { border-color: #ccc; background: #f9f9f9; }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 700px) {
+    .sidebar { display: none; }
+    .card-grid.cols-3 { grid-template-columns: 1fr; }
+    .card-grid.cols-2 { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="app">
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+  <div class="sidebar-title">Nova Praxis<br>Character Kit</div>
+  <a class="nav-item active" onclick="showSection('intro')" href="#">
+    <span class="nav-step">0</span> Setting &amp; Concept
+  </a>
+  <a class="nav-item" onclick="showSection('archetypes')" href="#">
+    <span class="nav-step">&#9670;</span> Archetypes
+  </a>
+  <a class="nav-item" onclick="showSection('aspects')" href="#">
+    <span class="nav-step">1</span> Aspects
+  </a>
+  <a class="nav-item" onclick="showSection('state')" href="#">
+    <span class="nav-step">2</span> Choose Your State
+  </a>
+  <a class="nav-item" onclick="showSection('skills')" href="#">
+    <span class="nav-step">3</span> Skills
+  </a>
+  <a class="nav-item" onclick="showSection('stunts')" href="#">
+    <span class="nav-step">4</span> Stunts
+  </a>
+  <a class="nav-item" onclick="showSection('allegiance')" href="#">
+    <span class="nav-step">5–6</span> House &amp; Rep
+  </a>
+  <a class="nav-item" onclick="showSection('summary')" href="#">
+    <span class="nav-step">&#10003;</span> Summary
+  </a>
+  <a class="nav-item" onclick="showSection('reference')" href="#">
+    <span class="nav-step">?</span> Quick Reference
+  </a>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+
+<!-- ===== INTRO / CONCEPT ===== -->
+<section class="section active" id="s-intro">
+  <div class="page-header">
+    <div class="section-label">Welcome to Nova Praxis</div>
+    <h1>New Player Character Kit</h1>
+    <p class="subtitle">This kit walks you through every choice in character creation. Fill in your answers as you go — the Summary page will pull it all together.</p>
+  </div>
+
+  <h2>The Setting in 60 Seconds</h2>
+  <div class="card">
+    <p><strong style="color:var(--text)">Nova Praxis</strong> is a transhuman sci-fi RPG set in a future where humanity fled Earth after a nanotech plague — the <em>Technophage</em> — consumed it. Survivors live across a star-spanning Coalition ruled by six corporate <strong>Houses</strong> locked in a cold war called the <strong>Shadow War</strong>.</p>
+    <p style="margin-top:0.5rem">The biggest revolution: <strong>Apotheosis</strong>. Your mind — your ego — can be backed up, transferred to a new body (a <em>sleeve</em>), or run as pure software. Death is no longer permanent. But this raises hard questions about identity, humanity, and who gets to decide what "human" means.</p>
+  </div>
+
+  <div class="card-grid cols-3" style="margin-top:1rem">
+    <div class="card" style="border-color:rgba(63,185,80,0.3)">
+      <div style="color:var(--green);font-weight:700;margin-bottom:0.4rem">Pure</div>
+      <p style="font-size:0.8rem">Born human, still in your original body. No Apotheosis. No backup. When you die, you're gone. Greater willpower, +2 Refresh.</p>
+    </div>
+    <div class="card" style="border-color:rgba(163,113,247,0.3)">
+      <div style="color:var(--purple);font-weight:700;margin-bottom:0.4rem">Sleeved</div>
+      <p style="font-size:0.8rem">Your ego has been digitized. You inhabit a body — biosleeve or cybersleeve — that can be swapped. Backed up. Resleeved.</p>
+    </div>
+    <div class="card" style="border-color:rgba(88,166,255,0.3)">
+      <div style="color:var(--accent);font-weight:700;margin-bottom:0.4rem">SIM</div>
+      <p style="font-size:0.8rem">Pure software. No body. You live in virtual space, perceive the physical world through mesh sensors, and act through drones.</p>
+    </div>
+  </div>
+
+  <h2>The Eight Steps</h2>
+  <div class="card">
+    <div class="summary-row"><span class="summary-key">Step 1</span><span class="summary-val">Choose 5 Aspects (one per letter A–E)</span></div>
+    <div class="summary-row"><span class="summary-key">Step 2</span><span class="summary-val">Choose your State (Pure / Sleeved / SIM)</span></div>
+    <div class="summary-row"><span class="summary-key">Step 3</span><span class="summary-val">Choose a Skill Set and assign Skill Ranks</span></div>
+    <div class="summary-row"><span class="summary-key">Step 4</span><span class="summary-val">Choose 3 Stunts</span></div>
+    <div class="summary-row"><span class="summary-key">Step 5</span><span class="summary-val">Choose your House allegiance (or go Apostate)</span></div>
+    <div class="summary-row"><span class="summary-key">Step 6</span><span class="summary-val">Calculate Rep-Rating (H.Net + 2)</span></div>
+    <div class="summary-row"><span class="summary-key">Step 7</span><span class="summary-val">Choose starting gear</span></div>
+    <div class="summary-row"><span class="summary-key">Step 8</span><span class="summary-val">Calculate Stress Boxes</span></div>
+  </div>
+
+  <div class="callout tip">
+    <strong>Tip:</strong> Start with the Archetypes page. Pick a role that sounds fun — it'll suggest a starting skill spread, state, and stunts. You can customize from there.
+  </div>
+
+  <div style="margin-top:1.5rem">
+    <div class="note-label">Your Character Name / Concept (optional — just brainstorm)</div>
+    <textarea class="note-field" id="concept-note" placeholder="e.g. 'Former Centurion combat pilot with a gambling addiction' — doesn't need to be perfect yet" rows="3"></textarea>
+  </div>
+
+  <div class="nav-buttons">
+    <button class="btn btn-primary" onclick="showSection('archetypes')">Next: Archetypes →</button>
+  </div>
+</section>
+
+<!-- ===== ARCHETYPES ===== -->
+<section class="section" id="s-archetypes">
+  <div class="page-header">
+    <div class="section-label">Quick Start Guide</div>
+    <h1>Archetypes</h1>
+    <p class="subtitle">Not official rules — these are suggested starting points. Pick one that matches the role you want. Everything can be customized.</p>
+  </div>
+
+  <div class="archetype-grid" id="archetype-grid">
+    <div class="archetype-card" onclick="selectArchetype(this,'soldier')">
+      <div class="archetype-icon">&#9876;</div>
+      <div class="archetype-name">The Soldier</div>
+      <div class="archetype-tagline">Legionnaire. Front-line fighter.</div>
+    </div>
+    <div class="archetype-card" onclick="selectArchetype(this,'operator')">
+      <div class="archetype-icon">&#128373;</div>
+      <div class="archetype-name">The Operator</div>
+      <div class="archetype-tagline">Infiltrator. Stealth specialist.</div>
+    </div>
+    <div class="archetype-card" onclick="selectArchetype(this,'face')">
+      <div class="archetype-icon">&#128483;</div>
+      <div class="archetype-name">The Face</div>
+      <div class="archetype-tagline">Diplomat. Con artist. Fixer.</div>
+    </div>
+    <div class="archetype-card" onclick="selectArchetype(this,'savant')">
+      <div class="archetype-icon">&#9881;</div>
+      <div class="archetype-name">The Savant</div>
+      <div class="archetype-tagline">Hacker. Digital infiltrator.</div>
+    </div>
+    <div class="archetype-card" onclick="selectArchetype(this,'commander')">
+      <div class="archetype-icon">&#128081;</div>
+      <div class="archetype-name">The Commander</div>
+      <div class="archetype-tagline">Tactician. Leader. Strategist.</div>
+    </div>
+    <div class="archetype-card" onclick="selectArchetype(this,'engineer')">
+      <div class="archetype-icon">&#128296;</div>
+      <div class="archetype-name">The Engineer</div>
+      <div class="archetype-tagline">Technician. Builder. Fixer.</div>
+    </div>
+  </div>
+
+  <div class="card" id="archetype-detail" style="display:none">
+    <div id="archetype-content"></div>
+  </div>
+
+  <div class="nav-buttons">
+    <button class="btn btn-secondary" onclick="showSection('intro')">← Back</button>
+    <button class="btn btn-primary" onclick="showSection('aspects')">Next: Aspects →</button>
+  </div>
+</section>
+
+<!-- ===== ASPECTS ===== -->
+<section class="section" id="s-aspects">
+  <div class="page-header">
+    <div class="section-label">Step 1</div>
+    <h1>Aspects</h1>
+    <p class="subtitle">You get 5 Aspects — one per letter A through E. Each is a phrase (3–8 words) that defines who your character is. Good Aspects create both advantages AND complications.</p>
+  </div>
+
+  <div class="callout">
+    <strong>Golden Rule:</strong> Every Aspect should be two-edged — something that makes you great AND something that can bite you. "Legionnaire, Born and Raised" gives combat bonuses <em>and</em> can be compelled when your military loyalty creates problems.
+  </div>
+
+  <h2>The Aspect Alphabet</h2>
+
+  <div style="margin-bottom:1.5rem">
+    <div class="aspect-row">
+      <div class="aspect-letter">A</div>
+      <div style="flex:1">
+        <input class="aspect-input" id="aspect-a" placeholder="Ambition — What drives you? What do you want?" />
+        <div class="aspect-hint">Examples: "I'll make captain one day!" &bull; Obsessed with Becoming a Sensie Star &bull; Walking the Long Road to Ascension</div>
+      </div>
+    </div>
+    <div class="aspect-row">
+      <div class="aspect-letter">B</div>
+      <div style="flex:1">
+        <input class="aspect-input" id="aspect-b" placeholder="Belief — What philosophy guides your actions?" />
+        <div class="aspect-hint">Examples: "I'd lay down my life for the Coalition" &bull; Suspicious of Technology and the Horrors it Can Unleash</div>
+      </div>
+    </div>
+    <div class="aspect-row">
+      <div class="aspect-letter">C</div>
+      <div style="flex:1">
+        <input class="aspect-input" id="aspect-c" placeholder="Connection — A person, place, or event that still shapes you." />
+        <div class="aspect-hint">Examples: Grew up on the Streets of Olympus &bull; Trained by a Praetorian of House Tsarya &bull; "I saw the Technophage with my own eyes!"</div>
+      </div>
+    </div>
+    <div class="aspect-row">
+      <div class="aspect-letter">D</div>
+      <div style="flex:1">
+        <input class="aspect-input" id="aspect-d" placeholder="Disadvantage — Why haven't you achieved your goals yet?" />
+        <div class="aspect-hint">Examples: Soft Spot for the Damsel in Distress &bull; Crippling Fear of Space Travel &bull; "Never mind the apostates. They're expendable."</div>
+      </div>
+    </div>
+    <div class="aspect-row">
+      <div class="aspect-letter">E</div>
+      <div style="flex:1">
+        <input class="aspect-input" id="aspect-e" placeholder="Expertise — What are you good at? How do you solve problems?" />
+        <div class="aspect-hint">Examples: Smuggler with a Heart of Gold &bull; "I've never met a system I couldn't crack" &bull; Silver-Tongued Devil Always Gets His Way</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>How Aspects Work at the Table</h2>
+  <div class="card-grid cols-2">
+    <div class="card" style="border-color:rgba(63,185,80,0.3)">
+      <div style="font-weight:700;color:var(--green);margin-bottom:0.4rem">Invoking (You spend 1 Fate Point)</div>
+      <p style="font-size:0.82rem">+2 bonus to a roll, OR reroll entirely. You say how the Aspect applies — the GM can't stop you unless it makes no sense.</p>
+    </div>
+    <div class="card" style="border-color:rgba(240,136,62,0.3)">
+      <div style="font-weight:700;color:var(--orange);margin-bottom:0.4rem">Compelling (You earn 1 Fate Point)</div>
+      <p style="font-size:0.82rem">The GM offers you a complication tied to an Aspect. Accept it → you get 1 FP and the complication happens. Refuse it → spend 1 FP to avoid it.</p>
+    </div>
+  </div>
+
+  <div class="callout warn" style="margin-top:1rem">
+    <strong>Scope Rule:</strong> You can only invoke one of each <em>type</em> of Aspect per roll (one character Aspect, one scene Aspect, one gear Aspect, etc.). Having three Aspects that all do the same thing wastes Aspects — spread them out.
+  </div>
+
+  <div style="margin-top:1rem">
+    <div class="note-label">Notes</div>
+    <textarea class="note-field" id="aspects-note" placeholder="Rough ideas, questions for the GM, connections to other PCs..." rows="3"></textarea>
+  </div>
+
+  <div class="nav-buttons">
+    <button class="btn btn-secondary" onclick="showSection('archetypes')">← Back</button>
+    <button class="btn btn-primary" onclick="showSection('state')">Next: State →</button>
+  </div>
+</section>
+
+<!-- ===== STATE ===== -->
+<section class="section" id="s-state">
+  <div class="page-header">
+    <div class="section-label">Step 2</div>
+    <h1>Choose Your State</h1>
+    <p class="subtitle">This is one of the most identity-defining choices. Your State determines how your physical skills work, what free Stunts you get, and how you experience the world.</p>
+  </div>
+
+  <div class="callout warn">
+    <strong>Once you go Apotheosized, you can never go back to Pure.</strong> Pure → Sleeved or SIM is a one-way door. Sleeved ↔ SIM can change during play via a resurrection chamber.
+  </div>
+
+  <div class="card-grid cols-3" style="margin-top:1.25rem">
+    <div class="state-card pure" id="state-pure" onclick="selectState('pure')">
+      <div class="state-label pure">Pure</div>
+      <p style="font-size:0.78rem;margin:0.4rem 0;color:var(--text-dim)">Original biological body. No backup. Heightened willpower and humanity.</p>
+      <hr style="border-color:rgba(63,185,80,0.2);margin:0.6rem 0">
+      <div style="font-size:0.75rem;color:var(--text-dim)">
+        <div style="margin-bottom:0.4rem"><span class="badge badge-green">+ Refresh +2</span></div>
+        <div style="margin-bottom:0.4rem"><span class="badge badge-green">+ 8 Physical Ranks</span></div>
+        <div style="margin-bottom:0.4rem"><span class="badge badge-green">+ Free: Carpe Diem Stunt</span></div>
+        <div style="margin-bottom:0.4rem"><span class="badge badge-green">+ Bonus Aspect (body trait)</span></div>
+        <div style="margin-bottom:0.4rem"><span class="badge badge-green">+ +1 to any non-Physical Skill</span></div>
+        <div><span class="badge badge-red">– Death is permanent (no backup)</span></div>
+      </div>
+    </div>
+
+    <div class="state-card sleeved" id="state-sleeved" onclick="selectState('sleeved')">
+      <div class="state-label sleeved">Sleeved</div>
+      <p style="font-size:0.78rem;margin:0.4rem 0;color:var(--text-dim)">Apotheosized ego in a biosleeve or cybersleeve. Backed up. Resleeving is possible but traumatic.</p>
+      <hr style="border-color:rgba(163,113,247,0.2);margin:0.6rem 0">
+      <div style="font-size:0.75rem;color:var(--text-dim)">
+        <div style="margin-bottom:0.4rem"><span class="badge badge-purple">+ Free sleeve (Cost ≤ higher of Assets/Rep +4)</span></div>
+        <div style="margin-bottom:0.4rem"><span class="badge badge-purple">+ Physical Skills from sleeve</span></div>
+        <div style="margin-bottom:0.4rem"><span class="badge badge-purple">+ Can resleeve on death</span></div>
+        <div style="margin-bottom:0.4rem"><span class="badge badge-purple">+ Access to Augmentations</span></div>
+        <div><span class="badge badge-red">– Resleeving is a mental attack (Cohesion check)</span></div>
+      </div>
+    </div>
+
+    <div class="state-card sim" id="state-sim" onclick="selectState('sim')">
+      <div class="state-label sim">SIM</div>
+      <p style="font-size:0.78rem;margin:0.4rem 0;color:var(--text-dim)">Pure software. Lives in virtual space. Perceives physical world through mesh sensors.</p>
+      <hr style="border-color:rgba(88,166,255,0.2);margin:0.6rem 0">
+      <div style="font-size:0.75rem;color:var(--text-dim)">
+        <div style="margin-bottom:0.4rem"><span class="badge badge-blue">+ 7 Physical Ranks (virtual)</span></div>
+        <div style="margin-bottom:0.4rem"><span class="badge badge-blue">+ Free: SIM State Stunt</span></div>
+        <div style="margin-bottom:0.4rem"><span class="badge badge-blue">+ Free: One SIM choice Stunt</span></div>
+        <div style="margin-bottom:0.4rem"><span class="badge badge-blue">+ Full access to virtual worlds</span></div>
+        <div style="margin-bottom:0.4rem"><span class="badge badge-red">– Needs drones for physical interaction</span></div>
+        <div><span class="badge badge-red">– Lag penalties at range</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="state-detail" style="margin-top:1.5rem;display:none">
+    <div id="state-detail-content"></div>
+  </div>
+
+  <h2>Sleeves (if Sleeved)</h2>
+  <p>Your physical skills come from your sleeve — not your ego. Pick a sleeve within your budget (Cost ≤ max(Assets, H.Net) + 4 — figure this out after assigning skills).</p>
+  <div class="card-grid cols-2">
+    <div class="card">
+      <div style="font-weight:700;color:var(--purple);margin-bottom:0.4rem">Biosleeves (biological)</div>
+      <div class="summary-row"><span class="summary-key">Alpha</span><span class="summary-val">Cost 6 · 8 Phys Ranks · 2 Aug Points</span></div>
+      <div class="summary-row"><span class="summary-key">Beta</span><span class="summary-val">Cost 7 · 9 Phys Ranks · 3 Aug Points</span></div>
+      <div class="summary-row"><span class="summary-key">Gamma</span><span class="summary-val">Cost 9 · 10 Phys Ranks · 4 Aug Points</span></div>
+      <div class="summary-row"><span class="summary-key">Delta</span><span class="summary-val">Cost 11 · 11 Phys Ranks · 6 Aug Points</span></div>
+      <div class="summary-row"><span class="summary-key">Epsilon</span><span class="summary-val">Cost 14 · 12 Phys Ranks · 8 Aug Points</span></div>
+      <p style="font-size:0.75rem;margin-top:0.5rem">Biological body feel. Warm. Can take bioware augmentations. Requires food, sleep.</p>
+    </div>
+    <div class="card">
+      <div style="font-weight:700;color:var(--accent);margin-bottom:0.4rem">Cybersleeves (synthetic)</div>
+      <div class="summary-row"><span class="summary-key">Alpha</span><span class="summary-val">Cost 5 · 8 Phys Ranks · 2 Aug Points</span></div>
+      <div class="summary-row"><span class="summary-key">Beta</span><span class="summary-val">Cost 6 · 9 Phys Ranks · 3 Aug Points</span></div>
+      <div class="summary-row"><span class="summary-key">Gamma</span><span class="summary-val">Cost 8 · 10 Phys Ranks · 4 Aug Points</span></div>
+      <div class="summary-row"><span class="summary-key">Delta</span><span class="summary-val">Cost 10 · 11 Phys Ranks · 6 Aug Points</span></div>
+      <div class="summary-row"><span class="summary-key">Epsilon</span><span class="summary-val">Cost 13 · 12 Phys Ranks · 8 Aug Points</span></div>
+      <p style="font-size:0.75rem;margin-top:0.5rem">Synthetic construction. Inhuman appearance aspects common. Cyberware augmentations. Can have built-in armor.</p>
+    </div>
+  </div>
+
+  <div style="margin-top:1rem">
+    <div class="note-label">Your State Choice &amp; Sleeve Notes</div>
+    <textarea class="note-field" id="state-note" placeholder="e.g. State: Sleeved · Sleeve: Beta Biosleeve · Physical Skills: Athletics 3, Endurance 3, Perception 3"></textarea>
+  </div>
+
+  <div class="nav-buttons">
+    <button class="btn btn-secondary" onclick="showSection('aspects')">← Back</button>
+    <button class="btn btn-primary" onclick="showSection('skills')">Next: Skills →</button>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section class="section" id="s-skills">
+  <div class="page-header">
+    <div class="section-label">Step 3</div>
+    <h1>Skills</h1>
+    <p class="subtitle">Choose a Skill Set, then assign your ranks to specific skills. Skills not assigned any ranks default to 0 (Mediocre).</p>
+  </div>
+
+  <h2>Pick a Skill Set</h2>
+  <div class="card-grid cols-3" id="skillset-grid">
+    <div class="skillset-card" id="ss-specialist" onclick="selectSkillset('specialist')">
+      <div class="skillset-title">Specialist</div>
+      <p style="font-size:0.76rem;color:var(--text-muted);margin-bottom:0.6rem">Deep focus. One thing at rank 5. Best for a defined role.</p>
+      <div class="skillset-row"><span>Rank 5</span><span class="skillset-rank">× 1</span></div>
+      <div class="skillset-row"><span>Rank 4</span><span class="skillset-rank">× 2</span></div>
+      <div class="skillset-row"><span>Rank 3</span><span class="skillset-rank">× 2</span></div>
+      <div class="skillset-row"><span>Rank 2</span><span class="skillset-rank">× 3</span></div>
+      <div class="skillset-row"><span>Rank 1</span><span class="skillset-rank">× 6</span></div>
+      <div class="skillset-row" style="margin-top:0.4rem;border-top:1px solid var(--border);padding-top:0.4rem">
+        <span style="color:var(--text-muted)">Total slots</span><span class="skillset-rank">14</span>
+      </div>
+    </div>
+    <div class="skillset-card" id="ss-expert" onclick="selectSkillset('expert')">
+      <div class="skillset-title">Expert</div>
+      <p style="font-size:0.76rem;color:var(--text-muted);margin-bottom:0.6rem">Strong and broad. Three skills at rank 4. Solid all-rounder.</p>
+      <div class="skillset-row"><span>Rank 4</span><span class="skillset-rank">× 3</span></div>
+      <div class="skillset-row"><span>Rank 3</span><span class="skillset-rank">× 3</span></div>
+      <div class="skillset-row"><span>Rank 2</span><span class="skillset-rank">× 4</span></div>
+      <div class="skillset-row"><span>Rank 1</span><span class="skillset-rank">× 6</span></div>
+      <div class="skillset-row" style="margin-top:0.4rem;border-top:1px solid var(--border);padding-top:0.4rem">
+        <span style="color:var(--text-muted)">Total slots</span><span class="skillset-rank">16</span>
+      </div>
+    </div>
+    <div class="skillset-card" id="ss-generalist" onclick="selectSkillset('generalist')">
+      <div class="skillset-title">Generalist</div>
+      <p style="font-size:0.76rem;color:var(--text-muted);margin-bottom:0.6rem">Wide and shallow. Seven skills at rank 3. Best coverage.</p>
+      <div class="skillset-row"><span>Rank 3</span><span class="skillset-rank">× 7</span></div>
+      <div class="skillset-row"><span>Rank 2</span><span class="skillset-rank">× 8</span></div>
+      <div class="skillset-row"><span>Rank 1</span><span class="skillset-rank">× 3</span></div>
+      <div class="skillset-row" style="margin-top:0.4rem;border-top:1px solid var(--border);padding-top:0.4rem">
+        <span style="color:var(--text-muted)">Total slots</span><span class="skillset-rank">18</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="rank-tracker" id="rank-tracker" style="margin-top:1.25rem">
+    <div class="rank-track-item" id="rt-r5"><div class="rank-track-number" id="rt-r5-n">—</div><div class="rank-track-label">Rank 5</div></div>
+    <div class="rank-track-item" id="rt-r4"><div class="rank-track-number" id="rt-r4-n">—</div><div class="rank-track-label">Rank 4</div></div>
+    <div class="rank-track-item" id="rt-r3"><div class="rank-track-number" id="rt-r3-n">—</div><div class="rank-track-label">Rank 3</div></div>
+    <div class="rank-track-item" id="rt-r2"><div class="rank-track-number" id="rt-r2-n">—</div><div class="rank-track-label">Rank 2</div></div>
+    <div class="rank-track-item" id="rt-r1"><div class="rank-track-number" id="rt-r1-n">—</div><div class="rank-track-label">Rank 1</div></div>
+    <div style="flex:1"></div>
+    <div style="font-size:0.78rem;color:var(--text-muted)">Select a Skill Set above, then click rank buttons below to assign.</div>
+  </div>
+
+  <h2>Standard Skills</h2>
+  <p>Assign ranks using the buttons. Physical Skills (Athletics, Endurance, Perception) are handled differently — see your State benefits.</p>
+
+  <div class="skills-grid" id="skills-list">
+    <!-- populated by JS -->
+  </div>
+
+  <hr class="divider">
+
+  <h2>Physical Skills</h2>
+  <div class="callout">
+    <strong>Pure:</strong> Assign 8 ranks freely among Athletics, Endurance, Perception (max 5 each).<br>
+    <strong>SIM:</strong> Assign 7 ranks freely among Athletics, Endurance, Perception (virtual — for interacting with virtualites).<br>
+    <strong>Sleeved:</strong> Physical Skills come from your sleeve — you don't assign these yourself.
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-row">
+      <div>
+        <div class="skill-name">Athletics</div>
+        <div class="skill-desc">Movement, balance, hand-eye coordination, lifting, dragging.</div>
+        <div class="skill-type">Physical Skill <span class="skill-stress">+ Physical Stress</span></div>
+      </div>
+      <div style="font-size:0.78rem;color:var(--text-dim)">From State / Sleeve</div>
+      <input type="number" min="0" max="5" style="width:50px;background:var(--bg3);border:1px solid var(--border);border-radius:4px;color:var(--text);padding:0.2rem;font-size:0.85rem;text-align:center" id="phys-athletics" placeholder="0">
+    </div>
+    <div class="skill-row">
+      <div>
+        <div class="skill-name">Endurance</div>
+        <div class="skill-desc">Health, vigor, resistance to pain, toxins, and disease.</div>
+        <div class="skill-type">Physical Skill <span class="skill-stress">+ Physical Stress</span></div>
+      </div>
+      <div style="font-size:0.78rem;color:var(--text-dim)">From State / Sleeve</div>
+      <input type="number" min="0" max="5" style="width:50px;background:var(--bg3);border:1px solid var(--border);border-radius:4px;color:var(--text);padding:0.2rem;font-size:0.85rem;text-align:center" id="phys-endurance" placeholder="0">
+    </div>
+    <div class="skill-row">
+      <div>
+        <div class="skill-name">Perception</div>
+        <div class="skill-desc">Five senses, situational awareness, detecting hidden things.</div>
+        <div class="skill-type">Physical Skill</div>
+      </div>
+      <div style="font-size:0.78rem;color:var(--text-dim)">From State / Sleeve</div>
+      <input type="number" min="0" max="5" style="width:50px;background:var(--bg3);border:1px solid var(--border);border-radius:4px;color:var(--text);padding:0.2rem;font-size:0.85rem;text-align:center" id="phys-perception" placeholder="0">
+    </div>
+  </div>
+
+  <div style="margin-top:1rem">
+    <div class="note-label">Your Skill Choices</div>
+    <textarea class="note-field" id="skills-note" placeholder="Write out your planned skill ranks here to review: e.g. Firearms 4, Strategy 4, Melee 3, Resolve 3, Firearms 2..." rows="4"></textarea>
+  </div>
+
+  <div class="nav-buttons">
+    <button class="btn btn-secondary" onclick="showSection('state')">← Back</button>
+    <button class="btn btn-primary" onclick="showSection('stunts')">Next: Stunts →</button>
+  </div>
+</section>
+
+<!-- ===== STUNTS ===== -->
+<section class="section" id="s-stunts">
+  <div class="page-header">
+    <div class="section-label">Step 4</div>
+    <h1>Stunts</h1>
+    <p class="subtitle">You start with <strong>3 Stunts</strong>. Stunts are special abilities that give you an edge unavailable to ordinary people. Click to select up to 3.</p>
+  </div>
+
+  <div class="rank-tracker">
+    <div class="rank-track-item">
+      <div class="rank-track-number" id="stunt-count">0</div>
+      <div class="rank-track-label">Selected</div>
+    </div>
+    <div style="font-size:0.85rem;color:var(--text-dim)">of 3 Stunts selected</div>
+    <div style="flex:1"></div>
+    <div id="selected-stunts-preview" style="font-size:0.78rem;color:var(--accent)">None selected</div>
+  </div>
+
+  <div class="callout tip">
+    <strong>State Stunts are automatic</strong> — Pure gets Carpe Diem free, SIM gets SIM State + one choice Stunt free. Those don't count against your 3.
+  </div>
+
+  <div class="tabs">
+    <div class="tab active" onclick="switchTab('stunts','combat')">Combat</div>
+    <div class="tab" onclick="switchTab('stunts','social')">Social &amp; Intel</div>
+    <div class="tab" onclick="switchTab('stunts','utility')">Utility &amp; Tech</div>
+    <div class="tab" onclick="switchTab('stunts','savant')">Savant / SIM</div>
+  </div>
+
+  <div class="tab-panel active" id="stunts-combat">
+    <div id="stunts-combat-list"></div>
+  </div>
+  <div class="tab-panel" id="stunts-social">
+    <div id="stunts-social-list"></div>
+  </div>
+  <div class="tab-panel" id="stunts-utility">
+    <div id="stunts-utility-list"></div>
+  </div>
+  <div class="tab-panel" id="stunts-savant">
+    <div id="stunts-savant-list"></div>
+  </div>
+
+  <div style="margin-top:1rem">
+    <div class="note-label">Stunt Notes</div>
+    <textarea class="note-field" id="stunts-note" placeholder="Why did you pick these? How will they work with your character concept?"></textarea>
+  </div>
+
+  <div class="nav-buttons">
+    <button class="btn btn-secondary" onclick="showSection('skills')">← Back</button>
+    <button class="btn btn-primary" onclick="showSection('allegiance')">Next: Allegiance →</button>
+  </div>
+</section>
+
+<!-- ===== ALLEGIANCE ===== -->
+<section class="section" id="s-allegiance">
+  <div class="page-header">
+    <div class="section-label">Steps 5–6</div>
+    <h1>House Allegiance &amp; Rep</h1>
+    <p class="subtitle">Your House gives you market discounts, a social identity, and hooks into the Shadow War. Apostates trade all of that for freedom and a bonus from black-market contacts.</p>
+  </div>
+
+  <div class="callout">
+    <strong>Rep-Rating = H.Net Skill + 2</strong>, plus a free bump equal to your Diplomacy rank. This determines what goods you can acquire through legitimate Coalition channels and how favors work.
+  </div>
+
+  <h2>Choose Your Allegiance</h2>
+  <div class="card-grid cols-2" id="house-grid">
+    <!-- populated by JS -->
+  </div>
+
+  <div style="margin-top:1rem">
+    <div class="note-label">Allegiance Notes / Rep Calculation</div>
+    <textarea class="note-field" id="allegiance-note" placeholder="House: ___&#10;H.Net Rank: ___ + 2 = Starting Rep ___&#10;Why this House? What does your character owe them?"></textarea>
+  </div>
+
+  <div class="nav-buttons">
+    <button class="btn btn-secondary" onclick="showSection('stunts')">← Back</button>
+    <button class="btn btn-primary" onclick="showSection('summary')">Next: Summary →</button>
+  </div>
+</section>
+
+<!-- ===== SUMMARY ===== -->
+<section class="section" id="s-summary">
+  <div class="page-header">
+    <div class="section-label">Character Summary</div>
+    <h1>Your Character Sheet Draft</h1>
+    <p class="subtitle">Review everything below. Bring this to your first session — your GM will finalize gear and stress tracks with you.</p>
+  </div>
+
+  <div class="card" style="margin-bottom:1rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
+    <div style="flex:1;min-width:200px">
+      <div class="note-label">Character Name</div>
+      <input class="aspect-input" id="char-name" placeholder="What do they call you?" style="width:100%" />
+    </div>
+    <button class="btn btn-primary" onclick="exportToShadowSynth()" style="align-self:flex-end">
+      Export to ShadowSynth JSON
+    </button>
+  </div>
+
+  <div class="summary-block">
+    <div class="summary-row"><span class="summary-key">Concept</span><span class="summary-val" id="s-concept">—</span></div>
+    <div class="summary-row"><span class="summary-key">State</span><span class="summary-val" id="s-state">—</span></div>
+    <div class="summary-row"><span class="summary-key">Skill Set</span><span class="summary-val" id="s-skillset">—</span></div>
+    <div class="summary-row"><span class="summary-key">Allegiance</span><span class="summary-val" id="s-allegiance">—</span></div>
+    <div class="summary-row"><span class="summary-key">Refresh Rating</span><span class="summary-val" id="s-refresh">5 (base) — see State for modifiers</span></div>
+  </div>
+
+  <h2>Aspects</h2>
+  <div class="summary-block">
+    <div class="summary-row"><span class="summary-key">A — Ambition</span><span class="summary-val" id="s-aspect-a"><em class="summary-val empty">Not filled in</em></span></div>
+    <div class="summary-row"><span class="summary-key">B — Belief</span><span class="summary-val" id="s-aspect-b"><em class="summary-val empty">Not filled in</em></span></div>
+    <div class="summary-row"><span class="summary-key">C — Connection</span><span class="summary-val" id="s-aspect-c"><em class="summary-val empty">Not filled in</em></span></div>
+    <div class="summary-row"><span class="summary-key">D — Disadvantage</span><span class="summary-val" id="s-aspect-d"><em class="summary-val empty">Not filled in</em></span></div>
+    <div class="summary-row"><span class="summary-key">E — Expertise</span><span class="summary-val" id="s-aspect-e"><em class="summary-val empty">Not filled in</em></span></div>
+  </div>
+
+  <h2>Skills at a Glance</h2>
+  <div class="skill-pool-display" id="s-skills">
+    <span class="skill-pill-empty">No skills assigned yet</span>
+  </div>
+
+  <h2>Stunts</h2>
+  <div class="summary-block" id="s-stunts-summary">
+    <div class="summary-row"><span class="summary-val empty">No stunts selected yet</span></div>
+  </div>
+
+  <h2>Stress Tracks (Estimate)</h2>
+  <div class="card-grid cols-2">
+    <div class="card">
+      <div style="font-weight:700;margin-bottom:0.5rem">Physical Stress</div>
+      <p style="font-size:0.78rem;color:var(--text-dim)">2 base + 1/box per Rank 1–2 in Athletics &amp; Endurance + 2/box per Rank 3–4 + 3/box per Rank 5</p>
+      <input type="number" min="2" max="20" style="margin-top:0.5rem;width:80px;background:var(--bg3);border:1px solid var(--border);border-radius:4px;color:var(--text);padding:0.3rem;font-size:1rem;text-align:center" id="phys-stress" placeholder="?">
+      <span style="font-size:0.78rem;color:var(--text-muted);margin-left:0.4rem">boxes</span>
+    </div>
+    <div class="card">
+      <div style="font-weight:700;margin-bottom:0.5rem">Mental Stress</div>
+      <p style="font-size:0.78rem;color:var(--text-dim)">2 base + 1/box per Rank 1–2 in Cohesion &amp; Resolve + 2/box per Rank 3–4 + 3/box per Rank 5</p>
+      <input type="number" min="2" max="20" style="margin-top:0.5rem;width:80px;background:var(--bg3);border:1px solid var(--border);border-radius:4px;color:var(--text);padding:0.3rem;font-size:1rem;text-align:center" id="mental-stress" placeholder="?">
+      <span style="font-size:0.78rem;color:var(--text-muted);margin-left:0.4rem">boxes</span>
+    </div>
+  </div>
+
+  <h2>Starting Gear (Step 7)</h2>
+  <div class="callout">
+    <strong>Starting Gear Formula:</strong> First item = Cost equal to higher of (Assets or Rep) + 2. Each next item is Cost −1 lower than the previous. You can have unlimited Cost 0–1 items.
+    Restricted items count against your limit of Assets + 1 (unless you took Licensed Stunt).
+  </div>
+  <textarea class="note-field" id="gear-note" placeholder="List your starting gear here. Bring this list to your GM for final approval." rows="4"></textarea>
+
+  <h2>Final Notes for your GM</h2>
+  <textarea class="note-field" id="final-note" placeholder="Questions, connections to other PCs, backstory hooks you want the GM to know about..." rows="4"></textarea>
+
+  <div class="nav-buttons">
+    <button class="btn btn-secondary" onclick="showSection('allegiance')">← Back</button>
+    <button class="btn btn-primary" onclick="exportToShadowSynth()">Export to ShadowSynth JSON</button>
+    <button class="btn btn-secondary" onclick="window.print()">Print / Save as PDF</button>
+    <button class="btn btn-secondary" onclick="showSection('reference')">Quick Reference →</button>
+  </div>
+</section>
+
+<!-- ===== REFERENCE ===== -->
+<section class="section" id="s-reference">
+  <div class="page-header">
+    <div class="section-label">At-Table Reference</div>
+    <h1>Quick Reference</h1>
+    <p class="subtitle">Core rules you'll use every session.</p>
+  </div>
+
+  <div class="card-grid cols-2">
+    <div>
+      <h2>Core Mechanic</h2>
+      <div class="callout" style="font-size:0.88rem">
+        <strong>4dF + Skill Rank + Modifiers = Effort</strong><br>
+        If Effort ≥ Difficulty → Success<br>
+        Difference = Shifts<br>
+        <strong>Spin:</strong> 3+ Shifts = create a free Aspect<br>
+        <strong>Stall:</strong> Failed by 3+ = spectacular failure
+      </div>
+
+      <h2>Actions Per Round</h2>
+      <div class="card">
+        <div class="summary-row"><span class="summary-key">Simple Action</span><span class="summary-val">Main action (attack, maneuver, etc.)</span></div>
+        <div class="summary-row"><span class="summary-key">Free Action</span><span class="summary-val">Move to adjacent zone, short phrase</span></div>
+        <div class="summary-row"><span class="summary-key">Supplemental</span><span class="summary-val">Extra move: −2 to your other action</span></div>
+        <div class="summary-row"><span class="summary-key">Instant Action</span><span class="summary-val">From stunts or Spin — doesn't cost your turn</span></div>
+      </div>
+
+      <h2>Stress &amp; Consequences</h2>
+      <div class="card">
+        <p style="font-size:0.8rem">When you'd fill your last stress box, you can take a Consequence to absorb damage instead:</p>
+        <div class="summary-row"><span class="summary-key">Mild</span><span class="summary-val">−2 stress absorbed</span></div>
+        <div class="summary-row"><span class="summary-key">Moderate</span><span class="summary-val">−4 stress absorbed</span></div>
+        <div class="summary-row"><span class="summary-key">Severe (P)</span><span class="summary-val">−6 stress absorbed</span></div>
+        <div class="summary-row"><span class="summary-key">Extreme (P)</span><span class="summary-val">−8 stress absorbed · becomes permanent Aspect</span></div>
+      </div>
+    </div>
+
+    <div>
+      <h2>FATE Ladder</h2>
+      <div class="card">
+        <div class="ladder-row"><span class="ladder-val">+5</span><span class="ladder-name">Superb</span><span class="ladder-desc">Elite. Few match you.</span></div>
+        <div class="ladder-row"><span class="ladder-val">+4</span><span class="ladder-name">Great</span><span class="ladder-desc">Exceptional ability.</span></div>
+        <div class="ladder-row"><span class="ladder-val">+3</span><span class="ladder-name">Good</span><span class="ladder-desc">Competent professional.</span></div>
+        <div class="ladder-row"><span class="ladder-val">+2</span><span class="ladder-name">Fair</span><span class="ladder-desc">Above average.</span></div>
+        <div class="ladder-row"><span class="ladder-val">+1</span><span class="ladder-name">Average</span><span class="ladder-desc">Minimally trained.</span></div>
+        <div class="ladder-row"><span class="ladder-val"> 0</span><span class="ladder-name">Mediocre</span><span class="ladder-desc">Untrained civilian.</span></div>
+        <div class="ladder-row"><span class="ladder-val">−1</span><span class="ladder-name">Poor</span><span class="ladder-desc">Notable weakness.</span></div>
+        <div class="ladder-row"><span class="ladder-val">−2</span><span class="ladder-name">Terrible</span><span class="ladder-desc">Seriously impaired.</span></div>
+      </div>
+
+      <h2>Fate Points</h2>
+      <div class="card">
+        <div class="summary-row"><span class="summary-key">Starting (Refresh)</span><span class="summary-val">5 (Pure gets +2 more)</span></div>
+        <div class="summary-row"><span class="summary-key">Reset</span><span class="summary-val">Start of each session</span></div>
+        <div class="summary-row"><span class="summary-key">Spend</span><span class="summary-val">Invoke an Aspect for +2 or reroll</span></div>
+        <div class="summary-row"><span class="summary-key">Earn</span><span class="summary-val">Accept a Compel from the GM</span></div>
+        <div class="summary-row"><span class="summary-key">Don't carry over</span><span class="summary-val">Use them or lose them each session</span></div>
+      </div>
+
+      <h2>Milestones</h2>
+      <div class="card">
+        <p style="font-size:0.8rem">Roughly every 3 sessions after a significant achievement:</p>
+        <div class="summary-row"><span class="summary-key">Minor</span><span class="summary-val">Swap two adjacent-rank skills OR replace an Aspect</span></div>
+        <div class="summary-row"><span class="summary-key">Major</span><span class="summary-val">Minor options + gain 1 new Stunt</span></div>
+        <p style="font-size:0.75rem;margin-top:0.5rem;color:var(--text-muted)">They alternate: Minor → Major → Minor → Major…</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-buttons">
+    <button class="btn btn-secondary" onclick="showSection('summary')">← Summary</button>
+    <button class="btn btn-primary" onclick="window.print()">Print / Save as PDF</button>
+  </div>
+</section>
+
+</main>
+</div>
+
+<script>
+// ===== STATE =====
+const state = {
+  selectedState: null,
+  selectedSkillset: null,
+  selectedArchetype: null,
+  selectedHouse: null,
+  selectedStunts: new Set(),
+  skillRanks: {},
+  skillsetBudget: null,
+};
+
+const SKILLSETS = {
+  specialist: { 5:1, 4:2, 3:2, 2:3, 1:6 },
+  expert:     { 4:3, 3:3, 2:4, 1:6 },
+  generalist: { 3:7, 2:8, 1:3 },
+};
+
+const SKILLS = [
+  { id:'assets',     name:'Assets',               type:'Standard', desc:'Your wealth measure. Determines restricted item allowance; used for black market trade.' },
+  { id:'cohesion',   name:'Cohesion',              type:'Standard', desc:'Mental stability and sense of self. Coping with trauma and resurrection.',  stress:'Mental' },
+  { id:'demolitions',name:'Demolitions',           type:'Standard', desc:'Using explosives — grenades, satchel charges, demolishing structures.' },
+  { id:'diplomacy',  name:'Diplomacy',              type:'Standard', desc:'Friendly persuasion, making good impressions, winning debates.' },
+  { id:'education',  name:'Education',              type:'Standard', desc:'Book learning: history, science, geography, physics, math, and academics.' },
+  { id:'h_eng',      name:'Engineering, Hardware',  type:'Standard', desc:'Operating, building, repairing, and disassembling machinery.' },
+  { id:'s_eng',      name:'Engineering, Software',  type:'Standard', desc:'Writing and manipulating code; operating CISTs; writing Maneuver programs.' },
+  { id:'firearms',   name:'Firearms',               type:'Standard', desc:'Projectile weapons: railguns, coil guns, particle accelerators, heavy artillery.' },
+  { id:'guile',      name:'Guile',                  type:'Standard', desc:'Lying, conning, seducing, bluffing, and haggling for deals.' },
+  { id:'insight',    name:'Insight',                type:'Standard', desc:'Mental reflexes and common sense. Reading people\'s emotions quickly.' },
+  { id:'intimidation',name:'Intimidation',          type:'Standard', desc:'Forcing compliance through threat of force; torture for information.' },
+  { id:'melee',      name:'Melee',                  type:'Standard', desc:'Hand-to-hand combat and melee weapons: knives, swords, unarmed.' },
+  { id:'mnemonics',  name:'Mnemonics',              type:'Standard', desc:'Understanding software minds: mnemonic editing, resleeving, merging, forking.' },
+  { id:'h_net',      name:'Networking, House',       type:'Standard', desc:'House contacts and their willingness to help you. Sets starting Rep-Rating.' },
+  { id:'a_net',      name:'Networking, Apostate',    type:'Standard', desc:'Underground contacts willing to help. Useful outside Coalition space.' },
+  { id:'pilot',      name:'Pilot',                  type:'Standard', desc:'Driving and flying all vehicle types; navigation systems.' },
+  { id:'research',   name:'Research',               type:'Standard', desc:'Finding information on the Extranet; locating SIMs in a host system.' },
+  { id:'resolve',    name:'Resolve',                type:'Standard', desc:'Courage, willpower, resistance to temptation. Never-quit drive.',              stress:'Mental' },
+  { id:'stealth',    name:'Stealth',                type:'Standard', desc:'Hiding, filching items, picking pockets, moving unnoticed.' },
+  { id:'strategy',   name:'Strategy',               type:'Standard', desc:'Reacting, organizing, preparing for conflict; analyzing enemy plans.' },
+  { id:'sinc',       name:'SINC',                   type:'Special',  desc:'Self-Interfacing Neural Code — requires the Savant Stunt. Starts at rank 1 when you take Savant.' },
+];
+
+const STUNTS = {
+  combat: [
+    { id:'assassin_shot', name:'Assassin Shot', desc:'Once per scene: +3 to ranged attack against an ambushed target. Extra uses cost 1 FP each.' },
+    { id:'assassin_strike', name:'Assassin Strike', desc:'Once per scene: +3 to melee attack against an ambushed target. Extra uses cost 1 FP each.' },
+    { id:'battlefield_command', name:'Battlefield Command', desc:'Once per scene: allies who can hear you may move or take cover as an Instant Action on your turn.' },
+    { id:'blazing_burst', name:'Blazing Burst', desc:'+2 to full-auto or beam attack when dual-wielding PDWs.' },
+    { id:'combat_reload', name:'Combat Reload', desc:'Once per scene: reload a railgun or coil gun as a Free Action.' },
+    { id:'concentrated_fire', name:'Concentrated Fire', desc:'Once per scene: coordinate with an ally to both attack the same target simultaneously.' },
+    { id:'constant_vigilance', name:'Constant Vigilance', desc:'+3 to initiative. Spend 1 FP to defend normally when ambushed.' },
+    { id:'counter_attack', name:'Counter Attack', desc:'When you Spin on a melee defense, perform a melee attack as an Instant Action instead of creating an Aspect.' },
+    { id:'crippling_blow', name:'Crippling Blow', desc:'Once per scene: +3 Weapon Rating on one melee attack. Can declare this after the roll.' },
+    { id:'dodge', name:'Dodge', desc:'Once per scene: reduce stress from one physical attack by Athletics + 2.' },
+    { id:'dual_assault', name:'Dual Assault', desc:'Attack with a weapon in each hand as a single Simple Action at −2 to each roll.' },
+    { id:'gun_slinger', name:'Gun Slinger', desc:'+2 WR with any pistol. Dual pistols share ammo status when going full-auto.' },
+    { id:'marksman', name:'Marksman', desc:'Once per scene: +3 to a ranged attack from outside the target\'s zone. Extra uses cost 1 FP.' },
+    { id:'slayer', name:'Slayer', desc:'Once per scene: gain a +3 bonus on a single melee attack against a specific enemy type (establish at character creation).' },
+    { id:'sniper', name:'Sniper', desc:'Ignore range penalties on ranged attacks up to 2 zones away.' },
+    { id:'strategist', name:'Strategist', desc:'Spend 1 FP: +2 to physical attacks against one foe for the scene. Each use adds another foe (can\'t stack same foe).' },
+    { id:'tenacious', name:'Tenacious', desc:'Once per scene: clear 2 stress on your Physical or Mental track as a Free Action.' },
+  ],
+  social: [
+    { id:'academic', name:'Academic', desc:'+2 to Education tests for Declarations about math, science, or history.' },
+    { id:'agenda_celebrity', name:'Agenda Celebrity', desc:'+2 when calling in Favors that support a specific agenda you\'re known for.' },
+    { id:'artist', name:'Artist', desc:'Gain an Aspect tied to your artistic mastery, plus +1 to Favor tests from people who appreciate your work.' },
+    { id:'digital_spider', name:'Digital Spider', desc:'+2 to Research Assessments about a person, place, or thing findable on the Extranet.' },
+    { id:'fame', name:'Fame', desc:'+2 to Favor tests from people who recognize you. Doesn\'t stack with other Favor bonuses.' },
+    { id:'five_minute_friends', name:'Five Minute Friends', desc:'Once per scene: declare a new NPC as an old acquaintance. Start with a favorable starting Aspect.' },
+    { id:'geek_speak', name:'Geek Speak', desc:'May use Education instead of Diplomacy or Guile when convincing people of scientific facts (true or not).' },
+    { id:'inspire_greatness', name:'Inspire Greatness', desc:'Once per scene: grant an ally who can hear you +3 on one Skill test including attacks.' },
+    { id:'razor_tongue', name:'Razor Tongue', desc:'Once per scene: automatically succeed on a Guile test to insult, taunt, or embarrass someone.' },
+    { id:'reputable', name:'Reputable', desc:'Your starting Rep-Rating is increased by +2.' },
+    { id:'specialty_aspect', name:'Specialty Aspect', desc:'Create a new Aspect linked to a specific Skill use. Invoke it free once per scene on relevant tests.' },
+  ],
+  utility: [
+    { id:'all_seeing_eye', name:'All-Seeing Eye', desc:'Once per scene: +3 to Perception test including Assessments.' },
+    { id:'augment_adept', name:'Augment Adept', desc:'Once per scene: invoke any Augmentation-granted Aspect for free.' },
+    { id:'banner_of_hope', name:'Banner of Hope', desc:'Once per scene: one ally who can hear you clears all stress (not Consequences) on one Stress Track.' },
+    { id:'cover_of_darkness', name:'Cover of Darkness', desc:'Dim/darkness Zone Aspects are always Persistent for you.' },
+    { id:'dead_inside', name:'Dead Inside', desc:'Constant Determination rating of 2 regardless of circumstances (mental defense vs. social attacks).' },
+    { id:'drone_jock', name:'Drone-Jock', desc:'Drones you buy: −1 Cost, +1 to 2 Skills of your choice, +1 Augmentation Point.' },
+    { id:'free_runner', name:'Free Runner', desc:'Once per scene: move two zones as a Free Action instead of one.' },
+    { id:'licensed', name:'Licensed', desc:'May purchase restricted equipment using Rep-Rating instead of only Assets.' },
+    { id:'at_home_behind_the_stick', name:'At Home Behind the Stick', desc:'Spend 1 FP to make one vehicle Aspect Persistent for you for the scene.' },
+    { id:'refreshed', name:'Refreshed', desc:'Refresh Rating +1. Can be taken up to 3 times.' },
+    { id:'shake_it_off', name:'Shake It Off', desc:'Once per scene: make a Resolve test (Diff = Moderate Consequence) to remove a Mild Consequence immediately.' },
+    { id:'signature_item', name:'Signature Item', desc:'Gain one specific item with an Aspect you can invoke once per scene for free.' },
+    { id:'skilled', name:'Skilled', desc:'+1 to one non-Physical Skill (or Physical if Pure). Can be taken multiple times; max rank 5 per Skill.' },
+    { id:'transhumanist', name:'Transhumanist', desc:'Sleeves you buy get +2 Augmentation Points and +1 max Augmentation count.' },
+  ],
+  savant: [
+    { id:'savant', name:'Savant', tags:['Requires: Apotheosis'], desc:'Hack your mindset for SINC Skill at rank 1. Choose one Savant Program. Gain a "Disadvantage" Aspect reflecting the side effects.' },
+    { id:'sim_state', name:'SIM State', tags:['SIM Only — Automatic'], desc:'You exist as software. Gain the SIM State(P) Persistent Aspect. You have a home virtual environment.' },
+    { id:'system_slip', name:'System Slip', tags:['Requires: SIM State'], desc:'+2 Stealth to avoid detection in computer systems. Increase execution difficulty of programs targeting you by +2.' },
+    { id:'digitally_evolved', name:'Digitally Evolved', tags:['Requires: Savant'], desc:'+2 to Athletics, Endurance, Perception while in a virtuality. +1 to Firearms/Melee attacks in VR.' },
+    { id:'infusion', name:'Infusion', tags:['Requires: Savant'], desc:'Permanently infuse virtual gear into your ego (total Cost ≤ SINC + 5). Manifests in virtualities.' },
+    { id:'specialized_program', name:'Specialized Program', tags:['Requires: Savant'], desc:'+2 to executing one specific Savant Program you know.' },
+    { id:'ego_stabilization_software', name:'Ego Stabilization Software', tags:['Requires: SIM State or Apotheosis'], desc:'+2 on Cohesion tests to avoid fragmentation during resleeving or SIM state stress.' },
+  ],
+};
+
+const HOUSES = [
+  { id:'cipriani', name:'House Cipriani', agenda:'Purist', location:'Mercury', color:'#e3b341',
+    discount:['Atmospheric Flying Vehicles','Energy Tech','CISTs','Transportation'],
+    summary:'Energy monopoly. Ruthless deal-makers. Strong Purist ideology. Feud with House Dalianis.' },
+  { id:'dalianis', name:'House Dalianis', agenda:'Purist', location:'Olympus / Ansari Station', color:'#58a6ff',
+    discount:['Starships','Rail/Coil Guns','Combat Drones'],
+    summary:'Galaxy\'s foremost starship manufacturer. Aggressively expansionist. Pragmatic Purist leadership.' },
+  { id:'jinzhan', name:'House Jinzhan', agenda:'Purist', location:'Shouye', color:'#f0883e',
+    discount:['Construction','Security Tech','Food','Explosives','Ship Weaponry'],
+    summary:'Construction and security powerhouse. Enforces Earth quarantine. Deeply Purist and isolationist. Researches planet-killing weapons.' },
+  { id:'kimura', name:'House Kimura', agenda:'Transhuman', location:'Chengdan', color:'#3fb950',
+    discount:['Agents','Computers & Software','Cybersleeves','Cyber Augmentations','VR Software','Recon Warframes'],
+    summary:'Leading tech manufacturer. Dominates virtual environments. Massive SIM spy network. Opposes the Humanity Preservation Act.' },
+  { id:'silva', name:'House Silva', agenda:'Transhuman', location:'Luna / Phobos', color:'#a371f7',
+    discount:['Biosleeves','Biotech Augmentations','PAc Weaponry'],
+    summary:'Biotech experts. Openly flouts the HPA. Strict corporate structure. "Reset clauses" in mercenary contracts. Best resleeving facility in the galaxy.' },
+  { id:'tsarya', name:'House Tsarya', agenda:'Purist', location:'Proch / Luna', color:'#f85149',
+    discount:['Personal & Vehicular Armor','Ground Vehicles','Assault Warframes'],
+    summary:'War profiteers. Manufacture armor and assault warframes. Instigate conflicts to drive demand. Hiring Apotheosized despite Purist tradition causes internal friction.' },
+  { id:'apostate', name:'Apostate (No House)', agenda:'Independence', location:'Everywhere and nowhere', color:'#8b949e',
+    discount:['Black market access (+2 Assets on apostate favors)','Untraceable gear'],
+    summary:'Free of Coalition tracking. No Rep-Rating — use Assets instead. Free Non-Citizen Stunt. Live in the shadows, work with anyone who pays.' },
+];
+
+const ARCHETYPES = {
+  soldier: {
+    icon:'⚔', label:'The Soldier',
+    concept:'Front-line combatant. Legionnaire, mercenary, or private military. You solve problems with firepower and grit.',
+    state:'Sleeved (a cybersleeve holds up better in combat)',
+    skillset:'Specialist or Expert',
+    keySkills:'Firearms 4–5, Melee 3–4, Strategy 3, Endurance 3–4, Athletics 3, Resolve 2',
+    stunts:'Constant Vigilance, Dodge, and one of: Gun Slinger / Marksman / Strategist',
+    house:'House Tsarya (armor discount) or House Dalianis (rail/coil guns)',
+    tip:'High Endurance and Athletics push up your Physical Stress track. Resolve and Cohesion keep you sane.',
+  },
+  operator: {
+    icon:'🕵',label:'The Operator',
+    concept:'Infiltrator. You go where you shouldn\'t, take what you\'re not supposed to, and leave no trace. Precision over firepower.',
+    state:'Sleeved (cybersleeve for AR interfacing) or Pure (you value your original body\'s subtlety)',
+    skillset:'Specialist',
+    keySkills:'Stealth 4–5, Guile 3–4, Insight 3, Firearms 2–3, Athletics 3, Perception 3',
+    stunts:'Constant Vigilance, Cover of Darkness, and one of: Assassin Shot / Assassin Strike / Free Runner',
+    house:'House Silva (PAc weapons are quiet) or Apostate (no paper trail)',
+    tip:'Stealth and Guile are your core tools. Keep Insight high — you need to read situations fast.',
+  },
+  face: {
+    icon:'🗣',label:'The Face',
+    concept:'Diplomat, con artist, or information broker. You talk your way through every door and know someone everywhere you go.',
+    state:'Sleeved (appearance matters in social situations) or Pure (humanity is a trust signal)',
+    skillset:'Expert or Generalist',
+    keySkills:'Diplomacy 4, Guile 4, H.Net 3–4, Insight 3, Research 3, Resolve 2',
+    stunts:'Reputable, Five Minute Friends, and one of: Specialty Aspect / Agenda Celebrity / Fame',
+    house:'Any House with active political interests (Kimura, Dalianis, or Silva work well)',
+    tip:'High H.Net means high Rep-Rating — you start with more access to goods and favors than anyone.',
+  },
+  savant: {
+    icon:'⚙',label:'The Savant',
+    concept:'You\'ve hacked your own mindset. Digital infiltrator, system breaker, drone commander. The mesh is your battlefield.',
+    state:'SIM (fullest digital capability) or Sleeved with Savant Stunt',
+    skillset:'Expert',
+    keySkills:'S.Eng 4, Research 3–4, SINC 2+ (via Skilled), Insight 3, Mnemonics 2, Stealth 2',
+    stunts:'Savant (required), then Savant Programs (count as Stunts): Esper Lord / System Invasion / Security Skim',
+    house:'House Kimura (cybersleeve and software discounts, SIM-friendly culture)',
+    tip:'The Savant Stunt opens a whole subsystem. Start with 1–2 Programs and grow into more at Milestones.',
+  },
+  commander: {
+    icon:'👑',label:'The Commander',
+    concept:'Tactician and leader. You make everyone around you better. When things go wrong, you\'re the one with a plan.',
+    state:'Sleeved (you need to be present and human-looking) or Pure (authority through embodied presence)',
+    skillset:'Expert or Generalist',
+    keySkills:'Strategy 4–5, Firearms 3–4, Insight 3, Diplomacy 3, H.Net 3, Resolve 3',
+    stunts:'Battlefield Command, Strategist, and one of: Inspire Greatness / Concentrated Fire / Master Tactician',
+    house:'House Dalianis or House Tsarya (military-adjacent, respect command structures)',
+    tip:'Strategy is both an initiative skill and a tactical planning tool. Keep it at 4+. Pair with Insight to read rooms.',
+  },
+  engineer: {
+    icon:'🔧',label:'The Engineer',
+    concept:'Hardware specialist, gear-head, drone builder. You fix things, build things, and know how to make machines do what you need.',
+    state:'Sleeved (working with your hands) or SIM with Drone-Jock',
+    skillset:'Generalist or Expert',
+    keySkills:'H.Eng 3–4, S.Eng 3–4, Education 3, Demolitions 2–3, Assets 2–3, Pilot 2',
+    stunts:'Drone-Jock, Skilled (H.Eng or S.Eng), and one of: Geek Speak / Transhumanist / Licensed',
+    house:'House Cipriani (CIST tech) or House Jinzhan (construction, explosives)',
+    tip:'High Assets gives you gear budget and black market access. High H.Eng means you can build/repair almost anything.',
+  },
+};
+
+// ===== NAVIGATION =====
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('s-'+id).classList.add('active');
+  const navMap = {intro:'intro',archetypes:'archetypes',aspects:'aspects',state:'state',skills:'skills',stunts:'stunts',allegiance:'allegiance',summary:'summary',reference:'reference'};
+  const navEl = document.querySelector(`.nav-item[onclick="showSection('${id}')"]`);
+  if (navEl) navEl.classList.add('active');
+  if (id === 'summary') updateSummary();
+  window.scrollTo(0,0);
+}
+
+// ===== TABS =====
+function switchTab(group, id) {
+  document.querySelectorAll(`#s-${group} .tab`).forEach(t => t.classList.remove('active'));
+  document.querySelectorAll(`#s-${group} .tab-panel`).forEach(p => p.classList.remove('active'));
+  event.target.classList.add('active');
+  document.getElementById(`${group}-${id}`).classList.add('active');
+}
+
+// ===== ARCHETYPES =====
+function selectArchetype(el, id) {
+  document.querySelectorAll('.archetype-card').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  state.selectedArchetype = id;
+  const a = ARCHETYPES[id];
+  document.getElementById('archetype-detail').style.display = 'block';
+  document.getElementById('archetype-content').innerHTML = `
+    <div style="font-size:1.3rem;margin-bottom:0.5rem">${a.icon} <strong>${a.label}</strong></div>
+    <p style="margin-bottom:1rem">${a.concept}</p>
+    <div class="summary-row"><span class="summary-key">Suggested State</span><span class="summary-val">${a.state}</span></div>
+    <div class="summary-row"><span class="summary-key">Skill Set</span><span class="summary-val">${a.skillset}</span></div>
+    <div class="summary-row"><span class="summary-key">Key Skills</span><span class="summary-val">${a.keySkills}</span></div>
+    <div class="summary-row"><span class="summary-key">Suggested Stunts</span><span class="summary-val">${a.stunts}</span></div>
+    <div class="summary-row"><span class="summary-key">Suggested House</span><span class="summary-val">${a.house}</span></div>
+    <div class="callout tip" style="margin-top:0.75rem"><strong>Tip:</strong> ${a.tip}</div>
+  `;
+}
+
+// ===== STATE SELECTION =====
+function selectState(id) {
+  state.selectedState = id;
+  ['pure','sleeved','sim'].forEach(s2 => {
+    document.getElementById('state-'+s2).classList.remove('selected');
+  });
+  document.getElementById('state-'+id).classList.add('selected');
+  const details = {
+    pure: `<div class="callout tip"><strong>Pure State Details</strong><br>
+      8 ranks to assign among Athletics, Endurance, Perception (max 5 each).<br>
+      Free Stunt: <strong>Carpe Diem</strong> — Once per scene, declare any Aspect exists in the current scene or zone. You invoke/compel it free the first time.<br>
+      +1 to any one non-Physical Skill of your choice.<br>
+      Additional Aspect: describe a notable physical trait of your body.<br>
+      Refresh Rating: <strong>7</strong> (base 5 + Pure bonus +2).
+    </div>`,
+    sleeved: `<div class="callout" style="border-color:var(--purple)"><strong>Sleeved State Details</strong><br>
+      Physical Skills (Athletics, Endurance, Perception) come from your sleeve — not from point assignment.<br>
+      You get a free sleeve with Cost ≤ max(Assets rank, H.Net rank) + 4.<br>
+      Flesh out your Augmentation list after selecting your sleeve — each sleeve grants Augmentation Points to spend.<br>
+      Refresh Rating: <strong>5</strong> (base, no Pure bonus).
+    </div>`,
+    sim: `<div class="callout" style="border-color:var(--accent)"><strong>SIM State Details</strong><br>
+      7 ranks to assign among Athletics, Endurance, Perception (virtual — for interacting with virtualities).<br>
+      Free Stunt: <strong>SIM State</strong> (automatic). You gain the SIM State(P) Persistent Aspect.<br>
+      Free Stunt: choose ONE from: Digital Spider, Digitally Evolved (req Savant), Drone-Jock, Infusion (req Savant), Skilled (SINC), or System Slip.<br>
+      These free Stunts do NOT count against your 3-Stunt allowance.<br>
+      Refresh Rating: <strong>5</strong> (base).
+    </div>`,
+  };
+  document.getElementById('state-detail').style.display = 'block';
+  document.getElementById('state-detail-content').innerHTML = details[id];
+}
+
+// ===== SKILL SET =====
+function selectSkillset(id) {
+  state.selectedSkillset = id;
+  ['specialist','expert','generalist'].forEach(s2 => {
+    document.getElementById('ss-'+s2).classList.remove('selected');
+  });
+  document.getElementById('ss-'+id).classList.add('selected');
+  state.skillsetBudget = SKILLSETS[id];
+  updateRankTracker();
+}
+
+function updateRankTracker() {
+  if (!state.skillsetBudget) return;
+  const budget = state.skillsetBudget;
+  const used = {};
+  for (const sk of SKILLS) {
+    if (sk.type === 'Special') continue;
+    const r = state.skillRanks[sk.id] || 0;
+    if (r > 0) used[r] = (used[r]||0) + 1;
+  }
+  for (const rank of [5,4,3,2,1]) {
+    const el = document.getElementById(`rt-r${rank}-n`);
+    const parent = document.getElementById(`rt-r${rank}`);
+    if (!el) continue;
+    const allowed = budget[rank] || 0;
+    const u = used[rank] || 0;
+    el.textContent = allowed ? `${u}/${allowed}` : (rank === 5 ? '—' : '—');
+    if (allowed === 0) { el.textContent = '—'; parent.style.opacity = '0.3'; }
+    else { parent.style.opacity = '1'; }
+    if (u === allowed && allowed > 0) parent.classList.add('used'); else parent.classList.remove('used');
+    if (u > allowed) parent.classList.add('over'); else parent.classList.remove('over');
+  }
+}
+
+function setSkillRank(id, rank) {
+  if (!state.selectedSkillset) { alert('Pick a Skill Set first!'); return; }
+  const budget = state.skillsetBudget;
+  const current = state.skillRanks[id] || 0;
+  if (rank === current) { state.skillRanks[id] = 0; }
+  else {
+    if (rank > 0 && budget[rank] !== undefined) {
+      const used = Object.values(state.skillRanks).filter(v => v === rank).length;
+      if (current !== rank && used >= budget[rank]) { alert(`No more rank ${rank} slots available!`); return; }
+    } else if (rank > 0 && !budget[rank]) {
+      alert(`Rank ${rank} is not available in the ${state.selectedSkillset} skill set!`); return;
+    }
+    state.skillRanks[id] = rank;
+  }
+  renderSkillRankButtons(id);
+  updateRankTracker();
+}
+
+function renderSkillRankButtons(id) {
+  const container = document.getElementById('rank-btns-'+id);
+  if (!container) return;
+  const current = state.skillRanks[id] || 0;
+  const maxRank = state.skillsetBudget ? Math.max(...Object.keys(state.skillsetBudget).map(Number)) : 4;
+  let html = '';
+  for (let r = 1; r <= maxRank; r++) {
+    html += `<button class="rank-btn ${current===r?'active':''}" onclick="setSkillRank('${id}',${r})">${r}</button>`;
+  }
+  container.innerHTML = html;
+}
+
+// ===== RENDER SKILLS LIST =====
+function renderSkills() {
+  const container = document.getElementById('skills-list');
+  let html = '';
+  for (const sk of SKILLS) {
+    if (sk.type === 'Special') continue; // SINC handled separately
+    html += `<div class="skill-row">
+      <div>
+        <div class="skill-name">${sk.name}</div>
+        <div class="skill-desc">${sk.desc}</div>
+        <div class="skill-type">${sk.type} Skill ${sk.stress ? `<span class="skill-stress">+ ${sk.stress} Stress</span>` : ''}</div>
+      </div>
+      <div class="note-label" style="margin:0;align-self:center;font-size:0.75rem;color:var(--text-muted)">Role: ${getRoleHint(sk.id)}</div>
+      <div class="rank-selector" id="rank-btns-${sk.id}">
+        <button class="rank-btn" onclick="setSkillRank('${sk.id}',1)">1</button>
+        <button class="rank-btn" onclick="setSkillRank('${sk.id}',2)">2</button>
+        <button class="rank-btn" onclick="setSkillRank('${sk.id}',3)">3</button>
+        <button class="rank-btn" onclick="setSkillRank('${sk.id}',4)">4</button>
+        <button class="rank-btn" onclick="setSkillRank('${sk.id}',5)">5</button>
+      </div>
+    </div>`;
+  }
+  // SINC at end
+  html += `<div class="skill-row" style="opacity:0.6">
+    <div>
+      <div class="skill-name">SINC</div>
+      <div class="skill-desc">Self-Interfacing Neural Code. Requires Savant Stunt. Starts at rank 1 when you take Savant; use Skilled Stunt to increase.</div>
+      <div class="skill-type">Special Skill — Savants only</div>
+    </div>
+    <div style="font-size:0.78rem;color:var(--text-muted)">Savant only</div>
+    <div style="font-size:0.78rem;color:var(--text-muted)">Set by Stunt</div>
+  </div>`;
+  container.innerHTML = html;
+}
+
+function getRoleHint(id) {
+  const hints = {
+    assets:'Gear / Black market',cohesion:'Survival (mental)',demolitions:'Combat utility',
+    diplomacy:'Social / Rep',education:'Knowledge',h_eng:'Tech / Repair',
+    s_eng:'Hacking / Code',firearms:'Combat (ranged)',guile:'Deception / Social',
+    insight:'Awareness / Read people',intimidation:'Social (hard)',melee:'Combat (close)',
+    mnemonics:'Ego / Resleeving',h_net:'Rep / Contacts',a_net:'Underground contacts',
+    pilot:'Vehicles',research:'Intel / Extranet',resolve:'Survival (mental)',
+    stealth:'Infiltration',strategy:'Tactics / Combat',
+  };
+  return hints[id] || '';
+}
+
+// ===== RENDER STUNTS =====
+function renderStunts() {
+  for (const cat of ['combat','social','utility','savant']) {
+    const container = document.getElementById(`stunts-${cat}-list`);
+    let html = '';
+    for (const st of STUNTS[cat]) {
+      const tags = (st.tags||[]).map(t => `<span class="badge badge-orange stunt-tag">${t}</span>`).join('');
+      html += `<div class="stunt-card" id="stunt-${st.id}" onclick="toggleStunt('${st.id}','${st.name.replace(/'/g,"\\'")}')">
+        <div class="stunt-checkbox" id="stunt-chk-${st.id}"></div>
+        <div>
+          <div class="stunt-name">${st.name} ${tags}</div>
+          <div class="stunt-desc">${st.desc}</div>
+        </div>
+      </div>`;
+    }
+    container.innerHTML = html;
+  }
+}
+
+function toggleStunt(id, name) {
+  if (state.selectedStunts.has(id)) {
+    state.selectedStunts.delete(id);
+    document.getElementById('stunt-'+id).classList.remove('selected');
+    document.getElementById('stunt-chk-'+id).textContent = '';
+  } else {
+    if (state.selectedStunts.size >= 3) { alert('You can only select 3 Stunts. Deselect one first.'); return; }
+    state.selectedStunts.add(id);
+    document.getElementById('stunt-'+id).classList.add('selected');
+    document.getElementById('stunt-chk-'+id).textContent = '✓';
+  }
+  document.getElementById('stunt-count').textContent = state.selectedStunts.size;
+  const names = [...state.selectedStunts].map(sid => {
+    for (const cat of Object.values(STUNTS)) for (const s of cat) if (s.id === sid) return s.name;
+  }).join(', ');
+  document.getElementById('selected-stunts-preview').textContent = names || 'None selected';
+}
+
+// ===== RENDER HOUSES =====
+function renderHouses() {
+  const container = document.getElementById('house-grid');
+  let html = '';
+  for (const h of HOUSES) {
+    html += `<div class="house-card" id="house-${h.id}" onclick="selectHouse('${h.id}')">
+      <div class="house-name" style="color:${h.color}">${h.name}</div>
+      <div class="house-meta">Base: ${h.location} · Agenda: <span class="badge ${h.agenda==='Transhuman'?'badge-purple':'badge-yellow'}">${h.agenda}</span></div>
+      <div class="house-summary">${h.summary}</div>
+      <div class="house-discounts">
+        <div class="house-discounts-label">Market Discount (−1 Cost)</div>
+        ${h.discount.map(d => `<span class="discount-tag">${d}</span>`).join('')}
+      </div>
+    </div>`;
+  }
+  container.innerHTML = html;
+}
+
+function selectHouse(id) {
+  state.selectedHouse = id;
+  document.querySelectorAll('.house-card').forEach(c => c.classList.remove('selected'));
+  document.getElementById('house-'+id).classList.add('selected');
+}
+
+// ===== SUMMARY UPDATE =====
+function updateSummary() {
+  const concept = document.getElementById('concept-note').value.trim();
+  document.getElementById('s-concept').textContent = concept || '—';
+  document.getElementById('s-state').textContent = state.selectedState ?
+    state.selectedState.charAt(0).toUpperCase() + state.selectedState.slice(1) : '—';
+  document.getElementById('s-skillset').textContent = state.selectedSkillset ?
+    state.selectedSkillset.charAt(0).toUpperCase() + state.selectedSkillset.slice(1) : '—';
+  document.getElementById('s-allegiance').textContent = state.selectedHouse ?
+    HOUSES.find(h=>h.id===state.selectedHouse)?.name || '—' : '—';
+
+  // Refresh
+  const refreshBase = state.selectedState === 'pure' ? 7 : 5;
+  document.getElementById('s-refresh').textContent = `${refreshBase} (${state.selectedState === 'pure' ? 'Pure +2 bonus included' : 'base'})`;
+
+  // Aspects
+  for (const l of ['a','b','c','d','e']) {
+    const val = document.getElementById(`aspect-${l}`)?.value.trim();
+    const el = document.getElementById(`s-aspect-${l}`);
+    if (el) el.innerHTML = val ? `<span>${val}</span>` : '<em class="summary-val empty">Not filled in</em>';
+  }
+
+  // Skills
+  const skillPills = document.getElementById('s-skills');
+  const ranked = Object.entries(state.skillRanks).filter(([,v])=>v>0).sort((a,b)=>b[1]-a[1]);
+  if (ranked.length === 0) {
+    skillPills.innerHTML = '<span class="skill-pill-empty">No skills assigned yet</span>';
+  } else {
+    skillPills.innerHTML = ranked.map(([id,rank]) => {
+      const sk = SKILLS.find(s=>s.id===id);
+      return `<span class="skill-pill r${rank}">${sk?.name||id} ${rank}</span>`;
+    }).join('');
+    // Physical skills
+    const ath = document.getElementById('phys-athletics')?.value;
+    const end = document.getElementById('phys-endurance')?.value;
+    const per = document.getElementById('phys-perception')?.value;
+    if (ath) skillPills.innerHTML += `<span class="skill-pill r${ath}">Athletics ${ath}</span>`;
+    if (end) skillPills.innerHTML += `<span class="skill-pill r${end}">Endurance ${end}</span>`;
+    if (per) skillPills.innerHTML += `<span class="skill-pill r${per}">Perception ${per}</span>`;
+  }
+
+  // Stunts
+  const stuntSummary = document.getElementById('s-stunts-summary');
+  if (state.selectedStunts.size === 0) {
+    stuntSummary.innerHTML = '<div class="summary-row"><span class="summary-val empty">No stunts selected yet</span></div>';
+  } else {
+    let html = '';
+    for (const sid of state.selectedStunts) {
+      for (const cat of Object.values(STUNTS)) {
+        const st = cat.find(s=>s.id===sid);
+        if (st) html += `<div class="summary-row"><span class="summary-key">${st.name}</span><span class="summary-val" style="font-size:0.78rem;text-align:right;max-width:60%;color:var(--text-dim)">${st.desc.slice(0,80)}${st.desc.length>80?'…':''}</span></div>`;
+      }
+    }
+    stuntSummary.innerHTML = html;
+  }
+}
+
+// ===== SHADOWSYNTH EXPORT =====
+// Maps kit-internal skill IDs → ShadowSynth skill IDs
+const SS_SKILL_ID = {
+  h_eng: 'engineering_hardware',
+  s_eng: 'engineering_software',
+  h_net: 'house_networking',
+  a_net: 'apostate_networking',
+};
+
+const ALL_SS_SKILLS = [
+  'assets','cohesion','demolitions','diplomacy','education',
+  'engineering_hardware','engineering_software','firearms','guile',
+  'insight','intimidation','melee','mnemonics','house_networking',
+  'apostate_networking','pilot','research','resolve','stealth','strategy','sinc',
+];
+
+function toSSSkillId(internalId) {
+  return SS_SKILL_ID[internalId] || internalId;
+}
+
+function calcStressBoxes(r1, r2) {
+  let boxes = 2;
+  for (const r of [r1, r2]) {
+    if (r >= 5) boxes += 3;
+    else if (r >= 3) boxes += 2;
+    else if (r >= 1) boxes += 1;
+  }
+  return boxes;
+}
+
+function exportToShadowSynth() {
+  const name = (document.getElementById('char-name')?.value.trim()) || 'Unnamed Character';
+
+  // Build full skills map (all SS IDs, default 0)
+  const skills = {};
+  for (const sid of ALL_SS_SKILLS) skills[sid] = 0;
+  for (const [internalId, rank] of Object.entries(state.skillRanks)) {
+    const ssId = toSSSkillId(internalId);
+    if (ALL_SS_SKILLS.includes(ssId)) skills[ssId] = rank;
+  }
+
+  // Physical skill inputs
+  const ath = parseInt(document.getElementById('phys-athletics')?.value) || 0;
+  const end = parseInt(document.getElementById('phys-endurance')?.value) || 0;
+  const per = parseInt(document.getElementById('phys-perception')?.value) || 0;
+
+  // Aspects (A–E)
+  const aspects = ['a','b','c','d','e']
+    .map(l => document.getElementById('aspect-'+l)?.value.trim())
+    .filter(Boolean);
+
+  // Stunts list
+  const stunts = [...state.selectedStunts];
+
+  // Stress tracks
+  const physStress  = calcStressBoxes(ath, end);
+  const mentalStress = calcStressBoxes(skills['cohesion'] || 0, skills['resolve'] || 0);
+  const isSavant = stunts.includes('savant');
+  const systemStress = isSavant
+    ? calcStressBoxes(skills['engineering_software'] || 0, skills['sinc'] || 0)
+    : 2;
+
+  // State-based auto-stunts (free, not counted in user's 3)
+  const autoStunts = [];
+  if (state.selectedState === 'pure') autoStunts.push('carpe_diem');
+  if (state.selectedState === 'sim')  autoStunts.push('sim_state');
+
+  const refreshRating = state.selectedState === 'pure' ? 7 : 5;
+  const hNet = skills['house_networking'] || 0;
+  const repRating = hNet + 2;
+
+  const exportData = {
+    formatVersion: 1,
+    exportedAt: new Date().toISOString(),
+    source: 'Nova Praxis Player Kit',
+    character: {
+      characterId: 'char_' + Date.now(),
+      name,
+      characterState: state.selectedState || 'sleeved',
+      houseAffiliation: state.selectedHouse || '',
+      skillRankType: state.selectedSkillset || 'expert',
+      skills,
+      baseSkills: { ...skills },
+      stunts,
+      aspects,
+      stressTracks: { physical: physStress, mental: mentalStress, system: systemStress },
+      refreshRating,
+      repRating,
+      repBumps: 0,
+      assets: skills['assets'] || 0,
+      notes: (document.getElementById('final-note')?.value.trim()) || '',
+      savantPrograms: [],
+      sleeveId: '',
+      sleeveCustomizations: { clone: false, physicalRanksToAPs: 0, apsToPhysicalRanks: 0 },
+      physicalSkillAllocation: { athletics: ath, endurance: end, perception: per },
+      sleevePhysicalAllocation: { allocation: { athletics: ath, endurance: end, perception: per } },
+      appliedStateBenefits: {
+        refreshRatingBonus: state.selectedState === 'pure' ? 2 : 0,
+        automaticAspects: [],
+        automaticStunts: autoStunts,
+        skillBonuses: {},
+      },
+      augmentations: [],
+      augmentationChoices: {},
+      augmentationUpgrades: {},
+      physicalTraitAspect: '',
+      aspectNotes: {},
+    },
+  };
+
+  const json = JSON.stringify(exportData, null, 2);
+  const blob = new Blob([json], { type: 'application/json' });
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement('a');
+  a.href     = url;
+  a.download = name.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9\-_]/g, '') + '-shadowsynth.json';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// ===== INIT =====
+document.addEventListener('DOMContentLoaded', function() {
+  renderSkills();
+  renderStunts();
+  renderHouses();
+});
+</script>
+</body>
+</html>
