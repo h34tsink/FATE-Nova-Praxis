@@ -95,7 +95,7 @@ Consequences are Aspects — can be invoked/compelled. First use is free.
 **Per Turn:** 1 Simple Action + 1 Free Action + Instant Actions (defense doesn't count against limit)
 
 **Attack:** Defender rolls defense first → becomes attacker's Difficulty
-**Damage:** Shifts + Weapon Rating (WR) - Armor Rating (AR) = Stress dealt (min 0)
+**Damage:** Shifts + Weapon Rating (WR) - Armor Rating = Stress dealt (min 0)
 
 **Movement:** Adjacent zone = Free Action. Two zones (Hustle) = -2 penalty to other actions.
 
