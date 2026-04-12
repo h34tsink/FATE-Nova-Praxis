@@ -563,36 +563,46 @@
     <div class="archetype-card" onclick="selectArchetype(this,'soldier')">
       <div class="archetype-icon">&#9876;</div>
       <div class="archetype-name">The Soldier</div>
-      <div class="archetype-tagline">Legionnaire. Front-line fighter.</div>
+      <div class="archetype-tagline">Front-line fighter. Legionnaire or merc.</div>
     </div>
     <div class="archetype-card" onclick="selectArchetype(this,'operator')">
       <div class="archetype-icon">&#128373;</div>
       <div class="archetype-name">The Operator</div>
-      <div class="archetype-tagline">Infiltrator. Stealth specialist.</div>
+      <div class="archetype-tagline">Ghost. Gets in, gets out, leaves no trace.</div>
     </div>
     <div class="archetype-card" onclick="selectArchetype(this,'face')">
       <div class="archetype-icon">&#128483;</div>
       <div class="archetype-name">The Face</div>
-      <div class="archetype-tagline">Diplomat. Con artist. Fixer.</div>
+      <div class="archetype-tagline">Fixer. Opens every door with words.</div>
     </div>
     <div class="archetype-card" onclick="selectArchetype(this,'savant')">
       <div class="archetype-icon">&#9881;</div>
       <div class="archetype-name">The Savant</div>
-      <div class="archetype-tagline">Hacker. Digital infiltrator.</div>
+      <div class="archetype-tagline">Hacker. The mesh is your battlefield.</div>
     </div>
     <div class="archetype-card" onclick="selectArchetype(this,'commander')">
       <div class="archetype-icon">&#128081;</div>
       <div class="archetype-name">The Commander</div>
-      <div class="archetype-tagline">Tactician. Leader. Strategist.</div>
+      <div class="archetype-tagline">Tactician. Makes the crew more than the sum.</div>
     </div>
     <div class="archetype-card" onclick="selectArchetype(this,'engineer')">
       <div class="archetype-icon">&#128296;</div>
       <div class="archetype-name">The Engineer</div>
-      <div class="archetype-tagline">Technician. Builder. Fixer.</div>
+      <div class="archetype-tagline">Gear-head. Fixes anything, builds the rest.</div>
+    </div>
+    <div class="archetype-card" onclick="selectArchetype(this,'medic')">
+      <div class="archetype-icon">&#129658;</div>
+      <div class="archetype-name">The Mnemonist</div>
+      <div class="archetype-tagline">Ego expert. Keeps minds intact after death.</div>
+    </div>
+    <div class="archetype-card" onclick="selectArchetype(this,'scout')">
+      <div class="archetype-icon">&#128640;</div>
+      <div class="archetype-name">The Scout</div>
+      <div class="archetype-tagline">Pilot. First in, last out, routes the crew.</div>
     </div>
   </div>
 
-  <div class="card" id="archetype-detail" style="display:none">
+  <div id="archetype-detail" style="display:none;margin-bottom:1rem">
     <div id="archetype-content"></div>
   </div>
 
@@ -1252,64 +1262,219 @@ const HOUSES = [
 
 const ARCHETYPES = {
   soldier: {
-    icon:'⚔', label:'The Soldier',
-    concept:'Front-line combatant. Legionnaire, mercenary, or private military. You solve problems with firepower and grit.',
-    state:'Sleeved (a cybersleeve holds up better in combat)',
-    skillset:'Specialist or Expert',
-    keySkills:'Firearms 4–5, Melee 3–4, Strategy 3, Endurance 3–4, Athletics 3, Resolve 2',
-    stunts:'Constant Vigilance, Dodge, and one of: Gun Slinger / Marksman / Strategist',
-    house:'House Tsarya (armor discount) or House Dalianis (rail/coil guns)',
-    tip:'High Endurance and Athletics push up your Physical Stress track. Resolve and Cohesion keep you sane.',
+    icon:'⚔', label:'The Soldier', tagline:'Legionnaire. Front-line fighter.',
+    concept:'You solve problems with firepower and controlled aggression. Whether ex-Legionnaire, hired muscle, or independent mercenary, you\'re the one who holds the line when things go sideways — and they always go sideways.',
+    crewRole:'Primary combatant. You take the hits, clear the rooms, and make space for everyone else to do their job. When the plan falls apart, you become the plan.',
+    state:'sleeved', stateLabel:'Sleeved — a Delta Cybersleeve can take punishment and dish it back. Pure works if you want higher Refresh and the Carpe Diem edge in extended fights.',
+    skillset:'expert', skillsetLabel:'Expert — three rank-4 skills lets you stay sharp across Firearms, Melee, and Strategy without sacrificing resolve.',
+    skills:{ firearms:4, melee:4, strategy:4, resolve:3, intimidation:3, cohesion:3, assets:2, demolitions:2, pilot:2, stealth:2, education:1, guile:1, h_net:1, research:1, a_net:1, diplomacy:1 },
+    physSkills:{ athletics:4, endurance:4, perception:3 },
+    aspects:[
+      'First One Through the Door, Last One Out',
+      '"Pain is just weakness leaving the sleeve."',
+      'Three Tours with the 7th Dalianis Legion',
+      'Can\'t Turn Off the Combat Instincts',
+      'Born for Close Quarters Firefights',
+    ],
+    stuntIds:['constant_vigilance','dodge','gun_slinger'],
+    stuntRationale:'Constant Vigilance keeps you from getting blindsided (+3 init). Dodge lets you absorb one brutal hit per scene. Gun Slinger raises your pistol damage and handles dual-wielding cleanly — swap for Marksman if you prefer long-range.',
+    house:'tsarya', houseLabel:'House Tsarya — best armor and assault warframe discounts. House Dalianis if you prefer railguns and the military culture.',
+    gear:['Heavy Battle Armor (AR+4)','Heavy Coil Assault Rifle (WR+5, Full Auto)','Light Rail-Pistol (sidearm)','Mono-Edged Short Sword (backup)'],
+    flavors:[
+      { name:'Legionnaire', desc:'Coalition military veteran. Disciplined, house-loyal, follows orders but has a conscience. Likely Dalianis or Tsarya.' },
+      { name:'Mercenary', desc:'Works for whoever pays. No allegiance, no apology. Apostate or a house that\'s pragmatic about hiring muscle.' },
+      { name:'Purifier', desc:'Fanatical Purist. Deeply uncomfortable around SIMs and the Apotheosized. Pure state. High Resolve and Cohesion.' },
+    ],
+    tip:'Keep Endurance and Athletics from your sleeve as high as possible — they push your Physical Stress track up. Every extra box is another hit you can eat before consequences start stacking.',
   },
+
   operator: {
-    icon:'🕵',label:'The Operator',
-    concept:'Infiltrator. You go where you shouldn\'t, take what you\'re not supposed to, and leave no trace. Precision over firepower.',
-    state:'Sleeved (cybersleeve for AR interfacing) or Pure (you value your original body\'s subtlety)',
-    skillset:'Specialist',
-    keySkills:'Stealth 4–5, Guile 3–4, Insight 3, Firearms 2–3, Athletics 3, Perception 3',
-    stunts:'Constant Vigilance, Cover of Darkness, and one of: Assassin Shot / Assassin Strike / Free Runner',
-    house:'House Silva (PAc weapons are quiet) or Apostate (no paper trail)',
-    tip:'Stealth and Guile are your core tools. Keep Insight high — you need to read situations fast.',
+    icon:'🕵', label:'The Operator', tagline:'Ghost. Gets in, gets out.',
+    concept:'You go where you shouldn\'t, take what you\'re not supposed to, and leave no trace. Stealth and precision are your weapons — violence is a last resort and a professional embarrassment.',
+    crewRole:'Infiltration, reconnaissance, and targeted extraction. You get the crew access they wouldn\'t otherwise have and intelligence they couldn\'t otherwise get.',
+    state:'sleeved', stateLabel:'Sleeved — a cybersleeve with integrated AR and sensory systems makes you harder to detect. Pure works if you want the Carpe Diem "declare an Aspect" for improvised infiltration edges.',
+    skillset:'specialist', skillsetLabel:'Specialist — Stealth at 5 is your cornerstone. Everything else supports it.',
+    skills:{ stealth:5, guile:4, firearms:4, insight:3, resolve:3, assets:2, research:2, a_net:2, cohesion:1, diplomacy:1, h_net:1, education:1, strategy:1, pilot:1 },
+    physSkills:{ athletics:4, endurance:3, perception:4 },
+    aspects:[
+      '"Leave no trace. Take nothing that isn\'t mine to take."',
+      'Every Mission Is a Ghost Story I\'ll Never Tell',
+      'Raised in the Black Markets of the Naesock Processing Hub',
+      'The Job Always Matters More Than Getting Out Clean',
+      'Shadow in Every Machine, Ghost in Every Room',
+    ],
+    stuntIds:['constant_vigilance','cover_of_darkness','assassin_shot'],
+    stuntRationale:'Constant Vigilance for initiative — you want to act before they know you\'re there. Cover of Darkness makes dim/darkness Aspects always Persistent for you (major infiltration advantage). Assassin Shot for when elimination is the contract — swap for Free Runner if your style is evasion over elimination.',
+    house:'apostate', houseLabel:'Apostate — no paper trail, +2 Assets on underground favors. House Silva works if you want a legitimate cover and access to PAc weapons.',
+    gear:['Light PAc Pistol (quiet, high WR, Small)','AR Display Glasses','Blank ARID Tags','Stealth Suit or Light Battle Armor','Mono-Edge Dagger (backup)'],
+    flavors:[
+      { name:'Shadow War Agent', desc:'House intelligence operative. Clean hands, quiet work. Officially doesn\'t exist. House-affiliated with deep cover identity.' },
+      { name:'Black Market Ghost', desc:'Apostate criminal. Bypasses Coalition checkpoints professionally. Knows every fence, broker, and bolt-hole in the system.' },
+      { name:'Precision Eliminator', desc:'Targeted assassination. High Firearms + Stealth combo. Assassin Shot and Assassin Strike taken together. The contract is always specific.' },
+    ],
+    tip:'High Perception on your sleeve is critical — you need to see threats before they see you. Pair Stealth with Insight so you can read situations and abort before they escalate.',
   },
+
   face: {
-    icon:'🗣',label:'The Face',
-    concept:'Diplomat, con artist, or information broker. You talk your way through every door and know someone everywhere you go.',
-    state:'Sleeved (appearance matters in social situations) or Pure (humanity is a trust signal)',
-    skillset:'Expert or Generalist',
-    keySkills:'Diplomacy 4, Guile 4, H.Net 3–4, Insight 3, Research 3, Resolve 2',
-    stunts:'Reputable, Five Minute Friends, and one of: Specialty Aspect / Agenda Celebrity / Fame',
-    house:'Any House with active political interests (Kimura, Dalianis, or Silva work well)',
-    tip:'High H.Net means high Rep-Rating — you start with more access to goods and favors than anyone.',
+    icon:'🗣', label:'The Face', tagline:'Fixer. Opens every door.',
+    concept:'You talk your way through every locked door and know someone everywhere you go. Diplomacy, manipulation, and an encyclopedic contact network are your tools. Violence is something you outsource.',
+    crewRole:'Social interface, information broker, negotiation. You\'re the one who gets the meeting, reads the room, and closes the deal — or walks away with the intel anyway.',
+    state:'sleeved', stateLabel:'Sleeved — appearance and first impressions matter. A good biosleeve projects authority. Pure works if you lean into humanity as a social trust signal with certain factions.',
+    skillset:'expert', skillsetLabel:'Expert — three skills at 4 lets you spread across Diplomacy, Guile, and H.Net without sacrificing depth.',
+    skills:{ diplomacy:4, guile:4, h_net:4, insight:3, research:3, resolve:3, assets:2, education:2, stealth:2, cohesion:2, firearms:1, melee:1, pilot:1, strategy:1, a_net:1, intimidation:1 },
+    physSkills:{ athletics:3, endurance:3, perception:3 },
+    aspects:[
+      '"Every room has a price — I just find it faster than you do."',
+      '"Violence is the last resort of the unimaginative."',
+      'Grew Up in the Shadow of House Kimura\'s Political Machine',
+      'Compulsive About Collecting Favors and Remembering Debts',
+      'Silver Tongue, Velvet Gloves, Iron Memory',
+    ],
+    stuntIds:['reputable','five_minute_friends','specialty_aspect'],
+    stuntRationale:'Reputable gives you +2 starting Rep-Rating — more favors, better access, higher-quality contacts from session one. Five Minute Friends lets you declare an NPC as an old contact once per scene (extremely powerful for improvised social plays). Specialty Aspect on Guile or Diplomacy gives you a free invoke per scene on your bread-and-butter rolls.',
+    house:'kimura', houseLabel:'House Kimura — politically liberal, SIM-network-heavy, software discounts. House Silva if you want to work both sides of the law. Dalianis if you want military-political access.',
+    gear:['Credisk (high-value)','AR Display Glasses','Light Concealable Sidearm','Well-tailored light armor (inconspicuous)','Comm Device'],
+    flavors:[
+      { name:'The Fixer', desc:'Connects people and resources. High H.Net and Assets. Rep-focused. The crew calls you when they need something that doesn\'t officially exist.' },
+      { name:'The Con Artist', desc:'Guile-primary. Lies for a living. Truth is just another tool. Probably Apostate — you can\'t maintain a false identity if the Coalition is watching.' },
+      { name:'The Diplomat', desc:'House emissary or political negotiator. High Diplomacy and H.Net. More legitimate, more connected, more constrained by what the House needs from you.' },
+    ],
+    tip:'Your H.Net rank sets your starting Rep-Rating. Rep-Rating = H.Net + 2, plus a free bump equal to your Diplomacy. Push both high and you start with significant legitimate access. The Reputable Stunt stacks on top.',
   },
+
   savant: {
-    icon:'⚙',label:'The Savant',
-    concept:'You\'ve hacked your own mindset. Digital infiltrator, system breaker, drone commander. The mesh is your battlefield.',
-    state:'SIM (fullest digital capability) or Sleeved with Savant Stunt',
-    skillset:'Expert',
-    keySkills:'S.Eng 4, Research 3–4, SINC 2+ (via Skilled), Insight 3, Mnemonics 2, Stealth 2',
-    stunts:'Savant (required), then Savant Programs (count as Stunts): Esper Lord / System Invasion / Security Skim',
-    house:'House Kimura (cybersleeve and software discounts, SIM-friendly culture)',
-    tip:'The Savant Stunt opens a whole subsystem. Start with 1–2 Programs and grow into more at Milestones.',
+    icon:'⚙', label:'The Savant', tagline:'Hacker. The mesh is your battlefield.',
+    concept:'You\'ve hacked your own mindset — stripped the Coalition\'s restrictions from your ego. Now you write your own programs and run them against the security systems of anyone who gets in your way. The digital world is yours.',
+    crewRole:'System infiltration, information extraction, drone command, and electronic warfare. You open digital doors, suppress enemy systems, and run battlefield intelligence the crew can\'t get any other way.',
+    state:'sim', stateLabel:'SIM — fullest access to the digital battlefield. No body means no physical vulnerability, but you need drones for physical interaction. Sleeved works if you want to be present in scenes without lag penalties.',
+    skillset:'expert', skillsetLabel:'Expert — spread across S.Eng, Research, and Mnemonics at 4. SINC starts at 1 from the Savant Stunt; use Skilled to push it higher.',
+    skills:{ s_eng:4, research:4, mnemonics:4, insight:3, cohesion:3, resolve:3, assets:2, stealth:2, h_net:2, education:2, firearms:1, melee:1, pilot:1, a_net:1, guile:1, diplomacy:1 },
+    physSkills:{ athletics:3, endurance:2, perception:4 },
+    aspects:[
+      '"No lock I haven\'t opened. No system I haven\'t owned."',
+      '"The mind is just software — and software can be rewritten."',
+      'Discharged from the Legion After the Mindset Hack Was Discovered',
+      'Suffers Chronic Phantom Pain from the Ego Modification',
+      'Ghost in Every Machine on the Extranet',
+    ],
+    stuntIds:['savant','skilled','digital_spider'],
+    stuntRationale:'Savant is mandatory — it unlocks SINC and your first Savant Program. Skilled on SINC pushes it to rank 2 at creation, which matters for program execution rolls. Digital Spider gives +2 on Research Assessments from the Extranet (you\'ll use this constantly for intel). Choose your first Savant Program separately (Memory Hack, Access Memory, or Security Skim are solid openers).',
+    house:'kimura', houseLabel:'House Kimura — cybersleeve discounts, SIM-friendly culture, and computer/software market discounts. Kimura also employs the largest SIM spy network in the Coalition.',
+    gear:['Beta Agent (AI assistant)','Tele-Presence Sensor Unit','Case Spider (Imex V44)','Data Jack Augmentation','AR Display Glasses'],
+    flavors:[
+      { name:'The Ghost', desc:'SIM-based digital operative. No body. Reads enemy meshes, extracts data, runs programs against security. Maximum digital, zero physical.' },
+      { name:'The Hacker', desc:'Sleeved Savant. Physically present but raids the digital world during missions. Carries gear, fights when needed, cracks systems the rest can\'t touch.' },
+      { name:'The Puppeteer', desc:'Drone commander. Esper Lord + Puppeteer programs. Runs a swarm of espers as battlefield sensors and a drone fleet as remote combatants. You stay safe while the machines work.' },
+    ],
+    tip:'The Savant Stunt is an investment that pays off at every Milestone. Your first Savant Program is free with the Stunt — pick something with broad utility like Memory Hack (read/edit stored memories) or Security Skim (fast-assess a system\'s defenses). Add more Programs at Major Milestones.',
   },
+
   commander: {
-    icon:'👑',label:'The Commander',
-    concept:'Tactician and leader. You make everyone around you better. When things go wrong, you\'re the one with a plan.',
-    state:'Sleeved (you need to be present and human-looking) or Pure (authority through embodied presence)',
-    skillset:'Expert or Generalist',
-    keySkills:'Strategy 4–5, Firearms 3–4, Insight 3, Diplomacy 3, H.Net 3, Resolve 3',
-    stunts:'Battlefield Command, Strategist, and one of: Inspire Greatness / Concentrated Fire / Master Tactician',
-    house:'House Dalianis or House Tsarya (military-adjacent, respect command structures)',
-    tip:'Strategy is both an initiative skill and a tactical planning tool. Keep it at 4+. Pair with Insight to read rooms.',
+    icon:'👑', label:'The Commander', tagline:'Tactician. Makes the crew more.',
+    concept:'Tactical intelligence and battlefield leadership. You don\'t just fight — you make everyone around you fight better. When the plan breaks down, you already have three contingencies running.',
+    crewRole:'Initiative control, tactical coordination, and morale. You turn a group of individuals into a unit. Your actions multiply the effectiveness of everyone else in the crew.',
+    state:'sleeved', stateLabel:'Sleeved — you need to be present and readable in both social and combat scenes. A biosleeve projects authority. Pure works if you want the Carpe Diem Stunt for declaring tactical Aspects.',
+    skillset:'expert', skillsetLabel:'Expert — Strategy, Firearms, and H.Net at 4. You\'re capable in a fight and deeply connected.',
+    skills:{ strategy:4, firearms:4, h_net:4, insight:3, diplomacy:3, resolve:3, assets:2, intimidation:2, cohesion:2, pilot:2, melee:1, education:1, research:1, stealth:1, demolitions:1, guile:1 },
+    physSkills:{ athletics:4, endurance:4, perception:3 },
+    aspects:[
+      '"I don\'t lose. I learn, adapt, and go again."',
+      '"Every soldier deserves to know why they\'re fighting."',
+      'Hero of the Tellerus Fields Campaign',
+      '"I take command whether they ask me to or not."',
+      'Natural-Born Tactician with Field-Tested Instincts',
+    ],
+    stuntIds:['battlefield_command','strategist','inspire_greatness'],
+    stuntRationale:'Battlefield Command lets allies reposition as Instant Actions on your turn — reframes every fight around your positioning. Strategist lets you spend an FP to gain a stacking +2 attack bonus against multiple targets (it compounds across a scene). Inspire Greatness gives one ally +3 on any single roll once per scene — clutch for critical moments.',
+    house:'dalianis', houseLabel:'House Dalianis — military culture, railgun/starship discounts. Tsarya if you want armor and warframe access for your squad.',
+    gear:['Heavy Battle Armor (AR+4)','PAc Carbine or Heavy Assault Rifle','Comm Unit (encrypted)','Sidearm','Tactical Datapad'],
+    flavors:[
+      { name:'The General', desc:'Battlefield tactician who leads from the front. High Strategy and Firearms. You\'re first over the wall and last to retreat.' },
+      { name:'The Handler', desc:'Mission planner and crew coordinator. High H.Net, Strategy, and Diplomacy. The job is planned before boots hit the ground.' },
+      { name:'The Veteran', desc:'Grizzled field leader. Heavy combat experience, high stress track, Story-heavy background. Less interested in politics than results.' },
+    ],
+    tip:'Strategy rolls for initiative — a high Strategy means you often act first and can set the battlefield before enemies react. Pair with Battlefield Command to immediately reposition the crew on your first turn.',
   },
+
   engineer: {
-    icon:'🔧',label:'The Engineer',
-    concept:'Hardware specialist, gear-head, drone builder. You fix things, build things, and know how to make machines do what you need.',
-    state:'Sleeved (working with your hands) or SIM with Drone-Jock',
-    skillset:'Generalist or Expert',
-    keySkills:'H.Eng 3–4, S.Eng 3–4, Education 3, Demolitions 2–3, Assets 2–3, Pilot 2',
-    stunts:'Drone-Jock, Skilled (H.Eng or S.Eng), and one of: Geek Speak / Transhumanist / Licensed',
-    house:'House Cipriani (CIST tech) or House Jinzhan (construction, explosives)',
-    tip:'High Assets gives you gear budget and black market access. High H.Eng means you can build/repair almost anything.',
+    icon:'🔧', label:'The Engineer', tagline:'Gear-head. Fixes anything.',
+    concept:'You understand how things work at a fundamental level — hardware, software, and the seams between them. You fix what\'s broken, build what\'s needed, and know exactly how to make a machine do something it was never designed to do.',
+    crewRole:'Technical problem-solving, equipment maintenance, fabrication, and drone operations. Without you, the crew\'s gear degrades and their access shrinks. You keep everything running.',
+    state:'sleeved', stateLabel:'Sleeved — working with your hands means being physically present. A biosleeve with augmentation points lets you add workshop utilities directly to your body.',
+    skillset:'generalist', skillsetLabel:'Generalist — seven skills at rank 3 lets you cover H.Eng, S.Eng, Demolitions, Education, Pilot, Assets, and Research simultaneously. Broad coverage is the point.',
+    skills:{ h_eng:3, s_eng:3, demolitions:3, education:3, pilot:3, assets:3, research:3, cohesion:2, resolve:2, guile:2, insight:2, mnemonics:2, strategy:2, stealth:2, a_net:1, firearms:1, melee:1, h_net:1 },
+    physSkills:{ athletics:3, endurance:3, perception:3 },
+    aspects:[
+      '"If I can take it apart, I can make it better."',
+      '"Everything has a purpose. Finding it is the craft."',
+      'Apprenticed to a Cipriani Master Engineer Before the Contract Went South',
+      '"I trust machines more than people — machines don\'t lie about what they need."',
+      'Field Genius with Improvised Solutions and Borrowed Parts',
+    ],
+    stuntIds:['drone_jock','skilled','geek_speak'],
+    stuntRationale:'Drone-Jock turns every drone you buy into a customized tool (−1 Cost, +1 to 2 skills, +1 Aug Point). Skilled on H.Eng pushes it to 4 — your core skill, worth maximizing. Geek Speak lets you use Education instead of Diplomacy or Guile when convincing people of technical facts (true or fabricated) — hugely useful when you need to bullshit your way past a security checkpoint with technical jargon.',
+    house:'cipriani', houseLabel:'House Cipriani — CIST tech, energy, and transportation discounts. House Jinzhan if you want construction materials and explosives at a discount.',
+    gear:['Engineering Kit (H.Eng tools)','Portable Compiler Template','Personal Drone (customized via Drone-Jock)','Data Jack Augmentation','Light concealed sidearm'],
+    flavors:[
+      { name:'Gear Specialist', desc:'Weapons modifier and armor technician. Focused on hardware fabrication and field repair. Uses compiled templates to generate gear mid-mission.' },
+      { name:'Drone Fleet', desc:'Builds and operates a fleet of drones for reconnaissance, combat support, and physical labor. Drone-Jock is the keystone; the rest is optimization.' },
+      { name:'Code Monkey', desc:'Software-primary engineer. S.Eng + Mnemonics + CIST operation. Writes code that does what normal people need months to accomplish. Possibly edging toward Savant territory.' },
+    ],
+    tip:'High Assets is as important as your Engineering skills — it determines your black market access and how many restricted items you can start with. An Engineer with Assets 3 and the Licensed Stunt can walk into a session with serious hardware.',
+  },
+
+  medic: {
+    icon:'🩺', label:'The Mnemonist', tagline:'Ego expert. Keeps minds intact.',
+    concept:'You understand the ego — the software-mind that makes a person who they are — better than anyone on the crew. You repair psychological damage, manage resleeving trauma, and can edit memories when the mission calls for it. Life after Apotheosis is your specialty.',
+    crewRole:'Mental health support, resleeving management, mnemonic editing, and knowledge synthesis. You\'re the reason the crew can come back from death and still be themselves. You\'re also the one who knows what everyone knows, and can access what they\'ve forgotten.',
+    state:'sleeved', stateLabel:'Sleeved — biological work benefits from physical presence. A biosleeve lets you take biotech augmentations that expand your medical capabilities. Pure works if you want the Refresh bonus and see yourself as the embodied baseline others are measured against.',
+    skillset:'expert', skillsetLabel:'Expert — Mnemonics, Education, and Cohesion at 4. You\'re the smartest person in the room when it comes to how minds work.',
+    skills:{ mnemonics:4, education:4, cohesion:4, insight:3, research:3, resolve:3, assets:2, h_eng:2, s_eng:2, diplomacy:2, guile:1, melee:1, firearms:1, pilot:1, stealth:1, h_net:1 },
+    physSkills:{ athletics:3, endurance:4, perception:2 },
+    aspects:[
+      '"The mind survives death. It\'s my job to make sure it survives intact."',
+      '"I\'ve seen what a shattered ego looks like. I won\'t let it happen again."',
+      'Lost a Crewmate to Botched Resleeving — That Failure Lives in Me',
+      'The Memories I\'ve Edited Still Surface in My Dreams',
+      'Steady Hands in the Mind and in the Field',
+    ],
+    stuntIds:['ego_stabilization_software','specialty_aspect','dead_inside'],
+    stuntRationale:'Ego Stabilization Software gives +2 on Cohesion tests to avoid fragmentation during resleeving — your whole job in one Stunt. Specialty Aspect on Mnemonics gives you a free invoke per scene on your core skill. Dead Inside gives you a constant Determination of 2 (mental defense) — you\'ve seen too much to be shaken by what others find horrifying.',
+    house:'silva', houseLabel:'House Silva — biosleeve and biotech augmentation discounts. Thetis Revival Labs on Phobos is the galaxy\'s best resleeving facility, and it\'s a Silva operation.',
+    gear:['Medi-Stimulant Injection (MSI) Templates × 3','Portable Mnemonic Editor','Beta Agent (AI assistant for memory reconstruction)','Light Concealed Sidearm','Bioscanner'],
+    flavors:[
+      { name:'Field Medic', desc:'Combat-adjacent support. Keeps the crew alive mid-fight. High Endurance from sleeve, Emergency Life Support augmentation, Banner of Hope Stunt as an alternative.' },
+      { name:'Ego Architect', desc:'Pure Mnemonics specialist. Memory editing, ego reconstruction, fork/merge operations. Operates primarily in clinical and interrogation settings.' },
+      { name:'Combat Psychologist', desc:'Mental stress specialist. Cohesion + Insight + Resolve build. Helps crew members process trauma and maintain cohesion under fire.' },
+    ],
+    tip:'Mnemonics is the only skill that lets you edit someone\'s memories — a powerful capability that will come up in surprising ways. High Cohesion also adds directly to your Mental Stress track, making you personally resilient to the psychological horrors of this setting.',
+  },
+
+  scout: {
+    icon:'🚀', label:'The Scout', tagline:'Pilot. Keeps the crew moving.',
+    concept:'You get the crew where they need to go and see what\'s coming before it arrives. First in, last out. You know every approach vector, every emergency exit, and every route that doesn\'t show up on official charts.',
+    crewRole:'Mobility, reconnaissance, and exfiltration. You keep the crew\'s options open. When the mission collapses, you\'re the reason there\'s a way out. You\'re also the crew\'s early warning system.',
+    state:'sleeved', stateLabel:'Sleeved — you need to physically pilot vehicles and be present in high-speed situations. A cybersleeve with enhanced reaction time augmentations is ideal. Pure works if you want the higher Refresh for frequent Aspect invocations during complex flight.',
+    skillset:'specialist', skillsetLabel:'Specialist — Pilot at 5 is the cornerstone. Strategy and Insight at 4 round out your tactical and situational awareness.',
+    skills:{ pilot:5, strategy:4, insight:4, research:3, stealth:3, firearms:2, assets:2, cohesion:2, melee:1, resolve:1, guile:1, h_net:1, education:1, a_net:1 },
+    physSkills:{ athletics:4, endurance:3, perception:4 },
+    aspects:[
+      '"I can find a way out of anything with an engine and thirty seconds."',
+      '"Trust the instruments. Trust yourself. Trust nothing else."',
+      'Ran Illegal Cargo Through the Naesock Blockade for Two Years',
+      '"I cannot sit still if someone else is flying. It\'s a problem."',
+      'Best Eyes in the Sector, Fastest Hands at the Controls',
+    ],
+    stuntIds:['at_home_behind_the_stick','constant_vigilance','all_seeing_eye'],
+    stuntRationale:'At Home Behind the Stick lets you make vehicle Aspects Persistent (for free on the first, FP after that) — turning a good ship into a tactical tool. Constant Vigilance for initiative keeps you ahead of threats. All-Seeing Eye gives +3 to one Perception test per scene — critical for spotting ambushes and approach threats before they reach the crew.',
+    house:'dalianis', houseLabel:'House Dalianis — starship discounts and the largest shipyard in the galaxy. Apostate if you want freedom of movement without House tracking.',
+    gear:['Personal Vehicle or Ship Access','Heavy Rail-Pistol (sidearm, long range)','AR Display Glasses (navigation overlay)','Light Battle Armor','Emergency Toolkit'],
+    flavors:[
+      { name:'Ace Pilot', desc:'Ship and vehicle specialist at the apex. Pilot 5, vehicle Aspects permanently at your disposal. The crew goes where you take them, period.' },
+      { name:'Recon Scout', desc:'Advances ahead of the crew. High Perception + Stealth + Research. Reports back conditions, threats, and opportunities before anyone else is exposed.' },
+      { name:'Navigator', desc:'Charting unknown systems and maintaining routes through contested space. Pilot + Education + Research. The crew explores new systems because you mapped a way in.' },
+    ],
+    tip:'Pilot is both a vehicle operation skill and a navigation skill. High Pilot means you can get vehicles to do things their designers never intended — treat chase scenes, pursuit, and emergency extractions as your moment to shine.',
   },
 };
 
@@ -1339,17 +1504,195 @@ function selectArchetype(el, id) {
   el.classList.add('selected');
   state.selectedArchetype = id;
   const a = ARCHETYPES[id];
+
+  // Build skill spread rows grouped by rank
+  const rankGroups = {};
+  for (const [sid, rank] of Object.entries(a.skills)) {
+    if (!rankGroups[rank]) rankGroups[rank] = [];
+    const sk = SKILLS.find(s => s.id === sid);
+    rankGroups[rank].push(sk ? sk.name : sid);
+  }
+  const rankColors = {5:'var(--red)',4:'var(--orange)',3:'var(--yellow)',2:'var(--green)',1:'var(--text-muted)'};
+  const skillRows = Object.keys(rankGroups).sort((a,b)=>b-a).map(r =>
+    `<div style="display:flex;gap:0.5rem;align-items:baseline;margin-bottom:0.25rem;font-size:0.8rem">
+      <span style="font-weight:700;color:${rankColors[r]};min-width:50px">Rank ${r}</span>
+      <span style="color:var(--text-dim)">${rankGroups[r].join(', ')}</span>
+    </div>`
+  ).join('');
+  const physRow = a.physSkills
+    ? `<div style="display:flex;gap:0.5rem;align-items:baseline;margin-bottom:0.25rem;font-size:0.8rem">
+        <span style="font-weight:700;color:var(--text-muted);min-width:50px">Physical</span>
+        <span style="color:var(--text-muted)">Athl ${a.physSkills.athletics} · End ${a.physSkills.endurance} · Perc ${a.physSkills.perception} <em>(from sleeve/state)</em></span>
+      </div>` : '';
+
+  // Stunt names lookup
+  const stuntNames = a.stuntIds.map(sid => {
+    for (const cat of Object.values(STUNTS)) {
+      const st = cat.find(s => s.id === sid);
+      if (st) return st.name;
+    }
+    return sid;
+  });
+
+  // Aspect rows
+  const aspectLabels = ['A — Ambition','B — Belief','C — Connection','D — Disadvantage','E — Expertise'];
+  const aspectRows = a.aspects.map((asp, i) =>
+    `<div style="display:flex;gap:0.5rem;align-items:baseline;margin-bottom:0.3rem;font-size:0.8rem">
+      <span style="font-weight:700;color:var(--accent);min-width:80px">${aspectLabels[i]}</span>
+      <span style="color:var(--text-dim);font-style:italic">${asp}</span>
+    </div>`
+  ).join('');
+
+  // Flavor chips
+  const flavorChips = a.flavors.map(f =>
+    `<div style="background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:0.6rem 0.8rem;margin-bottom:0.5rem">
+      <div style="font-weight:700;font-size:0.82rem;color:var(--orange);margin-bottom:0.2rem">${f.name}</div>
+      <div style="font-size:0.77rem;color:var(--text-dim)">${f.desc}</div>
+    </div>`
+  ).join('');
+
+  // Gear list
+  const gearList = a.gear.map(g => `<div style="font-size:0.78rem;color:var(--text-dim);padding:0.15rem 0">&#x25B8; ${g}</div>`).join('');
+
+  // House name
+  const houseObj = HOUSES.find(h => h.id === a.house);
+
   document.getElementById('archetype-detail').style.display = 'block';
   document.getElementById('archetype-content').innerHTML = `
-    <div style="font-size:1.3rem;margin-bottom:0.5rem">${a.icon} <strong>${a.label}</strong></div>
-    <p style="margin-bottom:1rem">${a.concept}</p>
-    <div class="summary-row"><span class="summary-key">Suggested State</span><span class="summary-val">${a.state}</span></div>
-    <div class="summary-row"><span class="summary-key">Skill Set</span><span class="summary-val">${a.skillset}</span></div>
-    <div class="summary-row"><span class="summary-key">Key Skills</span><span class="summary-val">${a.keySkills}</span></div>
-    <div class="summary-row"><span class="summary-key">Suggested Stunts</span><span class="summary-val">${a.stunts}</span></div>
-    <div class="summary-row"><span class="summary-key">Suggested House</span><span class="summary-val">${a.house}</span></div>
-    <div class="callout tip" style="margin-top:0.75rem"><strong>Tip:</strong> ${a.tip}</div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:1.25rem;margin-bottom:0.75rem">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.75rem;margin-bottom:0.75rem">
+        <div>
+          <div style="font-size:1.4rem;font-weight:800;color:var(--text)">${a.icon} ${a.label}</div>
+          <div style="font-size:0.82rem;color:var(--text-muted);margin-top:0.15rem">${a.tagline}</div>
+        </div>
+        <button class="btn btn-primary" onclick="applyArchetype('${id}')" style="white-space:nowrap">Apply to Sheet</button>
+      </div>
+      <p style="font-size:0.88rem;color:var(--text-dim);margin-bottom:0.75rem">${a.concept}</p>
+      <div style="background:var(--accent-dim);border-left:3px solid var(--accent);border-radius:0 4px 4px 0;padding:0.5rem 0.75rem;font-size:0.82rem;color:var(--text-dim)">
+        <strong style="color:var(--accent)">Crew Role:</strong> ${a.crewRole}
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:0.75rem">
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:1rem">
+        <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);font-weight:700;margin-bottom:0.6rem">Skill Spread (${a.skillset})</div>
+        ${skillRows}${physRow}
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:1rem">
+        <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);font-weight:700;margin-bottom:0.6rem">Sample Aspects (A–E)</div>
+        ${aspectRows}
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:0.75rem">
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:1rem">
+        <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);font-weight:700;margin-bottom:0.6rem">Suggested Stunts</div>
+        ${stuntNames.map(n => `<div style="font-size:0.82rem;font-weight:600;color:var(--text);padding:0.2rem 0">&#x25CF; ${n}</div>`).join('')}
+        <div style="font-size:0.76rem;color:var(--text-dim);margin-top:0.5rem;line-height:1.45">${a.stuntRationale}</div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:1rem">
+        <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);font-weight:700;margin-bottom:0.4rem">State</div>
+        <div style="font-size:0.82rem;color:var(--text-dim);margin-bottom:0.75rem">${a.stateLabel}</div>
+        <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);font-weight:700;margin-bottom:0.4rem">House</div>
+        <div style="font-size:0.82rem;color:var(--text-dim);margin-bottom:0.75rem">${a.houseLabel}</div>
+        <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);font-weight:700;margin-bottom:0.4rem">Starting Gear</div>
+        ${gearList}
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:0.75rem">
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:1rem">
+        <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);font-weight:700;margin-bottom:0.6rem">Character Directions</div>
+        ${flavorChips}
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:1rem">
+        <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);font-weight:700;margin-bottom:0.5rem">GM Tip</div>
+        <div style="font-size:0.82rem;color:var(--text-dim);line-height:1.5">${a.tip}</div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:0.25rem">
+      <button class="btn btn-primary" onclick="applyArchetype('${id}')" style="padding:0.65rem 2rem">
+        Apply "${a.label}" to Sheet — pre-fill all choices
+      </button>
+      <div style="font-size:0.72rem;color:var(--text-muted);margin-top:0.4rem">You can adjust everything after applying.</div>
+    </div>
   `;
+}
+
+function applyArchetype(id) {
+  const a = ARCHETYPES[id];
+
+  // Aspects A–E
+  const letters = ['a','b','c','d','e'];
+  letters.forEach((l, i) => {
+    const el = document.getElementById('aspect-' + l);
+    if (el && a.aspects[i]) el.value = a.aspects[i];
+  });
+
+  // State
+  selectState(a.state);
+
+  // Skill set (sets budget)
+  selectSkillset(a.skillset);
+
+  // Skills — clear all, then apply archetype spread
+  state.skillRanks = {};
+  SKILLS.forEach(sk => {
+    const container = document.getElementById('rank-btns-' + sk.id);
+    if (!container) return;
+    // re-render buttons cleared
+    const maxRank = state.skillsetBudget ? Math.max(...Object.keys(state.skillsetBudget).map(Number)) : 4;
+    let html = '';
+    for (let r = 1; r <= maxRank; r++) html += `<button class="rank-btn" onclick="setSkillRank('${sk.id}',${r})">${r}</button>`;
+    container.innerHTML = html;
+  });
+  for (const [skillId, rank] of Object.entries(a.skills)) {
+    state.skillRanks[skillId] = rank;
+    renderSkillRankButtons(skillId);
+  }
+  updateRankTracker();
+
+  // Physical skills
+  if (a.physSkills) {
+    const ath = document.getElementById('phys-athletics');
+    const end = document.getElementById('phys-endurance');
+    const per = document.getElementById('phys-perception');
+    if (ath) ath.value = a.physSkills.athletics || 0;
+    if (end) end.value = a.physSkills.endurance || 0;
+    if (per) per.value = a.physSkills.perception || 0;
+  }
+
+  // Stunts — clear all selections, apply archetype's (up to 3)
+  state.selectedStunts.forEach(sid => {
+    const el  = document.getElementById('stunt-' + sid);
+    const chk = document.getElementById('stunt-chk-' + sid);
+    if (el)  el.classList.remove('selected');
+    if (chk) chk.textContent = '';
+  });
+  state.selectedStunts.clear();
+  a.stuntIds.slice(0, 3).forEach(sid => {
+    state.selectedStunts.add(sid);
+    const el  = document.getElementById('stunt-' + sid);
+    const chk = document.getElementById('stunt-chk-' + sid);
+    if (el)  el.classList.add('selected');
+    if (chk) chk.textContent = '✓';
+  });
+  document.getElementById('stunt-count').textContent = state.selectedStunts.size;
+  const stuntNames = a.stuntIds.slice(0, 3).map(sid => {
+    for (const cat of Object.values(STUNTS)) {
+      const st = cat.find(s => s.id === sid);
+      if (st) return st.name;
+    }
+    return sid;
+  });
+  document.getElementById('selected-stunts-preview').textContent = stuntNames.join(', ') || 'None';
+
+  // House
+  selectHouse(a.house);
+
+  // Confirm
+  alert(`"${a.label}" applied! Aspects, skills, stunts, state, and house have been pre-filled.\n\nNavigate through each step to review and adjust.`);
 }
 
 // ===== STATE SELECTION =====
