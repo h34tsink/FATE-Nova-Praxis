@@ -1478,6 +1478,81 @@ const ARCHETYPES = {
   },
 };
 
+// ===== HIGH CONCEPTS =====
+const ARCHETYPE_CONCEPTS = {
+  soldier: [
+    { title:'The Expendable', desc:'Died on a mission. Got resleeved into a cheaper sleeve by House Tsarya to cut costs. The original crew never came back right. You\'re still figuring out if you did.' },
+    { title:'The Purifier Who Fell', desc:'Spent years in the movement, raging against Apotheosis — until a mortal wound made the choice for you. You can\'t unmake it. The old friends don\'t call anymore.' },
+    { title:'The Betrayed Centurion', desc:'Followed every order until you discovered your CO was staging apostate attacks to sell armor. You reported it. Nothing happened. Now you freelance for whoever the Coalition considers the enemy this week.' },
+    { title:'The Repeat Customer', desc:'KIA three times. Each restored backup was months old. You have gaps — stretches of your own life you don\'t remember. Whoever lived those gaps is still out there somewhere, in your old missions.' },
+    { title:'The Loyalist for Hire', desc:'Your House bled you dry for fifteen years. When the contract expired, you took everything you knew about how they operate and made yourself available to anyone willing to pay.' },
+    { title:'The Purifier\'s Weapon', desc:'You were the House\'s instrument for things they couldn\'t officially sanction. You were good at it. When the contracts dried up, the only skill you had left was the one they gave you.' },
+  ],
+
+  operator: [
+    { title:'The Ghost Who Deleted Themselves', desc:'Erased your own Coalition ID from the IRD, wiped your biometrics, vanished from official existence. You don\'t exist anymore. You\'re also extremely busy.' },
+    { title:'The Amnesiac Cleaner', desc:'House Silva reset clause operative. You wake after missions with no memory of what you did. You\'ve been reconstructing the last three years piece by piece. You don\'t like what you\'re finding.' },
+    { title:'The Memory Thief', desc:'You steal information — not from servers, but from people. Extracted mnemonically, sold to whoever asks. The Coalition calls it assault. You call it the most efficient intelligence gathering in the business.' },
+    { title:'The Embedded Asset', desc:'Three years inside House Kimura under a planted identity. You\'ve built real relationships, a real cover life, maybe a real self. You\'re no longer certain which side you actually work for.' },
+    { title:'The Selective Contractor', desc:'You only take contracts on people the Coalition officially protects for political reasons. You have a very specific list. You\'re about halfway through it.' },
+    { title:'The Relay', desc:'You don\'t work for anyone. You carry things — data, people, materials — between parties who can\'t be seen interacting. You know enough to burn six careers. That\'s what keeps you alive.' },
+  ],
+
+  face: [
+    { title:'The Ghost Diplomat', desc:'You\'re a SIM. You attend physical meetings as a ghosted ARO. Everyone assumes you\'re embodied. Nobody has noticed for two years. The day they do, you\'ll need three exit strategies you haven\'t built yet.' },
+    { title:'The Buried Praetorian', desc:'Decorated. Celebrated. Connected. Then you found out what the House actually does with the contracts you negotiated. You left. Now you broker information against them from the inside of their own network.' },
+    { title:'The Triple Agent', desc:'Three separate identities inside three separate Houses. Three long cons running simultaneously. You\'ve started forgetting which one reflects what you actually believe.' },
+    { title:'The Famous Face Problem', desc:'Former sensie star. Everyone knows you. Your past is leverage anyone can pull. You can\'t go anywhere without being recognized — which is simultaneously your most powerful social tool and your worst tactical liability.' },
+    { title:'The Apostate Diplomat', desc:'Coalition official by day. Underground intelligence contact by night. You\'ve been feeding classified data to apostate networks for four years. Nobody suspects the most visible person in any room.' },
+    { title:'The Living Debt Ledger', desc:'You know who owes what to whom across six Houses and thirty apostates. You\'ve never called in a favor you didn\'t need. The list of what you\'re owed is longer than most people\'s entire contact books.' },
+  ],
+
+  savant: [
+    { title:'The Accidental God', desc:'You found a backdoor in Kimura\'s mesh infrastructure during routine maintenance. You\'ve been quietly watching everything for six months. You haven\'t told anyone. You\'re not sure you should.' },
+    { title:'The Imprisoned Mind', desc:'You refuse to occupy a body on principle. Sleeving is imprisonment — you\'ve said it publicly. Now you\'re a SIM arguing for SIM rights inside a Coalition that barely tolerates your legal existence.' },
+    { title:'The Accidental Witness', desc:'You discovered an illegal fork of a dead person still running in Coalition storage — confused, fragmenting, slowly going mad. The Coalition says they shut it down. You can see the process still running.' },
+    { title:'The Poacher', desc:'Former Coalition IT security. You built the walls. You know exactly which ones have cracks, which are theater, and which nobody checks. You left because they stopped being worth protecting.' },
+    { title:'The Panopticon', desc:'You run a distributed esper surveillance network and sell the data to clients — including sometimes the people being surveilled, who usually pay the most. Everyone is a potential client. Nobody is safe.' },
+    { title:'The Mindset Artist', desc:'You don\'t hack systems for money. You do it for craft. You\'ve left calling cards in six House networks — invisible modifications that prove you were there. Someone is now hunting the signature.' },
+  ],
+
+  commander: [
+    { title:'The Twice-Dead Leader', desc:'Died twice in combat. Led from the front both times. Your crew follows you with something that stopped being professionalism three missions ago and started looking like faith. That terrifies you.' },
+    { title:'The Righteous Discharge', desc:'You refused an order you knew was a war crime. You were right. You were still discharged. The officer who gave the order has a promotion. You have a grudge and a slowly assembling crew.' },
+    { title:'The Double Handler', desc:'You run official missions for your House. You also run off-books operations for an apostate network. Neither side knows about the other. The cognitive dissonance is getting harder to manage.' },
+    { title:'The Evidence Builder', desc:'Your entire unit walked into a trap set by your own House. You\'re the only survivor. For two years you\'ve been building the case. You\'re almost ready to file it somewhere it can\'t be buried.' },
+    { title:'The Erased Architect', desc:'You planned the battle that secured your House\'s current political position. They rewrote the history credits. Now you contract for whoever wants to use your skills against the people who stole your name.' },
+    { title:'The Reluctant Warlord', desc:'You keep retiring. The work keeps finding you — old debts, old oaths, people from old units who have nowhere else to turn. You\'ve stopped pretending you won\'t come back.' },
+  ],
+
+  engineer: [
+    { title:'The Backdoor Installer', desc:'Former Kimura compiler designer. You know the backdoors built into half the equipment in Coalition space — because you installed them on spec. Someone is now using one of yours for something you didn\'t sanction.' },
+    { title:'The Shell Corporation Fleet', desc:'You operate a fleet of autonomous drones registered to a shell corporation registered to a subsidiary that technically doesn\'t exist. Technically legal. Technically.' },
+    { title:'The Quarantine Salvager', desc:'You work the edge of the Earth quarantine zone, pulling pre-Exodus tech from the cordon when the kill-sats aren\'t looking. Some of it shouldn\'t still be functional. Some of it shouldn\'t exist at all.' },
+    { title:'The Unlicensed Augmentor', desc:'You do augmentation work the Humanity Preservation Act specifically prohibits. Your clients are loyal, your rates are fair, and your waiting list is long. Your exposure risk is growing faster than the list.' },
+    { title:'The Whistleblower\'s Engineer', desc:'A CIST you installed is being used for something you didn\'t build it for, by someone who shouldn\'t have access. You\'ve been backtracing the use logs for three weeks. You don\'t like where the trail leads.' },
+    { title:'The Last Competent Person', desc:'Every crew, every House contract, every independent job — you end up being the one who actually keeps the equipment running. You\'ve started charging accordingly. They always pay, eventually.' },
+  ],
+
+  medic: [
+    { title:'The Incomplete Job', desc:'You were hired to erase a witness\'s memory of a House atrocity. You got to the procedure room. You couldn\'t finish. You faked the completion report. The client hasn\'t come for you yet. You\'re waiting.' },
+    { title:'The Forking Suspicion', desc:'One of your regular resleeving clients shows subtle variance between sessions — too small for a bad backup, too consistent for normal drift. You think they\'re running an illegal fork. They know you\'ve noticed.' },
+    { title:'The Experience Dealer', desc:'You extract and sell memories — illicit joy, filtered sensation, harvested trauma. Your clients can\'t access the real thing through legal channels. The Coalition considers this a serious crime. Business is excellent.' },
+    { title:'The Wrong Backup', desc:'Mid-resleeving, you realized the ego in the tank wasn\'t yours. Someone else is out there right now, living in your original mind. Someone deliberately swapped the backups. You need to know who. And why.' },
+    { title:'The Carrier', desc:'Every ego you\'ve reconstructed lives in you partially — fragments, borrowed instincts, echoes of other people\'s worst moments. You carry hundreds of partial persons. Sometimes they surface at inconvenient times.' },
+    { title:'The Institutional Memory', desc:'You\'ve resleeved the same crew members enough times that you know their baseline better than they do. You\'ve also noticed things they\'ve been trying to edit out. You haven\'t said anything yet.' },
+  ],
+
+  scout: [
+    { title:'The Route Seller', desc:'You know paths through every blockade in Coalition space. You cut most of them personally. You sell access to anyone who needs to move something the Coalition doesn\'t want moved, no questions asked.' },
+    { title:'The Sold-Out Pilot', desc:'Your route was clean. The ambush shouldn\'t have been possible. Someone with access to your nav data sold you out. You survived the wreck. You\'ve been looking for the leak ever since.' },
+    { title:'The Unmapped Cartographer', desc:'You\'ve personally logged three star systems that don\'t officially exist yet. Dalianis, Jinzhan, and Kimura all know you have the charts. They\'re all trying to reach you first. You\'re not rushing to answer.' },
+    { title:'The Fugitive Shepherd', desc:'You move apostates through Coalition checkpoints on routes the official charts call impassable. You\'ve never lost a passenger. The record is getting harder to maintain as the patrols adapt.' },
+    { title:'The Void Runner\'s Debt', desc:'You owe a passage favor to every faction that has let you cross their territory without shooting. The ledger is getting heavy. Someone has started calculating when to call it in.' },
+    { title:'The Last Run', desc:'One more job. You\'ve said that eight times. The jobs keep becoming "one more." You\'re starting to think you don\'t actually want to stop — you just want to believe you could.' },
+  ],
+};
+
 // ===== NAVIGATION =====
 function showSection(id) {
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
@@ -1610,6 +1685,22 @@ function selectArchetype(el, id) {
         <div style="font-size:0.82rem;color:var(--text-dim);line-height:1.5">${a.tip}</div>
       </div>
     </div>
+
+    ${(() => {
+      const concepts = ARCHETYPE_CONCEPTS[id] || [];
+      if (!concepts.length) return '';
+      const cards = concepts.map(c =>
+        `<div style="background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:0.75rem;cursor:default">
+          <div style="font-weight:700;font-size:0.82rem;color:var(--orange);margin-bottom:0.3rem">${c.title}</div>
+          <div style="font-size:0.78rem;color:var(--text-dim);line-height:1.5">${c.desc}</div>
+        </div>`
+      ).join('');
+      return `<div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:1rem;margin-bottom:0.75rem">
+        <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);font-weight:700;margin-bottom:0.1rem">High Concepts</div>
+        <div style="font-size:0.76rem;color:var(--text-muted);margin-bottom:0.75rem">Pick one as a starting seed. Riff, combine, or ignore entirely.</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6rem">${cards}</div>
+      </div>`;
+    })()}
 
     <div style="text-align:center;margin-top:0.25rem">
       <button class="btn btn-primary" onclick="applyArchetype('${id}')" style="padding:0.65rem 2rem">
