@@ -75,7 +75,7 @@ Answer concisely. Use **bold**, *italic*, \`code\`, and markdown tables for stru
     const embeds = gmResponseEmbed('Answer', result.output);
     // Override footer to not say "GM Only"
     for (const embed of embeds) {
-      embed.setFooter({ text: 'Powered by Claude' });
+      embed.setFooter({ text: 'Contextual' });
       embed.setColor(0x5865f2);
     }
     await interaction.editReply({ embeds });

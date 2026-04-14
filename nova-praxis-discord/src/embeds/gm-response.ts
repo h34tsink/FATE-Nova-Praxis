@@ -98,7 +98,7 @@ export function gmResponseEmbed(title: string, content: string): EmbedBuilder[] 
         .setTitle(title)
         .setDescription(formatted)
         .setColor(0xed4245)
-        .setFooter({ text: 'GM Only | Powered by Claude' })
+        .setFooter({ text: 'GM Only' })
     );
     return embeds;
   }
@@ -143,7 +143,7 @@ export function gmResponseEmbed(title: string, content: string): EmbedBuilder[] 
 
     if (i === 0) embed.setTitle(title);
     if (i === chunks.length - 1) {
-      embed.setFooter({ text: 'GM Only | Powered by Claude' });
+      embed.setFooter({ text: 'GM Only' });
     }
 
     embeds.push(embed);

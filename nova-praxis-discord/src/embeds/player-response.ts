@@ -28,7 +28,7 @@ export function stripGmContent(content: string): string {
 export function playerResponseEmbed(
   title: string,
   content: string,
-  footer = 'Powered by Claude'
+  footer = 'Contextual'
 ): EmbedBuilder[] {
   const embeds: EmbedBuilder[] = [];
   const formatted = formatForDiscord(stripGmContent(content));
@@ -82,7 +82,7 @@ export function playerResponseEmbed(
 
     if (i === 0) embed.setTitle(title);
     if (i === chunks.length - 1) {
-      embed.setFooter({ text: 'Powered by Claude' });
+      embed.setFooter({ text: 'Contextual' });
     }
 
     embeds.push(embed);

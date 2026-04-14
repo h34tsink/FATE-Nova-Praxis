@@ -25,22 +25,6 @@
         ]
       },
       {
-        "id": "c1dd2401ac2b422e",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "553ea18bd9620aa6",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          }
-        ]
-      },
-      {
         "id": "273a550fe679c898",
         "type": "tabs",
         "children": [
@@ -274,7 +258,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "553ea18bd9620aa6",
+  "active": "6330179318661a0d",
   "lastOpenFiles": [
     "Locations/Index.md.tmp.60012.1776024599711",
     "Locations/Index.md.tmp.60012.1776024596227",
