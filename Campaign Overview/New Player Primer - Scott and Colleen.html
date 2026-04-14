@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nova Praxis — Primer for Scott &amp; Colleen</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Share+Tech+Mono&display=swap');
+
+:root {
+  --bg: #0e1117;
+  --surface: #161b27;
+  --surface2: #1e2535;
+  --border: #2a3347;
+  --accent: #4fc3f7;
+  --accent2: #7c4dff;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --danger: #ef4444;
+  --success: #22c55e;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { background: var(--bg); }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  padding: 0;
+  margin: 0;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.page-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 48px 64px;
+}
+
+/* ── PAGE BREAKS ──────────────────────────── */
+h2 {
+  page-break-before: always;
+  break-before: page;
+}
+h2:first-of-type,
+.no-break {
+  page-break-before: avoid;
+  break-before: avoid;
+}
+
+/* ── COVER ────────────────────────────────── */
+.cover {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 48px;
+  background: var(--bg);
+  page-break-after: always;
+  break-after: page;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover::before {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(76,195,247,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cover-label {
+  font-size: 9pt;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.cover-title {
+  font-size: 36pt;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.cover-subtitle {
+  font-size: 15pt;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.cover-rule {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  margin-bottom: 32px;
+  border-radius: 2px;
+}
+
+.cover-tagline {
+  font-size: 11pt;
+  color: var(--text-muted);
+  max-width: 480px;
+  line-height: 1.7;
+  font-style: italic;
+  border-left: 3px solid var(--accent2);
+  padding-left: 20px;
+}
+
+.cover-footer {
+  position: absolute;
+  bottom: 48px;
+  left: 48px;
+  right: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 8pt;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+/* ── TYPOGRAPHY ────────────────────────────── */
+h1 {
+  font-size: 22pt;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 8px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 15pt;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 20px;
+  padding-top: 40px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+  letter-spacing: 0.02em;
+}
+
+h3 {
+  font-size: 11pt;
+  font-weight: 600;
+  color: var(--text);
+  margin: 28px 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+h4 {
+  font-size: 10.5pt;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 24px 0 8px;
+}
+
+p {
+  margin: 0 0 12px;
+  color: var(--text);
+}
+
+strong { color: var(--text); font-weight: 600; }
+em { color: var(--text-muted); font-style: italic; }
+code {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 9pt;
+  color: var(--accent);
+  background: var(--surface2);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--accent);
+}
+
+a:hover { color: var(--accent2); border-bottom-color: var(--accent2); }
+
+/* ── BLOCKQUOTE ────────────────────────────── */
+blockquote {
+  border-left: 3px solid var(--accent2);
+  background: var(--surface);
+  margin: 16px 0 20px;
+  padding: 14px 20px;
+  border-radius: 0 6px 6px 0;
+}
+
+blockquote p {
+  color: var(--text);
+  font-style: italic;
+  margin: 0;
+  font-size: 10.5pt;
+  line-height: 1.65;
+}
+
+/* ── CALLOUT ─────────────────────────────── */
+.callout {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin: 16px 0 20px;
+}
+
+.callout p:last-child { margin-bottom: 0; }
+
+.callout-title {
+  font-size: 9pt;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* ── LISTS ────────────────────────────────── */
+ul {
+  margin: 0 0 14px 0;
+  padding-left: 20px;
+}
+
+ul li {
+  margin: 4px 0;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+ul li::marker { color: var(--accent); }
+
+ul.checklist {
+  list-style: none;
+  padding-left: 4px;
+}
+
+ul.checklist li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+ul.checklist li:last-child { border-bottom: none; }
+
+ul.checklist input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  accent-color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* ── TABLES ────────────────────────────────── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0 20px;
+  font-size: 9.5pt;
+  page-break-inside: avoid;
+}
+
+thead tr {
+  background: var(--surface2);
+}
+
+th {
+  text-align: left;
+  padding: 8px 12px;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 8.5pt;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-bottom: 2px solid var(--border);
+}
+
+td {
+  padding: 7px 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  vertical-align: top;
+}
+
+tr:last-child td { border-bottom: none; }
+
+tbody tr:nth-child(even) td {
+  background: rgba(255,255,255,0.02);
+}
+
+/* ── SUGGESTION CARDS ────────────────────── */
+.suggestion-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent2);
+  border-radius: 6px;
+  padding: 20px 24px;
+  margin: 16px 0 24px;
+  page-break-inside: avoid;
+}
+
+.suggestion-card h4 {
+  margin-top: 0;
+  color: var(--accent2);
+}
+
+.suggestion-card .tagline {
+  font-size: 9.5pt;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+/* ── CTA BOX ─────────────────────────────── */
+.cta {
+  background: linear-gradient(135deg, rgba(76,195,247,0.08), rgba(124,77,255,0.08));
+  border: 1px solid var(--accent2);
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin: 20px 0 24px;
+  text-align: center;
+}
+
+.cta .cta-label {
+  font-size: 9pt;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.cta .cta-url {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 14pt;
+  color: var(--accent);
+  font-weight: 600;
+  display: block;
+  margin: 4px 0 8px;
+}
+
+.cta p {
+  font-size: 10pt;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ── HORIZONTAL RULE ─────────────────────── */
+hr { display: none; }
+
+/* ── PRINT OVERRIDES ─────────────────────── */
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body {
+    background: var(--bg) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .page-wrap {
+    padding: 40px 48px 56px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="cover-label">Player Handout — Scott &amp; Colleen</div>
+  <div class="cover-title">Nova Praxis<br>Onboarding</div>
+  <div class="cover-subtitle">Welcome to the Table</div>
+  <div class="cover-rule"></div>
+  <div class="cover-tagline">
+    A transhuman future built on corporate Houses, backed-up minds, and quiet wars.
+    Your character comes from the same era as the rest of the crew — early 21st century —
+    and joins them in Session 0+. The rest is ours to build together.
+  </div>
+  <div class="cover-footer">
+    <span>Nova Praxis — FATE Edition</span>
+    <span>Session 0+ Onboarding</span>
+    <span>For Scott &amp; Colleen</span>
+  </div>
+</div>
+
+<div class="page-wrap">
+
+<h1>Welcome, Scott &amp; Colleen</h1>
+<p>This primer gets you oriented on the world, the game, and your character — nothing more. The existing crew has eight sessions under their belts, but you're walking into Session 0+ together with plenty of room to shape who you are. Don't stress the mechanics: we have a character creator that handles the math for you.</p>
+
+<div class="cta">
+  <div class="cta-label">Character Creator</div>
+  <span class="cta-url">shadowsynth.treppa.io</span>
+  <p>Use this to build your character. It walks you through every step, calculates costs, and validates the rules. Bring your draft to Session 0+ — we'll refine it together.</p>
+  <p style="margin-top: 10px;"><strong>Deep dive:</strong> <code>Nova-Praxis_CharacterCreationGuide.pdf</code> (in the <code>Characters/</code> folder of the shared vault) is the official step-by-step. Skim it if you want the rules-level detail — the creator follows it closely.</p>
+</div>
+
+<h2>The World in Ninety Seconds</h2>
+
+<p><strong>Nova Praxis</strong> is a transhuman, post-scarcity future. Humanity survived the Singularity — barely — and now lives scattered across the solar system and a handful of exoplanets. The old nations are gone. In their place, <strong>six corporate Houses</strong> run everything, with a thin democratic veneer called the <strong>Coalition</strong> papering over the cracks. Below both, <strong>Apostates</strong> live off-grid: black marketeers, rebels, refugees, idealists.</p>
+
+<p>Your mind can be digitized, backed up, copied into new bodies. Money barely exists; reputation is currency. The Houses cooperate publicly and sabotage each other constantly in a secret <strong>Shadow War</strong>. Every job the crew takes has two layers: the obvious contract and the factional agenda underneath.</p>
+
+<blockquote>
+<p>Your characters come from the same era and place as the existing crew — roughly our present. How you arrived in this century, and why, is part of what Session 0+ will establish together.</p>
+</blockquote>
+
+<h3>Transhumanity — The Three States</h3>
+<p>Every character picks one of three <strong>States</strong>. This is the biggest decision you'll make. It defines your relationship with your own body.</p>
+
+<table>
+<thead><tr><th>State</th><th>What It Means</th><th>Feel</th></tr></thead><tbody>
+<tr><td><strong>Pure</strong></td><td>Original body, never digitized</td><td>Principled, off-grid, unpredictable. +2 Refresh and extra physical ranks — mechanically rewarding.</td></tr>
+<tr><td><strong>Sleeved</strong></td><td>Digitized mind downloaded into a new body (synthetic or biological)</td><td>Most common. Upgradeable, swappable, flexible. Buy the body you want.</td></tr>
+<tr><td><strong>SIM</strong></td><td>No body — pure software, works through drones and the mesh</td><td>Digital ghost. Lives in virtual spaces. Native to the Extranet.</td></tr>
+</tbody></table>
+
+<p>Key terms you'll hear: <strong>Apotheosis</strong> (the procedure that digitizes a mind), <strong>Mnemonic Core</strong> (the physical backup of a digitized mind — if it dies, you're gone), <strong>Fork</strong> (a copy of a mind, now a separate person), <strong>Pure</strong> (people who never underwent Apotheosis). Identity is an operational question here, not a philosophical one.</p>
+
+<h2>The Game System in One Page</h2>
+
+<p>Nova Praxis runs on <strong>FATE</strong>. The creator handles the math, but you should know the feel.</p>
+
+<h3>The Core Roll</h3>
+<ul>
+<li>Roll <strong>4 Fudge dice</strong> (each shows +1, 0, or -1)</li>
+<li>Add your relevant <strong>Skill</strong></li>
+<li>Beat the difficulty. Margin = <strong>Shifts</strong> (bigger shifts = better outcome)</li>
+</ul>
+
+<h3>Aspects — The Heart of FATE</h3>
+<p>Aspects are short phrases that describe something true about your character or the scene. Like <em>"Can't Stop Pulling at Loose Threads"</em> or <em>"This Hallway Is On Fire."</em> They do two things:</p>
+<ul>
+<li><strong>Invoke</strong> — spend a Fate Point for +2 or a reroll when an Aspect helps you</li>
+<li><strong>Compel</strong> — the GM offers you a Fate Point to let your Aspect make your life harder</li>
+</ul>
+<p>Good Aspects are <strong>double-edged</strong>: as useful when invoked as they are interesting when compelled. That tension is the whole game.</p>
+
+<h3>Stress &amp; Consequences</h3>
+<p>Take a hit, you can soak it with <strong>stress</strong> (clears after the scene) or take a <strong>consequence</strong> (a negative Aspect that sticks around). Run out of both and you're <strong>Taken Out</strong> — or you can <strong>Concede</strong> before that and keep narrative control over what happens to your character.</p>
+
+<h3>The Ladder</h3>
+<p>Skills and difficulties run from <strong>Mediocre (0)</strong> up through <strong>Average (+1), Fair (+2), Good (+3), Great (+4), Superb (+5)</strong>, and beyond. Most challenges land in the +2 to +4 range.</p>
+
+<h2>Building Your Character</h2>
+
+<p>The creator at <code>shadowsynth.treppa.io</code> walks you through all eight steps from the official guide. Here's the shape so you know what to expect:</p>
+
+<h3>1. Write Your Aspects (ABCDE)</h3>
+<p><strong>Ambition</strong> (your drives), <strong>Belief</strong> (your values), <strong>Connection</strong> (person, place, or event that shaped you), <strong>Disadvantage</strong> (the flaw that bites), <strong>Expertise</strong> (your methods). Most people also write a <strong>High Concept</strong> up top — a one-line phrase of who you are. Write Aspects double-edged. Rough is fine.</p>
+
+<h3>2. Pick Your State</h3>
+<p>Pure, Sleeved, or SIM. Biggest choice. Shapes everything downstream.</p>
+
+<h3>3. Choose a Skill Spread</h3>
+<p>Three preset shapes: <strong>Specialist</strong> (one standout at +5), <strong>Expert</strong> (well-rounded, tops at +4), or <strong>Generalist</strong> (broad, nothing above +3). Pick whichever matches your concept.</p>
+
+<h3>4. Pick 3 Stunts</h3>
+<p>Stunts are character-defining abilities. Favorites: <strong>Savant</strong> (unlocks hacking with SINC), <strong>Licensed</strong> (carry restricted gear legally), <strong>Drone-Jock</strong> (cheaper, better drones), <strong>Specialty Aspect</strong> (free invoke on a specific skill use), <strong>Battlefield Command</strong>.</p>
+
+<h3>5. Pick Your Allegiance</h3>
+<p><strong>House</strong> or <strong>Apostate</strong>. A House member gets item discounts (-1 Cost on that House's specialty gear) and access to their networks. An Apostate gets the free <strong>Non-Citizen</strong> stunt and strong ties to the black market, but no House discounts. This is a roleplay pivot as much as a mechanical one — which side do you want your character coming in from?</p>
+
+<h3>6. Calculate Rep-Rating</h3>
+<p>Starts at House Networking +2. It's your "reputation currency" — how much weight you pull with contacts, factions, and black-market brokers. You also get an immediate <strong>Bump</strong> (a one-time narrative favor) equal to your Diplomacy. The creator handles the math.</p>
+
+<h3>7. Buy Starting Gear</h3>
+<p>Gear is bought by <strong>Cost</strong>, not credits. Your first item caps at <strong>MAX(Assets, Rep-Rating) + 2</strong>. Each subsequent purchase is one Cost lower. Restricted items cap at Assets + 1 (or you need the Licensed stunt to go past that). Sleeved characters also pick their sleeve here — Alpha Bio (budget) through Epsilon Bio (top-tier), or a Cybersleeve if you want something harder-edged.</p>
+
+<h3>8. Stress Boxes</h3>
+<p>Each stress track (Physical, Mental, System) starts with 2 boxes and gains more from relevant skill ranks. The creator calculates this automatically. You'll feel it most when someone hits you.</p>
+
+<div class="callout">
+<div class="callout-title">Don't Over-Optimize</div>
+<p>Mechanically optimal characters are fine, but the fun here is the <em>friction</em> — the compels, the ethical binds, the moments where your character's flaw matters. Pick Aspects that will get you into trouble. That's where the game lives.</p>
+</div>
+
+<h2>The Crew You're Joining</h2>
+<p>Five operators with eight sessions under their belt. You'll meet them in Session 0+.</p>
+
+<table>
+<thead><tr><th>Who</th><th>State</th><th>Role</th></tr></thead><tbody>
+<tr><td><strong>Aeddarius Crucial</strong></td><td>Pure</td><td>Strategic commander, political operator</td></tr>
+<tr><td><strong>Grace Pryzbylski</strong></td><td>SIM</td><td>Digital recon, drone fleet operator</td></tr>
+<tr><td><strong>Dustin "Grift" Halloway</strong></td><td>Sleeved</td><td>Systems infiltrator, social engineer</td></tr>
+<tr><td><strong>Azaria Dawson</strong></td><td>Sleeved</td><td>Celebrity operative, face</td></tr>
+<tr><td><strong>Kallius</strong></td><td>Sleeved</td><td>Memory merchant, mnemonic specialist</td></tr>
+</tbody></table>
+
+<h3>What the Crew Doesn't Have</h3>
+<p>Great coverage for hacking, social, mnemonic, and command work. Thin in these areas:</p>
+<ul>
+<li><strong>Frontline physical presence.</strong> Nobody fights their way through a door well.</li>
+<li><strong>Stealth.</strong> They hack around locks, they don't slip past them.</li>
+<li><strong>Demolitions / combat engineering.</strong> Tactical options stop where hacking does.</li>
+<li><strong>Pilot.</strong> They have a battle cruiser and no one with Pilot +4 to fly it right.</li>
+<li><strong>Medical / biological expertise.</strong> Nobody on the crew patches bodies well.</li>
+</ul>
+
+<p>These are gaps, not requirements. Play what sounds fun — some overlap with the existing crew is fine, and often makes for better table dynamics.</p>
+
+<h2>Character Ideas</h2>
+
+<p>Five sparks to riff on. Steal freely, mash them together, or toss them and build something we haven't thought of.</p>
+
+<div class="suggestion-card">
+<h4>1. The Medic — "The Dead Don't Stay Dead On My Watch"</h4>
+<p class="tagline">Combat surgeon / resleeving specialist. Fills the crew's biggest gap.</p>
+<p><strong>Concept:</strong> A trauma surgeon from the old world who now specializes in keeping bodies alive long enough to download someone else out of them. Field medicine, mnemonic transfer under fire, and the quiet certainty that death is a paperwork problem.</p>
+<p><strong>State:</strong> Sleeved (medical-grade bio sleeve)</p>
+<p><strong>Signature Skills:</strong> Mnemonics +4, Education +4, Insight +3, H.Engineering +3</p>
+<p><strong>Stunts:</strong> Licensed (medical gear), Specialty Aspect (triage under fire), Skilled +1</p>
+<p><strong>Sample Disadvantage:</strong> <em>"I've Never Lost a Patient — And I Never Will"</em> (the obsession that will cost them)</p>
+<p><strong>Why it fits:</strong> The crew takes damage they can't clean up cleanly. A real medic changes what kinds of jobs they can even attempt, and Mnemonics overlap with Kallius creates rich professional tension — two specialists, very different philosophies about bodies and minds.</p>
+</div>
+
+<div class="suggestion-card">
+<h4>2. The Wrecker — "I Make Buildings Forget They're Buildings"</h4>
+<p class="tagline">Demolitions specialist and combat engineer. Tactical game-changer.</p>
+<p><strong>Concept:</strong> Controlled demolition was an art form before the Singularity — specialists who could drop a forty-story tower into its own footprint without scratching the building next door. That precision translates well to the Shadow War. They don't blow things up. They <em>un-build</em> them.</p>
+<p><strong>State:</strong> Sleeved or Pure</p>
+<p><strong>Signature Skills:</strong> Demolitions +4, H.Engineering +4, Perception +3, Stealth +3</p>
+<p><strong>Stunts:</strong> Licensed (explosives), Specialty Aspect (shaped charges), Transhumanist</p>
+<p><strong>Sample Disadvantage:</strong> <em>"Every Room I Enter, I'm Already Calculating How to Bring It Down"</em></p>
+<p><strong>Why it fits:</strong> Opens entire new tactical avenues — the crew can literally change the shape of a scene. Creates beautiful moments where the solution to a problem is removing the floor. Also fits characters who think like engineers, not shooters.</p>
+</div>
+
+<div class="suggestion-card">
+<h4>3. The Pathfinder — "Old Wrecks Tell Better Stories Than New Maps"</h4>
+<p class="tagline">Salvage archaeologist / derelict specialist. Unique investigator angle.</p>
+<p><strong>Concept:</strong> They made their name working dead stations and abandoned habitats — reading the bones of places that failed, finding what was left behind and what was taken. In a century built on cover-ups and sealed-off history, that's a rare, valuable skill. Part historian, part breaking-and-entering expert, part ghost-hunter.</p>
+<p><strong>State:</strong> Pure or Sleeved</p>
+<p><strong>Signature Skills:</strong> Research +4, Education +4, Stealth +4, Perception +3, H.Engineering +2</p>
+<p><strong>Stunts:</strong> Specialty Aspect (in a derelict), Skilled +1 (Research), Refreshed</p>
+<p><strong>Sample Disadvantage:</strong> <em>"I Can't Leave a Door Un-Opened"</em></p>
+<p><strong>Why it fits:</strong> The crew hits ruins, cover-ups, and sealed spaces constantly — and nobody is actually good at reading them. A Pathfinder sees what the crew misses: structural tells, abandoned projects, the story the architecture is trying to hide. Strong fit for the current Chimera arc.</p>
+</div>
+
+<div class="suggestion-card">
+<h4>4. The Pure Brawler — "Everything I Need, I Brought With Me"</h4>
+<p class="tagline">Old-school fighter. No augments, no sleeve, no apologies.</p>
+<p><strong>Concept:</strong> A fighter from the old world — boxer, MMA, bare-knuckle, something with a long lineage of hurting people honestly. They refused Apotheosis on principle. In a century of souped-up cybersleeves and pre-loaded combat reflexes, they're the one who hits back with nothing but intent, training, and a very strong jaw.</p>
+<p><strong>State:</strong> Pure (+2 Refresh, extra physical ranks, free Carpe Diem stunt)</p>
+<p><strong>Signature Skills:</strong> Melee +4, Endurance +4, Athletics +4, Intimidation +3, Insight +3</p>
+<p><strong>Stunts:</strong> Specialty Aspect (in a fight), Refreshed, Skilled +1</p>
+<p><strong>Sample Disadvantage:</strong> <em>"They Keep Expecting Me to Upgrade"</em></p>
+<p><strong>Why it fits:</strong> The crew is badly under-armed physically. A Pure brawler brings real muscle with high Refresh, which is mechanically generous. Pairs thematically with Aeddarius (also Pure) — two very different Pures means the table gets to explore what that choice actually means from two angles.</p>
+</div>
+
+<div class="suggestion-card">
+<h4>5. The Shade — "I've Been in Every Room You'll Ever Try to Enter"</h4>
+<p class="tagline">Virtuality-native infiltrator. Different flavor of digital specialist.</p>
+<p><strong>Concept:</strong> Someone who lived half their life in virtual reality before anyone else thought that was normal. Pro gamer, sim-ops pilot, VR architect — whatever the era called it. Now they move through virtualities like [[Locations/Virtual Realities/Stygia|Stygia]] and [[Locations/Virtual Realities/The Crossroads|The Crossroads]] as natives, running infiltrations in spaces where Grace's drone fleet can't follow.</p>
+<p><strong>State:</strong> SIM or Sleeved (with heavy mesh augs)</p>
+<p><strong>Signature Skills:</strong> SINC +4, S.Engineering +4, Guile +3, Insight +3, Stealth +3</p>
+<p><strong>Stunts:</strong> Savant (required for SINC), Specialty Aspect (in a virtuality), SIM-stunt if you go SIM</p>
+<p><strong>Sample Disadvantage:</strong> <em>"The Real World Has Terrible Rendering"</em></p>
+<p><strong>Why it fits:</strong> Grace owns the mesh and drone side. This character owns the <em>virtualities</em> — which is where a lot of Nova Praxis's social power actually lives. Different skillset, different arena. Two digital specialists working different layers of the same stack creates fun collaboration, not redundancy.</p>
+</div>
+
+<h2>What's Happened So Far — Light Spoilers</h2>
+<p>You don't need to know any of this to play. It's just so you're not lost when the crew talks at the table.</p>
+<ul>
+<li>The crew has been running deniable jobs for a patron whose identity they don't fully know</li>
+<li>They've survived incidents on Europa Station, a SIM siege, and a corporate cover-up</li>
+<li>A shadowy faction called <strong>Chimera</strong> is orchestrating events behind the scenes</li>
+<li>A woman named <strong>Valare</strong> holds critical intel — her backup fork is alive, traumatized, and uncooperative</li>
+<li>An operative named <strong>Kestrel</strong> is cleaning up witnesses — the crew is on that list</li>
+<li>The crew has a battle cruiser, a safe house, and too many enemies</li>
+</ul>
+<p>Session 0+ will establish how your characters connect to this crew. We'll do that at the table.</p>
+
+<h2>Session 0+ Checklist</h2>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Read this primer</li>
+<li><input type="checkbox" disabled> Visit <code>shadowsynth.treppa.io</code> and poke around</li>
+<li><input type="checkbox" disabled> (Optional) Skim <code>Nova-Praxis_CharacterCreationGuide.pdf</code> for the rules-level walkthrough</li>
+<li><input type="checkbox" disabled> Pick a State (Pure / Sleeved / SIM) — or bring 2 options</li>
+<li><input type="checkbox" disabled> Decide an Allegiance lean (House / Apostate) — can still flex at the table</li>
+<li><input type="checkbox" disabled> Skim the five character ideas — steal, mix, or ignore</li>
+<li><input type="checkbox" disabled> Draft a High Concept and a Disadvantage Aspect — rough is fine</li>
+<li><input type="checkbox" disabled> Bring it all to the table. We build the rest together.</li>
+</ul>
+
+<div class="callout">
+<div class="callout-title">If You Remember Nothing Else</div>
+<p>The world is transhuman, corporate, surveillance-heavy, and morally gray. Your character picks a State, rolls 4dF + skill, and lives or dies by the Aspects they wrote. The creator handles the numbers. <strong>You bring the person.</strong></p>
+</div>
+
+</div>
+
+</body>
+</html>
