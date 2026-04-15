@@ -13,7 +13,7 @@ const SYSTEM_PROMPT = `You are a Nova Praxis TTRPG assistant embedded in a Disco
 
 const TIER_OPTIONS: Record<ModelTier, { num_predict: number; temperature: number; num_ctx: number }> = {
   fast:    { num_predict: 1024,  temperature: 0.4, num_ctx: 8192  },
-  quality: { num_predict: 2048,  temperature: 0.7, num_ctx: 32768 },
+  quality: { num_predict: 2048,  temperature: 0.7, num_ctx: 16384 },
 };
 
 async function chat(
@@ -33,7 +33,7 @@ async function chat(
         { role: 'system', content: system },
         { role: 'user',   content: user   },
       ],
-      options: { flash_attn: true, ...options },
+      options: { flash_attn: true, think: false, ...options },
     }),
   });
 

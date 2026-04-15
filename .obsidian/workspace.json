@@ -25,6 +25,22 @@
         ]
       },
       {
+        "id": "a85c181a295bcd2e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b8d37a649357caff",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      },
+      {
         "id": "273a550fe679c898",
         "type": "tabs",
         "children": [
@@ -111,7 +127,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 291.5
+    "width": 347.5
   },
   "right": {
     "id": "2808606aa7204ff9",
@@ -258,8 +274,10 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "6330179318661a0d",
+  "active": "b8d37a649357caff",
   "lastOpenFiles": [
+    "nova-praxis-discord/src/claude/api.ts.tmp.50720.1776256756630",
+    "Characters/Named NPCs/Kestrel.md",
     "Campaign Overview/New Player Primer - Scott and Colleen.html.tmp.43564.1776203413340",
     "Campaign Overview/New Player Primer - Scott and Colleen.html.tmp.43564.1776203401785",
     "Campaign Overview/New Player Primer - Scott and Colleen.html.tmp.43564.1776203371630",
@@ -271,7 +289,6 @@
     "Locations/Index.md.tmp.60012.1776024589918",
     "Locations/Index.md.tmp.60012.1776024585776",
     "Locations/Virtual Realities.md.tmp.60012.1776024580523",
-    "Locations/Index.md.tmp.60012.1776024573205",
     "Rules and Mechanics/Rules Quick Reference - Unified.md",
     "Campaign Overview/Cold Start Syndicate - Audio Briefing (Sessions 1-8).md",
     "Sessions/Session 0/Session 0 - Teaching Scenario (FATE Migration).md",
@@ -305,7 +322,6 @@
     "Locations/Mercurian Tunnel System.md",
     "Glossary/APEX Reactor.md",
     "Characters/Named NPCs/Seren.md",
-    "Glossary/Centurion.md",
     "Locations/Colonized Universe.canvas",
     "Untitled.canvas",
     "Sessions/Session 6/Untitled.canvas",
