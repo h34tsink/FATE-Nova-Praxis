@@ -1,6 +1,6 @@
 import { SlashCommandBuilder, ChatInputCommandInteraction, MessageFlags } from 'discord.js';
 import { isGM } from '../middleware/permissions.js';
-import { callApi } from '../claude/api.js';
+import { streamApi } from '../claude/api.js';
 import { buildRecapContext } from '../claude/context.js';
 import { gmResponseEmbed } from '../embeds/gm-response.js';
 import { playerResponseEmbed } from '../embeds/player-response.js';
@@ -18,14 +18,15 @@ export async function execute(interaction: ChatInputCommandInteraction) {
 
   try {
     const prompt = await buildRecapContext();
-    const result = await callApi(prompt, 'fast');
+    const result = await streamApi(prompt, 'fast', undefined, async (text) => {
+      const embeds = gm ? gmResponseEmbed('Recap', text) : playerResponseEmbed('Recap', text);
+      await interaction.editReply({ embeds }).catch(() => {});
+    });
     if (gm) {
       const customId = cacheForShare('Recap', result.output, interaction.user.id);
-      const embeds = gmResponseEmbed('Recap', result.output);
-      await interaction.editReply({ embeds, components: [shareButton(customId)] });
+      await interaction.editReply({ embeds: gmResponseEmbed('Recap', result.output), components: [shareButton(customId)] });
     } else {
-      const embeds = playerResponseEmbed('Recap', result.output);
-      await interaction.editReply({ embeds });
+      await interaction.editReply({ embeds: playerResponseEmbed('Recap', result.output) });
     }
   } catch (err) {
     await interaction.editReply({

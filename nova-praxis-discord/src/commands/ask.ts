@@ -1,6 +1,6 @@
 import { SlashCommandBuilder, ChatInputCommandInteraction, MessageFlags } from 'discord.js';
 import { requireGM } from '../middleware/permissions.js';
-import { callApi, extractSearchTerms } from '../claude/api.js';
+import { streamApi, extractSearchTerms } from '../claude/api.js';
 import { searchGameData, searchGlossary, searchRules, searchSessions, searchVaultNotes, getEntityCard, getEntityCardByName, listEntityCards, type GlossaryRow } from '../db/queries.js';
 import { gmResponseEmbed } from '../embeds/gm-response.js';
 
@@ -142,9 +142,10 @@ Answer concisely and directly. If this is about an NPC, use whatever context is 
 
 Format for Discord: use **bold**, *italic*, \`code\`, and > blockquotes. Use markdown tables for structured data. Keep it scannable.`;
 
-    const result = await callApi(prompt, 'quality');
-    const embeds = gmResponseEmbed('Ask', result.output);
-    await interaction.editReply({ embeds });
+    const result = await streamApi(prompt, 'quality', undefined, async (text) => {
+      await interaction.editReply({ embeds: gmResponseEmbed('Ask', text) }).catch(() => {});
+    });
+    await interaction.editReply({ embeds: gmResponseEmbed('Ask', result.output) });
   } catch (err) {
     await interaction.editReply({
       content: `Error: ${err instanceof Error ? err.message : 'unknown'}`,

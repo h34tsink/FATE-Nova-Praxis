@@ -1,6 +1,6 @@
 import { SlashCommandBuilder, ChatInputCommandInteraction, TextChannel, MessageFlags } from 'discord.js';
 import { requireGM } from '../middleware/permissions.js';
-import { callApi } from '../claude/api.js';
+import { streamApi } from '../claude/api.js';
 import { buildNpcContext } from '../claude/context.js';
 import { gmResponseEmbed } from '../embeds/gm-response.js';
 import { sendAsNpc } from '../webhooks.js';
@@ -51,7 +51,9 @@ export async function execute(interaction: ChatInputCommandInteraction) {
 
   try {
     const prompt = await buildNpcContext(token, situation);
-    const result = await callApi(prompt, 'quality');
+    const result = await streamApi(prompt, 'quality', undefined, async (text) => {
+      await interaction.editReply({ embeds: gmResponseEmbed(`NPC: ${token}`, text) }).catch(() => {});
+    });
 
     const { dialogue, gmNotes } = splitDialogueAndNotes(result.output);
     const channel = interaction.channel;

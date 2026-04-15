@@ -1,6 +1,6 @@
 import { SlashCommandBuilder, ChatInputCommandInteraction, MessageFlags } from 'discord.js';
 import { requireGM } from '../middleware/permissions.js';
-import { callApi } from '../claude/api.js';
+import { streamApi } from '../claude/api.js';
 import { buildGmStartContext } from '../claude/context.js';
 import { gmResponseEmbed } from '../embeds/gm-response.js';
 import { cacheForShare } from '../share-cache.js';
@@ -21,10 +21,11 @@ export async function execute(interaction: ChatInputCommandInteraction) {
 
   try {
     const prompt = await buildGmStartContext(sessionNum);
-    const result = await callApi(prompt, 'quality', 4096);
+    const result = await streamApi(prompt, 'quality', 4096, async (text) => {
+      await interaction.editReply({ embeds: gmResponseEmbed('Session Bootstrap', text) }).catch(() => {});
+    });
     const customId = cacheForShare('Session Bootstrap', result.output, interaction.user.id);
-    const embeds = gmResponseEmbed('Session Bootstrap', result.output);
-    await interaction.editReply({ embeds, components: [shareButton(customId)] });
+    await interaction.editReply({ embeds: gmResponseEmbed('Session Bootstrap', result.output), components: [shareButton(customId)] });
   } catch (err) {
     await interaction.editReply({
       content: `Claude CLI error: ${err instanceof Error ? err.message : 'unknown'}`,

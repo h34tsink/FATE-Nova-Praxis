@@ -1,5 +1,5 @@
 import { SlashCommandBuilder, ChatInputCommandInteraction } from 'discord.js';
-import { callApi } from '../claude/api.js';
+import { streamApi } from '../claude/api.js';
 import { searchGameData, searchGlossary, searchRules } from '../db/queries.js';
 import { gmResponseEmbed } from '../embeds/gm-response.js';
 
@@ -71,13 +71,13 @@ ${question}
 
 Answer concisely. Use **bold**, *italic*, \`code\`, and markdown tables for structured data. Keep it scannable.`;
 
-    const result = await callApi(prompt, 'fast');
+    const result = await streamApi(prompt, 'fast', undefined, async (text) => {
+      const embeds = gmResponseEmbed('Answer', text);
+      for (const embed of embeds) { embed.setFooter({ text: 'Contextual' }); embed.setColor(0x5865f2); }
+      await interaction.editReply({ embeds }).catch(() => {});
+    });
     const embeds = gmResponseEmbed('Answer', result.output);
-    // Override footer to not say "GM Only"
-    for (const embed of embeds) {
-      embed.setFooter({ text: 'Contextual' });
-      embed.setColor(0x5865f2);
-    }
+    for (const embed of embeds) { embed.setFooter({ text: 'Contextual' }); embed.setColor(0x5865f2); }
     await interaction.editReply({ embeds });
   } catch (err) {
     await interaction.editReply({

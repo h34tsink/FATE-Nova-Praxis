@@ -25,22 +25,6 @@
         ]
       },
       {
-        "id": "a85c181a295bcd2e",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "b8d37a649357caff",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          }
-        ]
-      },
-      {
         "id": "273a550fe679c898",
         "type": "tabs",
         "children": [
@@ -127,7 +111,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 347.5
+    "width": 296.5
   },
   "right": {
     "id": "2808606aa7204ff9",
@@ -274,21 +258,21 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "b8d37a649357caff",
+  "active": "6330179318661a0d",
   "lastOpenFiles": [
-    "nova-praxis-discord/src/claude/api.ts.tmp.50720.1776256756630",
+    "nova-praxis-discord/src/commands/aspects.ts.tmp.50720.1776286461758",
+    "nova-praxis-discord/src/commands/aspects.ts.tmp.50720.1776286457964",
+    "nova-praxis-discord/src/commands/npc.ts.tmp.50720.1776286451528",
+    "nova-praxis-discord/src/commands/player-ask.ts.tmp.50720.1776286450569",
+    "nova-praxis-discord/src/commands/ask.ts.tmp.50720.1776286447471",
+    "nova-praxis-discord/src/commands/recap.ts.tmp.50720.1776286445968",
+    "nova-praxis-discord/src/commands/scene.ts.tmp.50720.1776286442954",
+    "nova-praxis-discord/src/commands/npc.ts.tmp.50720.1776286435724",
+    "nova-praxis-discord/src/commands/player-ask.ts.tmp.50720.1776286434985",
+    "nova-praxis-discord/src/commands/ask.ts.tmp.50720.1776286434253",
+    "nova-praxis-discord/src/commands/scene.ts.tmp.50720.1776286432002",
     "Characters/Named NPCs/Kestrel.md",
-    "Campaign Overview/New Player Primer - Scott and Colleen.html.tmp.43564.1776203413340",
-    "Campaign Overview/New Player Primer - Scott and Colleen.html.tmp.43564.1776203401785",
-    "Campaign Overview/New Player Primer - Scott and Colleen.html.tmp.43564.1776203371630",
-    "Campaign Overview/New Player Primer - Scott and Colleen.html",
-    "Campaign Overview/New Player Primer - Scott and Colleen.html.tmp.43564.1776203287506",
     "Rules and Mechanics/Playing the Game - Quick Reference.md",
-    "Locations/Index.md.tmp.60012.1776024599711",
-    "Locations/Index.md.tmp.60012.1776024596227",
-    "Locations/Index.md.tmp.60012.1776024589918",
-    "Locations/Index.md.tmp.60012.1776024585776",
-    "Locations/Virtual Realities.md.tmp.60012.1776024580523",
     "Rules and Mechanics/Rules Quick Reference - Unified.md",
     "Campaign Overview/Cold Start Syndicate - Audio Briefing (Sessions 1-8).md",
     "Sessions/Session 0/Session 0 - Teaching Scenario (FATE Migration).md",

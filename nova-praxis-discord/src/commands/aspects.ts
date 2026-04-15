@@ -6,7 +6,7 @@ import {
   ButtonStyle,
 } from 'discord.js';
 import { isGM, requireGM } from '../middleware/permissions.js';
-import { callApi } from '../claude/api.js';
+import { streamApi } from '../claude/api.js';
 import { buildAspectsContext } from '../claude/context.js';
 import { gmResponseEmbed } from '../embeds/gm-response.js';
 import { getLatestSessionNum, getCharacter } from '../db/queries.js';
@@ -186,14 +186,12 @@ async function handleGenerate(interaction: ChatInputCommandInteraction) {
 
   try {
     const prompt = await buildAspectsContext(subject);
-    const result = await callApi(prompt, 'quality');
-    const embeds = gmResponseEmbed('Aspects', result.output);
-
-    // Parse aspect lines and create "Add to Scene" buttons
+    const result = await streamApi(prompt, 'quality', undefined, async (text) => {
+      await interaction.editReply({ embeds: gmResponseEmbed('Aspects', text) }).catch(() => {});
+    });
     const aspects = parseAspectLines(result.output);
     const components = buildAddButtons(aspects, interaction.id);
-
-    await interaction.editReply({ embeds, components });
+    await interaction.editReply({ embeds: gmResponseEmbed('Aspects', result.output), components });
   } catch (err) {
     await interaction.editReply({
       content: `Claude CLI error: ${err instanceof Error ? err.message : 'unknown'}`,

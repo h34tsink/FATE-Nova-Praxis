@@ -65,6 +65,69 @@ export async function callApi(
   };
 }
 
+export async function streamApi(
+  prompt: string,
+  tier: ModelTier = 'quality',
+  maxTokens: number | undefined,
+  onUpdate: (text: string) => Promise<void>
+): Promise<ApiResult> {
+  const { baseUrl, model } = config.ollama;
+  const opts = { ...TIER_OPTIONS[tier] };
+  if (maxTokens) opts.num_predict = maxTokens;
+
+  const response = await fetch(`${baseUrl}/api/chat`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      model,
+      stream: true,
+      messages: [
+        { role: 'system', content: SYSTEM_PROMPT },
+        { role: 'user',   content: prompt         },
+      ],
+      options: { flash_attn: true, think: false, ...opts },
+    }),
+  });
+
+  if (!response.ok) throw new Error(`Ollama ${response.status}: ${await response.text()}`);
+
+  const reader = response.body!.getReader();
+  const decoder = new TextDecoder();
+  let buffer = '';
+  let fullText = '';
+  let lastUpdate = 0;
+
+  try {
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split('\n');
+      buffer = lines.pop() ?? '';
+
+      for (const line of lines) {
+        if (!line.trim()) continue;
+        try {
+          const data = JSON.parse(line);
+          if (data.message?.content) fullText += data.message.content as string;
+        } catch { /* skip malformed */ }
+      }
+
+      const now = Date.now();
+      if (fullText && now - lastUpdate >= 1000) {
+        await onUpdate(fullText).catch(() => {});
+        lastUpdate = now;
+      }
+    }
+  } finally {
+    reader.releaseLock();
+  }
+
+  await onUpdate(fullText).catch(() => {});
+  return { output: fullText, model, inputTokens: 0, outputTokens: 0 };
+}
+
 export async function extractSearchTerms(question: string): Promise<string[]> {
   const { content } = await chat(
     `Expand this TTRPG question into 3-5 short search phrases for a PostgreSQL full-text index of Nova Praxis (FATE) rules. Sections include: Conflict and Health, Extended Actions, Skills, Augmentations, Sleeves, Stunts, Stress, Consequences, Resleeving, Savant Programs, Drones, Mnemonic Editing, Armor, Firearms, Melee, Explosives, Equipment. Reply with ONLY the phrases, one per line, no bullets.`,
