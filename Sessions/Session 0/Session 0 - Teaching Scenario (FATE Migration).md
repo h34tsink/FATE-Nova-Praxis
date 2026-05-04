@@ -18,9 +18,26 @@ aliases:
 
 **Setting:** A decommissioned [[Factions/Houses/House Kimura|House Kimura]] research facility on the dark side of [[Locations/Sol System/Cere|Cere]]. Powered down, supposedly empty, listed for asset reclamation.
 
-**Crew:** All players use their real characters. The two new players create characters before the session (State, Aspects, Skills, Stunts) and are introduced in-fiction during Scene 3.
+**Crew:** All players use their real characters. The two new players were onboarded ahead of time and are introduced in-fiction during Scene 3.
 
 **When:** Takes place in the campaign timeline between the last SWADE session and the first full FATE session. This is canon.
+
+---
+
+## Bring to the Table
+
+Lay this out before players arrive:
+
+- **Character sheets** — printed for all 7 PCs (5 existing + 2 new). Sleeves/augs visible on Sleeved sheets.
+- **Fate Point tokens** — 5 per Sleeved/SIM player, 7 per Pure player, in a pile in front of each
+- **GM Fate Point pool** — start at one per PC (7); refill from refused compels
+- **Print cards** — see [[Sessions/Session 0/Session 0 - Print Cards|Session 0 Print Cards]] for the tarot-size deck (Drop 1 fragments, NPC quick refs, per-PC compel reminders, rules cheatsheets)
+- **Table Reference handout** — [[Campaign Overview/SWADE to FATE - Table Reference]], printed and passed around
+- **Scratch paper / index cards** — for scene Aspects you place during play
+- **Dry erase or sticky notes** — for tracking stress and Consequences as they land
+- **Zone map for Scene 4** — rough sketch of the 6 zones (sublevel pod chamber → surface exit). Whiteboard or paper.
+- **Zone map for Scene 5** — 4 zones (main corridor → shuttle). Same medium.
+- **The fragments** — read aloud OR hand the three fragment cards across the table when Scene 3 hits
 
 ---
 
@@ -265,17 +282,24 @@ The crew needs to get from the sublevel back to the surface exit with the data c
 
 ### Teaching Moment: Compels
 
-As the lockdown begins, **compel specific players.** Hit every player at least once during this scene.
+As the lockdown begins, **compel specific players.** Hit every player at least once during this scene — but **stagger them across the escape**, don't dump them all in one round. The lockdown spans 6 zones; aim for ~2 compels per zone-cluster, with dramatic pauses between.
 
-| Character | Aspect to Compel | Trigger |
-|-----------|-----------------|---------|
-| **Aeddarius** | *The Habit Behind the Composure* | Stress of the lockdown — hands shaking, needs a moment |
-| **Azaria** | *Celebrity Status At Any Cost* | A security camera is still recording — does she disable it or make sure it catches her good side? |
-| **Grift** | *Curiosity Kills More Than Cats* | A sealed lab door on the way out — what's behind it? Stop to hack it? |
-| **Grace** | *Thin Skinned and Trauma-Triggered* | The new PCs are panicking — their fear triggers her own cryo-revival trauma |
-| **Kallius** | *I Know a Truth the Coalition Would Kill to Bury* | The terminal data — stop to download more, or run? |
-| **New Player 1** | *[Disadvantage Aspect]* | Just woke up, disoriented — appropriate trigger based on their sheet |
-| **New Player 2** | *[Disadvantage Aspect]* | Same — use whatever they wrote, this is their first compel |
+| Character | Aspect to Compel | Trigger | Suggested Beat |
+|-----------|-----------------|---------|----------------|
+| **Aeddarius** | *The Habit Behind the Composure* | Stress of the lockdown — hands shaking, needs a moment | Beat 1 — stairwell, narrow passage |
+| **Grift** | *Curiosity Kills More Than Cats* | A sealed lab door on the way out — what's behind it? Stop to hack it? | Beat 1 — stairwell, sealed door appears |
+| **Grace** | *Thin Skinned and Trauma-Triggered* | The new PCs are panicking — their fear triggers her own cryo-revival trauma | Beat 2 — ground level transition |
+| **New Player 1** | *[Disadvantage Aspect]* | Just woke up, disoriented — appropriate trigger based on their sheet | Beat 2 — first solo moment, gentle |
+| **Azaria** | *Celebrity Status At Any Cost* | A security camera is still recording — does she disable it or make sure it catches her good side? | Beat 3 — main corridor, cameras visible |
+| **Kallius** | *I Know a Truth the Coalition Would Kill to Bury* | The terminal data — stop to download more, or run? | Beat 3 — last terminal in the corridor |
+| **New Player 2** | *[Disadvantage Aspect]* | Same — use whatever they wrote, this is their first compel | Beat 3 — gentle, near the exit |
+
+**Sequencing rules of thumb:**
+
+- Don't fire two compels on the same player back-to-back
+- Let an accepted compel *resolve* before the next one — the player narrates the complication, then you move
+- If a player refuses (pays 1 FP), don't stack a second compel on them in the same scene — the refusal is its own moment
+- New players go in Beat 2 and Beat 3, not Beat 1 — let them watch one compel land first
 
 Walk through the full compel flow with the first one:
 1. "I'm compelling your Disadvantage. Here's what happens..."
@@ -338,7 +362,7 @@ Aspect: *"Kimura Corporate Loyalty"*
 
 **Kimura Savant Handler (x1)**
 Skills: SINC +4, S. Engineering +3, Insight +3, Firearms +2
-Stress: 3 boxes | Mild + Moderate Consequence
+Stress: 3 boxes | Consequences: Mild, Moderate
 System Stress: 4 boxes
 Armor: AR +1 | Weapon: Light Coil Pistol (WR 1)
 Aspect: *"Full Mesh Authority Over This Facility"*
