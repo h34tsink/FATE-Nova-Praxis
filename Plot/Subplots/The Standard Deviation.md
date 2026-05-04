@@ -12,7 +12,7 @@ aliases:
 
 # The Standard Deviation
 
-*Background arc — progressive discovery across Sessions 10+*
+*Background arc — progressive discovery seeded in Session 0, escalating across Sessions 10+*
 
 ## Premise
 
@@ -372,8 +372,8 @@ These should feel wrong in ways the players can't quite articulate yet.
 
 Each drop is 3 fragments from different subjects. Never give a player their own interview until the Grace reveal (Drop 3). After that, individual discoveries in Phase 2.
 
-**Drop 1 — Session 10**
-*Delivery: Holt surfaces a data fragment during a routine job involving Kimura infrastructure. She de-encrypts a storage partition and moves the files to a cache the PCs will search. Looks like junk at first.*
+**Drop 1 — Session 0 (FATE Migration / Cold Storage)**
+*Delivery: At the cryo archive on Cere, the active terminal "glitches" while the crew is dealing with the two newly-revived PCs. Three corrupted intake interview fragments surface in the log — Holt's first nudge, disguised as cache corruption. See [[Sessions/Session 0/Session 0 - Teaching Scenario (FATE Migration)#Scene 3 The Sublevel|Scene 3 of the Session 0 doc]] for delivery in context.*
 
 | # | Subject | Fragment |
 |---|---------|----------|
@@ -394,7 +394,9 @@ Each drop is 3 fragments from different subjects. Never give a player their own 
 | 2 | BANK — Callum Voss (09-F) | "Would you trust a perfect copy of yourself?" / "No. And neither should you." |
 | 3 | FACE — Sarah Donnelly (14-C) | "What would you do if no one was watching?" / [pause] "I don't understand the question." |
 
-*GM notes: Same format as Drop 1 — someone at the table will say "these are connected." Callum Voss appears for the second time. If James is paying attention, he may start tracking the names. Rob should notice that Marcus Vaughn's answers sound uncomfortably familiar, but the name is wrong. Don't confirm anything. If Grift's player comments that the partition was easy to crack — reward it with a look but say nothing. That's Holt's fingerprint.*
+*GM notes: Same format as Drop 1 — someone at the table will say "these are connected." Callum Voss appears for the second time. If James is paying attention, he may start tracking the names. Rob should notice that Marcus Vaughn's answers sound uncomfortably familiar, but the name is wrong. Don't confirm anything.*
+
+*Holt's fingerprint (Drop 2): The partition's encryption uses a custom, non-standard salting scheme — idiosyncratic, almost artisanal. If Grift looks closely, he recognizes it. **It's the same scheme he saw on the Cere terminal in Session 0.** That's not a Kimura standard; that's one specific operator's handwriting on two different systems three years apart. Don't volunteer this — let Rob ask "wait, have I seen this before?" If he does, confirm the match and stop there. He knows the signature now. He doesn't know whose it is. If he doesn't notice, drop a smaller breadcrumb later — a comment from an NPC tech about "weird old crypto" on Kimura legacy systems. Either way, do NOT name Holt. The point is the pattern, not the perpetrator.*
 
 ---
 

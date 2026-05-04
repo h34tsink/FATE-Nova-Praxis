@@ -36,19 +36,21 @@ aliases:
 
 ---
 
-## Pre-Session: New Player Character Creation
+## Pre-Session: Status
 
-Before play begins, the two new players create their characters. Walk them through:
+Both new players were onboarded ahead of the session — characters are fully built (State, ABCDE Aspects, Skills, Stunts, stress tracks) and FATE basics have been walked through. They have copies of:
 
-1. **State:** Pure, Sleeved, or SIM — explain the tradeoffs
-2. **Aspects:** HC + ABCDE (+ Physical Trait if Pure, + Savant Disadvantage if Savant)
-3. **Skills:** Expert or Specialist template
-4. **Stunts:** 3 base slots (+ state freebies if applicable)
-5. **Stress:** Calculate Physical, Mental, System tracks
+- [[Campaign Overview/New Player Primer - Cold Start Syndicate]]
+- [[Campaign Overview/SWADE to FATE - Table Reference]]
 
-Give them the [[Campaign Overview/New Player Primer - Cold Start Syndicate]] and the [[Campaign Overview/SWADE to FATE - Table Reference]] as reference.
+**Critical:** They have *not* been told about the Standard Deviation arc, the cryo reveal, or that their characters will wake up mid-session. They believe they're joining the crew at the start of a normal job. Their actual introduction happens in Scene 3.
 
-**Critical:** Do not tell the new players about the Standard Deviation arc, the cryo reveal, or that their characters will wake up during the session. They should think they're joining the crew at the start. Their actual introduction happens in Scene 3.
+**Day-of GM check:**
+
+- Sheets in front of every player (existing crew + two new)
+- Fate Point tokens distributed at each player's Refresh
+- Table Reference handout printed and accessible
+- Quick 5-min table refresher: "Spend a FP, name the Aspect, explain why" — that's the whole loop
 
 ---
 
@@ -434,7 +436,7 @@ For the two new players:
 
 ### Pacing
 
-- **Pre-session (30 min):** New player character creation (do this first, before play starts)
+- **Pre-session (5–10 min):** Sheets out, FP tokens distributed, quick rules refresher. Chargen is already done.
 - **Scene 1 (10 min):** Briefing. Keep it tight.
 - **Scene 2 (15-20 min):** Facility breach. Let them explore but keep it moving.
 - **Scene 3 (25-30 min):** The sublevel. This is the dramatic core — the cryo reveal, new player introduction, and Drop 1. Give it room to breathe.
@@ -459,7 +461,9 @@ The three interview fragments are listed in the [[Plot/Subplots/The Standard Dev
 
 ### Holt's Fingerprints
 
-For Grift specifically: the Kimura encryption in Scene 2 should feel **slightly too easy** to crack. Not obviously — just a nagging "that shouldn't have been that simple." This is Holt's first fingerprint. Don't flag it. If Rob notices, reward it with a look. If he doesn't, it'll land later when the pattern becomes clear.
+For Grift specifically: the Kimura encryption in Scene 2 should feel **slightly too easy** to crack. Not obviously — just a nagging "that shouldn't have been that simple." Underneath the ease is something more specific: the salt scheme is **non-standard, idiosyncratic, almost artisanal** — not a Kimura corporate pattern. Like one specific operator's handwriting.
+
+This is Holt's first fingerprint. Don't flag it. If Rob notices, reward it with a look and one sentence: *"It's not Kimura standard. Someone built that themselves."* If he doesn't notice, leave it alone — Drop 2 (Session 12) will surface the same signature on a different system, and the pattern lands then.
 
 ### What If They Don't Investigate the Sublevel?
 
@@ -521,9 +525,9 @@ These will come hard and fast in Scene 3. Expect all of them.
 #### Grift (Rob)
 
 **"Why did the encryption feel too easy?"**
-> "It felt practiced. Like the security architecture had a soft spot that had been carefully maintained — not neglected. Systems degrade unevenly. Maybe someone left that door cracked. Maybe you're overthinking it."
+> "It felt practiced. Like the security architecture had a soft spot that had been carefully maintained — not neglected. And the salting underneath it is weird. Idiosyncratic. Not a Kimura corporate pattern — something one specific operator wrote by hand. Systems degrade unevenly. Maybe someone left that door cracked. Maybe you're overthinking it."
 >
-> *Don't confirm Holt. Just let him hold the feeling. Write down that he noticed.*
+> *Don't confirm Holt. Just let him hold the feeling. Write down that he noticed — Drop 2 will use this as the callback.*
 
 **"Can I pull anything else off the servers before we leave?"**
 > "You can try. What are you looking for — you want to just pull everything, or dig for something specific?" — Let him define the question. Then give him a roll. If he succeeds, give him the SD-7 partition label and whatever schematics you decide are interesting. Full database pull gets him noise and an encrypted wall.
