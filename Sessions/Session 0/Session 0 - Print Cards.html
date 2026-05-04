@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Session 0 — Print Cards (Tarot)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap');
+
+  /* === PAGE / PRINT === */
+  @page {
+    size: 70mm 120mm;
+    margin: 0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    background: #2a2e36;
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #1a1d23;
+  }
+
+  /* Screen: show grid of cards with gap */
+  body {
+    padding: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  /* === CARD === */
+  .card {
+    width: 70mm;
+    height: 120mm;
+    background: #f5efe1;
+    border: 1px solid #1a1d23;
+    border-radius: 4mm;
+    padding: 5mm 5mm 4mm 5mm;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    page-break-after: always;
+    break-after: page;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    font-size: 8.5pt;
+    line-height: 1.3;
+  }
+
+  .card:last-child { page-break-after: auto; }
+
+  /* Top type label */
+  .type-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 6pt;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #6b6051;
+    border-bottom: 0.5pt solid #c4b89e;
+    padding-bottom: 1.5mm;
+    margin-bottom: 2.5mm;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Title */
+  .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 13pt;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5mm;
+    color: #1a1d23;
+  }
+
+  .subtitle {
+    font-size: 7pt;
+    font-style: italic;
+    color: #6b6051;
+    margin-bottom: 3mm;
+  }
+
+  /* Body content */
+  .body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2mm;
+  }
+
+  .body p { margin: 0; }
+  .body strong { font-weight: 700; }
+  .body em { font-style: italic; }
+
+  /* Footer */
+  .footer {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 5.5pt;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #8a7e68;
+    border-top: 0.5pt solid #c4b89e;
+    padding-top: 1.5mm;
+    margin-top: auto;
+    text-align: center;
+  }
+
+  /* === CARD VARIANTS === */
+
+  /* FRAGMENT cards — terminal / dossier feel */
+  .card.fragment {
+    background: #ebe2cd;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(0,0,0,0.02) 0, rgba(0,0,0,0.02) 1px, transparent 1px, transparent 3px);
+    border: 1px solid #5a4c33;
+  }
+  .card.fragment .type-label { color: #8b1a1a; border-bottom-color: #8b1a1a; }
+  .card.fragment .title { font-family: 'JetBrains Mono', monospace; font-size: 11pt; }
+  .card.fragment .subtitle { font-family: 'JetBrains Mono', monospace; }
+  .card.fragment .body {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8pt;
+    line-height: 1.45;
+  }
+  .card.fragment blockquote {
+    border-left: 1.5pt solid #8b1a1a;
+    padding-left: 2.5mm;
+    color: #2a2520;
+  }
+  .card.fragment blockquote p + p { margin-top: 1.5mm; }
+  .card.fragment .footer { color: #8b1a1a; border-top-color: #c4b89e; }
+
+  /* NPC cards — red accent, mil-spec */
+  .card.npc { background: #ede4d3; border: 1.5pt solid #1a1d23; }
+  .card.npc .type-label { color: #8b1a1a; border-bottom-color: #8b1a1a; }
+  .card.npc .title { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 12pt; text-transform: uppercase; letter-spacing: 0.03em; }
+  .card.npc .stat-row { display: flex; gap: 2mm; font-size: 7.5pt; }
+  .card.npc .stat-label { font-weight: 700; color: #8b1a1a; min-width: 14mm; font-family: 'JetBrains Mono', monospace; font-size: 7pt; }
+  .card.npc .aspect { font-style: italic; padding: 1.5mm 2mm; background: rgba(139,26,26,0.08); border-left: 1.5pt solid #8b1a1a; margin-top: 1mm; }
+  .card.npc .programs { font-size: 7pt; }
+
+  /* PC compel cards — blue accent */
+  .card.compel { background: #f0eadb; }
+  .card.compel .type-label { color: #1e3a5f; border-bottom-color: #1e3a5f; }
+  .card.compel .title { color: #1e3a5f; }
+  .card.compel .aspect-box {
+    background: rgba(30,58,95,0.08);
+    border-left: 2pt solid #1e3a5f;
+    padding: 2mm 2.5mm;
+    margin: 1mm 0 2.5mm 0;
+    font-style: italic;
+    font-size: 9pt;
+    font-weight: 600;
+    color: #1e3a5f;
+  }
+  .card.compel .hooks-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 6pt;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #6b6051;
+    margin-bottom: 1mm;
+  }
+  .card.compel ul { padding-left: 4mm; font-size: 7.5pt; }
+  .card.compel ul li { margin-bottom: 0.8mm; }
+  .card.compel .other-compels { font-size: 6.5pt; color: #6b6051; margin-top: 1.5mm; }
+  .card.compel .fp-slot {
+    margin-top: 2mm;
+    border: 1pt dashed #1e3a5f;
+    padding: 1.5mm;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 5.5pt;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #1e3a5f;
+    border-radius: 1.5mm;
+  }
+
+  /* Rules cards — cyan/teal accent */
+  .card.rules { background: #f3eede; }
+  .card.rules .type-label { color: #0e5066; border-bottom-color: #0e5066; }
+  .card.rules .title { color: #0e5066; font-size: 12pt; }
+  .card.rules .body { font-size: 8pt; line-height: 1.35; }
+  .card.rules table { width: 100%; border-collapse: collapse; font-size: 7pt; margin: 1mm 0; }
+  .card.rules table th, .card.rules table td {
+    text-align: left;
+    padding: 0.8mm 1.5mm;
+    border-bottom: 0.5pt solid #c4b89e;
+  }
+  .card.rules table th { font-weight: 700; color: #0e5066; font-family: 'JetBrains Mono', monospace; font-size: 6.5pt; text-transform: uppercase; letter-spacing: 0.05em; }
+  .card.rules code { font-family: 'JetBrains Mono', monospace; background: rgba(14,80,102,0.1); padding: 0.3mm 1mm; border-radius: 1mm; font-size: 7.5pt; color: #0e5066; }
+  .card.rules .callout {
+    background: rgba(14,80,102,0.08);
+    border-left: 1.5pt solid #0e5066;
+    padding: 1.5mm 2mm;
+    margin: 1mm 0;
+    font-size: 7.5pt;
+    font-style: italic;
+  }
+  .card.rules ul { padding-left: 4mm; }
+  .card.rules ol { padding-left: 4mm; }
+  .card.rules li { margin-bottom: 0.5mm; }
+  .card.rules h4 { font-size: 8pt; color: #0e5066; margin-bottom: 0.5mm; font-weight: 700; }
+
+  /* Decorative corner ornaments */
+  .card::before, .card::after {
+    content: '';
+    position: absolute;
+    width: 4mm;
+    height: 4mm;
+    border-color: #1a1d23;
+    pointer-events: none;
+  }
+  .card::before { top: 1.5mm; left: 1.5mm; border-top: 0.5pt solid; border-left: 0.5pt solid; }
+  .card::after { bottom: 1.5mm; right: 1.5mm; border-bottom: 0.5pt solid; border-right: 0.5pt solid; }
+
+  /* === SCREEN INSTRUCTIONS === */
+  .instructions {
+    width: 100%;
+    background: #1a1d23;
+    color: #e2e8f0;
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .instructions h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: #f5efe1;
+  }
+  .instructions kbd {
+    background: #2a2e36;
+    border: 1px solid #4a5060;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+  }
+  .instructions code { color: #06b6d4; font-family: 'JetBrains Mono', monospace; }
+  .section-divider {
+    width: 100%;
+    color: #f5efe1;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 12px 0 4px 0;
+    border-bottom: 1px solid #4a5060;
+  }
+
+  @media print {
+    html, body { background: white; padding: 0; gap: 0; }
+    .instructions, .section-divider { display: none; }
+    .card {
+      box-shadow: none;
+      margin: 0;
+      border-radius: 0;
+      width: 70mm;
+      height: 120mm;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="instructions">
+  <h1>Session 0 — Tarot Print Cards</h1>
+  <p><strong>17 cards</strong> sized for tarot stock (70 × 120 mm / 2.75 × 4.75 in). Print directly: <kbd>Ctrl/⌘ + P</kbd> → set <em>Margins: None</em>, <em>Paper: Custom 70×120mm</em>, <em>Scale: 100%</em>, <em>Background graphics: ON</em>. Or "Save as PDF" and send to a printer that handles tarot stock.</p>
+  <p style="margin-top:8px;"><strong>Cutting layout:</strong> if printing on letter, use your browser's <em>Pages per sheet</em> or import the PDF into Affinity / Adobe and lay 4-up at 100% with bleed marks. <strong>17 cards = ~5 sheets duplex at 4-up</strong>.</p>
+</div>
+
+<!-- ============================================ -->
+<!-- A. DROP 1 FRAGMENT CARDS                     -->
+<!-- ============================================ -->
+<div class="section-divider">A · Drop 1 Fragments</div>
+
+<div class="card fragment">
+  <div class="type-label"><span>Intake // 09-F</span><span>Cere</span></div>
+  <div class="title">VOSS, CALLUM</div>
+  <div class="subtitle">Standard Deviation Archive</div>
+  <div class="body">
+    <blockquote>
+      <p><em>Q: "If your memories were altered without your knowledge, how would you know?"</em></p>
+      <p><em>A: [long pause]</em></p>
+      <p><em>"I wouldn't. That's the point, isn't it?"</em></p>
+    </blockquote>
+  </div>
+  <div class="footer">Recovered Fragment · Kimura Cache</div>
+</div>
+
+<div class="card fragment">
+  <div class="type-label"><span>Intake // 14-C</span><span>Cere</span></div>
+  <div class="title">DONNELLY, SARAH</div>
+  <div class="subtitle">Standard Deviation Archive</div>
+  <div class="body">
+    <blockquote>
+      <p><em>Q: "How do you respond to environments where social hierarchy is unstable?"</em></p>
+      <p><em>A: "I find the person everyone's watching and I stand next to them."</em></p>
+    </blockquote>
+  </div>
+  <div class="footer">Recovered Fragment · Kimura Cache</div>
+</div>
+
+<div class="card fragment">
+  <div class="type-label"><span>Intake // 07-B</span><span>Cere</span></div>
+  <div class="title">CRUZ, ADRIAN</div>
+  <div class="subtitle">Standard Deviation Archive</div>
+  <div class="body">
+    <blockquote>
+      <p><em>Q: "Under what circumstances would you accept cognitive augmentation?"</em></p>
+      <p><em>A: "None."</em></p>
+      <p><em>Q: "Even to save your life?"</em></p>
+      <p><em>A: "Especially then."</em></p>
+    </blockquote>
+  </div>
+  <div class="footer">Recovered Fragment · Kimura Cache</div>
+</div>
+
+<!-- ============================================ -->
+<!-- B. NPC QUICK REFERENCE CARDS                 -->
+<!-- ============================================ -->
+<div class="section-divider">B · NPC Quick Reference</div>
+
+<div class="card npc">
+  <div class="type-label"><span>Hostile · Mook</span><span>×3</span></div>
+  <div class="title">Kimura Security Operative</div>
+  <div class="body">
+    <div class="stat-row"><span class="stat-label">Skills</span><span>Firearms +3 · Athletics +2 · Perception +2 · Melee +2</span></div>
+    <div class="stat-row"><span class="stat-label">Stress</span><span>☐ ☐ ☐</span></div>
+    <div class="stat-row"><span class="stat-label">Cons</span><span>Mild</span></div>
+    <div class="stat-row"><span class="stat-label">AR</span><span>+2 (Tactical Vest)</span></div>
+    <div class="stat-row"><span class="stat-label">Weapon</span><span>Coil Pistol · WR 2</span></div>
+    <div class="aspect">"Kimura Corporate Loyalty"</div>
+    <p style="font-size:7pt; margin-top:1.5mm;">Corporate, not military. Will accept a deal if the score is light. Concedes early if outmatched.</p>
+  </div>
+  <div class="footer">Scene 5 · Extraction</div>
+</div>
+
+<div class="card npc">
+  <div class="type-label"><span>Hostile · Lieutenant</span><span>×1</span></div>
+  <div class="title">Kimura Savant Handler</div>
+  <div class="body">
+    <div class="stat-row"><span class="stat-label">Skills</span><span>SINC +4 · S.Eng +3 · Insight +3 · Firearms +2</span></div>
+    <div class="stat-row"><span class="stat-label">Stress</span><span>☐ ☐ ☐</span></div>
+    <div class="stat-row"><span class="stat-label">Cons</span><span>Mild · Moderate</span></div>
+    <div class="stat-row"><span class="stat-label">SysStr</span><span>☐ ☐ ☐ ☐</span></div>
+    <div class="stat-row"><span class="stat-label">AR</span><span>+1</span></div>
+    <div class="stat-row"><span class="stat-label">Weapon</span><span>Light Coil · WR 1</span></div>
+    <div class="aspect">"Full Mesh Authority Over This Facility"</div>
+    <p class="programs"><strong>Programs:</strong> Blackout · Security Skim · Stream of Consciousness</p>
+  </div>
+  <div class="footer">Scene 5 · Extraction</div>
+</div>
+
+<!-- ============================================ -->
+<!-- C. PC COMPEL REMINDER CARDS                  -->
+<!-- ============================================ -->
+<div class="section-divider">C · PC Compel Reminders</div>
+
+<div class="card compel">
+  <div class="type-label"><span>Compel Card</span><span>Pure</span></div>
+  <div class="title">Aeddarius Crucial</div>
+  <div class="hooks-label">Disadvantage</div>
+  <div class="aspect-box">The Habit Behind the Composure</div>
+  <div class="hooks-label">Session 0 Hooks</div>
+  <ul>
+    <li>Stress of the lockdown — hands shake, needs a moment</li>
+    <li>Supply running low / no easy access here</li>
+    <li>Aristocratic mask slips at the wrong audience</li>
+  </ul>
+  <p class="other-compels"><strong>Other:</strong> Always Challenges the Strongest Foe · Newly Minted Lord · Ruthless Pragmatist</p>
+  <div class="fp-slot">[ Place FP token here when compelled ]</div>
+</div>
+
+<div class="card compel">
+  <div class="type-label"><span>Compel Card</span><span>SIM</span></div>
+  <div class="title">Grace Pryzbylski</div>
+  <div class="hooks-label">Disadvantage</div>
+  <div class="aspect-box">Thin Skinned and Trauma-Triggered</div>
+  <div class="hooks-label">Session 0 Hooks</div>
+  <ul>
+    <li>New PCs panicking — their fear triggers her cryo-revival trauma</li>
+    <li>Personal attack lands and she crumbles</li>
+    <li>Refuses to project a body when she should</li>
+  </ul>
+  <p class="other-compels"><strong>Other:</strong> Scopophobia · Shield My Few Friends</p>
+  <div class="fp-slot">[ Place FP token here when compelled ]</div>
+</div>
+
+<div class="card compel">
+  <div class="type-label"><span>Compel Card</span><span>Sleeved</span></div>
+  <div class="title">Dustin "Grift" Halloway</div>
+  <div class="hooks-label">Disadvantage</div>
+  <div class="aspect-box">Curiosity Kills More Than Cats</div>
+  <div class="hooks-label">Session 0 Hooks</div>
+  <ul>
+    <li>Sealed lab door on the way out — stop to hack it?</li>
+    <li>The SD-7 partition — pull more before extraction?</li>
+    <li>Briar's favors come due at the worst moment</li>
+  </ul>
+  <p class="other-compels"><strong>Other:</strong> Briar's Favors · Corporate Slavery · Craves Sensations</p>
+  <div class="fp-slot">[ Place FP token here when compelled ]</div>
+</div>
+
+<div class="card compel">
+  <div class="type-label"><span>Compel Card</span><span>Sleeved</span></div>
+  <div class="title">Kallius</div>
+  <div class="hooks-label">Disadvantage</div>
+  <div class="aspect-box">I Know a Truth the Coalition Would Kill to Bury</div>
+  <div class="hooks-label">Session 0 Hooks</div>
+  <ul>
+    <li>Terminal data — stop to download more, or run?</li>
+    <li>The memory-edit interview question lands too close</li>
+    <li>Paranoia spikes when the Savant tries to read him</li>
+  </ul>
+  <p class="other-compels"><strong>Other:</strong> Coalition contact recognizes him; truth puts allies at risk</p>
+  <div class="fp-slot">[ Place FP token here when compelled ]</div>
+</div>
+
+<div class="card compel">
+  <div class="type-label"><span>Compel Card</span><span>Sleeved</span></div>
+  <div class="title">Azaria Dawson</div>
+  <div class="hooks-label">Compel Target (Ambition)</div>
+  <div class="aspect-box">Celebrity Status At Any Cost</div>
+  <div class="hooks-label">Session 0 Hooks</div>
+  <ul>
+    <li>Security camera still recording — disable or pose?</li>
+    <li>Recognized at the wrong moment by Kimura security</li>
+    <li>Reckless choice for the exposure value</li>
+  </ul>
+  <p class="other-compels"><strong>Other:</strong> Fame (recognized at the wrong time)</p>
+  <div class="fp-slot">[ Place FP token here when compelled ]</div>
+</div>
+
+<div class="card compel">
+  <div class="type-label"><span>Compel Card</span><span>New</span></div>
+  <div class="title">[ New Player 1 ]</div>
+  <div class="hooks-label">Disadvantage</div>
+  <div class="aspect-box">[ Aspect goes here ]</div>
+  <div class="hooks-label">Session 0 Hooks</div>
+  <ul>
+    <li>Just woke up — cryo disorientation hits at a critical moment</li>
+    <li>Memory flash interrupts the action</li>
+    <li>Pre-cryo instinct conflicts with what's happening now</li>
+  </ul>
+  <p class="other-compels"><strong>GM:</strong> First compel ever. Make it gentle. Hand them the FP with a smile.</p>
+  <div class="fp-slot">[ Place FP token here when compelled ]</div>
+</div>
+
+<div class="card compel">
+  <div class="type-label"><span>Compel Card</span><span>New</span></div>
+  <div class="title">[ New Player 2 ]</div>
+  <div class="hooks-label">Disadvantage</div>
+  <div class="aspect-box">[ Aspect goes here ]</div>
+  <div class="hooks-label">Session 0 Hooks</div>
+  <ul>
+    <li>Just woke up — cryo disorientation hits at a critical moment</li>
+    <li>Trust spike — these strangers might be the threat</li>
+    <li>Old reflex fires when nuance is needed</li>
+  </ul>
+  <p class="other-compels"><strong>GM:</strong> First compel ever. Make it gentle. Hand them the FP with a smile.</p>
+  <div class="fp-slot">[ Place FP token here when compelled ]</div>
+</div>
+
+<!-- ============================================ -->
+<!-- D. RULES CHEATSHEET CARDS                    -->
+<!-- ============================================ -->
+<div class="section-divider">D · Rules Cheatsheets</div>
+
+<div class="card rules">
+  <div class="type-label"><span>Rules · 1 of 5</span><span>FATE</span></div>
+  <div class="title">Action Types</div>
+  <div class="body">
+    <h4>Simple Action (×1)</h4>
+    <p>Your main thing. Attack · Maneuver · Test · Block · Full Defense.</p>
+    <h4>Free Action (×1)</h4>
+    <p>Fast, no roll. Move 1 zone · take cover · draw weapon · short speech.</p>
+    <h4>Supplemental</h4>
+    <p>A second small thing <strong>at –1</strong> to your primary roll. Hustle 2 zones (–2) · reload mid-action.</p>
+    <h4>Instant</h4>
+    <p>Any time, even off-turn.</p>
+    <div class="callout"><strong>Defense is always free</strong> — never costs your turn.</div>
+  </div>
+  <div class="footer">FATE Action Economy</div>
+</div>
+
+<div class="card rules">
+  <div class="type-label"><span>Rules · 2 of 5</span><span>FATE</span></div>
+  <div class="title">Stress &amp; Consequences</div>
+  <div class="body">
+    <p><code>Stress = Shifts + WR – AR</code></p>
+    <p>Absorb with stress boxes (left → right). Boxes clear after the scene.</p>
+    <p>Or take a <strong>Consequence</strong> (becomes an Aspect):</p>
+    <table>
+      <tr><th>Slot</th><th>Absorbs</th><th>Recovery</th></tr>
+      <tr><td>Mild</td><td>2</td><td>1 hr / 1 day</td></tr>
+      <tr><td>Moderate</td><td>4</td><td>1 day / 1 wk</td></tr>
+      <tr><td>Severe</td><td>6</td><td>1 wk / 1 mo</td></tr>
+      <tr><td>Extreme</td><td>8</td><td>Permanent</td></tr>
+    </table>
+    <div class="callout">Can't absorb? <strong>Taken Out</strong> — or <strong>Concede</strong> first (+1 FP, you narrate exit).</div>
+  </div>
+  <div class="footer">Damage Resolution</div>
+</div>
+
+<div class="card rules">
+  <div class="type-label"><span>Rules · 3 of 5</span><span>FATE</span></div>
+  <div class="title">The Compel Loop</div>
+  <div class="body">
+    <p><strong>This is the engine.</strong></p>
+    <ol>
+      <li>GM compels your Aspect → "This complicates your life because…"</li>
+      <li><strong>Accept</strong> → +1 FP, narrate complication.<br><strong>Refuse</strong> → pay 1 FP, complication doesn't happen.</li>
+      <li>Later, <strong>invoke</strong> an Aspect: spend 1 FP, name it, explain → +2 or reroll.</li>
+      <li><strong>Spin</strong> (3+ Shifts) → free Effect Aspect for the table.</li>
+      <li>Ally invokes it free → chain begins.</li>
+    </ol>
+    <div class="callout">Lean into compels. They're not punishment — they're <strong>fuel</strong>.</div>
+  </div>
+  <div class="footer">Fate Point Economy</div>
+</div>
+
+<div class="card rules">
+  <div class="type-label"><span>Rules · 4 of 5</span><span>FATE</span></div>
+  <div class="title">Invoking Aspects</div>
+  <div class="body">
+    <p>Spend 1 FP. Name the Aspect. Explain why it helps. Get <strong>+2 or reroll</strong>.</p>
+    <h4>The "Therefore" Test</h4>
+    <div class="callout"><em>I have [Aspect], <strong>therefore</strong> it helps me [do this].</em></div>
+    <p>If you need two leaps, it's a stretch.</p>
+    <h4>Scope Rule (one per scope per roll)</h4>
+    <ul>
+      <li>1 Character Aspect</li>
+      <li>1 Scene Aspect</li>
+      <li>1 Zone Aspect</li>
+      <li>1 Equipment Aspect</li>
+      <li>1 Consequence on target</li>
+    </ul>
+    <p style="font-size:7pt;"><strong>Persistent (P) Aspects are exempt</strong> — invoke free, no scope limit.</p>
+  </div>
+  <div class="footer">Aspect Invocation</div>
+</div>
+
+<div class="card rules">
+  <div class="type-label"><span>Rules · 5 of 5</span><span>FATE</span></div>
+  <div class="title">Movement &amp; Zones</div>
+  <div class="body">
+    <p><strong>Zone-based — no grid, no inches.</strong></p>
+    <table>
+      <tr><th>Move</th><th>Cost</th><th>Notes</th></tr>
+      <tr><td>Adjacent zone</td><td>Free</td><td>No penalty</td></tr>
+      <tr><td>Hustle (2 zones)</td><td>Suppl.</td><td>–2 to other action</td></tr>
+      <tr><td>Sprint (3+)</td><td>Athletics</td><td>Diff 2; +1 zone per Shift</td></tr>
+    </table>
+    <p><strong>Within a zone:</strong> act on anything in it without movement.</p>
+    <p><strong>Cover:</strong> Free Action in your zone — grants <em>Behind Cover</em> Aspect.</p>
+    <div class="callout">Blocked / hazardous zone: crossing may need a test. GM sets difficulty.</div>
+  </div>
+  <div class="footer">Zone Movement</div>
+</div>
+
+</body>
+</html>
