@@ -6,7 +6,9 @@
 
 Blade Forms are codified combat philosophies developed across centuries of human conflict and refined since the [[Glossary/Exodus|Exodus]]. In an age of mono-edged weapons, augmented sleeves, and [[Glossary/Savant|Savant]] programs, a trained form practitioner turns philosophy into mechanical advantage.
 
-A character's Blade Form is a **High Concept-adjacent Aspect** taken at character creation or earned through a significant milestone. It reflects not just technique but *doctrine* — how you think about violence, defense, and the body you're wearing.
+A character's Blade Form is an Aspect — either **folded into your High Concept** (e.g., *Dalianis Meridian Fencer*, *Talon Striker of Parallax*) or taken as a **separate Aspect through a significant milestone**. It obeys all normal Aspect rules. It reflects not just technique but *doctrine* — how you think about violence, defense, and the body you're wearing.
+
+**Coalition vs Apostate is cultural lore, not a mechanical restriction.** Any character can learn any Form if the fiction supports it.
 
 ## Naming Convention
 
@@ -31,6 +33,17 @@ To find what beats a form, look for the mantras that name its essence. Coalition
 | **Resonance** | Force     | *Shatters Stillness. Blunts Precision.* | Threshold, Meridian | Cascade, Parallax   |
 | **Cascade**   | Entropy   | *Dissolves Force. Engulfs Shift.*       | Resonance, Parallax | Threshold, Meridian |
 | **Parallax**  | Shift     | *Evades Force. Displaces Precision.*    | Resonance, Meridian | Threshold, Cascade  |
+
+---
+
+## Matchup
+
+When two **known** Forms clash and your mantra names theirs as defeated:
+
+- **Once per scene**, you may invoke your Form aspect for **free** against that opponent.
+- **Once per scene**, the GM may compel their Form aspect for **free**.
+
+Hidden Forms must be Read first (see below). If both Forms favor or penalize the same environment, the mantra decides who has the edge.
 
 ---
 
@@ -178,12 +191,12 @@ Developed by the [[Glossary/Talons of Freedom|Talons of Freedom]] against Coalit
 
 | Outcome | Result |
 |---|---|
-| **Fail** | Misread. GM may place *"Overconfident Read"* as a situation aspect. |
-| **Tie** | You sense training but can't name the form. It stays hidden. |
-| **Succeed** | Their Form aspect is revealed. Invoke or compel normally. |
-| **Succeed with Style** | Revealed + 2 free invokes on their Form aspect. |
+| **Fail** | Misread. GM places *"Overconfident Read"* on **the reader** with one free invoke for the GM. |
+| **Tie** | You catch a tell. Gain a boost (*"Caught a Tell"*). The Form stays hidden. |
+| **Succeed** | Their Form aspect is revealed. The reader gains **1 free invoke**. |
+| **Succeed with Style** | Revealed + **2 free invokes** for the reader. |
 
-An unknown Form can still be compelled by the GM. A known Form can be invoked by anyone at the table who witnessed the Read.
+An unknown Form can still be compelled by the GM (the practitioner feels the effect without knowing the cause). Once revealed, witnesses may invoke or compel the Form aspect normally by spending Fate points. The reader's free invokes belong to them.
 
 ---
 
